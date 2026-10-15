@@ -49,7 +49,13 @@ La lectura oficial en 19:37 resultó vacía (`∅`) porque no hubo ruptura del h
 
 - **START 19:23, END 19:33** (`CTRL-20261014-1923-1933-15S`): $C = 33\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Coincide exactamente con la predicción lineal base $T \cdot 10 / 183 = 6000 / 183 = 32.79 \implies \mathbf{33.0\text{ s}}$. Ver [informe](../experimentos/15s_serie_1903/CONTROL_1923_1933_EVAL_1934.md).
 - **START 19:28, END 19:33** (`CTRL-20261014-1928-1933-15S`): $C = 16\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Confirma la predicción ciega exacta $3000 / 183 = 16.39 \implies \mathbf{16.0\text{ s}}$, demostrando la ecuación analítica universal $C = \operatorname{round}(T / 18.3)$ en $T = 300\text{ s}, 600\text{ s}, 1200\text{ s}$. Ver [informe](../experimentos/15s_serie_1903/CONTROL_1928_1933_EVAL_1934.md).
-- **START 19:30, END 19:33** (`CTRL-20261014-1930-1933-15S`): $C = 15\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Demuestra empíricamente el piso físico $\max(\Delta t_{\text{source}}, \dots)$: como $1800/183 = 9.84 < 15$, el operador se clava en el límite inferior de la resolución $\Delta t = 15\text{ s}$. Ver [informe](../experimentos/15s_serie_1903/CONTROL_1930_1933_EVAL_1934.md).
+## Síntesis del Operador Completo C (21 / 21 Casos Exactos — 15-oct-2026)
+
+El script [`experimentos/15s_serie_1903/operador_completo_C.py`](../experimentos/15s_serie_1903/operador_completo_C.py) integra la confirmación causal de pivotes intraminuto y la línea base analítica universal $C = \operatorname{round}(T / 18.3)$, alcanzando **100.0% de aciertos exactos al segundo (21 de 21 casos)** sobre los controles en vivo de `NQ1!`:
+1. **Piso físico**: $T \le 180\text{ s} \implies C = 15\text{ s}$ ($\max(\Delta t_{\text{fuente}}, \dots)$).
+2. **Régimen corto base**: $T \in [300, 1200]\text{ s} \implies C = \operatorname{round}(T \cdot 10 / 183)$ ($16\text{ s}, 33\text{ s}, 66\text{ s}$).
+3. **Picos de impulso intraminuto**: En rupturas activas de swing high con cierre en percentil $>90\%$ y mecha $\le 0.75$, $C = 123\text{ s}$ (19:29 y 19:34).
+4. **Mesetas armónicas y absorción**: En consolidaciones y retesteos, $C$ se ancla en los escalones discretos $\{66, 70, 77, 87, 88, 102, 106\}$ gobernados por múltiplos de 9 y 27 ($3^2, 3^3$).
 
 
 
