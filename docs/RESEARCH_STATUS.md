@@ -33,3 +33,7 @@ El adjunto [`imports/codex/2026-10-14_telemetry_paste.txt`](../imports/codex/202
 - **Ajustado/inferido**: C estimado mediante el ajuste de las curvas; registrar método, tolerancia y residuo.
 - **Predicción**: valor escrito antes de consultar el control.
 - **Hipótesis**: interpretación aún no discriminada por controles independientes.
+
+## Control 19:36 / 19:37 — 14-oct-2026
+
+La lectura oficial en 19:37 resultó vacía (`∅`) porque no hubo ruptura del high de END. La auditoría de E también tiene contraejemplos en 19:26 y 19:33, y la fórmula publicada con `round` no coincide con todos los C; ver [el informe detallado](../experimentos/15s_serie_1903/CONTROL_1936_EVAL_1937.md) y [la captura de TradingView](../experimentos/15s_serie_1903/evidencia/C_Lite_1936_eval_1937.png).
