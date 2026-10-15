@@ -37,3 +37,9 @@ El adjunto [`imports/codex/2026-10-14_telemetry_paste.txt`](../imports/codex/202
 ## Control 19:36 / 19:37 — 14-oct-2026
 
 La lectura oficial en 19:37 resultó vacía (`∅`) porque no hubo ruptura del high de END. La auditoría de E también tiene contraejemplos en 19:26 y 19:33, y la fórmula publicada con `round` no coincide con todos los C; ver [el informe detallado](../experimentos/15s_serie_1903/CONTROL_1936_EVAL_1937.md) y [la captura de TradingView](../experimentos/15s_serie_1903/evidencia/C_Lite_1936_eval_1937.png).
+
+## Controles de Desplazamiento de START (END 19:33, Eval 19:34, Fuente 15s) — 14-oct-2026
+
+- **START 19:08, END 19:33** (`CTRL-20261014-1908-1933-15S`): $C = 70\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Revela un cambio de $\Delta C = -17\text{ s}$ para $\Delta T = -300\text{ s}$ respecto a START 19:03 ($C = 87\text{ s}$), con tasa $\Delta T / \Delta C \approx 17.65 \approx 18.3$. Ver [informe](../experimentos/15s_serie_1903/CONTROL_1908_1933_EVAL_1934.md).
+- **START 19:13, END 19:33** (`CTRL-20261014-1913-1933-15S`): $C = 66\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Conecta exactamente con la ley de régimen corto para $n_{\Delta} = 20$ barras: $\operatorname{round}(20 \times 60 \times 10 / 183) = \operatorname{round}(65.5738) = \mathbf{66.0\text{ s}}$. Ver [informe](../experimentos/15s_serie_1903/CONTROL_1913_1933_EVAL_1934.md).
+

@@ -4,12 +4,12 @@ import numpy as np
 # Script to solve C once official readings are provided
 # Edit the observed values below when reported by TradingView
 obs = {
-    "Lane 1 A": 30886.43,  # placeholder
-    "Lane 1 B": 30885.11,
-    "Lane 2 A": 30880.93,
-    "Lane 2 B": 30880.25,
-    "Lane 3 A": 30878.42,
-    "Lane 3 B": 30878.16,
+    "Lane 1 A": 30885.07,
+    "Lane 1 B": 30883.87,
+    "Lane 2 A": 30880.23,
+    "Lane 2 B": 30879.66,
+    "Lane 3 A": 30878.15,
+    "Lane 3 B": 30877.94,
 }
 
 factors = {
