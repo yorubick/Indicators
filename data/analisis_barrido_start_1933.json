@@ -1,0 +1,510 @@
+{
+  "schema_version": 1,
+  "input_status": "complete",
+  "measured_cases": 15,
+  "scope": "one END, one date/symbol and adjacent STARTs; descriptive calibration only",
+  "conclusion": "No se declara una ley universal. Los candidatos solo se comparan con C medido; se necesita validación en fechas, END y resoluciones independientes.",
+  "comparisons": [
+    {
+      "candidate": "continuous_T_over_18_3",
+      "n": 15,
+      "mae_seconds": 11.375956284107923,
+      "max_abs_error_seconds": 26.36065573755434,
+      "exact_within_1e_6_count": 0,
+      "per_case": [
+        {
+          "case_id": "start_1900",
+          "C_observed": 87.0000000002571,
+          "C_predicted": 108.1967213114754,
+          "error_pred_minus_obs": 21.196721311218298
+        },
+        {
+          "case_id": "start_1901",
+          "C_observed": 118.99999999996695,
+          "C_predicted": 104.91803278688525,
+          "error_pred_minus_obs": -14.081967213081697
+        },
+        {
+          "case_id": "start_1902",
+          "C_observed": 88.00000000001657,
+          "C_predicted": 101.63934426229508,
+          "error_pred_minus_obs": 13.639344262278513
+        },
+        {
+          "case_id": "start_1903",
+          "C_observed": 72.00000000015058,
+          "C_predicted": 98.36065573770492,
+          "error_pred_minus_obs": 26.36065573755434
+        },
+        {
+          "case_id": "start_1904",
+          "C_observed": 105.99999999997432,
+          "C_predicted": 95.08196721311475,
+          "error_pred_minus_obs": -10.91803278685957
+        },
+        {
+          "case_id": "start_1905",
+          "C_observed": 105.99999999997442,
+          "C_predicted": 91.80327868852459,
+          "error_pred_minus_obs": -14.196721311449835
+        },
+        {
+          "case_id": "start_1906",
+          "C_observed": 87.00000000025767,
+          "C_predicted": 88.52459016393442,
+          "error_pred_minus_obs": 1.5245901636767485
+        },
+        {
+          "case_id": "start_1907",
+          "C_observed": 72.99999999989288,
+          "C_predicted": 85.24590163934425,
+          "error_pred_minus_obs": 12.245901639451375
+        },
+        {
+          "case_id": "start_1908",
+          "C_observed": 69.99999999996692,
+          "C_predicted": 81.96721311475409,
+          "error_pred_minus_obs": 11.967213114787171
+        },
+        {
+          "case_id": "start_1909",
+          "C_observed": 66.000000000026,
+          "C_predicted": 78.68852459016394,
+          "error_pred_minus_obs": 12.68852459013793
+        },
+        {
+          "case_id": "start_1910",
+          "C_observed": 66.000000000026,
+          "C_predicted": 75.40983606557377,
+          "error_pred_minus_obs": 9.409836065547765
+        },
+        {
+          "case_id": "start_1911",
+          "C_observed": 66.00000000002586,
+          "C_predicted": 72.1311475409836,
+          "error_pred_minus_obs": 6.131147540957741
+        },
+        {
+          "case_id": "start_1912",
+          "C_observed": 69.0000000000825,
+          "C_predicted": 68.85245901639344,
+          "error_pred_minus_obs": -0.14754098368905488
+        },
+        {
+          "case_id": "start_1913",
+          "C_observed": 66.00000000002615,
+          "C_predicted": 65.57377049180327,
+          "error_pred_minus_obs": -0.42622950822287464
+        },
+        {
+          "case_id": "start_1914",
+          "C_observed": 77.99999999991904,
+          "C_predicted": 62.295081967213115,
+          "error_pred_minus_obs": -15.704918032705926
+        }
+      ]
+    },
+    {
+      "candidate": "max_source_step_and_continuous",
+      "n": 15,
+      "mae_seconds": 11.375956284107923,
+      "max_abs_error_seconds": 26.36065573755434,
+      "exact_within_1e_6_count": 0,
+      "per_case": [
+        {
+          "case_id": "start_1900",
+          "C_observed": 87.0000000002571,
+          "C_predicted": 108.1967213114754,
+          "error_pred_minus_obs": 21.196721311218298
+        },
+        {
+          "case_id": "start_1901",
+          "C_observed": 118.99999999996695,
+          "C_predicted": 104.91803278688525,
+          "error_pred_minus_obs": -14.081967213081697
+        },
+        {
+          "case_id": "start_1902",
+          "C_observed": 88.00000000001657,
+          "C_predicted": 101.63934426229508,
+          "error_pred_minus_obs": 13.639344262278513
+        },
+        {
+          "case_id": "start_1903",
+          "C_observed": 72.00000000015058,
+          "C_predicted": 98.36065573770492,
+          "error_pred_minus_obs": 26.36065573755434
+        },
+        {
+          "case_id": "start_1904",
+          "C_observed": 105.99999999997432,
+          "C_predicted": 95.08196721311475,
+          "error_pred_minus_obs": -10.91803278685957
+        },
+        {
+          "case_id": "start_1905",
+          "C_observed": 105.99999999997442,
+          "C_predicted": 91.80327868852459,
+          "error_pred_minus_obs": -14.196721311449835
+        },
+        {
+          "case_id": "start_1906",
+          "C_observed": 87.00000000025767,
+          "C_predicted": 88.52459016393442,
+          "error_pred_minus_obs": 1.5245901636767485
+        },
+        {
+          "case_id": "start_1907",
+          "C_observed": 72.99999999989288,
+          "C_predicted": 85.24590163934425,
+          "error_pred_minus_obs": 12.245901639451375
+        },
+        {
+          "case_id": "start_1908",
+          "C_observed": 69.99999999996692,
+          "C_predicted": 81.96721311475409,
+          "error_pred_minus_obs": 11.967213114787171
+        },
+        {
+          "case_id": "start_1909",
+          "C_observed": 66.000000000026,
+          "C_predicted": 78.68852459016394,
+          "error_pred_minus_obs": 12.68852459013793
+        },
+        {
+          "case_id": "start_1910",
+          "C_observed": 66.000000000026,
+          "C_predicted": 75.40983606557377,
+          "error_pred_minus_obs": 9.409836065547765
+        },
+        {
+          "case_id": "start_1911",
+          "C_observed": 66.00000000002586,
+          "C_predicted": 72.1311475409836,
+          "error_pred_minus_obs": 6.131147540957741
+        },
+        {
+          "case_id": "start_1912",
+          "C_observed": 69.0000000000825,
+          "C_predicted": 68.85245901639344,
+          "error_pred_minus_obs": -0.14754098368905488
+        },
+        {
+          "case_id": "start_1913",
+          "C_observed": 66.00000000002615,
+          "C_predicted": 65.57377049180327,
+          "error_pred_minus_obs": -0.42622950822287464
+        },
+        {
+          "case_id": "start_1914",
+          "C_observed": 77.99999999991904,
+          "C_predicted": 62.295081967213115,
+          "error_pred_minus_obs": -15.704918032705926
+        }
+      ]
+    },
+    {
+      "candidate": "nearest_integer_T_over_18_3",
+      "n": 15,
+      "mae_seconds": 11.333333333288254,
+      "max_abs_error_seconds": 25.999999999849422,
+      "exact_within_1e_6_count": 2,
+      "per_case": [
+        {
+          "case_id": "start_1900",
+          "C_observed": 87.0000000002571,
+          "C_predicted": 108.0,
+          "error_pred_minus_obs": 20.999999999742897
+        },
+        {
+          "case_id": "start_1901",
+          "C_observed": 118.99999999996695,
+          "C_predicted": 105.0,
+          "error_pred_minus_obs": -13.999999999966946
+        },
+        {
+          "case_id": "start_1902",
+          "C_observed": 88.00000000001657,
+          "C_predicted": 102.0,
+          "error_pred_minus_obs": 13.99999999998343
+        },
+        {
+          "case_id": "start_1903",
+          "C_observed": 72.00000000015058,
+          "C_predicted": 98.0,
+          "error_pred_minus_obs": 25.999999999849422
+        },
+        {
+          "case_id": "start_1904",
+          "C_observed": 105.99999999997432,
+          "C_predicted": 95.0,
+          "error_pred_minus_obs": -10.999999999974321
+        },
+        {
+          "case_id": "start_1905",
+          "C_observed": 105.99999999997442,
+          "C_predicted": 92.0,
+          "error_pred_minus_obs": -13.99999999997442
+        },
+        {
+          "case_id": "start_1906",
+          "C_observed": 87.00000000025767,
+          "C_predicted": 89.0,
+          "error_pred_minus_obs": 1.9999999997423288
+        },
+        {
+          "case_id": "start_1907",
+          "C_observed": 72.99999999989288,
+          "C_predicted": 85.0,
+          "error_pred_minus_obs": 12.000000000107121
+        },
+        {
+          "case_id": "start_1908",
+          "C_observed": 69.99999999996692,
+          "C_predicted": 82.0,
+          "error_pred_minus_obs": 12.000000000033083
+        },
+        {
+          "case_id": "start_1909",
+          "C_observed": 66.000000000026,
+          "C_predicted": 79.0,
+          "error_pred_minus_obs": 12.999999999973994
+        },
+        {
+          "case_id": "start_1910",
+          "C_observed": 66.000000000026,
+          "C_predicted": 75.0,
+          "error_pred_minus_obs": 8.999999999973994
+        },
+        {
+          "case_id": "start_1911",
+          "C_observed": 66.00000000002586,
+          "C_predicted": 72.0,
+          "error_pred_minus_obs": 5.999999999974136
+        },
+        {
+          "case_id": "start_1912",
+          "C_observed": 69.0000000000825,
+          "C_predicted": 69.0,
+          "error_pred_minus_obs": -8.249401162174763e-11
+        },
+        {
+          "case_id": "start_1913",
+          "C_observed": 66.00000000002615,
+          "C_predicted": 66.0,
+          "error_pred_minus_obs": -2.6147972675971687e-11
+        },
+        {
+          "case_id": "start_1914",
+          "C_observed": 77.99999999991904,
+          "C_predicted": 62.0,
+          "error_pred_minus_obs": -15.99999999991904
+        }
+      ]
+    },
+    {
+      "candidate": "floor_T_over_18_3",
+      "n": 15,
+      "mae_seconds": 11.333333333288254,
+      "max_abs_error_seconds": 25.999999999849422,
+      "exact_within_1e_6_count": 0,
+      "per_case": [
+        {
+          "case_id": "start_1900",
+          "C_observed": 87.0000000002571,
+          "C_predicted": 108.0,
+          "error_pred_minus_obs": 20.999999999742897
+        },
+        {
+          "case_id": "start_1901",
+          "C_observed": 118.99999999996695,
+          "C_predicted": 104.0,
+          "error_pred_minus_obs": -14.999999999966946
+        },
+        {
+          "case_id": "start_1902",
+          "C_observed": 88.00000000001657,
+          "C_predicted": 101.0,
+          "error_pred_minus_obs": 12.99999999998343
+        },
+        {
+          "case_id": "start_1903",
+          "C_observed": 72.00000000015058,
+          "C_predicted": 98.0,
+          "error_pred_minus_obs": 25.999999999849422
+        },
+        {
+          "case_id": "start_1904",
+          "C_observed": 105.99999999997432,
+          "C_predicted": 95.0,
+          "error_pred_minus_obs": -10.999999999974321
+        },
+        {
+          "case_id": "start_1905",
+          "C_observed": 105.99999999997442,
+          "C_predicted": 91.0,
+          "error_pred_minus_obs": -14.99999999997442
+        },
+        {
+          "case_id": "start_1906",
+          "C_observed": 87.00000000025767,
+          "C_predicted": 88.0,
+          "error_pred_minus_obs": 0.9999999997423288
+        },
+        {
+          "case_id": "start_1907",
+          "C_observed": 72.99999999989288,
+          "C_predicted": 85.0,
+          "error_pred_minus_obs": 12.000000000107121
+        },
+        {
+          "case_id": "start_1908",
+          "C_observed": 69.99999999996692,
+          "C_predicted": 81.0,
+          "error_pred_minus_obs": 11.000000000033083
+        },
+        {
+          "case_id": "start_1909",
+          "C_observed": 66.000000000026,
+          "C_predicted": 78.0,
+          "error_pred_minus_obs": 11.999999999973994
+        },
+        {
+          "case_id": "start_1910",
+          "C_observed": 66.000000000026,
+          "C_predicted": 75.0,
+          "error_pred_minus_obs": 8.999999999973994
+        },
+        {
+          "case_id": "start_1911",
+          "C_observed": 66.00000000002586,
+          "C_predicted": 72.0,
+          "error_pred_minus_obs": 5.999999999974136
+        },
+        {
+          "case_id": "start_1912",
+          "C_observed": 69.0000000000825,
+          "C_predicted": 68.0,
+          "error_pred_minus_obs": -1.000000000082494
+        },
+        {
+          "case_id": "start_1913",
+          "C_observed": 66.00000000002615,
+          "C_predicted": 65.0,
+          "error_pred_minus_obs": -1.000000000026148
+        },
+        {
+          "case_id": "start_1914",
+          "C_observed": 77.99999999991904,
+          "C_predicted": 62.0,
+          "error_pred_minus_obs": -15.99999999991904
+        }
+      ]
+    }
+  ],
+  "jumps_by_start": [
+    {
+      "from_case": "start_1900",
+      "to_case": "start_1901",
+      "C_from": 87.0000000002571,
+      "C_to": 118.99999999996695,
+      "delta_C": 31.999999999709843
+    },
+    {
+      "from_case": "start_1901",
+      "to_case": "start_1902",
+      "C_from": 118.99999999996695,
+      "C_to": 88.00000000001657,
+      "delta_C": -30.999999999950376
+    },
+    {
+      "from_case": "start_1902",
+      "to_case": "start_1903",
+      "C_from": 88.00000000001657,
+      "C_to": 72.00000000015058,
+      "delta_C": -15.999999999865992
+    },
+    {
+      "from_case": "start_1903",
+      "to_case": "start_1904",
+      "C_from": 72.00000000015058,
+      "C_to": 105.99999999997432,
+      "delta_C": 33.99999999982374
+    },
+    {
+      "from_case": "start_1904",
+      "to_case": "start_1905",
+      "C_from": 105.99999999997432,
+      "C_to": 105.99999999997442,
+      "delta_C": 9.947598300641403e-14
+    },
+    {
+      "from_case": "start_1905",
+      "to_case": "start_1906",
+      "C_from": 105.99999999997442,
+      "C_to": 87.00000000025767,
+      "delta_C": -18.99999999971675
+    },
+    {
+      "from_case": "start_1906",
+      "to_case": "start_1907",
+      "C_from": 87.00000000025767,
+      "C_to": 72.99999999989288,
+      "delta_C": -14.000000000364793
+    },
+    {
+      "from_case": "start_1907",
+      "to_case": "start_1908",
+      "C_from": 72.99999999989288,
+      "C_to": 69.99999999996692,
+      "delta_C": -2.9999999999259614
+    },
+    {
+      "from_case": "start_1908",
+      "to_case": "start_1909",
+      "C_from": 69.99999999996692,
+      "C_to": 66.000000000026,
+      "delta_C": -3.9999999999409113
+    },
+    {
+      "from_case": "start_1909",
+      "to_case": "start_1910",
+      "C_from": 66.000000000026,
+      "C_to": 66.000000000026,
+      "delta_C": 0.0
+    },
+    {
+      "from_case": "start_1910",
+      "to_case": "start_1911",
+      "C_from": 66.000000000026,
+      "C_to": 66.00000000002586,
+      "delta_C": -1.4210854715202004e-13
+    },
+    {
+      "from_case": "start_1911",
+      "to_case": "start_1912",
+      "C_from": 66.00000000002586,
+      "C_to": 69.0000000000825,
+      "delta_C": 3.0000000000566303
+    },
+    {
+      "from_case": "start_1912",
+      "to_case": "start_1913",
+      "C_from": 69.0000000000825,
+      "C_to": 66.00000000002615,
+      "delta_C": -3.000000000056346
+    },
+    {
+      "from_case": "start_1913",
+      "to_case": "start_1914",
+      "C_from": 66.00000000002615,
+      "C_to": 77.99999999991904,
+      "delta_C": 11.999999999892893
+    }
+  ],
+  "C_summary": {
+    "min": 66.00000000002586,
+    "median": 72.99999999989288,
+    "max": 118.99999999996695
+  }
+}

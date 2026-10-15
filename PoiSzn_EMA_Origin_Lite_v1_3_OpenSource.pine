@@ -81,8 +81,10 @@ if is_end_bar
     end_candle_close := close
 
 bool is_post_end = not na(end_bar_index) and (bar_index > end_bar_index)
-// Duración temporal T inclusiva en segundos basada en el conteo de barras de la fuente
-float duration_T = n_bars > 0 ? float(n_bars) * dt_fuente : math.max(0.0, float(end_time - start_time) / 1000.0)
+// Duración temporal T del rango en segundos y conteo en resolución fuente
+float duration_T = math.max(0.0, float(end_time - start_time) / 1000.0)
+int n_source_bars = int(math.floor(duration_T / dt_fuente))
+int n_chart_bars  = n_bars
 
 // Sub-barras para muestreo intraminuto (llamada a nivel global obligatoria en Pine v5)
 sub_closes = request.security_lower_tf(syminfo.tickerid, "15S", close)
@@ -95,23 +97,24 @@ var string branch_name = "Inactivo"
 
 // Cálculo del Operador según el Régimen
 if mode_C == "Auto (Régimen Corto n<21 / Base n>=21)"
-    // 1. Régimen Corto Continuo (n < 21 barras): Ley Analítica Exacta Universal
-    if n_bars < 21
+    // 1. Régimen Corto Continuo (n_fuente < 21 barras): Ley Analítica Exacta Universal
+    if n_source_bars < 21
         C := math.max(dt_fuente, (duration_T * 10.0) / 183.0)
-        branch_name := "Corto_Continuo (n<21, Exacto)"
+        branch_name := "Corto_Continuo (n_fuente=" + str.tostring(n_source_bars) + "<21, Exacto)"
     else
-        // 2. Régimen Largo (n >= 21 barras): Base Macroscópica round(T / 18.3)
-        // Nota: El indicador oficial cuantiza a enteros y puede modularse en pasos armónicos k*9s
-        C := math.max(dt_fuente, math.round(duration_T / 18.3) + (harmonic_k * 9.0))
-        branch_name := harmonic_k == 0 ? "Largo_Base (round T/18.3)" : "Largo_Armónico (k=" + str.tostring(harmonic_k) + ")"
+        // 2. Régimen Largo (n_fuente >= 21 barras): Base Macroscópica round(T / 18.3)
+        // Cuantizado a enteros en segundos y modulado en pasos armónicos k*9s
+        float C_base = math.max(dt_fuente, float(math.round(duration_T / 18.3)))
+        C := C_base + (harmonic_k * 9.0)
+        branch_name := harmonic_k == 0 ? "Largo_Base (round T/18.3)" : ("Largo_Armónico (k=" + str.tostring(harmonic_k) + ")")
 else if mode_C == "Base Macroscópica: round(T / 18.3)"
-    C := math.max(dt_fuente, math.round(duration_T / 18.3))
+    C := math.max(dt_fuente, float(math.round(duration_T / 18.3)))
     branch_name := "Base_Macroscópica"
 else if mode_C == "Régimen Corto Puro: max(dt, n*dt*10/183)"
     C := math.max(dt_fuente, (duration_T * 10.0) / 183.0)
     branch_name := "Corto_Continuo_Puro"
 else if mode_C == "Celosía Armónica: Base + k*9s"
-    C := math.max(dt_fuente, math.round(duration_T / 18.3) + (harmonic_k * 9.0))
+    C := math.max(dt_fuente, float(math.round(duration_T / 18.3)) + (harmonic_k * 9.0))
     branch_name := "Celosía_Armónica_k9"
 else if mode_C == "Manual C (Calibración Directa)"
     C := manual_C
@@ -323,7 +326,7 @@ if show_hud and barstate.islast
     table.cell(hud, 1, 2, branch_name, text_color=color.aqua, text_size=size.small)
 
     table.cell(hud, 0, 3, "Duración T (seg)", text_color=color.white, text_size=size.small)
-    table.cell(hud, 1, 3, str.tostring(duration_T, "#") + " s (" + str.tostring(n_bars) + " barras)", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 3, str.tostring(duration_T, "#") + " s (" + str.tostring(n_source_bars) + " barras fuente / " + str.tostring(n_chart_bars) + " barras gráfico)", text_color=color.white, text_size=size.small)
 
     table.cell(hud, 0, 4, "Resolución Fuente", text_color=color.white, text_size=size.small)
     table.cell(hud, 1, 4, source_res + " (dt=" + str.tostring(dt_fuente, "#") + "s)", text_color=color.white, text_size=size.small)

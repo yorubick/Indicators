@@ -1,0 +1,1235 @@
+{
+  "schema_version": 1,
+  "title": "Barrido de START con END fijo en 2026-10-12 19:33 UTC",
+  "data_origin": "CSV exportado desde la interfaz oficial de TradingView",
+  "calculation_scope": "C recuperado de plots visibles; no inferido solo de OHLC",
+  "symbol": "CME_MINI:NQ1!",
+  "date_utc": "2026-10-12",
+  "END": "2026-10-12T19:33:00Z",
+  "chart_interval_seconds": 15,
+  "source_interval_seconds": 15,
+  "same_resolution_required": true,
+  "cases": [
+    {
+      "case_id": "start_1900",
+      "START": "2026-10-12T19:00:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1980,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_190000_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 87.0000000002571,
+      "N_3A": 139.20000000041136,
+      "N_2A": 46.40000000013712,
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190000_end_193300_15s.csv",
+        "csv_sha256": "c026b823431ade8155d9c36c58a9a4ab02470c5e91d8a33e35e60ea7880a9a50",
+        "rows": 17434,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 87.0000000002571,
+          "mean_seconds": 87.00000000142334,
+          "min_seconds": 86.99999568307331,
+          "max_seconds": 87.0000224362211,
+          "pair_count": 16629
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.014264930265794321,
+            "period": 139.20398016215842,
+            "C_seconds": 87.002487601349,
+            "pairs": 16630,
+            "step_rmse": 0.0020623408077787403
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.011556047133731168,
+            "period": 172.06956062529042,
+            "C_seconds": 87.0014632375064,
+            "pairs": 16630,
+            "step_rmse": 0.0014155613150631594
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.04219275765861551,
+            "period": 46.401499948928134,
+            "C_seconds": 87.00281240424025,
+            "pairs": 16630,
+            "step_rmse": 0.0039028589753647702
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.03427136967807961,
+            "period": 57.35774930463969,
+            "C_seconds": 87.00332759692537,
+            "pairs": 16630,
+            "step_rmse": 0.0037999236142360793
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.12145712101595799,
+            "period": 15.466716675568364,
+            "C_seconds": 87.00028130007205,
+            "pairs": 16630,
+            "step_rmse": 0.0021510194510116045
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.09941027733757303,
+            "period": 19.118644204245484,
+            "C_seconds": 87.00057194066765,
+            "pairs": 16630,
+            "step_rmse": 0.0027644897626118853
+          }
+        },
+        "lane_fit_C_median_seconds": 87.00197541942771,
+        "delta_closed_form_vs_lane_fit_seconds": -0.001975419170605619,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1901",
+      "START": "2026-10-12T19:01:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1920,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_190100_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 118.99999999996695,
+      "N_3A": 190.39999999994714,
+      "N_2A": 63.46666666664904,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190100_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190100_end_193300_15s.csv",
+        "csv_sha256": "cc080d567f3ff583395cad921fdbff69c4e949dac17b2242018064f4ca542e4a",
+        "rows": 17441,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 118.99999999996695,
+          "mean_seconds": 119.00000001218848,
+          "min_seconds": 118.99999611188666,
+          "max_seconds": 119.00020505350837,
+          "pair_count": 16636
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.010449127537400158,
+            "period": 190.40353994546217,
+            "C_seconds": 119.00221246591384,
+            "pairs": 16637,
+            "step_rmse": 0.0014116331531625146
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.008461770364879594,
+            "period": 235.35715858007202,
+            "C_seconds": 119.00081051801395,
+            "pairs": 16637,
+            "step_rmse": 0.0007658422345591896
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.03102232896681981,
+            "period": 63.469692205866195,
+            "C_seconds": 119.00567288599912,
+            "pairs": 16637,
+            "step_rmse": 0.004022704478669589
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.02517120299557049,
+            "period": 78.45587663616834,
+            "C_seconds": 119.00610500991827,
+            "pairs": 16637,
+            "step_rmse": 0.003733522544439687
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.09026955907579641,
+            "period": 21.15586317775924,
+            "C_seconds": 119.00173037489574,
+            "pairs": 16637,
+            "step_rmse": 0.003909396434064005
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.07366174935378879,
+            "period": 26.151133628312753,
+            "C_seconds": 119.00234965692881,
+            "pairs": 16637,
+            "step_rmse": 0.004095887896262035
+          }
+        },
+        "lane_fit_C_median_seconds": 119.00228106142133,
+        "delta_closed_form_vs_lane_fit_seconds": -0.0022810614543828933,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1902",
+      "START": "2026-10-12T19:02:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1860,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_190200_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 88.00000000001657,
+      "N_3A": 140.8000000000265,
+      "N_2A": 46.93333333334217,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190200_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190200_end_193300_15s.csv",
+        "csv_sha256": "6e219e7ee0d7d389bcd87685b4332ae31d111cb29ef510d6a7d4e9349d2ca391",
+        "rows": 17441,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 88.00000000001657,
+          "mean_seconds": 88.00000000060055,
+          "min_seconds": 87.99999053401359,
+          "max_seconds": 88.00001184459526,
+          "pair_count": 16636
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.014103782810357136,
+            "period": 140.80592730989142,
+            "C_seconds": 88.00370456868212,
+            "pairs": 16637,
+            "step_rmse": 0.0024872078063341934
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.011425355023482698,
+            "period": 174.0492650678575,
+            "C_seconds": 88.00243739386053,
+            "pairs": 16637,
+            "step_rmse": 0.0018055154298965122
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.04172272246882069,
+            "period": 46.935510476206254,
+            "C_seconds": 88.00408214288673,
+            "pairs": 16637,
+            "step_rmse": 0.00464713601875265
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.033888034920513434,
+            "period": 58.01788063814053,
+            "C_seconds": 88.00465040616821,
+            "pairs": 16637,
+            "step_rmse": 0.004439642319976377
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.12015838446429335,
+            "period": 15.644697820436544,
+            "C_seconds": 88.00142523995557,
+            "pairs": 16637,
+            "step_rmse": 0.004786654836829721
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.09833491741743121,
+            "period": 19.33865540873961,
+            "C_seconds": 88.00174652291619,
+            "pairs": 16637,
+            "step_rmse": 0.004775495317465541
+          }
+        },
+        "lane_fit_C_median_seconds": 88.00307098127132,
+        "delta_closed_form_vs_lane_fit_seconds": -0.0030709812547513593,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1903",
+      "START": "2026-10-12T19:03:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1800,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_190300_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 72.00000000015058,
+      "N_3A": 115.20000000024092,
+      "N_2A": 38.40000000008031,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190300_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190300_end_193300_15s.csv",
+        "csv_sha256": "a47f33aecc39e610598e01251f546f1aa3037b6d15e745b5a2bc2ee2d69222c0",
+        "rows": 17441,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 72.00000000015058,
+          "mean_seconds": 72.00000000131602,
+          "min_seconds": 71.99998744075614,
+          "max_seconds": 72.00003148554165,
+          "pair_count": 16636
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.017210976595636404,
+            "period": 115.2049107955368,
+            "C_seconds": 72.0030692472105,
+            "pairs": 16637,
+            "step_rmse": 0.0027810812277495106
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.013946536203453732,
+            "period": 142.4047831535918,
+            "C_seconds": 72.0024184484453,
+            "pairs": 16637,
+            "step_rmse": 0.0022085808308681095
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.05076012427200113,
+            "period": 38.40100676828295,
+            "C_seconds": 72.00188769053052,
+            "pairs": 16637,
+            "step_rmse": 0.0038775307614105146
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.041264125835621605,
+            "period": 47.46825079894175,
+            "C_seconds": 72.0024028972712,
+            "pairs": 16637,
+            "step_rmse": 0.003918568648150986
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.14492710873139772,
+            "period": 12.800040706716384,
+            "C_seconds": 72.00022897527967,
+            "pairs": 16637,
+            "step_rmse": 0.002336396988624439
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.11888976950498996,
+            "period": 15.822305302863402,
+            "C_seconds": 72.00037806359188,
+            "pairs": 16637,
+            "step_rmse": 0.0027105702431085145
+          }
+        },
+        "lane_fit_C_median_seconds": 72.00214529390087,
+        "delta_closed_form_vs_lane_fit_seconds": -0.0021452937502886016,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1904",
+      "START": "2026-10-12T19:04:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1740,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_190400_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 105.99999999997432,
+      "N_3A": 169.59999999995892,
+      "N_2A": 56.53333333331964,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190400_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190400_end_193300_15s.csv",
+        "csv_sha256": "49001c3c156d085f1b14e2107637fa47a222ccbd94b062048cd327da0425fcdd",
+        "rows": 17444,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 105.99999999997432,
+          "mean_seconds": 105.99999999946009,
+          "min_seconds": 105.99999129028947,
+          "max_seconds": 106.00000279594677,
+          "pair_count": 16639
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.011723127865806923,
+            "period": 169.60293318419218,
+            "C_seconds": 106.0018332401201,
+            "pairs": 16640,
+            "step_rmse": 0.0014460447101219286
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.009494599910228675,
+            "period": 209.6460534314216,
+            "C_seconds": 106.00081353274125,
+            "pairs": 16640,
+            "step_rmse": 0.0008627429389655018
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.03476168372660791,
+            "period": 56.53461241203125,
+            "C_seconds": 106.0023982725586,
+            "pairs": 16640,
+            "step_rmse": 0.0029445312247256654
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.028215324540486305,
+            "period": 69.88346607993789,
+            "C_seconds": 106.0030103459732,
+            "pairs": 16640,
+            "step_rmse": 0.0029517905793194827
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.10078383404965571,
+            "period": 18.844452424925702,
+            "C_seconds": 106.00004489020708,
+            "pairs": 16640,
+            "step_rmse": 0.000706505477303997
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.08232528396940983,
+            "period": 23.293873079662305,
+            "C_seconds": 106.00020895801386,
+            "pairs": 16640,
+            "step_rmse": 0.0013717078171719109
+          }
+        },
+        "lane_fit_C_median_seconds": 106.00132338643067,
+        "delta_closed_form_vs_lane_fit_seconds": -0.001323386456348885,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1905",
+      "START": "2026-10-12T19:05:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1680,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_190500_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 105.99999999997442,
+      "N_3A": 169.59999999995907,
+      "N_2A": 56.53333333331969,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190500_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190500_end_193300_15s.csv",
+        "csv_sha256": "77ec9337986a9e8feb5a70e6d765d26d70efa8580914ee5527e0b371c03eae4c",
+        "rows": 17445,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 105.99999999997442,
+          "mean_seconds": 105.99999999946044,
+          "min_seconds": 105.99999129028947,
+          "max_seconds": 106.00000279594677,
+          "pair_count": 16640
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.011723113341602448,
+            "period": 169.60314455055993,
+            "C_seconds": 106.00196534409996,
+            "pairs": 16641,
+            "step_rmse": 0.0014972066906873101
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.00949459179183603,
+            "period": 209.64623354525992,
+            "C_seconds": 106.00090460153592,
+            "pairs": 16641,
+            "step_rmse": 0.0009097267850540524
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.03476163049758227,
+            "period": 56.53470051236818,
+            "C_seconds": 106.00256346069034,
+            "pairs": 16641,
+            "step_rmse": 0.003044189416221274
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.02821528074475831,
+            "period": 69.88357610517662,
+            "C_seconds": 106.00317723818924,
+            "pairs": 16641,
+            "step_rmse": 0.0030324588566795997
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.10078375347179305,
+            "period": 18.84446829081189,
+            "C_seconds": 106.00013413581688,
+            "pairs": 16641,
+            "step_rmse": 0.0012212341823401396
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.08232518993258203,
+            "period": 23.293900829598392,
+            "C_seconds": 106.00033523581291,
+            "pairs": 16641,
+            "step_rmse": 0.001737378377888154
+          }
+        },
+        "lane_fit_C_median_seconds": 106.00143497281795,
+        "delta_closed_form_vs_lane_fit_seconds": -0.0014349728435263387,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1906",
+      "START": "2026-10-12T19:06:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1620,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_190600_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 87.00000000025767,
+      "N_3A": 139.20000000041227,
+      "N_2A": 46.400000000137425,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190600_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190600_end_193300_15s.csv",
+        "csv_sha256": "87d3ab52bf07061af0a40babd95f8fde0fc1c648d676529204ba158abc1e7e76",
+        "rows": 17445,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 87.00000000025767,
+          "mean_seconds": 87.00000000142317,
+          "min_seconds": 86.99999568307331,
+          "max_seconds": 87.0000224362211,
+          "pair_count": 16640
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.014265010216584948,
+            "period": 139.2031943639786,
+            "C_seconds": 87.00199647748663,
+            "pairs": 16641,
+            "step_rmse": 0.0018473149914517793
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.011556071443151064,
+            "period": 172.06919655514417,
+            "C_seconds": 87.00127915709537,
+            "pairs": 16641,
+            "step_rmse": 0.0013232496794206162
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.042193570938605394,
+            "period": 46.4005862862411,
+            "C_seconds": 87.00109928670206,
+            "pairs": 16641,
+            "step_rmse": 0.0024397354264636367
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.03427203162758212,
+            "period": 57.35662214989323,
+            "C_seconds": 87.00161786781555,
+            "pairs": 16641,
+            "step_rmse": 0.0026493498826861035
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.12145745373323988,
+            "period": 15.466671567087609,
+            "C_seconds": 87.0000275648678,
+            "pairs": 16641,
+            "step_rmse": 0.0006731518698103548
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.0994108975517888,
+            "period": 19.118518686123785,
+            "C_seconds": 87.00000076269814,
+            "pairs": 16641,
+            "step_rmse": 0.00010092491632801771
+          }
+        },
+        "lane_fit_C_median_seconds": 87.00118922189871,
+        "delta_closed_form_vs_lane_fit_seconds": -0.0011892216410416268,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1907",
+      "START": "2026-10-12T19:07:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1560,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_190700_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 72.99999999989288,
+      "N_3A": 116.7999999998286,
+      "N_2A": 38.9333333332762,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190700_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190700_end_193300_15s.csv",
+        "csv_sha256": "0e6e4aa564880d245b882d7ff29da5beb8bf2eb95092c3904beaa06a4e3adbbf",
+        "rows": 17445,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 72.99999999989288,
+          "mean_seconds": 72.99999999967183,
+          "min_seconds": 72.99999794825199,
+          "max_seconds": 73.00000148467373,
+          "pair_count": 16640
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.016977427216135706,
+            "period": 116.80347955779528,
+            "C_seconds": 73.00217472362205,
+            "pairs": 16641,
+            "step_rmse": 0.002308017333840246
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.013756936701679094,
+            "period": 144.38120247045197,
+            "C_seconds": 73.00173158618357,
+            "pairs": 16641,
+            "step_rmse": 0.0018424847631403737
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.05008295712616842,
+            "period": 38.93374422683594,
+            "C_seconds": 73.00077042531738,
+            "pairs": 16641,
+            "step_rmse": 0.002442467922573516
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.04071104847907224,
+            "period": 48.12671313361315,
+            "C_seconds": 73.00119407907613,
+            "pairs": 16641,
+            "step_rmse": 0.002723516518493094
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.14308424124255736,
+            "period": 12.977779681618374,
+            "C_seconds": 73.00001070910335,
+            "pairs": 16641,
+            "step_rmse": 0.0004984520727762983
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.11735728606982365,
+            "period": 16.04197555156539,
+            "C_seconds": 73.000001105438,
+            "pairs": 16641,
+            "step_rmse": 0.00014457204371347366
+          }
+        },
+        "lane_fit_C_median_seconds": 73.00098225219676,
+        "delta_closed_form_vs_lane_fit_seconds": -0.000982252303884934,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1908",
+      "START": "2026-10-12T19:08:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1500,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_190800_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 69.99999999996692,
+      "N_3A": 111.99999999994706,
+      "N_2A": 37.333333333315686,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190800_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190800_end_193300_15s.csv",
+        "csv_sha256": "e154264bf39d8ab13335a147105792948f9d3dbaa445161ccf985c4536c99d7b",
+        "rows": 17447,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 69.99999999996692,
+          "mean_seconds": 70.00000000002457,
+          "min_seconds": 69.99999895665486,
+          "max_seconds": 70.0000018609978,
+          "pair_count": 16642
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.017698377045834008,
+            "period": 112.00471194734642,
+            "C_seconds": 70.00294496709152,
+            "pairs": 16643,
+            "step_rmse": 0.0028038663636744477
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.014342127461416596,
+            "period": 138.44932544913087,
+            "C_seconds": 70.00246792371786,
+            "pairs": 16643,
+            "step_rmse": 0.0022962102536398738
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.052172835717550624,
+            "period": 37.33412488497749,
+            "C_seconds": 70.00148415933279,
+            "pairs": 16643,
+            "step_rmse": 0.0035376669091923617
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.04241833471594777,
+            "period": 46.14942284728759,
+            "C_seconds": 70.00193353240252,
+            "pairs": 16643,
+            "step_rmse": 0.0036173196995063868
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.1487596168156645,
+            "period": 12.444508952172823,
+            "C_seconds": 70.00036285597214,
+            "pairs": 16643,
+            "step_rmse": 0.003022660143234161
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.12207916993967699,
+            "period": 15.382811260825743,
+            "C_seconds": 70.00043326555534,
+            "pairs": 16643,
+            "step_rmse": 0.002982943022884784
+          }
+        },
+        "lane_fit_C_median_seconds": 70.00170884586765,
+        "delta_closed_form_vs_lane_fit_seconds": -0.0017088459007368328,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1909",
+      "START": "2026-10-12T19:09:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1440,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_190900_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 66.000000000026,
+      "N_3A": 105.6000000000416,
+      "N_2A": 35.20000000001387,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190900_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_190900_end_193300_15s.csv",
+        "csv_sha256": "b51004dc7461bf3281ba48c2f21fab8e4f6b9bc5436e9242b21b577ef9cbe246",
+        "rows": 17447,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 66.000000000026,
+          "mean_seconds": 66.0000000004873,
+          "min_seconds": 65.99996129503138,
+          "max_seconds": 66.00003666867559,
+          "pair_count": 16642
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.01876084487829112,
+            "period": 105.60500702259286,
+            "C_seconds": 66.00312938912053,
+            "pairs": 16643,
+            "step_rmse": 0.003070120649671386
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.015204646974781562,
+            "period": 130.5387330805642,
+            "C_seconds": 66.00273020927403,
+            "pairs": 16643,
+            "step_rmse": 0.0025653179539633663
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.05524729513140779,
+            "period": 35.20086730477798,
+            "C_seconds": 66.00162619645872,
+            "pairs": 16643,
+            "step_rmse": 0.0039311046270099
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.04493123934443413,
+            "period": 43.51246013198945,
+            "C_seconds": 66.00204626762445,
+            "pairs": 16643,
+            "step_rmse": 0.003951568143752375
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.15706664538855344,
+            "period": 11.733448244548516,
+            "C_seconds": 66.0006463755854,
+            "pairs": 16643,
+            "step_rmse": 0.004272277892101194
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.12900017582326145,
+            "period": 14.50385483768742,
+            "C_seconds": 66.00068774453264,
+            "pairs": 16643,
+            "step_rmse": 0.003982273702317086
+          }
+        },
+        "lane_fit_C_median_seconds": 66.00183623204158,
+        "delta_closed_form_vs_lane_fit_seconds": -0.001836232015577366,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1910",
+      "START": "2026-10-12T19:10:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1380,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_191000_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 66.000000000026,
+      "N_3A": 105.6000000000416,
+      "N_2A": 35.20000000001387,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_191000_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_191000_end_193300_15s.csv",
+        "csv_sha256": "3374ed6fdad84ac7ffa2120432a9e5134655f47e6f5f884c05af5595778ae06f",
+        "rows": 17447,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 66.000000000026,
+          "mean_seconds": 66.0000000004873,
+          "min_seconds": 65.99996129503138,
+          "max_seconds": 66.00003666867559,
+          "pair_count": 16642
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.018760886123447233,
+            "period": 105.60477265518995,
+            "C_seconds": 66.00298290949372,
+            "pairs": 16643,
+            "step_rmse": 0.00299741015320004
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.015204675321840538,
+            "period": 130.53848784440197,
+            "C_seconds": 66.00260621346166,
+            "pairs": 16643,
+            "step_rmse": 0.002506389881685985
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.055247435399431534,
+            "period": 35.200775394192846,
+            "C_seconds": 66.00145386411158,
+            "pairs": 16643,
+            "step_rmse": 0.003716982844527695
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.044931356720538655,
+            "period": 43.5123438501864,
+            "C_seconds": 66.00186988511419,
+            "pairs": 16643,
+            "step_rmse": 0.0037774288126619523
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.15706702054591892,
+            "period": 11.733417830481448,
+            "C_seconds": 66.00047529645815,
+            "pairs": 16643,
+            "step_rmse": 0.0036635306534305223
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.12900047176293214,
+            "period": 14.503819270331485,
+            "C_seconds": 66.00052589308147,
+            "pairs": 16643,
+            "step_rmse": 0.003482304621897813
+          }
+        },
+        "lane_fit_C_median_seconds": 66.00166187461289,
+        "delta_closed_form_vs_lane_fit_seconds": -0.0016618745868868245,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1911",
+      "START": "2026-10-12T19:11:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1320,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_191100_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 66.00000000002586,
+      "N_3A": 105.60000000004138,
+      "N_2A": 35.200000000013794,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_191100_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_191100_end_193300_15s.csv",
+        "csv_sha256": "70517932eefb281e0fb9e3b8648c3f908693bbf0d11f9f4257fd671cfa12b21d",
+        "rows": 17448,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 66.00000000002586,
+          "mean_seconds": 66.00000000048723,
+          "min_seconds": 65.99996129503138,
+          "max_seconds": 66.00003666867559,
+          "pair_count": 16643
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.018761156086320504,
+            "period": 105.60323867025863,
+            "C_seconds": 66.00202416891165,
+            "pairs": 16644,
+            "step_rmse": 0.002469159107211793
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.01520485857387309,
+            "period": 130.5369025159269,
+            "C_seconds": 66.00180464288438,
+            "pairs": 16644,
+            "step_rmse": 0.002085629468891378
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.055248231747200345,
+            "period": 35.20025359637593,
+            "C_seconds": 66.00047549320487,
+            "pairs": 16644,
+            "step_rmse": 0.0021256672175164366
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.044932064877592805,
+            "period": 43.5116423081945,
+            "C_seconds": 66.00080574838492,
+            "pairs": 16644,
+            "step_rmse": 0.0024796173393657754
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.15706801048575686,
+            "period": 11.733337576599423,
+            "C_seconds": 66.00002386837177,
+            "pairs": 16644,
+            "step_rmse": 0.0008209533736126269
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.12900143065004332,
+            "period": 14.50370402810202,
+            "C_seconds": 66.00000147619458,
+            "pairs": 16644,
+            "step_rmse": 0.00018449286406515352
+          }
+        },
+        "lane_fit_C_median_seconds": 66.0006406207949,
+        "delta_closed_form_vs_lane_fit_seconds": -0.0006406207690332621,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1912",
+      "START": "2026-10-12T19:12:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1260,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_191200_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 69.0000000000825,
+      "N_3A": 110.400000000132,
+      "N_2A": 36.800000000043994,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_191200_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_191200_end_193300_15s.csv",
+        "csv_sha256": "fc0c3544825b341cbb0c6f643fde6f9d22d5d5aed1dacae54d59105c6263cd41",
+        "rows": 17449,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 69.0000000000825,
+          "mean_seconds": 69.0000000004515,
+          "min_seconds": 68.99999496593477,
+          "max_seconds": 69.00000767949973,
+          "pair_count": 16644
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.017952600828001392,
+            "period": 110.40447109371026,
+            "C_seconds": 69.00279443356891,
+            "pairs": 16645,
+            "step_rmse": 0.002771814356093532
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.014548479665811619,
+            "period": 136.47140910537374,
+            "C_seconds": 69.00239786226761,
+            "pairs": 16645,
+            "step_rmse": 0.0022969523539147756
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.05290911588771589,
+            "period": 36.8006694393536,
+            "C_seconds": 69.001255198788,
+            "pairs": 16645,
+            "step_rmse": 0.00330114480755858
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.04302001151712442,
+            "period": 45.48999220290506,
+            "C_seconds": 69.00167356620429,
+            "pairs": 16645,
+            "step_rmse": 0.0034150458436908128
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.1507531797271221,
+            "period": 12.266718510483123,
+            "C_seconds": 69.00029162146758,
+            "pairs": 16645,
+            "step_rmse": 0.002747908536133865
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.12373910305414612,
+            "period": 15.163039416285685,
+            "C_seconds": 69.00034790556968,
+            "pairs": 16645,
+            "step_rmse": 0.002711006504814176
+          }
+        },
+        "lane_fit_C_median_seconds": 69.00146438249615,
+        "delta_closed_form_vs_lane_fit_seconds": -0.0014643824136584271,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1913",
+      "START": "2026-10-12T19:13:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1200,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_191300_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 66.00000000002615,
+      "N_3A": 105.60000000004183,
+      "N_2A": 35.200000000013944,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_191300_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_191300_end_193300_15s.csv",
+        "csv_sha256": "a590b8eb5f67188b8834f944f03910e54071d2a63e3f14e1be29b26c5024c5e0",
+        "rows": 17450,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 66.00000000002615,
+          "mean_seconds": 66.00000000048723,
+          "min_seconds": 65.99996129503138,
+          "max_seconds": 66.00003666867559,
+          "pair_count": 16645
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.018761151260406277,
+            "period": 105.60326609171476,
+            "C_seconds": 66.00204130732173,
+            "pairs": 16646,
+            "step_rmse": 0.0024795260666930956
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.015204850250380202,
+            "period": 130.5369745223232,
+            "C_seconds": 66.00184105061285,
+            "pairs": 16646,
+            "step_rmse": 0.002106500069433316
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.05524821892433614,
+            "period": 35.20026199829268,
+            "C_seconds": 66.00049124679877,
+            "pairs": 16646,
+            "step_rmse": 0.002160485526127343
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.044932062744637756,
+            "period": 43.51164442119191,
+            "C_seconds": 66.00080895349335,
+            "pairs": 16646,
+            "step_rmse": 0.0024844340478996723
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.15706806174144358,
+            "period": 11.733333421356438,
+            "C_seconds": 66.00000049512997,
+            "pairs": 16646,
+            "step_rmse": 0.00011823385680599194
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.12900142601387765,
+            "period": 14.503704585287647,
+            "C_seconds": 66.00000401170222,
+            "pairs": 16646,
+            "step_rmse": 0.00030412102036586803
+          }
+        },
+        "lane_fit_C_median_seconds": 66.00065010014606,
+        "delta_closed_form_vs_lane_fit_seconds": -0.0006501001199126222,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    },
+    {
+      "case_id": "start_1914",
+      "START": "2026-10-12T19:14:00Z",
+      "END": "2026-10-12T19:33:00Z",
+      "T_seg": 1140,
+      "symbol": "CME_MINI:NQ1!",
+      "chart_interval_seconds": 15,
+      "source_interval_seconds": 15,
+      "official_csv": "exports/20261012_start_191400_end_193300_15s.csv",
+      "status": "measured",
+      "C_resuelto": 77.99999999991904,
+      "N_3A": 124.79999999987045,
+      "N_2A": 41.59999999995682,
+      "reason": "falta CSV: G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_191400_end_193300_15s.csv",
+      "measurement": {
+        "csv_path": "G:\\trading\\guias\\analisis\\data\\exports\\20261012_start_191400_end_193300_15s.csv",
+        "csv_sha256": "e8b02ad71270d525868b7582eaa844534f4420cf4d34b47bfe32a3e6ef7d2dd5",
+        "rows": 17450,
+        "inferred_interval_seconds": 15,
+        "closed_form_pair_estimates": {
+          "median_seconds": 77.99999999991904,
+          "mean_seconds": 78.00000000078138,
+          "min_seconds": 77.99999022243236,
+          "max_seconds": 78.00002854375434,
+          "pair_count": 16645
+        },
+        "lane_fits": {
+          "Lane 3 A": {
+            "status": "fit",
+            "alpha": 0.015897832490280404,
+            "period": 124.80331320151708,
+            "C_seconds": 78.00207075094818,
+            "pairs": 16646,
+            "step_rmse": 0.002104108126958322
+          },
+          "Lane 3 B": {
+            "status": "fit",
+            "alpha": 0.01288080253651408,
+            "period": 154.2698284389086,
+            "C_seconds": 78.00159864888637,
+            "pairs": 16646,
+            "step_rmse": 0.0016540508669694726
+          },
+          "Lane 2 A": {
+            "status": "fit",
+            "alpha": 0.0469479547244845,
+            "period": 41.600364845221925,
+            "C_seconds": 78.0006840847911,
+            "pairs": 16646,
+            "step_rmse": 0.002151187148658232
+          },
+          "Lane 2 B": {
+            "status": "fit",
+            "alpha": 0.03815123154890321,
+            "period": 51.42294727593131,
+            "C_seconds": 78.00109980056996,
+            "pairs": 16646,
+            "step_rmse": 0.002442425784206236
+          },
+          "Lane 1 A": {
+            "status": "fit",
+            "alpha": 0.1345291223976652,
+            "period": 13.866669493970553,
+            "C_seconds": 78.00001590358437,
+            "pairs": 16646,
+            "step_rmse": 0.0005691865891507026
+          },
+          "Lane 1 B": {
+            "status": "fit",
+            "alpha": 0.1102490812445378,
+            "period": 17.140740742899283,
+            "C_seconds": 78.00000000982257,
+            "pairs": 16646,
+            "step_rmse": 1.2762139700701442e-05
+          }
+        },
+        "lane_fit_C_median_seconds": 78.00089194268054,
+        "delta_closed_form_vs_lane_fit_seconds": -0.0008919427614983988,
+        "method": "O(1) inversion on consecutive visible Lane 3 A / Lane 2 A plots"
+      }
+    }
+  ],
+  "notes": [
+    "15 puntos: START 19:00 a 19:14 UTC inclusive; END fijo 19:33 UTC.",
+    "T_seg es el tiempo transcurrido END-START; no es conteo inclusivo de barras.",
+    "La lectura directa requiere que la resolución exportada coincida con Source data resolution.",
+    "Los CSV y los C no medidos permanecen pendientes; no se rellenan con predicciones."
+  ],
+  "status": "complete"
+}
