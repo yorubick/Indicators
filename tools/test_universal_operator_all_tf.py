@@ -71,9 +71,12 @@ def evaluar():
             std_toc = np.std(t_over_c)
             mean_base_err = np.mean(np.abs(base_diffs))
             
+            exact_base_pct = sum(1 for d in base_diffs if d == 0) / len(base_diffs) * 100.0
+            within_9s_pct = sum(1 for d in base_diffs if abs(d) <= 9) / len(base_diffs) * 100.0
             print(f"    [Largo] Entero Exacto (< 1e-7): {int_exact_pct:.1f}% | Residuo Máx Entero: {max_int_res:.2e}")
             print(f"    [Largo] Ratio T / C: Mediana = {median_toc:.3f} | Media = {mean_toc:.3f} | Std = {std_toc:.3f}")
-            print(f"    [Largo] Error medio respecto a round(T/18.3): {mean_base_err:.2f} segundos")
+            print(f"    [Largo] Coincidencia exacta con round(T/18.3): {exact_base_pct:.1f}% | Dentro de +/- 9s: {within_9s_pct:.1f}%")
+            print(f"    [Largo] Error medio absoluto respecto a round(T/18.3): {mean_base_err:.2f} segundos")
 
 if __name__ == "__main__":
     evaluar()

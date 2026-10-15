@@ -15,14 +15,14 @@ start_time  = input.time(timestamp("2026-10-12 19:03:00"), "Fecha/Hora START (UT
 end_time    = input.time(timestamp("2026-10-12 19:33:00"), "Fecha/Hora END (UTC)", group=grp_anchors)
 source_res  = input.string("15S", "Resolución de Fuente Interna", options=["15S", "1m", "Chart"], group=grp_anchors)
 
-grp_model   = "2. Operador Matemático Universal de C"
-mode_C      = input.string("Auto: Dinámico Universal (Recomendado)", "Modo de Cálculo de C",
-              options=["Auto: Dinámico Universal (Recomendado)",
-                       "Base Analítica Universal: round(T / 18.3)",
-                       "Régimen Corto Continuo: max(dt, T / 18.3)",
-                       "Celosía Armónica: round(T / 18.3) + k*9",
-                       "Manual C (Calibración)"], group=grp_model)
-harmonic_k  = input.int(0, "Paso Armónico k (para k * 9s o k * 27s)", minval=-5, maxval=5, group=grp_model)
+grp_model   = "2. Operador Matemático de C"
+mode_C      = input.string("Auto (Régimen Corto n<21 / Base n>=21)", "Modo de Selección de C",
+              options=["Auto (Régimen Corto n<21 / Base n>=21)",
+                       "Base Macroscópica: round(T / 18.3)",
+                       "Régimen Corto Puro: max(dt, n*dt*10/183)",
+                       "Celosía Armónica: Base + k*9s",
+                       "Manual C (Calibración Directa)"], group=grp_model)
+harmonic_k  = input.int(0, "Paso Armónico k (para Celosía Base + k * 9s)", minval=-10, maxval=10, group=grp_model)
 manual_C    = input.float(87.0, "C Manual (segundos)", minval=1.0, step=1.0, group=grp_model)
 
 grp_visual  = "3. Visualización y Gráfico"
@@ -81,75 +81,41 @@ if is_end_bar
     end_candle_close := close
 
 bool is_post_end = not na(end_bar_index) and (bar_index > end_bar_index)
-float duration_T = math.max(0.0, float(end_time - start_time) / 1000.0)
+// Duración temporal T inclusiva en segundos basada en el conteo de barras de la fuente
+float duration_T = n_bars > 0 ? float(n_bars) * dt_fuente : math.max(0.0, float(end_time - start_time) / 1000.0)
 
 // Sub-barras para muestreo intraminuto (llamada a nivel global obligatoria en Pine v5)
 sub_closes = request.security_lower_tf(syminfo.tickerid, "15S", close)
 
 // ============================================================================
-// 3. OPERADOR MATEMÁTICO UNIVERSAL DE C
+// 3. OPERADOR MATEMÁTICO DE C
 // ============================================================================
 var float C = na
 var string branch_name = "Inactivo"
 
-// Detección causal de pivotes y estructura a nivel global
-piv_h = ta.pivothigh(high, 2, 2)
-piv_l = ta.pivotlow(low, 2, 2)
-
-var float last_confirmed_ph = na
-var float last_confirmed_pl = na
-if not na(piv_h)
-    last_confirmed_ph := piv_h
-if not na(piv_l)
-    last_confirmed_pl := piv_l
-
 // Cálculo del Operador según el Régimen
-if mode_C == "Auto: Dinámico Universal (Recomendado)"
+if mode_C == "Auto (Régimen Corto n<21 / Base n>=21)"
     // 1. Régimen Corto Continuo (n < 21 barras): Ley Analítica Exacta Universal
     if n_bars < 21
         C := math.max(dt_fuente, (duration_T * 10.0) / 183.0)
-        branch_name := "Corto_Continuo (n<21)"
+        branch_name := "Corto_Continuo (n<21, Exacto)"
     else
-        // 2. Régimen Largo Cuantizado (n >= 21 barras): Base Macroscópica + Resonancia Armónica
-        float c_base = math.round(duration_T / 18.3)
-        float end_range = math.max(syminfo.mintick, end_candle_high - end_candle_low)
-        float body_size = math.abs(end_candle_close - end_candle_open)
-        float upper_wick = end_candle_high - math.max(end_candle_open, end_candle_close)
-        float close_pos = (end_candle_close - end_candle_low) / end_range
-        float up_wick_ratio = upper_wick / end_range
-        
-        // Dinámica estructural adimensional (sin niveles de precio fijos ni marcas temporales)
-        bool is_breakout = not na(range_high) and (end_candle_close >= range_high) and (close_pos >= 0.85) and (up_wick_ratio <= 0.10)
-        bool is_expansion = (body_size >= 0.65 * end_range) and (close_pos >= 0.75)
-        bool is_rejection = (up_wick_ratio >= 0.40) or (end_candle_close < end_candle_open and (end_candle_high - end_candle_close) >= 0.70 * end_range)
-
-        int k_shift = 0
-        if is_breakout
-            k_shift := 4 // +36s (+4*9s) en ruptura mayor por encima del rango
-            branch_name := "Excitación_Ruptura (+36s)"
-        else if is_expansion
-            k_shift := 2 // +18s (+2*9s) en expansión direccional
-            branch_name := "Excitación_Expansión (+18s)"
-        else if is_rejection
-            k_shift := -2 // -18s (-2*9s) en absorción o rechazo
-            branch_name := "Contracción_Rechazo (-18s)"
-        else
-            k_shift := 0 // Nivel base fundamental de meseta
-            branch_name := "Estado_Base_Meseta (k=0)"
-            
-        C := math.max(dt_fuente, c_base + (k_shift * 9.0))
-else if mode_C == "Base Analítica Universal: round(T / 18.3)"
+        // 2. Régimen Largo (n >= 21 barras): Base Macroscópica round(T / 18.3)
+        // Nota: El indicador oficial cuantiza a enteros y puede modularse en pasos armónicos k*9s
+        C := math.max(dt_fuente, math.round(duration_T / 18.3) + (harmonic_k * 9.0))
+        branch_name := harmonic_k == 0 ? "Largo_Base (round T/18.3)" : "Largo_Armónico (k=" + str.tostring(harmonic_k) + ")"
+else if mode_C == "Base Macroscópica: round(T / 18.3)"
     C := math.max(dt_fuente, math.round(duration_T / 18.3))
-    branch_name := "Base_Analítica_Universal"
-else if mode_C == "Régimen Corto Continuo: max(dt, T / 18.3)"
+    branch_name := "Base_Macroscópica"
+else if mode_C == "Régimen Corto Puro: max(dt, n*dt*10/183)"
     C := math.max(dt_fuente, (duration_T * 10.0) / 183.0)
     branch_name := "Corto_Continuo_Puro"
-else if mode_C == "Celosía Armónica: round(T / 18.3) + k*9"
+else if mode_C == "Celosía Armónica: Base + k*9s"
     C := math.max(dt_fuente, math.round(duration_T / 18.3) + (harmonic_k * 9.0))
     branch_name := "Celosía_Armónica_k9"
-else if mode_C == "Manual C (Calibración)"
+else if mode_C == "Manual C (Calibración Directa)"
     C := manual_C
-    branch_name := "Manual"
+    branch_name := "Manual_Fijo (" + str.tostring(manual_C, "#") + "s)"
 
 // ============================================================================
 // 4. FACTORES BASE Y ALPHAS DE LAS 6 CURVAS OFICIALES
@@ -227,7 +193,7 @@ if is_end_bar
 
 // Actualización recurrente barra a barra tras END
 if is_post_end
-    bool has_subbars = (source_res == "15S") and (dt_chart >= 60) and (array.size(sub_closes) > 0)
+    bool has_subbars = (source_res == "15S") and (dt_chart > 15) and (array.size(sub_closes) > 0)
 
     if has_subbars
         for i = 0 to array.size(sub_closes) - 1
