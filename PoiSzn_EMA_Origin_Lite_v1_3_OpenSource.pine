@@ -16,13 +16,13 @@ end_time    = input.time(timestamp("2026-10-12 19:33:00"), "Fecha/Hora END (UTC)
 source_res  = input.string("15S", "Resolución de Fuente Interna", options=["15S", "1m", "2m", "3m", "5m", "Chart"], group=grp_anchors)
 
 grp_model   = "2. Operador Matemático de C"
-mode_C      = input.string("Auto (Régimen Corto n<21 / Base n>=21)", "Modo de Selección de C",
-              options=["Auto (Régimen Corto n<21 / Base n>=21)",
+mode_C      = input.string("Auto (Universal: Corto n<21 / Selector Estructural n>=21)", "Modo de Selección de C",
+              options=["Auto (Universal: Corto n<21 / Selector Estructural n>=21)",
                        "Base Macroscópica: round(T / 18.3)",
                        "Régimen Corto Puro: max(dt, n*dt*10/183)",
                        "Celosía Armónica: Base + k*9s",
                        "Manual C (Calibración Directa)"], group=grp_model)
-harmonic_k  = input.int(0, "Paso Armónico k (para Celosía Base + k * 9s)", minval=-10, maxval=10, group=grp_model)
+harmonic_k  = input.int(0, "Paso Armónico k (Manual Override, 0 = Automático)", minval=-10, maxval=10, group=grp_model)
 manual_C    = input.float(87.0, "C Manual (segundos)", minval=1.0, step=1.0, group=grp_model)
 
 grp_visual  = "3. Visualización y Gráfico"
@@ -54,7 +54,7 @@ bool is_in_range  = time >= start_time and time <= end_time
 bool is_start_bar = time >= start_time and (time[1] < start_time or na(time[1]))
 bool is_end_bar   = (time <= end_time) and (time + int(dt_chart * 1000) > end_time)
 
-// Contadores de barras y extremos del rango
+// Contadores de barras, extremos y volumen del rango
 var int   n_bars          = 0
 var float range_high      = na
 var float range_low       = na
@@ -62,14 +62,22 @@ var float end_candle_high = na
 var float end_candle_low  = na
 var float end_candle_open = na
 var float end_candle_close= na
+var float end_candle_vol  = na
 var int   end_bar_index   = na
+var float range_sum_vol   = 0.0
+var int   range_vol_count = 0
 
 if time < start_time
     n_bars          := 0
     range_high      := na
     range_low       := na
     end_bar_index   := na
+    range_sum_vol   := 0.0
+    range_vol_count := 0
+    end_candle_vol  := na
 else if is_in_range
+    range_sum_vol   += nz(volume, 0.0)
+    range_vol_count += 1
     if is_start_bar
         n_bars     := 1
         range_high := high
@@ -85,6 +93,7 @@ if is_end_bar
     end_candle_low   := low
     end_candle_open  := open
     end_candle_close := close
+    end_candle_vol   := nz(volume, 0.0)
 
 bool is_post_end = not na(end_bar_index) and (bar_index > end_bar_index)
 // Duración temporal T del rango en segundos y conteo inclusivo en resolución fuente
@@ -97,35 +106,76 @@ int   n_chart_bars         = n_bars
 sub_closes = request.security_lower_tf(syminfo.tickerid, "15S", close)
 
 // ============================================================================
-// 3. OPERADOR MATEMÁTICO DE C
+// 3. OPERADOR MATEMÁTICO DE C Y SELECTOR ESTRUCTURAL DE CUENCA
 // ============================================================================
 var float C = na
 var string branch_name = "Inactivo"
+var string basin_event = "Ninguno"
+
+// Cálculo de métricas de la vela END y geometría de la caja
+float tot_range = math.max(syminfo.mintick, nz(range_high - range_low, syminfo.mintick))
+float close_pos = nz(end_candle_close - range_low, 0.0) / tot_range
+float end_candle_rng = math.max(syminfo.mintick, nz(end_candle_high - end_candle_low, syminfo.mintick))
+float end_body = math.abs(nz(end_candle_close, close) - nz(end_candle_open, open))
+float end_body_ratio = end_body / end_candle_rng
+float upper_wick = nz(end_candle_high, high) - math.max(nz(end_candle_open, open), nz(end_candle_close, close))
+float lower_wick = math.min(nz(end_candle_open, open), nz(end_candle_close, close)) - nz(end_candle_low, low)
+float upper_wick_ratio = upper_wick / end_candle_rng
+float lower_wick_ratio = lower_wick / end_candle_rng
+
+float mean_vol = range_vol_count > 0 ? (range_sum_vol / float(range_vol_count)) : 1.0
+float vol_ratio = nz(end_candle_vol, mean_vol) / math.max(1.0, mean_vol)
+
+// Detección causal de Failure Swings y consolidación
+bool is_failure_swing_top = (close_pos > 0.65) and (upper_wick_ratio > 0.35 or end_body_ratio < 0.20) and (vol_ratio < 0.75)
+bool is_failure_swing_bot = (close_pos < 0.35) and (lower_wick_ratio > 0.35 or end_body_ratio < 0.20) and (vol_ratio < 0.75)
+bool is_balanced_center   = (close_pos >= 0.40 and close_pos <= 0.60)
 
 // Cálculo del Operador según el Régimen
-if mode_C == "Auto (Régimen Corto n<21 / Base n>=21)"
+if mode_C == "Auto (Universal: Corto n<21 / Selector Estructural n>=21)"
     // 1. Régimen Corto Continuo (n_inclusivo < 21 barras): Ley Analítica Exacta Universal
     if n_source_inclusive < 21
         C := math.max(dt_fuente, (duration_T_inclusive * 10.0) / 183.0)
         branch_name := "Corto_Continuo (n=" + str.tostring(n_source_inclusive) + "<21, Exacto)"
+        basin_event := "Fase Continua"
     else
-        // 2. Régimen Largo (n_inclusivo >= 21 barras): Base Macroscópica round(T_inclusivo / 18.3)
-        // Cuantizado a enteros en segundos y modulado en pasos armónicos k*9s
+        // 2. Régimen Largo (n_inclusivo >= 21 barras): Base Macroscópica round(T / 18.3)
+        // Modulación Cuántica en Potencias de 3 gobernada por Estructura
         float C_base = math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
-        C := C_base + (harmonic_k * 9.0)
-        branch_name := harmonic_k == 0 ? "Largo_Base (round T/18.3)" : ("Largo_Armónico (k=" + str.tostring(harmonic_k) + ")")
+        int auto_k = 0
+        if is_failure_swing_top
+            auto_k := 4
+            basin_event := "Failure Swing Superior (k=+4)"
+        else if is_failure_swing_bot
+            auto_k := 4
+            basin_event := "Failure Swing Inferior (k=+4)"
+        else if is_balanced_center
+            auto_k := -1
+            basin_event := "Rango Balanceado Centro (k=-1)"
+        else
+            auto_k := 0
+            basin_event := "Impulso Tendencial (k=0)"
+            
+        int effective_k = harmonic_k != 0 ? harmonic_k : auto_k
+        C := C_base + (float(effective_k) * 9.0)
+        branch_name := "Largo_Estructural (Base " + str.tostring(C_base, "#") + "s + " + str.tostring(effective_k * 9) + "s)"
 else if mode_C == "Base Macroscópica: round(T / 18.3)"
     C := math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
     branch_name := "Base_Macroscópica"
+    basin_event := "Base Pura"
 else if mode_C == "Régimen Corto Puro: max(dt, n*dt*10/183)"
     C := math.max(dt_fuente, (duration_T_inclusive * 10.0) / 183.0)
     branch_name := "Corto_Continuo_Puro"
+    basin_event := "Corto Puro"
 else if mode_C == "Celosía Armónica: Base + k*9s"
-    C := math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)) + (harmonic_k * 9.0))
+    float C_base = math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
+    C := C_base + (harmonic_k * 9.0)
     branch_name := "Celosía_Armónica_k9"
+    basin_event := "Manual k=" + str.tostring(harmonic_k)
 else if mode_C == "Manual C (Calibración Directa)"
     C := manual_C
     branch_name := "Manual_Fijo (" + str.tostring(manual_C, "#") + "s)"
+    basin_event := "Manual Fijo"
 
 // ============================================================================
 // 4. FACTORES BASE Y ALPHAS DE LAS 6 CURVAS OFICIALES
@@ -321,7 +371,7 @@ if show_hud and barstate.islast
     else if hud_pos_str == "Abajo Izquierda"
         table_pos := position.bottom_left
 
-    hud := table.new(table_pos, 2, 9, bgcolor=color.new(#131722, 10), border_color=color.gray, border_width=1)
+    hud := table.new(table_pos, 2, 10, bgcolor=color.new(#131722, 10), border_color=color.gray, border_width=1)
     
     table.cell(hud, 0, 0, "POISZN LITE v1.3", bgcolor=color.new(#2979ff, 20), text_color=color.white, text_size=size.small)
     table.cell(hud, 1, 0, "TELEMETRÍA", bgcolor=color.new(#2979ff, 20), text_color=color.white, text_size=size.small)
@@ -353,3 +403,6 @@ if show_hud and barstate.islast
     table.cell(hud, 0, 8, "Lectura Lane 1A / 3A", text_color=color.white, text_size=size.small)
     string txt_lanes = na(lane_1a) ? "∅" : (str.tostring(lane_1a, "#.2f") + " | " + str.tostring(lane_3a, "#.2f"))
     table.cell(hud, 1, 8, txt_lanes, text_color=color.white, text_size=size.small)
+
+    table.cell(hud, 0, 9, "Cuenca Estructural", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 9, basin_event, text_color=color.orange, text_size=size.small)
