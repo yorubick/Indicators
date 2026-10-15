@@ -7,6 +7,7 @@
 - La reproducción de las curvas EMA con C fijado concuerda con los casos comprobados en el alcance documentado. Esto valida la parte de curvas para esos casos, no la regla que elige C.
 - Los controles externos descritos en el informe de v4 no respaldan una predicción prospectiva general; cinco controles de 15 s fallan las predicciones anotadas allí.
 - Las pruebas de agregación y timeframe disponibles no aíslan por sí solas una causa temporal: pueden variar la cobertura efectiva, las barras y el cálculo de C. Véanse `PAQUETE_PARA_GEMINI.md` y los JSON de barrido asociados.
+- El experimento [`experimentos/15s_serie_1903/`](../experimentos/15s_serie_1903/README.md) midió e invirtió 13 ventanas consecutivas (19:23 a 19:35 UTC) con fuente oficial 15 s en gráfico 1 m. Demostró que $C_{15\text{s}}$ es estrictamente entero ($\{88, 67, 88, 88, 79, 102, 123, 67, 87, 106, 87, 123, 87\}$) con residuo $< 0.005$ pt en las 6 curvas, confirmando que la resolución de fuente altera el valor intrínseco de $C$.
 
 ## Qué sigue abierto
 

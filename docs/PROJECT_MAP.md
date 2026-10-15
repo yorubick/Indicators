@@ -9,6 +9,7 @@
 | `imports/gemini/brain_0d7f3bfd/` | Copia del scratch asociado al Brain `0d7f3bfd-8524-49c4-8cc4-be41c8fbcb27` | Copia de preservación, no implica que cada archivo sea vigente o canónico. |
 | `imports/codex/` | Adjuntos pegados a chats de Codex | Material con procedencia conversacional; no equivale a exportación oficial por sí solo. |
 | `docs/` | Índices y guía de trabajo añadidos para centralizar el proyecto | Mantener aquí el resumen durable y enlazar documentos fuente en vez de duplicarlos. |
+| `experimentos/` | Carpetas estructuradas de experimentos reproducibles | Contienen README con ficha técnica, telemetría JSON y scripts de inversión/auditoría. |
 | `tools/` | Herramientas de mantenimiento del catálogo | El catálogo no ejecuta el análisis del indicador. |
 
 ## Archivos clave en la raíz
