@@ -1,0 +1,145 @@
+{
+  "status": "fixed_linear_n_q_quantization_diagnostic_no_refit",
+  "master_sha256": "ef9533acdce3e1c2c2db3c72caee5059a2957f7dee4c60e725f6dcf56ccc9c05",
+  "q_model_sha256": "b2545c63513f9f967026dfcbfbc521eac2184ba91f5343aaa579cfb2fb95b99f",
+  "formula_raw": "C_hat = Delta * q_hat_linear_n(n), coefficients frozen in resultado_C_ley_dimensionless.json",
+  "formula_round": "C_hat = floor(Delta*q_hat + 0.5), diagnostic quantizer motivated by integer long labels; no coefficients fitted",
+  "formula_hybrid": "Use measured short empirical relation for n<21; use rounded q_linear_n for n>=21. Diagnostic only; the split is not a unified law.",
+  "metrics": {
+    "all_lite_hybrid": {
+      "n": 145,
+      "MAE": 10.593103448276013,
+      "RMSE": 17.53498965123635,
+      "max_abs_residual": 57.99999999995252,
+      "exact_1e-6": 39,
+      "within_1": 44
+    },
+    "all_lite_q_raw": {
+      "n": 145,
+      "MAE": 12.160462941405646,
+      "RMSE": 18.328963145442398,
+      "max_abs_residual": 58.493707672831036,
+      "exact_1e-6": 0,
+      "within_1": 9
+    },
+    "all_lite_q_rounded": {
+      "n": 145,
+      "MAE": 12.163934426229467,
+      "RMSE": 18.31938347630239,
+      "max_abs_residual": 57.99999999995252,
+      "exact_1e-6": 4,
+      "within_1": 13
+    },
+    "short_n_lt_21_hybrid": {
+      "n": 35,
+      "MAE": 1.1351427734293144e-12,
+      "RMSE": 1.7927951128813323e-12,
+      "max_abs_residual": 7.631228982063476e-12,
+      "exact_1e-6": 35,
+      "within_1": 35
+    },
+    "long_n_ge_21_hybrid": {
+      "n": 110,
+      "MAE": 13.963636363636203,
+      "RMSE": 20.13228975822401,
+      "max_abs_residual": 57.99999999995252,
+      "exact_1e-6": 4,
+      "within_1": 9
+    },
+    "long_n_ge_21_q_raw": {
+      "n": 110,
+      "MAE": 13.98063363321286,
+      "RMSE": 20.14109438483478,
+      "max_abs_residual": 58.493707672831036,
+      "exact_1e-6": 0,
+      "within_1": 7
+    },
+    "long_n_ge_21_q_rounded": {
+      "n": 110,
+      "MAE": 13.963636363636203,
+      "RMSE": 20.13228975822401,
+      "max_abs_residual": 57.99999999995252,
+      "exact_1e-6": 4,
+      "within_1": 9
+    },
+    "holdout_all_n_hybrid": {
+      "n": 94,
+      "MAE": 14.170212765957817,
+      "RMSE": 21.280797457462466,
+      "max_abs_residual": 57.99999999995252,
+      "exact_1e-6": 22,
+      "within_1": 23
+    },
+    "holdout_short_hybrid": {
+      "n": 19,
+      "MAE": 1.1007802856367658e-12,
+      "RMSE": 2.0438653382894776e-12,
+      "max_abs_residual": 7.631228982063476e-12,
+      "exact_1e-6": 19,
+      "within_1": 19
+    },
+    "holdout_long_hybrid": {
+      "n": 75,
+      "MAE": 17.760000000000186,
+      "RMSE": 23.824357284090823,
+      "max_abs_residual": 57.99999999995252,
+      "exact_1e-6": 3,
+      "within_1": 4
+    },
+    "holdout_long_q_raw": {
+      "n": 75,
+      "MAE": 17.76899217546013,
+      "RMSE": 23.833695952113793,
+      "max_abs_residual": 58.493707672831036,
+      "exact_1e-6": 0,
+      "within_1": 3
+    },
+    "holdout_long_q_rounded": {
+      "n": 75,
+      "MAE": 17.760000000000186,
+      "RMSE": 23.824357284090823,
+      "max_abs_residual": 57.99999999995252,
+      "exact_1e-6": 3,
+      "within_1": 4
+    },
+    "development_long_hybrid": {
+      "n": 35,
+      "MAE": 5.828571428570522,
+      "RMSE": 7.585700833992503,
+      "max_abs_residual": 23.99999999998755,
+      "exact_1e-6": 1,
+      "within_1": 5
+    },
+    "development_long_q_raw": {
+      "n": 35,
+      "MAE": 5.862722471254421,
+      "RMSE": 7.596287489359794,
+      "max_abs_residual": 23.577928853906002,
+      "exact_1e-6": 0,
+      "within_1": 4
+    },
+    "development_long_q_rounded": {
+      "n": 35,
+      "MAE": 5.828571428570522,
+      "RMSE": 7.585700833992503,
+      "max_abs_residual": 23.99999999998755,
+      "exact_1e-6": 1,
+      "within_1": 5
+    }
+  },
+  "Character_interval_compatibility": {
+    "n": 34,
+    "q_raw_compatible": 0,
+    "q_nearest_integer_compatible": 2,
+    "hybrid_compatible": 3,
+    "long_n_ge_21": {
+      "n": 33,
+      "q_raw_compatible": 0,
+      "q_nearest_integer_compatible": 2,
+      "hybrid_compatible": 2
+    }
+  },
+  "residual_rows": 179,
+  "residual_csv": "G:\\trading\\guias\\analisis\\residuos_C_q_redondeado_maestro.csv",
+  "limitation": "This adds no blind data. The rounded q variant does not rescue the long branch across the reserved master cases or Character intervals; exact short fit remains empirical."
+}

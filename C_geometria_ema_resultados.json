@@ -1,0 +1,2988 @@
+{
+  "measurement_spec": "C_GEOMETRIA_EMA_MEDICIONES.json",
+  "source_sha256": "0dbf17e46227bbd8d3d3583620e2bb64494a06b356480712b33e6d4a3aa5c72f",
+  "periods": [
+    24,
+    29.666666666666668,
+    8,
+    9.88888888888889,
+    2.6666666666666665,
+    3.2962962962962963,
+    72,
+    89
+  ],
+  "results": [
+    {
+      "id": "18:54_19:19",
+      "C": 134,
+      "n": 26,
+      "H": 30868.75,
+      "L": 30846.0,
+      "prehistory_bars": 173,
+      "geometry": {
+        "START": {
+          "open_position": 0.43956043956043955,
+          "close_position": 0.5384615384615384,
+          "absolute_body": 0.0989010989010989,
+          "upper_wick": 0.14285714285714285,
+          "lower_wick": 0.054945054945054944
+        },
+        "END": {
+          "open_position": 0.7362637362637363,
+          "close_position": 0.9010989010989011,
+          "absolute_body": 0.16483516483516483,
+          "upper_wick": 0.0989010989010989,
+          "lower_wick": 0.01098901098901099
+        },
+        "efficiency": 0.10091743119266056,
+        "normalized_variation": 3.5934065934065935,
+        "signed_slope_per_bar": 0.008979055132901287,
+        "mean_absolute_body": 0.14497041420118342,
+        "mean_upper_wick": 0.06889264581572274,
+        "mean_lower_wick": 0.0705832628909552
+      },
+      "EMA_measurements": [
+        {
+          "period_bars": 24,
+          "START": {
+            "distance": -0.4806313114146418,
+            "one_bar_slope": -0.04179402707949931,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.389531301150283e-06,
+            "retained_seed_coefficient": 5.436183784555809e-07
+          },
+          "END": {
+            "distance": 0.3030694773574846,
+            "one_bar_slope": 0.0263538675962891,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.9717233661398455e-07,
+            "retained_seed_coefficient": 6.760671192924844e-08
+          },
+          "crossings": 7
+        },
+        {
+          "period_bars": 29.666666666666668,
+          "START": {
+            "distance": -0.5428899976050361,
+            "one_bar_slope": -0.037876046344556,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 3.7666609457049235e-05,
+            "retained_seed_coefficient": 8.569153734810308e-06
+          },
+          "END": {
+            "distance": 0.2685354738987171,
+            "one_bar_slope": 0.0187350330627421,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 6.977858272596048e-06,
+            "retained_seed_coefficient": 1.5874627079423178e-06
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 8,
+          "START": {
+            "distance": -0.11555164976328212,
+            "one_bar_slope": -0.03301475707513209,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.3122204132163103e-19
+          },
+          "END": {
+            "distance": 0.2912014161876549,
+            "one_bar_slope": 0.0832004046250214,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.451292033711947e-22
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 9.88888888888889,
+          "START": {
+            "distance": -0.18771537337522534,
+            "one_bar_slope": -0.0422359590094337,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 5.65531310853953e-16
+          },
+          "END": {
+            "distance": 0.30977980924577064,
+            "one_bar_slope": 0.06970045708038634,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 3.540417161902456e-18
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 2.6666666666666665,
+          "START": {
+            "distance": 0.05994970931343422,
+            "one_bar_slope": 0.07193965117599313,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 5.766020973331314e-60
+          },
+          "END": {
+            "distance": 0.13788842402909024,
+            "one_bar_slope": 0.16546610883497223,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.5860219634875621e-68
+          },
+          "crossings": 12
+        },
+        {
+          "period_bars": 3.2962962962962963,
+          "START": {
+            "distance": 0.059008643609838776,
+            "one_bar_slope": 0.05139462507965048,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 8.561111373800498e-48
+          },
+          "END": {
+            "distance": 0.1727662387573938,
+            "one_bar_slope": 0.15047382085314173,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.3516761589780115e-54
+          },
+          "crossings": 12
+        },
+        {
+          "period_bars": 72,
+          "START": {
+            "distance": -0.8749404839351312,
+            "one_bar_slope": -0.02464621081506286,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.03596318330008736,
+            "retained_seed_coefficient": 0.008181624200786209
+          },
+          "END": {
+            "distance": -0.060158070440533326,
+            "one_bar_slope": -0.0016945935334820956,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.017957477937810697,
+            "retained_seed_coefficient": 0.004085326230787414
+          },
+          "crossings": 0
+        },
+        {
+          "period_bars": 89,
+          "START": {
+            "distance": -1.011953323720353,
+            "one_bar_slope": -0.022998939175382614,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0900672179036569,
+            "retained_seed_coefficient": 0.020490292073204713
+          },
+          "END": {
+            "distance": -0.20104527136564873,
+            "one_bar_slope": -0.004569210712881093,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.05135359074811676,
+            "retained_seed_coefficient": 0.011682941895205674
+          },
+          "crossings": 0
+        }
+      ],
+      "endpoint_sign_signature": {
+        "START": [
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1
+        ],
+        "END": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "cloud_signature": {
+        "START": [
+          "below",
+          "below",
+          "above"
+        ],
+        "END": [
+          "above",
+          "above",
+          "above"
+        ]
+      },
+      "cloud_signature_seed100_stability": {
+        "START": [
+          true,
+          true,
+          true
+        ],
+        "END": [
+          true,
+          true,
+          true
+        ]
+      },
+      "cloud_absolute_widths": {
+        "START": [
+          0.0622586861903943,
+          0.07216372361194322,
+          0.0009410657035954461
+        ],
+        "END": [
+          0.03453400345876746,
+          0.01857839305811577,
+          0.03487781472830358
+        ]
+      },
+      "extended_signature": {
+        "signs": {
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "END": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "crossings": [
+          7,
+          1,
+          5,
+          5,
+          12,
+          12
+        ],
+        "endpoint_EMA_order": {
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1
+          ],
+          "END": [
+            3,
+            0,
+            2,
+            1,
+            5,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "18:54_19:20",
+      "C": 134,
+      "n": 27,
+      "H": 30870.5,
+      "L": 30846.0,
+      "prehistory_bars": 173,
+      "geometry": {
+        "START": {
+          "open_position": 0.40816326530612246,
+          "close_position": 0.5,
+          "absolute_body": 0.09183673469387756,
+          "upper_wick": 0.1326530612244898,
+          "lower_wick": 0.05102040816326531
+        },
+        "END": {
+          "open_position": 0.826530612244898,
+          "close_position": 1.0,
+          "absolute_body": 0.17346938775510204,
+          "upper_wick": 0.0,
+          "lower_wick": 0.07142857142857142
+        },
+        "efficiency": 0.14285714285714285,
+        "normalized_variation": 3.5,
+        "signed_slope_per_bar": 0.011717873962771921,
+        "mean_absolute_body": 0.1360544217687075,
+        "mean_upper_wick": 0.06160241874527589,
+        "mean_lower_wick": 0.06575963718820861
+      },
+      "EMA_measurements": [
+        {
+          "period_bars": 24,
+          "START": {
+            "distance": -0.4463005034564531,
+            "one_bar_slope": -0.03880873943096364,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.2188504939252623e-06,
+            "retained_seed_coefficient": 5.436183784555809e-07
+          },
+          "END": {
+            "distance": 0.4091120065752374,
+            "one_bar_slope": 0.035574957093447254,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.5387018876226277e-07,
+            "retained_seed_coefficient": 6.219817497490858e-08
+          },
+          "crossings": 7
+        },
+        {
+          "period_bars": 29.666666666666668,
+          "START": {
+            "distance": -0.5041121406332478,
+            "one_bar_slope": -0.035170614462801994,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 3.497613735297429e-05,
+            "retained_seed_coefficient": 8.569153734810308e-06
+          },
+          "END": {
+            "distance": 0.38570969595516824,
+            "one_bar_slope": 0.02690997878751808,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 6.056867649170513e-06,
+            "retained_seed_coefficient": 1.483932531337384e-06
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 8,
+          "START": {
+            "distance": -0.10729796049447626,
+            "one_bar_slope": -0.03065656014119408,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.3122204132163103e-19
+          },
+          "END": {
+            "distance": 0.3372962608973838,
+            "one_bar_slope": 0.09637036025645901,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.9065604706648476e-22
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 9.88888888888889,
+          "START": {
+            "distance": -0.1743071324198521,
+            "one_bar_slope": -0.03921910479447415,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 5.65531310853953e-16
+          },
+          "END": {
+            "distance": 0.3680963152133069,
+            "one_bar_slope": 0.082821670923072,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.8901364586958824e-18
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 2.6666666666666665,
+          "START": {
+            "distance": 0.05566758721961749,
+            "one_bar_slope": 0.06680110466342219,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 5.766020973331314e-60
+          },
+          "END": {
+            "distance": 0.13241116227570218,
+            "one_bar_slope": 0.158893394730902,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 7.209190743125282e-69
+          },
+          "crossings": 12
+        },
+        {
+          "period_bars": 3.2962962962962963,
+          "START": {
+            "distance": 0.05479374049485029,
+            "one_bar_slope": 0.04772358043110402,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 8.561111373800498e-48
+          },
+          "END": {
+            "distance": 0.1730073116703686,
+            "one_bar_slope": 0.15068378758394607,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 7.224476022123853e-55
+          },
+          "crossings": 12
+        },
+        {
+          "period_bars": 72,
+          "START": {
+            "distance": -0.8124447350826219,
+            "one_bar_slope": -0.02288576718541551,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.033394384492938266,
+            "retained_seed_coefficient": 0.008181624200786209
+          },
+          "END": {
+            "distance": 0.10446165877599888,
+            "one_bar_slope": 0.0029425819373834518,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.016217957080754082,
+            "retained_seed_coefficient": 0.003973399484738444
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 89,
+          "START": {
+            "distance": -0.9396709434546135,
+            "one_bar_slope": -0.021356157805712428,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.08363384519625285,
+            "retained_seed_coefficient": 0.020490292073204713
+          },
+          "END": {
+            "distance": -0.02289915341219855,
+            "one_bar_slope": -0.0005204353048834399,
+            "sign": -1,
+            "sign_stable_under_seed_100": false,
+            "seed100_distance_effect": 0.04662579985389519,
+            "retained_seed_coefficient": 0.011423320964201103
+          },
+          "crossings": 0
+        }
+      ],
+      "endpoint_sign_signature": {
+        "START": [
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1
+        ],
+        "END": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "cloud_signature": {
+        "START": [
+          "below",
+          "below",
+          "above"
+        ],
+        "END": [
+          "above",
+          "above",
+          "above"
+        ]
+      },
+      "cloud_signature_seed100_stability": {
+        "START": [
+          true,
+          true,
+          true
+        ],
+        "END": [
+          true,
+          true,
+          true
+        ]
+      },
+      "cloud_absolute_widths": {
+        "START": [
+          0.0578116371767947,
+          0.06700917192537585,
+          0.0008738467247671999
+        ],
+        "END": [
+          0.02340231062006918,
+          0.030800054315923076,
+          0.040596149394666416
+        ]
+      },
+      "extended_signature": {
+        "signs": {
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "END": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "crossings": [
+          7,
+          1,
+          5,
+          5,
+          12,
+          12
+        ],
+        "endpoint_EMA_order": {
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1
+          ],
+          "END": [
+            0,
+            1,
+            3,
+            2,
+            5,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "18:54_19:21",
+      "C": 109,
+      "n": 28,
+      "H": 30870.5,
+      "L": 30846.0,
+      "prehistory_bars": 173,
+      "geometry": {
+        "START": {
+          "open_position": 0.40816326530612246,
+          "close_position": 0.5,
+          "absolute_body": 0.09183673469387756,
+          "upper_wick": 0.1326530612244898,
+          "lower_wick": 0.05102040816326531
+        },
+        "END": {
+          "open_position": 0.9795918367346939,
+          "close_position": 0.9183673469387755,
+          "absolute_body": 0.061224489795918366,
+          "upper_wick": 0.02040816326530612,
+          "lower_wick": 0.08163265306122448
+        },
+        "efficiency": 0.1168091168091168,
+        "normalized_variation": 3.5816326530612246,
+        "signed_slope_per_bar": 0.013733900785273059,
+        "mean_absolute_body": 0.13338192419825073,
+        "mean_upper_wick": 0.060131195335276964,
+        "mean_lower_wick": 0.06632653061224489
+      },
+      "EMA_measurements": [
+        {
+          "period_bars": 24,
+          "START": {
+            "distance": -0.4463005034564531,
+            "one_bar_slope": -0.03880873943096364,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.2188504939252623e-06,
+            "retained_seed_coefficient": 5.436183784555809e-07
+          },
+          "END": {
+            "distance": 0.3012810052329156,
+            "one_bar_slope": 0.026198348281097274,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.335606152381824e-07,
+            "retained_seed_coefficient": 5.722232097691589e-08
+          },
+          "crossings": 7
+        },
+        {
+          "period_bars": 29.666666666666668,
+          "START": {
+            "distance": -0.5041121406332478,
+            "one_bar_slope": -0.035170614462801994,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 3.497613735297429e-05,
+            "retained_seed_coefficient": 8.569153734810308e-06
+          },
+          "END": {
+            "distance": 0.28424593140086046,
+            "one_bar_slope": 0.019831111493083288,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 5.661854573896117e-06,
+            "retained_seed_coefficient": 1.3871543227719025e-06
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 8,
+          "START": {
+            "distance": -0.10729796049447626,
+            "one_bar_slope": -0.03065656014119408,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.3122204132163103e-19
+          },
+          "END": {
+            "distance": 0.19884947276147372,
+            "one_bar_slope": 0.056814135074685565,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.4828803660726592e-22
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 9.88888888888889,
+          "START": {
+            "distance": -0.1743071324198521,
+            "one_bar_slope": -0.03921910479447415,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 5.65531310853953e-16
+          },
+          "END": {
+            "distance": 0.23384788747115431,
+            "one_bar_slope": 0.052615774680928054,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.3592950683231694e-18
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 2.6666666666666665,
+          "START": {
+            "distance": 0.05566758721961749,
+            "one_bar_slope": 0.06680110466342219,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 5.766020973331314e-60
+          },
+          "END": {
+            "distance": 0.023081140552008314,
+            "one_bar_slope": 0.027697368662469374,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 3.2769048832387636e-69
+          },
+          "crossings": 12
+        },
+        {
+          "period_bars": 3.2962962962962963,
+          "START": {
+            "distance": 0.05479374049485029,
+            "one_bar_slope": 0.04772358043110402,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 8.561111373800498e-48
+          },
+          "END": {
+            "distance": 0.04883817960142885,
+            "one_bar_slope": 0.042536479007715254,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 3.861357873893784e-55
+          },
+          "crossings": 12
+        },
+        {
+          "period_bars": 72,
+          "START": {
+            "distance": -0.8124447350826219,
+            "one_bar_slope": -0.02288576718541551,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.033394384492938266,
+            "retained_seed_coefficient": 0.008181624200786209
+          },
+          "END": {
+            "distance": 0.022203553503477823,
+            "one_bar_slope": 0.0006254522112965565,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.015773629489632762,
+            "retained_seed_coefficient": 0.003864539224882596
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 89,
+          "START": {
+            "distance": -0.9396709434546135,
+            "one_bar_slope": -0.021356157805712428,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.08363384519625285,
+            "retained_seed_coefficient": 0.020490292073204713
+          },
+          "END": {
+            "distance": -0.1022088774407166,
+            "one_bar_slope": -0.002322929032706437,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.04558967096818378,
+            "retained_seed_coefficient": 0.011169469387218856
+          },
+          "crossings": 0
+        }
+      ],
+      "endpoint_sign_signature": {
+        "START": [
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1
+        ],
+        "END": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "cloud_signature": {
+        "START": [
+          "below",
+          "below",
+          "above"
+        ],
+        "END": [
+          "above",
+          "above",
+          "above"
+        ]
+      },
+      "cloud_signature_seed100_stability": {
+        "START": [
+          true,
+          true,
+          true
+        ],
+        "END": [
+          true,
+          true,
+          true
+        ]
+      },
+      "cloud_absolute_widths": {
+        "START": [
+          0.0578116371767947,
+          0.06700917192537585,
+          0.0008738467247671999
+        ],
+        "END": [
+          0.017035073832055193,
+          0.03499841470968059,
+          0.025757039049420533
+        ]
+      },
+      "extended_signature": {
+        "signs": {
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            1,
+            1
+          ],
+          "END": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "crossings": [
+          7,
+          1,
+          5,
+          5,
+          12,
+          12
+        ],
+        "endpoint_EMA_order": {
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1
+          ],
+          "END": [
+            0,
+            1,
+            3,
+            2,
+            5,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "18:55_19:19",
+      "C": 107,
+      "n": 25,
+      "H": 30868.75,
+      "L": 30846.0,
+      "prehistory_bars": 174,
+      "geometry": {
+        "START": {
+          "open_position": 0.5274725274725275,
+          "close_position": 0.43956043956043955,
+          "absolute_body": 0.08791208791208792,
+          "upper_wick": 0.0989010989010989,
+          "lower_wick": 0.02197802197802198
+        },
+        "END": {
+          "open_position": 0.7362637362637363,
+          "close_position": 0.9010989010989011,
+          "absolute_body": 0.16483516483516483,
+          "upper_wick": 0.0989010989010989,
+          "lower_wick": 0.01098901098901099
+        },
+        "efficiency": 0.1320754716981132,
+        "normalized_variation": 3.4945054945054945,
+        "signed_slope_per_bar": 0.010515638207945899,
+        "mean_absolute_body": 0.1468131868131868,
+        "mean_upper_wick": 0.06593406593406594,
+        "mean_lower_wick": 0.07120879120879121
+      },
+      "EMA_measurements": [
+        {
+          "period_bars": 24,
+          "START": {
+            "distance": -0.5331698174904687,
+            "one_bar_slope": -0.046362592825272046,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.198368867419169e-06,
+            "retained_seed_coefficient": 5.001289081791345e-07
+          },
+          "END": {
+            "distance": 0.3030694773574846,
+            "one_bar_slope": 0.0263538675962891,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.9717233661398455e-07,
+            "retained_seed_coefficient": 6.760671192924844e-08
+          },
+          "crossings": 7
+        },
+        {
+          "period_bars": 29.666666666666668,
+          "START": {
+            "distance": -0.5999351554296931,
+            "one_bar_slope": -0.041855941076441874,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 3.5210091372501555e-05,
+            "retained_seed_coefficient": 8.01029588254007e-06
+          },
+          "END": {
+            "distance": 0.2685354738987171,
+            "one_bar_slope": 0.0187350330627421,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 6.977858272596048e-06,
+            "retained_seed_coefficient": 1.5874627079423178e-06
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 8,
+          "START": {
+            "distance": -0.16679658229458966,
+            "one_bar_slope": -0.04765616636979138,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.0206158769460191e-19
+          },
+          "END": {
+            "distance": 0.2912014161876549,
+            "one_bar_slope": 0.0832004046250214,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.451292033711947e-22
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 9.88888888888889,
+          "START": {
+            "distance": -0.2339726304296394,
+            "one_bar_slope": -0.05264384184668485,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 4.616582129420024e-16
+          },
+          "END": {
+            "distance": 0.30977980924577064,
+            "one_bar_slope": 0.06970045708038634,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 3.540417161902456e-18
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 2.6666666666666665,
+          "START": {
+            "distance": -0.017705177085360277,
+            "one_bar_slope": -0.021246212502304403,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.6209186242415056e-60
+          },
+          "END": {
+            "distance": 0.13788842402909024,
+            "one_bar_slope": 0.16546610883497223,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.5860219634875621e-68
+          },
+          "crossings": 11
+        },
+        {
+          "period_bars": 3.2962962962962963,
+          "START": {
+            "distance": -0.02132182955216734,
+            "one_bar_slope": -0.018570625739092784,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 4.575766423927852e-48
+          },
+          "END": {
+            "distance": 0.1727662387573938,
+            "one_bar_slope": 0.15047382085314173,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.3516761589780115e-54
+          },
+          "crossings": 11
+        },
+        {
+          "period_bars": 72,
+          "START": {
+            "distance": -0.9471609915256792,
+            "one_bar_slope": -0.02668059131055098,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.03497789060689924,
+            "retained_seed_coefficient": 0.007957470113093435
+          },
+          "END": {
+            "distance": -0.060158070440533326,
+            "one_bar_slope": -0.0016945935334820956,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.017957477937810697,
+            "retained_seed_coefficient": 0.004085326230787414
+          },
+          "crossings": 0
+        },
+        {
+          "period_bars": 89,
+          "START": {
+            "distance": -1.086168768785473,
+            "one_bar_slope": -0.02468565383597896,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.08806572417241833,
+            "retained_seed_coefficient": 0.02003495224935572
+          },
+          "END": {
+            "distance": -0.20104527136564873,
+            "one_bar_slope": -0.004569210712881093,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.05135359074811676,
+            "retained_seed_coefficient": 0.011682941895205674
+          },
+          "crossings": 0
+        }
+      ],
+      "endpoint_sign_signature": {
+        "START": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "END": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "cloud_signature": {
+        "START": [
+          "below",
+          "below",
+          "below"
+        ],
+        "END": [
+          "above",
+          "above",
+          "above"
+        ]
+      },
+      "cloud_signature_seed100_stability": {
+        "START": [
+          true,
+          true,
+          true
+        ],
+        "END": [
+          true,
+          true,
+          true
+        ]
+      },
+      "cloud_absolute_widths": {
+        "START": [
+          0.06676533793922447,
+          0.06717604813504974,
+          0.003616652466807064
+        ],
+        "END": [
+          0.03453400345876746,
+          0.01857839305811577,
+          0.03487781472830358
+        ]
+      },
+      "extended_signature": {
+        "signs": {
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "END": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "crossings": [
+          7,
+          1,
+          5,
+          5,
+          11,
+          11
+        ],
+        "endpoint_EMA_order": {
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1
+          ],
+          "END": [
+            3,
+            0,
+            2,
+            1,
+            5,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "18:55_19:20",
+      "C": 62,
+      "n": 26,
+      "H": 30870.5,
+      "L": 30846.0,
+      "prehistory_bars": 174,
+      "geometry": {
+        "START": {
+          "open_position": 0.4897959183673469,
+          "close_position": 0.40816326530612246,
+          "absolute_body": 0.08163265306122448,
+          "upper_wick": 0.09183673469387756,
+          "lower_wick": 0.02040816326530612
+        },
+        "END": {
+          "open_position": 0.826530612244898,
+          "close_position": 1.0,
+          "absolute_body": 0.17346938775510204,
+          "upper_wick": 0.0,
+          "lower_wick": 0.07142857142857142
+        },
+        "efficiency": 0.17365269461077845,
+        "normalized_variation": 3.4081632653061225,
+        "signed_slope_per_bar": 0.013294959009244723,
+        "mean_absolute_body": 0.13775510204081634,
+        "mean_upper_wick": 0.05886970172684458,
+        "mean_lower_wick": 0.0663265306122449
+      },
+      "EMA_measurements": [
+        {
+          "period_bars": 24,
+          "START": {
+            "distance": -0.4950862590982923,
+            "one_bar_slope": -0.04305097905203833,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.041342519746371e-06,
+            "retained_seed_coefficient": 5.001289081791345e-07
+          },
+          "END": {
+            "distance": 0.4091120065752374,
+            "one_bar_slope": 0.035574957093447254,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.5387018876226277e-07,
+            "retained_seed_coefficient": 6.219817497490858e-08
+          },
+          "crossings": 7
+        },
+        {
+          "period_bars": 29.666666666666668,
+          "START": {
+            "distance": -0.5570826443275722,
+            "one_bar_slope": -0.038866230999553164,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 3.26950848458943e-05,
+            "retained_seed_coefficient": 8.01029588254007e-06
+          },
+          "END": {
+            "distance": 0.38570969595516824,
+            "one_bar_slope": 0.02690997878751808,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 6.056867649170513e-06,
+            "retained_seed_coefficient": 1.483932531337384e-06
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 8,
+          "START": {
+            "distance": -0.15488254070211896,
+            "one_bar_slope": -0.04425215448623485,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.0206158769460191e-19
+          },
+          "END": {
+            "distance": 0.3372962608973838,
+            "one_bar_slope": 0.09637036025645901,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.9065604706648476e-22
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 9.88888888888889,
+          "START": {
+            "distance": -0.21726029968466515,
+            "one_bar_slope": -0.04888356742906451,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 4.616582129420024e-16
+          },
+          "END": {
+            "distance": 0.3680963152133069,
+            "one_bar_slope": 0.082821670923072,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.8901364586958824e-18
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 2.6666666666666665,
+          "START": {
+            "distance": -0.016440521579263113,
+            "one_bar_slope": -0.019728625894996944,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.6209186242415056e-60
+          },
+          "END": {
+            "distance": 0.13241116227570218,
+            "one_bar_slope": 0.158893394730902,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 7.209190743125282e-69
+          },
+          "crossings": 11
+        },
+        {
+          "period_bars": 3.2962962962962963,
+          "START": {
+            "distance": -0.01979884172701253,
+            "one_bar_slope": -0.017244152472014728,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 4.575766423927852e-48
+          },
+          "END": {
+            "distance": 0.1730073116703686,
+            "one_bar_slope": 0.15068378758394607,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 7.224476022123853e-55
+          },
+          "crossings": 11
+        },
+        {
+          "period_bars": 72,
+          "START": {
+            "distance": -0.8795066349881306,
+            "one_bar_slope": -0.02477483478836877,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.03247946984926357,
+            "retained_seed_coefficient": 0.007957470113093435
+          },
+          "END": {
+            "distance": 0.10446165877599888,
+            "one_bar_slope": 0.0029425819373834518,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.016217957080754082,
+            "retained_seed_coefficient": 0.003973399484738444
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 89,
+          "START": {
+            "distance": -1.0085852853007964,
+            "one_bar_slope": -0.02292239284769475,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.08177531530295988,
+            "retained_seed_coefficient": 0.02003495224935572
+          },
+          "END": {
+            "distance": -0.02289915341219855,
+            "one_bar_slope": -0.0005204353048834399,
+            "sign": -1,
+            "sign_stable_under_seed_100": false,
+            "seed100_distance_effect": 0.04662579985389519,
+            "retained_seed_coefficient": 0.011423320964201103
+          },
+          "crossings": 0
+        }
+      ],
+      "endpoint_sign_signature": {
+        "START": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "END": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "cloud_signature": {
+        "START": [
+          "below",
+          "below",
+          "below"
+        ],
+        "END": [
+          "above",
+          "above",
+          "above"
+        ]
+      },
+      "cloud_signature_seed100_stability": {
+        "START": [
+          true,
+          true,
+          true
+        ],
+        "END": [
+          true,
+          true,
+          true
+        ]
+      },
+      "cloud_absolute_widths": {
+        "START": [
+          0.06199638522927987,
+          0.06237775898254619,
+          0.0033583201477494166
+        ],
+        "END": [
+          0.02340231062006918,
+          0.030800054315923076,
+          0.040596149394666416
+        ]
+      },
+      "extended_signature": {
+        "signs": {
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "END": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "crossings": [
+          7,
+          1,
+          5,
+          5,
+          11,
+          11
+        ],
+        "endpoint_EMA_order": {
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1
+          ],
+          "END": [
+            0,
+            1,
+            3,
+            2,
+            5,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "18:55_19:21",
+      "C": 106,
+      "n": 27,
+      "H": 30870.5,
+      "L": 30846.0,
+      "prehistory_bars": 174,
+      "geometry": {
+        "START": {
+          "open_position": 0.4897959183673469,
+          "close_position": 0.40816326530612246,
+          "absolute_body": 0.08163265306122448,
+          "upper_wick": 0.09183673469387756,
+          "lower_wick": 0.02040816326530612
+        },
+        "END": {
+          "open_position": 0.9795918367346939,
+          "close_position": 0.9183673469387755,
+          "absolute_body": 0.061224489795918366,
+          "upper_wick": 0.02040816326530612,
+          "lower_wick": 0.08163265306122448
+        },
+        "efficiency": 0.14619883040935672,
+        "normalized_variation": 3.489795918367347,
+        "signed_slope_per_bar": 0.015343500037377588,
+        "mean_absolute_body": 0.1349206349206349,
+        "mean_upper_wick": 0.05744520030234316,
+        "mean_lower_wick": 0.06689342403628118
+      },
+      "EMA_measurements": [
+        {
+          "period_bars": 24,
+          "START": {
+            "distance": -0.4950862590982923,
+            "one_bar_slope": -0.04305097905203833,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.041342519746371e-06,
+            "retained_seed_coefficient": 5.001289081791345e-07
+          },
+          "END": {
+            "distance": 0.3012810052329156,
+            "one_bar_slope": 0.026198348281097274,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.335606152381824e-07,
+            "retained_seed_coefficient": 5.722232097691589e-08
+          },
+          "crossings": 7
+        },
+        {
+          "period_bars": 29.666666666666668,
+          "START": {
+            "distance": -0.5570826443275722,
+            "one_bar_slope": -0.038866230999553164,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 3.26950848458943e-05,
+            "retained_seed_coefficient": 8.01029588254007e-06
+          },
+          "END": {
+            "distance": 0.28424593140086046,
+            "one_bar_slope": 0.019831111493083288,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 5.661854573896117e-06,
+            "retained_seed_coefficient": 1.3871543227719025e-06
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 8,
+          "START": {
+            "distance": -0.15488254070211896,
+            "one_bar_slope": -0.04425215448623485,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.0206158769460191e-19
+          },
+          "END": {
+            "distance": 0.19884947276147372,
+            "one_bar_slope": 0.056814135074685565,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.4828803660726592e-22
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 9.88888888888889,
+          "START": {
+            "distance": -0.21726029968466515,
+            "one_bar_slope": -0.04888356742906451,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 4.616582129420024e-16
+          },
+          "END": {
+            "distance": 0.23384788747115431,
+            "one_bar_slope": 0.052615774680928054,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.3592950683231694e-18
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 2.6666666666666665,
+          "START": {
+            "distance": -0.016440521579263113,
+            "one_bar_slope": -0.019728625894996944,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.6209186242415056e-60
+          },
+          "END": {
+            "distance": 0.023081140552008314,
+            "one_bar_slope": 0.027697368662469374,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 3.2769048832387636e-69
+          },
+          "crossings": 11
+        },
+        {
+          "period_bars": 3.2962962962962963,
+          "START": {
+            "distance": -0.01979884172701253,
+            "one_bar_slope": -0.017244152472014728,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 4.575766423927852e-48
+          },
+          "END": {
+            "distance": 0.04883817960142885,
+            "one_bar_slope": 0.042536479007715254,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 3.861357873893784e-55
+          },
+          "crossings": 11
+        },
+        {
+          "period_bars": 72,
+          "START": {
+            "distance": -0.8795066349881306,
+            "one_bar_slope": -0.02477483478836877,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.03247946984926357,
+            "retained_seed_coefficient": 0.007957470113093435
+          },
+          "END": {
+            "distance": 0.022203553503477823,
+            "one_bar_slope": 0.0006254522112965565,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.015773629489632762,
+            "retained_seed_coefficient": 0.003864539224882596
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 89,
+          "START": {
+            "distance": -1.0085852853007964,
+            "one_bar_slope": -0.02292239284769475,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.08177531530295988,
+            "retained_seed_coefficient": 0.02003495224935572
+          },
+          "END": {
+            "distance": -0.1022088774407166,
+            "one_bar_slope": -0.002322929032706437,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.04558967096818378,
+            "retained_seed_coefficient": 0.011169469387218856
+          },
+          "crossings": 0
+        }
+      ],
+      "endpoint_sign_signature": {
+        "START": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "END": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "cloud_signature": {
+        "START": [
+          "below",
+          "below",
+          "below"
+        ],
+        "END": [
+          "above",
+          "above",
+          "above"
+        ]
+      },
+      "cloud_signature_seed100_stability": {
+        "START": [
+          true,
+          true,
+          true
+        ],
+        "END": [
+          true,
+          true,
+          true
+        ]
+      },
+      "cloud_absolute_widths": {
+        "START": [
+          0.06199638522927987,
+          0.06237775898254619,
+          0.0033583201477494166
+        ],
+        "END": [
+          0.017035073832055193,
+          0.03499841470968059,
+          0.025757039049420533
+        ]
+      },
+      "extended_signature": {
+        "signs": {
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "END": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "crossings": [
+          7,
+          1,
+          5,
+          5,
+          11,
+          11
+        ],
+        "endpoint_EMA_order": {
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1
+          ],
+          "END": [
+            0,
+            1,
+            3,
+            2,
+            5,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "18:56_19:19",
+      "C": 77,
+      "n": 24,
+      "H": 30868.75,
+      "L": 30846.0,
+      "prehistory_bars": 175,
+      "geometry": {
+        "START": {
+          "open_position": 0.4725274725274725,
+          "close_position": 0.2857142857142857,
+          "absolute_body": 0.18681318681318682,
+          "upper_wick": 0.03296703296703297,
+          "lower_wick": 0.0989010989010989
+        },
+        "END": {
+          "open_position": 0.7362637362637363,
+          "close_position": 0.9010989010989011,
+          "absolute_body": 0.16483516483516483,
+          "upper_wick": 0.0989010989010989,
+          "lower_wick": 0.01098901098901099
+        },
+        "efficiency": 0.18421052631578946,
+        "normalized_variation": 3.340659340659341,
+        "signed_slope_per_bar": 0.01128045867176302,
+        "mean_absolute_body": 0.14926739926739926,
+        "mean_upper_wick": 0.06456043956043957,
+        "mean_lower_wick": 0.07326007326007326
+      },
+      "EMA_measurements": [
+        {
+          "period_bars": 24,
+          "START": {
+            "distance": -0.6320546936297503,
+            "one_bar_slope": -0.05496127770687223,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.0224993772149743e-06,
+            "retained_seed_coefficient": 4.601185955248037e-07
+          },
+          "END": {
+            "distance": 0.3030694773574846,
+            "one_bar_slope": 0.0263538675962891,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.9717233661398455e-07,
+            "retained_seed_coefficient": 6.760671192924844e-08
+          },
+          "crossings": 7
+        },
+        {
+          "period_bars": 29.666666666666668,
+          "START": {
+            "distance": -0.7046216586708657,
+            "one_bar_slope": -0.04915965060498131,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 3.29137810795046e-05,
+            "retained_seed_coefficient": 7.487885281504849e-06
+          },
+          "END": {
+            "distance": 0.2685354738987171,
+            "one_bar_slope": 0.0187350330627421,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 6.977858272596048e-06,
+            "retained_seed_coefficient": 1.5874627079423178e-06
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 8,
+          "START": {
+            "distance": -0.2493887947760983,
+            "one_bar_slope": -0.0712539413646452,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 7.938123487357927e-20
+          },
+          "END": {
+            "distance": 0.2912014161876549,
+            "one_bar_slope": 0.0832004046250214,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.451292033711947e-22
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 9.88888888888889,
+          "START": {
+            "distance": -0.31658676267405816,
+            "one_bar_slope": -0.07123202160173506,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 3.768638472995938e-16
+          },
+          "END": {
+            "distance": 0.30977980924577064,
+            "one_bar_slope": 0.06970045708038634,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 3.540417161902456e-18
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 2.6666666666666665,
+          "START": {
+            "distance": -0.07797787769615733,
+            "one_bar_slope": -0.0935734532353568,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.1913266473825025e-60
+          },
+          "END": {
+            "distance": 0.13788842402909024,
+            "one_bar_slope": 0.16546610883497223,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.5860219634875621e-68
+          },
+          "crossings": 11
+        },
+        {
+          "period_bars": 3.2962962962962963,
+          "START": {
+            "distance": -0.09362426698882681,
+            "one_bar_slope": -0.08154371640949439,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.4456682610648863e-48
+          },
+          "END": {
+            "distance": 0.1727662387573938,
+            "one_bar_slope": 0.15047382085314173,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.3516761589780115e-54
+          },
+          "crossings": 11
+        },
+        {
+          "period_bars": 72,
+          "START": {
+            "distance": -1.0708425660465095,
+            "one_bar_slope": -0.03016457932532361,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.03401959223425205,
+            "retained_seed_coefficient": 0.007739457233282656
+          },
+          "END": {
+            "distance": -0.060158070440533326,
+            "one_bar_slope": -0.0016945935334820956,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.017957477937810697,
+            "retained_seed_coefficient": 0.004085326230787414
+          },
+          "crossings": 0
+        },
+        {
+          "period_bars": 89,
+          "START": {
+            "distance": -1.2124590354621063,
+            "one_bar_slope": -0.027555887169520638,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0861087080796766,
+            "retained_seed_coefficient": 0.019589731088258924
+          },
+          "END": {
+            "distance": -0.20104527136564873,
+            "one_bar_slope": -0.004569210712881093,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.05135359074811676,
+            "retained_seed_coefficient": 0.011682941895205674
+          },
+          "crossings": 0
+        }
+      ],
+      "endpoint_sign_signature": {
+        "START": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "END": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "cloud_signature": {
+        "START": [
+          "below",
+          "below",
+          "below"
+        ],
+        "END": [
+          "above",
+          "above",
+          "above"
+        ]
+      },
+      "cloud_signature_seed100_stability": {
+        "START": [
+          true,
+          true,
+          true
+        ],
+        "END": [
+          true,
+          true,
+          true
+        ]
+      },
+      "cloud_absolute_widths": {
+        "START": [
+          0.0725669650411154,
+          0.0671979678979599,
+          0.015646389292669483
+        ],
+        "END": [
+          0.03453400345876746,
+          0.01857839305811577,
+          0.03487781472830358
+        ]
+      },
+      "extended_signature": {
+        "signs": {
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "END": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "crossings": [
+          7,
+          1,
+          5,
+          5,
+          11,
+          11
+        ],
+        "endpoint_EMA_order": {
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1
+          ],
+          "END": [
+            3,
+            0,
+            2,
+            1,
+            5,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "18:56_19:20",
+      "C": 109,
+      "n": 25,
+      "H": 30870.5,
+      "L": 30846.0,
+      "prehistory_bars": 175,
+      "geometry": {
+        "START": {
+          "open_position": 0.4387755102040816,
+          "close_position": 0.2653061224489796,
+          "absolute_body": 0.17346938775510204,
+          "upper_wick": 0.030612244897959183,
+          "lower_wick": 0.09183673469387756
+        },
+        "END": {
+          "open_position": 0.826530612244898,
+          "close_position": 1.0,
+          "absolute_body": 0.17346938775510204,
+          "upper_wick": 0.0,
+          "lower_wick": 0.07142857142857142
+        },
+        "efficiency": 0.225,
+        "normalized_variation": 3.2653061224489797,
+        "signed_slope_per_bar": 0.01423076923076923,
+        "mean_absolute_body": 0.14,
+        "mean_upper_wick": 0.05755102040816326,
+        "mean_lower_wick": 0.06816326530612245
+      },
+      "EMA_measurements": [
+        {
+          "period_bars": 24,
+          "START": {
+            "distance": -0.5869079297990538,
+            "one_bar_slope": -0.05103547215638136,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 1.878035135985333e-06,
+            "retained_seed_coefficient": 4.601185955248037e-07
+          },
+          "END": {
+            "distance": 0.4091120065752374,
+            "one_bar_slope": 0.035574957093447254,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.5387018876226277e-07,
+            "retained_seed_coefficient": 6.219817497490858e-08
+          },
+          "crossings": 7
+        },
+        {
+          "period_bars": 29.666666666666668,
+          "START": {
+            "distance": -0.6542915401943753,
+            "one_bar_slope": -0.045648246990339786,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 3.0562796716682844e-05,
+            "retained_seed_coefficient": 7.487885281504849e-06
+          },
+          "END": {
+            "distance": 0.38570969595516824,
+            "one_bar_slope": 0.02690997878751808,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 6.056867649170513e-06,
+            "retained_seed_coefficient": 1.483932531337384e-06
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 8,
+          "START": {
+            "distance": -0.23157530943494842,
+            "one_bar_slope": -0.0661643741243134,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 7.938123487357927e-20
+          },
+          "END": {
+            "distance": 0.3372962608973838,
+            "one_bar_slope": 0.09637036025645901,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.9065604706648476e-22
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 9.88888888888889,
+          "START": {
+            "distance": -0.293973422483054,
+            "one_bar_slope": -0.06614402005875397,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 3.768638472995938e-16
+          },
+          "END": {
+            "distance": 0.3680963152133069,
+            "one_bar_slope": 0.082821670923072,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.8901364586958824e-18
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 2.6666666666666665,
+          "START": {
+            "distance": -0.07240802928928894,
+            "one_bar_slope": -0.08688963514711703,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.1913266473825025e-60
+          },
+          "END": {
+            "distance": 0.13241116227570218,
+            "one_bar_slope": 0.158893394730902,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 7.209190743125282e-69
+          },
+          "crossings": 11
+        },
+        {
+          "period_bars": 3.2962962962962963,
+          "START": {
+            "distance": -0.08693681934676775,
+            "one_bar_slope": -0.07571916523738764,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.4456682610648863e-48
+          },
+          "END": {
+            "distance": 0.1730073116703686,
+            "one_bar_slope": 0.15068378758394607,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 7.224476022123853e-55
+          },
+          "crossings": 11
+        },
+        {
+          "period_bars": 72,
+          "START": {
+            "distance": -0.9943538113289017,
+            "one_bar_slope": -0.02800996651637192,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.03158962136037691,
+            "retained_seed_coefficient": 0.007739457233282656
+          },
+          "END": {
+            "distance": 0.10446165877599888,
+            "one_bar_slope": 0.0029425819373834518,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.016217957080754082,
+            "retained_seed_coefficient": 0.003973399484738444
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 89,
+          "START": {
+            "distance": -1.1258548186433843,
+            "one_bar_slope": -0.02558760951455488,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.07995808607398541,
+            "retained_seed_coefficient": 0.019589731088258924
+          },
+          "END": {
+            "distance": -0.02289915341219855,
+            "one_bar_slope": -0.0005204353048834399,
+            "sign": -1,
+            "sign_stable_under_seed_100": false,
+            "seed100_distance_effect": 0.04662579985389519,
+            "retained_seed_coefficient": 0.011423320964201103
+          },
+          "crossings": 0
+        }
+      ],
+      "endpoint_sign_signature": {
+        "START": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "END": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "cloud_signature": {
+        "START": [
+          "below",
+          "below",
+          "below"
+        ],
+        "END": [
+          "above",
+          "above",
+          "above"
+        ]
+      },
+      "cloud_signature_seed100_stability": {
+        "START": [
+          true,
+          true,
+          true
+        ],
+        "END": [
+          true,
+          true,
+          true
+        ]
+      },
+      "cloud_absolute_widths": {
+        "START": [
+          0.06738361039532144,
+          0.062398113048105615,
+          0.014528790057478804
+        ],
+        "END": [
+          0.02340231062006918,
+          0.030800054315923076,
+          0.040596149394666416
+        ]
+      },
+      "extended_signature": {
+        "signs": {
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "END": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "crossings": [
+          7,
+          1,
+          5,
+          5,
+          11,
+          11
+        ],
+        "endpoint_EMA_order": {
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1
+          ],
+          "END": [
+            0,
+            1,
+            3,
+            2,
+            5,
+            4
+          ]
+        }
+      }
+    },
+    {
+      "id": "18:56_19:21",
+      "C": 134,
+      "n": 26,
+      "H": 30870.5,
+      "L": 30846.0,
+      "prehistory_bars": 175,
+      "geometry": {
+        "START": {
+          "open_position": 0.4387755102040816,
+          "close_position": 0.2653061224489796,
+          "absolute_body": 0.17346938775510204,
+          "upper_wick": 0.030612244897959183,
+          "lower_wick": 0.09183673469387756
+        },
+        "END": {
+          "open_position": 0.9795918367346939,
+          "close_position": 0.9183673469387755,
+          "absolute_body": 0.061224489795918366,
+          "upper_wick": 0.02040816326530612,
+          "lower_wick": 0.08163265306122448
+        },
+        "efficiency": 0.1951219512195122,
+        "normalized_variation": 3.3469387755102042,
+        "signed_slope_per_bar": 0.016364904936333507,
+        "mean_absolute_body": 0.13697017268445838,
+        "mean_upper_wick": 0.05612244897959184,
+        "mean_lower_wick": 0.06868131868131867
+      },
+      "EMA_measurements": [
+        {
+          "period_bars": 24,
+          "START": {
+            "distance": -0.5869079297990538,
+            "one_bar_slope": -0.05103547215638136,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 1.878035135985333e-06,
+            "retained_seed_coefficient": 4.601185955248037e-07
+          },
+          "END": {
+            "distance": 0.3012810052329156,
+            "one_bar_slope": 0.026198348281097274,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 2.335606152381824e-07,
+            "retained_seed_coefficient": 5.722232097691589e-08
+          },
+          "crossings": 7
+        },
+        {
+          "period_bars": 29.666666666666668,
+          "START": {
+            "distance": -0.6542915401943753,
+            "one_bar_slope": -0.045648246990339786,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 3.0562796716682844e-05,
+            "retained_seed_coefficient": 7.487885281504849e-06
+          },
+          "END": {
+            "distance": 0.28424593140086046,
+            "one_bar_slope": 0.019831111493083288,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 5.661854573896117e-06,
+            "retained_seed_coefficient": 1.3871543227719025e-06
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 8,
+          "START": {
+            "distance": -0.23157530943494842,
+            "one_bar_slope": -0.0661643741243134,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 7.938123487357927e-20
+          },
+          "END": {
+            "distance": 0.19884947276147372,
+            "one_bar_slope": 0.056814135074685565,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.4828803660726592e-22
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 9.88888888888889,
+          "START": {
+            "distance": -0.293973422483054,
+            "one_bar_slope": -0.06614402005875397,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 3.768638472995938e-16
+          },
+          "END": {
+            "distance": 0.23384788747115431,
+            "one_bar_slope": 0.052615774680928054,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.3592950683231694e-18
+          },
+          "crossings": 5
+        },
+        {
+          "period_bars": 2.6666666666666665,
+          "START": {
+            "distance": -0.07240802928928894,
+            "one_bar_slope": -0.08688963514711703,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 1.1913266473825025e-60
+          },
+          "END": {
+            "distance": 0.023081140552008314,
+            "one_bar_slope": 0.027697368662469374,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 3.2769048832387636e-69
+          },
+          "crossings": 11
+        },
+        {
+          "period_bars": 3.2962962962962963,
+          "START": {
+            "distance": -0.08693681934676775,
+            "one_bar_slope": -0.07571916523738764,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 2.4456682610648863e-48
+          },
+          "END": {
+            "distance": 0.04883817960142885,
+            "one_bar_slope": 0.042536479007715254,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.0,
+            "retained_seed_coefficient": 3.861357873893784e-55
+          },
+          "crossings": 11
+        },
+        {
+          "period_bars": 72,
+          "START": {
+            "distance": -0.9943538113289017,
+            "one_bar_slope": -0.02800996651637192,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.03158962136037691,
+            "retained_seed_coefficient": 0.007739457233282656
+          },
+          "END": {
+            "distance": 0.022203553503477823,
+            "one_bar_slope": 0.0006254522112965565,
+            "sign": 1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.015773629489632762,
+            "retained_seed_coefficient": 0.003864539224882596
+          },
+          "crossings": 1
+        },
+        {
+          "period_bars": 89,
+          "START": {
+            "distance": -1.1258548186433843,
+            "one_bar_slope": -0.02558760951455488,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.07995808607398541,
+            "retained_seed_coefficient": 0.019589731088258924
+          },
+          "END": {
+            "distance": -0.1022088774407166,
+            "one_bar_slope": -0.002322929032706437,
+            "sign": -1,
+            "sign_stable_under_seed_100": true,
+            "seed100_distance_effect": 0.04558967096818378,
+            "retained_seed_coefficient": 0.011169469387218856
+          },
+          "crossings": 0
+        }
+      ],
+      "endpoint_sign_signature": {
+        "START": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "END": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      "cloud_signature": {
+        "START": [
+          "below",
+          "below",
+          "below"
+        ],
+        "END": [
+          "above",
+          "above",
+          "above"
+        ]
+      },
+      "cloud_signature_seed100_stability": {
+        "START": [
+          true,
+          true,
+          true
+        ],
+        "END": [
+          true,
+          true,
+          true
+        ]
+      },
+      "cloud_absolute_widths": {
+        "START": [
+          0.06738361039532144,
+          0.062398113048105615,
+          0.014528790057478804
+        ],
+        "END": [
+          0.017035073832055193,
+          0.03499841470968059,
+          0.025757039049420533
+        ]
+      },
+      "extended_signature": {
+        "signs": {
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "END": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "crossings": [
+          7,
+          1,
+          5,
+          5,
+          11,
+          11
+        ],
+        "endpoint_EMA_order": {
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1
+          ],
+          "END": [
+            0,
+            1,
+            3,
+            2,
+            5,
+            4
+          ]
+        }
+      }
+    }
+  ],
+  "same_sign_groups": [
+    {
+      "signature": {
+        "END": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "START": [
+          -1,
+          -1,
+          -1,
+          -1,
+          1,
+          1
+        ]
+      },
+      "cases": [
+        {
+          "id": "18:54_19:19",
+          "C": 134
+        },
+        {
+          "id": "18:54_19:20",
+          "C": 134
+        },
+        {
+          "id": "18:54_19:21",
+          "C": 109
+        }
+      ],
+      "different_C": true
+    },
+    {
+      "signature": {
+        "END": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "START": [
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1
+        ]
+      },
+      "cases": [
+        {
+          "id": "18:55_19:19",
+          "C": 107
+        },
+        {
+          "id": "18:55_19:20",
+          "C": 62
+        },
+        {
+          "id": "18:55_19:21",
+          "C": 106
+        },
+        {
+          "id": "18:56_19:19",
+          "C": 77
+        },
+        {
+          "id": "18:56_19:20",
+          "C": 109
+        },
+        {
+          "id": "18:56_19:21",
+          "C": 134
+        }
+      ],
+      "different_C": true
+    }
+  ],
+  "same_cloud_groups": [
+    {
+      "signature": {
+        "END": [
+          "above",
+          "above",
+          "above"
+        ],
+        "START": [
+          "below",
+          "below",
+          "above"
+        ]
+      },
+      "cases": [
+        {
+          "id": "18:54_19:19",
+          "C": 134
+        },
+        {
+          "id": "18:54_19:20",
+          "C": 134
+        },
+        {
+          "id": "18:54_19:21",
+          "C": 109
+        }
+      ],
+      "different_C": true
+    },
+    {
+      "signature": {
+        "END": [
+          "above",
+          "above",
+          "above"
+        ],
+        "START": [
+          "below",
+          "below",
+          "below"
+        ]
+      },
+      "cases": [
+        {
+          "id": "18:55_19:19",
+          "C": 107
+        },
+        {
+          "id": "18:55_19:20",
+          "C": 62
+        },
+        {
+          "id": "18:55_19:21",
+          "C": 106
+        },
+        {
+          "id": "18:56_19:19",
+          "C": 77
+        },
+        {
+          "id": "18:56_19:20",
+          "C": 109
+        },
+        {
+          "id": "18:56_19:21",
+          "C": 134
+        }
+      ],
+      "different_C": true
+    }
+  ],
+  "same_extended_groups": [
+    {
+      "signature": {
+        "crossings": [
+          7,
+          1,
+          5,
+          5,
+          12,
+          12
+        ],
+        "endpoint_EMA_order": {
+          "END": [
+            0,
+            1,
+            3,
+            2,
+            5,
+            4
+          ],
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1
+          ]
+        },
+        "signs": {
+          "END": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            1,
+            1
+          ]
+        }
+      },
+      "cases": [
+        {
+          "id": "18:54_19:20",
+          "C": 134
+        },
+        {
+          "id": "18:54_19:21",
+          "C": 109
+        }
+      ],
+      "different_C": true
+    },
+    {
+      "signature": {
+        "crossings": [
+          7,
+          1,
+          5,
+          5,
+          11,
+          11
+        ],
+        "endpoint_EMA_order": {
+          "END": [
+            3,
+            0,
+            2,
+            1,
+            5,
+            4
+          ],
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1
+          ]
+        },
+        "signs": {
+          "END": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        }
+      },
+      "cases": [
+        {
+          "id": "18:55_19:19",
+          "C": 107
+        },
+        {
+          "id": "18:56_19:19",
+          "C": 77
+        }
+      ],
+      "different_C": true
+    },
+    {
+      "signature": {
+        "crossings": [
+          7,
+          1,
+          5,
+          5,
+          11,
+          11
+        ],
+        "endpoint_EMA_order": {
+          "END": [
+            0,
+            1,
+            3,
+            2,
+            5,
+            4
+          ],
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1
+          ]
+        },
+        "signs": {
+          "END": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        }
+      },
+      "cases": [
+        {
+          "id": "18:55_19:20",
+          "C": 62
+        },
+        {
+          "id": "18:55_19:21",
+          "C": 106
+        },
+        {
+          "id": "18:56_19:20",
+          "C": 109
+        },
+        {
+          "id": "18:56_19:21",
+          "C": 134
+        }
+      ],
+      "different_C": true
+    }
+  ],
+  "limits": "Known labels, exploratory. Fixed EMA proxies not proven author lengths. +/-100 seed sensitivity is not guaranteed true-history bound. No predictor fitted."
+}

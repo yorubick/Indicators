@@ -1,0 +1,751 @@
+{
+  "formula": "N=K*C/source_seconds; select smallest or largest positive root of whole-path condition; C_pred=max(source_seconds,N*source_seconds/K)",
+  "grid": [
+    1.00001,
+    10000.0,
+    1200
+  ],
+  "training_count": 34,
+  "reserved_count": 4,
+  "conditions": [
+    "signed_area_zero",
+    "signed_energy_zero",
+    "mean_wick_position_half",
+    "RMS_residual_equals_mean_TR"
+  ],
+  "model_count": 2304,
+  "models_with_roots_all_nonfloor_training": 256,
+  "nonfloor_training_count": 30,
+  "best_root_coverage": [
+    {
+      "model": [
+        "forward",
+        "all",
+        "close",
+        "range_high",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "nonfloor_cases_with_roots": 30,
+      "missing_nonfloor_cases": []
+    },
+    {
+      "model": [
+        "forward",
+        "all",
+        "close",
+        "range_low",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "nonfloor_cases_with_roots": 30,
+      "missing_nonfloor_cases": []
+    },
+    {
+      "model": [
+        "forward",
+        "all",
+        "close",
+        "range_extreme_against_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "nonfloor_cases_with_roots": 30,
+      "missing_nonfloor_cases": []
+    },
+    {
+      "model": [
+        "forward",
+        "all",
+        "close",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "nonfloor_cases_with_roots": 30,
+      "missing_nonfloor_cases": []
+    },
+    {
+      "model": [
+        "forward",
+        "all",
+        "hl2",
+        "range_high",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "nonfloor_cases_with_roots": 30,
+      "missing_nonfloor_cases": []
+    }
+  ],
+  "models_with_compatible_K_nonfloor_training": 0,
+  "selection": "Root branch and K selected only by earlier training cases, without choosing roots nearest the known C. Four latest ranges checked afterwards.",
+  "scope": "Finite grid, sign-changing roots, post-update EMA only, explicit fixed seeds and inclusions. Missing/tangent roots and adaptive rules not excluded. Same-date overlapping windows.",
+  "best_training_models": [
+    {
+      "model": [
+        "forward",
+        "skip_start",
+        "close",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "smallest",
+      "K_training_only": 3.2558943174729382,
+      "K_compatible_lower": 12.735002515937111,
+      "K_compatible_upper": 1.356533752705662,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.3559976339009567,
+      "K_max_nonfloor": 12.751464187678902,
+      "training": {
+        "predictions": [
+          160.46520694394775,
+          284.0382699255855,
+          442.55596549155877,
+          205.0246538013781,
+          421.7831859343535,
+          198.8300432396678,
+          58.78571306365203,
+          51.226389036874494,
+          50.51187339237229,
+          52.573774798431195,
+          53.63944864195413,
+          53.80916397119427,
+          57.40996787421952,
+          60.406396116920185,
+          60.488795245209275,
+          59.46776119922312,
+          58.91457647684067,
+          58.354736535440466,
+          57.14597472238103,
+          55.01875905151659,
+          58.08015547254837,
+          60.089310699572025,
+          50.450216299150306,
+          51.25467550880999,
+          51.12015986067826,
+          138.31042894723484,
+          381.63318001262365,
+          102.60885934638547,
+          269.29695558976925,
+          717.3464113910422
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4111520672148902,
+        "max_relative_error": 2.916424473376626
+      },
+      "reserved": {
+        "predictions": [
+          59.32362639956103,
+          56.849439125261206,
+          43.27991003808189,
+          40.73432863484373
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.12394244850525593,
+        "max_relative_error": 0.5182250921588034
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "skip_start",
+        "close",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "largest",
+      "K_training_only": 3.2558943174729382,
+      "K_compatible_lower": 12.735002515937111,
+      "K_compatible_upper": 1.356533752705662,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.3559976339009567,
+      "K_max_nonfloor": 12.751464187678902,
+      "training": {
+        "predictions": [
+          160.46520694394775,
+          284.0382699255855,
+          442.55596549155877,
+          205.0246538013781,
+          421.7831859343535,
+          198.8300432396678,
+          58.78571306365203,
+          51.226389036874494,
+          50.51187339237229,
+          52.573774798431195,
+          53.63944864195413,
+          53.80916397119427,
+          57.40996787421952,
+          60.406396116920185,
+          60.488795245209275,
+          59.46776119922312,
+          58.91457647684067,
+          58.354736535440466,
+          57.14597472238103,
+          55.01875905151659,
+          58.08015547254837,
+          60.089310699572025,
+          50.450216299150306,
+          51.25467550880999,
+          51.12015986067826,
+          138.31042894723484,
+          381.63318001262365,
+          102.60885934638547,
+          269.29695558976925,
+          717.3464113910422
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4111520672148902,
+        "max_relative_error": 2.916424473376626
+      },
+      "reserved": {
+        "predictions": [
+          59.32362639956103,
+          56.849439125261206,
+          43.27991003808189,
+          40.73432863484373
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.12394244850525593,
+        "max_relative_error": 0.5182250921588034
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "all",
+        "close",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "smallest",
+      "K_training_only": 3.2983988823806,
+      "K_compatible_lower": 12.92241192177411,
+      "K_compatible_upper": 1.398042722927108,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.3974901992674145,
+      "K_max_nonfloor": 12.93225569394838,
+      "training": {
+        "predictions": [
+          162.46214177568206,
+          280.490177549645,
+          436.40060860152187,
+          252.44537517277882,
+          462.6505848148126,
+          202.11566811867755,
+          58.876790134303874,
+          52.113555891648396,
+          50.566264092789055,
+          49.86095599948738,
+          51.896286870789204,
+          52.94822798983955,
+          53.11575629547074,
+          56.670158714420346,
+          59.627973713764256,
+          59.70931101198924,
+          58.701434443139156,
+          58.155378293369324,
+          57.60275268655256,
+          56.40956749014053,
+          59.243601757535615,
+          58.965634699092824,
+          49.71567904083769,
+          50.4980736596645,
+          50.3620727175505,
+          137.1804870138203,
+          377.12502939445335,
+          102.01371585310677,
+          261.79333711409805,
+          719.718695787698
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.41862015902860866,
+        "max_relative_error": 2.9207676679221404
+      },
+      "reserved": {
+        "predictions": [
+          60.33048771535417,
+          57.639561067903955,
+          45.21559500283416,
+          38.90410501541366
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.1358990221253793,
+        "max_relative_error": 0.5115291434923394
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "all",
+        "close",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "largest",
+      "K_training_only": 3.2983988823806,
+      "K_compatible_lower": 12.92241192177411,
+      "K_compatible_upper": 1.398042722927108,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.3974901992674145,
+      "K_max_nonfloor": 12.93225569394838,
+      "training": {
+        "predictions": [
+          162.46214177568206,
+          280.490177549645,
+          436.40060860152187,
+          252.44537517277882,
+          462.6505848148126,
+          202.11566811867755,
+          58.876790134303874,
+          52.113555891648396,
+          50.566264092789055,
+          49.86095599948738,
+          51.896286870789204,
+          52.94822798983955,
+          53.11575629547074,
+          56.670158714420346,
+          59.627973713764256,
+          59.70931101198924,
+          58.701434443139156,
+          58.155378293369324,
+          57.60275268655256,
+          56.40956749014053,
+          59.243601757535615,
+          58.965634699092824,
+          49.71567904083769,
+          50.4980736596645,
+          50.3620727175505,
+          137.1804870138203,
+          377.12502939445335,
+          102.01371585310677,
+          261.79333711409805,
+          719.718695787698
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.41862015902860866,
+        "max_relative_error": 2.9207676679221404
+      },
+      "reserved": {
+        "predictions": [
+          60.33048771535417,
+          57.639561067903955,
+          45.21559500283416,
+          38.90410501541366
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.1358990221253793,
+        "max_relative_error": 0.5115291434923394
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "skip_start",
+        "close",
+        "range_low",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "smallest",
+      "K_training_only": 2.9514722849832387,
+      "K_compatible_lower": 11.62912003499021,
+      "K_compatible_upper": 1.2432262024231373,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.2426095227592369,
+      "K_max_nonfloor": 11.637978629570283,
+      "training": {
+        "predictions": [
+          177.01597880458687,
+          224.93679531747048,
+          194.73139221573322,
+          226.1713954253019,
+          465.2869299421838,
+          219.33785765859204,
+          64.84901453635919,
+          56.510003437408145,
+          55.721790910894974,
+          57.99636184463992,
+          59.171951881198765,
+          59.359172062418985,
+          63.33137164086119,
+          66.63685878290967,
+          66.72775675776994,
+          65.60141077607571,
+          64.99116923551247,
+          64.37358604044965,
+          63.04014959303919,
+          60.69352772230519,
+          69.68174606365318,
+          66.28706840413832,
+          55.653774355064606,
+          56.54120744488086,
+          56.3928175255204,
+          152.57610310208415,
+          420.99575472357344,
+          82.51863576696047,
+          158.85954166198425,
+          342.9091336279775
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.3303152294525719,
+        "max_relative_error": 2.9431095757812185
+      },
+      "reserved": {
+        "predictions": [
+          65.44240956249237,
+          62.71302859295283,
+          47.743905260669266,
+          44.935766398028726
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.03358374117099616,
+        "max_relative_error": 0.4685336559919252
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "skip_start",
+        "close",
+        "range_low",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "largest",
+      "K_training_only": 2.9514722849832387,
+      "K_compatible_lower": 11.62912003499021,
+      "K_compatible_upper": 1.2432262024231373,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.2426095227592369,
+      "K_max_nonfloor": 11.637978629570283,
+      "training": {
+        "predictions": [
+          177.01597880458687,
+          224.93679531747048,
+          194.73139221573322,
+          226.1713954253019,
+          465.2869299421838,
+          219.33785765859204,
+          64.84901453635919,
+          56.510003437408145,
+          55.721790910894974,
+          57.99636184463992,
+          59.171951881198765,
+          59.359172062418985,
+          63.33137164086119,
+          66.63685878290967,
+          66.72775675776994,
+          65.60141077607571,
+          64.99116923551247,
+          64.37358604044965,
+          63.04014959303919,
+          60.69352772230519,
+          69.68174606365318,
+          66.28706840413832,
+          55.653774355064606,
+          56.54120744488086,
+          56.3928175255204,
+          152.57610310208415,
+          420.99575472357344,
+          82.51863576696047,
+          158.85954166198425,
+          342.9091336279775
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.3303152294525719,
+        "max_relative_error": 2.9431095757812185
+      },
+      "reserved": {
+        "predictions": [
+          65.44240956249237,
+          62.71302859295283,
+          47.743905260669266,
+          44.935766398028726
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.03358374117099616,
+        "max_relative_error": 0.4685336559919252
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "skip_start",
+        "hlc3",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "smallest",
+      "K_training_only": 2.9656828370783854,
+      "K_compatible_lower": 11.871080431757093,
+      "K_compatible_upper": 1.2176468218734537,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.2171655928901026,
+      "K_max_nonfloor": 11.886425370169428,
+      "training": {
+        "predictions": [
+          153.34347976399366,
+          283.35512986551464,
+          452.90280202462674,
+          205.06126124965462,
+          437.75994543218764,
+          197.08399892451422,
+          59.65130132762015,
+          50.481247034820946,
+          50.046678116899415,
+          52.613408641176704,
+          53.368296943263,
+          52.953255532864745,
+          57.642610442535975,
+          60.86310098016804,
+          60.69613089285399,
+          58.6154666208122,
+          57.7960815698057,
+          57.34082369272804,
+          56.23419840637405,
+          53.37907837994746,
+          57.970718342928734,
+          59.23129769806602,
+          49.760806965255036,
+          50.810049904009055,
+          50.396649475261604,
+          145.2637528079836,
+          401.66524971876333,
+          102.58792336745898,
+          271.57338035972725,
+          756.2676562056513
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4163011855133784,
+        "max_relative_error": 3.007989398448024
+      },
+      "reserved": {
+        "predictions": [
+          59.23486985332734,
+          55.90278433616994,
+          42.8290726831276,
+          40.808053992644055
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.12382049847355725,
+        "max_relative_error": 0.5262475903714412
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "skip_start",
+        "hlc3",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "largest",
+      "K_training_only": 2.9656828370783854,
+      "K_compatible_lower": 11.871080431757093,
+      "K_compatible_upper": 1.2176468218734537,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.2171655928901026,
+      "K_max_nonfloor": 11.886425370169428,
+      "training": {
+        "predictions": [
+          153.34347976399366,
+          283.35512986551464,
+          452.90280202462674,
+          205.06126124965462,
+          437.75994543218764,
+          197.08399892451422,
+          59.65130132762015,
+          50.481247034820946,
+          50.046678116899415,
+          52.613408641176704,
+          53.368296943263,
+          52.953255532864745,
+          57.642610442535975,
+          60.86310098016804,
+          60.69613089285399,
+          58.6154666208122,
+          57.7960815698057,
+          57.34082369272804,
+          56.23419840637405,
+          53.37907837994746,
+          57.970718342928734,
+          59.23129769806602,
+          49.760806965255036,
+          50.810049904009055,
+          50.396649475261604,
+          145.2637528079836,
+          401.66524971876333,
+          102.58792336745898,
+          271.57338035972725,
+          756.2676562056513
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4163011855133784,
+        "max_relative_error": 3.007989398448024
+      },
+      "reserved": {
+        "predictions": [
+          59.23486985332734,
+          55.90278433616994,
+          42.8290726831276,
+          40.808053992644055
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.12382049847355725,
+        "max_relative_error": 0.5262475903714412
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "skip_start",
+        "hl2",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "smallest",
+      "K_training_only": 2.8021112113341586,
+      "K_compatible_lower": 11.34618387870673,
+      "K_compatible_upper": 1.1398777340271014,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.139427240342696,
+      "K_max_nonfloor": 11.360850319039155,
+      "training": {
+        "predictions": [
+          148.05770430381256,
+          282.47062928455796,
+          458.1460153539677,
+          205.68512789542916,
+          449.4665841054051,
+          196.83112155861514,
+          60.30591768700294,
+          50.01569887564267,
+          49.7200671888646,
+          52.576337980985585,
+          53.15538984936937,
+          52.39122144781921,
+          57.72445576766411,
+          61.113691201495875,
+          60.82678531458795,
+          58.146778580295354,
+          57.164626364595996,
+          56.76224649011483,
+          55.70118993952521,
+          52.3994939657532,
+          57.97731398824101,
+          58.547883913813166,
+          49.33493051584569,
+          50.53592939606446,
+          49.94497614830024,
+          149.49433095782067,
+          415.42185756835363,
+          102.88165898533897,
+          272.4852282881309,
+          782.6171830920478
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4208381208318248,
+        "max_relative_error": 3.0543895164067933
+      },
+      "reserved": {
+        "predictions": [
+          59.20887458472226,
+          55.37589779891421,
+          42.580671479482646,
+          40.82948624711579
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.12378649030824007,
+        "max_relative_error": 0.5307127305176762
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "skip_start",
+        "hl2",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "largest",
+      "K_training_only": 2.8021112113341586,
+      "K_compatible_lower": 11.34618387870673,
+      "K_compatible_upper": 1.1398777340271014,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.139427240342696,
+      "K_max_nonfloor": 11.360850319039155,
+      "training": {
+        "predictions": [
+          148.05770430381256,
+          282.47062928455796,
+          458.1460153539677,
+          205.68512789542916,
+          449.4665841054051,
+          196.83112155861514,
+          60.30591768700294,
+          50.01569887564267,
+          49.7200671888646,
+          52.576337980985585,
+          53.15538984936937,
+          52.39122144781921,
+          57.72445576766411,
+          61.113691201495875,
+          60.82678531458795,
+          58.146778580295354,
+          57.164626364595996,
+          56.76224649011483,
+          55.70118993952521,
+          52.3994939657532,
+          57.97731398824101,
+          58.547883913813166,
+          49.33493051584569,
+          50.53592939606446,
+          49.94497614830024,
+          149.49433095782067,
+          415.42185756835363,
+          102.88165898533897,
+          272.4852282881309,
+          782.6171830920478
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4208381208318248,
+        "max_relative_error": 3.0543895164067933
+      },
+      "reserved": {
+        "predictions": [
+          59.20887458472226,
+          55.37589779891421,
+          42.580671479482646,
+          40.82948624711579
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.12378649030824007,
+        "max_relative_error": 0.5307127305176762
+      }
+    }
+  ],
+  "reserved_cases": [
+    {
+      "start": "18:52:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 67,
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1852_verificado.csv"
+    },
+    {
+      "start": "18:53:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 118,
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1853_verificado.csv"
+    },
+    {
+      "start": "19:01:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 47,
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1901_verificado.csv"
+    },
+    {
+      "start": "19:02:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 47,
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1902_verificado.csv"
+    }
+  ]
+}

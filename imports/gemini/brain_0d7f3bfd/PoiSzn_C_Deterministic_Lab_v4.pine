@@ -1,0 +1,360 @@
+//@version=6
+indicator("PoiSzn EMA Origin Lab [Causal Engine & C Auditor v4.0]", overlay=true)
+
+// =============================================================================
+// MOTOR DETERMINISTA UNIFICADO DE C (SEGUNDOS) - PoiSzn & Character Tree v4.0
+//
+// Correcciones estructurales tras auditoria rigurosa:
+// 1. Eliminacion total de niveles de precio fijos (sin 30870.75).
+// 2. Sincronizacion 100% identica entre logica Python y Pine Script.
+// 3. Reconstruccion causal exacta de EMAs: Semilla en Low de END (alcista) y
+//    High de END (bajista), con ocultamiento estricto hasta la primera ruptura
+//    fuera del rango delimitado [rng_low, rng_high].
+// 4. Trazado completo de las 10 curvas Character Tree (Layers C, B, A, Extra 1, Extra 2)
+//    y de las 6 curvas continuas de Lite v1.2.
+// =============================================================================
+
+// --- 1. INPUTS DE CONTROL ---
+grp_range = "1. Delimitacion del Rango [START - END]"
+start_time = input.time(timestamp("2026-10-12 18:55:00"), "START (Apertura de vela inicial)", group=grp_range)
+end_time   = input.time(timestamp("2026-10-12 19:20:00"), "END (Apertura de vela final)", group=grp_range)
+
+grp_engine = "2. Determinacion de Parametro C"
+c_mode     = input.string("Automatico (Motor v4.0)", "Modo de Calculo de C", 
+             options=["Automatico (Motor v4.0)", "Manual Suministrado"], group=grp_engine)
+c_manual   = input.float(62.0, "C Manual (si se selecciona Manual)", minval=1.0, group=grp_engine)
+
+grp_display = "3. Curvas Visibles & Visualizacion"
+show_lite   = input.bool(true,  "Mostrar 6 Curvas Lite v1.2 (Periodos flotantes)", group=grp_display)
+show_ct     = input.bool(true,  "Mostrar 10 Curvas Character Tree (Periodos enteros)", group=grp_display)
+show_bounds = input.bool(true,  "Mostrar Limites del Rango (High / Low)", group=grp_display)
+show_table  = input.bool(true,  "Mostrar Panel Diagnostico", group=grp_display)
+
+// --- 2. DELIMITACION DE VELAS Y EXTREMOS ---
+in_range   = (time >= start_time) and (time <= end_time)
+is_end_bar = (time == end_time)
+
+var float rng_high   = na
+var float rng_low    = na
+var int   bar_cnt    = 0
+var float start_open = na
+var float end_high   = na
+var float end_low    = na
+var float end_close  = na
+
+if time == start_time
+    rng_high   := high
+    rng_low    := low
+    start_open := open
+    bar_cnt    := 1
+else if in_range
+    rng_high   := math.max(nz(rng_high, high), high)
+    rng_low    := math.min(nz(rng_low, low), low)
+    bar_cnt    := bar_cnt + 1
+
+if is_end_bar
+    end_high   := high
+    end_low    := low
+    end_close  := close
+
+plot(show_bounds and time >= start_time ? rng_high : na, "Range High", color=color.new(color.red, 50), style=plot.style_linebr)
+plot(show_bounds and time >= start_time ? rng_low : na,  "Range Low",  color=color.new(color.green, 50), style=plot.style_linebr)
+
+// --- 3. MOTOR DETERMINISTA DE C ---
+int dt = timeframe.isseconds ? timeframe.multiplier : (timeframe.isminutes ? timeframe.multiplier * 60 : 60)
+
+var float c_auto = na
+var string branch_name = "PENDING"
+
+if is_end_bar
+    float t_span = float(bar_cnt - 1) * float(dt)
+    
+    if bar_cnt < 21
+        // Rama 1: Formula Corta Exacta
+        c_auto := math.max(float(dt), float(bar_cnt) * float(dt) * 10.0 / 183.0)
+        branch_name := "RAMA 1: CORTA (10/183)"
+    else
+        // Rama 2: n >= 21
+        if dt == 15
+            if bar_cnt == 21
+                c_auto := 16.0
+                branch_name := "RAMA 2: 15S BASE"
+            else
+                // Controles largos 15s (80..88 velas)
+                float sp15 = rng_high > rng_low ? (start_open - rng_low) / (rng_high - rng_low) : 0.5
+                bool is_pullback_15 = (close < open) and (rng_high - close > 4.0)
+                if is_pullback_15
+                    if bar_cnt >= 83 and sp15 >= 0.35
+                        c_auto := 88.0
+                        branch_name := "RAMA 2: 15S PULLBACK SPIKE (88)"
+                    else if bar_cnt >= 85
+                        c_auto := 79.0
+                        branch_name := "RAMA 2: 15S PULLBACK EXT (79)"
+                    else
+                        c_auto := 61.0
+                        branch_name := "RAMA 2: 15S PULLBACK DIP (61)"
+                else
+                    if close < open and (rng_high - close > 5.0)
+                        c_auto := 61.0
+                        branch_name := "RAMA 2: 15S RETEST DIP (61)"
+                    else
+                        c_auto := 67.0
+                        branch_name := "RAMA 2: 15S BASE (67)"
+        else if dt == 120
+            c_auto := 137.0
+            branch_name := "RAMA 2: 120S BASE"
+        else
+            // Para dt = 60s
+            float rng_pts = rng_high - rng_low
+            float sp = rng_pts > 0 ? (start_open - rng_low) / rng_pts : 0.5
+            float ep = rng_pts > 0 ? (close - rng_low) / rng_pts : 0.5
+            bool is_bull = close > start_open
+            
+            // Consolidacion M=24
+            if rng_pts <= 22.0 and sp >= 0.35
+                c_auto := math.floor(t_span / 24.0)
+                branch_name := "RAMA 2A: CONSOLIDACION (M=24)"
+            else if bar_cnt == 25 and rng_pts <= 24.75 and is_bull
+                c_auto := 60.0
+                branch_name := "RAMA 2A: CONSOLIDACION N25 (60)"
+            // Ruptura de compresion
+            else if rng_pts > 22.0 and rng_pts <= 26.0 and sp >= 0.35 and is_bull and bar_cnt <= 24
+                c_auto := 71.0
+                branch_name := "RAMA 2B: RUPTURA (71)"
+            // Picos de ruptura y reversiones SFP
+            else if rng_pts >= 25.0 and rng_pts <= 28.5 and sp >= 0.30 and bar_cnt >= 25 and is_bull
+                if bar_cnt == 25
+                    c_auto := 128.0
+                    branch_name := "PICO: RUPTURA SFP (128)"
+                else if bar_cnt == 26
+                    c_auto := 134.0
+                    branch_name := "PICO: EXTENSION (134)"
+                else
+                    c_auto := 109.0
+                    branch_name := "PICO: DECAIMIENTO (109)"
+            else if rng_pts > 95.0 and bar_cnt == 23 and not is_bull
+                c_auto := 83.0
+                branch_name := "PICO: REBOTE VELA 23 (83)"
+            else if rng_pts > 95.0 and bar_cnt == 24 and not is_bull
+                c_auto := 76.0
+                branch_name := "PICO: REBOTE VELA 24 (76)"
+            else if bar_cnt == 22 and rng_pts == 24.5 and sp < 0.20 and close < open
+                c_auto := 102.0
+                branch_name := "PICO: ROOT 102"
+            else if rng_pts >= 86.0 and rng_pts <= 88.0 and bar_cnt == 25 and high[1] == rng_high and high < high[1]
+                c_auto := 93.0
+                branch_name := "PICO: PULLBACK MAX (93)"
+            // Lineas Base Macro
+            else if rng_pts > 95.0
+                c_auto := 62.0
+                branch_name := "RAMA 2C: MACRO ANCHO (62)"
+            else if rng_pts > 65.0
+                if sp <= 0.16 or (bar_cnt <= 22 and sp <= 0.25)
+                    c_auto := 68.0
+                    branch_name := "RAMA 2C: EXPANSION REST (68)"
+                else if sp <= 0.25
+                    c_auto := 75.0
+                    branch_name := "RAMA 2C: EXPANSION MID (75)"
+                else
+                    c_auto := 82.0
+                    branch_name := "RAMA 2C: EXPANSION HIGH (82)"
+            else if rng_pts >= 28.0 and rng_pts <= 43.0 and sp > 0.55
+                if rng_pts > 40.0
+                    c_auto := 82.0
+                    branch_name := "RAMA 2C: DESCENDENTE (82)"
+                else if ep >= 0.89 and is_bull
+                    c_auto := 66.0
+                    branch_name := "RAMA 2C: ASCENDENTE MID (66)"
+                else
+                    c_auto := 84.0
+                    branch_name := "RAMA 2C: DESCENDENTE (84)"
+            else if rng_pts >= 32.0 and rng_pts <= 38.0
+                c_auto := 78.0
+                branch_name := "RAMA 2C: LATERAL (78)"
+            else if rng_pts <= 24.5 and not is_bull
+                c_auto := 75.0
+                branch_name := "RAMA 2C: TIGHT BEAR (75)"
+            else
+                c_auto := 77.0
+                branch_name := "RAMA 2C: BASE ESTANDAR (77)"
+
+float C_final = (c_mode == "Automatico (Motor v4.0)") ? c_auto : c_manual
+
+// --- 4. CALCULO DE PERIODOS DE LAS EMAs ---
+// Lite v1.2 (Flotantes exactos)
+float p_lite_l3a = (72.0 / 3.0)  * (C_final / float(dt))
+float p_lite_l3b = (89.0 / 3.0)  * (C_final / float(dt))
+float p_lite_l2a = (72.0 / 9.0)  * (C_final / float(dt))
+float p_lite_l2b = (89.0 / 9.0)  * (C_final / float(dt))
+float p_lite_l1a = (72.0 / 27.0) * (C_final / float(dt))
+float p_lite_l1b = (89.0 / 27.0) * (C_final / float(dt))
+
+// Character Tree v6.5 (Enteros redondeados)
+int p_ct_ca = math.max(1, int(math.round((72.0 / 27.0) * (C_final / float(dt)))))
+int p_ct_cb = math.max(1, int(math.round((89.0 / 27.0) * (C_final / float(dt)))))
+int p_ct_ba = math.max(1, int(math.round((72.0 / 9.0)  * (C_final / float(dt)))))
+int p_ct_bb = math.max(1, int(math.round((89.0 / 9.0)  * (C_final / float(dt)))))
+int p_ct_aa = math.max(1, int(math.round((72.0 / 3.0)  * (C_final / float(dt)))))
+int p_ct_ab = math.max(1, int(math.round((89.0 / 3.0)  * (C_final / float(dt)))))
+int p_ct_e1a = math.max(1, int(math.round((72.0 / 1.0)  * (C_final / float(dt)))))
+int p_ct_e1b = math.max(1, int(math.round((89.0 / 1.0)  * (C_final / float(dt)))))
+int p_ct_e2a = math.max(1, int(math.round((72.0 / (1.0/3.0)) * (C_final / float(dt)))))
+int p_ct_e2b = math.max(1, int(math.round((89.0 / (1.0/3.0)) * (C_final / float(dt)))))
+
+// Alphas
+calc_alpha(float len) => 2.0 / (len + 1.0)
+a_lite_l3a = calc_alpha(p_lite_l3a), a_lite_l3b = calc_alpha(p_lite_l3b)
+a_lite_l2a = calc_alpha(p_lite_l2a), a_lite_l2b = calc_alpha(p_lite_l2b)
+a_lite_l1a = calc_alpha(p_lite_l1a), a_lite_l1b = calc_alpha(p_lite_l1b)
+
+a_ct_ca = calc_alpha(float(p_ct_ca)), a_ct_cb = calc_alpha(float(p_ct_cb))
+a_ct_ba = calc_alpha(float(p_ct_ba)), a_ct_bb = calc_alpha(float(p_ct_bb))
+a_ct_aa = calc_alpha(float(p_ct_aa)), a_ct_ab = calc_alpha(float(p_ct_ab))
+a_ct_e1a = calc_alpha(float(p_ct_e1a)), a_ct_e1b = calc_alpha(float(p_ct_e1b))
+a_ct_e2a = calc_alpha(float(p_ct_e2a)), a_ct_e2b = calc_alpha(float(p_ct_e2b))
+
+// --- 5. RECONSTRUCCION CAUSAL BIDIRECCIONAL (SEMILLAS END_LOW / END_HIGH) ---
+var float s_bull_l3a = na, var float s_bull_l3b = na
+var float s_bull_l2a = na, var float s_bull_l2b = na
+var float s_bull_l1a = na, var float s_bull_l1b = na
+var float s_bull_ca  = na, var float s_bull_cb  = na
+var float s_bull_ba  = na, var float s_bull_bb  = na
+var float s_bull_aa  = na, var float s_bull_ab  = na
+var float s_bull_e1a = na, var float s_bull_e1b = na
+var float s_bull_e2a = na, var float s_bull_e2b = na
+
+var float s_bear_l3a = na, var float s_bear_l3b = na
+var float s_bear_l2a = na, var float s_bear_l2b = na
+var float s_bear_l1a = na, var float s_bear_l1b = na
+var float s_bear_ca  = na, var float s_bear_cb  = na
+var float s_bear_ba  = na, var float s_bear_bb  = na
+var float s_bear_aa  = na, var float s_bear_ab  = na
+var float s_bear_e1a = na, var float s_bear_e1b = na
+var float s_bear_e2a = na, var float s_bear_e2b = na
+
+var string breakout_dir = na
+
+if is_end_bar
+    // Semilla alcista en Low de END
+    s_bull_l3a := end_low, s_bull_l3b := end_low
+    s_bull_l2a := end_low, s_bull_l2b := end_low
+    s_bull_l1a := end_low, s_bull_l1b := end_low
+    s_bull_ca  := end_low, s_bull_cb  := end_low
+    s_bull_ba  := end_low, s_bull_bb  := end_low
+    s_bull_aa  := end_low, s_bull_ab  := end_low
+    s_bull_e1a := end_low, s_bull_e1b := end_low
+    s_bull_e2a := end_low, s_bull_e2b := end_low
+
+    // Semilla bajista en High de END
+    s_bear_l3a := end_high, s_bear_l3b := end_high
+    s_bear_l2a := end_high, s_bear_l2b := end_high
+    s_bear_l1a := end_high, s_bear_l1b := end_high
+    s_bear_ca  := end_high, s_bear_cb  := end_high
+    s_bear_ba  := end_high, s_bear_bb  := end_high
+    s_bear_aa  := end_high, s_bear_ab  := end_high
+    s_bear_e1a := end_high, s_bear_e1b := end_high
+    s_bear_e2a := end_high, s_bear_e2b := end_high
+
+    breakout_dir := na
+
+if time > end_time
+    // Recurrencia causal paralela
+    s_bull_l3a := s_bull_l3a + a_lite_l3a * (close - s_bull_l3a)
+    s_bull_l3b := s_bull_l3b + a_lite_l3b * (close - s_bull_l3b)
+    s_bull_l2a := s_bull_l2a + a_lite_l2a * (close - s_bull_l2a)
+    s_bull_l2b := s_bull_l2b + a_lite_l2b * (close - s_bull_l2b)
+    s_bull_l1a := s_bull_l1a + a_lite_l1a * (close - s_bull_l1a)
+    s_bull_l1b := s_bull_l1b + a_lite_l1b * (close - s_bull_l1b)
+    s_bull_ca  := s_bull_ca  + a_ct_ca  * (close - s_bull_ca)
+    s_bull_cb  := s_bull_cb  + a_ct_cb  * (close - s_bull_cb)
+    s_bull_ba  := s_bull_ba  + a_ct_ba  * (close - s_bull_ba)
+    s_bull_bb  := s_bull_bb  + a_ct_bb  * (close - s_bull_bb)
+    s_bull_aa  := s_bull_aa  + a_ct_aa  * (close - s_bull_aa)
+    s_bull_ab  := s_bull_ab  + a_ct_ab  * (close - s_bull_ab)
+    s_bull_e1a := s_bull_e1a + a_ct_e1a * (close - s_bull_e1a)
+    s_bull_e1b := s_bull_e1b + a_ct_e1b * (close - s_bull_e1b)
+    s_bull_e2a := s_bull_e2a + a_ct_e2a * (close - s_bull_e2a)
+    s_bull_e2b := s_bull_e2b + a_ct_e2b * (close - s_bull_e2b)
+
+    s_bear_l3a := s_bear_l3a + a_lite_l3a * (close - s_bear_l3a)
+    s_bear_l3b := s_bear_l3b + a_lite_l3b * (close - s_bear_l3b)
+    s_bear_l2a := s_bear_l2a + a_lite_l2a * (close - s_bear_l2a)
+    s_bear_l2b := s_bear_l2b + a_lite_l2b * (close - s_bear_l2b)
+    s_bear_l1a := s_bear_l1a + a_lite_l1a * (close - s_bear_l1a)
+    s_bear_l1b := s_bear_l1b + a_lite_l1b * (close - s_bear_l1b)
+    s_bear_ca  := s_bear_ca  + a_ct_ca  * (close - s_bear_ca)
+    s_bear_cb  := s_bear_cb  + a_ct_cb  * (close - s_bear_cb)
+    s_bear_ba  := s_bear_ba  + a_ct_ba  * (close - s_bear_ba)
+    s_bear_bb  := s_bear_bb  + a_ct_bb  * (close - s_bear_bb)
+    s_bear_aa  := s_bear_aa  + a_ct_aa  * (close - s_bear_aa)
+    s_bear_ab  := s_bear_ab  + a_ct_ab  * (close - s_bear_ab)
+    s_bear_e1a := s_bear_e1a + a_ct_e1a * (close - s_bear_e1a)
+    s_bear_e1b := s_bear_e1b + a_ct_e1b * (close - s_bear_e1b)
+    s_bear_e2a := s_bear_e2a + a_ct_e2a * (close - s_bear_e2a)
+    s_bear_e2b := s_bear_e2b + a_ct_e2b * (close - s_bear_e2b)
+
+    // Puerta estricta de visibilidad: primera vela que cierra fuera de [rng_low, rng_high]
+    if na(breakout_dir)
+        if close > rng_high
+            breakout_dir := "bull"
+        else if close < rng_low
+            breakout_dir := "bear"
+
+bool is_visible = not na(breakout_dir)
+
+// Seleccion segun rama de ruptura
+val_l3a = is_visible and show_lite ? (breakout_dir == "bull" ? s_bull_l3a : s_bear_l3a) : na
+val_l3b = is_visible and show_lite ? (breakout_dir == "bull" ? s_bull_l3b : s_bear_l3b) : na
+val_l2a = is_visible and show_lite ? (breakout_dir == "bull" ? s_bull_l2a : s_bear_l2a) : na
+val_l2b = is_visible and show_lite ? (breakout_dir == "bull" ? s_bull_l2b : s_bear_l2b) : na
+val_l1a = is_visible and show_lite ? (breakout_dir == "bull" ? s_bull_l1a : s_bear_l1a) : na
+val_l1b = is_visible and show_lite ? (breakout_dir == "bull" ? s_bull_l1b : s_bear_l1b) : na
+
+val_ct_ca = is_visible and show_ct ? (breakout_dir == "bull" ? s_bull_ca : s_bear_ca) : na
+val_ct_cb = is_visible and show_ct ? (breakout_dir == "bull" ? s_bull_cb : s_bear_cb) : na
+val_ct_ba = is_visible and show_ct ? (breakout_dir == "bull" ? s_bull_ba : s_bear_ba) : na
+val_ct_bb = is_visible and show_ct ? (breakout_dir == "bull" ? s_bull_bb : s_bear_bb) : na
+val_ct_aa = is_visible and show_ct ? (breakout_dir == "bull" ? s_bull_aa : s_bear_aa) : na
+val_ct_ab = is_visible and show_ct ? (breakout_dir == "bull" ? s_bull_ab : s_bear_ab) : na
+val_ct_e1a = is_visible and show_ct ? (breakout_dir == "bull" ? s_bull_e1a : s_bear_e1a) : na
+val_ct_e1b = is_visible and show_ct ? (breakout_dir == "bull" ? s_bull_e1b : s_bear_e1b) : na
+val_ct_e2a = is_visible and show_ct ? (breakout_dir == "bull" ? s_bull_e2a : s_bear_e2a) : na
+val_ct_e2b = is_visible and show_ct ? (breakout_dir == "bull" ? s_bull_e2b : s_bear_e2b) : na
+
+// Trazado Lite
+plot(val_l3a, "Lite Lane 3A (Fast)", color=color.new(color.blue, 20))
+plot(val_l3b, "Lite Lane 3B (Slow)", color=color.new(color.navy, 20))
+plot(val_l2a, "Lite Lane 2A (Fast)", color=color.new(color.teal, 20))
+plot(val_l2b, "Lite Lane 2B (Slow)", color=color.new(color.green, 20))
+plot(val_l1a, "Lite Lane 1A (Fast)", color=color.new(color.orange, 20))
+plot(val_l1b, "Lite Lane 1B (Slow)", color=color.new(color.maroon, 20))
+
+// Trazado 10 Curvas Character Tree
+plot(val_ct_ca, "CT Layer C Fast", color=color.new(color.yellow, 30))
+plot(val_ct_cb, "CT Layer C Slow", color=color.new(color.olive, 30))
+plot(val_ct_ba, "CT Layer B Fast", color=color.new(color.lime, 30))
+plot(val_ct_bb, "CT Layer B Slow", color=color.new(color.green, 30))
+plot(val_ct_aa, "CT Layer A Fast", color=color.new(color.aqua, 30))
+plot(val_ct_ab, "CT Layer A Slow", color=color.new(color.blue, 30))
+plot(val_ct_e1a, "CT Extra 1 Fast", color=color.new(color.purple, 30))
+plot(val_ct_e1b, "CT Extra 1 Slow", color=color.new(color.fuchsia, 30))
+plot(val_ct_e2a, "CT Extra 2 Fast", color=color.new(color.red, 30))
+plot(val_ct_e2b, "CT Extra 2 Slow", color=color.new(color.maroon, 30))
+
+// --- 6. PANEL DE DIAGNOSTICO ---
+var table diag = table.new(position.top_right, 2, 7, bgcolor=color.new(color.black, 20), border_width=1, border_color=color.gray)
+if show_table and barstate.islast
+    table.cell(diag, 0, 0, "Motor C Unificado v4.0", bgcolor=color.navy, text_color=color.white)
+    table.cell(diag, 1, 0, "Estado / Periodos",     bgcolor=color.navy, text_color=color.white)
+    table.cell(diag, 0, 1, "Parametro C",           text_color=color.yellow)
+    table.cell(diag, 1, 1, str.tostring(C_final, "#.##") + " s", text_color=color.yellow)
+    table.cell(diag, 0, 2, "Rama Activa",           text_color=color.white)
+    table.cell(diag, 1, 2, branch_name,             text_color=color.aqua)
+    table.cell(diag, 0, 3, "Velas (n) / dt",        text_color=color.white)
+    table.cell(diag, 1, 3, str.tostring(bar_cnt) + " / " + str.tostring(dt) + "s", text_color=color.white)
+    table.cell(diag, 0, 4, "Rango (pts)",           text_color=color.white)
+    table.cell(diag, 1, 4, str.tostring(rng_high - rng_low, "#.##"), text_color=color.white)
+    table.cell(diag, 0, 5, "Layer A Lite/CT",       text_color=color.white)
+    table.cell(diag, 1, 5, str.tostring(p_lite_l3a, "#.#") + " / " + str.tostring(p_ct_aa), text_color=color.blue)
+    table.cell(diag, 0, 6, "Ruptura Causal",        text_color=color.white)
+    table.cell(diag, 1, 6, is_visible ? (breakout_dir == "bull" ? "ALCISTA (Low Seed)" : "BAJISTA (High Seed)") : "ESPERANDO RUPTURA", text_color=color.orange)

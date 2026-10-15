@@ -1,0 +1,64 @@
+{
+  "registered_at_UTC": "2026-10-14T15:23:31Z",
+  "purpose": "Out-of-window transfer of the preregistered price-scale invariance, testing both long and short regimes at multiple chart intervals",
+  "source_master": "master_all_C_cases.json",
+  "reference_measurements": "C_test_timeframes_1900_1920.json",
+  "symbol_base": "CME_MINI:NQ1!",
+  "symbol_double": "2*CME_MINI:NQ1!",
+  "transform": {
+    "price_fields": "O,H,L,Close multiplied by 2",
+    "volume": "unchanged",
+    "timestamps": "unchanged",
+    "chart_and_source_interval": "unchanged"
+  },
+  "locked_prediction": "C_double equals C_base, separately in each case; no coefficient refit or quantization",
+  "acceptance": "Base pair repeats exactly; two stable double exports; full inclusive START/END and 540 following native bars; exact 2x OHLC, unchanged volume, six Lite curves scale 2x with identical visibility; fit each of six curves within 1e-6 of locked C; EMA recurrence RMSE below 1e-8; endpoint seed reconstruction error below 1e-8. If the price/volume transformation or symbol metadata fails, mark that case incompatible and do not score its C prediction.",
+  "scope": "All cases use one market episode, so they test transfer over chart interval and short/long n regimes, not independent-session generalization.",
+  "cases": [
+    {
+      "id": "tf15_long",
+      "master_case_id": "20261012_190000_192000_15s",
+      "START_UTC": "2026-10-12T19:00:00Z",
+      "END_UTC": "2026-10-12T19:20:00Z",
+      "source_seconds": 15,
+      "chart_seconds": 15,
+      "bars_inclusive": 81,
+      "regime": "long",
+      "C_base_locked": 66.99999999999912,
+      "C_double_prediction": 66.99999999999912,
+      "base_exports": ["C_pack_tf15_g.csv", "C_pack_tf15_h.csv"],
+      "double_exports": ["C_escala_tf15_doble_a.csv", "C_escala_tf15_doble_b.csv"],
+      "double_screenshot": "C_escala_tf15_doble.png"
+    },
+    {
+      "id": "tf60_long",
+      "master_case_id": "20261012_190000_192000_60s",
+      "START_UTC": "2026-10-12T19:00:00Z",
+      "END_UTC": "2026-10-12T19:20:00Z",
+      "source_seconds": 60,
+      "chart_seconds": 60,
+      "bars_inclusive": 21,
+      "regime": "long",
+      "C_base_locked": 76.99999999999851,
+      "C_double_prediction": 76.99999999999851,
+      "base_exports": ["C_pack_tf60_a.csv", "C_pack_tf60_b.csv"],
+      "double_exports": ["C_escala_tf60_doble_a.csv", "C_escala_tf60_doble_b.csv"],
+      "double_screenshot": "C_escala_tf60_doble.png"
+    },
+    {
+      "id": "tf120_short",
+      "master_case_id": "20261012_190000_192000_120s",
+      "START_UTC": "2026-10-12T19:00:00Z",
+      "END_UTC": "2026-10-12T19:20:00Z",
+      "source_seconds": 120,
+      "chart_seconds": 120,
+      "bars_inclusive": 11,
+      "regime": "short",
+      "C_base_locked": 120.00000000000124,
+      "C_double_prediction": 120.00000000000124,
+      "base_exports": ["C_pack_tf120_c.csv", "C_pack_tf120_d.csv"],
+      "double_exports": ["C_escala_tf120_doble_a.csv", "C_escala_tf120_doble_b.csv"],
+      "double_screenshot": "C_escala_tf120_doble.png"
+    }
+  ]
+}

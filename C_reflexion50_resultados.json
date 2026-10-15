@@ -1,0 +1,425 @@
+{
+  "preregistered": "C_REFLEXION_50_PREREGISTRO.json",
+  "measurements": {
+    "base": {
+      "C": 49.999999999999325,
+      "range_bars": 21,
+      "range_high": 30870.75,
+      "range_low": 30849.0,
+      "six_curve_fits": {
+        "Lane 3 A": {
+          "C": 50.00000000000037,
+          "period": 20.00000000000015,
+          "pairs": 2513,
+          "rmse": 1.4816682370968113e-12
+        },
+        "Lane 3 B": {
+          "C": 49.999999999998906,
+          "period": 24.72222222222168,
+          "pairs": 2513,
+          "rmse": 1.7246982439366798e-12
+        },
+        "Lane 2 A": {
+          "C": 49.99999999999834,
+          "period": 6.666666666666445,
+          "pairs": 2513,
+          "rmse": 2.2520296060393287e-12
+        },
+        "Lane 2 B": {
+          "C": 49.9999999999988,
+          "period": 8.240740740740543,
+          "pairs": 2513,
+          "rmse": 1.5452314196403605e-12
+        },
+        "Lane 1 A": {
+          "C": 49.999999999999716,
+          "period": 2.2222222222222094,
+          "pairs": 2513,
+          "rmse": 1.7615845189476946e-12
+        },
+        "Lane 1 B": {
+          "C": 49.99999999999985,
+          "period": 2.7469135802469054,
+          "pairs": 2513,
+          "rmse": 1.680747780502884e-12
+        }
+      }
+    },
+    "reflejo_a": {
+      "C": 50.0000000000007,
+      "range_bars": 21,
+      "range_high": 39151.0,
+      "range_low": 39129.25,
+      "six_curve_fits": {
+        "Lane 3 A": {
+          "C": 49.999999999998664,
+          "period": 19.999999999999467,
+          "pairs": 2514,
+          "rmse": 2.958885617923497e-12
+        },
+        "Lane 3 B": {
+          "C": 50.000000000003475,
+          "period": 24.72222222222394,
+          "pairs": 2514,
+          "rmse": 3.1779195272148875e-12
+        },
+        "Lane 2 A": {
+          "C": 50.0000000000017,
+          "period": 6.6666666666668934,
+          "pairs": 2514,
+          "rmse": 3.282505540525056e-12
+        },
+        "Lane 2 B": {
+          "C": 49.99999999999983,
+          "period": 8.240740740740712,
+          "pairs": 2514,
+          "rmse": 2.4879189335776767e-12
+        },
+        "Lane 1 A": {
+          "C": 50.00000000000033,
+          "period": 2.2222222222222365,
+          "pairs": 2514,
+          "rmse": 2.4929336215917554e-12
+        },
+        "Lane 1 B": {
+          "C": 50.000000000000234,
+          "period": 2.7469135802469262,
+          "pairs": 2514,
+          "rmse": 2.9430225243080044e-12
+        }
+      }
+    },
+    "reflejo_b": {
+      "C": 50.0000000000007,
+      "range_bars": 21,
+      "range_high": 39151.0,
+      "range_low": 39129.25,
+      "six_curve_fits": {
+        "Lane 3 A": {
+          "C": 49.999999999998664,
+          "period": 19.999999999999467,
+          "pairs": 2514,
+          "rmse": 2.958885617923497e-12
+        },
+        "Lane 3 B": {
+          "C": 50.000000000003475,
+          "period": 24.72222222222394,
+          "pairs": 2514,
+          "rmse": 3.1779195272148875e-12
+        },
+        "Lane 2 A": {
+          "C": 50.0000000000017,
+          "period": 6.6666666666668934,
+          "pairs": 2514,
+          "rmse": 3.282505540525056e-12
+        },
+        "Lane 2 B": {
+          "C": 49.99999999999983,
+          "period": 8.240740740740712,
+          "pairs": 2514,
+          "rmse": 2.4879189335776767e-12
+        },
+        "Lane 1 A": {
+          "C": 50.00000000000033,
+          "period": 2.2222222222222365,
+          "pairs": 2514,
+          "rmse": 2.4929336215917554e-12
+        },
+        "Lane 1 B": {
+          "C": 50.000000000000234,
+          "period": 2.7469135802469262,
+          "pairs": 2514,
+          "rmse": 2.9430225243080044e-12
+        }
+      }
+    },
+    "regreso": {
+      "C": 49.99999999999932,
+      "range_bars": 21,
+      "range_high": 30870.75,
+      "range_low": 30849.0,
+      "six_curve_fits": {
+        "Lane 3 A": {
+          "C": 50.00000000000037,
+          "period": 20.00000000000015,
+          "pairs": 2514,
+          "rmse": 1.4813903431574134e-12
+        },
+        "Lane 3 B": {
+          "C": 49.99999999999889,
+          "period": 24.722222222221674,
+          "pairs": 2514,
+          "rmse": 1.7243865898023806e-12
+        },
+        "Lane 2 A": {
+          "C": 49.99999999999835,
+          "period": 6.666666666666447,
+          "pairs": 2514,
+          "rmse": 2.251673384352218e-12
+        },
+        "Lane 2 B": {
+          "C": 49.99999999999879,
+          "period": 8.240740740740542,
+          "pairs": 2514,
+          "rmse": 1.5453332957006744e-12
+        },
+        "Lane 1 A": {
+          "C": 49.99999999999969,
+          "period": 2.222222222222208,
+          "pairs": 2514,
+          "rmse": 1.7614157767959167e-12
+        },
+        "Lane 1 B": {
+          "C": 49.99999999999984,
+          "period": 2.7469135802469045,
+          "pairs": 2514,
+          "rmse": 1.6811145041838103e-12
+        }
+      }
+    }
+  },
+  "recurrence_540_post_END": {
+    "base": {
+      "window_high": 30870.75,
+      "window_low": 30849.0,
+      "first_breakout_unix": 1791833160,
+      "first_breakout_utc": "2026-10-12T19:26:00+00:00",
+      "direction": "up",
+      "seed": 30866.75,
+      "future_bars_checked": 540,
+      "reconstruction_values": 3222,
+      "max_reconstruction_error": 1.8189894035458565e-11,
+      "visibility_mismatches": 0
+    },
+    "reflejo_a": {
+      "window_high": 39151.0,
+      "window_low": 39129.25,
+      "first_breakout_unix": 1791833160,
+      "first_breakout_utc": "2026-10-12T19:26:00+00:00",
+      "direction": "down",
+      "seed": 39133.25,
+      "future_bars_checked": 540,
+      "reconstruction_values": 3222,
+      "max_reconstruction_error": 3.637978807091713e-11,
+      "visibility_mismatches": 0
+    },
+    "reflejo_b": {
+      "window_high": 39151.0,
+      "window_low": 39129.25,
+      "first_breakout_unix": 1791833160,
+      "first_breakout_utc": "2026-10-12T19:26:00+00:00",
+      "direction": "down",
+      "seed": 39133.25,
+      "future_bars_checked": 540,
+      "reconstruction_values": 3222,
+      "max_reconstruction_error": 3.637978807091713e-11,
+      "visibility_mismatches": 0
+    },
+    "regreso": {
+      "window_high": 30870.75,
+      "window_low": 30849.0,
+      "first_breakout_unix": 1791833160,
+      "first_breakout_utc": "2026-10-12T19:26:00+00:00",
+      "direction": "up",
+      "seed": 30866.75,
+      "future_bars_checked": 540,
+      "reconstruction_values": 3222,
+      "max_reconstruction_error": 1.8189894035458565e-11,
+      "visibility_mismatches": 0
+    }
+  },
+  "checks": {
+    "reflection": {
+      "common_closed_bars": 2721,
+      "OHLC_max_errors": {
+        "open": 0.0,
+        "close": 0.0,
+        "high": 0.0,
+        "low": 0.0
+      },
+      "volume_mismatches": 0,
+      "same_lane_reflection": {
+        "Lane 3 A": {
+          "max_error": 2.9103830456733704e-11,
+          "visibility_mismatches": 0
+        },
+        "Lane 3 B": {
+          "max_error": 5.820766091346741e-11,
+          "visibility_mismatches": 0
+        },
+        "Lane 2 A": {
+          "max_error": 2.9103830456733704e-11,
+          "visibility_mismatches": 0
+        },
+        "Lane 2 B": {
+          "max_error": 1.4551915228366852e-11,
+          "visibility_mismatches": 0
+        },
+        "Lane 1 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0
+        },
+        "Lane 1 B": {
+          "max_error": 1.4551915228366852e-11,
+          "visibility_mismatches": 0
+        }
+      },
+      "tolerance": 1e-08
+    },
+    "repeat": {
+      "common_closed_bars": 2722,
+      "columns": {
+        "open": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "high": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "low": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "close": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "Volume": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "Lane 3 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 3 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 2 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 2 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 1 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 1 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        }
+      }
+    },
+    "return": {
+      "common_closed_bars": 2721,
+      "columns": {
+        "open": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "high": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "low": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "close": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "Volume": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "Lane 3 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 3 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 2 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 2 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 1 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 1 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        }
+      }
+    }
+  },
+  "rupture": {
+    "base": {
+      "time": 1791833160,
+      "direction": "bull",
+      "END_seed": 30866.75,
+      "first_visible_by_lane": {
+        "Lane 3 A": 1791833160,
+        "Lane 3 B": 1791833160,
+        "Lane 2 A": 1791833160,
+        "Lane 2 B": 1791833160,
+        "Lane 1 A": 1791833160,
+        "Lane 1 B": 1791833160
+      }
+    },
+    "reflejo_b": {
+      "time": 1791833160,
+      "direction": "bear",
+      "END_seed": 39133.25,
+      "first_visible_by_lane": {
+        "Lane 3 A": 1791833160,
+        "Lane 3 B": 1791833160,
+        "Lane 2 A": 1791833160,
+        "Lane 2 B": 1791833160,
+        "Lane 1 A": 1791833160,
+        "Lane 1 B": 1791833160
+      }
+    }
+  },
+  "sha256": {
+    "base": "ec4653c495eaec6223d809641a55158276d240df3e6a24781a2757395a7f852f",
+    "reflejo_a": "e155a4e1baf67d83c78e3a990286562a0a01ca86d45e9ed4d88ccb14874309b0",
+    "reflejo_b": "9e85e95ffd734618bd82b3e25d1d72b6722824aa352fe0370240e1585a059075",
+    "regreso": "0184cbefe9712234f85cb21cc74485faed3f18aa3ac63781c1bd58e2662b1524"
+  },
+  "interpretation": "Observed C=50 in original, reflected price and return. Same lanes reflect within numerical precision. Single window; this does not establish harmonics, a universal symmetry or independence from hidden context."
+}

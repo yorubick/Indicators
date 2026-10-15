@@ -1,0 +1,1625 @@
+{
+  "protocol": {
+    "date": "2026-10-14",
+    "day_UTC": "2026-10-12",
+    "source_seconds": 60,
+    "chart_seconds": 60,
+    "indicator": "Loaded Lite v1.2; do not update; Character excluded",
+    "price_events_file": "C_ANCLAS_ESTRUCTURA_IDENTIFICACION.json",
+    "B_interpretation": "Provisional failure-swing proxy: last inside/stalling candle during descent18:45\u00e2\u20ac\u201c18:52 before renewed lower lows.18:47H30881.75<=18:46H30884.50 andL30875.25=previousL;18:48takes low30870.50. The displayed video compresses two-candle stall; this operational inside-bar proxy is not confirmed proprietary FS definition. Preserve adjacent18:46candidate via neighbor control.",
+    "boxes": [
+      {
+        "id": "A_first",
+        "START": "18:52",
+        "END": "19:10",
+        "role": "Origin low to first mitigation pivot"
+      },
+      {
+        "id": "A_last",
+        "START": "18:52",
+        "END": "19:17",
+        "role": "Origin low to last mitigation pivot before renewed expansion"
+      },
+      {
+        "id": "B_stall",
+        "START": "18:47",
+        "END": "18:52",
+        "role": "Provisional pre-low stall to manipulation low"
+      }
+    ],
+    "measurement_cases": [
+      {
+        "id": "A_first_base",
+        "START": "18:52",
+        "END": "19:10"
+      },
+      {
+        "id": "A_first_start_minus",
+        "START": "18:51",
+        "END": "19:10"
+      },
+      {
+        "id": "A_first_start_plus",
+        "START": "18:53",
+        "END": "19:10"
+      },
+      {
+        "id": "A_first_end_minus",
+        "START": "18:52",
+        "END": "19:09"
+      },
+      {
+        "id": "A_first_end_plus",
+        "START": "18:52",
+        "END": "19:11"
+      },
+      {
+        "id": "A_last_base",
+        "START": "18:52",
+        "END": "19:17"
+      },
+      {
+        "id": "A_last_start_minus",
+        "START": "18:51",
+        "END": "19:17"
+      },
+      {
+        "id": "A_last_start_plus",
+        "START": "18:53",
+        "END": "19:17"
+      },
+      {
+        "id": "A_last_end_minus",
+        "START": "18:52",
+        "END": "19:16"
+      },
+      {
+        "id": "A_last_end_plus",
+        "START": "18:52",
+        "END": "19:18"
+      },
+      {
+        "id": "B_stall_base",
+        "START": "18:47",
+        "END": "18:52"
+      },
+      {
+        "id": "B_stall_start_minus",
+        "START": "18:46",
+        "END": "18:52"
+      },
+      {
+        "id": "B_stall_start_plus",
+        "START": "18:48",
+        "END": "18:52"
+      },
+      {
+        "id": "B_stall_end_minus",
+        "START": "18:47",
+        "END": "18:51"
+      },
+      {
+        "id": "B_stall_end_plus",
+        "START": "18:47",
+        "END": "18:53"
+      }
+    ],
+    "controls": "Two native exports each; full range and hour forward; OHLCV matches price-only source; six independent consistent C fits and repeated curve values. Save primary-box screenshots. Restore18:55\u00e2\u20ac\u201c19:20 and matchC62/reference curves.",
+    "analysis": "Report C versus n, total time and same registered leg times. Short-n cases assessed separately under previous max(60,n*60*10/183) rule. Do not treat visual respect of curves as proof. A new-setup blind test requires a predeclared predictive rule; no rule is invented if these cases do not support one.",
+    "limits": "Previously known dataset and label architecture, not blind. Structural interpretation provisional; equality does not count as sweep. First versus last mitigation kept as distinct candidates."
+  },
+  "correction": {
+    "date": "2026-10-14",
+    "correction": "Original price-only identification called19:10first strict pivot after19:05; that description was incorrect.19:07low30857.75is strictly below19:06low30858.50and19:08low30859.75.19:10low30849.00is the deepest retracement in this phase, and19:17is last before renewed close expansion19:19. Keep original protocol/results; do not relabel19:10as earliest.",
+    "registered_before_new_measurements": [
+      {
+        "id": "A_earliest_base",
+        "START": "18:52",
+        "END": "19:07"
+      },
+      {
+        "id": "A_earliest_start_minus",
+        "START": "18:51",
+        "END": "19:07"
+      },
+      {
+        "id": "A_earliest_start_plus",
+        "START": "18:53",
+        "END": "19:07"
+      },
+      {
+        "id": "A_earliest_end_minus",
+        "START": "18:52",
+        "END": "19:06"
+      },
+      {
+        "id": "A_earliest_end_plus",
+        "START": "18:52",
+        "END": "19:08"
+      }
+    ],
+    "analysis": "Three mitigation interpretations retained: earliest local pivot19:07, deepest19:10,last19:17. All new cases get same two-export/native/six-fit checks. No source/length tuning."
+  },
+  "results": [
+    {
+      "id": "A_first_base",
+      "START": "18:52",
+      "END": "19:10",
+      "n": 19,
+      "duration_elapsed_seconds": 1080,
+      "C": 62.29508196721113,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30849.0,
+      "previous_short_rule_prediction": 62.295081967213115,
+      "repeat_common_bars": 2999,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 3.2741809263825417e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 62.29508196721664,
+          "period": 24.918032786886656,
+          "pairs": 2788,
+          "rmse": 1.5799061380522296e-12
+        },
+        "Lane 3 B": {
+          "C": 62.295081967200296,
+          "period": 30.80145719489348,
+          "pairs": 2788,
+          "rmse": 2.2278821327086044e-12
+        },
+        "Lane 2 A": {
+          "C": 62.29508196721296,
+          "period": 8.306010928961728,
+          "pairs": 2788,
+          "rmse": 1.5665995652522768e-12
+        },
+        "Lane 2 B": {
+          "C": 62.29508196721217,
+          "period": 10.267152398299784,
+          "pairs": 2788,
+          "rmse": 1.7983063907661943e-12
+        },
+        "Lane 1 A": {
+          "C": 62.29508196721335,
+          "period": 2.7686703096539267,
+          "pairs": 2788,
+          "rmse": 1.5033896737791435e-12
+        },
+        "Lane 1 B": {
+          "C": 62.2950819672114,
+          "period": 3.4223841327665525,
+          "pairs": 2788,
+          "rmse": 2.4224894792334585e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:10:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_first_start_minus",
+      "START": "18:51",
+      "END": "19:10",
+      "n": 20,
+      "duration_elapsed_seconds": 1140,
+      "C": 65.57377049180401,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30849.0,
+      "previous_short_rule_prediction": 65.57377049180327,
+      "repeat_common_bars": 2999,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 2.1827872842550278e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 65.5737704918029,
+          "period": 26.229508196721163,
+          "pairs": 2788,
+          "rmse": 1.5107585077345655e-12
+        },
+        "Lane 3 B": {
+          "C": 65.57377049181095,
+          "period": 32.42258652095097,
+          "pairs": 2788,
+          "rmse": 1.9706112777873448e-12
+        },
+        "Lane 2 A": {
+          "C": 65.57377049180026,
+          "period": 8.743169398906701,
+          "pairs": 2788,
+          "rmse": 2.3630518295028012e-12
+        },
+        "Lane 2 B": {
+          "C": 65.57377049180329,
+          "period": 10.807528840315728,
+          "pairs": 2788,
+          "rmse": 1.5532795130512393e-12
+        },
+        "Lane 1 A": {
+          "C": 65.57377049180344,
+          "period": 2.914389799635708,
+          "pairs": 2788,
+          "rmse": 1.4819063053241886e-12
+        },
+        "Lane 1 B": {
+          "C": 65.57377049180326,
+          "period": 3.602509613438574,
+          "pairs": 2788,
+          "rmse": 1.727882147137069e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:10:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_first_start_plus",
+      "START": "18:53",
+      "END": "19:10",
+      "n": 18,
+      "duration_elapsed_seconds": 1020,
+      "C": 60.00000000000159,
+      "H": 30864.5,
+      "L": 30846.0,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30849.0,
+      "previous_short_rule_prediction": 60,
+      "repeat_common_bars": 2999,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 2.9103830456733704e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 60.00000000000471,
+          "period": 24.000000000001883,
+          "pairs": 2788,
+          "rmse": 1.937263018033707e-12
+        },
+        "Lane 3 B": {
+          "C": 60.000000000007404,
+          "period": 29.666666666670327,
+          "pairs": 2788,
+          "rmse": 1.9162261640552333e-12
+        },
+        "Lane 2 A": {
+          "C": 59.99999999999909,
+          "period": 7.999999999999879,
+          "pairs": 2788,
+          "rmse": 1.5101057633864853e-12
+        },
+        "Lane 2 B": {
+          "C": 59.99999999999847,
+          "period": 9.888888888888637,
+          "pairs": 2788,
+          "rmse": 1.5862543114806448e-12
+        },
+        "Lane 1 A": {
+          "C": 60.00000000000011,
+          "period": 2.6666666666666714,
+          "pairs": 2788,
+          "rmse": 1.7058908971308544e-12
+        },
+        "Lane 1 B": {
+          "C": 59.999999999999766,
+          "period": 3.2962962962962834,
+          "pairs": 2788,
+          "rmse": 1.6675820540805236e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:10:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_first_end_minus",
+      "START": "18:52",
+      "END": "19:09",
+      "n": 18,
+      "duration_elapsed_seconds": 1020,
+      "C": 60.00000000000168,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30849.75,
+      "previous_short_rule_prediction": 60,
+      "repeat_common_bars": 2999,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 2.1827872842550278e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 60.00000000000477,
+          "period": 24.000000000001908,
+          "pairs": 2788,
+          "rmse": 1.921492337075215e-12
+        },
+        "Lane 3 B": {
+          "C": 60.000000000007795,
+          "period": 29.66666666667052,
+          "pairs": 2788,
+          "rmse": 1.910640114067117e-12
+        },
+        "Lane 2 A": {
+          "C": 59.999999999999105,
+          "period": 7.999999999999881,
+          "pairs": 2788,
+          "rmse": 1.5086055406240425e-12
+        },
+        "Lane 2 B": {
+          "C": 59.99999999999845,
+          "period": 9.888888888888633,
+          "pairs": 2788,
+          "rmse": 1.5777793152885841e-12
+        },
+        "Lane 1 A": {
+          "C": 60.00000000000011,
+          "period": 2.6666666666666714,
+          "pairs": 2788,
+          "rmse": 1.7046407015813485e-12
+        },
+        "Lane 1 B": {
+          "C": 59.99999999999983,
+          "period": 3.296296296296287,
+          "pairs": 2788,
+          "rmse": 1.6667913679876563e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:09:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_first_end_plus",
+      "START": "18:52",
+      "END": "19:11",
+      "n": 20,
+      "duration_elapsed_seconds": 1140,
+      "C": 65.57377049180394,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30852.5,
+      "previous_short_rule_prediction": 65.57377049180327,
+      "repeat_common_bars": 2999,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 2.1827872842550278e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 65.57377049180268,
+          "period": 26.22950819672107,
+          "pairs": 2788,
+          "rmse": 1.4968656702341856e-12
+        },
+        "Lane 3 B": {
+          "C": 65.57377049181085,
+          "period": 32.42258652095092,
+          "pairs": 2788,
+          "rmse": 1.9852642975487997e-12
+        },
+        "Lane 2 A": {
+          "C": 65.57377049180032,
+          "period": 8.743169398906709,
+          "pairs": 2788,
+          "rmse": 2.373238942084578e-12
+        },
+        "Lane 2 B": {
+          "C": 65.57377049180322,
+          "period": 10.807528840315715,
+          "pairs": 2788,
+          "rmse": 1.5588493309529157e-12
+        },
+        "Lane 1 A": {
+          "C": 65.57377049180344,
+          "period": 2.914389799635708,
+          "pairs": 2788,
+          "rmse": 1.481082807650979e-12
+        },
+        "Lane 1 B": {
+          "C": 65.57377049180316,
+          "period": 3.602509613438569,
+          "pairs": 2788,
+          "rmse": 1.7254678487298544e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:11:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_last_base",
+      "START": "18:52",
+      "END": "19:17",
+      "n": 26,
+      "duration_elapsed_seconds": 1500,
+      "C": 61.99999999999785,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30851.5,
+      "previous_short_rule_prediction": null,
+      "repeat_common_bars": 2999,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 1.4551915228366852e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 61.999999999994856,
+          "period": 24.799999999997944,
+          "pairs": 2788,
+          "rmse": 1.7001802962253492e-12
+        },
+        "Lane 3 B": {
+          "C": 61.99999999999558,
+          "period": 30.65555555555337,
+          "pairs": 2788,
+          "rmse": 1.7137188036399935e-12
+        },
+        "Lane 2 A": {
+          "C": 61.999999999999446,
+          "period": 8.266666666666593,
+          "pairs": 2788,
+          "rmse": 1.552815330654213e-12
+        },
+        "Lane 2 B": {
+          "C": 61.99999999999939,
+          "period": 10.218518518518417,
+          "pairs": 2788,
+          "rmse": 1.5601438164474333e-12
+        },
+        "Lane 1 A": {
+          "C": 62.0000000000001,
+          "period": 2.75555555555556,
+          "pairs": 2788,
+          "rmse": 1.6030921697998756e-12
+        },
+        "Lane 1 B": {
+          "C": 61.99999999999773,
+          "period": 3.4061728395060484,
+          "pairs": 2788,
+          "rmse": 2.3833692123915995e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:17:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_last_start_minus",
+      "START": "18:51",
+      "END": "19:17",
+      "n": 27,
+      "duration_elapsed_seconds": 1560,
+      "C": 134.000000000014,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30851.5,
+      "previous_short_rule_prediction": null,
+      "repeat_common_bars": 2999,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 5.093170329928398e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 134.00000000001933,
+          "period": 53.60000000000773,
+          "pairs": 2788,
+          "rmse": 1.6065302070567539e-12
+        },
+        "Lane 3 B": {
+          "C": 134.00000000004454,
+          "period": 66.25555555557757,
+          "pairs": 2788,
+          "rmse": 2.0755784429501212e-12
+        },
+        "Lane 2 A": {
+          "C": 134.00000000000566,
+          "period": 17.86666666666742,
+          "pairs": 2788,
+          "rmse": 1.7098144792380992e-12
+        },
+        "Lane 2 B": {
+          "C": 134.00000000001057,
+          "period": 22.085185185186926,
+          "pairs": 2788,
+          "rmse": 1.7436146737705553e-12
+        },
+        "Lane 1 A": {
+          "C": 134.0000000000063,
+          "period": 5.9555555555558355,
+          "pairs": 2788,
+          "rmse": 2.4835660381527782e-12
+        },
+        "Lane 1 B": {
+          "C": 133.99999999999778,
+          "period": 7.361728395061606,
+          "pairs": 2788,
+          "rmse": 1.7138861696819527e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:17:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_last_start_plus",
+      "START": "18:53",
+      "END": "19:17",
+      "n": 25,
+      "duration_elapsed_seconds": 1440,
+      "C": 106.99999999999788,
+      "H": 30864.5,
+      "L": 30846.0,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30851.5,
+      "previous_short_rule_prediction": null,
+      "repeat_common_bars": 3000,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 3.637978807091713e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 107.00000000000625,
+          "period": 42.8000000000025,
+          "pairs": 2789,
+          "rmse": 1.5422931248220472e-12
+        },
+        "Lane 3 B": {
+          "C": 106.99999999996957,
+          "period": 52.905555555540516,
+          "pairs": 2789,
+          "rmse": 2.0663778932859134e-12
+        },
+        "Lane 2 A": {
+          "C": 107.0000000000035,
+          "period": 14.266666666667133,
+          "pairs": 2789,
+          "rmse": 1.741690192248169e-12
+        },
+        "Lane 2 B": {
+          "C": 107.00000000000526,
+          "period": 17.635185185186053,
+          "pairs": 2789,
+          "rmse": 1.727989600768407e-12
+        },
+        "Lane 1 A": {
+          "C": 107.00000000000409,
+          "period": 4.755555555555737,
+          "pairs": 2789,
+          "rmse": 2.4000272350006134e-12
+        },
+        "Lane 1 B": {
+          "C": 106.99999999999855,
+          "period": 5.878395061728315,
+          "pairs": 2789,
+          "rmse": 1.745285331844956e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:17:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_last_end_minus",
+      "START": "18:52",
+      "END": "19:16",
+      "n": 25,
+      "duration_elapsed_seconds": 1440,
+      "C": 109.00000000000672,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30854.5,
+      "previous_short_rule_prediction": null,
+      "repeat_common_bars": 3000,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 3.637978807091713e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 108.99999999999135,
+          "period": 43.599999999996534,
+          "pairs": 2789,
+          "rmse": 1.5906724932527398e-12
+        },
+        "Lane 3 B": {
+          "C": 109.00000000003241,
+          "period": 53.894444444460476,
+          "pairs": 2789,
+          "rmse": 1.974193837459808e-12
+        },
+        "Lane 2 A": {
+          "C": 109.00000000000963,
+          "period": 14.533333333334618,
+          "pairs": 2789,
+          "rmse": 2.246487818031494e-12
+        },
+        "Lane 2 B": {
+          "C": 109.0000000000106,
+          "period": 17.964814814816563,
+          "pairs": 2789,
+          "rmse": 2.002933541979519e-12
+        },
+        "Lane 1 A": {
+          "C": 108.99999999999665,
+          "period": 4.844444444444295,
+          "pairs": 2789,
+          "rmse": 2.4467691296210635e-12
+        },
+        "Lane 1 B": {
+          "C": 108.99999999999969,
+          "period": 5.988271604938255,
+          "pairs": 2789,
+          "rmse": 1.7592477220249396e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:16:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_last_end_plus",
+      "START": "18:52",
+      "END": "19:18",
+      "n": 27,
+      "duration_elapsed_seconds": 1560,
+      "C": 124.99999999999773,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30853.5,
+      "previous_short_rule_prediction": null,
+      "repeat_common_bars": 3000,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 4.729372449219227e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 125.0000000000128,
+          "period": 50.00000000000512,
+          "pairs": 2789,
+          "rmse": 1.7029802012984587e-12
+        },
+        "Lane 3 B": {
+          "C": 124.99999999995646,
+          "period": 61.80555555553403,
+          "pairs": 2789,
+          "rmse": 2.0477575072279005e-12
+        },
+        "Lane 2 A": {
+          "C": 125.00000000000438,
+          "period": 16.66666666666725,
+          "pairs": 2789,
+          "rmse": 1.56434514961971e-12
+        },
+        "Lane 2 B": {
+          "C": 125.00000000000742,
+          "period": 20.601851851853077,
+          "pairs": 2789,
+          "rmse": 1.7314874279638282e-12
+        },
+        "Lane 1 A": {
+          "C": 124.99999999999861,
+          "period": 5.555555555555494,
+          "pairs": 2789,
+          "rmse": 1.7246633237075078e-12
+        },
+        "Lane 1 B": {
+          "C": 125.00000000000671,
+          "period": 6.867283950617652,
+          "pairs": 2789,
+          "rmse": 2.3154300164694555e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:18:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "B_stall_base",
+      "START": "18:47",
+      "END": "18:52",
+      "n": 6,
+      "duration_elapsed_seconds": 300,
+      "C": 60.00000000000161,
+      "H": 30881.75,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:33:00+00:00",
+      "direction": "bull",
+      "seed": 30844.25,
+      "previous_short_rule_prediction": 60,
+      "repeat_common_bars": 3000,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 3.2741809263825417e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 60.00000000000487,
+          "period": 24.000000000001947,
+          "pairs": 2775,
+          "rmse": 1.9260255906358654e-12
+        },
+        "Lane 3 B": {
+          "C": 60.000000000007404,
+          "period": 29.666666666670327,
+          "pairs": 2775,
+          "rmse": 1.910416403281596e-12
+        },
+        "Lane 2 A": {
+          "C": 59.99999999999908,
+          "period": 7.999999999999877,
+          "pairs": 2775,
+          "rmse": 1.5181955710913892e-12
+        },
+        "Lane 2 B": {
+          "C": 59.99999999999843,
+          "period": 9.88888888888863,
+          "pairs": 2775,
+          "rmse": 1.5765809444386108e-12
+        },
+        "Lane 1 A": {
+          "C": 60.00000000000008,
+          "period": 2.66666666666667,
+          "pairs": 2775,
+          "rmse": 1.7050902915231403e-12
+        },
+        "Lane 1 B": {
+          "C": 59.99999999999978,
+          "period": 3.2962962962962843,
+          "pairs": 2775,
+          "rmse": 1.6676616163382211e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T19:52:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "B_stall_start_minus",
+      "START": "18:46",
+      "END": "18:52",
+      "n": 7,
+      "duration_elapsed_seconds": 360,
+      "C": 60.0000000000016,
+      "H": 30884.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:33:00+00:00",
+      "direction": "bull",
+      "seed": 30844.25,
+      "previous_short_rule_prediction": 60,
+      "repeat_common_bars": 3000,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 3.2741809263825417e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 60.00000000000486,
+          "period": 24.000000000001943,
+          "pairs": 2776,
+          "rmse": 1.926130861177945e-12
+        },
+        "Lane 3 B": {
+          "C": 60.0000000000074,
+          "period": 29.666666666670324,
+          "pairs": 2776,
+          "rmse": 1.911230581625608e-12
+        },
+        "Lane 2 A": {
+          "C": 59.99999999999908,
+          "period": 7.999999999999877,
+          "pairs": 2776,
+          "rmse": 1.5180007329423332e-12
+        },
+        "Lane 2 B": {
+          "C": 59.99999999999843,
+          "period": 9.88888888888863,
+          "pairs": 2776,
+          "rmse": 1.5763216669642377e-12
+        },
+        "Lane 1 A": {
+          "C": 60.00000000000008,
+          "period": 2.66666666666667,
+          "pairs": 2776,
+          "rmse": 1.7051984058018726e-12
+        },
+        "Lane 1 B": {
+          "C": 59.99999999999978,
+          "period": 3.2962962962962843,
+          "pairs": 2776,
+          "rmse": 1.667855266821752e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T19:52:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "B_stall_start_plus",
+      "START": "18:48",
+      "END": "18:52",
+      "n": 5,
+      "duration_elapsed_seconds": 240,
+      "C": 60.00000000000159,
+      "H": 30877.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:32:00+00:00",
+      "direction": "bull",
+      "seed": 30844.25,
+      "previous_short_rule_prediction": 60,
+      "repeat_common_bars": 3001,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 3.2741809263825417e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 60.00000000000483,
+          "period": 24.000000000001933,
+          "pairs": 2777,
+          "rmse": 1.92610403585121e-12
+        },
+        "Lane 3 B": {
+          "C": 60.000000000007375,
+          "period": 29.666666666670316,
+          "pairs": 2777,
+          "rmse": 1.911315729275856e-12
+        },
+        "Lane 2 A": {
+          "C": 59.99999999999908,
+          "period": 7.999999999999877,
+          "pairs": 2777,
+          "rmse": 1.5178006195742132e-12
+        },
+        "Lane 2 B": {
+          "C": 59.999999999998415,
+          "period": 9.888888888888628,
+          "pairs": 2777,
+          "rmse": 1.576735886163502e-12
+        },
+        "Lane 1 A": {
+          "C": 60.00000000000008,
+          "period": 2.66666666666667,
+          "pairs": 2777,
+          "rmse": 1.705178623035531e-12
+        },
+        "Lane 1 B": {
+          "C": 59.99999999999978,
+          "period": 3.2962962962962843,
+          "pairs": 2777,
+          "rmse": 1.6678837908797771e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T19:52:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "B_stall_end_minus",
+      "START": "18:47",
+      "END": "18:51",
+      "n": 5,
+      "duration_elapsed_seconds": 240,
+      "C": 60.00000000000168,
+      "H": 30881.75,
+      "L": 30845.25,
+      "rupture_UTC": "2026-10-12T19:33:00+00:00",
+      "direction": "bull",
+      "seed": 30845.25,
+      "previous_short_rule_prediction": 60,
+      "repeat_common_bars": 3001,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 2.9103830456733704e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 60.000000000005265,
+          "period": 24.000000000002107,
+          "pairs": 2776,
+          "rmse": 1.927576181549762e-12
+        },
+        "Lane 3 B": {
+          "C": 60.00000000000735,
+          "period": 29.666666666670302,
+          "pairs": 2776,
+          "rmse": 1.9129354573144346e-12
+        },
+        "Lane 2 A": {
+          "C": 59.99999999999912,
+          "period": 7.999999999999883,
+          "pairs": 2776,
+          "rmse": 1.5154944424467963e-12
+        },
+        "Lane 2 B": {
+          "C": 59.99999999999851,
+          "period": 9.888888888888642,
+          "pairs": 2776,
+          "rmse": 1.5771827482963954e-12
+        },
+        "Lane 1 A": {
+          "C": 60.00000000000008,
+          "period": 2.66666666666667,
+          "pairs": 2776,
+          "rmse": 1.7051984058018726e-12
+        },
+        "Lane 1 B": {
+          "C": 59.99999999999975,
+          "period": 3.2962962962962825,
+          "pairs": 2776,
+          "rmse": 1.6681745078544973e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T19:51:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "B_stall_end_plus",
+      "START": "18:47",
+      "END": "18:53",
+      "n": 7,
+      "duration_elapsed_seconds": 360,
+      "C": 60.00000000000173,
+      "H": 30881.75,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:33:00+00:00",
+      "direction": "bull",
+      "seed": 30849.5,
+      "previous_short_rule_prediction": 60,
+      "repeat_common_bars": 3001,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 2.546585164964199e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 60.000000000005116,
+          "period": 24.000000000002046,
+          "pairs": 2776,
+          "rmse": 1.930833653367789e-12
+        },
+        "Lane 3 B": {
+          "C": 60.00000000000781,
+          "period": 29.66666666667053,
+          "pairs": 2776,
+          "rmse": 1.913588012087638e-12
+        },
+        "Lane 2 A": {
+          "C": 59.99999999999909,
+          "period": 7.999999999999879,
+          "pairs": 2776,
+          "rmse": 1.5149121339740407e-12
+        },
+        "Lane 2 B": {
+          "C": 59.999999999998515,
+          "period": 9.888888888888644,
+          "pairs": 2776,
+          "rmse": 1.5727924910840939e-12
+        },
+        "Lane 1 A": {
+          "C": 60.00000000000008,
+          "period": 2.66666666666667,
+          "pairs": 2776,
+          "rmse": 1.7051984058018726e-12
+        },
+        "Lane 1 B": {
+          "C": 59.999999999999766,
+          "period": 3.2962962962962834,
+          "pairs": 2776,
+          "rmse": 1.6679354513180078e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T19:53:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_earliest_base",
+      "START": "18:52",
+      "END": "19:07",
+      "n": 16,
+      "duration_elapsed_seconds": 900,
+      "C": 60.00000000000146,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30857.75,
+      "previous_short_rule_prediction": 60,
+      "repeat_common_bars": 3003,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 2.546585164964199e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 60.00000000000434,
+          "period": 24.000000000001737,
+          "pairs": 2792,
+          "rmse": 1.9234549356200833e-12
+        },
+        "Lane 3 B": {
+          "C": 60.00000000000714,
+          "period": 29.6666666666702,
+          "pairs": 2792,
+          "rmse": 1.9206958877078535e-12
+        },
+        "Lane 2 A": {
+          "C": 59.999999999999,
+          "period": 7.999999999999867,
+          "pairs": 2792,
+          "rmse": 1.5092122192738253e-12
+        },
+        "Lane 2 B": {
+          "C": 59.99999999999847,
+          "period": 9.888888888888637,
+          "pairs": 2792,
+          "rmse": 1.5739519269810896e-12
+        },
+        "Lane 1 A": {
+          "C": 60.000000000000036,
+          "period": 2.6666666666666683,
+          "pairs": 2792,
+          "rmse": 1.705537008771624e-12
+        },
+        "Lane 1 B": {
+          "C": 59.99999999999978,
+          "period": 3.2962962962962843,
+          "pairs": 2792,
+          "rmse": 1.6692075064476593e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:07:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_earliest_start_minus",
+      "START": "18:51",
+      "END": "19:07",
+      "n": 17,
+      "duration_elapsed_seconds": 960,
+      "C": 60.00000000000146,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30857.75,
+      "previous_short_rule_prediction": 60,
+      "repeat_common_bars": 3003,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 2.546585164964199e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 60.00000000000434,
+          "period": 24.000000000001737,
+          "pairs": 2792,
+          "rmse": 1.9234549356200833e-12
+        },
+        "Lane 3 B": {
+          "C": 60.00000000000714,
+          "period": 29.6666666666702,
+          "pairs": 2792,
+          "rmse": 1.9206958877078535e-12
+        },
+        "Lane 2 A": {
+          "C": 59.999999999999,
+          "period": 7.999999999999867,
+          "pairs": 2792,
+          "rmse": 1.5092122192738253e-12
+        },
+        "Lane 2 B": {
+          "C": 59.99999999999847,
+          "period": 9.888888888888637,
+          "pairs": 2792,
+          "rmse": 1.5739519269810896e-12
+        },
+        "Lane 1 A": {
+          "C": 60.000000000000036,
+          "period": 2.6666666666666683,
+          "pairs": 2792,
+          "rmse": 1.705537008771624e-12
+        },
+        "Lane 1 B": {
+          "C": 59.99999999999978,
+          "period": 3.2962962962962843,
+          "pairs": 2792,
+          "rmse": 1.6692075064476593e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:07:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_earliest_start_plus",
+      "START": "18:53",
+      "END": "19:07",
+      "n": 15,
+      "duration_elapsed_seconds": 840,
+      "C": 60.00000000000146,
+      "H": 30864.5,
+      "L": 30846.0,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30857.75,
+      "previous_short_rule_prediction": 60,
+      "repeat_common_bars": 3003,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 2.546585164964199e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 60.00000000000434,
+          "period": 24.000000000001737,
+          "pairs": 2792,
+          "rmse": 1.9234549356200833e-12
+        },
+        "Lane 3 B": {
+          "C": 60.00000000000714,
+          "period": 29.6666666666702,
+          "pairs": 2792,
+          "rmse": 1.9206958877078535e-12
+        },
+        "Lane 2 A": {
+          "C": 59.999999999999,
+          "period": 7.999999999999867,
+          "pairs": 2792,
+          "rmse": 1.5092122192738253e-12
+        },
+        "Lane 2 B": {
+          "C": 59.99999999999847,
+          "period": 9.888888888888637,
+          "pairs": 2792,
+          "rmse": 1.5739519269810896e-12
+        },
+        "Lane 1 A": {
+          "C": 60.000000000000036,
+          "period": 2.6666666666666683,
+          "pairs": 2792,
+          "rmse": 1.705537008771624e-12
+        },
+        "Lane 1 B": {
+          "C": 59.99999999999978,
+          "period": 3.2962962962962843,
+          "pairs": 2792,
+          "rmse": 1.6692075064476593e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:07:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_earliest_end_minus",
+      "START": "18:52",
+      "END": "19:06",
+      "n": 15,
+      "duration_elapsed_seconds": 840,
+      "C": 60.00000000000161,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30858.5,
+      "previous_short_rule_prediction": 60,
+      "repeat_common_bars": 3003,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 2.9103830456733704e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 60.000000000004626,
+          "period": 24.00000000000185,
+          "pairs": 2792,
+          "rmse": 1.9216187790984543e-12
+        },
+        "Lane 3 B": {
+          "C": 60.00000000000757,
+          "period": 29.666666666670412,
+          "pairs": 2792,
+          "rmse": 1.927165753332086e-12
+        },
+        "Lane 2 A": {
+          "C": 59.99999999999913,
+          "period": 7.9999999999998845,
+          "pairs": 2792,
+          "rmse": 1.5098767482684149e-12
+        },
+        "Lane 2 B": {
+          "C": 59.99999999999846,
+          "period": 9.888888888888635,
+          "pairs": 2792,
+          "rmse": 1.5746319049157353e-12
+        },
+        "Lane 1 A": {
+          "C": 60.00000000000011,
+          "period": 2.6666666666666714,
+          "pairs": 2792,
+          "rmse": 1.7059426597217627e-12
+        },
+        "Lane 1 B": {
+          "C": 59.999999999999766,
+          "period": 3.2962962962962834,
+          "pairs": 2792,
+          "rmse": 1.6691203861152775e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:06:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    },
+    {
+      "id": "A_earliest_end_plus",
+      "START": "18:52",
+      "END": "19:08",
+      "n": 17,
+      "duration_elapsed_seconds": 960,
+      "C": 60.00000000000164,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture_UTC": "2026-10-12T19:19:00+00:00",
+      "direction": "bull",
+      "seed": 30859.75,
+      "previous_short_rule_prediction": 60,
+      "repeat_common_bars": 3003,
+      "native_common_bars": 2767,
+      "reconstruction_max_error": 1.8189894035458565e-11,
+      "visibility_errors": 0,
+      "fits": {
+        "Lane 3 A": {
+          "C": 60.000000000004825,
+          "period": 24.00000000000193,
+          "pairs": 2792,
+          "rmse": 1.9337170435959203e-12
+        },
+        "Lane 3 B": {
+          "C": 60.00000000000756,
+          "period": 29.666666666670405,
+          "pairs": 2792,
+          "rmse": 1.9131025316934723e-12
+        },
+        "Lane 2 A": {
+          "C": 59.999999999999176,
+          "period": 7.99999999999989,
+          "pairs": 2792,
+          "rmse": 1.5091662053110512e-12
+        },
+        "Lane 2 B": {
+          "C": 59.999999999998415,
+          "period": 9.888888888888628,
+          "pairs": 2792,
+          "rmse": 1.5775603754518882e-12
+        },
+        "Lane 1 A": {
+          "C": 60.00000000000008,
+          "period": 2.66666666666667,
+          "pairs": 2792,
+          "rmse": 1.7051042546792453e-12
+        },
+        "Lane 1 B": {
+          "C": 59.9999999999998,
+          "period": 3.296296296296285,
+          "pairs": 2792,
+          "rmse": 1.669020232222843e-12
+        }
+      },
+      "native_check": {
+        "common_bars": 2767,
+        "full_OHLC_equal": true,
+        "full_OHLCV_equal": false,
+        "volume_differences": [
+          {
+            "time": "2026-10-12T22:00:00+00:00",
+            "old": "547",
+            "new": "548"
+          }
+        ],
+        "OHLCV_equal_through_experiment_horizon": true,
+        "horizon_UTC": "2026-10-12T20:08:00+00:00",
+        "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it."
+      }
+    }
+  ],
+  "return_check": {
+    "common_bars": 2725,
+    "full_OHLC_equal": true,
+    "full_OHLCV_equal": false,
+    "volume_differences": [
+      {
+        "time": "2026-10-12T22:00:00+00:00",
+        "old": "547",
+        "new": "548"
+      }
+    ],
+    "OHLCV_equal_through_experiment_horizon": true,
+    "horizon_UTC": "2026-10-12T20:20:00+00:00",
+    "scope_note": "Horizon was preregistered; global volume mismatch remains a failed control, not erased. Scoped interpretation made after detecting it.",
+    "all_six_Lite_curves_equal": true
+  },
+  "sha256": {
+    "C_estructura_A_first_base_a.csv": "3fd8146deef7ac75c4c475b97e9bd6659a1887c215b2d23f14fa981f1b3d97e6",
+    "C_estructura_A_first_base_b.csv": "5f3faeab6eb2b6fd22ef61e7daa6296281e143600b376d6bd0f907978df02419",
+    "C_estructura_A_first_start_minus_a.csv": "472ba9d4307ee005fc54fcaacf095baa73b64de556ac1705cc01ea46dc4d2282",
+    "C_estructura_A_first_start_minus_b.csv": "b8dd6d0d2de66f03b7b2eb9a81b1de779d9e9374b826c170878a4794889e254a",
+    "C_estructura_A_first_start_plus_a.csv": "09106f532e1239318d432d735381f155ec35acbb1b55be9134d249f7c96db225",
+    "C_estructura_A_first_start_plus_b.csv": "b887c53e61c6000f580e4320206c9899c1fcb5e8cab9ebd151ac5cfe1265275b",
+    "C_estructura_A_first_end_minus_a.csv": "fa6c50f4e7546afe9b24c50d2fc4d857fd8df04e80a5e635ac69eac9745c1027",
+    "C_estructura_A_first_end_minus_b.csv": "7958e931efe72c311cef2a723a6cd6a6ab5769a148d96593065d98566ae4d36f",
+    "C_estructura_A_first_end_plus_a.csv": "62978da7b7cc09fbd12cf04d8c9704542484780e837ac3cb16e2e06bac55d0eb",
+    "C_estructura_A_first_end_plus_b.csv": "18d2b97e39cdc2c2024f809d513b0746d5d9be2693a9fad4e7c298dd5651cdd8",
+    "C_estructura_A_last_base_a.csv": "1ba2a5cf5aadd150e647238d5b9ffecb839aa0934270cbff304df4b4071de819",
+    "C_estructura_A_last_base_b.csv": "dc3086c8b4252e64bca10dd36fcb5ad7649c6494dde582498e6dad7eb50c0486",
+    "C_estructura_A_last_start_minus_a.csv": "e0feafe3a04c8b4f78a754a0c048058d382b63044b9a59f245cc71e2cebddbd4",
+    "C_estructura_A_last_start_minus_b.csv": "370b45442887b33b6a6ee289d1bdf479fd8b9b5f4dc83746baa8c38c8fc27f28",
+    "C_estructura_A_last_start_plus_a.csv": "099c47489475c0007f1904ddfd4ef22d9c5d33edf89a7052d07e065bd4ceb9e6",
+    "C_estructura_A_last_start_plus_b.csv": "7b95a34493c61182789b9b404d934a79929a73a4d1b5ac8459883c8e4aaba1bf",
+    "C_estructura_A_last_end_minus_a.csv": "37728fca475c9eb3b99e4abc3874fac88315a2c448365f7d60bbf7b9b2ee1c10",
+    "C_estructura_A_last_end_minus_b.csv": "8fff6a37c4499d1df702f3f9ac642cf6194c8f46eeaed812f846cdbcf7be5333",
+    "C_estructura_A_last_end_plus_a.csv": "86df811053ca7dba76df943f79c079853e7dbcb62b8c6f18051649dc6cf7f585",
+    "C_estructura_A_last_end_plus_b.csv": "ebdb876e8f5fd5138bbfb609cd3e32bc15fe3305a7ce0ad30f3691ec52567dfe",
+    "C_estructura_B_stall_base_a.csv": "0b612fd80e9471c503d32dab7177151a5c63a3d3ddade87e0de2f4da097de428",
+    "C_estructura_B_stall_base_b.csv": "9ee4db116444f9686eab5387b0e3843167421d74d41ad5b9aec47a2ddad276bb",
+    "C_estructura_B_stall_start_minus_a.csv": "4f450c997c9efc5c595cc0061d69fac51e2a0128efe69c93734c3f1776ae297f",
+    "C_estructura_B_stall_start_minus_b.csv": "dd5e166fb8c2c9e482ba7b5714a3f27017ed2cd3859128da7181c002206821ae",
+    "C_estructura_B_stall_start_plus_a.csv": "f8d2a10e99aa3214d4df02a63637ea6f8d9f4ab1e8ba321457e9f3ff258891c3",
+    "C_estructura_B_stall_start_plus_b.csv": "3561c5d4df6303214d4e9497ad2c85c2bd25380bc07e0c9c0c594eca2bb6710c",
+    "C_estructura_B_stall_end_minus_a.csv": "72cabdf447c4e1d9cf048b0c8b51decd1292eeb1df54987ab46ac5ed97de97dd",
+    "C_estructura_B_stall_end_minus_b.csv": "e0ca66635697388bf452774aea4148769789c3dfe4e0515e8f779559e149ac54",
+    "C_estructura_B_stall_end_plus_a.csv": "3ba11b7f7affd99c1a8b573396c774721e10078c9fa0e1229d090c6e387525ab",
+    "C_estructura_B_stall_end_plus_b.csv": "3200879ab82dc62e1c4df3ad299c149ae125ffb0e171ee9aabf49b8f5f9b4b5e",
+    "C_estructura_A_earliest_base_a.csv": "f63b44fd5d6f61248a5c0960781903393a6618a2ce46082e0a65777df8c0d808",
+    "C_estructura_A_earliest_base_b.csv": "b18e6112baef702513f5c82e4a099f335d09f216172d087aa34faad6af78c19b",
+    "C_estructura_A_earliest_start_minus_a.csv": "6c679bf48b725487c2dd1d7f906bafe16fb8e351c07d341ea435740ff4345552",
+    "C_estructura_A_earliest_start_minus_b.csv": "c09b02c1ef94c9c808f63a9641899d1f0caaba059e5cf179bdde53bbdb9cbdcd",
+    "C_estructura_A_earliest_start_plus_a.csv": "f854b9f635bb0dc887f3875b31138fbd4a94b88049de850175f17cdab58d84f6",
+    "C_estructura_A_earliest_start_plus_b.csv": "bc592eb1ad01de571b3b2ad728c2a5ac460dd9b0ee7f3cb6b44ef8ee1d72c2a5",
+    "C_estructura_A_earliest_end_minus_a.csv": "ac50a99a814f4be1a0253224695c678bbd30acf58100b7b822f75a3b4fbee9c8",
+    "C_estructura_A_earliest_end_minus_b.csv": "fa9799e66fcf96e5439cb23b31b819e5861dd6022763ee852aa1557d22713a6b",
+    "C_estructura_A_earliest_end_plus_a.csv": "d435bd5e1c873b7df70ebafb6fa5c8dfcff9f49f8866961f1841bbf04d4b38bf",
+    "C_estructura_A_earliest_end_plus_b.csv": "ba92acb1f282fab3c2577175ec1bc28d7dec8e024a6da36d1226738f8ec5bbaf",
+    "C_estructura_regreso_final.csv": "61d32c9ae87c7290b471f6191f5c56a78e51d606091518659870a93535f0a773"
+  },
+  "interpretation": "All short cases match existing rule, no new generator information. Last mitigation candidate has C62 with four neighbors134,107,109,125. Structural selection operational and provisional; no predictive law demonstrated."
+}

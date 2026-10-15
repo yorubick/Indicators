@@ -1,0 +1,36 @@
+{
+  "source": [
+    "close",
+    "hl2"
+  ],
+  "lookback": [
+    3,
+    9,
+    20,
+    27,
+    "growing"
+  ],
+  "target": "ER=abs(x_t-x_start)/sum(abs(diff(x))) over last L changes or all available changes; ER=0 when path=0. target=(2/31+(2/3-2/31)*ER)**power.",
+  "powers": [
+    1,
+    2
+  ],
+  "seeds": [
+    "slow",
+    "fast",
+    "first_target"
+  ],
+  "initialization": "At first change t=1 seed alpha with (2/31)**power, (2/3)**power or target_1. Process t=2..END; no preSTART history.",
+  "memory_lengths": [
+    1,
+    3,
+    9,
+    20,
+    27,
+    81
+  ],
+  "recurrence": "alpha_t=alpha_previous+2/(M+1)*(target_t-alpha_previous)",
+  "mapping": "C=K*dt*(2/alpha_END-1), same K>0 for all nine cases.",
+  "gate": "Intersect intervals K implied by observed C +/-1 second. Also count matches after nearest-integer rounding for fixed K=1/scale, scale24,8,72/27,72,216. No per-case parameters.",
+  "scope": "360 fixed recurrences. Exploratory known nine overlapping controls; not all recursive models. No training32 or reserved validation unless one common K interval survives all9."
+}

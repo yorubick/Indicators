@@ -1,0 +1,702 @@
+{
+  "status": "fixed_phase_event_rule_audited_with_disjoint_temporal_blocks",
+  "master_sha256": "ef9533acdce3e1c2c2db3c72caee5059a2957f7dee4c60e725f6dcf56ccc9c05",
+  "pair_definition": "Same START, one source interval forward, exact OHLCV prefix; endpoints both integer within tolerance 1e-7.",
+  "event_rule": "Predict phase change iff the entering bar makes a strict new global high/low or confirms a radius-1 local high/low.",
+  "baseline": "For each fold and modulus, predict True only when the other components contain more changed than unchanged phases; ties predict False.",
+  "temporal_components": 11,
+  "all_adjacent_pairs": 87,
+  "integer_endpoint_pairs": 66,
+  "folds": [
+    {
+      "component": 1,
+      "targets": {
+        "3": {
+          "training_pairs": 66,
+          "test_pairs": 0,
+          "training_majority_prediction": false,
+          "event_rule": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          },
+          "other_components_majority_baseline": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          }
+        },
+        "9": {
+          "training_pairs": 66,
+          "test_pairs": 0,
+          "training_majority_prediction": true,
+          "event_rule": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          },
+          "other_components_majority_baseline": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          }
+        }
+      }
+    },
+    {
+      "component": 2,
+      "targets": {
+        "3": {
+          "training_pairs": 63,
+          "test_pairs": 3,
+          "training_majority_prediction": false,
+          "event_rule": {
+            "n": 3,
+            "TP": 1,
+            "FP": 1,
+            "FN": 0,
+            "TN": 1,
+            "accuracy": 0.6666666666666666,
+            "actual_change_rate": 0.3333333333333333
+          },
+          "other_components_majority_baseline": {
+            "n": 3,
+            "TP": 0,
+            "FP": 0,
+            "FN": 1,
+            "TN": 2,
+            "accuracy": 0.6666666666666666,
+            "actual_change_rate": 0.3333333333333333
+          }
+        },
+        "9": {
+          "training_pairs": 63,
+          "test_pairs": 3,
+          "training_majority_prediction": true,
+          "event_rule": {
+            "n": 3,
+            "TP": 1,
+            "FP": 1,
+            "FN": 0,
+            "TN": 1,
+            "accuracy": 0.6666666666666666,
+            "actual_change_rate": 0.3333333333333333
+          },
+          "other_components_majority_baseline": {
+            "n": 3,
+            "TP": 1,
+            "FP": 2,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": 0.3333333333333333,
+            "actual_change_rate": 0.3333333333333333
+          }
+        }
+      }
+    },
+    {
+      "component": 3,
+      "targets": {
+        "3": {
+          "training_pairs": 66,
+          "test_pairs": 0,
+          "training_majority_prediction": false,
+          "event_rule": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          },
+          "other_components_majority_baseline": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          }
+        },
+        "9": {
+          "training_pairs": 66,
+          "test_pairs": 0,
+          "training_majority_prediction": true,
+          "event_rule": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          },
+          "other_components_majority_baseline": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          }
+        }
+      }
+    },
+    {
+      "component": 4,
+      "targets": {
+        "3": {
+          "training_pairs": 63,
+          "test_pairs": 3,
+          "training_majority_prediction": false,
+          "event_rule": {
+            "n": 3,
+            "TP": 0,
+            "FP": 1,
+            "FN": 1,
+            "TN": 1,
+            "accuracy": 0.3333333333333333,
+            "actual_change_rate": 0.3333333333333333
+          },
+          "other_components_majority_baseline": {
+            "n": 3,
+            "TP": 0,
+            "FP": 0,
+            "FN": 1,
+            "TN": 2,
+            "accuracy": 0.6666666666666666,
+            "actual_change_rate": 0.3333333333333333
+          }
+        },
+        "9": {
+          "training_pairs": 63,
+          "test_pairs": 3,
+          "training_majority_prediction": true,
+          "event_rule": {
+            "n": 3,
+            "TP": 0,
+            "FP": 1,
+            "FN": 2,
+            "TN": 0,
+            "accuracy": 0.0,
+            "actual_change_rate": 0.6666666666666666
+          },
+          "other_components_majority_baseline": {
+            "n": 3,
+            "TP": 2,
+            "FP": 1,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": 0.6666666666666666,
+            "actual_change_rate": 0.6666666666666666
+          }
+        }
+      }
+    },
+    {
+      "component": 5,
+      "targets": {
+        "3": {
+          "training_pairs": 57,
+          "test_pairs": 9,
+          "training_majority_prediction": false,
+          "event_rule": {
+            "n": 9,
+            "TP": 3,
+            "FP": 6,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": 0.3333333333333333,
+            "actual_change_rate": 0.3333333333333333
+          },
+          "other_components_majority_baseline": {
+            "n": 9,
+            "TP": 0,
+            "FP": 0,
+            "FN": 3,
+            "TN": 6,
+            "accuracy": 0.6666666666666666,
+            "actual_change_rate": 0.3333333333333333
+          }
+        },
+        "9": {
+          "training_pairs": 57,
+          "test_pairs": 9,
+          "training_majority_prediction": true,
+          "event_rule": {
+            "n": 9,
+            "TP": 7,
+            "FP": 2,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": 0.7777777777777778,
+            "actual_change_rate": 0.7777777777777778
+          },
+          "other_components_majority_baseline": {
+            "n": 9,
+            "TP": 7,
+            "FP": 2,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": 0.7777777777777778,
+            "actual_change_rate": 0.7777777777777778
+          }
+        }
+      }
+    },
+    {
+      "component": 6,
+      "targets": {
+        "3": {
+          "training_pairs": 21,
+          "test_pairs": 45,
+          "training_majority_prediction": false,
+          "event_rule": {
+            "n": 45,
+            "TP": 12,
+            "FP": 19,
+            "FN": 2,
+            "TN": 12,
+            "accuracy": 0.5333333333333333,
+            "actual_change_rate": 0.3111111111111111
+          },
+          "other_components_majority_baseline": {
+            "n": 45,
+            "TP": 0,
+            "FP": 0,
+            "FN": 14,
+            "TN": 31,
+            "accuracy": 0.6888888888888889,
+            "actual_change_rate": 0.3111111111111111
+          }
+        },
+        "9": {
+          "training_pairs": 21,
+          "test_pairs": 45,
+          "training_majority_prediction": true,
+          "event_rule": {
+            "n": 45,
+            "TP": 20,
+            "FP": 11,
+            "FN": 5,
+            "TN": 9,
+            "accuracy": 0.6444444444444445,
+            "actual_change_rate": 0.5555555555555556
+          },
+          "other_components_majority_baseline": {
+            "n": 45,
+            "TP": 25,
+            "FP": 20,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": 0.5555555555555556,
+            "actual_change_rate": 0.5555555555555556
+          }
+        }
+      }
+    },
+    {
+      "component": 7,
+      "targets": {
+        "3": {
+          "training_pairs": 65,
+          "test_pairs": 1,
+          "training_majority_prediction": false,
+          "event_rule": {
+            "n": 1,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 1,
+            "accuracy": 1.0,
+            "actual_change_rate": 0.0
+          },
+          "other_components_majority_baseline": {
+            "n": 1,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 1,
+            "accuracy": 1.0,
+            "actual_change_rate": 0.0
+          }
+        },
+        "9": {
+          "training_pairs": 65,
+          "test_pairs": 1,
+          "training_majority_prediction": true,
+          "event_rule": {
+            "n": 1,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 1,
+            "accuracy": 1.0,
+            "actual_change_rate": 0.0
+          },
+          "other_components_majority_baseline": {
+            "n": 1,
+            "TP": 0,
+            "FP": 1,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": 0.0,
+            "actual_change_rate": 0.0
+          }
+        }
+      }
+    },
+    {
+      "component": 8,
+      "targets": {
+        "3": {
+          "training_pairs": 61,
+          "test_pairs": 5,
+          "training_majority_prediction": false,
+          "event_rule": {
+            "n": 5,
+            "TP": 2,
+            "FP": 1,
+            "FN": 0,
+            "TN": 2,
+            "accuracy": 0.8,
+            "actual_change_rate": 0.4
+          },
+          "other_components_majority_baseline": {
+            "n": 5,
+            "TP": 0,
+            "FP": 0,
+            "FN": 2,
+            "TN": 3,
+            "accuracy": 0.6,
+            "actual_change_rate": 0.4
+          }
+        },
+        "9": {
+          "training_pairs": 61,
+          "test_pairs": 5,
+          "training_majority_prediction": true,
+          "event_rule": {
+            "n": 5,
+            "TP": 2,
+            "FP": 1,
+            "FN": 1,
+            "TN": 1,
+            "accuracy": 0.6,
+            "actual_change_rate": 0.6
+          },
+          "other_components_majority_baseline": {
+            "n": 5,
+            "TP": 3,
+            "FP": 2,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": 0.6,
+            "actual_change_rate": 0.6
+          }
+        }
+      }
+    },
+    {
+      "component": 9,
+      "targets": {
+        "3": {
+          "training_pairs": 66,
+          "test_pairs": 0,
+          "training_majority_prediction": false,
+          "event_rule": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          },
+          "other_components_majority_baseline": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          }
+        },
+        "9": {
+          "training_pairs": 66,
+          "test_pairs": 0,
+          "training_majority_prediction": true,
+          "event_rule": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          },
+          "other_components_majority_baseline": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          }
+        }
+      }
+    },
+    {
+      "component": 10,
+      "targets": {
+        "3": {
+          "training_pairs": 66,
+          "test_pairs": 0,
+          "training_majority_prediction": false,
+          "event_rule": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          },
+          "other_components_majority_baseline": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          }
+        },
+        "9": {
+          "training_pairs": 66,
+          "test_pairs": 0,
+          "training_majority_prediction": true,
+          "event_rule": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          },
+          "other_components_majority_baseline": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          }
+        }
+      }
+    },
+    {
+      "component": 11,
+      "targets": {
+        "3": {
+          "training_pairs": 66,
+          "test_pairs": 0,
+          "training_majority_prediction": false,
+          "event_rule": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          },
+          "other_components_majority_baseline": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          }
+        },
+        "9": {
+          "training_pairs": 66,
+          "test_pairs": 0,
+          "training_majority_prediction": true,
+          "event_rule": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          },
+          "other_components_majority_baseline": {
+            "n": 0,
+            "TP": 0,
+            "FP": 0,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": null,
+            "actual_change_rate": null
+          }
+        }
+      }
+    }
+  ],
+  "aggregate_leave_component_out": {
+    "3": {
+      "event_rule": {
+        "n": 66,
+        "TP": 18,
+        "FP": 28,
+        "FN": 3,
+        "TN": 17,
+        "accuracy": 0.5303030303030303,
+        "actual_change_rate": 0.3181818181818182
+      },
+      "other_components_majority_baseline": {
+        "n": 66,
+        "TP": 0,
+        "FP": 0,
+        "FN": 21,
+        "TN": 45,
+        "accuracy": 0.6818181818181818,
+        "actual_change_rate": 0.3181818181818182
+      },
+      "by_source_seconds": {
+        "15": {
+          "event_rule": {
+            "n": 23,
+            "TP": 4,
+            "FP": 8,
+            "FN": 2,
+            "TN": 9,
+            "accuracy": 0.5652173913043478,
+            "actual_change_rate": 0.2608695652173913
+          },
+          "other_components_majority_baseline": {
+            "n": 23,
+            "TP": 0,
+            "FP": 0,
+            "FN": 6,
+            "TN": 17,
+            "accuracy": 0.7391304347826086,
+            "actual_change_rate": 0.2608695652173913
+          }
+        },
+        "60": {
+          "event_rule": {
+            "n": 43,
+            "TP": 14,
+            "FP": 20,
+            "FN": 1,
+            "TN": 8,
+            "accuracy": 0.5116279069767442,
+            "actual_change_rate": 0.3488372093023256
+          },
+          "other_components_majority_baseline": {
+            "n": 43,
+            "TP": 0,
+            "FP": 0,
+            "FN": 15,
+            "TN": 28,
+            "accuracy": 0.6511627906976745,
+            "actual_change_rate": 0.3488372093023256
+          }
+        }
+      }
+    },
+    "9": {
+      "event_rule": {
+        "n": 66,
+        "TP": 30,
+        "FP": 16,
+        "FN": 8,
+        "TN": 12,
+        "accuracy": 0.6363636363636364,
+        "actual_change_rate": 0.5757575757575758
+      },
+      "other_components_majority_baseline": {
+        "n": 66,
+        "TP": 38,
+        "FP": 28,
+        "FN": 0,
+        "TN": 0,
+        "accuracy": 0.5757575757575758,
+        "actual_change_rate": 0.5757575757575758
+      },
+      "by_source_seconds": {
+        "15": {
+          "event_rule": {
+            "n": 23,
+            "TP": 8,
+            "FP": 4,
+            "FN": 5,
+            "TN": 6,
+            "accuracy": 0.6086956521739131,
+            "actual_change_rate": 0.5652173913043478
+          },
+          "other_components_majority_baseline": {
+            "n": 23,
+            "TP": 13,
+            "FP": 10,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": 0.5652173913043478,
+            "actual_change_rate": 0.5652173913043478
+          }
+        },
+        "60": {
+          "event_rule": {
+            "n": 43,
+            "TP": 22,
+            "FP": 12,
+            "FN": 3,
+            "TN": 6,
+            "accuracy": 0.6511627906976745,
+            "actual_change_rate": 0.5813953488372093
+          },
+          "other_components_majority_baseline": {
+            "n": 43,
+            "TP": 25,
+            "FP": 18,
+            "FN": 0,
+            "TN": 0,
+            "accuracy": 0.5813953488372093,
+            "actual_change_rate": 0.5813953488372093
+          }
+        }
+      }
+    }
+  },
+  "residual_rows": 132,
+  "residual_csv": "G:\\trading\\guias\\analisis\\residuos_C_eventos_fase_bloques.csv",
+  "limitation": "The 15-second transitions all belong to one overlapping episode; labels are known and this is not a prospective test. Predicting phase alone cannot predict C's level or amplitude."
+}

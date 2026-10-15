@@ -1,0 +1,1542 @@
+{
+  "preregistered": {
+    "date": "2026-10-14",
+    "day_UTC": "2026-10-12",
+    "source_seconds": 15,
+    "chart_seconds": 15,
+    "indicator": "Loaded Lite v1.2; Character excluded; no update",
+    "selection": "All20boxes from C_ANCLAS_ESTRUCTURA_PREREGISTRO.json and C_ANCLAS_ESTRUCTURA_CORRECCION_1907.json, without moving structural labels according to C",
+    "mapping": "Original1m STARTxx:00 becomes15s STARTxx:00; original1m END minute becomes15s ENDxx:45. Both describe whole minute cells; native n15=4*n60. Equal physical elapsed coverage does not imply equal C under changing source resolution.",
+    "controls": "Two exports per case, last row excluded, full range and1hour after last subbar. Six independent EMA fits step15/period_seconds15, recurrence/seed/visibility checks. Aggregate each four15sOHLCV samples to a minute and compare corresponding original1m range/hour. Record any discrepancies without erasing failed full-source controls. Restore source/chart1m,START18:55,END19:20,C62 and prior curves.",
+    "known_prediction": "Only cases n15<21 use prior short rule max(15,n15*15*10/183). Other C values have no preregistered numerical prediction. Compare C in seconds and C/source_seconds separately.",
+    "limits": "This changes sampling and generator branch together.1m event labels stay fixed; no claim that15s pivot classification is identical. Phase1had a late22:00volume mismatch outside selected ranges; preserve this limitation. No new-setup predictive rule yet."
+  },
+  "results": [
+    {
+      "id": "A_first_base",
+      "START": "18:52",
+      "END": "19:10",
+      "START_15s": "2026-10-12T18:52:00+00:00",
+      "END_15s": "2026-10-12T19:10:45+00:00",
+      "n15": 76,
+      "n60": 19,
+      "C15": 44.99999999999978,
+      "C60": 62.29508196721113,
+      "C15_div_source": 2.9999999999999853,
+      "C60_div_source": 1.0382513661201855,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30851.25,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 4.729372449219227e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11857,
+      "exports": [
+        "C_estructura15_A_first_base_a.csv",
+        "C_estructura15_A_first_base_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 44.99999999999988,
+          "period": 71.9999999999998,
+          "pairs": 11155,
+          "rmse": 1.4794932769997779e-12
+        },
+        "Lane 3 B": {
+          "C": 44.999999999987644,
+          "period": 88.99999999997557,
+          "pairs": 11155,
+          "rmse": 1.751727160749556e-12
+        },
+        "Lane 2 A": {
+          "C": 45.0000000000058,
+          "period": 24.00000000000309,
+          "pairs": 11155,
+          "rmse": 1.939692313363583e-12
+        },
+        "Lane 2 B": {
+          "C": 45.00000000000593,
+          "period": 29.666666666670576,
+          "pairs": 11155,
+          "rmse": 1.9186094753602648e-12
+        },
+        "Lane 1 A": {
+          "C": 44.99999999999943,
+          "period": 7.999999999999899,
+          "pairs": 11155,
+          "rmse": 1.522265021810843e-12
+        },
+        "Lane 1 B": {
+          "C": 45.000000000000014,
+          "period": 9.888888888888891,
+          "pairs": 11155,
+          "rmse": 1.5648013472104862e-12
+        }
+      }
+    },
+    {
+      "id": "A_first_start_minus",
+      "START": "18:51",
+      "END": "19:10",
+      "START_15s": "2026-10-12T18:51:00+00:00",
+      "END_15s": "2026-10-12T19:10:45+00:00",
+      "n15": 80,
+      "n60": 20,
+      "C15": 52.99999999999476,
+      "C60": 65.57377049180401,
+      "C15_div_source": 3.533333333332984,
+      "C60_div_source": 1.0928961748634003,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30851.25,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 9.822542779147625e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11860,
+      "exports": [
+        "C_estructura15_A_first_start_minus_a.csv",
+        "C_estructura15_A_first_start_minus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 53.00000000000613,
+          "period": 84.8000000000098,
+          "pairs": 11158,
+          "rmse": 1.5342152831665197e-12
+        },
+        "Lane 3 B": {
+          "C": 52.99999999996757,
+          "period": 104.82222222215808,
+          "pairs": 11158,
+          "rmse": 2.2483229648175197e-12
+        },
+        "Lane 2 A": {
+          "C": 52.99999999999073,
+          "period": 28.26666666666172,
+          "pairs": 11158,
+          "rmse": 1.9551699490291024e-12
+        },
+        "Lane 2 B": {
+          "C": 52.999999999998444,
+          "period": 34.94074074073971,
+          "pairs": 11158,
+          "rmse": 1.4947305668057511e-12
+        },
+        "Lane 1 A": {
+          "C": 53.00000000000317,
+          "period": 9.422222222222786,
+          "pairs": 11158,
+          "rmse": 2.2928748407880365e-12
+        },
+        "Lane 1 B": {
+          "C": 53.000000000002544,
+          "period": 11.646913580247473,
+          "pairs": 11158,
+          "rmse": 1.7600648449863002e-12
+        }
+      }
+    },
+    {
+      "id": "A_first_start_plus",
+      "START": "18:53",
+      "END": "19:10",
+      "START_15s": "2026-10-12T18:53:00+00:00",
+      "END_15s": "2026-10-12T19:10:45+00:00",
+      "n15": 72,
+      "n60": 18,
+      "C15": 68.00000000000036,
+      "C60": 60.00000000000159,
+      "C15_div_source": 4.533333333333357,
+      "C60_div_source": 1.0000000000000264,
+      "H": 30864.5,
+      "L": 30846.0,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30851.25,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 1.0550138540565968e-10,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11869,
+      "exports": [
+        "C_estructura15_A_first_start_plus_c.csv",
+        "C_estructura15_A_first_start_plus_d.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 68.00000000004371,
+          "period": 108.80000000006994,
+          "pairs": 11188,
+          "rmse": 2.2595503895533493e-12
+        },
+        "Lane 3 B": {
+          "C": 67.9999999999669,
+          "period": 134.48888888882342,
+          "pairs": 11188,
+          "rmse": 1.7844996007850444e-12
+        },
+        "Lane 2 A": {
+          "C": 67.99999999999608,
+          "period": 36.26666666666458,
+          "pairs": 11188,
+          "rmse": 1.55686625160186e-12
+        },
+        "Lane 2 B": {
+          "C": 68.00000000000027,
+          "period": 44.829629629629814,
+          "pairs": 11188,
+          "rmse": 1.5087751769960494e-12
+        },
+        "Lane 1 A": {
+          "C": 67.999999999997,
+          "period": 12.088888888888356,
+          "pairs": 11188,
+          "rmse": 1.765991604615853e-12
+        },
+        "Lane 1 B": {
+          "C": 67.99999999999817,
+          "period": 14.943209876542808,
+          "pairs": 11188,
+          "rmse": 1.7124988993748589e-12
+        }
+      }
+    },
+    {
+      "id": "A_first_end_minus",
+      "START": "18:52",
+      "END": "19:09",
+      "START_15s": "2026-10-12T18:52:00+00:00",
+      "END_15s": "2026-10-12T19:09:45+00:00",
+      "n15": 72,
+      "n60": 18,
+      "C15": 64.9999999999861,
+      "C60": 60.00000000000168,
+      "C15_div_source": 4.333333333332407,
+      "C60_div_source": 1.000000000000028,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30849.75,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 1.0550138540565968e-10,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11861,
+      "exports": [
+        "C_estructura15_A_first_end_minus_a.csv",
+        "C_estructura15_A_first_end_minus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 64.99999999996874,
+          "period": 103.99999999994998,
+          "pairs": 11159,
+          "rmse": 1.948314089892957e-12
+        },
+        "Lane 3 B": {
+          "C": 64.99999999995833,
+          "period": 128.55555555547315,
+          "pairs": 11159,
+          "rmse": 2.060033882126061e-12
+        },
+        "Lane 2 A": {
+          "C": 65.00000000000074,
+          "period": 34.66666666666706,
+          "pairs": 11159,
+          "rmse": 1.483867625670665e-12
+        },
+        "Lane 2 B": {
+          "C": 64.9999999999973,
+          "period": 42.85185185185007,
+          "pairs": 11159,
+          "rmse": 1.5001413659568517e-12
+        },
+        "Lane 1 A": {
+          "C": 64.99999999999788,
+          "period": 11.555555555555177,
+          "pairs": 11159,
+          "rmse": 1.7772458630299582e-12
+        },
+        "Lane 1 B": {
+          "C": 64.99999999999362,
+          "period": 14.28395061728255,
+          "pairs": 11159,
+          "rmse": 2.2814148620434844e-12
+        }
+      }
+    },
+    {
+      "id": "A_first_end_plus",
+      "START": "18:52",
+      "END": "19:11",
+      "START_15s": "2026-10-12T18:52:00+00:00",
+      "END_15s": "2026-10-12T19:11:45+00:00",
+      "n15": 80,
+      "n60": 20,
+      "C15": 49.99999999999887,
+      "C60": 65.57377049180394,
+      "C15_div_source": 3.333333333333258,
+      "C60_div_source": 1.092896174863399,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30856.0,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 2.1827872842550278e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11861,
+      "exports": [
+        "C_estructura15_A_first_end_plus_a.csv",
+        "C_estructura15_A_first_end_plus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 49.99999999999923,
+          "period": 79.99999999999878,
+          "pairs": 11159,
+          "rmse": 1.4775146626061892e-12
+        },
+        "Lane 3 B": {
+          "C": 49.99999999999942,
+          "period": 98.88888888888775,
+          "pairs": 11159,
+          "rmse": 1.5174226991506945e-12
+        },
+        "Lane 2 A": {
+          "C": 49.99999999999824,
+          "period": 26.666666666665726,
+          "pairs": 11159,
+          "rmse": 1.5436499930529929e-12
+        },
+        "Lane 2 B": {
+          "C": 49.99999999999778,
+          "period": 32.962962962961505,
+          "pairs": 11159,
+          "rmse": 1.535646869896607e-12
+        },
+        "Lane 1 A": {
+          "C": 49.99999999999701,
+          "period": 8.888888888888356,
+          "pairs": 11159,
+          "rmse": 2.2859812946122817e-12
+        },
+        "Lane 1 B": {
+          "C": 50.000000000001556,
+          "period": 10.987654320987996,
+          "pairs": 11159,
+          "rmse": 1.5493416997640925e-12
+        }
+      }
+    },
+    {
+      "id": "A_last_base",
+      "START": "18:52",
+      "END": "19:17",
+      "START_15s": "2026-10-12T18:52:00+00:00",
+      "END_15s": "2026-10-12T19:17:45+00:00",
+      "n15": 104,
+      "n60": 26,
+      "C15": 106.00000000001778,
+      "C60": 61.99999999999785,
+      "C15_div_source": 7.066666666667852,
+      "C60_div_source": 1.0333333333332975,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30852.75,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 1.5643308870494366e-10,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11863,
+      "exports": [
+        "C_estructura15_A_last_base_a.csv",
+        "C_estructura15_A_last_base_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 105.99999999998217,
+          "period": 169.59999999997146,
+          "pairs": 11161,
+          "rmse": 1.533572709591241e-12
+        },
+        "Lane 3 B": {
+          "C": 106.00000000013891,
+          "period": 209.6444444447192,
+          "pairs": 11161,
+          "rmse": 2.2320964459951797e-12
+        },
+        "Lane 2 A": {
+          "C": 105.9999999999912,
+          "period": 56.53333333332864,
+          "pairs": 11161,
+          "rmse": 1.5622415293243765e-12
+        },
+        "Lane 2 B": {
+          "C": 106.0000000000114,
+          "period": 69.881481481489,
+          "pairs": 11161,
+          "rmse": 1.5696196360850396e-12
+        },
+        "Lane 1 A": {
+          "C": 105.99999999999251,
+          "period": 18.844444444443113,
+          "pairs": 11161,
+          "rmse": 1.7333370290935655e-12
+        },
+        "Lane 1 B": {
+          "C": 105.99999999999051,
+          "period": 23.29382716049174,
+          "pairs": 11161,
+          "rmse": 1.961247503858987e-12
+        }
+      }
+    },
+    {
+      "id": "A_last_start_minus",
+      "START": "18:51",
+      "END": "19:17",
+      "START_15s": "2026-10-12T18:51:00+00:00",
+      "END_15s": "2026-10-12T19:17:45+00:00",
+      "n15": 108,
+      "n60": 27,
+      "C15": 65.99999999999929,
+      "C60": 134.000000000014,
+      "C15_div_source": 4.399999999999952,
+      "C60_div_source": 2.233333333333567,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30852.75,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 5.093170329928398e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11863,
+      "exports": [
+        "C_estructura15_A_last_start_minus_a.csv",
+        "C_estructura15_A_last_start_minus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 66.00000000001828,
+          "period": 105.60000000002924,
+          "pairs": 11161,
+          "rmse": 1.7371086392339189e-12
+        },
+        "Lane 3 B": {
+          "C": 65.99999999998178,
+          "period": 130.53333333329732,
+          "pairs": 11161,
+          "rmse": 1.5942133160541752e-12
+        },
+        "Lane 2 A": {
+          "C": 66.0000000000087,
+          "period": 35.200000000004636,
+          "pairs": 11161,
+          "rmse": 1.700311123769929e-12
+        },
+        "Lane 2 B": {
+          "C": 65.99999999998896,
+          "period": 43.51111111110383,
+          "pairs": 11161,
+          "rmse": 1.8185894378148332e-12
+        },
+        "Lane 1 A": {
+          "C": 65.99999999999538,
+          "period": 11.733333333332512,
+          "pairs": 11161,
+          "rmse": 2.284970149771243e-12
+        },
+        "Lane 1 B": {
+          "C": 66.00000000000263,
+          "period": 14.503703703704282,
+          "pairs": 11161,
+          "rmse": 1.7184266061592158e-12
+        }
+      }
+    },
+    {
+      "id": "A_last_start_plus",
+      "START": "18:53",
+      "END": "19:17",
+      "START_15s": "2026-10-12T18:53:00+00:00",
+      "END_15s": "2026-10-12T19:17:45+00:00",
+      "n15": 100,
+      "n60": 25,
+      "C15": 65.99999999999929,
+      "C60": 106.99999999999788,
+      "C15_div_source": 4.399999999999952,
+      "C60_div_source": 1.7833333333332981,
+      "H": 30864.5,
+      "L": 30846.0,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30852.75,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 5.093170329928398e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11863,
+      "exports": [
+        "C_estructura15_A_last_start_plus_a.csv",
+        "C_estructura15_A_last_start_plus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 66.00000000001828,
+          "period": 105.60000000002924,
+          "pairs": 11161,
+          "rmse": 1.7371086392339189e-12
+        },
+        "Lane 3 B": {
+          "C": 65.99999999998178,
+          "period": 130.53333333329732,
+          "pairs": 11161,
+          "rmse": 1.5942133160541752e-12
+        },
+        "Lane 2 A": {
+          "C": 66.0000000000087,
+          "period": 35.200000000004636,
+          "pairs": 11161,
+          "rmse": 1.700311123769929e-12
+        },
+        "Lane 2 B": {
+          "C": 65.99999999998896,
+          "period": 43.51111111110383,
+          "pairs": 11161,
+          "rmse": 1.8185894378148332e-12
+        },
+        "Lane 1 A": {
+          "C": 65.99999999999538,
+          "period": 11.733333333332512,
+          "pairs": 11161,
+          "rmse": 2.284970149771243e-12
+        },
+        "Lane 1 B": {
+          "C": 66.00000000000263,
+          "period": 14.503703703704282,
+          "pairs": 11161,
+          "rmse": 1.7184266061592158e-12
+        }
+      }
+    },
+    {
+      "id": "A_last_end_minus",
+      "START": "18:52",
+      "END": "19:16",
+      "START_15s": "2026-10-12T18:52:00+00:00",
+      "END_15s": "2026-10-12T19:16:45+00:00",
+      "n15": 100,
+      "n60": 25,
+      "C15": 65.99999999999892,
+      "C60": 109.00000000000672,
+      "C15_div_source": 4.399999999999928,
+      "C60_div_source": 1.8166666666667788,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30856.25,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 5.4569682106375694e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11864,
+      "exports": [
+        "C_estructura15_A_last_end_minus_a.csv",
+        "C_estructura15_A_last_end_minus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 66.00000000001776,
+          "period": 105.60000000002842,
+          "pairs": 11162,
+          "rmse": 1.7288471473068017e-12
+        },
+        "Lane 3 B": {
+          "C": 65.9999999999803,
+          "period": 130.5333333332944,
+          "pairs": 11162,
+          "rmse": 1.5942190880010078e-12
+        },
+        "Lane 2 A": {
+          "C": 66.00000000000863,
+          "period": 35.2000000000046,
+          "pairs": 11162,
+          "rmse": 1.6995784729448743e-12
+        },
+        "Lane 2 B": {
+          "C": 65.99999999998892,
+          "period": 43.51111111110381,
+          "pairs": 11162,
+          "rmse": 1.816076893981642e-12
+        },
+        "Lane 1 A": {
+          "C": 65.99999999999531,
+          "period": 11.7333333333325,
+          "pairs": 11162,
+          "rmse": 2.282118242041145e-12
+        },
+        "Lane 1 B": {
+          "C": 66.0000000000026,
+          "period": 14.503703703704275,
+          "pairs": 11162,
+          "rmse": 1.7174932999587667e-12
+        }
+      }
+    },
+    {
+      "id": "A_last_end_plus",
+      "START": "18:52",
+      "END": "19:18",
+      "START_15s": "2026-10-12T18:52:00+00:00",
+      "END_15s": "2026-10-12T19:18:45+00:00",
+      "n15": 108,
+      "n60": 27,
+      "C15": 152.00000000004084,
+      "C60": 124.99999999999773,
+      "C15_div_source": 10.133333333336056,
+      "C60_div_source": 2.0833333333332953,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30858.75,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 1.4915713109076023e-10,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11864,
+      "exports": [
+        "C_estructura15_A_last_end_plus_a.csv",
+        "C_estructura15_A_last_end_plus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 152.00000000016527,
+          "period": 243.20000000026445,
+          "pairs": 11162,
+          "rmse": 1.9729817970657603e-12
+        },
+        "Lane 3 B": {
+          "C": 152.00000000003365,
+          "period": 300.62222222228877,
+          "pairs": 11162,
+          "rmse": 1.4920694299453837e-12
+        },
+        "Lane 2 A": {
+          "C": 152.000000000064,
+          "period": 81.0666666667008,
+          "pairs": 11162,
+          "rmse": 2.1242751208641243e-12
+        },
+        "Lane 2 B": {
+          "C": 151.99999999995933,
+          "period": 100.20740740738059,
+          "pairs": 11162,
+          "rmse": 1.6816017040060365e-12
+        },
+        "Lane 1 A": {
+          "C": 152.00000000001404,
+          "period": 27.02222222222472,
+          "pairs": 11162,
+          "rmse": 1.7242574900088411e-12
+        },
+        "Lane 1 B": {
+          "C": 152.00000000000873,
+          "period": 33.40246913580439,
+          "pairs": 11162,
+          "rmse": 1.560859186213922e-12
+        }
+      }
+    },
+    {
+      "id": "B_stall_base",
+      "START": "18:47",
+      "END": "18:52",
+      "START_15s": "2026-10-12T18:47:00+00:00",
+      "END_15s": "2026-10-12T18:52:45+00:00",
+      "n15": 24,
+      "n60": 6,
+      "C15": 16.000000000000203,
+      "C60": 60.00000000000161,
+      "C15_div_source": 1.0666666666666802,
+      "C60_div_source": 1.0000000000000269,
+      "H": 30881.75,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:33:45+00:00",
+      "rupture60_UTC": "2026-10-12T19:33:00+00:00",
+      "seed15": 30845.0,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 3.2741809263825417e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11869,
+      "exports": [
+        "C_estructura15_B_stall_base_a.csv",
+        "C_estructura15_B_stall_base_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 15.999999999999718,
+          "period": 25.59999999999955,
+          "pairs": 11110,
+          "rmse": 1.519364217071291e-12
+        },
+        "Lane 3 B": {
+          "C": 16.000000000003247,
+          "period": 31.64444444445087,
+          "pairs": 11110,
+          "rmse": 2.2732752505821932e-12
+        },
+        "Lane 2 A": {
+          "C": 15.999999999999826,
+          "period": 8.53333333333324,
+          "pairs": 11110,
+          "rmse": 1.5629821779912763e-12
+        },
+        "Lane 2 B": {
+          "C": 15.99999999999889,
+          "period": 10.548148148147417,
+          "pairs": 11110,
+          "rmse": 2.310299904742825e-12
+        },
+        "Lane 1 A": {
+          "C": 15.999999999999845,
+          "period": 2.844444444444417,
+          "pairs": 11110,
+          "rmse": 1.4782522280866527e-12
+        },
+        "Lane 1 B": {
+          "C": 15.999999999999684,
+          "period": 3.5160493827159796,
+          "pairs": 11110,
+          "rmse": 2.4348954285834383e-12
+        }
+      }
+    },
+    {
+      "id": "B_stall_start_minus",
+      "START": "18:46",
+      "END": "18:52",
+      "START_15s": "2026-10-12T18:46:00+00:00",
+      "END_15s": "2026-10-12T18:52:45+00:00",
+      "n15": 28,
+      "n60": 7,
+      "C15": 16.000000000000203,
+      "C60": 60.0000000000016,
+      "C15_div_source": 1.0666666666666802,
+      "C60_div_source": 1.0000000000000266,
+      "H": 30884.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:33:45+00:00",
+      "rupture60_UTC": "2026-10-12T19:33:00+00:00",
+      "seed15": 30845.0,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 3.2741809263825417e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11869,
+      "exports": [
+        "C_estructura15_B_stall_start_minus_a.csv",
+        "C_estructura15_B_stall_start_minus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 15.999999999999714,
+          "period": 25.599999999999543,
+          "pairs": 11111,
+          "rmse": 1.519307385097993e-12
+        },
+        "Lane 3 B": {
+          "C": 16.00000000000325,
+          "period": 31.644444444450876,
+          "pairs": 11111,
+          "rmse": 2.273443231473861e-12
+        },
+        "Lane 2 A": {
+          "C": 15.999999999999822,
+          "period": 8.533333333333239,
+          "pairs": 11111,
+          "rmse": 1.5632544843560482e-12
+        },
+        "Lane 2 B": {
+          "C": 15.999999999998893,
+          "period": 10.548148148147419,
+          "pairs": 11111,
+          "rmse": 2.3102288497925135e-12
+        },
+        "Lane 1 A": {
+          "C": 15.999999999999845,
+          "period": 2.844444444444417,
+          "pairs": 11111,
+          "rmse": 1.4781927382570471e-12
+        },
+        "Lane 1 B": {
+          "C": 15.999999999999678,
+          "period": 3.5160493827159787,
+          "pairs": 11111,
+          "rmse": 2.434901711943682e-12
+        }
+      }
+    },
+    {
+      "id": "B_stall_start_plus",
+      "START": "18:48",
+      "END": "18:52",
+      "START_15s": "2026-10-12T18:48:00+00:00",
+      "END_15s": "2026-10-12T18:52:45+00:00",
+      "n15": 20,
+      "n60": 5,
+      "C15": 16.393442622950996,
+      "C60": 60.00000000000159,
+      "C15_div_source": 1.0928961748633996,
+      "C60_div_source": 1.0000000000000264,
+      "H": 30877.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:32:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:32:00+00:00",
+      "seed15": 30845.0,
+      "short_rule_prediction": 16.39344262295082,
+      "reconstruction_max_error": 3.2741809263825417e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11870,
+      "exports": [
+        "C_estructura15_B_stall_start_plus_a.csv",
+        "C_estructura15_B_stall_start_plus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 16.39344262295085,
+          "period": 26.229508196721362,
+          "pairs": 11116,
+          "rmse": 1.507448520562452e-12
+        },
+        "Lane 3 B": {
+          "C": 16.393442622953025,
+          "period": 32.42258652095154,
+          "pairs": 11116,
+          "rmse": 1.963435332112501e-12
+        },
+        "Lane 2 A": {
+          "C": 16.39344262294999,
+          "period": 8.743169398906662,
+          "pairs": 11116,
+          "rmse": 2.31255585952075e-12
+        },
+        "Lane 2 B": {
+          "C": 16.393442622950605,
+          "period": 10.807528840315586,
+          "pairs": 11116,
+          "rmse": 1.5569687267451231e-12
+        },
+        "Lane 1 A": {
+          "C": 16.39344262295082,
+          "period": 2.9143897996357007,
+          "pairs": 11116,
+          "rmse": 1.4889460142923042e-12
+        },
+        "Lane 1 B": {
+          "C": 16.39344262295069,
+          "period": 3.6025096134385466,
+          "pairs": 11116,
+          "rmse": 1.7439427768759518e-12
+        }
+      }
+    },
+    {
+      "id": "B_stall_end_minus",
+      "START": "18:47",
+      "END": "18:51",
+      "START_15s": "2026-10-12T18:47:00+00:00",
+      "END_15s": "2026-10-12T18:51:45+00:00",
+      "n15": 20,
+      "n60": 5,
+      "C15": 16.393442622950992,
+      "C60": 60.00000000000168,
+      "C15_div_source": 1.0928961748633994,
+      "C60_div_source": 1.000000000000028,
+      "H": 30881.75,
+      "L": 30845.25,
+      "rupture15_UTC": "2026-10-12T19:33:45+00:00",
+      "rupture60_UTC": "2026-10-12T19:33:00+00:00",
+      "seed15": 30845.25,
+      "short_rule_prediction": 16.39344262295082,
+      "reconstruction_max_error": 2.546585164964199e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11870,
+      "exports": [
+        "C_estructura15_B_stall_end_minus_a.csv",
+        "C_estructura15_B_stall_end_minus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 16.393442622950833,
+          "period": 26.22950819672133,
+          "pairs": 11111,
+          "rmse": 1.5084847981253932e-12
+        },
+        "Lane 3 B": {
+          "C": 16.393442622953028,
+          "period": 32.42258652095155,
+          "pairs": 11111,
+          "rmse": 1.962638843610752e-12
+        },
+        "Lane 2 A": {
+          "C": 16.393442622949983,
+          "period": 8.743169398906659,
+          "pairs": 11111,
+          "rmse": 2.312453251573483e-12
+        },
+        "Lane 2 B": {
+          "C": 16.393442622950612,
+          "period": 10.80752884031559,
+          "pairs": 11111,
+          "rmse": 1.5570702588983612e-12
+        },
+        "Lane 1 A": {
+          "C": 16.39344262295081,
+          "period": 2.9143897996356998,
+          "pairs": 11111,
+          "rmse": 1.4890239939629285e-12
+        },
+        "Lane 1 B": {
+          "C": 16.39344262295069,
+          "period": 3.6025096134385466,
+          "pairs": 11111,
+          "rmse": 1.7440598908491304e-12
+        }
+      }
+    },
+    {
+      "id": "B_stall_end_plus",
+      "START": "18:47",
+      "END": "18:53",
+      "START_15s": "2026-10-12T18:47:00+00:00",
+      "END_15s": "2026-10-12T18:53:45+00:00",
+      "n15": 28,
+      "n60": 7,
+      "C15": 16.000000000000195,
+      "C60": 60.00000000000173,
+      "C15_div_source": 1.0666666666666798,
+      "C60_div_source": 1.0000000000000289,
+      "H": 30881.75,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:33:45+00:00",
+      "rupture60_UTC": "2026-10-12T19:33:00+00:00",
+      "seed15": 30853.25,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 2.9103830456733704e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11871,
+      "exports": [
+        "C_estructura15_B_stall_end_plus_a.csv",
+        "C_estructura15_B_stall_end_plus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 15.999999999999696,
+          "period": 25.599999999999515,
+          "pairs": 11112,
+          "rmse": 1.5173905382190205e-12
+        },
+        "Lane 3 B": {
+          "C": 16.00000000000323,
+          "period": 31.644444444450833,
+          "pairs": 11112,
+          "rmse": 2.2747953873180947e-12
+        },
+        "Lane 2 A": {
+          "C": 15.999999999999822,
+          "period": 8.533333333333239,
+          "pairs": 11112,
+          "rmse": 1.5631918070743115e-12
+        },
+        "Lane 2 B": {
+          "C": 15.999999999998893,
+          "period": 10.548148148147419,
+          "pairs": 11112,
+          "rmse": 2.3101248999777258e-12
+        },
+        "Lane 1 A": {
+          "C": 15.999999999999845,
+          "period": 2.844444444444417,
+          "pairs": 11112,
+          "rmse": 1.4781370839045261e-12
+        },
+        "Lane 1 B": {
+          "C": 15.999999999999684,
+          "period": 3.5160493827159796,
+          "pairs": 11112,
+          "rmse": 2.4349360324912435e-12
+        }
+      }
+    },
+    {
+      "id": "A_earliest_base",
+      "START": "18:52",
+      "END": "19:07",
+      "START_15s": "2026-10-12T18:52:00+00:00",
+      "END_15s": "2026-10-12T19:07:45+00:00",
+      "n15": 64,
+      "n60": 16,
+      "C15": 37.999999999997385,
+      "C60": 60.00000000000146,
+      "C15_div_source": 2.533333333333159,
+      "C60_div_source": 1.0000000000000242,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30860.0,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 6.184563972055912e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11866,
+      "exports": [
+        "C_estructura15_A_earliest_base_a.csv",
+        "C_estructura15_A_earliest_base_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 37.999999999987025,
+          "period": 60.79999999997924,
+          "pairs": 11165,
+          "rmse": 2.230765851693585e-12
+        },
+        "Lane 3 B": {
+          "C": 38.00000000000213,
+          "period": 75.15555555555977,
+          "pairs": 11165,
+          "rmse": 1.5463409141413513e-12
+        },
+        "Lane 2 A": {
+          "C": 37.999999999997044,
+          "period": 20.266666666665092,
+          "pairs": 11165,
+          "rmse": 1.96275256932391e-12
+        },
+        "Lane 2 B": {
+          "C": 37.99999999999769,
+          "period": 25.05185185185033,
+          "pairs": 11165,
+          "rmse": 1.5600308023646531e-12
+        },
+        "Lane 1 A": {
+          "C": 38.00000000000109,
+          "period": 6.755555555555748,
+          "pairs": 11165,
+          "rmse": 2.3162773068624026e-12
+        },
+        "Lane 1 B": {
+          "C": 37.99999999999933,
+          "period": 8.35061728395047,
+          "pairs": 11165,
+          "rmse": 1.7859501899708202e-12
+        }
+      }
+    },
+    {
+      "id": "A_earliest_start_minus",
+      "START": "18:51",
+      "END": "19:07",
+      "START_15s": "2026-10-12T18:51:00+00:00",
+      "END_15s": "2026-10-12T19:07:45+00:00",
+      "n15": 68,
+      "n60": 17,
+      "C15": 44.999999999999936,
+      "C60": 60.00000000000146,
+      "C15_div_source": 2.9999999999999956,
+      "C60_div_source": 1.0000000000000242,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30860.0,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 5.820766091346741e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11867,
+      "exports": [
+        "C_estructura15_A_earliest_start_minus_a.csv",
+        "C_estructura15_A_earliest_start_minus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 45.00000000000031,
+          "period": 72.0000000000005,
+          "pairs": 11165,
+          "rmse": 1.4787260839428556e-12
+        },
+        "Lane 3 B": {
+          "C": 44.99999999998781,
+          "period": 88.99999999997588,
+          "pairs": 11165,
+          "rmse": 1.7548634981648512e-12
+        },
+        "Lane 2 A": {
+          "C": 45.000000000006004,
+          "period": 24.0000000000032,
+          "pairs": 11165,
+          "rmse": 1.9406786735404594e-12
+        },
+        "Lane 2 B": {
+          "C": 45.000000000006025,
+          "period": 29.666666666670636,
+          "pairs": 11165,
+          "rmse": 1.91505231204664e-12
+        },
+        "Lane 1 A": {
+          "C": 44.999999999999424,
+          "period": 7.999999999999897,
+          "pairs": 11165,
+          "rmse": 1.5237820271701513e-12
+        },
+        "Lane 1 B": {
+          "C": 45.00000000000005,
+          "period": 9.8888888888889,
+          "pairs": 11165,
+          "rmse": 1.5660043175705021e-12
+        }
+      }
+    },
+    {
+      "id": "A_earliest_start_plus",
+      "START": "18:53",
+      "END": "19:07",
+      "START_15s": "2026-10-12T18:53:00+00:00",
+      "END_15s": "2026-10-12T19:07:45+00:00",
+      "n15": 60,
+      "n60": 15,
+      "C15": 37.999999999997385,
+      "C60": 60.00000000000146,
+      "C15_div_source": 2.533333333333159,
+      "C60_div_source": 1.0000000000000242,
+      "H": 30864.5,
+      "L": 30846.0,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30860.0,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 6.184563972055912e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11867,
+      "exports": [
+        "C_estructura15_A_earliest_start_plus_a.csv",
+        "C_estructura15_A_earliest_start_plus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 37.999999999987025,
+          "period": 60.79999999997924,
+          "pairs": 11165,
+          "rmse": 2.230765851693585e-12
+        },
+        "Lane 3 B": {
+          "C": 38.00000000000213,
+          "period": 75.15555555555977,
+          "pairs": 11165,
+          "rmse": 1.5463409141413513e-12
+        },
+        "Lane 2 A": {
+          "C": 37.999999999997044,
+          "period": 20.266666666665092,
+          "pairs": 11165,
+          "rmse": 1.96275256932391e-12
+        },
+        "Lane 2 B": {
+          "C": 37.99999999999769,
+          "period": 25.05185185185033,
+          "pairs": 11165,
+          "rmse": 1.5600308023646531e-12
+        },
+        "Lane 1 A": {
+          "C": 38.00000000000109,
+          "period": 6.755555555555748,
+          "pairs": 11165,
+          "rmse": 2.3162773068624026e-12
+        },
+        "Lane 1 B": {
+          "C": 37.99999999999933,
+          "period": 8.35061728395047,
+          "pairs": 11165,
+          "rmse": 1.7859501899708202e-12
+        }
+      }
+    },
+    {
+      "id": "A_earliest_end_minus",
+      "START": "18:52",
+      "END": "19:06",
+      "START_15s": "2026-10-12T18:52:00+00:00",
+      "END_15s": "2026-10-12T19:06:45+00:00",
+      "n15": 60,
+      "n60": 15,
+      "C15": 37.99999999999745,
+      "C60": 60.00000000000161,
+      "C15_div_source": 2.533333333333163,
+      "C60_div_source": 1.0000000000000269,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30858.5,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 6.912159733474255e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11867,
+      "exports": [
+        "C_estructura15_A_earliest_end_minus_a.csv",
+        "C_estructura15_A_earliest_end_minus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 37.999999999986834,
+          "period": 60.79999999997894,
+          "pairs": 11166,
+          "rmse": 2.2297754291555942e-12
+        },
+        "Lane 3 B": {
+          "C": 38.00000000000264,
+          "period": 75.15555555556078,
+          "pairs": 11166,
+          "rmse": 1.5478108580041925e-12
+        },
+        "Lane 2 A": {
+          "C": 37.999999999997065,
+          "period": 20.266666666665103,
+          "pairs": 11166,
+          "rmse": 1.9634646958678856e-12
+        },
+        "Lane 2 B": {
+          "C": 37.99999999999775,
+          "period": 25.05185185185037,
+          "pairs": 11166,
+          "rmse": 1.5607935054739485e-12
+        },
+        "Lane 1 A": {
+          "C": 38.00000000000109,
+          "period": 6.755555555555748,
+          "pairs": 11166,
+          "rmse": 2.315960650325335e-12
+        },
+        "Lane 1 B": {
+          "C": 37.99999999999934,
+          "period": 8.350617283950472,
+          "pairs": 11166,
+          "rmse": 1.786237807669062e-12
+        }
+      }
+    },
+    {
+      "id": "A_earliest_end_plus",
+      "START": "18:52",
+      "END": "19:08",
+      "START_15s": "2026-10-12T18:52:00+00:00",
+      "END_15s": "2026-10-12T19:08:45+00:00",
+      "n15": 68,
+      "n60": 17,
+      "C15": 44.99999999999983,
+      "C60": 60.00000000000164,
+      "C15_div_source": 2.9999999999999885,
+      "C60_div_source": 1.0000000000000273,
+      "H": 30864.5,
+      "L": 30844.25,
+      "rupture15_UTC": "2026-10-12T19:19:30+00:00",
+      "rupture60_UTC": "2026-10-12T19:19:00+00:00",
+      "seed15": 30861.0,
+      "short_rule_prediction": null,
+      "reconstruction_max_error": 6.548361852765083e-11,
+      "visibility_errors": 0,
+      "aggregation_mismatches": [],
+      "repeat_common_bars": 11868,
+      "exports": [
+        "C_estructura15_A_earliest_end_plus_a.csv",
+        "C_estructura15_A_earliest_end_plus_b.csv"
+      ],
+      "fits": {
+        "Lane 3 A": {
+          "C": 45.00000000000002,
+          "period": 72.00000000000003,
+          "pairs": 11166,
+          "rmse": 1.4789633429443567e-12
+        },
+        "Lane 3 B": {
+          "C": 44.999999999987594,
+          "period": 88.99999999997547,
+          "pairs": 11166,
+          "rmse": 1.7552884441858753e-12
+        },
+        "Lane 2 A": {
+          "C": 45.00000000000594,
+          "period": 24.00000000000317,
+          "pairs": 11166,
+          "rmse": 1.941768365527673e-12
+        },
+        "Lane 2 B": {
+          "C": 45.00000000000597,
+          "period": 29.666666666670604,
+          "pairs": 11166,
+          "rmse": 1.915933338597909e-12
+        },
+        "Lane 1 A": {
+          "C": 44.999999999999446,
+          "period": 7.9999999999999005,
+          "pairs": 11166,
+          "rmse": 1.5239220342611824e-12
+        },
+        "Lane 1 B": {
+          "C": 44.99999999999998,
+          "period": 9.888888888888884,
+          "pairs": 11166,
+          "rmse": 1.5641930075476728e-12
+        }
+      }
+    }
+  ],
+  "failures": [],
+  "repeat_history": [
+    {
+      "id": "A_first_start_plus",
+      "original_pair_status": "failed; preserved, superseded by preregistered c/d repetition",
+      "original_C": {
+        "a": 52.99999999999476,
+        "b": 68.00000000000034
+      },
+      "original_b_vs_new_d": {
+        "common_closed_bars": 11841,
+        "columns": {
+          "open": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "high": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "low": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "close": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "Volume": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "Lane 3 A": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 3 B": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 2 A": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 2 B": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 1 A": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 1 B": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          }
+        }
+      },
+      "registered_repetition": {
+        "date": "2026-10-14",
+        "case": "A_first_start_plus",
+        "START_UTC": "2026-10-12T18:53:00Z",
+        "END_UTC": "2026-10-12T19:10:45Z",
+        "reason": "Original a/b fail repeat: a recovers C53, b C68. A likely stale recalc is an inference, not a confirmed cause. Preserve both original files and repeat from restored1m reference.",
+        "new_exports": [
+          "c",
+          "d"
+        ],
+        "acceptance": "Same preregistered complete native/aggregate/recurrence/six-C checks; c/d must agree and compare latest original b separately. If it still differs report inconclusive, not averaged C."
+      }
+    }
+  ],
+  "sha256": {
+    "C_estructura15_A_first_base_a.csv": "ba1533e1c4dfce909643b453487f62867a58fe3691cb3cd72ae4a3ad92668ed9",
+    "C_estructura15_A_first_base_b.csv": "fab1cc3d8db8886d14680f1a12452f1480ef3b9d6bd254987f280185b4911d2f",
+    "C_estructura15_A_first_start_minus_a.csv": "c2cf5535a22b8298f17a345898d38c16438822ae254a057c754025da9d3bb5f0",
+    "C_estructura15_A_first_start_minus_b.csv": "1d4ff4f0916aefabb6d64a9bb0d7e451a59f850c785a786e127116b9340e6b30",
+    "C_estructura15_A_first_start_plus_a.csv": "6e1b163f3eb95e932fca0b85f6e3da1404ae477383cb04301ca1060c898dcbc4",
+    "C_estructura15_A_first_start_plus_b.csv": "97979ce80c0e1cb4e2de75ca73856abe1ac613963c2f00ff57acd3ac48e78639",
+    "C_estructura15_A_first_start_plus_c.csv": "20e8b69223bccbb8514dc452831d59f9935a52c6c8509e54bfa4c9ef8c825d4b",
+    "C_estructura15_A_first_start_plus_d.csv": "8409e2b107d5ebba8a0513c70c3ee0041a9b34e1af7eb4a4075f84d8d5abb743",
+    "C_estructura15_A_first_end_minus_a.csv": "93a78884b5ec019f2e84c1f6ae50b189205903cd5dea27e339597870a4376830",
+    "C_estructura15_A_first_end_minus_b.csv": "de35ca41ef42ff2666eff5b9944c88c93f5c87d33c9726285e99d1a69548b7ba",
+    "C_estructura15_A_first_end_plus_a.csv": "e1ae6667d6e840f4c6bcef5ca668502c5cc2a6386bf5577e6aa044289629b4a9",
+    "C_estructura15_A_first_end_plus_b.csv": "c7d06e0b97494a2d99f7de0aa11dc60beef1bff2c68ed04b35f4a9bac8cb7bf1",
+    "C_estructura15_A_last_base_a.csv": "d63ca62820f25aba7b472b694a024bac52f110099d3c20b4f1bf65f6072034db",
+    "C_estructura15_A_last_base_b.csv": "106870fd61f535c7e46239a3fbe640c7987e19a3869c4e6693d679f227e0c049",
+    "C_estructura15_A_last_start_minus_a.csv": "99c3abca05c8d25ddd1e0ae165d92a49ade8c13cf05842c286f2e1ff50c55102",
+    "C_estructura15_A_last_start_minus_b.csv": "9e77596480edfc8ce9944d79f31e071c2701eb74277fa25d00f6daa9bdc4641c",
+    "C_estructura15_A_last_start_plus_a.csv": "ef8b82a8f50f540b8db6f1dff722f668d5dd8c6927f52cbb1a03909ebcdd62ac",
+    "C_estructura15_A_last_start_plus_b.csv": "0ebc03394dce3112334db2085908508947ba0e108162aa1a8fc48e9795814b24",
+    "C_estructura15_A_last_end_minus_a.csv": "20eef46abb461fac6c72f5a784c4df45256f95c78c8af1bf7fe7e044cb792e32",
+    "C_estructura15_A_last_end_minus_b.csv": "84870bde801b2e9dd8b8dfe9476712c46c6ffdd866a48f4ffb8641be05db8801",
+    "C_estructura15_A_last_end_plus_a.csv": "3d0c775c88cecbd1fd8f6fc09dfd8307ca7b65bf42d6b50c10d4cb14a87ec3b6",
+    "C_estructura15_A_last_end_plus_b.csv": "c5ccff8695a93626fbb596ce4fe09e03b034f7e3cd6342b21e8e62ba2e133237",
+    "C_estructura15_B_stall_base_a.csv": "a545121f5644310247123cde3c1521186cff1d1ff996db534c8f57c9a93ff4d5",
+    "C_estructura15_B_stall_base_b.csv": "694f0cdbbf8b751f4f7a2e22b8fecc7eb205a8dcfba43347045dcc94a8c00adc",
+    "C_estructura15_B_stall_start_minus_a.csv": "8fba364cfc7c280e4ec92148f1887a117e18d6b36891220ba3be61cb29ae47ca",
+    "C_estructura15_B_stall_start_minus_b.csv": "9ef78204acfff539b9d72d8c60ee8cdff6e280f4df60ac74c82e1322265ef9df",
+    "C_estructura15_B_stall_start_plus_a.csv": "ad7a1417cebe0432d6478ba623442334c1e09466b774ac8c5384c32d5cf09999",
+    "C_estructura15_B_stall_start_plus_b.csv": "bd0d13756eb8635a81a762df341fe285d0ae81ab04ba650600d7d3b5453ba055",
+    "C_estructura15_B_stall_end_minus_a.csv": "c6608c1f8141ca671d5f81ecb7afcad2ec9b3b8573dbec8fe468c237c32b8f40",
+    "C_estructura15_B_stall_end_minus_b.csv": "21e582d470632431c2768106d78f467dc7c502d0d70daf56c8fd2b3a2cb441f3",
+    "C_estructura15_B_stall_end_plus_a.csv": "8ab99c702f0f8011b87674c4d8f071fe964c57de501aa125a5ed5f34eb888015",
+    "C_estructura15_B_stall_end_plus_b.csv": "956f63f8a7f3fd52e3084d55cac0a310e2ccee62b11fabff07967ea99f72f6eb",
+    "C_estructura15_A_earliest_base_a.csv": "ab689b814bdc93310ede13bc4e8f2d5936a3ab604bdf7aba435c1b8743aa8443",
+    "C_estructura15_A_earliest_base_b.csv": "319f46b7f8df525df35ade8ddbe477247f4abe410bc9b305c36bb532a3c60de9",
+    "C_estructura15_A_earliest_start_minus_a.csv": "4499c0739655d5cd76d96fdb68bc82cddf968cfd1189c708c8ea30ea41df4a6f",
+    "C_estructura15_A_earliest_start_minus_b.csv": "9517354545419d1d604d26422f68295ece2bba8fb20d55f8d6455f4095a279ad",
+    "C_estructura15_A_earliest_start_plus_a.csv": "de5f18631816749da9de1af1eb3b8b162728057a4297b20a98bc8d6d4c0f9644",
+    "C_estructura15_A_earliest_start_plus_b.csv": "af49a2369a2827faf55c29f45836f40da2fb43934bc99d2af5dfc90b4a0f5f09",
+    "C_estructura15_A_earliest_end_minus_a.csv": "56c09a95cf31cc957efa6f46f5b58080279d1e5cb63129194d5a17c9559f309f",
+    "C_estructura15_A_earliest_end_minus_b.csv": "731b89dc1a0d13f82220f9817c9fce0727ab329427bb63ec2e0aa6092381a0a1",
+    "C_estructura15_A_earliest_end_plus_a.csv": "8435b9ea4bcc194ecff439500368fc2bacd8fcbe0010b4d4cfcd5b5b40aca5c9",
+    "C_estructura15_A_earliest_end_plus_b.csv": "1bce55bdf5da0695014022da6fde19dbe2171c1bbe04846c3f8523ee8dc778ea"
+  },
+  "return_check": {
+    "common_closed_bars": 2993,
+    "columns": {
+      "open": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "high": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "low": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "close": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "Volume": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "Lane 3 A": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 3 B": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 2 A": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 2 B": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 1 A": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 1 B": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      }
+    }
+  },
+  "return_fits": {
+    "Lane 3 A": {
+      "C": 61.999999999994664,
+      "period": 24.799999999997866,
+      "pairs": 2806,
+      "rmse": 1.7008143151093602e-12
+    },
+    "Lane 3 B": {
+      "C": 61.99999999999522,
+      "period": 30.655555555553192,
+      "pairs": 2806,
+      "rmse": 1.7167087837566674e-12
+    },
+    "Lane 2 A": {
+      "C": 61.99999999999946,
+      "period": 8.266666666666595,
+      "pairs": 2806,
+      "rmse": 1.5536521722214436e-12
+    },
+    "Lane 2 B": {
+      "C": 61.99999999999942,
+      "period": 10.218518518518422,
+      "pairs": 2806,
+      "rmse": 1.5584889345680195e-12
+    },
+    "Lane 1 A": {
+      "C": 62.0000000000001,
+      "period": 2.75555555555556,
+      "pairs": 2806,
+      "rmse": 1.5970483106490792e-12
+    },
+    "Lane 1 B": {
+      "C": 61.99999999999763,
+      "period": 3.406172839506042,
+      "pairs": 2806,
+      "rmse": 2.382070763482367e-12
+    }
+  },
+  "limitations": "Sampling/source and branch change together; preserved minute OHLCV and event labels do not preserve intrabar close-path, first rupture or selected END seed."
+}

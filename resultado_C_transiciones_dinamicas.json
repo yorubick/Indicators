@@ -1,0 +1,365 @@
+{
+  "status": "transition_candidates_rejected_for_unified_generation",
+  "master_sha256": "ef9533acdce3e1c2c2db3c72caee5059a2957f7dee4c60e725f6dcf56ccc9c05",
+  "pair_definition": "same requested START; END advances one source_seconds; prior OHLCV exactly equals current OHLCV prefix; both labels Lite measured",
+  "partition": {
+    "rule": "fixed temporal rule from the independent audit; exclude 2026-10-12 18:54-19:30 UTC intersections and all 2026-10-13 cases from fitting",
+    "all_adjacent_pairs": 87,
+    "training_pairs": 26,
+    "training_by_source_seconds": {
+      "60": 24,
+      "120": 2
+    },
+    "holdout_pairs": 61,
+    "holdout_by_source_seconds": {
+      "15": 25,
+      "60": 36
+    },
+    "blindness_note": "Labels were already collected. The partition is implemented before fitting, but this is not a genuinely blind or prospective study."
+  },
+  "model_interpretation": "Each OLS model predicts delta_C from measured previous C and fixed physical window/entry features. Teacher-forced scoring uses observed C_previous for each step; recursive scoring carries the predicted C through contiguous holdout steps and seeds each disconnected segment with its measured initial C. Neither score establishes the indicator's source algorithm.",
+  "models": {
+    "state_scalar": {
+      "features": [
+        "C_previous",
+        "ln_n",
+        "ln_delta_seconds"
+      ],
+      "mean": [
+        74.76607818411054,
+        3.0495135573862084,
+        4.147663576111328
+      ],
+      "scale": [
+        17.409069310120245,
+        0.09092315122263658,
+        0.18470248213122215
+      ],
+      "beta_intercept_then_standardized_features": [
+        2.36696090794459,
+        -21.43505960847479,
+        7.188820412989561,
+        21.795300994345528
+      ],
+      "training_design_rank": 4,
+      "training_rows": 26,
+      "training_columns_including_intercept": 4,
+      "training_singular_values": [
+        7.005363832099816,
+        5.286273698434937,
+        5.099019513592785,
+        0.9900444258429567
+      ],
+      "training_teacher_forced_delta_fit": {
+        "n": 26,
+        "MAE": 3.6373199290275786,
+        "RMSE": 5.005983517981989,
+        "max_abs_residual": 11.398916242475964,
+        "within_1": 9
+      },
+      "holdout_teacher_forced_C": {
+        "n": 61,
+        "MAE": 37.42053507071932,
+        "RMSE": 52.168177453381695,
+        "max_abs_residual": 172.04957260992802,
+        "within_1": 6
+      },
+      "holdout_recursive_C": {
+        "n": 61,
+        "MAE": 31.946091079587912,
+        "RMSE": 45.568163383540146,
+        "max_abs_residual": 172.04957260992802,
+        "within_1": 6
+      },
+      "holdout_by_source_seconds": {
+        "15": {
+          "teacher_forced": {
+            "n": 25,
+            "MAE": 61.54704395676686,
+            "RMSE": 64.71655419244847,
+            "max_abs_residual": 103.75695529688298,
+            "within_1": 0
+          },
+          "recursive": {
+            "n": 25,
+            "MAE": 52.2571899137906,
+            "RMSE": 55.71327473273504,
+            "max_abs_residual": 103.75695529688298,
+            "within_1": 0
+          }
+        },
+        "60": {
+          "teacher_forced": {
+            "n": 36,
+            "MAE": 20.66601501096407,
+            "RMSE": 41.26702793449023,
+            "max_abs_residual": 172.04957260992802,
+            "within_1": 6
+          },
+          "recursive": {
+            "n": 36,
+            "MAE": 17.841161333613815,
+            "RMSE": 36.917582316319155,
+            "max_abs_residual": 172.04957260992802,
+            "within_1": 6
+          }
+        }
+      }
+    },
+    "prefix_state": {
+      "features": [
+        "C_previous",
+        "ln_n",
+        "ln_delta_seconds",
+        "window_range_bp",
+        "close_path_bp",
+        "signed_efficiency",
+        "volume_weighted_body_bp",
+        "ln_1p_mean_volume",
+        "volume_hhi"
+      ],
+      "mean": [
+        74.76607818411054,
+        3.0495135573862084,
+        4.147663576111328,
+        23.811366852197576,
+        43.367632955151244,
+        0.042145646460630085,
+        0.06679408136495892,
+        6.286020012476568,
+        0.053603832562637725
+      ],
+      "scale": [
+        17.409069310120245,
+        0.09092315122263658,
+        0.18470248213122215,
+        9.336696357045435,
+        18.97024967795955,
+        0.3796500295577846,
+        0.8687762015343955,
+        0.9299273838493736,
+        0.005898264843463569
+      ],
+      "beta_intercept_then_standardized_features": [
+        2.36696090794459,
+        -25.9243470083273,
+        19.511891598296174,
+        41.65752347209926,
+        40.12861722361277,
+        -20.94283868339761,
+        2.9985588058371637,
+        -16.53916430679583,
+        -20.529285717300123,
+        7.49576151461159
+      ],
+      "training_design_rank": 10,
+      "training_rows": 26,
+      "training_columns_including_intercept": 10,
+      "training_singular_values": [
+        9.374574530109669,
+        8.193249690774712,
+        6.788355344919988,
+        5.140365318366301,
+        5.099019513592786,
+        2.278527578266734,
+        1.02069305109301,
+        0.4119504804937214,
+        0.2777106578237074,
+        0.05059003412522349
+      ],
+      "training_teacher_forced_delta_fit": {
+        "n": 26,
+        "MAE": 3.172364449588098,
+        "RMSE": 4.086477686087726,
+        "max_abs_residual": 9.65608197847715,
+        "within_1": 4
+      },
+      "holdout_teacher_forced_C": {
+        "n": 61,
+        "MAE": 73.3835740354547,
+        "RMSE": 86.69757478188198,
+        "max_abs_residual": 254.38890177290347,
+        "within_1": 0
+      },
+      "holdout_recursive_C": {
+        "n": 61,
+        "MAE": 54.068401945807665,
+        "RMSE": 66.5201492845342,
+        "max_abs_residual": 254.38890177290347,
+        "within_1": 0
+      },
+      "holdout_by_source_seconds": {
+        "15": {
+          "teacher_forced": {
+            "n": 25,
+            "MAE": 110.35122529899434,
+            "RMSE": 119.07615752956558,
+            "max_abs_residual": 254.38890177290347,
+            "within_1": 0
+          },
+          "recursive": {
+            "n": 25,
+            "MAE": 79.62185148974321,
+            "RMSE": 90.17752463062365,
+            "max_abs_residual": 254.38890177290347,
+            "within_1": 0
+          }
+        },
+        "60": {
+          "teacher_forced": {
+            "n": 36,
+            "MAE": 47.711593991329956,
+            "RMSE": 53.75519498319134,
+            "max_abs_residual": 110.95964280831157,
+            "within_1": 0
+          },
+          "recursive": {
+            "n": 36,
+            "MAE": 36.32295087363022,
+            "RMSE": 43.01843829438823,
+            "max_abs_residual": 106.48861180874835,
+            "within_1": 0
+          }
+        }
+      }
+    },
+    "prefix_plus_entering_bar": {
+      "features": [
+        "C_previous",
+        "ln_n",
+        "ln_delta_seconds",
+        "window_range_bp",
+        "close_path_bp",
+        "signed_efficiency",
+        "volume_weighted_body_bp",
+        "ln_1p_mean_volume",
+        "volume_hhi",
+        "entry_range_over_prefix_range",
+        "entry_body_bp",
+        "entry_log_volume_relative_to_prefix_mean",
+        "entry_close_gap_bp"
+      ],
+      "mean": [
+        74.76607818411054,
+        3.0495135573862084,
+        4.147663576111328,
+        23.811366852197576,
+        43.367632955151244,
+        0.042145646460630085,
+        0.06679408136495892,
+        6.286020012476568,
+        0.053603832562637725,
+        0.16122254523197507,
+        -0.32600583620789225,
+        -0.2574111809812986,
+        -0.3196097032395012
+      ],
+      "scale": [
+        17.409069310120245,
+        0.09092315122263658,
+        0.18470248213122215,
+        9.336696357045435,
+        18.97024967795955,
+        0.3796500295577846,
+        0.8687762015343955,
+        0.9299273838493736,
+        0.005898264843463569,
+        0.06253376543642593,
+        2.2730217699315824,
+        0.3776868683107031,
+        2.2461017139459565
+      ],
+      "beta_intercept_then_standardized_features": [
+        2.3669609079445895,
+        -25.35848219601637,
+        9.880833525262537,
+        58.39013848393995,
+        56.429358971429444,
+        1.0736927958055313,
+        7.844787491756941,
+        -8.661619781763562,
+        -55.117510861944815,
+        1.4645147937812855,
+        -0.8895019992703184,
+        -35.38687902497774,
+        0.0683429966891661,
+        37.250274697127196
+      ],
+      "training_design_rank": 14,
+      "training_rows": 26,
+      "training_columns_including_intercept": 14,
+      "training_singular_values": [
+        10.406087132343687,
+        8.385453778657729,
+        7.26367394658139,
+        7.054737838174873,
+        5.307580276349661,
+        5.099019513592786,
+        4.403887217748417,
+        2.5987888878748775,
+        1.199073067340255,
+        0.9507641488209216,
+        0.38297764543044416,
+        0.20244694010979536,
+        0.1366342226729673,
+        0.029007126538480418
+      ],
+      "training_teacher_forced_delta_fit": {
+        "n": 26,
+        "MAE": 2.748758299807368,
+        "RMSE": 3.6049493814393037,
+        "max_abs_residual": 8.785868569408732,
+        "within_1": 10
+      },
+      "holdout_teacher_forced_C": {
+        "n": 61,
+        "MAE": 187.38863814346354,
+        "RMSE": 221.70995751865894,
+        "max_abs_residual": 401.58413904975856,
+        "within_1": 0
+      },
+      "holdout_recursive_C": {
+        "n": 61,
+        "MAE": 138.1911383885659,
+        "RMSE": 166.48245298576367,
+        "max_abs_residual": 401.58413904975856,
+        "within_1": 0
+      },
+      "holdout_by_source_seconds": {
+        "15": {
+          "teacher_forced": {
+            "n": 25,
+            "MAE": 318.84624645516556,
+            "RMSE": 320.1942104060959,
+            "max_abs_residual": 401.58413904975856,
+            "within_1": 0
+          },
+          "recursive": {
+            "n": 25,
+            "MAE": 232.08772765409896,
+            "RMSE": 238.7165231101972,
+            "max_abs_residual": 401.58413904975856,
+            "within_1": 0
+          }
+        },
+        "60": {
+          "teacher_forced": {
+            "n": 36,
+            "MAE": 96.09863237144825,
+            "RMSE": 109.97036363378363,
+            "max_abs_residual": 259.84158172586234,
+            "within_1": 0
+          },
+          "recursive": {
+            "n": 36,
+            "MAE": 72.98517362083459,
+            "RMSE": 85.96856275148964,
+            "max_abs_residual": 259.84158172586234,
+            "within_1": 0
+          }
+        }
+      }
+    }
+  },
+  "residual_csv": "G:\\trading\\guias\\analisis\\residuos_C_transiciones_dinamicas.csv"
+}

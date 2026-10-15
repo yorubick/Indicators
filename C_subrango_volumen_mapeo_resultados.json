@@ -1,0 +1,413 @@
+{
+  "spec": {
+    "selectors": [
+      "volume_cross_1",
+      "volume_cross_1.5"
+    ],
+    "selection": "First up-cross as specified in C_reinicio_subrango_preregistro.json; inclusive event..END.",
+    "mapping": "C=K*selected_n*dt*10/183*volume_feature. Same22 features as prior volume test; one positiveK shared by nine controls; observedC+/-1second.",
+    "scope": "Exploratory second stage selected after descriptor audit; labels known. No training32 or validation, no arbitrary per-case coefficients."
+  },
+  "models": [
+    {
+      "selector": "volume_cross_1",
+      "feature": "1+CV",
+      "common_K_interval": [
+        0.9603909928681398,
+        0.6222080519129215
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "1+VWAP_offset_range",
+      "common_K_interval": [
+        1.368436082404326,
+        0.8879187631718793
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "1+VWAP_offset_std",
+      "common_K_interval": [
+        1.287497527233481,
+        0.8329311313180612
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "1+abs_corrPV",
+      "common_K_interval": [
+        1.1770151033365157,
+        0.7595483878876107
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "1+corrPV2",
+      "common_K_interval": [
+        1.349614698652246,
+        0.8739297975227283
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "1-abs_corrPV",
+      "common_K_interval": [
+        1.7168440670790073,
+        1.1247437884343552
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "1-corrPV2",
+      "common_K_interval": [
+        1.4469295852077615,
+        0.9421460881609829
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "EMA20_over_end",
+      "common_K_interval": [
+        1.2307088770907249,
+        0.619837809104551
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "EMA20_over_mean",
+      "common_K_interval": [
+        1.3612301927646344,
+        0.8675101819610584
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "Neff_over_n",
+      "common_K_interval": [
+        1.6846613104155104,
+        1.0963979908957824
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "end_over_EMA20",
+      "common_K_interval": [
+        2.1298687677658386,
+        0.8826225693296131
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "end_over_mean",
+      "common_K_interval": [
+        2.075959743466217,
+        0.8235791076740036
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "first_over_mean",
+      "common_K_interval": [
+        1.2711398657969917,
+        0.6423353316037379
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "inverse1+CV",
+      "common_K_interval": [
+        2.0308736449181573,
+        1.3214355124402999
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "inverse1+corrPV",
+      "common_K_interval": [
+        1.65710087381525,
+        1.0824956369279968
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "inverse1+corrPV2",
+      "common_K_interval": [
+        1.4451774704146532,
+        0.9408167775657621
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "inverse1-corrPV",
+      "common_K_interval": [
+        1.136057020921592,
+        0.7310178765855169
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "inverse1-corrPV2",
+      "common_K_interval": [
+        1.347980424322189,
+        0.8726967359477513
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "mean_over_EMA20",
+      "common_K_interval": [
+        1.4328456469742215,
+        0.9477788653331797
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "mean_over_end",
+      "common_K_interval": [
+        1.3027439813616362,
+        0.6405449189985273
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "mean_over_first",
+      "common_K_interval": [
+        1.9743810134701734,
+        0.7612272950417281
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1",
+      "feature": "n_over_Neff",
+      "common_K_interval": [
+        1.1577595711221182,
+        0.7499172953174325
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "1+CV",
+      "common_K_interval": [
+        1.2904356776367267,
+        0.6695596575151831
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "1+VWAP_offset_range",
+      "common_K_interval": [
+        1.8110489073216667,
+        0.9506934017463119
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "1+VWAP_offset_std",
+      "common_K_interval": [
+        1.6889206776949288,
+        0.894918659244788
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "1+abs_corrPV",
+      "common_K_interval": [
+        1.5121018359415668,
+        0.8173186582720767
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "1+corrPV2",
+      "common_K_interval": [
+        1.7674117456269463,
+        0.9371495572292673
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "1-abs_corrPV",
+      "common_K_interval": [
+        2.4229383380932217,
+        1.1920544557565318
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "1-corrPV2",
+      "common_K_interval": [
+        1.967520087017394,
+        1.0046865570143042
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "EMA20_over_end",
+      "common_K_interval": [
+        1.6471280504270935,
+        0.6356830521748382
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "EMA20_over_mean",
+      "common_K_interval": [
+        1.9064806943712653,
+        0.9449023443698824
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "Neff_over_n",
+      "common_K_interval": [
+        2.227549971961831,
+        1.1646621725
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "end_over_EMA20",
+      "common_K_interval": [
+        2.841672236759234,
+        0.940162024054943
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "end_over_mean",
+      "common_K_interval": [
+        2.9093915184605295,
+        0.8877797402597403
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "first_over_mean",
+      "common_K_interval": [
+        1.141173795203089,
+        0.5946126126126127
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "inverse1+CV",
+      "common_K_interval": [
+        2.6870273901838426,
+        1.4045090968275051
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "inverse1+corrPV",
+      "common_K_interval": [
+        2.2931233390912484,
+        1.1505948387828602
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "inverse1+corrPV2",
+      "common_K_interval": [
+        1.9618722234135344,
+        1.0034712416971463
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "inverse1-corrPV",
+      "common_K_interval": [
+        1.4310871872245414,
+        0.7888923407043192
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "inverse1-corrPV2",
+      "common_K_interval": [
+        1.7623383029022555,
+        0.9360159377900332
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "mean_over_EMA20",
+      "common_K_interval": [
+        1.8187627188240956,
+        0.9952379052206719
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "mean_over_end",
+      "common_K_interval": [
+        1.6565174456879528,
+        0.652395
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "mean_over_first",
+      "common_K_interval": [
+        3.8345126118795774,
+        0.98332
+      ],
+      "survives9": false
+    },
+    {
+      "selector": "volume_cross_1.5",
+      "feature": "n_over_Neff",
+      "common_K_interval": [
+        1.556614241981076,
+        0.8074467017591607
+      ],
+      "survives9": false
+    }
+  ],
+  "model_count": 44,
+  "survivors": 0,
+  "training32_used": false,
+  "reserved_validation_used": false
+}

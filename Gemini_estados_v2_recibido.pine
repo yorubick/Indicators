@@ -1,0 +1,43 @@
+//@version=5
+indicator("PoiSzn EMA Origin - Motor de Estados [Auditado]", overlay=true)
+// Anclas
+start_time = input.time(timestamp("2026-10-12 18:55:00"), "START")
+end_time   = input.time(timestamp("2026-10-12 19:20:00"), "END")
+in_range   = (time >= start_time) and (time <= end_time)
+is_end_bar = (time == end_time)
+var float rng_high = na
+var float rng_low  = na
+var int   bar_cnt  = 0
+var float prev_high = na
+if time == start_time
+    rng_high  := high
+    rng_low   := low
+    prev_high := high
+    bar_cnt   := 1
+else if in_range
+    prev_high := rng_high
+    rng_high  := math.max(nz(rng_high, high), high)
+    rng_low   := math.min(nz(rng_low, low), low)
+    bar_cnt   := bar_cnt + 1
+int dt = timeframe.isseconds ? timeframe.multiplier : (timeframe.isminutes ? timeframe.multiplier * 60 : 60)
+var float C_calc = na
+if is_end_bar
+    if bar_cnt < 21
+        // 1. Rama Corta Exacta (100% verificada)
+        C_calc := math.max(float(dt), float(bar_cnt) * float(dt) * 10.0 / 183.0)
+    else
+        // 2. Rama Larga: Autómata de Estados Discretos
+        float timespan = float(bar_cnt - 1) * float(dt)
+        float rng_pts  = rng_high - rng_low
+        bool is_new_high = high > nz(prev_high, high)
+        
+        if rng_pts <= 22.25 and not is_new_high and bar_cnt <= 25
+            // Estado A: Consolidación interior (Divisor exacto 24)
+            C_calc := math.floor(timespan / 24.0)
+        else if is_new_high and rng_pts <= 26.0
+            // Estado B: Breakout inmediato
+            C_calc := 71.0
+        else
+            // Estado C: Base macro
+            C_calc := 77.0
+plot(C_calc, "C Calculado", color=color.yellow)

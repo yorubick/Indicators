@@ -1,0 +1,17 @@
+{
+ "date":"2026-10-14","day_UTC":"2026-10-12","source_seconds":60,"chart_seconds":60,
+ "scope":"Price-only identification on18:35–19:35 native OHLCV. Prior C labels are known; this is prospective anchor registration, not blind setup discovery.",
+ "operational_definition":"Use strict one-bar pivots confirmed by both adjacent candles; equal high/low does not qualify. Bullish structure candidate has a new low, recovery pivot high, first later close above that recovery high, and retracement lows staying above the new low. This is an operational interpretation of the public demonstration, not claimed exact proprietary detector.",
+ "events":[
+  {"id":"prior_high","time":"18:45","price":30886.50,"role":"Top before descending leg"},
+  {"id":"origin_low","time":"18:52","price":30844.25,"role":"Strict local low; new low below18:38low30869.75 and18:41low30873.50"},
+  {"id":"recovery_high","time":"18:54","price":30861.50,"role":"First confirmed recovery high"},
+  {"id":"first_close_break","time":"19:05","price":30863.00,"role":"First close after18:54 strictly above30861.50;19:01wick30863.50 alone is not a close break"},
+  {"id":"mitigation_first","time":"19:10","price":30849.00,"role":"First strict local low after close break; above origin low"},
+  {"id":"mitigation_last","time":"19:17","price":30851.50,"role":"Last strict local low before first close above19:05high30864.50 at19:19close30866.50"}
+ ],
+ "registered_A_cases":[{"id":"A_first","START":"18:52","END":"19:10"},{"id":"A_last","START":"18:52","END":"19:17"}],
+ "B_status":"Failure-swing start not yet assigned; inspect author's second box visually before registering B. Do not force prior18:41higherlow into that definition without evidence.",
+ "neighbor_controls":"For each accepted box, move START +/-1minute with END fixed, then END +/-1minute with START fixed. Two exports each; same symbol/version/source. Geometry and counts recorded before C.",
+ "limits":"Pivots include one-bar confirmation and are retrospective labels. Ambiguous mitigation endpoints retained. A future new-setup prediction requires a concrete rule not yet discovered."
+}

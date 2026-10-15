@@ -1,0 +1,11 @@
+{
+  "sources": [
+    "C_recorte1903_30_c.csv",
+    "C_recorte1903_30_d.csv"
+  ],
+  "join": "All selected timestamps must have identical OHLC and Volume in both closed-bar exports. Native15s, no disaggregation of1m.",
+  "simple_models": "Same22 volume features from previous1m test, raw=n*dt*10/183*feature. Common K>0 across nine cases; observed C+/-1second generous necessary interval.",
+  "peak_descriptor": "dt,n,H,L,ENDclose,peak_volume_timestamp,peak_volume_value,peak_barOHLC; first timestamp wins ties. Identical descriptor and differentC rejects any function exclusively of those inputs.",
+  "suffix_descriptor": "dt,END and last80 complete OHLCV bars; not n or earlier history. Sufficiency only, no fitted classifier.",
+  "scope": "Known overlapping local9, exploratory. No training32/reserved validation. Rejects explicit simple families only, not all volume dependence."
+}

@@ -1,0 +1,127 @@
+[
+  {
+    "model": [
+      "forward",
+      "hlc3",
+      "all",
+      "range_high",
+      "before",
+      "low",
+      "first_contact_min_N"
+    ],
+    "refinements": [
+      {
+        "grid_points": 4800,
+        "K_min": 0.42589327010331784,
+        "K_max": 1.7992981057131545,
+        "max_relative_change_from_1200": 1.1927317938531523e-05
+      },
+      {
+        "grid_points": 19200,
+        "K_min": 0.42589327718065517,
+        "K_max": 1.7992983683907415,
+        "max_relative_change_from_1200": 1.2544986742524245e-05
+      }
+    ]
+  },
+  {
+    "model": [
+      "forward",
+      "hlc3",
+      "skip_end",
+      "range_high",
+      "before",
+      "low",
+      "first_contact_min_N"
+    ],
+    "refinements": [
+      {
+        "grid_points": 4800,
+        "K_min": 0.42589327010331784,
+        "K_max": 1.7992981057131545,
+        "max_relative_change_from_1200": 1.1927317938531523e-05
+      },
+      {
+        "grid_points": 19200,
+        "K_min": 0.42589327718065517,
+        "K_max": 1.7992983683907415,
+        "max_relative_change_from_1200": 1.2544986742524245e-05
+      }
+    ]
+  },
+  {
+    "model": [
+      "forward",
+      "close",
+      "all",
+      "low",
+      "before",
+      "close",
+      "first_contact_min_N"
+    ],
+    "refinements": [
+      {
+        "grid_points": 4800,
+        "K_min": 0.2851489420530736,
+        "K_max": 1.3878223193907906,
+        "max_relative_change_from_1200": 1.1232729750898507e-05
+      },
+      {
+        "grid_points": 19200,
+        "K_min": 0.2851487910882359,
+        "K_max": 1.38782156708907,
+        "max_relative_change_from_1200": 1.2222450382459726e-05
+      }
+    ]
+  },
+  {
+    "model": [
+      "forward",
+      "close",
+      "all",
+      "low",
+      "before",
+      "close",
+      "first_contact_max_N"
+    ],
+    "refinements": [
+      {
+        "grid_points": 4800,
+        "K_min": 0.2851489420530736,
+        "K_max": 1.3878223193907906,
+        "max_relative_change_from_1200": 1.1232729750898507e-05
+      },
+      {
+        "grid_points": 19200,
+        "K_min": 0.2851487910882359,
+        "K_max": 1.38782156708907,
+        "max_relative_change_from_1200": 1.2222450382459726e-05
+      }
+    ]
+  },
+  {
+    "model": [
+      "forward",
+      "close",
+      "skip_end",
+      "low",
+      "before",
+      "close",
+      "first_contact_min_N"
+    ],
+    "refinements": [
+      {
+        "grid_points": 4800,
+        "K_min": 0.2851489420530736,
+        "K_max": 1.3878223193907906,
+        "max_relative_change_from_1200": 1.1232729750898507e-05
+      },
+      {
+        "grid_points": 19200,
+        "K_min": 0.2851487910882359,
+        "K_max": 1.38782156708907,
+        "max_relative_change_from_1200": 1.2222450382459726e-05
+      }
+    ]
+  }
+]

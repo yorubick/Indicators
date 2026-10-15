@@ -1,0 +1,7 @@
+case,measurement,prediction,C_observed,residual_observed_minus_prediction
+tf15_long,base,66.99999999999912,66.99999999999912,0.0
+tf15_long,double_price,66.99999999999912,,
+tf60_long,base,76.99999999999851,76.99999999999936,8.526512829121202e-13
+tf60_long,double_price,76.99999999999851,,
+tf120_short,base,120.00000000000124,120.00000000000124,0.0
+tf120_short,double_price,120.00000000000124,,

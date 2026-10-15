@@ -1,0 +1,894 @@
+[
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_manual_15m_1m.csv",
+    "rows_closed": 980,
+    "layers": {
+      "Layer A": {
+        "source": "close",
+        "alpha": 0.07999999999999884,
+        "period": 24.000000000000362,
+        "rmse_step": 1.5171079108768095e-12,
+        "max_error_step": 3.786748692391484e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.08305095120801842,
+            "period": 23.081602569374347,
+            "rmse_step": 0.2970840737903958,
+            "max_error_step": 2.601733913215101,
+            "pairs": 876
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.08215673850234033,
+            "period": 23.34371223174868,
+            "rmse_step": 0.31828415191079656,
+            "max_error_step": 2.6738965984620453,
+            "pairs": 876
+          },
+          {
+            "source": "low",
+            "alpha": 0.065087079237206,
+            "period": 29.728064977552897,
+            "rmse_step": 0.4689810744724976,
+            "max_error_step": 3.9854146164328466,
+            "pairs": 876
+          },
+          {
+            "source": "high",
+            "alpha": 0.08627314535819988,
+            "period": 22.182184811926632,
+            "rmse_step": 0.5751769509693269,
+            "max_error_step": 3.0962680610204845,
+            "pairs": 876
+          }
+        ]
+      },
+      "Layer A boundary": {
+        "source": "close",
+        "alpha": 0.06451612903225931,
+        "period": 29.9999999999994,
+        "rmse_step": 1.4736289023135832e-12,
+        "max_error_step": 3.651301483387215e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.0664452242236564,
+            "period": 29.099981200574277,
+            "rmse_step": 0.24028873854516064,
+            "max_error_step": 2.081808374819543,
+            "pairs": 876
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.06585775002915684,
+            "period": 29.36848357428778,
+            "rmse_step": 0.2570543768025141,
+            "max_error_step": 2.142969791350707,
+            "pairs": 876
+          },
+          {
+            "source": "low",
+            "alpha": 0.053369890101344325,
+            "period": 36.474313628943044,
+            "rmse_step": 0.3743517069410076,
+            "max_error_step": 3.227296343330747,
+            "pairs": 876
+          },
+          {
+            "source": "high",
+            "alpha": 0.07100440427853587,
+            "period": 27.16726681001936,
+            "rmse_step": 0.45809791714826126,
+            "max_error_step": 2.4619833256216426,
+            "pairs": 876
+          }
+        ]
+      },
+      "Layer B": {
+        "source": "close",
+        "alpha": 0.2222222222222207,
+        "period": 8.00000000000006,
+        "rmse_step": 1.5542735745628753e-12,
+        "max_error_step": 3.653077840226615e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.250000000004,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.2507872320038194,
+            "period": 6.974887652851245,
+            "rmse_step": 0.79511979373507,
+            "max_error_step": 7.169431924069697,
+            "pairs": 876
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.24365156611128583,
+            "period": 7.20844303166316,
+            "rmse_step": 0.8671182826852806,
+            "max_error_step": 7.42531361679684,
+            "pairs": 876
+          },
+          {
+            "source": "low",
+            "alpha": 0.16236522932992528,
+            "period": 11.317908263080211,
+            "rmse_step": 1.3430634667995889,
+            "max_error_step": 11.753890411926944,
+            "pairs": 876
+          },
+          {
+            "source": "high",
+            "alpha": 0.19312104739259808,
+            "period": 9.356199010945586,
+            "rmse_step": 1.5936581043467675,
+            "max_error_step": 9.591425063225286,
+            "pairs": 876
+          }
+        ]
+      },
+      "Layer B boundary": {
+        "source": "close",
+        "alpha": 0.18181818181818096,
+        "period": 10.000000000000052,
+        "rmse_step": 1.5203928456547297e-12,
+        "max_error_step": 3.987032926033862e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.1999842544799728,
+            "period": 9.000787337986589,
+            "rmse_step": 0.6588510514739923,
+            "max_error_step": 5.950207411407889,
+            "pairs": 876
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.19530762786203318,
+            "period": 9.240255446719242,
+            "rmse_step": 0.7142615300211745,
+            "max_error_step": 6.129689023761267,
+            "pairs": 876
+          },
+          {
+            "source": "low",
+            "alpha": 0.13640860176566172,
+            "period": 13.661831982090312,
+            "rmse_step": 1.0952433241232467,
+            "max_error_step": 9.407446236513003,
+            "pairs": 876
+          },
+          {
+            "source": "high",
+            "alpha": 0.1674651819275881,
+            "period": 10.942781042478426,
+            "rmse_step": 1.3148428109558667,
+            "max_error_step": 7.636791861231874,
+            "pairs": 876
+          }
+        ]
+      },
+      "Layer C": {
+        "source": "close",
+        "alpha": 0.49999999999999634,
+        "period": 3.0000000000000293,
+        "rmse_step": 1.0279535789795036e-12,
+        "max_error_step": 1.8971491044794675e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.70015198740616,
+            "period": 1.8565226350486594,
+            "rmse_step": 1.535768542941896,
+            "max_error_step": 11.891900291743722,
+            "pairs": 876
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.6515901429649292,
+            "period": 2.069414142607198,
+            "rmse_step": 1.8086353677916296,
+            "max_error_step": 13.650901561750272,
+            "pairs": 876
+          },
+          {
+            "source": "low",
+            "alpha": 0.312274269381394,
+            "period": 5.40462630482473,
+            "rmse_step": 3.0129499691066504,
+            "max_error_step": 29.52639438992313,
+            "pairs": 876
+          },
+          {
+            "source": "high",
+            "alpha": 0.31748695329063353,
+            "period": 5.299471456293709,
+            "rmse_step": 3.3864152264834546,
+            "max_error_step": 22.303869436605595,
+            "pairs": 876
+          }
+        ]
+      },
+      "Layer C boundary": {
+        "source": "close",
+        "alpha": 0.49999999999999634,
+        "period": 3.0000000000000293,
+        "rmse_step": 1.0279535789795036e-12,
+        "max_error_step": 1.8971491044794675e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.70015198740616,
+            "period": 1.8565226350486594,
+            "rmse_step": 1.535768542941896,
+            "max_error_step": 11.891900291743722,
+            "pairs": 876
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.6515901429649292,
+            "period": 2.069414142607198,
+            "rmse_step": 1.8086353677916296,
+            "max_error_step": 13.650901561750272,
+            "pairs": 876
+          },
+          {
+            "source": "low",
+            "alpha": 0.312274269381394,
+            "period": 5.40462630482473,
+            "rmse_step": 3.0129499691066504,
+            "max_error_step": 29.52639438992313,
+            "pairs": 876
+          },
+          {
+            "source": "high",
+            "alpha": 0.31748695329063353,
+            "period": 5.299471456293709,
+            "rmse_step": 3.3864152264834546,
+            "max_error_step": 22.303869436605595,
+            "pairs": 876
+          }
+        ]
+      },
+      "Extra cloud 1": {
+        "source": "close",
+        "alpha": 0.027397260273972657,
+        "period": 71.99999999999986,
+        "rmse_step": 1.4465670584788776e-12,
+        "max_error_step": 3.539391002504999e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.02770683796376284,
+            "period": 71.1843467888958,
+            "rmse_step": 0.10270434343805117,
+            "max_error_step": 0.8592805795948444,
+            "pairs": 876
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.027589106596946664,
+            "period": 71.49238002586657,
+            "rmse_step": 0.10950053293884078,
+            "max_error_step": 0.8905917189816928,
+            "pairs": 876
+          },
+          {
+            "source": "low",
+            "alpha": 0.023862370568853156,
+            "period": 82.81396953957879,
+            "rmse_step": 0.14961445885958416,
+            "max_error_step": 1.4322963946573752,
+            "pairs": 876
+          },
+          {
+            "source": "high",
+            "alpha": 0.030911146209122754,
+            "period": 63.701580021311,
+            "rmse_step": 0.17900987514512132,
+            "max_error_step": 0.9815362487215525,
+            "pairs": 876
+          }
+        ]
+      },
+      "Extra cloud 1 boundary": {
+        "source": "close",
+        "alpha": 0.0222222222222214,
+        "period": 89.00000000000333,
+        "rmse_step": 1.509043630965482e-12,
+        "max_error_step": 3.6204372833026355e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.022419064761293628,
+            "period": 88.20978735263691,
+            "rmse_step": 0.08337416313277453,
+            "max_error_step": 0.6935528255934773,
+            "pairs": 876
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.022338568066611084,
+            "period": 88.53125348214917,
+            "rmse_step": 0.08885002459872007,
+            "max_error_step": 0.7197814481728615,
+            "pairs": 876
+          },
+          {
+            "source": "low",
+            "alpha": 0.01954599512421494,
+            "period": 101.32275140201281,
+            "rmse_step": 0.1187419618264171,
+            "max_error_step": 1.1762368724671513,
+            "pairs": 876
+          },
+          {
+            "source": "high",
+            "alpha": 0.02502998349151921,
+            "period": 78.90416776254169,
+            "rmse_step": 0.14118975453084986,
+            "max_error_step": 0.7883818081000927,
+            "pairs": 876
+          }
+        ]
+      },
+      "Extra cloud 2": {
+        "source": "close",
+        "alpha": 0.009216589861751025,
+        "period": 216.00000000000298,
+        "rmse_step": 1.533457643763896e-12,
+        "max_error_step": 3.5605407511241083e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.009246284668808117,
+            "period": 215.3030959610081,
+            "rmse_step": 0.034638913620080126,
+            "max_error_step": 0.2843121165917146,
+            "pairs": 876
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.009231273548123474,
+            "period": 215.6548298643537,
+            "rmse_step": 0.03687364351047224,
+            "max_error_step": 0.2962525273088181,
+            "pairs": 876
+          },
+          {
+            "source": "low",
+            "alpha": 0.008450854950932665,
+            "period": 235.66244558833344,
+            "rmse_step": 0.04466747958769897,
+            "max_error_step": 0.5133375462979508,
+            "pairs": 876
+          },
+          {
+            "source": "high",
+            "alpha": 0.010086588829348434,
+            "period": 197.2830899362827,
+            "rmse_step": 0.05151614994962581,
+            "max_error_step": 0.32203878600169455,
+            "pairs": 876
+          }
+        ]
+      },
+      "Extra cloud 2 boundary": {
+        "source": "close",
+        "alpha": 0.007462686567165018,
+        "period": 266.9999999999699,
+        "rmse_step": 1.5234648763481092e-12,
+        "max_error_step": 3.5267344600242723e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.249999999996,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.007481883190639218,
+            "period": 266.3123796562679,
+            "rmse_step": 0.02805162363019036,
+            "max_error_step": 0.22992656771837916,
+            "pairs": 876
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.007472138723341967,
+            "period": 266.66098356181027,
+            "rmse_step": 0.029857720316796194,
+            "max_error_step": 0.23972959083769718,
+            "pairs": 876
+          },
+          {
+            "source": "low",
+            "alpha": 0.006913256560633641,
+            "period": 288.2992589612048,
+            "rmse_step": 0.035649153858074566,
+            "max_error_step": 0.4201689515059879,
+            "pairs": 876
+          },
+          {
+            "source": "high",
+            "alpha": 0.008083859944081194,
+            "period": 246.40656243857262,
+            "rmse_step": 0.040816180892560894,
+            "max_error_step": 0.26053832408717376,
+            "pairs": 876
+          }
+        ]
+      }
+    }
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_manual_30m_1m_recarga.csv",
+    "rows_closed": 300,
+    "layers": {
+      "Layer A": {
+        "source": "close",
+        "alpha": 0.042553191489359994,
+        "period": 46.00000000000188,
+        "rmse_step": 1.4578053363929447e-12,
+        "max_error_step": 3.547107052526144e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30912.95120801915,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.04353112513777812,
+            "period": 44.94413752619311,
+            "rmse_step": 0.12738976811618608,
+            "max_error_step": 0.46490163303424425,
+            "pairs": 299
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.04338545091754776,
+            "period": 45.098402983085656,
+            "rmse_step": 0.13816158165106635,
+            "max_error_step": 0.46970208345747544,
+            "pairs": 299
+          },
+          {
+            "source": "low",
+            "alpha": 0.038684153448673625,
+            "period": 50.70075655535832,
+            "rmse_step": 0.2288585562635854,
+            "max_error_step": 0.9058514571210212,
+            "pairs": 299
+          },
+          {
+            "source": "high",
+            "alpha": 0.04129729567906899,
+            "period": 47.429321269423326,
+            "rmse_step": 0.25176346140991845,
+            "max_error_step": 0.9987139515500181,
+            "pairs": 299
+          }
+        ]
+      },
+      "Layer A boundary": {
+        "source": "close",
+        "alpha": 0.034482758620692805,
+        "period": 56.9999999999947,
+        "rmse_step": 1.4182829261440717e-12,
+        "max_error_step": 3.3045788327967784e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30922.15344185585,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.03507921319014059,
+            "period": 56.013821523286694,
+            "rmse_step": 0.1034869706404691,
+            "max_error_step": 0.372860380638901,
+            "pairs": 299
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.03495184424603675,
+            "period": 56.22158710485738,
+            "rmse_step": 0.1121817154125149,
+            "max_error_step": 0.3785316578125824,
+            "pairs": 299
+          },
+          {
+            "source": "low",
+            "alpha": 0.03107982652220887,
+            "period": 63.35042353183181,
+            "rmse_step": 0.1819719778549335,
+            "max_error_step": 0.7421083693668354,
+            "pairs": 299
+          },
+          {
+            "source": "high",
+            "alpha": 0.03440208836631111,
+            "period": 57.136005544318564,
+            "rmse_step": 0.20466891768960305,
+            "max_error_step": 0.8188093267078523,
+            "pairs": 299
+          }
+        ]
+      },
+      "Layer B": {
+        "source": "close",
+        "alpha": 0.1249999999999983,
+        "period": 15.000000000000217,
+        "rmse_step": 1.0494826956538037e-12,
+        "max_error_step": 1.8482992913959606e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30894.37495942619,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.13418212686635544,
+            "period": 13.905114762355701,
+            "rmse_step": 0.3662563103209703,
+            "max_error_step": 1.4256047700136292,
+            "pairs": 299
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.13308905922350422,
+            "period": 14.027531276190654,
+            "rmse_step": 0.4000354261900245,
+            "max_error_step": 1.401823956239699,
+            "pairs": 299
+          },
+          {
+            "source": "low",
+            "alpha": 0.10801163038779121,
+            "period": 17.516524496662576,
+            "rmse_step": 0.6758272403241481,
+            "max_error_step": 2.6269732296633017,
+            "pairs": 299
+          },
+          {
+            "source": "high",
+            "alpha": 0.10694813791832622,
+            "period": 17.700652848461495,
+            "rmse_step": 0.7158537263960966,
+            "max_error_step": 3.116523256963253,
+            "pairs": 299
+          }
+        ]
+      },
+      "Layer B boundary": {
+        "source": "close",
+        "alpha": 0.10000000000001258,
+        "period": 18.999999999997485,
+        "rmse_step": 1.4904186631442437e-12,
+        "max_error_step": 3.68904906622447e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30895.003510371946,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.10577668674615413,
+            "period": 17.907758046909297,
+            "rmse_step": 0.2948777562209337,
+            "max_error_step": 1.13864542890386,
+            "pairs": 299
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.10518281377485321,
+            "period": 18.014513191109877,
+            "rmse_step": 0.3211903118899407,
+            "max_error_step": 1.1245295626137188,
+            "pairs": 299
+          },
+          {
+            "source": "low",
+            "alpha": 0.08879293477451246,
+            "period": 21.52431463245305,
+            "rmse_step": 0.5441689366478896,
+            "max_error_step": 2.0979968952688495,
+            "pairs": 299
+          },
+          {
+            "source": "high",
+            "alpha": 0.08829409766473766,
+            "period": 21.65157074931802,
+            "rmse_step": 0.5769381706037785,
+            "max_error_step": 2.4770453271615516,
+            "pairs": 299
+          }
+        ]
+      },
+      "Layer C": {
+        "source": "close",
+        "alpha": 0.3333333333333368,
+        "period": 4.999999999999938,
+        "rmse_step": 1.6814616088950697e-12,
+        "max_error_step": 2.4984458946164523e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30898.019909479088,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.4129071669079396,
+            "period": 3.843703767549071,
+            "rmse_step": 0.9086246369778468,
+            "max_error_step": 3.4581021982259523,
+            "pairs": 299
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.395052569003376,
+            "period": 4.062617375316723,
+            "rmse_step": 1.03264814474596,
+            "max_error_step": 3.5542809959504087,
+            "pairs": 299
+          },
+          {
+            "source": "low",
+            "alpha": 0.22899288385740593,
+            "period": 7.733895858726342,
+            "rmse_step": 1.6981352925182307,
+            "max_error_step": 6.413534594031757,
+            "pairs": 299
+          },
+          {
+            "source": "high",
+            "alpha": 0.2233572734026492,
+            "period": 7.954264034171715,
+            "rmse_step": 1.818194756572087,
+            "max_error_step": 8.336719242059853,
+            "pairs": 299
+          }
+        ]
+      },
+      "Layer C boundary": {
+        "source": "close",
+        "alpha": 0.28571428571426677,
+        "period": 6.0000000000004645,
+        "rmse_step": 1.8005492388273755e-12,
+        "max_error_step": 4.2379433295991475e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30897.16176546585,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.3414788369001231,
+            "period": 4.85687833001776,
+            "rmse_step": 0.7950855626739525,
+            "max_error_step": 3.031229409904115,
+            "pairs": 299
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.32993900739268595,
+            "period": 5.061726425756156,
+            "rmse_step": 0.8928004848222174,
+            "max_error_step": 3.091828584970556,
+            "pairs": 299
+          },
+          {
+            "source": "low",
+            "alpha": 0.20550096297063192,
+            "period": 8.732314491810042,
+            "rmse_step": 1.4724863681811646,
+            "max_error_step": 5.64255074973015,
+            "pairs": 299
+          },
+          {
+            "source": "high",
+            "alpha": 0.20157018995058398,
+            "period": 8.92210207516454,
+            "rmse_step": 1.57301955592622,
+            "max_error_step": 7.173130851521916,
+            "pairs": 299
+          }
+        ]
+      },
+      "Extra cloud 1": {
+        "source": "close",
+        "alpha": 0.014285714285710707,
+        "period": 139.00000000003507,
+        "rmse_step": 1.411306167434151e-12,
+        "max_error_step": 3.5565439482354577e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30973.130792706605,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.014310712262212427,
+            "period": 138.75544776209492,
+            "rmse_step": 0.043084626473553676,
+            "max_error_step": 0.1587953118477291,
+            "pairs": 299
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.014267087584159111,
+            "period": 139.18277999643178,
+            "rmse_step": 0.046596735701152824,
+            "max_error_step": 0.16326109617398565,
+            "pairs": 299
+          },
+          {
+            "source": "low",
+            "alpha": 0.012742275301281976,
+            "period": 155.9578393741645,
+            "rmse_step": 0.06056425526892654,
+            "max_error_step": 0.27813814012195637,
+            "pairs": 299
+          },
+          {
+            "source": "high",
+            "alpha": 0.01575492275728449,
+            "period": 125.94444973240344,
+            "rmse_step": 0.07468859833637512,
+            "max_error_step": 0.3280504644658323,
+            "pairs": 299
+          }
+        ]
+      },
+      "Extra cloud 1 boundary": {
+        "source": "close",
+        "alpha": 0.011560693641611641,
+        "period": 172.0000000001026,
+        "rmse_step": 1.5376348467932855e-12,
+        "max_error_step": 3.4454106234704795e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30986.64472160387,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.011567957606373101,
+            "period": 171.89136665733852,
+            "rmse_step": 0.034870556964303245,
+            "max_error_step": 0.1289992844738035,
+            "pairs": 299
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.011539909223875088,
+            "period": 172.31158860956813,
+            "rmse_step": 0.037703296852355114,
+            "max_error_step": 0.13246032183703327,
+            "pairs": 299
+          },
+          {
+            "source": "low",
+            "alpha": 0.010435901244748297,
+            "period": 190.64612169997952,
+            "rmse_step": 0.04574082710450356,
+            "max_error_step": 0.2115309044596015,
+            "pairs": 299
+          },
+          {
+            "source": "high",
+            "alpha": 0.012720675384527126,
+            "period": 156.22435637597613,
+            "rmse_step": 0.05664215840669454,
+            "max_error_step": 0.25553471111160386,
+            "pairs": 299
+          }
+        ]
+      },
+      "Extra cloud 2": {
+        "source": "close",
+        "alpha": 0.0047732696897388426,
+        "period": 417.99999999987955,
+        "rmse_step": 1.448494254459336e-12,
+        "max_error_step": 3.597955267053976e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 31051.838146352577,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.004772738585540872,
+            "period": 418.04662577980883,
+            "rmse_step": 0.01439797654233847,
+            "max_error_step": 0.053452957505781995,
+            "pairs": 299
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.004769114867004362,
+            "period": 418.3650301520764,
+            "rmse_step": 0.015566059256509703,
+            "max_error_step": 0.054701981473932904,
+            "pairs": 299
+          },
+          {
+            "source": "low",
+            "alpha": 0.004545292797823342,
+            "period": 439.01565772787256,
+            "rmse_step": 0.016161378031600424,
+            "max_error_step": 0.07240548979773237,
+            "pairs": 299
+          },
+          {
+            "source": "high",
+            "alpha": 0.005011311870803733,
+            "period": 398.09709304905675,
+            "rmse_step": 0.01987258131350347,
+            "max_error_step": 0.08803644455962206,
+            "pairs": 299
+          }
+        ]
+      },
+      "Extra cloud 2 boundary": {
+        "source": "close",
+        "alpha": 0.0038684719535784693,
+        "period": 515.9999999999823,
+        "rmse_step": 1.5603489952038733e-12,
+        "max_error_step": 3.4906522117239547e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 31069.98507489486,
+        "alternatives": [
+          {
+            "source": "ohlc4",
+            "alpha": 0.0038681126045326166,
+            "period": 516.0480294850826,
+            "rmse_step": 0.011668764911878418,
+            "max_error_step": 0.04332057819931734,
+            "pairs": 299
+          },
+          {
+            "source": "hl2",
+            "alpha": 0.0038658161206381915,
+            "period": 516.3551813089931,
+            "rmse_step": 0.012615748235010212,
+            "max_error_step": 0.04431413533096146,
+            "pairs": 299
+          },
+          {
+            "source": "low",
+            "alpha": 0.003714100774069636,
+            "period": 537.4883506562877,
+            "rmse_step": 0.013019010927096468,
+            "max_error_step": 0.05764988917159375,
+            "pairs": 299
+          },
+          {
+            "source": "high",
+            "alpha": 0.004027996401847141,
+            "period": 495.5247732303953,
+            "rmse_step": 0.01594244343372753,
+            "max_error_step": 0.07118593337943518,
+            "pairs": 299
+          }
+        ]
+      }
+    }
+  }
+]

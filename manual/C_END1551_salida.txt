@@ -1,0 +1,268 @@
+{
+  "cases": [
+    {
+      "prefix": "C_END1551_START_1526",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "reused": false,
+      "START": "2026-10-12T15:26:00+00:00",
+      "END": "2026-10-12T15:51:00+00:00",
+      "bars": 26,
+      "C": 82.00000000000078,
+      "prediction_before_measurement": 75,
+      "prediction_kind": "prefix_irrelevant",
+      "prediction_match": false,
+      "high": 30965.5,
+      "low": 30877.75,
+      "Character_interval": {
+        "lower_inclusive": 81.91011235955057,
+        "upper_exclusive": 82.08333333333333
+      },
+      "repeated_curve_cells": 40176
+    },
+    {
+      "prefix": "C_END1551_START_1527",
+      "pair": [
+        "e",
+        "f"
+      ],
+      "reused": false,
+      "START": "2026-10-12T15:27:00+00:00",
+      "END": "2026-10-12T15:51:00+00:00",
+      "bars": 25,
+      "C": 93.00000000000269,
+      "prediction_before_measurement": 75,
+      "prediction_kind": "prefix_irrelevant",
+      "prediction_match": false,
+      "high": 30965.5,
+      "low": 30877.75,
+      "Character_interval": {
+        "lower_inclusive": 92.92134831460675,
+        "upper_exclusive": 93.14606741573034
+      },
+      "repeated_curve_cells": 40224
+    },
+    {
+      "prefix": "C_END1551_START_1528",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "reused": false,
+      "START": "2026-10-12T15:28:00+00:00",
+      "END": "2026-10-12T15:51:00+00:00",
+      "bars": 24,
+      "C": 75.00000000000051,
+      "prediction_before_measurement": 75,
+      "prediction_kind": "prefix_irrelevant",
+      "prediction_match": true,
+      "high": 30965.5,
+      "low": 30877.75,
+      "Character_interval": {
+        "lower_inclusive": 74.9438202247191,
+        "upper_exclusive": 75.13888888888889
+      },
+      "repeated_curve_cells": 40192
+    },
+    {
+      "prefix": "C_23_shift_1529",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "reused": true,
+      "START": "2026-10-12T15:29:00+00:00",
+      "END": "2026-10-12T15:51:00+00:00",
+      "bars": 23,
+      "C": 75.00000000000047,
+      "prediction_before_measurement": null,
+      "prediction_kind": "prefix_irrelevant",
+      "prediction_match": null,
+      "high": 30965.5,
+      "low": 30877.75,
+      "Character_interval": {
+        "lower_inclusive": 74.9438202247191,
+        "upper_exclusive": 75.13888888888889
+      },
+      "repeated_curve_cells": 40032
+    },
+    {
+      "prefix": "C_23_cross_1530_1551",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "reused": true,
+      "START": "2026-10-12T15:30:00+00:00",
+      "END": "2026-10-12T15:51:00+00:00",
+      "bars": 22,
+      "C": 67.99999999999896,
+      "prediction_before_measurement": null,
+      "prediction_kind": "prefix_irrelevant",
+      "prediction_match": null,
+      "high": 30965.5,
+      "low": 30877.75,
+      "Character_interval": {
+        "lower_inclusive": 67.97752808988764,
+        "upper_exclusive": 68.19444444444444
+      },
+      "repeated_curve_cells": 40048
+    },
+    {
+      "prefix": "C_END1551_START_1531",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "reused": false,
+      "START": "2026-10-12T15:31:00+00:00",
+      "END": "2026-10-12T15:51:00+00:00",
+      "bars": 21,
+      "C": 67.99999999999899,
+      "prediction_before_measurement": null,
+      "prediction_kind": "prefix_irrelevant",
+      "prediction_match": null,
+      "high": 30965.5,
+      "low": 30877.75,
+      "Character_interval": {
+        "lower_inclusive": 67.97752808988764,
+        "upper_exclusive": 68.19444444444444
+      },
+      "repeated_curve_cells": 40192
+    },
+    {
+      "prefix": "C_END1552_START_1527",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "reused": false,
+      "START": "2026-10-12T15:27:00+00:00",
+      "END": "2026-10-12T15:52:00+00:00",
+      "bars": 26,
+      "C": 82.00000000000092,
+      "prediction_before_measurement": 93,
+      "prediction_kind": "END52_continuity",
+      "prediction_match": false,
+      "high": 30965.5,
+      "low": 30877.75,
+      "Character_interval": {
+        "lower_inclusive": 81.91011235955057,
+        "upper_exclusive": 82.08333333333333
+      },
+      "repeated_curve_cells": 40224
+    },
+    {
+      "prefix": "C_END1552_START_1528",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "reused": false,
+      "START": "2026-10-12T15:28:00+00:00",
+      "END": "2026-10-12T15:52:00+00:00",
+      "bars": 25,
+      "C": 80.99999999999949,
+      "prediction_before_measurement": 75,
+      "prediction_kind": "END52_continuity",
+      "prediction_match": false,
+      "high": 30965.5,
+      "low": 30877.75,
+      "Character_interval": {
+        "lower_inclusive": 80.97222222222223,
+        "upper_exclusive": 81.01123595505618
+      },
+      "repeated_curve_cells": 40224
+    }
+  ],
+  "transitions": [
+    {
+      "from": "2026-10-12T15:26:00+00:00",
+      "to": "2026-10-12T15:27:00+00:00",
+      "C_from": 82.00000000000078,
+      "C_to": 93.00000000000269,
+      "same_global_extrema": true,
+      "removed": [
+        {
+          "time": 1791818760,
+          "open": 30895.75,
+          "high": 30905.5,
+          "low": 30894.25,
+          "close": 30904.75
+        }
+      ],
+      "shared_OHLC_bars": 25
+    },
+    {
+      "from": "2026-10-12T15:27:00+00:00",
+      "to": "2026-10-12T15:28:00+00:00",
+      "C_from": 93.00000000000269,
+      "C_to": 75.00000000000051,
+      "same_global_extrema": true,
+      "removed": [
+        {
+          "time": 1791818820,
+          "open": 30905.0,
+          "high": 30905.25,
+          "low": 30892.0,
+          "close": 30893.25
+        }
+      ],
+      "shared_OHLC_bars": 24
+    },
+    {
+      "from": "2026-10-12T15:28:00+00:00",
+      "to": "2026-10-12T15:29:00+00:00",
+      "C_from": 75.00000000000051,
+      "C_to": 75.00000000000047,
+      "same_global_extrema": true,
+      "removed": [
+        {
+          "time": 1791818880,
+          "open": 30893.75,
+          "high": 30900.75,
+          "low": 30893.25,
+          "close": 30898.25
+        }
+      ],
+      "shared_OHLC_bars": 23
+    },
+    {
+      "from": "2026-10-12T15:29:00+00:00",
+      "to": "2026-10-12T15:30:00+00:00",
+      "C_from": 75.00000000000047,
+      "C_to": 67.99999999999896,
+      "same_global_extrema": true,
+      "removed": [
+        {
+          "time": 1791818940,
+          "open": 30898.0,
+          "high": 30898.5,
+          "low": 30885.5,
+          "close": 30886.0
+        }
+      ],
+      "shared_OHLC_bars": 22
+    },
+    {
+      "from": "2026-10-12T15:30:00+00:00",
+      "to": "2026-10-12T15:31:00+00:00",
+      "C_from": 67.99999999999896,
+      "C_to": 67.99999999999899,
+      "same_global_extrema": true,
+      "removed": [
+        {
+          "time": 1791819000,
+          "open": 30885.75,
+          "high": 30894.0,
+          "low": 30885.0,
+          "close": 30892.25
+        }
+      ],
+      "shared_OHLC_bars": 21
+    }
+  ],
+  "failures": []
+}

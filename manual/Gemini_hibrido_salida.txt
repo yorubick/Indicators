@@ -1,0 +1,262 @@
+{
+  "sha256": "bd4fd5694982867eefbc5bb7b6b6abf3a93cbe2578e75dba392d60709ff5138f",
+  "summary": {
+    "short": {
+      "cases": 7,
+      "matches": 7
+    },
+    "long": {
+      "cases": 35,
+      "matches": 4
+    }
+  },
+  "new_cases": [
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_18",
+      "bars": 18,
+      "original_C": 60.000000000001684,
+      "prediction": {
+        "C": 60,
+        "branch": "short"
+      },
+      "error_seconds": -1.6839862837514374e-12,
+      "match": true
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_19",
+      "bars": 19,
+      "original_C": 62.29508196721091,
+      "prediction": {
+        "C": 62.295081967213115,
+        "branch": "short"
+      },
+      "error_seconds": 2.2026824808563106e-12,
+      "match": true
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_20",
+      "bars": 20,
+      "original_C": 65.57377049180404,
+      "prediction": {
+        "C": 65.57377049180327,
+        "branch": "short"
+      },
+      "error_seconds": -7.673861546209082e-13,
+      "match": true
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_21",
+      "bars": 21,
+      "original_C": 76.99999999999633,
+      "prediction": {
+        "C": 114,
+        "branch": "consolidation",
+        "ticks": 197,
+        "start_position": 0.8984771573604061,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 37.000000000003666,
+      "match": false
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_22",
+      "bars": 22,
+      "original_C": 76.99999999999663,
+      "prediction": {
+        "C": 116,
+        "branch": "consolidation",
+        "ticks": 197,
+        "start_position": 0.8984771573604061,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 39.00000000000337,
+      "match": false
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_23",
+      "bars": 23,
+      "original_C": 76.99999999999655,
+      "prediction": {
+        "C": 118,
+        "branch": "consolidation",
+        "ticks": 197,
+        "start_position": 0.8984771573604061,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 41.00000000000345,
+      "match": false
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_24",
+      "bars": 24,
+      "original_C": 73.00000000000334,
+      "prediction": {
+        "C": 221,
+        "branch": "pivot_add_count",
+        "ticks": 197,
+        "start_position": 0.8984771573604061,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": 147.99999999999665,
+      "match": false
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_18",
+      "bars": 18,
+      "original_C": 60.0,
+      "prediction": {
+        "C": 60,
+        "branch": "short"
+      },
+      "error_seconds": 0.0,
+      "match": true
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_19",
+      "bars": 19,
+      "original_C": 62.295081967211935,
+      "prediction": {
+        "C": 62.295081967213115,
+        "branch": "short"
+      },
+      "error_seconds": 1.1795009413617663e-12,
+      "match": true
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_20",
+      "bars": 20,
+      "original_C": 65.57377049180356,
+      "prediction": {
+        "C": 65.57377049180327,
+        "branch": "short"
+      },
+      "error_seconds": -2.8421709430404007e-13,
+      "match": true
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_21",
+      "bars": 21,
+      "original_C": 61.999999999999154,
+      "prediction": {
+        "C": 248,
+        "branch": "consolidation",
+        "ticks": 429,
+        "start_position": 0.8717948717948718,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 186.00000000000085,
+      "match": false
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_22",
+      "bars": 22,
+      "original_C": 61.99999999999912,
+      "prediction": {
+        "C": 451,
+        "branch": "pivot_add_count",
+        "ticks": 429,
+        "start_position": 0.8717948717948718,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": 389.0000000000009,
+      "match": false
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_23",
+      "bars": 23,
+      "original_C": 82.99999999999876,
+      "prediction": {
+        "C": 252,
+        "branch": "consolidation",
+        "ticks": 429,
+        "start_position": 0.8717948717948718,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 169.00000000000125,
+      "match": false
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_24",
+      "bars": 24,
+      "original_C": 76.00000000000095,
+      "prediction": {
+        "C": 254,
+        "branch": "consolidation",
+        "ticks": 429,
+        "start_position": 0.8717948717948718,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 177.99999999999903,
+      "match": false
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_shift_0601",
+      "bars": 21,
+      "original_C": 79.99999999999943,
+      "prediction": {
+        "C": 98,
+        "branch": "consolidation",
+        "ticks": 169,
+        "start_position": 0.9940828402366864,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 18.00000000000057,
+      "match": false
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_shift_1401",
+      "bars": 21,
+      "original_C": 61.99999999999911,
+      "prediction": {
+        "C": 450,
+        "branch": "pivot_add_count",
+        "ticks": 429,
+        "start_position": 0.9277389277389277,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": 388.0000000000009,
+      "match": false
+    }
+  ],
+  "manual_max_errors": {
+    "Lite": 4.001776687800884e-11,
+    "Character": 3.637978807091713e-11
+  },
+  "manual_visibility_errors": 0
+}

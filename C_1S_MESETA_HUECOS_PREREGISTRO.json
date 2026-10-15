@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-14",
+  "START_UTC": "2026-10-14T14:04:00Z",
+  "counts": [22,23,24,26,27,28,29],
+  "prediction_C": 1,
+  "timing": "Supplementary, after observing n32=1,n33=2,n34=1,n35=1,n36..40=2",
+  "reason": "Fill all unmeasured counts21..40; otherwise cannot say whether33 is the first exit. Fixed exhaustive missing counts, no outcome-dependent omissions.",
+  "acceptance": "Same native1s, exact axes, paired stable closed OHLCV/six Lite curves and recurrence/seed/visibility controls as first plateau preregistration.",
+  "scope": "New predictions only for these seven unmeasured counts; not part of original preregistration. No formula coefficients fitted."
+}

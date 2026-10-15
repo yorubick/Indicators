@@ -1,0 +1,709 @@
+{
+  "END_UTC": "19:20:00",
+  "source_seconds": 15,
+  "new_controls": [
+    {
+      "START_UTC": "18:52:00",
+      "END_UTC": "19:20:00",
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1852_verificado.csv",
+        "source_seconds": 15,
+        "C_seconds_interval": {
+          "lower_inclusive": 66.99438202247191,
+          "upper_exclusive": 67.04861111111111
+        },
+        "compatible_integer_C_seconds": [
+          67
+        ],
+        "periods": {
+          "Layer A": 107,
+          "Layer A boundary": 133,
+          "Layer B": 36,
+          "Layer B boundary": 44,
+          "Layer C": 12,
+          "Layer C boundary": 15,
+          "Extra cloud 1": 322,
+          "Extra cloud 1 boundary": 398,
+          "Extra cloud 2": 965,
+          "Extra cloud 2 boundary": 1193
+        },
+        "pairs_per_curve": 4210,
+        "max_rmse_step": 1.571991671668696e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      },
+      "repeat_file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1852_estabilizado.csv",
+      "exact_repeat_plot_values": 44650
+    },
+    {
+      "START_UTC": "18:53:00",
+      "END_UTC": "19:20:00",
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1853_verificado.csv",
+        "source_seconds": 15,
+        "C_seconds_interval": {
+          "lower_inclusive": 117.95138888888889,
+          "upper_exclusive": 118.00561797752809
+        },
+        "compatible_integer_C_seconds": [
+          118
+        ],
+        "periods": {
+          "Layer A": 189,
+          "Layer A boundary": 233,
+          "Layer B": 63,
+          "Layer B boundary": 78,
+          "Layer C": 21,
+          "Layer C boundary": 26,
+          "Extra cloud 1": 566,
+          "Extra cloud 1 boundary": 700,
+          "Extra cloud 2": 1699,
+          "Extra cloud 2 boundary": 2100
+        },
+        "pairs_per_curve": 4222,
+        "max_rmse_step": 1.5091209864085381e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      },
+      "repeat_file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1853_estabilizado.csv",
+      "exact_repeat_plot_values": 44770
+    },
+    {
+      "START_UTC": "19:01:00",
+      "END_UTC": "19:20:00",
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1901_verificado.csv",
+        "source_seconds": 15,
+        "C_seconds_interval": {
+          "lower_inclusive": 46.99438202247191,
+          "upper_exclusive": 47.048611111111114
+        },
+        "compatible_integer_C_seconds": [
+          47
+        ],
+        "periods": {
+          "Layer A": 75,
+          "Layer A boundary": 93,
+          "Layer B": 25,
+          "Layer B boundary": 31,
+          "Layer C": 8,
+          "Layer C boundary": 10,
+          "Extra cloud 1": 226,
+          "Extra cloud 1 boundary": 279,
+          "Extra cloud 2": 677,
+          "Extra cloud 2 boundary": 837
+        },
+        "pairs_per_curve": 4215,
+        "max_rmse_step": 1.5671756968917474e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      },
+      "repeat_file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1901_estabilizado.csv",
+      "exact_repeat_plot_values": 44690
+    },
+    {
+      "START_UTC": "19:02:00",
+      "END_UTC": "19:20:00",
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1902_verificado.csv",
+        "source_seconds": 15,
+        "C_seconds_interval": {
+          "lower_inclusive": 46.99438202247191,
+          "upper_exclusive": 47.048611111111114
+        },
+        "compatible_integer_C_seconds": [
+          47
+        ],
+        "periods": {
+          "Layer A": 75,
+          "Layer A boundary": 93,
+          "Layer B": 25,
+          "Layer B boundary": 31,
+          "Layer C": 8,
+          "Layer C boundary": 10,
+          "Extra cloud 1": 226,
+          "Extra cloud 1 boundary": 279,
+          "Extra cloud 2": 677,
+          "Extra cloud 2 boundary": 837
+        },
+        "pairs_per_curve": 4225,
+        "max_rmse_step": 1.5682359121923783e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      },
+      "repeat_file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1902_estabilizado.csv",
+      "exact_repeat_plot_values": 44810
+    }
+  ],
+  "cases": [
+    {
+      "START_UTC": "18:54:00",
+      "C": 123,
+      "bars": 105,
+      "first_OHLC": {
+        "open": 30856.0,
+        "high": 30857.5,
+        "low": 30854.75,
+        "close": 30854.75
+      },
+      "color": "bear",
+      "pivots": {
+        "1": "none",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185400.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:54:15",
+      "C": 118,
+      "bars": 104,
+      "first_OHLC": {
+        "open": 30855.0,
+        "high": 30858.5,
+        "low": 30855.0,
+        "close": 30857.5
+      },
+      "color": "bull",
+      "pivots": {
+        "1": "none",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185415.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:54:30",
+      "C": 67,
+      "bars": 103,
+      "first_OHLC": {
+        "open": 30857.5,
+        "high": 30861.5,
+        "low": 30856.5,
+        "close": 30859.5
+      },
+      "color": "bull",
+      "pivots": {
+        "1": "high",
+        "2": "high",
+        "3": "high",
+        "5": "high"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185430.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:54:45",
+      "C": 67,
+      "bars": 102,
+      "first_OHLC": {
+        "open": 30859.5,
+        "high": 30860.75,
+        "low": 30858.0,
+        "close": 30858.25
+      },
+      "color": "bear",
+      "pivots": {
+        "1": "none",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185445.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:55:00",
+      "C": 106,
+      "bars": 101,
+      "first_OHLC": {
+        "open": 30858.0,
+        "high": 30860.0,
+        "low": 30856.25,
+        "close": 30856.75
+      },
+      "color": "bear",
+      "pivots": {
+        "1": "none",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185500.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:55:15",
+      "C": 66,
+      "bars": 100,
+      "first_OHLC": {
+        "open": 30856.5,
+        "high": 30859.75,
+        "low": 30856.0,
+        "close": 30859.25
+      },
+      "color": "bull",
+      "pivots": {
+        "1": "low",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185515.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:55:30",
+      "C": 88,
+      "bars": 99,
+      "first_OHLC": {
+        "open": 30859.75,
+        "high": 30860.25,
+        "low": 30857.75,
+        "close": 30858.25
+      },
+      "color": "bear",
+      "pivots": {
+        "1": "high",
+        "2": "high",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185530.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:55:45",
+      "C": 88,
+      "bars": 98,
+      "first_OHLC": {
+        "open": 30858.5,
+        "high": 30858.75,
+        "low": 30855.5,
+        "close": 30856.0
+      },
+      "color": "bear",
+      "pivots": {
+        "1": "none",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185545.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:56:00",
+      "C": 106,
+      "bars": 97,
+      "first_OHLC": {
+        "open": 30856.75,
+        "high": 30857.5,
+        "low": 30852.0,
+        "close": 30852.0
+      },
+      "color": "bear",
+      "pivots": {
+        "1": "none",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185600.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:56:15",
+      "C": 67,
+      "bars": 96,
+      "first_OHLC": {
+        "open": 30851.75,
+        "high": 30854.0,
+        "low": 30851.0,
+        "close": 30852.0
+      },
+      "color": "bull",
+      "pivots": {
+        "1": "none",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185615.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:56:30",
+      "C": 67,
+      "bars": 95,
+      "first_OHLC": {
+        "open": 30851.5,
+        "high": 30852.25,
+        "low": 30850.25,
+        "close": 30851.75
+      },
+      "color": "bull",
+      "pivots": {
+        "1": "low",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185630.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:56:45",
+      "C": 79,
+      "bars": 94,
+      "first_OHLC": {
+        "open": 30851.75,
+        "high": 30852.75,
+        "low": 30851.0,
+        "close": 30852.5
+      },
+      "color": "bull",
+      "pivots": {
+        "1": "high",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185645.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:57:00",
+      "C": 67,
+      "bars": 93,
+      "first_OHLC": {
+        "open": 30852.0,
+        "high": 30852.25,
+        "low": 30849.0,
+        "close": 30849.25
+      },
+      "color": "bear",
+      "pivots": {
+        "1": "none",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185700.csv",
+      "new_verified": false
+    },
+    {
+      "START_UTC": "18:52:00",
+      "C": 67,
+      "bars": 113,
+      "first_OHLC": {
+        "open": 30849.5,
+        "high": 30852.0,
+        "low": 30847.75,
+        "close": 30851.5
+      },
+      "color": "bull",
+      "pivots": {
+        "1": "none",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30844.25,
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1852_verificado.csv",
+      "new_verified": true
+    },
+    {
+      "START_UTC": "18:53:00",
+      "C": 118,
+      "bars": 109,
+      "first_OHLC": {
+        "open": 30851.75,
+        "high": 30853.5,
+        "low": 30849.75,
+        "close": 30850.75
+      },
+      "color": "bear",
+      "pivots": {
+        "1": "high",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1853_verificado.csv",
+      "new_verified": true
+    },
+    {
+      "START_UTC": "19:01:00",
+      "C": 47,
+      "bars": 77,
+      "first_OHLC": {
+        "open": 30852.75,
+        "high": 30855.25,
+        "low": 30852.0,
+        "close": 30853.75
+      },
+      "color": "bull",
+      "pivots": {
+        "1": "none",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30849.0,
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1901_verificado.csv",
+      "new_verified": true
+    },
+    {
+      "START_UTC": "19:02:00",
+      "C": 47,
+      "bars": 73,
+      "first_OHLC": {
+        "open": 30859.5,
+        "high": 30862.5,
+        "low": 30859.0,
+        "close": 30862.0
+      },
+      "color": "bull",
+      "pivots": {
+        "1": "none",
+        "2": "none",
+        "3": "none",
+        "5": "none"
+      },
+      "range_high": 30868.75,
+      "range_low": 30849.0,
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1902_verificado.csv",
+      "new_verified": true
+    }
+  ],
+  "control_1854_reproduces_C123": true,
+  "all_selected_OHLC_matches_reference": true,
+  "simple_categorical_tests": {
+    "color": {
+      "bear": [
+        67,
+        88,
+        106,
+        118,
+        123
+      ],
+      "bull": [
+        47,
+        66,
+        67,
+        79,
+        118
+      ]
+    },
+    "pivot_radius_1": {
+      "none": [
+        47,
+        67,
+        88,
+        106,
+        118,
+        123
+      ],
+      "high": [
+        67,
+        79,
+        88,
+        118
+      ],
+      "low": [
+        66,
+        67
+      ]
+    },
+    "color_and_pivot_1": {
+      "bear/none": [
+        67,
+        88,
+        106,
+        123
+      ],
+      "bull/none": [
+        47,
+        67,
+        118
+      ],
+      "bull/high": [
+        67,
+        79
+      ],
+      "bull/low": [
+        66,
+        67
+      ],
+      "bear/high": [
+        88,
+        118
+      ]
+    },
+    "pivot_radius_2": {
+      "none": [
+        47,
+        66,
+        67,
+        79,
+        88,
+        106,
+        118,
+        123
+      ],
+      "high": [
+        67,
+        88
+      ]
+    },
+    "color_and_pivot_2": {
+      "bear/none": [
+        67,
+        88,
+        106,
+        118,
+        123
+      ],
+      "bull/none": [
+        47,
+        66,
+        67,
+        79,
+        118
+      ],
+      "bull/high": [
+        67
+      ],
+      "bear/high": [
+        88
+      ]
+    },
+    "pivot_radius_3": {
+      "none": [
+        47,
+        66,
+        67,
+        79,
+        88,
+        106,
+        118,
+        123
+      ],
+      "high": [
+        67
+      ]
+    },
+    "color_and_pivot_3": {
+      "bear/none": [
+        67,
+        88,
+        106,
+        118,
+        123
+      ],
+      "bull/none": [
+        47,
+        66,
+        67,
+        79,
+        118
+      ],
+      "bull/high": [
+        67
+      ]
+    },
+    "pivot_radius_5": {
+      "none": [
+        47,
+        66,
+        67,
+        79,
+        88,
+        106,
+        118,
+        123
+      ],
+      "high": [
+        67
+      ]
+    },
+    "color_and_pivot_5": {
+      "bear/none": [
+        67,
+        88,
+        106,
+        118,
+        123
+      ],
+      "bull/none": [
+        47,
+        66,
+        67,
+        79,
+        118
+      ],
+      "bull/high": [
+        67
+      ]
+    }
+  },
+  "scope": "Same day, overlapping Manual ranges. Repeated plots are compared on closed common rows. Local pivots include neighbors outside START, used only as descriptive labels. No generator identified.",
+  "excluded_pattern": "C_barrido CSVs without explicit estabilizado/verificado pair; three failed the EMA check, others can be stale but mathematically valid.",
+  "restored_reference_extraction": {
+    "file": "G:\\trading\\guias\\analisis\\C_referencia_restaurada_barrido.csv",
+    "source_seconds": 60,
+    "C_seconds_interval": {
+      "lower_inclusive": 61.91011235955056,
+      "upper_exclusive": 62.083333333333336
+    },
+    "compatible_integer_C_seconds": [
+      62
+    ],
+    "periods": {
+      "Layer A": 25,
+      "Layer A boundary": 31,
+      "Layer B": 8,
+      "Layer B boundary": 10,
+      "Layer C": 3,
+      "Layer C boundary": 3,
+      "Extra cloud 1": 74,
+      "Extra cloud 1 boundary": 92,
+      "Extra cloud 2": 223,
+      "Extra cloud 2 boundary": 276
+    },
+    "pairs_per_curve": 436,
+    "max_rmse_step": 1.6879450450127335e-12,
+    "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+  }
+}

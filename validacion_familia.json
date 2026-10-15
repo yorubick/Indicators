@@ -1,0 +1,86 @@
+[
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_manual_15m_1m.csv",
+    "C_seconds": 60,
+    "source_seconds": 60,
+    "all_periods_match": true,
+    "seed_side": "high",
+    "seed": 31254.25,
+    "values_compared": 8770,
+    "max_error": 3.637978807091713e-11
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_manual_30m_1m_recarga.csv",
+    "C_seconds": 116,
+    "source_seconds": 60,
+    "all_periods_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_5m.csv",
+    "C_seconds": 60,
+    "source_seconds": 60,
+    "all_periods_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_20m.csv",
+    "C_seconds": 75,
+    "source_seconds": 60,
+    "all_periods_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_40m.csv",
+    "C_seconds": 113,
+    "source_seconds": 60,
+    "all_periods_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_recent_20m.csv",
+    "C_seconds": 77,
+    "source_seconds": 60,
+    "all_periods_match": true,
+    "seed_side": "low",
+    "seed": 30864.5,
+    "values_compared": 340,
+    "max_error": 1.4551915228366852e-11
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_recent_30m.csv",
+    "C_seconds": 118,
+    "source_seconds": 60,
+    "all_periods_match": true,
+    "seed_side": "low",
+    "seed": 30864.5,
+    "values_compared": 380,
+    "max_error": 1.4551915228366852e-11
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_recent_bear_end_break.csv",
+    "C_seconds": 80,
+    "source_seconds": 60,
+    "all_periods_match": true,
+    "seed_side": "low",
+    "seed": 30872.25,
+    "values_compared": 370,
+    "max_error": 1.4551915228366852e-11
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_recent_15s.csv",
+    "C_seconds": 66,
+    "source_seconds": 15,
+    "all_periods_match": true,
+    "seed_side": "low",
+    "seed": 30875.0,
+    "values_compared": 1590,
+    "max_error": 2.9103830456733704e-11
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_short_15s.csv",
+    "C_seconds": 15,
+    "source_seconds": 15,
+    "all_periods_match": true,
+    "seed_side": "low",
+    "seed": 30866.0,
+    "values_compared": 2220,
+    "max_error": 3.2741809263825417e-11
+  }
+]

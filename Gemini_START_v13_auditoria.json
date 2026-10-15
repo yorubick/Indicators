@@ -1,0 +1,392 @@
+{
+  "scope": "Local audit of historical Lite v1.2 exports. New v1.3 version not independently measured.",
+  "curve_checks_at_1926": [
+    {
+      "file": "G:\\trading\\guias\\analisis\\manual\\Lite_1903_192300_1m_b.csv",
+      "timestamp": 1791833160,
+      "reported": [
+        30865.83,
+        30865.56,
+        30868.02,
+        30867.5,
+        30870.9,
+        30870.38
+      ],
+      "old_v12_measured": [
+        30865.83276643991,
+        30865.561351159526,
+        30868.018061149007,
+        30867.496370428096,
+        30870.898981098035,
+        30870.382623291895
+      ],
+      "match_after_cent_rounding": true,
+      "absolute_differences": [
+        0.0027664399094646797,
+        0.0013511595243471675,
+        0.0019388509936106857,
+        0.0036295719037298113,
+        0.0010189019667450339,
+        0.0026232918935420457
+      ]
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\manual\\Lite_1903_192400_1m_b.csv",
+      "timestamp": 1791833160,
+      "reported": [
+        30867.03,
+        30866.89,
+        30868.3,
+        30867.97,
+        30870.62,
+        30870.12
+      ],
+      "old_v12_measured": [
+        30867.031710293744,
+        30866.891142327953,
+        30868.296995268698,
+        30867.969380517403,
+        30870.623113823698,
+        30870.11517539646
+      ],
+      "match_after_cent_rounding": true,
+      "absolute_differences": [
+        0.001710293745418312,
+        0.0011423279538576026,
+        0.0030047313011891674,
+        0.0006194825982674956,
+        0.0031138236990955193,
+        0.0048246035403280985
+      ]
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\manual\\Lite_1903_192500_1m_b.csv",
+      "timestamp": 1791833160,
+      "reported": [
+        30867.37,
+        30867.3,
+        30868.05,
+        30867.87,
+        30869.65,
+        30869.24
+      ],
+      "old_v12_measured": [
+        30867.374149659867,
+        30867.304662255734,
+        30868.050955414015,
+        30867.866015454147,
+        30869.64705882353,
+        30869.24461519083
+      ],
+      "match_after_cent_rounding": true,
+      "absolute_differences": [
+        0.004149659867834998,
+        0.004662255734729115,
+        0.0009554140160616953,
+        0.003984545852290466,
+        0.0029411764699034393,
+        0.004615190828189952
+      ]
+    }
+  ],
+  "prefix_cases": [
+    {
+      "id": "20261012_190100_192100_60s",
+      "START": "19:01:00",
+      "END": "19:21:00",
+      "n": 21,
+      "C_Lite": 76.99999999999798,
+      "high": 30870.5,
+      "low": 30849.0,
+      "first_bar": {
+        "time": 1791831660,
+        "open": 30852.75,
+        "high": 30863.5,
+        "low": 30852.0,
+        "close": 30859.25,
+        "volume": 700.0
+      },
+      "start_close_position_in_global_range": 0.47674418604651164,
+      "first_body_points": 6.5,
+      "first_bar_range_points": 11.5,
+      "first_20_close_mean": 30859.25,
+      "global_high_first_index": 19,
+      "global_low_first_index": 9
+    },
+    {
+      "id": "20261012_190100_192200_60s",
+      "START": "19:01:00",
+      "END": "19:22:00",
+      "n": 22,
+      "C_Lite": 76.99999999999841,
+      "high": 30870.75,
+      "low": 30849.0,
+      "first_bar": {
+        "time": 1791831660,
+        "open": 30852.75,
+        "high": 30863.5,
+        "low": 30852.0,
+        "close": 30859.25,
+        "volume": 700.0
+      },
+      "start_close_position_in_global_range": 0.47126436781609193,
+      "first_body_points": 6.5,
+      "first_bar_range_points": 11.5,
+      "first_20_close_mean": 30859.25,
+      "global_high_first_index": 21,
+      "global_low_first_index": 9
+    },
+    {
+      "id": "20261012_190100_192300_60s",
+      "START": "19:01:00",
+      "END": "19:23:00",
+      "n": 23,
+      "C_Lite": 76.9999999999985,
+      "high": 30870.75,
+      "low": 30849.0,
+      "first_bar": {
+        "time": 1791831660,
+        "open": 30852.75,
+        "high": 30863.5,
+        "low": 30852.0,
+        "close": 30859.25,
+        "volume": 700.0
+      },
+      "start_close_position_in_global_range": 0.47126436781609193,
+      "first_body_points": 6.5,
+      "first_bar_range_points": 11.5,
+      "first_20_close_mean": 30859.25,
+      "global_high_first_index": 21,
+      "global_low_first_index": 9
+    },
+    {
+      "id": "20261012_190100_192400_60s",
+      "START": "19:01:00",
+      "END": "19:24:00",
+      "n": 24,
+      "C_Lite": 76.99999999999822,
+      "high": 30870.75,
+      "low": 30849.0,
+      "first_bar": {
+        "time": 1791831660,
+        "open": 30852.75,
+        "high": 30863.5,
+        "low": 30852.0,
+        "close": 30859.25,
+        "volume": 700.0
+      },
+      "start_close_position_in_global_range": 0.47126436781609193,
+      "first_body_points": 6.5,
+      "first_bar_range_points": 11.5,
+      "first_20_close_mean": 30859.25,
+      "global_high_first_index": 21,
+      "global_low_first_index": 9
+    },
+    {
+      "id": "20261012_190200_192100_60s",
+      "START": "19:02:00",
+      "END": "19:21:00",
+      "n": 20,
+      "C_Lite": 65.57377049180305,
+      "high": 30870.5,
+      "low": 30849.0,
+      "first_bar": {
+        "time": 1791831720,
+        "open": 30859.5,
+        "high": 30862.75,
+        "low": 30857.5,
+        "close": 30858.0,
+        "volume": 651.0
+      },
+      "start_close_position_in_global_range": 0.4186046511627907,
+      "first_body_points": -1.5,
+      "first_bar_range_points": 5.25,
+      "first_20_close_mean": 30859.7125,
+      "global_high_first_index": 18,
+      "global_low_first_index": 8
+    },
+    {
+      "id": "20261012_190200_192200_60s",
+      "START": "19:02:00",
+      "END": "19:22:00",
+      "n": 21,
+      "C_Lite": 49.99999999999989,
+      "high": 30870.75,
+      "low": 30849.0,
+      "first_bar": {
+        "time": 1791831720,
+        "open": 30859.5,
+        "high": 30862.75,
+        "low": 30857.5,
+        "close": 30858.0,
+        "volume": 651.0
+      },
+      "start_close_position_in_global_range": 0.41379310344827586,
+      "first_body_points": -1.5,
+      "first_bar_range_points": 5.25,
+      "first_20_close_mean": 30859.7125,
+      "global_high_first_index": 20,
+      "global_low_first_index": 8
+    },
+    {
+      "id": "20261012_190200_192300_60s",
+      "START": "19:02:00",
+      "END": "19:23:00",
+      "n": 22,
+      "C_Lite": 51.99999999999978,
+      "high": 30870.75,
+      "low": 30849.0,
+      "first_bar": {
+        "time": 1791831720,
+        "open": 30859.5,
+        "high": 30862.75,
+        "low": 30857.5,
+        "close": 30858.0,
+        "volume": 651.0
+      },
+      "start_close_position_in_global_range": 0.41379310344827586,
+      "first_body_points": -1.5,
+      "first_bar_range_points": 5.25,
+      "first_20_close_mean": 30859.7125,
+      "global_high_first_index": 20,
+      "global_low_first_index": 8
+    },
+    {
+      "id": "20261012_190200_192400_60s",
+      "START": "19:02:00",
+      "END": "19:24:00",
+      "n": 23,
+      "C_Lite": 55.000000000000334,
+      "high": 30870.75,
+      "low": 30849.0,
+      "first_bar": {
+        "time": 1791831720,
+        "open": 30859.5,
+        "high": 30862.75,
+        "low": 30857.5,
+        "close": 30858.0,
+        "volume": 651.0
+      },
+      "start_close_position_in_global_range": 0.41379310344827586,
+      "first_body_points": -1.5,
+      "first_bar_range_points": 5.25,
+      "first_20_close_mean": 30859.7125,
+      "global_high_first_index": 20,
+      "global_low_first_index": 8
+    },
+    {
+      "id": "20261012_190200_192500_60s",
+      "START": "19:02:00",
+      "END": "19:25:00",
+      "n": 24,
+      "C_Lite": 71.00000000000176,
+      "high": 30871.25,
+      "low": 30849.0,
+      "first_bar": {
+        "time": 1791831720,
+        "open": 30859.5,
+        "high": 30862.75,
+        "low": 30857.5,
+        "close": 30858.0,
+        "volume": 651.0
+      },
+      "start_close_position_in_global_range": 0.4044943820224719,
+      "first_body_points": -1.5,
+      "first_bar_range_points": 5.25,
+      "first_20_close_mean": 30859.7125,
+      "global_high_first_index": 23,
+      "global_low_first_index": 8
+    },
+    {
+      "id": "20261012_190300_192300_60s",
+      "START": "19:03:00",
+      "END": "19:23:00",
+      "n": 21,
+      "C_Lite": 49.99999999999983,
+      "high": 30870.75,
+      "low": 30849.0,
+      "first_bar": {
+        "time": 1791831780,
+        "open": 30858.25,
+        "high": 30859.5,
+        "low": 30852.75,
+        "close": 30858.25,
+        "volume": 391.0
+      },
+      "start_close_position_in_global_range": 0.42528735632183906,
+      "first_body_points": 0.0,
+      "first_bar_range_points": 6.75,
+      "first_20_close_mean": 30860.2375,
+      "global_high_first_index": 19,
+      "global_low_first_index": 7
+    },
+    {
+      "id": "20261012_190300_192400_60s",
+      "START": "19:03:00",
+      "END": "19:24:00",
+      "n": 22,
+      "C_Lite": 51.99999999999968,
+      "high": 30870.75,
+      "low": 30849.0,
+      "first_bar": {
+        "time": 1791831780,
+        "open": 30858.25,
+        "high": 30859.5,
+        "low": 30852.75,
+        "close": 30858.25,
+        "volume": 391.0
+      },
+      "start_close_position_in_global_range": 0.42528735632183906,
+      "first_body_points": 0.0,
+      "first_bar_range_points": 6.75,
+      "first_20_close_mean": 30860.2375,
+      "global_high_first_index": 19,
+      "global_low_first_index": 7
+    },
+    {
+      "id": "20261012_190300_192500_60s",
+      "START": "19:03:00",
+      "END": "19:25:00",
+      "n": 23,
+      "C_Lite": 71.00000000000131,
+      "high": 30871.25,
+      "low": 30849.0,
+      "first_bar": {
+        "time": 1791831780,
+        "open": 30858.25,
+        "high": 30859.5,
+        "low": 30852.75,
+        "close": 30858.25,
+        "volume": 391.0
+      },
+      "start_close_position_in_global_range": 0.4157303370786517,
+      "first_body_points": 0.0,
+      "first_bar_range_points": 6.75,
+      "first_20_close_mean": 30860.2375,
+      "global_high_first_index": 22,
+      "global_low_first_index": 7
+    }
+  ],
+  "fixed_END_suffix_control": {
+    "longer_id": "20261012_190100_192200_60s",
+    "shorter_id": "20261012_190200_192200_60s",
+    "complete_shared_OHLCV_suffix_identical": true,
+    "longer_C": 76.99999999999841,
+    "shorter_C": 49.99999999999989,
+    "removed_bar": {
+      "time": 1791831660,
+      "open": 30852.75,
+      "high": 30863.5,
+      "low": 30852.0,
+      "close": 30859.25,
+      "volume": 700.0
+    }
+  },
+  "limitations": [
+    "Changing START changes count, prefix, and initialization jointly.",
+    "Equal range extrema rule out a function of extrema alone, not their involvement.",
+    "Different C at n=21 rules out a rule determined by count alone.",
+    "First-20 mean and normalized START positions are diagnostic descriptors, not an inferred C formula.",
+    "Cent-rounded curve agreement does not prove global or intrabar equivalence."
+  ]
+}

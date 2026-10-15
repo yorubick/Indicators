@@ -1,0 +1,1085 @@
+{
+  "spec": {
+    "source": "C_matriz_frontera15s_volumen.json, nueve controles conocidos",
+    "price": "close, timestamps nativos consecutivos",
+    "models": {
+      "single": [
+        1
+      ],
+      "ternary": [
+        1,
+        3,
+        9
+      ],
+      "binary_control": [
+        1,
+        2,
+        4
+      ]
+    },
+    "regression": "intercepto+tendencia lineal+cos/sin de cada componente h/P; mínimos cuadrados",
+    "period_domain_bars": "[18.000001,4*n], común a los tres modelos; resuelve h=9 sin alias de Nyquist",
+    "selection": "mínimo error cuadrático de precio; fases/amplitudes libres estimadas solo del precio",
+    "search": "mallas logarítmicas721/2161, refinar todos los mínimos locales con60pasos golden-section; extremos incluidos",
+    "C_mapping": "C=K*dt*P, K positivo común; permitir C observado +/-1 segundo para cubrir redondeos",
+    "scope": "Exploratorio, etiquetas ya conocidas, no validación independiente. No nueva medición TradingView. Rechaza solo este estimador y esta conversión, no todos los armónicos."
+  },
+  "dataset_SHA256": "d0e4ce1159dc4e4c334e7f2468cb41c088bff705885c59a3435ea7a343a6aa89",
+  "results": [
+    {
+      "model": "single",
+      "harmonics": [
+        1
+      ],
+      "common_K_interval": [
+        0.08132316005754903,
+        0.049716846425319976
+      ],
+      "common_K_exists": false,
+      "max_period_relative_change": 1.3539059873224346e-08,
+      "lower_witness": {
+        "START": "2026-10-12T19:03:00+00:00",
+        "END": "2026-10-12T19:23:45+00:00",
+        "C": 88.00000000000166,
+        "K_interval": [
+          0.08132316005754903,
+          0.08319265798990644
+        ]
+      },
+      "upper_witness": {
+        "START": "2026-10-12T19:03:15+00:00",
+        "END": "2026-10-12T19:23:15+00:00",
+        "C": 53.999999999999204,
+        "K_interval": [
+          0.04790896110076286,
+          0.049716846425319976
+        ]
+      },
+      "cases": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "bars": 82,
+          "dt": 15,
+          "C": 60.99999999999963,
+          "coarse": {
+            "period_bars": 73.16122824257388,
+            "normalized_RSS": 28.54719504455271,
+            "grid_size": 721,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 73.16122886831204,
+            "normalized_RSS": 28.547195044552705,
+            "grid_size": 2161,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 8.552865526922915e-09,
+          "K_interval": [
+            0.054673767265444005,
+            0.05649622617429215
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:30+00:00",
+          "bars": 83,
+          "dt": 15,
+          "C": 67.00000000000017,
+          "coarse": {
+            "period_bars": 72.81384181211885,
+            "normalized_RSS": 27.86826527576294,
+            "grid_size": 721,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 72.81384196286967,
+            "normalized_RSS": 27.868265275762937,
+            "grid_size": 2161,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 2.0703594394433367e-09,
+          "K_interval": [
+            0.06042807083636275,
+            0.06225922449807071
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:45+00:00",
+          "bars": 84,
+          "dt": 15,
+          "C": 88.00000000000166,
+          "coarse": {
+            "period_bars": 71.32039639174998,
+            "normalized_RSS": 27.909908037193816,
+            "grid_size": 721,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 71.32039625483922,
+            "normalized_RSS": 27.909908037193812,
+            "grid_size": 2161,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 1.919657766080718e-09,
+          "K_interval": [
+            0.08132316005754903,
+            0.08319265798990644
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:15+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "bars": 81,
+          "dt": 15,
+          "C": 53.999999999999204,
+          "coarse": {
+            "period_bars": 73.7509906251089,
+            "normalized_RSS": 28.268668991565473,
+            "grid_size": 721,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 73.75099046505974,
+            "normalized_RSS": 28.26866899156547,
+            "grid_size": 2161,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 2.1701289654174616e-09,
+          "K_interval": [
+            0.04790896110076286,
+            0.049716846425319976
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:15+00:00",
+          "END": "2026-10-12T19:23:30+00:00",
+          "bars": 82,
+          "dt": 15,
+          "C": 67.00000000000017,
+          "coarse": {
+            "period_bars": 73.3705084792007,
+            "normalized_RSS": 27.605553628125516,
+            "grid_size": 721,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 73.370507485833,
+            "normalized_RSS": 27.605553628125516,
+            "grid_size": 2161,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 1.3539059873224346e-08,
+          "K_interval": [
+            0.059969600194595914,
+            0.06178686080655336
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:15+00:00",
+          "END": "2026-10-12T19:23:45+00:00",
+          "bars": 83,
+          "dt": 15,
+          "C": 88.00000000000159,
+          "coarse": {
+            "period_bars": 71.79572044284198,
+            "normalized_RSS": 27.65968512089084,
+            "grid_size": 721,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 71.79572049142169,
+            "normalized_RSS": 27.659685120890835,
+            "grid_size": 2161,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 6.766379678779799e-10,
+          "K_interval": [
+            0.08078475931853212,
+            0.08264188022240639
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:30+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "bars": 80,
+          "dt": 15,
+          "C": 60.99999999999961,
+          "coarse": {
+            "period_bars": 76.53346343313578,
+            "normalized_RSS": 27.546199369606313,
+            "grid_size": 721,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 76.53346323478219,
+            "normalized_RSS": 27.54619936960632,
+            "grid_size": 2161,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 2.591723724520989e-09,
+          "K_interval": [
+            0.05226471965248911,
+            0.05400687697423876
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:30+00:00",
+          "END": "2026-10-12T19:23:30+00:00",
+          "bars": 81,
+          "dt": 15,
+          "C": 67.00000000000018,
+          "coarse": {
+            "period_bars": 76.00413078984795,
+            "normalized_RSS": 26.910057431247534,
+            "grid_size": 721,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 76.00412994412807,
+            "normalized_RSS": 26.910057431247537,
+            "grid_size": 2161,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 1.1127288424006565e-08,
+          "K_interval": [
+            0.05789159093373647,
+            0.05964588156809211
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:30+00:00",
+          "END": "2026-10-12T19:23:45+00:00",
+          "bars": 82,
+          "dt": 15,
+          "C": 60.9999999999996,
+          "coarse": {
+            "period_bars": 74.11303294970776,
+            "normalized_RSS": 26.998035623396706,
+            "grid_size": 721,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 74.1130324774123,
+            "normalized_RSS": 26.998035623396703,
+            "grid_size": 2161,
+            "refined_local_minima": 2,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 6.372637084695043e-09,
+          "K_interval": [
+            0.05397161425312165,
+            0.05577066806155905
+          ]
+        }
+      ]
+    },
+    {
+      "model": "ternary",
+      "harmonics": [
+        1,
+        3,
+        9
+      ],
+      "common_K_interval": [
+        0.06847204400924467,
+        0.016828658267371885
+      ],
+      "common_K_exists": false,
+      "max_period_relative_change": 3.6274778736355984e-09,
+      "lower_witness": {
+        "START": "2026-10-12T19:03:15+00:00",
+        "END": "2026-10-12T19:23:45+00:00",
+        "C": 88.00000000000159,
+        "K_interval": [
+          0.06847204400924467,
+          0.07004611398646866
+        ]
+      },
+      "upper_witness": {
+        "START": "2026-10-12T19:03:30+00:00",
+        "END": "2026-10-12T19:23:45+00:00",
+        "C": 60.9999999999996,
+        "K_interval": [
+          0.01628579832326311,
+          0.016828658267371885
+        ]
+      },
+      "cases": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "bars": 82,
+          "dt": 15,
+          "C": 60.99999999999963,
+          "coarse": {
+            "period_bars": 84.37392017827008,
+            "normalized_RSS": 13.15756558464855,
+            "grid_size": 721,
+            "refined_local_minima": 9,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 84.37392016160663,
+            "normalized_RSS": 13.157565584648545,
+            "grid_size": 2161,
+            "refined_local_minima": 9,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 1.9749535340451985e-10,
+          "K_interval": [
+            0.04740801413918574,
+            0.0489882812771586
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:30+00:00",
+          "bars": 83,
+          "dt": 15,
+          "C": 67.00000000000017,
+          "coarse": {
+            "period_bars": 84.75268257417486,
+            "normalized_RSS": 12.978252936972154,
+            "grid_size": 721,
+            "refined_local_minima": 8,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 84.75268274187304,
+            "normalized_RSS": 12.97825293697215,
+            "grid_size": 2161,
+            "refined_local_minima": 8,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 1.9786771110474888e-09,
+          "K_interval": [
+            0.051915760748257,
+            0.0534889656194163
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:45+00:00",
+          "bars": 84,
+          "dt": 15,
+          "C": 88.00000000000166,
+          "coarse": {
+            "period_bars": 84.75723890174062,
+            "normalized_RSS": 12.886440121886107,
+            "grid_size": 721,
+            "refined_local_minima": 7,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 84.75723895335847,
+            "normalized_RSS": 12.886440121886102,
+            "grid_size": 2161,
+            "refined_local_minima": 7,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 6.090080661991237e-10,
+          "K_interval": [
+            0.06843073313409637,
+            0.07000385343602959
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:15+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "bars": 81,
+          "dt": 15,
+          "C": 53.999999999999204,
+          "coarse": {
+            "period_bars": 84.28188239294128,
+            "normalized_RSS": 13.043042496651434,
+            "grid_size": 721,
+            "refined_local_minima": 9,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 84.28188227594495,
+            "normalized_RSS": 13.043042496651431,
+            "grid_size": 2161,
+            "refined_local_minima": 9,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 1.3881551463867936e-09,
+          "K_interval": [
+            0.041922809955345954,
+            0.0435048027838496
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:15+00:00",
+          "END": "2026-10-12T19:23:30+00:00",
+          "bars": 82,
+          "dt": 15,
+          "C": 67.00000000000017,
+          "coarse": {
+            "period_bars": 84.69716294478646,
+            "normalized_RSS": 12.87488038163393,
+            "grid_size": 721,
+            "refined_local_minima": 8,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 84.69716291909896,
+            "normalized_RSS": 12.874880381633929,
+            "grid_size": 2161,
+            "refined_local_minima": 8,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 3.032865070196067e-10,
+          "K_interval": [
+            0.051949792039702715,
+            0.053524028162117945
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:15+00:00",
+          "END": "2026-10-12T19:23:45+00:00",
+          "bars": 83,
+          "dt": 15,
+          "C": 88.00000000000159,
+          "coarse": {
+            "period_bars": 84.70610288146148,
+            "normalized_RSS": 12.787478892617303,
+            "grid_size": 721,
+            "refined_local_minima": 8,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 84.70610281791829,
+            "normalized_RSS": 12.7874788926173,
+            "grid_size": 2161,
+            "refined_local_minima": 8,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 7.50160600304639e-10,
+          "K_interval": [
+            0.06847204400924467,
+            0.07004611398646866
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:30+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "bars": 80,
+          "dt": 15,
+          "C": 60.99999999999961,
+          "coarse": {
+            "period_bars": 83.73312298159091,
+            "normalized_RSS": 12.684255521709263,
+            "grid_size": 721,
+            "refined_local_minima": 8,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 83.73312295049436,
+            "normalized_RSS": 12.684255521709257,
+            "grid_size": 2161,
+            "refined_local_minima": 9,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 3.713769292090774e-10,
+          "K_interval": [
+            0.047770820662748945,
+            0.04936318135150725
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:30+00:00",
+          "END": "2026-10-12T19:23:30+00:00",
+          "bars": 81,
+          "dt": 15,
+          "C": 67.00000000000018,
+          "coarse": {
+            "period_bars": 244.72196220892246,
+            "normalized_RSS": 12.552166050972584,
+            "grid_size": 721,
+            "refined_local_minima": 8,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 244.721961321199,
+            "normalized_RSS": 12.552166050972586,
+            "grid_size": 2161,
+            "refined_local_minima": 8,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 3.6274778736355984e-09,
+          "K_interval": [
+            0.01797958784019791,
+            0.018524423835355422
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:30+00:00",
+          "END": "2026-10-12T19:23:45+00:00",
+          "bars": 82,
+          "dt": 15,
+          "C": 60.9999999999996,
+          "coarse": {
+            "period_bars": 245.61276695935976,
+            "normalized_RSS": 12.486335938607226,
+            "grid_size": 721,
+            "refined_local_minima": 8,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 245.61276767662386,
+            "normalized_RSS": 12.486335938607226,
+            "grid_size": 2161,
+            "refined_local_minima": 8,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 2.9203046647552355e-09,
+          "K_interval": [
+            0.01628579832326311,
+            0.016828658267371885
+          ]
+        }
+      ]
+    },
+    {
+      "model": "binary_control",
+      "harmonics": [
+        1,
+        2,
+        4
+      ],
+      "common_K_interval": [
+        0.09515761963296297,
+        0.06057159423930295
+      ],
+      "common_K_exists": false,
+      "max_period_relative_change": 1.3369140239305466e-09,
+      "lower_witness": {
+        "START": "2026-10-12T19:03:15+00:00",
+        "END": "2026-10-12T19:23:45+00:00",
+        "C": 88.00000000000159,
+        "K_interval": [
+          0.09515761963296297,
+          0.09734515111877817
+        ]
+      },
+      "upper_witness": {
+        "START": "2026-10-12T19:03:15+00:00",
+        "END": "2026-10-12T19:23:15+00:00",
+        "C": 53.999999999999204,
+        "K_interval": [
+          0.058368990812419176,
+          0.06057159423930295
+        ]
+      },
+      "cases": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "bars": 82,
+          "dt": 15,
+          "C": 60.99999999999963,
+          "coarse": {
+            "period_bars": 60.99023757081156,
+            "normalized_RSS": 8.741138956111559,
+            "grid_size": 721,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 60.990237648185,
+            "normalized_RSS": 8.74113895611156,
+            "grid_size": 2161,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 1.268620097860662e-09,
+          "K_interval": [
+            0.06558426650300174,
+            0.06777040871976849
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:30+00:00",
+          "bars": 83,
+          "dt": 15,
+          "C": 67.00000000000017,
+          "coarse": {
+            "period_bars": 61.29357660813871,
+            "normalized_RSS": 8.659293814094976,
+            "grid_size": 721,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 61.29357661869565,
+            "normalized_RSS": 8.65929381409498,
+            "grid_size": 2161,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 1.722357811928532e-10,
+          "K_interval": [
+            0.07178566242548051,
+            0.07396098552928294
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:45+00:00",
+          "bars": 84,
+          "dt": 15,
+          "C": 88.00000000000166,
+          "coarse": {
+            "period_bars": 61.37432887837265,
+            "normalized_RSS": 8.608496529896174,
+            "grid_size": 721,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 61.3743288157531,
+            "normalized_RSS": 8.608496529896172,
+            "grid_size": 2161,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 1.0202889644261859e-09,
+          "K_interval": [
+            0.09450205178474246,
+            0.0966745127453112
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:15+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "bars": 81,
+          "dt": 15,
+          "C": 53.999999999999204,
+          "coarse": {
+            "period_bars": 60.53442566537654,
+            "normalized_RSS": 7.693448634241059,
+            "grid_size": 721,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 60.53442562829942,
+            "normalized_RSS": 7.69344863424106,
+            "grid_size": 2161,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 6.124964979647984e-10,
+          "K_interval": [
+            0.058368990812419176,
+            0.06057159423930295
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:15+00:00",
+          "END": "2026-10-12T19:23:30+00:00",
+          "bars": 82,
+          "dt": 15,
+          "C": 67.00000000000017,
+          "coarse": {
+            "period_bars": 60.84349470354118,
+            "normalized_RSS": 7.663705073688575,
+            "grid_size": 721,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 60.84349464902603,
+            "normalized_RSS": 7.663705073688581,
+            "grid_size": 2161,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 8.959899489013878e-10,
+          "K_interval": [
+            0.07231668768175278,
+            0.07450810245998771
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:15+00:00",
+          "END": "2026-10-12T19:23:45+00:00",
+          "bars": 83,
+          "dt": 15,
+          "C": 88.00000000000159,
+          "coarse": {
+            "period_bars": 60.951503697944126,
+            "normalized_RSS": 7.633104862009031,
+            "grid_size": 721,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 60.951503645967236,
+            "normalized_RSS": 7.633104862009029,
+            "grid_size": 2161,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 8.527580863670892e-10,
+          "K_interval": [
+            0.09515761963296297,
+            0.09734515111877817
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:30+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "bars": 80,
+          "dt": 15,
+          "C": 60.99999999999961,
+          "coarse": {
+            "period_bars": 60.36813962884999,
+            "normalized_RSS": 7.625021833036083,
+            "grid_size": 721,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 60.368139709557,
+            "normalized_RSS": 7.625021833036082,
+            "grid_size": 2161,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 1.3369140239305466e-09,
+          "K_interval": [
+            0.06626011699622948,
+            0.06846878756277049
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:30+00:00",
+          "END": "2026-10-12T19:23:30+00:00",
+          "bars": 81,
+          "dt": 15,
+          "C": 67.00000000000018,
+          "coarse": {
+            "period_bars": 60.69438057635718,
+            "normalized_RSS": 7.611503953531727,
+            "grid_size": 721,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 60.69438059748242,
+            "normalized_RSS": 7.611503953531727,
+            "grid_size": 2161,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 3.480592480897826e-10,
+          "K_interval": [
+            0.07249435543597132,
+            0.0746911540855462
+          ]
+        },
+        {
+          "START": "2026-10-12T19:03:30+00:00",
+          "END": "2026-10-12T19:23:45+00:00",
+          "bars": 82,
+          "dt": 15,
+          "C": 60.9999999999996,
+          "coarse": {
+            "period_bars": 60.81718202820789,
+            "normalized_RSS": 7.588701515887753,
+            "grid_size": 721,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "dense": {
+            "period_bars": 60.81718197492562,
+            "normalized_RSS": 7.5887015158877515,
+            "grid_size": 2161,
+            "refined_local_minima": 3,
+            "at_upper_boundary": false,
+            "at_lower_boundary": false
+          },
+          "period_relative_change": 8.761056324857464e-10,
+          "K_interval": [
+            0.06577088694522443,
+            0.06796324984339858
+          ]
+        }
+      ]
+    }
+  ],
+  "synthetic_estimator_check": {
+    "known_period": 36,
+    "fit": {
+      "period_bars": 36.0,
+      "normalized_RSS": 2.9486602185094287e-29,
+      "grid_size": 721,
+      "refined_local_minima": 5,
+      "at_upper_boundary": false,
+      "at_lower_boundary": false
+    },
+    "affine_fit": {
+      "period_bars": 36.0,
+      "normalized_RSS": 3.350173658266124e-24,
+      "grid_size": 721,
+      "refined_local_minima": 5,
+      "at_upper_boundary": false,
+      "at_lower_boundary": false
+    }
+  },
+  "supplementary_component_selection": {
+    "timing": "Supplementary after the first result; exploratory, not original preregistration",
+    "hypothesis": "C=K*dt*P/h, allow h1/3/9 independently per case with no selection rule required",
+    "common_K_union": [],
+    "necessary_condition_passes": false,
+    "cases": [
+      {
+        "START": "2026-10-12T19:03:00+00:00",
+        "END": "2026-10-12T19:23:15+00:00",
+        "C": 60.99999999999963,
+        "K_interval_options_for_h1_h3_h9": [
+          [
+            0.04740801413918574,
+            0.0489882812771586
+          ],
+          [
+            0.1422240424175572,
+            0.14696484383147582
+          ],
+          [
+            0.4266721272526716,
+            0.4408945314944274
+          ]
+        ]
+      },
+      {
+        "START": "2026-10-12T19:03:00+00:00",
+        "END": "2026-10-12T19:23:30+00:00",
+        "C": 67.00000000000017,
+        "K_interval_options_for_h1_h3_h9": [
+          [
+            0.051915760748257,
+            0.0534889656194163
+          ],
+          [
+            0.15574728224477102,
+            0.16046689685824891
+          ],
+          [
+            0.467241846734313,
+            0.4814006905747467
+          ]
+        ]
+      },
+      {
+        "START": "2026-10-12T19:03:00+00:00",
+        "END": "2026-10-12T19:23:45+00:00",
+        "C": 88.00000000000166,
+        "K_interval_options_for_h1_h3_h9": [
+          [
+            0.06843073313409637,
+            0.07000385343602959
+          ],
+          [
+            0.2052921994022891,
+            0.21001156030808876
+          ],
+          [
+            0.6158765982068672,
+            0.6300346809242663
+          ]
+        ]
+      },
+      {
+        "START": "2026-10-12T19:03:15+00:00",
+        "END": "2026-10-12T19:23:15+00:00",
+        "C": 53.999999999999204,
+        "K_interval_options_for_h1_h3_h9": [
+          [
+            0.041922809955345954,
+            0.0435048027838496
+          ],
+          [
+            0.12576842986603787,
+            0.1305144083515488
+          ],
+          [
+            0.3773052895981136,
+            0.3915432250546464
+          ]
+        ]
+      },
+      {
+        "START": "2026-10-12T19:03:15+00:00",
+        "END": "2026-10-12T19:23:30+00:00",
+        "C": 67.00000000000017,
+        "K_interval_options_for_h1_h3_h9": [
+          [
+            0.051949792039702715,
+            0.053524028162117945
+          ],
+          [
+            0.15584937611910815,
+            0.16057208448635385
+          ],
+          [
+            0.46754812835732446,
+            0.4817162534590615
+          ]
+        ]
+      },
+      {
+        "START": "2026-10-12T19:03:15+00:00",
+        "END": "2026-10-12T19:23:45+00:00",
+        "C": 88.00000000000159,
+        "K_interval_options_for_h1_h3_h9": [
+          [
+            0.06847204400924467,
+            0.07004611398646866
+          ],
+          [
+            0.205416132027734,
+            0.210138341959406
+          ],
+          [
+            0.616248396083202,
+            0.630415025878218
+          ]
+        ]
+      },
+      {
+        "START": "2026-10-12T19:03:30+00:00",
+        "END": "2026-10-12T19:23:15+00:00",
+        "C": 60.99999999999961,
+        "K_interval_options_for_h1_h3_h9": [
+          [
+            0.047770820662748945,
+            0.04936318135150725
+          ],
+          [
+            0.14331246198824682,
+            0.14808954405452177
+          ],
+          [
+            0.4299373859647405,
+            0.44426863216356527
+          ]
+        ]
+      },
+      {
+        "START": "2026-10-12T19:03:30+00:00",
+        "END": "2026-10-12T19:23:30+00:00",
+        "C": 67.00000000000018,
+        "K_interval_options_for_h1_h3_h9": [
+          [
+            0.01797958784019791,
+            0.018524423835355422
+          ],
+          [
+            0.05393876352059373,
+            0.055573271506066266
+          ],
+          [
+            0.16181629056178118,
+            0.16671981451819878
+          ]
+        ]
+      },
+      {
+        "START": "2026-10-12T19:03:30+00:00",
+        "END": "2026-10-12T19:23:45+00:00",
+        "C": 60.9999999999996,
+        "K_interval_options_for_h1_h3_h9": [
+          [
+            0.01628579832326311,
+            0.016828658267371885
+          ],
+          [
+            0.04885739496978933,
+            0.050485974802115655
+          ],
+          [
+            0.146572184909368,
+            0.15145792440634698
+          ]
+        ]
+      }
+    ]
+  },
+  "warning": "Lower RSS of the ternary model does not prove ternary price cycles: it has more coefficients than the single model."
+}

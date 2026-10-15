@@ -1,0 +1,12 @@
+{
+ "date":"2026-10-14",
+ "START_UTC":"2026-10-12T18:55:00Z",
+ "END_UTC":"2026-10-12T19:20:00Z",
+ "chart_seconds":60,"source_seconds":60,
+ "indicator":"Existing Lite v1.2; Character excluded",
+ "native_expected_C":62,
+ "steps":["CME_MINI:NQ1!","2*CME_MINI:NQ1!","CME_MINI:NQ1!+10000","70000-CME_MINI:NQ1!","CME_MINI:NQ1!"],
+ "prediction":"Each transformation preserves measured native C under affine symmetry. Do not reject a differing coherent C.",
+ "controls":"Complete 26-bar range and one hour forward. Retained synthetic expression. Exact transformed OHLC, same volume, six independent EMA fits. Two exports per transformed symbol. Same-lane affine plot comparisons are diagnostic, not prerequisites for measuring C. Fresh native return must reproduce baseline.",
+ "limits":"Single second window. Transformations affect all available history; hidden metadata and internal source requests remain not fully observable. No proof of harmonics or identification of C generator."
+}

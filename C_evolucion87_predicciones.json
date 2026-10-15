@@ -1,0 +1,441 @@
+{
+  "START": "2026-10-13T06:25:00+00:00",
+  "known_C_END45": 87,
+  "known_C_END46": 84,
+  "calibration": "Two known observations only: slope-3/age-step. Intercepts87+3*baseline_age; frozen before measuring END47..50. Fits are exploratory local predictions, not a general formula. Four age models initially indistinguishable; event changes can separate them. No floor or adjustment added.",
+  "age_model_intercepts": {
+    "globalH": 120,
+    "globalL": 102,
+    "pivotH": 90,
+    "pivotL": 93
+  },
+  "predictions": [
+    {
+      "END": "2026-10-13T06:45:00+00:00",
+      "bars": 21,
+      "ages": {
+        "globalH": 11,
+        "globalL": 5,
+        "pivotH": 1,
+        "pivotL": 2
+      },
+      "age_model_predictions": {
+        "globalH": 87,
+        "globalL": 87,
+        "pivotH": 87,
+        "pivotL": 87
+      },
+      "linear_count_prediction": 87,
+      "pullback_definition": {
+        "prior_net_close_change": -16.25,
+        "END_body": 2.25,
+        "countertrend_body": true,
+        "Gemini_predicted_delta_interval": [
+          20,
+          57
+        ]
+      },
+      "events": {
+        "newH": false,
+        "newL": false,
+        "pivotH": true,
+        "pivotL": false
+      },
+      "range_high": 30675.25,
+      "range_low": 30644.5,
+      "END_OHLC": {
+        "time": 1791873900,
+        "open": 30649.5,
+        "high": 30656.0,
+        "low": 30649.5,
+        "close": 30651.75
+      }
+    },
+    {
+      "END": "2026-10-13T06:46:00+00:00",
+      "bars": 22,
+      "ages": {
+        "globalH": 12,
+        "globalL": 6,
+        "pivotH": 2,
+        "pivotL": 3
+      },
+      "age_model_predictions": {
+        "globalH": 84,
+        "globalL": 84,
+        "pivotH": 84,
+        "pivotL": 84
+      },
+      "linear_count_prediction": 84,
+      "pullback_definition": {
+        "prior_net_close_change": -11.0,
+        "END_body": 0.5,
+        "countertrend_body": true,
+        "Gemini_predicted_delta_interval": [
+          20,
+          57
+        ]
+      },
+      "events": {
+        "newH": false,
+        "newL": false,
+        "pivotH": false,
+        "pivotL": false
+      },
+      "range_high": 30675.25,
+      "range_low": 30644.5,
+      "END_OHLC": {
+        "time": 1791873960,
+        "open": 30652.0,
+        "high": 30652.5,
+        "low": 30646.25,
+        "close": 30652.5
+      }
+    },
+    {
+      "END": "2026-10-13T06:47:00+00:00",
+      "bars": 23,
+      "ages": {
+        "globalH": 13,
+        "globalL": 7,
+        "pivotH": 3,
+        "pivotL": 1
+      },
+      "age_model_predictions": {
+        "globalH": 81,
+        "globalL": 81,
+        "pivotH": 81,
+        "pivotL": 90
+      },
+      "linear_count_prediction": 81,
+      "pullback_definition": {
+        "prior_net_close_change": -10.25,
+        "END_body": 19.5,
+        "countertrend_body": true,
+        "Gemini_predicted_delta_interval": [
+          20,
+          57
+        ]
+      },
+      "events": {
+        "newH": false,
+        "newL": false,
+        "pivotH": false,
+        "pivotL": true
+      },
+      "range_high": 30675.25,
+      "range_low": 30644.5,
+      "END_OHLC": {
+        "time": 1791874020,
+        "open": 30652.25,
+        "high": 30674.0,
+        "low": 30652.0,
+        "close": 30671.75
+      }
+    },
+    {
+      "END": "2026-10-13T06:48:00+00:00",
+      "bars": 24,
+      "ages": {
+        "globalH": 0,
+        "globalL": 8,
+        "pivotH": 4,
+        "pivotL": 2
+      },
+      "age_model_predictions": {
+        "globalH": 120,
+        "globalL": 78,
+        "pivotH": 78,
+        "pivotL": 87
+      },
+      "linear_count_prediction": 78,
+      "pullback_definition": {
+        "prior_net_close_change": 9.0,
+        "END_body": 6.25,
+        "countertrend_body": false,
+        "Gemini_predicted_delta_interval": null
+      },
+      "events": {
+        "newH": true,
+        "newL": false,
+        "pivotH": false,
+        "pivotL": false
+      },
+      "range_high": 30683.5,
+      "range_low": 30644.5,
+      "END_OHLC": {
+        "time": 1791874080,
+        "open": 30672.75,
+        "high": 30683.5,
+        "low": 30668.75,
+        "close": 30679.0
+      }
+    },
+    {
+      "END": "2026-10-13T06:49:00+00:00",
+      "bars": 25,
+      "ages": {
+        "globalH": 1,
+        "globalL": 9,
+        "pivotH": 1,
+        "pivotL": 3
+      },
+      "age_model_predictions": {
+        "globalH": 117,
+        "globalL": 75,
+        "pivotH": 87,
+        "pivotL": 84
+      },
+      "linear_count_prediction": 75,
+      "pullback_definition": {
+        "prior_net_close_change": 16.25,
+        "END_body": -3.5,
+        "countertrend_body": true,
+        "Gemini_predicted_delta_interval": [
+          20,
+          57
+        ]
+      },
+      "events": {
+        "newH": false,
+        "newL": false,
+        "pivotH": true,
+        "pivotL": false
+      },
+      "range_high": 30683.5,
+      "range_low": 30644.5,
+      "END_OHLC": {
+        "time": 1791874140,
+        "open": 30679.5,
+        "high": 30681.0,
+        "low": 30673.25,
+        "close": 30676.0
+      }
+    },
+    {
+      "END": "2026-10-13T06:50:00+00:00",
+      "bars": 26,
+      "ages": {
+        "globalH": 2,
+        "globalL": 10,
+        "pivotH": 2,
+        "pivotL": 4
+      },
+      "age_model_predictions": {
+        "globalH": 114,
+        "globalL": 72,
+        "pivotH": 84,
+        "pivotL": 81
+      },
+      "linear_count_prediction": 72,
+      "pullback_definition": {
+        "prior_net_close_change": 13.25,
+        "END_body": -6.5,
+        "countertrend_body": true,
+        "Gemini_predicted_delta_interval": [
+          20,
+          57
+        ]
+      },
+      "events": {
+        "newH": false,
+        "newL": false,
+        "pivotH": false,
+        "pivotL": false
+      },
+      "range_high": 30683.5,
+      "range_low": 30644.5,
+      "END_OHLC": {
+        "time": 1791874200,
+        "open": 30675.5,
+        "high": 30677.25,
+        "low": 30668.0,
+        "close": 30669.0
+      }
+    }
+  ],
+  "OHLC": [
+    {
+      "time": 1791872700,
+      "open": 30668.5,
+      "high": 30670.75,
+      "low": 30660.75,
+      "close": 30662.75
+    },
+    {
+      "time": 1791872760,
+      "open": 30660.5,
+      "high": 30663.75,
+      "low": 30654.75,
+      "close": 30660.5
+    },
+    {
+      "time": 1791872820,
+      "open": 30661.0,
+      "high": 30665.25,
+      "low": 30655.0,
+      "close": 30661.25
+    },
+    {
+      "time": 1791872880,
+      "open": 30660.0,
+      "high": 30666.5,
+      "low": 30657.5,
+      "close": 30659.5
+    },
+    {
+      "time": 1791872940,
+      "open": 30659.75,
+      "high": 30669.5,
+      "low": 30659.75,
+      "close": 30669.0
+    },
+    {
+      "time": 1791873000,
+      "open": 30668.0,
+      "high": 30668.0,
+      "low": 30656.0,
+      "close": 30663.25
+    },
+    {
+      "time": 1791873060,
+      "open": 30662.75,
+      "high": 30664.75,
+      "low": 30656.5,
+      "close": 30663.75
+    },
+    {
+      "time": 1791873120,
+      "open": 30664.75,
+      "high": 30670.0,
+      "low": 30657.25,
+      "close": 30658.25
+    },
+    {
+      "time": 1791873180,
+      "open": 30657.75,
+      "high": 30660.5,
+      "low": 30647.75,
+      "close": 30659.25
+    },
+    {
+      "time": 1791873240,
+      "open": 30658.5,
+      "high": 30675.25,
+      "low": 30657.5,
+      "close": 30672.5
+    },
+    {
+      "time": 1791873300,
+      "open": 30671.5,
+      "high": 30672.0,
+      "low": 30666.25,
+      "close": 30668.5
+    },
+    {
+      "time": 1791873360,
+      "open": 30669.25,
+      "high": 30674.75,
+      "low": 30667.5,
+      "close": 30673.0
+    },
+    {
+      "time": 1791873420,
+      "open": 30673.5,
+      "high": 30673.5,
+      "low": 30660.25,
+      "close": 30662.25
+    },
+    {
+      "time": 1791873480,
+      "open": 30662.5,
+      "high": 30665.5,
+      "low": 30651.5,
+      "close": 30653.5
+    },
+    {
+      "time": 1791873540,
+      "open": 30652.75,
+      "high": 30655.5,
+      "low": 30648.5,
+      "close": 30650.0
+    },
+    {
+      "time": 1791873600,
+      "open": 30649.5,
+      "high": 30650.25,
+      "low": 30644.5,
+      "close": 30649.25
+    },
+    {
+      "time": 1791873660,
+      "open": 30649.5,
+      "high": 30655.0,
+      "low": 30647.5,
+      "close": 30650.0
+    },
+    {
+      "time": 1791873720,
+      "open": 30650.5,
+      "high": 30656.75,
+      "low": 30649.25,
+      "close": 30651.0
+    },
+    {
+      "time": 1791873780,
+      "open": 30651.25,
+      "high": 30655.5,
+      "low": 30645.0,
+      "close": 30650.75
+    },
+    {
+      "time": 1791873840,
+      "open": 30652.0,
+      "high": 30660.25,
+      "low": 30646.0,
+      "close": 30646.5
+    },
+    {
+      "time": 1791873900,
+      "open": 30649.5,
+      "high": 30656.0,
+      "low": 30649.5,
+      "close": 30651.75
+    },
+    {
+      "time": 1791873960,
+      "open": 30652.0,
+      "high": 30652.5,
+      "low": 30646.25,
+      "close": 30652.5
+    },
+    {
+      "time": 1791874020,
+      "open": 30652.25,
+      "high": 30674.0,
+      "low": 30652.0,
+      "close": 30671.75
+    },
+    {
+      "time": 1791874080,
+      "open": 30672.75,
+      "high": 30683.5,
+      "low": 30668.75,
+      "close": 30679.0
+    },
+    {
+      "time": 1791874140,
+      "open": 30679.5,
+      "high": 30681.0,
+      "low": 30673.25,
+      "close": 30676.0
+    },
+    {
+      "time": 1791874200,
+      "open": 30675.5,
+      "high": 30677.25,
+      "low": 30668.0,
+      "close": 30669.0
+    }
+  ]
+}

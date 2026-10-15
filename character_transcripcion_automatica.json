@@ -1,0 +1,652 @@
+[
+  {
+    "start": 0.21,
+    "end": 12.21,
+    "text": " So I'm just going to go ahead and use this previous version because it should give you the same signals and work the same as the one I'm just currently updating."
+  },
+  {
+    "start": 12.21,
+    "end": 18.21,
+    "text": " What I've added in here now is, there's just run through this in a batch."
+  },
+  {
+    "start": 18.21,
+    "end": 23.21,
+    "text": " Show delivery signal self-explanatory, it'll show the signals and shot."
+  },
+  {
+    "start": 23.21,
+    "end": 38.03,
+    "text": " The anchor mode is now manual where obviously you choose the anchor and then it prints the EMA's data resolution, one second if one second is available."
+  },
+  {
+    "start": 38.03,
+    "end": 51.03,
+    "text": " Either the different four different colors you can have, and your light to dark mode self-explanatory, the extra EMA clouds I like to have them on, which are these two here."
+  },
+  {
+    "start": 51.03,
+    "end": 60.66,
+    "text": " When those get tagged, we either reversing or when they get fucked, we know exactly what to do with it."
+  },
+  {
+    "start": 60.66,
+    "end": 64.66,
+    "text": " Now, show the range."
+  },
+  {
+    "start": 64.66,
+    "end": 70.66,
+    "text": " I think it's just the box that disappears, nothing fancy."
+  },
+  {
+    "start": 70.66,
+    "end": 73.66,
+    "text": " So the PDA rays, you'll see here to the left."
+  },
+  {
+    "start": 73.66,
+    "end": 84.66,
+    "text": " These are specially calculated PDA's FPGI FPG volume imbalances based on calculations down inside here."
+  },
+  {
+    "start": 84.66,
+    "end": 92.54,
+    "text": " So they're not this time frames FPGs and IFPGs."
+  },
+  {
+    "start": 92.54,
+    "end": 95.54,
+    "text": " We could put that off."
+  },
+  {
+    "start": 95.54,
+    "end": 101.54,
+    "text": " 50% line that self-explanatory, volition rays, colors, all of that self-explanatory."
+  },
+  {
+    "start": 101.54,
+    "end": 107.54,
+    "text": " Flow band signals are the signals that we're talking about in the direction."
+  },
+  {
+    "start": 107.54,
+    "end": 110.54,
+    "text": " We're going to have a hotel, a bull or bear."
+  },
+  {
+    "start": 111.54,
+    "end": 113.54,
+    "text": " I'll keep this on both."
+  },
+  {
+    "start": 113.54,
+    "end": 117.54,
+    "text": " And signal timeout, we'll just keep it at 10 for now."
+  },
+  {
+    "start": 117.54,
+    "end": 122.18,
+    "text": " Yeah, that's it. Don't worry about this or this."
+  },
+  {
+    "start": 122.18,
+    "end": 131.84,
+    "text": " The main thing with this version now is the main concern with the character tree was how do you anchor, right?"
+  },
+  {
+    "start": 131.84,
+    "end": 137.84,
+    "text": " So I just took a random time here this morning or high of the day."
+  },
+  {
+    "start": 137.84,
+    "end": 145.11,
+    "text": " And I went from let's say here up here, I could have went all the way down here."
+  },
+  {
+    "start": 145.11,
+    "end": 154.11,
+    "text": " Now what I found from testing is that the bigger the box, the less signals you get coming in here, right?"
+  },
+  {
+    "start": 154.11,
+    "end": 162.11,
+    "text": " You'll notice because the flow bands are much further apart to give you these signals."
+  },
+  {
+    "start": 162.11,
+    "end": 173.39,
+    "text": " And you'll see here the closer the boxes or smaller the boxes are, the more signals you get."
+  },
+  {
+    "start": 174.39,
+    "end": 182.39,
+    "text": " So the trick here was to try and figure out when you're drawing this in prices, like let's say somewhere here,"
+  },
+  {
+    "start": 182.39,
+    "end": 193.39,
+    "text": " you want to start moving the box or anchoring until we get like interaction with these EMA's that you see here, right?"
+  },
+  {
+    "start": 193.39,
+    "end": 195.39,
+    "text": " That's if you're doing it manually."
+  },
+  {
+    "start": 195.39,
+    "end": 203.39,
+    "text": " You'll just increase the size of the box until you see some decent sort of signals and interaction with the EMA's."
+  },
+  {
+    "start": 203.39,
+    "end": 209.39,
+    "text": " And you could just let it be after that. You'll see like, yeah, we had a good signal here. We had a good signal here."
+  },
+  {
+    "start": 209.39,
+    "end": 217.39,
+    "text": " One here. And the good thing with these are also that they are almost after all zero draw down."
+  },
+  {
+    "start": 217.39,
+    "end": 222.39,
+    "text": " And you can go to break even pretty quickly. So even if you get a break even, you just hop on, take the next signal."
+  },
+  {
+    "start": 224.77,
+    "end": 233.77,
+    "text": " Cover would be basically could you could treat that as a point where you'd want to TP on a cell."
+  },
+  {
+    "start": 233.77,
+    "end": 239.77,
+    "text": " Because at the cover area, like you see here, price has a tendency to want to retrace."
+  },
+  {
+    "start": 239.77,
+    "end": 245.77,
+    "text": " But here I could have retraced here. It did retraced here. It could have here. It did."
+  },
+  {
+    "start": 245.77,
+    "end": 250.77,
+    "text": " So you'd want to come out and let cover these are cell covers, cover yourselves."
+  },
+  {
+    "start": 250.77,
+    "end": 254.77,
+    "text": " And the other one is will be an exit sign for bias."
+  },
+  {
+    "start": 254.77,
+    "end": 261.77,
+    "text": " So this is right now showing bear mode, right? Yeah."
+  },
+  {
+    "start": 261.77,
+    "end": 268.77,
+    "text": " Now, I thought about what if we could just like make something auto here."
+  },
+  {
+    "start": 268.77,
+    "end": 275.77,
+    "text": " So it added in two options where we could have a balanced sort of range from where we clicked."
+  },
+  {
+    "start": 275.77,
+    "end": 277.77,
+    "text": " Right."
+  },
+  {
+    "start": 277.77,
+    "end": 281.77,
+    "text": " We're coming here. We go balanced after we chose the range."
+  },
+  {
+    "start": 281.77,
+    "end": 290.3,
+    "text": " We go balanced and then what you'd see is it would find a little range for you here."
+  },
+  {
+    "start": 290.3,
+    "end": 293.3,
+    "text": " Close to what you chose."
+  },
+  {
+    "start": 293.3,
+    "end": 299.3,
+    "text": " And obviously the image would be different and then the cell signals will also be different."
+  },
+  {
+    "start": 299.3,
+    "end": 307.34,
+    "text": " Or you could tell it to come in here and do a broad anchor mode."
+  },
+  {
+    "start": 307.34,
+    "end": 314.34,
+    "text": " And then you see that the anchor comes a bit broader and then the signals look slightly different as well."
+  },
+  {
+    "start": 314.34,
+    "end": 328.06,
+    "text": " Again, if I had chosen a bigger range, right, I'll have to be on manual mode for that to anchor that range that I chose like that."
+  },
+  {
+    "start": 328.06,
+    "end": 334.06,
+    "text": " Let's see here, just one signal here. This one still comes in. This one came in a bit early."
+  },
+  {
+    "start": 334.06,
+    "end": 337.06,
+    "text": " One here, one here, right. So bigger the box."
+  },
+  {
+    "start": 337.06,
+    "end": 340.44,
+    "text": " A few of the signal."
+  },
+  {
+    "start": 340.44,
+    "end": 345.44,
+    "text": " And if you wanted after you chose the big box, you can come in here and click balanced."
+  },
+  {
+    "start": 345.44,
+    "end": 352.44,
+    "text": " It'll then adjust the box to what it thinks is a more balanced range or you could call a broad."
+  },
+  {
+    "start": 352.44,
+    "end": 358.44,
+    "text": " And it will adjust it to a little bigger. So that's just basically it."
+  },
+  {
+    "start": 359.44,
+    "end": 363.44,
+    "text": " How you anchor the box is totally up to you. You could take it."
+  },
+  {
+    "start": 363.44,
+    "end": 371.44,
+    "text": " If we're moving down, you could take it across this PA that we're trading against or the swing that we're trading against."
+  },
+  {
+    "start": 371.44,
+    "end": 377.44,
+    "text": " You could adjust them manually until you see good EMA interaction."
+  },
+  {
+    "start": 377.44,
+    "end": 379.44,
+    "text": " That's up to you."
+  },
+  {
+    "start": 379.44,
+    "end": 386.44,
+    "text": " You could take it from like, for example, the zoom model has it."
+  },
+  {
+    "start": 386.44,
+    "end": 389.44,
+    "text": " Both in such that it."
+  },
+  {
+    "start": 389.44,
+    "end": 394.44,
+    "text": " Let's see if we can find an example here, right."
+  },
+  {
+    "start": 394.44,
+    "end": 401.44,
+    "text": " Let's say we took this example down here and we went into a manual mode, which we are."
+  },
+  {
+    "start": 401.44,
+    "end": 403.44,
+    "text": " We reset the points."
+  },
+  {
+    "start": 403.44,
+    "end": 410.36,
+    "text": " We went from the overall up to the CSE expansion."
+  },
+  {
+    "start": 410.36,
+    "end": 414.36,
+    "text": " And then when it comes back to the engagement, but the mitigation."
+  },
+  {
+    "start": 414.36,
+    "end": 416.36,
+    "text": " So from the overall."
+  },
+  {
+    "start": 416.36,
+    "end": 421.36,
+    "text": " To the mitigation right here is your, let's just do this properly."
+  },
+  {
+    "start": 421.36,
+    "end": 423.36,
+    "text": " Here's your box."
+  },
+  {
+    "start": 423.36,
+    "end": 427.36,
+    "text": " And if we were on by mode of a ball mode."
+  },
+  {
+    "start": 427.36,
+    "end": 429.36,
+    "text": " Right there."
+  },
+  {
+    "start": 429.36,
+    "end": 432.36,
+    "text": " You'd now start getting."
+  },
+  {
+    "start": 432.36,
+    "end": 437.61,
+    "text": " By signals coming here and their exits."
+  },
+  {
+    "start": 437.61,
+    "end": 438.61,
+    "text": " Okay."
+  },
+  {
+    "start": 438.61,
+    "end": 440.61,
+    "text": " And then again."
+  },
+  {
+    "start": 440.61,
+    "end": 444.61,
+    "text": " You could see does a balanced range give me a better."
+  },
+  {
+    "start": 444.61,
+    "end": 451.27,
+    "text": " Set up. Right. You see it's chosen something completely different. And then what you'll see here."
+  },
+  {
+    "start": 451.27,
+    "end": 456.27,
+    "text": " It goes here. It goes here. Yeah. Yeah. Yeah. Yeah. Yeah."
+  },
+  {
+    "start": 456.27,
+    "end": 457.27,
+    "text": " A bit better. Right."
+  },
+  {
+    "start": 457.27,
+    "end": 460.27,
+    "text": " As price is trending up, it's a bit better."
+  },
+  {
+    "start": 460.27,
+    "end": 465.27,
+    "text": " And the broad give me a better range."
+  },
+  {
+    "start": 465.27,
+    "end": 467.27,
+    "text": " We don't know."
+  },
+  {
+    "start": 467.27,
+    "end": 469.27,
+    "text": " It's choosing something completely different."
+  },
+  {
+    "start": 469.27,
+    "end": 473.27,
+    "text": " It had a bike here and the exit chair and a bike here."
+  },
+  {
+    "start": 473.27,
+    "end": 475.27,
+    "text": " You could probably exit it up here."
+  },
+  {
+    "start": 476.27,
+    "end": 479.27,
+    "text": " If we had the, I think if we have."
+  },
+  {
+    "start": 479.27,
+    "end": 481.27,
+    "text": " Balance and we have."
+  },
+  {
+    "start": 481.27,
+    "end": 487.5,
+    "text": " Or auto."
+  },
+  {
+    "start": 487.5,
+    "end": 491.5,
+    "text": " Although it has some logic inside, I may change it."
+  },
+  {
+    "start": 491.5,
+    "end": 495.5,
+    "text": " Where when the red dot appears."
+  },
+  {
+    "start": 495.5,
+    "end": 499.5,
+    "text": " We get into cell mode and if a green dot appears, we go back into buy mode."
+  },
+  {
+    "start": 499.5,
+    "end": 503.5,
+    "text": " When a green dot appears here, we're looking to buy any retraces."
+  },
+  {
+    "start": 503.5,
+    "end": 506.5,
+    "text": " When the red dot appears here, we're looking to sell."
+  },
+  {
+    "start": 506.5,
+    "end": 509.5,
+    "text": " When the green dot appears here, we're looking to buy."
+  },
+  {
+    "start": 509.5,
+    "end": 512.5,
+    "text": " I may change that logic."
+  },
+  {
+    "start": 512.5,
+    "end": 516.5,
+    "text": " So for now, if you have, if you know."
+  },
+  {
+    "start": 516.5,
+    "end": 521.5,
+    "text": " I have an inkling of what the direction is, then just keep."
+  },
+  {
+    "start": 521.5,
+    "end": 524.5,
+    "text": " Keep them on. Right. And you don't have to."
+  },
+  {
+    "start": 524.5,
+    "end": 529.5,
+    "text": " I think the way this probably works or sets up is let's have a look."
+  },
+  {
+    "start": 529.5,
+    "end": 533.5,
+    "text": " We may, we may just need to anchor once and not."
+  },
+  {
+    "start": 533.5,
+    "end": 537.5,
+    "text": " Worry about anchoring again, unless you find the signals are not."
+  },
+  {
+    "start": 537.5,
+    "end": 540.5,
+    "text": " Worth it anymore."
+  },
+  {
+    "start": 540.5,
+    "end": 545.5,
+    "text": " Let's just take a look at these points here. Right. So you see."
+  },
+  {
+    "start": 545.5,
+    "end": 549.5,
+    "text": " Yeah, eventually it did come to more or less."
+  },
+  {
+    "start": 549.5,
+    "end": 553.5,
+    "text": " What we had previously when we just anchored this little range here."
+  },
+  {
+    "start": 553.5,
+    "end": 557.5,
+    "text": " We get these here. We got this. We got this. There's a few more in here."
+  },
+  {
+    "start": 557.5,
+    "end": 561.5,
+    "text": " But totally up to you where you want to anchor. You could just anchor once somewhere here."
+  },
+  {
+    "start": 561.5,
+    "end": 565.5,
+    "text": " And then just let this carry on for itself."
+  },
+  {
+    "start": 565.5,
+    "end": 569.5,
+    "text": " Or you could go all the way back here. I suppose."
+  },
+  {
+    "start": 569.5,
+    "end": 572.5,
+    "text": " Let's see if we reset the points."
+  },
+  {
+    "start": 572.5,
+    "end": 578.16,
+    "text": " Yeah, and we did something, for example, like that."
+  },
+  {
+    "start": 578.16,
+    "end": 583.16,
+    "text": " And we kept it on manual and we kept it on."
+  },
+  {
+    "start": 583.16,
+    "end": 591.87,
+    "text": " Now there was an issue where I had a memory limit exceeding coming in here."
+  },
+  {
+    "start": 591.87,
+    "end": 594.87,
+    "text": " I just want to check what's going on here."
+  },
+  {
+    "start": 594.87,
+    "end": 603.78,
+    "text": " If we go to replay mode, this should work."
+  },
+  {
+    "start": 603.78,
+    "end": 604.78,
+    "text": " Recept."
+  },
+  {
+    "start": 604.78,
+    "end": 609.78,
+    "text": " But maybe that we don't have one second data that far. So let's just go one minute."
+  },
+  {
+    "start": 609.78,
+    "end": 616.98,
+    "text": " See if that works now. Yeah, it does. Right."
+  },
+  {
+    "start": 616.98,
+    "end": 620.98,
+    "text": " Signals came in one right the way all the way down here. One here."
+  },
+  {
+    "start": 620.98,
+    "end": 625.98,
+    "text": " Yeah. Yeah. Right. So depending on the box we chose, I could."
+  },
+  {
+    "start": 626.98,
+    "end": 629.98,
+    "text": " Go auto balanced. Let's see what that does."
+  },
+  {
+    "start": 629.98,
+    "end": 636.54,
+    "text": " Give you a few more different signals here."
+  },
+  {
+    "start": 636.54,
+    "end": 639.54,
+    "text": " And we could go auto broad."
+  },
+  {
+    "start": 639.54,
+    "end": 642.54,
+    "text": " And let's see what that does may find something totally different."
+  },
+  {
+    "start": 642.54,
+    "end": 646.54,
+    "text": " What it does with different signals. Yeah. Okay."
+  },
+  {
+    "start": 646.54,
+    "end": 651.54,
+    "text": " So that's basically it. Nothing too fancy about this."
+  },
+  {
+    "start": 651.54,
+    "end": 654.54,
+    "text": " This is not updated with you guys yet."
+  },
+  {
+    "start": 655.54,
+    "end": 658.54,
+    "text": " The automatic stuff. So you would have to."
+  },
+  {
+    "start": 658.54,
+    "end": 661.54,
+    "text": " Just use your discretion now manually."
+  },
+  {
+    "start": 661.54,
+    "end": 665.54,
+    "text": " Putting the ranges and looking at the interaction."
+  },
+  {
+    "start": 665.54,
+    "end": 669.54,
+    "text": " But going forward when I put the update will have an automatically."
+  },
+  {
+    "start": 669.54,
+    "end": 673.54,
+    "text": " Detecting range for this."
+  }
+]

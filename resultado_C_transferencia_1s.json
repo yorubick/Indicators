@@ -1,0 +1,112 @@
+{
+  "status": "frozen_master_models_scored_on_supplementary_native_1s_sequence",
+  "master_sha256": "ef9533acdce3e1c2c2db3c72caee5059a2957f7dee4c60e725f6dcf56ccc9c05",
+  "training_models_frozen_before_this_audit": {
+    "long_branch_candidate_sha256": "cffbd60cbc211210fbc7a5ad3388fd619e77f9f594e8d478074061bb22675d55",
+    "dimensionless_models_sha256": "b2545c63513f9f967026dfcbfbc521eac2184ba91f5343aaa579cfb2fb95b99f",
+    "long_branch_formula": "C_hat = floor(beta0 + sum_j beta_j*(phi_j-mu_j)/scale_j + 0.5), n>=21",
+    "dimensionless_formulas": {
+      "constant_q": "C_hat = Delta * (beta0 + sum_j beta_j * standardized(feature_j))",
+      "linear_n": "C_hat = Delta * (beta0 + sum_j beta_j * standardized(feature_j))",
+      "log_n": "C_hat = Delta * (beta0 + sum_j beta_j * standardized(feature_j))",
+      "normalized_ohlcv": "C_hat = Delta * (beta0 + sum_j beta_j * standardized(feature_j))"
+    }
+  },
+  "test_scope": "21 nested 1s OHLCV windows n=20..40 from one NQ1! ETH episode; not part of the 179-case master. No coefficients were refit. This is an out-of-resolution diagnostic, not a blind or independent-session validation.",
+  "evaluated_long_counts": 20,
+  "metrics_n21_to_40": {
+    "constant_q": {
+      "n": 20,
+      "MAE": 0.3909428908175118,
+      "RMSE": 0.4639794957352646,
+      "max_abs_residual": 0.7726427729562582,
+      "within_1e-6": 0,
+      "within_1": 20
+    },
+    "linear_n": {
+      "n": 20,
+      "MAE": 0.3594955616310459,
+      "RMSE": 0.3952501610661483,
+      "max_abs_residual": 0.6895598327611752,
+      "within_1e-6": 0,
+      "within_1": 20
+    },
+    "log_n": {
+      "n": 20,
+      "MAE": 0.3809804764626935,
+      "RMSE": 0.4220469081413914,
+      "max_abs_residual": 0.721377180575798,
+      "within_1e-6": 0,
+      "within_1": 20
+    },
+    "normalized_ohlcv": {
+      "n": 20,
+      "MAE": 0.4020261224383299,
+      "RMSE": 0.43327529104157914,
+      "max_abs_residual": 0.7001744084720649,
+      "within_1e-6": 0,
+      "within_1": 20
+    },
+    "constant_q_nearest_integer": {
+      "n": 20,
+      "MAE": 0.3000000000000075,
+      "RMSE": 0.5477225575051572,
+      "max_abs_residual": 1.0000000000000782,
+      "within_1e-6": 14,
+      "within_1": 20
+    },
+    "linear_n_nearest_integer": {
+      "n": 20,
+      "MAE": 0.2500000000000212,
+      "RMSE": 0.499999999999993,
+      "max_abs_residual": 0.9999999999999922,
+      "within_1e-6": 15,
+      "within_1": 20
+    },
+    "log_n_nearest_integer": {
+      "n": 20,
+      "MAE": 0.3000000000000184,
+      "RMSE": 0.5477225575051572,
+      "max_abs_residual": 0.9999999999999922,
+      "within_1e-6": 14,
+      "within_1": 20
+    },
+    "normalized_ohlcv_nearest_integer": {
+      "n": 20,
+      "MAE": 0.3000000000000184,
+      "RMSE": 0.5477225575051572,
+      "max_abs_residual": 0.9999999999999922,
+      "within_1e-6": 14,
+      "within_1": 20
+    },
+    "long_branch_OLS_raw": {
+      "n": 20,
+      "MAE": 196.32964741765255,
+      "RMSE": 196.43306791967532,
+      "max_abs_residual": 208.95538968830598,
+      "within_1e-6": 0,
+      "within_1": 0
+    },
+    "long_branch_OLS_rounded": {
+      "n": 20,
+      "MAE": 196.3,
+      "RMSE": 196.4049388381056,
+      "max_abs_residual": 209.0,
+      "within_1e-6": 0,
+      "within_1": 0
+    }
+  },
+  "short_n20_check": {
+    "C_hat_short_rule": 1.092896174863388,
+    "C_Lite": 1.0928961748634423,
+    "residual": -5.417888360170764e-14
+  },
+  "residual_rows": 21,
+  "residual_csv": "G:\\trading\\guias\\analisis\\residuos_C_transferencia_1s.csv",
+  "integer_quantization_note": "Nearest-integer q variants are scored as fixed post-quantization diagnostics because all long master labels are integer to measurement precision. They were not part of the original q equations and are not presented as discovered laws.",
+  "limitations": [
+    "The test series has one start/session and includes many nested prefixes.",
+    "The fitted long models were previously selected on the master; applying them here does not establish a new prospective holdout.",
+    "A failure rejects these frozen candidates at 1s, not all deterministic OHLCV laws."
+  ]
+}

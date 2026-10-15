@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-14",
+  "layout": "https://www.tradingview.com/chart/xqM5dZIf/",
+  "symbol": "CME_MINI:NQ1!",
+  "chart_seconds": 1,
+  "source_seconds": 1,
+  "START_UTC": "2026-10-14T14:00:00Z",
+  "cases": [
+    {"bars": 19, "END_UTC": "2026-10-14T14:00:18Z", "short_rule_prediction_C": 1.0382513661202186},
+    {"bars": 20, "END_UTC": "2026-10-14T14:00:19Z", "short_rule_prediction_C": 1.092896174863388},
+    {"bars": 21, "END_UTC": "2026-10-14T14:00:20Z", "short_continuation_control_C": 1.1475409836065573, "warning": "Not a validated prediction of the long branch. Equality alone does not exclude a branch change."}
+  ],
+  "acceptance": "Exact anchors, complete consecutive native1s OHLC, pairs of stable closed-bar exports, six Lite C estimates agree within1e-6seconds and recurrence RMSE <=1e-8. Record version, no forced integer C for decimals. No measurement without curves; no substitution of missing bars. No source/chart mismatch.",
+  "scope": "New prospective measurements for these predictions, contingent on data availability and UI access. Do not select anchor by observedC. If there are missing timestamps, retain failure and preregister another anchor before measuring. Existing loaded original versions preferred; do not silently update indicators."
+}

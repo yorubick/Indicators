@@ -1,0 +1,2784 @@
+{
+  "scope": "Offline closed-bar emulation of currentPine engine, nine native15s matrix cases,180min horizon. Not compilation, livePine test, fullsource support or universal curve equivalence.",
+  "summary": {
+    "manual_supplied_C": {
+      "Lite": {
+        "compared_values": 25164,
+        "max_error": 9.458744898438454e-11,
+        "before_first_gap_values": 20142,
+        "before_first_gap_max_error": 9.458744898438454e-11,
+        "visibility_mismatches": 0
+      },
+      "Character": {
+        "compared_values": 41940,
+        "max_error": 9.630805805874843,
+        "before_first_gap_values": 33570,
+        "before_first_gap_max_error": 3.055902197957039e-10,
+        "visibility_mismatches": 0
+      }
+    },
+    "automatic_C": {
+      "Lite": {
+        "compared_values": 25164,
+        "max_error": 1.566573942975083,
+        "before_first_gap_values": 20142,
+        "before_first_gap_max_error": 1.566573942975083,
+        "visibility_mismatches": 0
+      },
+      "Character": {
+        "compared_values": 41940,
+        "max_error": 9.66638059183606,
+        "before_first_gap_values": 33570,
+        "before_first_gap_max_error": 1.6125200188871531,
+        "visibility_mismatches": 0
+      }
+    }
+  },
+  "cases": [
+    {
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:15+00:00",
+      "C_observed": 60.99999999999963,
+      "C_auto_v4": 61.0,
+      "manual_supplied_C": {
+        "Lite": {
+          "compared_values": 2790,
+          "max_error": 9.458744898438454e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30865.732390503817,
+              "observed": 30865.732390503814,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30865.562575385247,
+              "observed": 30865.562575385266,
+              "error": 1.8189894035458565e-11
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30867.12115948255,
+              "observed": 30867.12115948256,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30866.78602954252,
+              "observed": 30866.786029542516,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30869.021699112636,
+              "observed": 30869.02169911264,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.673271029045,
+              "observed": 30868.673271029038,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791838785,
+            "column": "Lane 3 B",
+            "predicted": 30880.821364117306,
+            "observed": 30880.8213641174,
+            "error": 9.458744898438454e-11,
+            "other_seed_branch_error": 0.0066521131520858034,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 9.458744898438454e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4650,
+          "max_error": 9.630227774490777,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30865.72884217372,
+              "observed": 30865.72884217373,
+              "error": 7.275957614183426e-12
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30865.56041272656,
+              "observed": 30865.560412726576,
+              "error": 1.4551915228366852e-11
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30867.097793711644,
+              "observed": 30867.09779371165,
+              "error": 7.275957614183426e-12
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30866.794142605348,
+              "observed": 30866.794142605355,
+              "error": 7.275957614183426e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.999077771296,
+              "observed": 30868.999077771296,
+              "error": 0.0
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.72515513081,
+              "observed": 30868.725155130815,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30865.10399450341,
+              "observed": 30865.10399450341,
+              "error": 0.0
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30865.038719459742,
+              "observed": 30865.03871945974,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30864.871347574466,
+              "observed": 30864.871347574466,
+              "error": 0.0
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.84836089638,
+              "observed": 30864.848360896376,
+              "error": 3.637978807091713e-12
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047385606515,
+            "observed": 30890.677613381005,
+            "error": 9.630227774490777,
+            "other_seed_branch_error": 9.628742178094399,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047385606515,
+            "observed": 30890.677613381005,
+            "error": 9.630227774490777,
+            "other_seed_branch_error": 9.628742178094399,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 3.2741809263825417e-11,
+          "first_gap_time": 1791842400
+        }
+      },
+      "automatic_C": {
+        "Lite": {
+          "compared_values": 2790,
+          "max_error": 9.458744898438454e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30865.732390503817,
+              "observed": 30865.732390503814,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30865.562575385247,
+              "observed": 30865.562575385266,
+              "error": 1.8189894035458565e-11
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30867.12115948255,
+              "observed": 30867.12115948256,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30866.78602954252,
+              "observed": 30866.786029542516,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30869.021699112636,
+              "observed": 30869.02169911264,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.673271029045,
+              "observed": 30868.673271029038,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791838785,
+            "column": "Lane 3 B",
+            "predicted": 30880.821364117306,
+            "observed": 30880.8213641174,
+            "error": 9.458744898438454e-11,
+            "other_seed_branch_error": 0.0066521131520858034,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 9.458744898438454e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4650,
+          "max_error": 9.630227774490777,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30865.72884217372,
+              "observed": 30865.72884217373,
+              "error": 7.275957614183426e-12
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30865.56041272656,
+              "observed": 30865.560412726576,
+              "error": 1.4551915228366852e-11
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30867.097793711644,
+              "observed": 30867.09779371165,
+              "error": 7.275957614183426e-12
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30866.794142605348,
+              "observed": 30866.794142605355,
+              "error": 7.275957614183426e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.999077771296,
+              "observed": 30868.999077771296,
+              "error": 0.0
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.72515513081,
+              "observed": 30868.725155130815,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30865.10399450341,
+              "observed": 30865.10399450341,
+              "error": 0.0
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30865.038719459742,
+              "observed": 30865.03871945974,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30864.871347574466,
+              "observed": 30864.871347574466,
+              "error": 0.0
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.84836089638,
+              "observed": 30864.848360896376,
+              "error": 3.637978807091713e-12
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047385606515,
+            "observed": 30890.677613381005,
+            "error": 9.630227774490777,
+            "other_seed_branch_error": 9.628742178094399,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047385606515,
+            "observed": 30890.677613381005,
+            "error": 9.630227774490777,
+            "other_seed_branch_error": 9.628742178094399,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 3.2741809263825417e-11,
+          "first_gap_time": 1791842400
+        }
+      }
+    },
+    {
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:30+00:00",
+      "C_observed": 67.00000000000017,
+      "C_auto_v4": 67.0,
+      "manual_supplied_C": {
+        "Lite": {
+          "compared_values": 2796,
+          "max_error": 7.639755494892597e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30865.20341244485,
+              "observed": 30865.20341244484,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30865.03594702004,
+              "observed": 30865.035947020027,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30866.622726539343,
+              "observed": 30866.622726539354,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30866.27132065906,
+              "observed": 30866.271320659078,
+              "error": 1.8189894035458565e-11
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30868.744953611098,
+              "observed": 30868.744953611087,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.339920247454,
+              "observed": 30868.33992024746,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791842460,
+            "column": "Lane 3 B",
+            "predicted": 30881.625043559194,
+            "observed": 30881.625043559117,
+            "error": 7.639755494892597e-11,
+            "other_seed_branch_error": 0.012496168688812759,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 7.275957614183426e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4660,
+          "max_error": 9.630805805874843,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30865.205019509423,
+              "observed": 30865.205019509423,
+              "error": 0.0
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30865.03328842312,
+              "observed": 30865.033288423117,
+              "error": 3.637978807091713e-12
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30866.60981138872,
+              "observed": 30866.609811388713,
+              "error": 7.275957614183426e-12
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30866.277404202658,
+              "observed": 30866.27740420265,
+              "error": 7.275957614183426e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.731179730752,
+              "observed": 30868.73117973075,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.303347145014,
+              "observed": 30868.303347145014,
+              "error": 0.0
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30864.589216939006,
+              "observed": 30864.589216939014,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.526215620284,
+              "observed": 30864.526215620288,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30864.365772517664,
+              "observed": 30864.365772517656,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.34385027604,
+              "observed": 30864.343850276036,
+              "error": 3.637978807091713e-12
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.009473440598,
+            "observed": 30890.640279246472,
+            "error": 9.630805805874843,
+            "other_seed_branch_error": 9.627496728760889,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.009473440598,
+            "observed": 30890.640279246472,
+            "error": 9.630805805874843,
+            "other_seed_branch_error": 9.627496728760889,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 1.0550138540565968e-10,
+          "first_gap_time": 1791842400
+        }
+      },
+      "automatic_C": {
+        "Lite": {
+          "compared_values": 2796,
+          "max_error": 7.639755494892597e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30865.20341244485,
+              "observed": 30865.20341244484,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30865.03594702004,
+              "observed": 30865.035947020027,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30866.622726539343,
+              "observed": 30866.622726539354,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30866.27132065906,
+              "observed": 30866.271320659078,
+              "error": 1.8189894035458565e-11
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30868.744953611098,
+              "observed": 30868.744953611087,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.339920247454,
+              "observed": 30868.33992024746,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791842460,
+            "column": "Lane 3 B",
+            "predicted": 30881.625043559194,
+            "observed": 30881.625043559117,
+            "error": 7.639755494892597e-11,
+            "other_seed_branch_error": 0.012496168688812759,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 7.275957614183426e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4660,
+          "max_error": 9.630805805874843,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30865.205019509423,
+              "observed": 30865.205019509423,
+              "error": 0.0
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30865.03328842312,
+              "observed": 30865.033288423117,
+              "error": 3.637978807091713e-12
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30866.60981138872,
+              "observed": 30866.609811388713,
+              "error": 7.275957614183426e-12
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30866.277404202658,
+              "observed": 30866.27740420265,
+              "error": 7.275957614183426e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.731179730752,
+              "observed": 30868.73117973075,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.303347145014,
+              "observed": 30868.303347145014,
+              "error": 0.0
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30864.589216939006,
+              "observed": 30864.589216939014,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.526215620284,
+              "observed": 30864.526215620288,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30864.365772517664,
+              "observed": 30864.365772517656,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.34385027604,
+              "observed": 30864.343850276036,
+              "error": 3.637978807091713e-12
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.009473440598,
+            "observed": 30890.640279246472,
+            "error": 9.630805805874843,
+            "other_seed_branch_error": 9.627496728760889,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.009473440598,
+            "observed": 30890.640279246472,
+            "error": 9.630805805874843,
+            "other_seed_branch_error": 9.627496728760889,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 1.0550138540565968e-10,
+          "first_gap_time": 1791842400
+        }
+      }
+    },
+    {
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "C_observed": 88.00000000000166,
+      "C_auto_v4": 88.0,
+      "manual_supplied_C": {
+        "Lite": {
+          "compared_values": 2802,
+          "max_error": 7.639755494892597e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30866.652972462205,
+              "observed": 30866.6529724622,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30866.57996410484,
+              "observed": 30866.579964104832,
+              "error": 7.275957614183426e-12
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30867.320407851155,
+              "observed": 30867.320407851166,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30867.145868583255,
+              "observed": 30867.14586858325,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30868.592448762774,
+              "observed": 30868.59244876277,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.309509935283,
+              "observed": 30868.30950993529,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791838335,
+            "column": "Lane 3 A",
+            "predicted": 30880.31275657539,
+            "observed": 30880.312756575466,
+            "error": 7.639755494892597e-11,
+            "other_seed_branch_error": 0.0163716693969036,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 7.639755494892597e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4670,
+          "max_error": 9.427361377751367,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30866.652436865035,
+              "observed": 30866.652436865035,
+              "error": 0.0
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30866.580044056944,
+              "observed": 30866.580044056944,
+              "error": 0.0
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30867.319156415044,
+              "observed": 30867.319156415044,
+              "error": 0.0
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30867.146064139342,
+              "observed": 30867.146064139346,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.562044609855,
+              "observed": 30868.562044609855,
+              "error": 0.0
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.332664550253,
+              "observed": 30868.33266455025,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30866.390291676707,
+              "observed": 30866.390291676704,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30866.363885433413,
+              "observed": 30866.363885433413,
+              "error": 0.0
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30866.297405851466,
+              "observed": 30866.297405851477,
+              "error": 1.0913936421275139e-11
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30866.288407557317,
+              "observed": 30866.288407557317,
+              "error": 0.0
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30880.99860300578,
+            "observed": 30890.425964383532,
+            "error": 9.427361377751367,
+            "other_seed_branch_error": 9.416739014301129,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30880.99860300578,
+            "observed": 30890.425964383532,
+            "error": 9.427361377751367,
+            "other_seed_branch_error": 9.416739014301129,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 8.003553375601768e-11,
+          "first_gap_time": 1791842400
+        }
+      },
+      "automatic_C": {
+        "Lite": {
+          "compared_values": 2802,
+          "max_error": 7.639755494892597e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30866.652972462205,
+              "observed": 30866.6529724622,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30866.57996410484,
+              "observed": 30866.579964104832,
+              "error": 7.275957614183426e-12
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30867.320407851155,
+              "observed": 30867.320407851166,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30867.145868583255,
+              "observed": 30867.14586858325,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30868.592448762774,
+              "observed": 30868.59244876277,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.309509935283,
+              "observed": 30868.30950993529,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791838335,
+            "column": "Lane 3 A",
+            "predicted": 30880.31275657539,
+            "observed": 30880.312756575466,
+            "error": 7.639755494892597e-11,
+            "other_seed_branch_error": 0.0163716693969036,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 7.639755494892597e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4670,
+          "max_error": 9.427361377751367,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30866.652436865035,
+              "observed": 30866.652436865035,
+              "error": 0.0
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30866.580044056944,
+              "observed": 30866.580044056944,
+              "error": 0.0
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30867.319156415044,
+              "observed": 30867.319156415044,
+              "error": 0.0
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30867.146064139342,
+              "observed": 30867.146064139346,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.562044609855,
+              "observed": 30868.562044609855,
+              "error": 0.0
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.332664550253,
+              "observed": 30868.33266455025,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30866.390291676707,
+              "observed": 30866.390291676704,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30866.363885433413,
+              "observed": 30866.363885433413,
+              "error": 0.0
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30866.297405851466,
+              "observed": 30866.297405851477,
+              "error": 1.0913936421275139e-11
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30866.288407557317,
+              "observed": 30866.288407557317,
+              "error": 0.0
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30880.99860300578,
+            "observed": 30890.425964383532,
+            "error": 9.427361377751367,
+            "other_seed_branch_error": 9.416739014301129,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30880.99860300578,
+            "observed": 30890.425964383532,
+            "error": 9.427361377751367,
+            "other_seed_branch_error": 9.416739014301129,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 8.003553375601768e-11,
+          "first_gap_time": 1791842400
+        }
+      }
+    },
+    {
+      "START": "2026-10-12T19:03:15+00:00",
+      "END": "2026-10-12T19:23:15+00:00",
+      "C_observed": 53.999999999999204,
+      "C_auto_v4": 61.0,
+      "manual_supplied_C": {
+        "Lite": {
+          "compared_values": 2790,
+          "max_error": 7.275957614183426e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30865.84330879915,
+              "observed": 30865.843308799136,
+              "error": 1.4551915228366852e-11
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30865.656765838623,
+              "observed": 30865.656765838627,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30867.325449937933,
+              "observed": 30867.325449937925,
+              "error": 7.275957614183426e-12
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30866.975342283597,
+              "observed": 30866.975342283622,
+              "error": 2.546585164964199e-11
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30869.210292931333,
+              "observed": 30869.210292931337,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.87663101097,
+              "observed": 30868.87663101097,
+              "error": 0.0
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791843015,
+            "column": "Lane 3 A",
+            "predicted": 30888.959838163628,
+            "observed": 30888.959838163555,
+            "error": 7.275957614183426e-11,
+            "other_seed_branch_error": 0.00020379295892780647,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 6.184563972055912e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4650,
+          "max_error": 9.630388415444031,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30865.84773285324,
+              "observed": 30865.84773285323,
+              "error": 7.275957614183426e-12
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30865.655250474923,
+              "observed": 30865.655250474927,
+              "error": 3.637978807091713e-12
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30867.31365869063,
+              "observed": 30867.313658690633,
+              "error": 3.637978807091713e-12
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30866.95759275841,
+              "observed": 30866.957592758405,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30869.148136892567,
+              "observed": 30869.148136892567,
+              "error": 0.0
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.858314979465,
+              "observed": 30868.858314979465,
+              "error": 0.0
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30865.14836827375,
+              "observed": 30865.148368273756,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30865.075223921634,
+              "observed": 30865.075223921638,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30864.886706979898,
+              "observed": 30864.886706979887,
+              "error": 1.0913936421275139e-11
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.860996714804,
+              "observed": 30864.860996714793,
+              "error": 1.0913936421275139e-11
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.12961705761,
+            "observed": 30890.71376619835,
+            "error": 9.58414914074092,
+            "other_seed_branch_error": 9.583655701728276,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A boundary",
+            "predicted": 30881.009895586227,
+            "observed": 30890.64028400167,
+            "error": 9.630388415444031,
+            "other_seed_branch_error": 9.62750148395935,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 3.055902197957039e-10,
+          "first_gap_time": 1791842400
+        }
+      },
+      "automatic_C": {
+        "Lite": {
+          "compared_values": 2790,
+          "max_error": 1.566573942975083,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30865.732390503817,
+              "observed": 30865.843308799136,
+              "error": 0.11091829531869735
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30865.562575385247,
+              "observed": 30865.656765838627,
+              "error": 0.09419045337926946
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30867.12115948255,
+              "observed": 30867.325449937925,
+              "error": 0.20429045537457569
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30866.78602954252,
+              "observed": 30866.975342283622,
+              "error": 0.1893127411021851
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30869.021699112636,
+              "observed": 30869.210292931337,
+              "error": 0.18859381870061043
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.673271029045,
+              "observed": 30868.87663101097,
+              "error": 0.20335998192604166
+            }
+          },
+          "first_mismatch": {
+            "time": 1791833205,
+            "column": "Lane 3 A",
+            "predicted": 30865.732390503817,
+            "observed": 30865.843308799136,
+            "error": 0.11091829531869735,
+            "other_seed_branch_error": 2.89144299444888,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791833865,
+            "column": "Lane 2 B",
+            "predicted": 30889.871600164133,
+            "observed": 30891.43817410711,
+            "error": 1.566573942975083,
+            "other_seed_branch_error": 1.3431779912534694,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 1.566573942975083,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4650,
+          "max_error": 9.66638059183606,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30865.72884217372,
+              "observed": 30865.84773285323,
+              "error": 0.11889067951051402
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30865.56041272656,
+              "observed": 30865.655250474927,
+              "error": 0.09483774836553494
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30867.097793711644,
+              "observed": 30867.313658690633,
+              "error": 0.21586497898897505
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30866.794142605348,
+              "observed": 30866.957592758405,
+              "error": 0.163450153057056
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.999077771296,
+              "observed": 30869.148136892567,
+              "error": 0.14905912127142074
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.72515513081,
+              "observed": 30868.858314979465,
+              "error": 0.13315984865403152
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30865.10399450341,
+              "observed": 30865.148368273756,
+              "error": 0.04437377034628298
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30865.038719459742,
+              "observed": 30865.075223921638,
+              "error": 0.03650446189567447
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30864.871347574466,
+              "observed": 30864.886706979887,
+              "error": 0.0153594054208952
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.84836089638,
+              "observed": 30864.860996714793,
+              "error": 0.012635818413400557
+            }
+          },
+          "first_mismatch": {
+            "time": 1791833205,
+            "column": "Layer A",
+            "predicted": 30865.72884217372,
+            "observed": 30865.84773285323,
+            "error": 0.11889067951051402,
+            "other_seed_branch_error": 2.8869886829706957,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047385606515,
+            "observed": 30890.71376619835,
+            "error": 9.66638059183606,
+            "other_seed_branch_error": 9.664894995439681,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 1.6125200188871531,
+          "first_gap_time": 1791842400
+        }
+      }
+    },
+    {
+      "START": "2026-10-12T19:03:15+00:00",
+      "END": "2026-10-12T19:23:30+00:00",
+      "C_observed": 67.00000000000017,
+      "C_auto_v4": 67.0,
+      "manual_supplied_C": {
+        "Lite": {
+          "compared_values": 2796,
+          "max_error": 7.639755494892597e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30865.20341244485,
+              "observed": 30865.20341244484,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30865.03594702004,
+              "observed": 30865.035947020027,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30866.622726539343,
+              "observed": 30866.622726539354,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30866.27132065906,
+              "observed": 30866.271320659078,
+              "error": 1.8189894035458565e-11
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30868.744953611098,
+              "observed": 30868.744953611087,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.339920247454,
+              "observed": 30868.33992024746,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791842460,
+            "column": "Lane 3 B",
+            "predicted": 30881.625043559194,
+            "observed": 30881.625043559117,
+            "error": 7.639755494892597e-11,
+            "other_seed_branch_error": 0.012496168688812759,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 7.275957614183426e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4660,
+          "max_error": 9.630805805874843,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30865.205019509423,
+              "observed": 30865.205019509423,
+              "error": 0.0
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30865.03328842312,
+              "observed": 30865.033288423117,
+              "error": 3.637978807091713e-12
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30866.60981138872,
+              "observed": 30866.609811388713,
+              "error": 7.275957614183426e-12
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30866.277404202658,
+              "observed": 30866.27740420265,
+              "error": 7.275957614183426e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.731179730752,
+              "observed": 30868.73117973075,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.303347145014,
+              "observed": 30868.303347145014,
+              "error": 0.0
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30864.589216939006,
+              "observed": 30864.589216939014,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.526215620284,
+              "observed": 30864.526215620288,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30864.365772517664,
+              "observed": 30864.365772517656,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.34385027604,
+              "observed": 30864.343850276036,
+              "error": 3.637978807091713e-12
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.009473440598,
+            "observed": 30890.640279246472,
+            "error": 9.630805805874843,
+            "other_seed_branch_error": 9.627496728760889,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.009473440598,
+            "observed": 30890.640279246472,
+            "error": 9.630805805874843,
+            "other_seed_branch_error": 9.627496728760889,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 1.0550138540565968e-10,
+          "first_gap_time": 1791842400
+        }
+      },
+      "automatic_C": {
+        "Lite": {
+          "compared_values": 2796,
+          "max_error": 7.639755494892597e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30865.20341244485,
+              "observed": 30865.20341244484,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30865.03594702004,
+              "observed": 30865.035947020027,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30866.622726539343,
+              "observed": 30866.622726539354,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30866.27132065906,
+              "observed": 30866.271320659078,
+              "error": 1.8189894035458565e-11
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30868.744953611098,
+              "observed": 30868.744953611087,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.339920247454,
+              "observed": 30868.33992024746,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791842460,
+            "column": "Lane 3 B",
+            "predicted": 30881.625043559194,
+            "observed": 30881.625043559117,
+            "error": 7.639755494892597e-11,
+            "other_seed_branch_error": 0.012496168688812759,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 7.275957614183426e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4660,
+          "max_error": 9.630805805874843,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30865.205019509423,
+              "observed": 30865.205019509423,
+              "error": 0.0
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30865.03328842312,
+              "observed": 30865.033288423117,
+              "error": 3.637978807091713e-12
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30866.60981138872,
+              "observed": 30866.609811388713,
+              "error": 7.275957614183426e-12
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30866.277404202658,
+              "observed": 30866.27740420265,
+              "error": 7.275957614183426e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.731179730752,
+              "observed": 30868.73117973075,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.303347145014,
+              "observed": 30868.303347145014,
+              "error": 0.0
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30864.589216939006,
+              "observed": 30864.589216939014,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.526215620284,
+              "observed": 30864.526215620288,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30864.365772517664,
+              "observed": 30864.365772517656,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.34385027604,
+              "observed": 30864.343850276036,
+              "error": 3.637978807091713e-12
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.009473440598,
+            "observed": 30890.640279246472,
+            "error": 9.630805805874843,
+            "other_seed_branch_error": 9.627496728760889,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.009473440598,
+            "observed": 30890.640279246472,
+            "error": 9.630805805874843,
+            "other_seed_branch_error": 9.627496728760889,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 1.0550138540565968e-10,
+          "first_gap_time": 1791842400
+        }
+      }
+    },
+    {
+      "START": "2026-10-12T19:03:15+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "C_observed": 88.00000000000159,
+      "C_auto_v4": 88.0,
+      "manual_supplied_C": {
+        "Lite": {
+          "compared_values": 2802,
+          "max_error": 7.639755494892597e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30866.652972462205,
+              "observed": 30866.6529724622,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30866.57996410484,
+              "observed": 30866.579964104832,
+              "error": 7.275957614183426e-12
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30867.320407851155,
+              "observed": 30867.320407851166,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30867.145868583255,
+              "observed": 30867.14586858325,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30868.592448762774,
+              "observed": 30868.59244876277,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.309509935283,
+              "observed": 30868.30950993529,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791838335,
+            "column": "Lane 3 A",
+            "predicted": 30880.31275657539,
+            "observed": 30880.312756575466,
+            "error": 7.639755494892597e-11,
+            "other_seed_branch_error": 0.0163716693969036,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 7.639755494892597e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4670,
+          "max_error": 9.427361377751367,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30866.652436865035,
+              "observed": 30866.652436865035,
+              "error": 0.0
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30866.580044056944,
+              "observed": 30866.580044056944,
+              "error": 0.0
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30867.319156415044,
+              "observed": 30867.319156415044,
+              "error": 0.0
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30867.146064139342,
+              "observed": 30867.146064139346,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.562044609855,
+              "observed": 30868.562044609855,
+              "error": 0.0
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.332664550253,
+              "observed": 30868.33266455025,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30866.390291676707,
+              "observed": 30866.390291676704,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30866.363885433413,
+              "observed": 30866.363885433413,
+              "error": 0.0
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30866.297405851466,
+              "observed": 30866.297405851477,
+              "error": 1.0913936421275139e-11
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30866.288407557317,
+              "observed": 30866.288407557317,
+              "error": 0.0
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30880.99860300578,
+            "observed": 30890.425964383532,
+            "error": 9.427361377751367,
+            "other_seed_branch_error": 9.416739014301129,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30880.99860300578,
+            "observed": 30890.425964383532,
+            "error": 9.427361377751367,
+            "other_seed_branch_error": 9.416739014301129,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 8.003553375601768e-11,
+          "first_gap_time": 1791842400
+        }
+      },
+      "automatic_C": {
+        "Lite": {
+          "compared_values": 2802,
+          "max_error": 7.639755494892597e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30866.652972462205,
+              "observed": 30866.6529724622,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30866.57996410484,
+              "observed": 30866.579964104832,
+              "error": 7.275957614183426e-12
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30867.320407851155,
+              "observed": 30867.320407851166,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30867.145868583255,
+              "observed": 30867.14586858325,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30868.592448762774,
+              "observed": 30868.59244876277,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.309509935283,
+              "observed": 30868.30950993529,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791838335,
+            "column": "Lane 3 A",
+            "predicted": 30880.31275657539,
+            "observed": 30880.312756575466,
+            "error": 7.639755494892597e-11,
+            "other_seed_branch_error": 0.0163716693969036,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 7.639755494892597e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4670,
+          "max_error": 9.427361377751367,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30866.652436865035,
+              "observed": 30866.652436865035,
+              "error": 0.0
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30866.580044056944,
+              "observed": 30866.580044056944,
+              "error": 0.0
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30867.319156415044,
+              "observed": 30867.319156415044,
+              "error": 0.0
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30867.146064139342,
+              "observed": 30867.146064139346,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.562044609855,
+              "observed": 30868.562044609855,
+              "error": 0.0
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.332664550253,
+              "observed": 30868.33266455025,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30866.390291676707,
+              "observed": 30866.390291676704,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30866.363885433413,
+              "observed": 30866.363885433413,
+              "error": 0.0
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30866.297405851466,
+              "observed": 30866.297405851477,
+              "error": 1.0913936421275139e-11
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30866.288407557317,
+              "observed": 30866.288407557317,
+              "error": 0.0
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30880.99860300578,
+            "observed": 30890.425964383532,
+            "error": 9.427361377751367,
+            "other_seed_branch_error": 9.416739014301129,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30880.99860300578,
+            "observed": 30890.425964383532,
+            "error": 9.427361377751367,
+            "other_seed_branch_error": 9.416739014301129,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 8.003553375601768e-11,
+          "first_gap_time": 1791842400
+        }
+      }
+    },
+    {
+      "START": "2026-10-12T19:03:30+00:00",
+      "END": "2026-10-12T19:23:15+00:00",
+      "C_observed": 60.99999999999961,
+      "C_auto_v4": 61.0,
+      "manual_supplied_C": {
+        "Lite": {
+          "compared_values": 2790,
+          "max_error": 9.458744898438454e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30865.732390503817,
+              "observed": 30865.732390503814,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30865.562575385247,
+              "observed": 30865.562575385266,
+              "error": 1.8189894035458565e-11
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30867.12115948255,
+              "observed": 30867.12115948256,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30866.78602954252,
+              "observed": 30866.786029542516,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30869.021699112636,
+              "observed": 30869.02169911264,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.673271029045,
+              "observed": 30868.673271029038,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791838785,
+            "column": "Lane 3 B",
+            "predicted": 30880.821364117306,
+            "observed": 30880.8213641174,
+            "error": 9.458744898438454e-11,
+            "other_seed_branch_error": 0.0066521131520858034,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 9.458744898438454e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4650,
+          "max_error": 9.630227774490777,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30865.72884217372,
+              "observed": 30865.72884217373,
+              "error": 7.275957614183426e-12
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30865.56041272656,
+              "observed": 30865.560412726576,
+              "error": 1.4551915228366852e-11
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30867.097793711644,
+              "observed": 30867.09779371165,
+              "error": 7.275957614183426e-12
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30866.794142605348,
+              "observed": 30866.794142605355,
+              "error": 7.275957614183426e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.999077771296,
+              "observed": 30868.999077771296,
+              "error": 0.0
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.72515513081,
+              "observed": 30868.725155130815,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30865.10399450341,
+              "observed": 30865.10399450341,
+              "error": 0.0
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30865.038719459742,
+              "observed": 30865.03871945974,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30864.871347574466,
+              "observed": 30864.871347574466,
+              "error": 0.0
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.84836089638,
+              "observed": 30864.848360896376,
+              "error": 3.637978807091713e-12
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047385606515,
+            "observed": 30890.677613381005,
+            "error": 9.630227774490777,
+            "other_seed_branch_error": 9.628742178094399,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047385606515,
+            "observed": 30890.677613381005,
+            "error": 9.630227774490777,
+            "other_seed_branch_error": 9.628742178094399,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 3.2741809263825417e-11,
+          "first_gap_time": 1791842400
+        }
+      },
+      "automatic_C": {
+        "Lite": {
+          "compared_values": 2790,
+          "max_error": 9.458744898438454e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30865.732390503817,
+              "observed": 30865.732390503814,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30865.562575385247,
+              "observed": 30865.562575385266,
+              "error": 1.8189894035458565e-11
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30867.12115948255,
+              "observed": 30867.12115948256,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30866.78602954252,
+              "observed": 30866.786029542516,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30869.021699112636,
+              "observed": 30869.02169911264,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.673271029045,
+              "observed": 30868.673271029038,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791838785,
+            "column": "Lane 3 B",
+            "predicted": 30880.821364117306,
+            "observed": 30880.8213641174,
+            "error": 9.458744898438454e-11,
+            "other_seed_branch_error": 0.0066521131520858034,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 9.458744898438454e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4650,
+          "max_error": 9.630227774490777,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30865.72884217372,
+              "observed": 30865.72884217373,
+              "error": 7.275957614183426e-12
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30865.56041272656,
+              "observed": 30865.560412726576,
+              "error": 1.4551915228366852e-11
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30867.097793711644,
+              "observed": 30867.09779371165,
+              "error": 7.275957614183426e-12
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30866.794142605348,
+              "observed": 30866.794142605355,
+              "error": 7.275957614183426e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.999077771296,
+              "observed": 30868.999077771296,
+              "error": 0.0
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.72515513081,
+              "observed": 30868.725155130815,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30865.10399450341,
+              "observed": 30865.10399450341,
+              "error": 0.0
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30865.038719459742,
+              "observed": 30865.03871945974,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30864.871347574466,
+              "observed": 30864.871347574466,
+              "error": 0.0
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.84836089638,
+              "observed": 30864.848360896376,
+              "error": 3.637978807091713e-12
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047385606515,
+            "observed": 30890.677613381005,
+            "error": 9.630227774490777,
+            "other_seed_branch_error": 9.628742178094399,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047385606515,
+            "observed": 30890.677613381005,
+            "error": 9.630227774490777,
+            "other_seed_branch_error": 9.628742178094399,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 3.2741809263825417e-11,
+          "first_gap_time": 1791842400
+        }
+      }
+    },
+    {
+      "START": "2026-10-12T19:03:30+00:00",
+      "END": "2026-10-12T19:23:30+00:00",
+      "C_observed": 67.00000000000018,
+      "C_auto_v4": 67.0,
+      "manual_supplied_C": {
+        "Lite": {
+          "compared_values": 2796,
+          "max_error": 7.639755494892597e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30865.20341244485,
+              "observed": 30865.20341244484,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30865.03594702004,
+              "observed": 30865.035947020027,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30866.622726539343,
+              "observed": 30866.622726539354,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30866.27132065906,
+              "observed": 30866.271320659078,
+              "error": 1.8189894035458565e-11
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30868.744953611098,
+              "observed": 30868.744953611087,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.339920247454,
+              "observed": 30868.33992024746,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791842460,
+            "column": "Lane 3 B",
+            "predicted": 30881.625043559194,
+            "observed": 30881.625043559117,
+            "error": 7.639755494892597e-11,
+            "other_seed_branch_error": 0.012496168688812759,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 7.275957614183426e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4660,
+          "max_error": 9.630805805874843,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30865.205019509423,
+              "observed": 30865.205019509423,
+              "error": 0.0
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30865.03328842312,
+              "observed": 30865.033288423117,
+              "error": 3.637978807091713e-12
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30866.60981138872,
+              "observed": 30866.609811388713,
+              "error": 7.275957614183426e-12
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30866.277404202658,
+              "observed": 30866.27740420265,
+              "error": 7.275957614183426e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.731179730752,
+              "observed": 30868.73117973075,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.303347145014,
+              "observed": 30868.303347145014,
+              "error": 0.0
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30864.589216939006,
+              "observed": 30864.589216939014,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.526215620284,
+              "observed": 30864.526215620288,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30864.365772517664,
+              "observed": 30864.365772517656,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.34385027604,
+              "observed": 30864.343850276036,
+              "error": 3.637978807091713e-12
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.009473440598,
+            "observed": 30890.640279246472,
+            "error": 9.630805805874843,
+            "other_seed_branch_error": 9.627496728760889,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.009473440598,
+            "observed": 30890.640279246472,
+            "error": 9.630805805874843,
+            "other_seed_branch_error": 9.627496728760889,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 1.0550138540565968e-10,
+          "first_gap_time": 1791842400
+        }
+      },
+      "automatic_C": {
+        "Lite": {
+          "compared_values": 2796,
+          "max_error": 7.639755494892597e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30865.20341244485,
+              "observed": 30865.20341244484,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30865.03594702004,
+              "observed": 30865.035947020027,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30866.622726539343,
+              "observed": 30866.622726539354,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30866.27132065906,
+              "observed": 30866.271320659078,
+              "error": 1.8189894035458565e-11
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30868.744953611098,
+              "observed": 30868.744953611087,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.339920247454,
+              "observed": 30868.33992024746,
+              "error": 7.275957614183426e-12
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791842460,
+            "column": "Lane 3 B",
+            "predicted": 30881.625043559194,
+            "observed": 30881.625043559117,
+            "error": 7.639755494892597e-11,
+            "other_seed_branch_error": 0.012496168688812759,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 7.275957614183426e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4660,
+          "max_error": 9.630805805874843,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30865.205019509423,
+              "observed": 30865.205019509423,
+              "error": 0.0
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30865.03328842312,
+              "observed": 30865.033288423117,
+              "error": 3.637978807091713e-12
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30866.60981138872,
+              "observed": 30866.609811388713,
+              "error": 7.275957614183426e-12
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30866.277404202658,
+              "observed": 30866.27740420265,
+              "error": 7.275957614183426e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30868.731179730752,
+              "observed": 30868.73117973075,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.303347145014,
+              "observed": 30868.303347145014,
+              "error": 0.0
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30864.589216939006,
+              "observed": 30864.589216939014,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.526215620284,
+              "observed": 30864.526215620288,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30864.365772517664,
+              "observed": 30864.365772517656,
+              "error": 7.275957614183426e-12
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30864.34385027604,
+              "observed": 30864.343850276036,
+              "error": 3.637978807091713e-12
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.009473440598,
+            "observed": 30890.640279246472,
+            "error": 9.630805805874843,
+            "other_seed_branch_error": 9.627496728760889,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.009473440598,
+            "observed": 30890.640279246472,
+            "error": 9.630805805874843,
+            "other_seed_branch_error": 9.627496728760889,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 1.0550138540565968e-10,
+          "first_gap_time": 1791842400
+        }
+      }
+    },
+    {
+      "START": "2026-10-12T19:03:30+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "C_observed": 60.9999999999996,
+      "C_auto_v4": 61.0,
+      "manual_supplied_C": {
+        "Lite": {
+          "compared_values": 2802,
+          "max_error": 9.094947017729282e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30866.815460077967,
+              "observed": 30866.81546007796,
+              "error": 7.275957614183426e-12
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30866.71538145068,
+              "observed": 30866.715381450693,
+              "error": 1.4551915228366852e-11
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30867.681150380005,
+              "observed": 30867.681150380016,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30867.46336801879,
+              "observed": 30867.46336801879,
+              "error": 0.0
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30869.091589363277,
+              "observed": 30869.09158936328,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.80281220429,
+              "observed": 30868.80281220429,
+              "error": 0.0
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791836655,
+            "column": "Lane 3 B",
+            "predicted": 30883.57497270563,
+            "observed": 30883.574972705723,
+            "error": 9.094947017729282e-11,
+            "other_seed_branch_error": 0.04524832198876538,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 9.094947017729282e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4670,
+          "max_error": 9.629695772873674,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30866.813357952848,
+              "observed": 30866.813357952848,
+              "error": 0.0
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30866.71411370255,
+              "observed": 30866.714113702554,
+              "error": 3.637978807091713e-12
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30867.665749274984,
+              "observed": 30867.665749274984,
+              "error": 0.0
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30867.468564416926,
+              "observed": 30867.46856441692,
+              "error": 7.275957614183426e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30869.07229114317,
+              "observed": 30869.072291143166,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.84471039996,
+              "observed": 30868.84471039996,
+              "error": 0.0
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30866.450155849452,
+              "observed": 30866.450155849463,
+              "error": 1.0913936421275139e-11
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30866.412962099075,
+              "observed": 30866.41296209907,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30866.31819048419,
+              "observed": 30866.318190484188,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30866.305240228565,
+              "observed": 30866.30524022857,
+              "error": 3.637978807091713e-12
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047921606976,
+            "observed": 30890.67761737985,
+            "error": 9.629695772873674,
+            "other_seed_branch_error": 9.628728591807885,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047921606976,
+            "observed": 30890.67761737985,
+            "error": 9.629695772873674,
+            "other_seed_branch_error": 9.628728591807885,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 6.548361852765083e-11,
+          "first_gap_time": 1791842400
+        }
+      },
+      "automatic_C": {
+        "Lite": {
+          "compared_values": 2802,
+          "max_error": 9.094947017729282e-11,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Lane 3 A": {
+              "time": 1791833205,
+              "predicted": 30866.815460077967,
+              "observed": 30866.81546007796,
+              "error": 7.275957614183426e-12
+            },
+            "Lane 3 B": {
+              "time": 1791833205,
+              "predicted": 30866.71538145068,
+              "observed": 30866.715381450693,
+              "error": 1.4551915228366852e-11
+            },
+            "Lane 2 A": {
+              "time": 1791833205,
+              "predicted": 30867.681150380005,
+              "observed": 30867.681150380016,
+              "error": 1.0913936421275139e-11
+            },
+            "Lane 2 B": {
+              "time": 1791833205,
+              "predicted": 30867.46336801879,
+              "observed": 30867.46336801879,
+              "error": 0.0
+            },
+            "Lane 1 A": {
+              "time": 1791833205,
+              "predicted": 30869.091589363277,
+              "observed": 30869.09158936328,
+              "error": 3.637978807091713e-12
+            },
+            "Lane 1 B": {
+              "time": 1791833205,
+              "predicted": 30868.80281220429,
+              "observed": 30868.80281220429,
+              "error": 0.0
+            }
+          },
+          "first_mismatch": null,
+          "max_error_witness": {
+            "time": 1791836655,
+            "column": "Lane 3 B",
+            "predicted": 30883.57497270563,
+            "observed": 30883.574972705723,
+            "error": 9.094947017729282e-11,
+            "other_seed_branch_error": 0.04524832198876538,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 2238,
+          "before_first_gap_max_error": 9.094947017729282e-11,
+          "first_gap_time": 1791842400
+        },
+        "Character": {
+          "compared_values": 4670,
+          "max_error": 9.629695772873674,
+          "visibility_mismatches": 0,
+          "first_visible_values": {
+            "Layer A": {
+              "time": 1791833205,
+              "predicted": 30866.813357952848,
+              "observed": 30866.813357952848,
+              "error": 0.0
+            },
+            "Layer A boundary": {
+              "time": 1791833205,
+              "predicted": 30866.71411370255,
+              "observed": 30866.714113702554,
+              "error": 3.637978807091713e-12
+            },
+            "Layer B": {
+              "time": 1791833205,
+              "predicted": 30867.665749274984,
+              "observed": 30867.665749274984,
+              "error": 0.0
+            },
+            "Layer B boundary": {
+              "time": 1791833205,
+              "predicted": 30867.468564416926,
+              "observed": 30867.46856441692,
+              "error": 7.275957614183426e-12
+            },
+            "Layer C": {
+              "time": 1791833205,
+              "predicted": 30869.07229114317,
+              "observed": 30869.072291143166,
+              "error": 3.637978807091713e-12
+            },
+            "Layer C boundary": {
+              "time": 1791833205,
+              "predicted": 30868.84471039996,
+              "observed": 30868.84471039996,
+              "error": 0.0
+            },
+            "Extra cloud 1": {
+              "time": 1791833205,
+              "predicted": 30866.450155849452,
+              "observed": 30866.450155849463,
+              "error": 1.0913936421275139e-11
+            },
+            "Extra cloud 1 boundary": {
+              "time": 1791833205,
+              "predicted": 30866.412962099075,
+              "observed": 30866.41296209907,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2": {
+              "time": 1791833205,
+              "predicted": 30866.31819048419,
+              "observed": 30866.318190484188,
+              "error": 3.637978807091713e-12
+            },
+            "Extra cloud 2 boundary": {
+              "time": 1791833205,
+              "predicted": 30866.305240228565,
+              "observed": 30866.30524022857,
+              "error": 3.637978807091713e-12
+            }
+          },
+          "first_mismatch": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047921606976,
+            "observed": 30890.67761737985,
+            "error": 9.629695772873674,
+            "other_seed_branch_error": 9.628728591807885,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "max_error_witness": {
+            "time": 1791842400,
+            "column": "Layer A",
+            "predicted": 30881.047921606976,
+            "observed": 30890.67761737985,
+            "error": 9.629695772873674,
+            "other_seed_branch_error": 9.628728591807885,
+            "Bull_delivery_active": "0",
+            "Bear_delivery_active": "0"
+          },
+          "before_first_gap_values": 3730,
+          "before_first_gap_max_error": 6.548361852765083e-11,
+          "first_gap_time": 1791842400
+        }
+      }
+    }
+  ]
+}

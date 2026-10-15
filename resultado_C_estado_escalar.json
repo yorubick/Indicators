@@ -1,0 +1,10 @@
+{
+  "status": "reproduced_from_current_master_analysis",
+  "master_sha256": "ef9533acdce3e1c2c2db3c72caee5059a2957f7dee4c60e725f6dcf56ccc9c05",
+  "analysis_sha256": "cffbd60cbc211210fbc7a5ad3388fd619e77f9f594e8d478074061bb22675d55",
+  "group_count": 4,
+  "transition_rows": 10,
+  "same_scalar_state_conflicts": 4,
+  "csv_sha256": "f80614ea3db0b8d735e80d98cc85c35a2ab1f4f726575dc430167df9d8c19c16",
+  "csv": "G:\\trading\\guias\\analisis\\residuos_C_estado_escalar.csv"
+}

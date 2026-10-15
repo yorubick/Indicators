@@ -1,0 +1,13 @@
+{
+ "registered_date":"2026-10-14",
+ "instrument":"CME_MINI:NQ1!",
+ "indicator":"PS EMA LITE v1.2; unchanged version",
+ "START_UTC":"2026-10-12T18:52:00Z",
+ "source_seconds":15,"chart_seconds":15,
+ "END_UTC":["19:16:45","19:17:00","19:17:15","19:17:30","19:17:45","19:18:00","19:18:15","19:18:30","19:18:45"],
+ "procedure":"Set START and minute END through settings; position seconds via observed chart anchor. Two CSV exports per case, after settings inspection without mutation.",
+ "acceptance":"Complete native 15s range and one hour after END; identical paired OHLCV and lanes; six consistent fitted C values; full close EMA reconstruction seeded from final END high/low and first post-END close breakout visibility. Preserve failed pairs and preregister any repetition.",
+ "controls":{"19:16:45":66,"19:17:45":106,"19:18:45":152},
+ "interpretation":"Locate local changes at fixed source and START; no predetermined values for other six endpoints. A single jump does not establish harmonics.",
+ "restore":"Chart/source60, START18:55, END19:20, expected C62"
+}

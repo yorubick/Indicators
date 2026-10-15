@@ -1,0 +1,1202 @@
+[
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_manual_15m_1m.csv",
+    "rows_closed": 980,
+    "step_seconds": 60,
+    "layers": {
+      "Layer A": {
+        "source": "close",
+        "alpha": 0.07999999999999884,
+        "period": 24.000000000000362,
+        "rmse_step": 1.5171079108768095e-12,
+        "max_error_step": 3.786748692391484e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "seed_at_end_if_all_closes_processed": 31254.25
+      },
+      "Layer A boundary": {
+        "source": "close",
+        "alpha": 0.06451612903225931,
+        "period": 29.9999999999994,
+        "rmse_step": 1.4736289023135832e-12,
+        "max_error_step": 3.651301483387215e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "seed_at_end_if_all_closes_processed": 31254.25
+      },
+      "Layer B": {
+        "source": "close",
+        "alpha": 0.2222222222222207,
+        "period": 8.00000000000006,
+        "rmse_step": 1.5542735745628753e-12,
+        "max_error_step": 3.653077840226615e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.250000000004,
+        "seed_at_end_if_all_closes_processed": 31254.250000000004
+      },
+      "Layer B boundary": {
+        "source": "close",
+        "alpha": 0.18181818181818096,
+        "period": 10.000000000000052,
+        "rmse_step": 1.5203928456547297e-12,
+        "max_error_step": 3.987032926033862e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "seed_at_end_if_all_closes_processed": 31254.25
+      },
+      "Layer C": {
+        "source": "close",
+        "alpha": 0.49999999999999634,
+        "period": 3.0000000000000293,
+        "rmse_step": 1.0279535789795036e-12,
+        "max_error_step": 1.8971491044794675e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "seed_at_end_if_all_closes_processed": 31254.25
+      },
+      "Layer C boundary": {
+        "source": "close",
+        "alpha": 0.49999999999999634,
+        "period": 3.0000000000000293,
+        "rmse_step": 1.0279535789795036e-12,
+        "max_error_step": 1.8971491044794675e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "seed_at_end_if_all_closes_processed": 31254.25
+      },
+      "Extra cloud 1": {
+        "source": "close",
+        "alpha": 0.027397260273972657,
+        "period": 71.99999999999986,
+        "rmse_step": 1.4465670584788776e-12,
+        "max_error_step": 3.539391002504999e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "seed_at_end_if_all_closes_processed": 31254.25
+      },
+      "Extra cloud 1 boundary": {
+        "source": "close",
+        "alpha": 0.0222222222222214,
+        "period": 89.00000000000333,
+        "rmse_step": 1.509043630965482e-12,
+        "max_error_step": 3.6204372833026355e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "seed_at_end_if_all_closes_processed": 31254.25
+      },
+      "Extra cloud 2": {
+        "source": "close",
+        "alpha": 0.009216589861751025,
+        "period": 216.00000000000298,
+        "rmse_step": 1.533457643763896e-12,
+        "max_error_step": 3.5605407511241083e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.25,
+        "seed_at_end_if_all_closes_processed": 31254.25
+      },
+      "Extra cloud 2 boundary": {
+        "source": "close",
+        "alpha": 0.007462686567165018,
+        "period": 266.9999999999699,
+        "rmse_step": 1.5234648763481092e-12,
+        "max_error_step": 3.5267344600242723e-12,
+        "pairs": 876,
+        "first_time": 1791781260,
+        "implied_seed": 31254.249999999996,
+        "seed_at_end_if_all_closes_processed": 31254.249999999996
+      }
+    },
+    "start": "04:45",
+    "end": "05:00",
+    "duration_minutes": 15.0,
+    "anchor_ohlc": {
+      "open": 31253.5,
+      "high": 31254.25,
+      "low": 31244.75,
+      "close": 31246.25
+    }
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_manual_30m_1m_recarga.csv",
+    "rows_closed": 300,
+    "step_seconds": 60,
+    "layers": {
+      "Layer A": {
+        "source": "close",
+        "alpha": 0.042553191489359994,
+        "period": 46.00000000000188,
+        "rmse_step": 1.4578053363929447e-12,
+        "max_error_step": 3.547107052526144e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30912.95120801915
+      },
+      "Layer A boundary": {
+        "source": "close",
+        "alpha": 0.034482758620692805,
+        "period": 56.9999999999947,
+        "rmse_step": 1.4182829261440717e-12,
+        "max_error_step": 3.3045788327967784e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30922.15344185585
+      },
+      "Layer B": {
+        "source": "close",
+        "alpha": 0.1249999999999983,
+        "period": 15.000000000000217,
+        "rmse_step": 1.0494826956538037e-12,
+        "max_error_step": 1.8482992913959606e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30894.37495942619
+      },
+      "Layer B boundary": {
+        "source": "close",
+        "alpha": 0.10000000000001258,
+        "period": 18.999999999997485,
+        "rmse_step": 1.4904186631442437e-12,
+        "max_error_step": 3.68904906622447e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30895.003510371946
+      },
+      "Layer C": {
+        "source": "close",
+        "alpha": 0.3333333333333368,
+        "period": 4.999999999999938,
+        "rmse_step": 1.6814616088950697e-12,
+        "max_error_step": 2.4984458946164523e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30898.019909479088
+      },
+      "Layer C boundary": {
+        "source": "close",
+        "alpha": 0.28571428571426677,
+        "period": 6.0000000000004645,
+        "rmse_step": 1.8005492388273755e-12,
+        "max_error_step": 4.2379433295991475e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30897.16176546585
+      },
+      "Extra cloud 1": {
+        "source": "close",
+        "alpha": 0.014285714285710707,
+        "period": 139.00000000003507,
+        "rmse_step": 1.411306167434151e-12,
+        "max_error_step": 3.5565439482354577e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30973.130792706605
+      },
+      "Extra cloud 1 boundary": {
+        "source": "close",
+        "alpha": 0.011560693641611641,
+        "period": 172.0000000001026,
+        "rmse_step": 1.5376348467932855e-12,
+        "max_error_step": 3.4454106234704795e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 30986.64472160387
+      },
+      "Extra cloud 2": {
+        "source": "close",
+        "alpha": 0.0047732696897388426,
+        "period": 417.99999999987955,
+        "rmse_step": 1.448494254459336e-12,
+        "max_error_step": 3.597955267053976e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 31051.838146352577
+      },
+      "Extra cloud 2 boundary": {
+        "source": "close",
+        "alpha": 0.0038684719535784693,
+        "period": 515.9999999999823,
+        "rmse_step": 1.5603489952038733e-12,
+        "max_error_step": 3.4906522117239547e-12,
+        "pairs": 299,
+        "first_time": 1791816180,
+        "implied_seed": 31069.98507489486
+      }
+    },
+    "start": "04:45",
+    "end": "05:15",
+    "duration_minutes": 30.0,
+    "anchor_ohlc": null
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_5m.csv",
+    "rows_closed": 299,
+    "step_seconds": 60,
+    "layers": {
+      "Layer A": {
+        "source": "close",
+        "alpha": 0.08000000000001017,
+        "period": 23.99999999999682,
+        "rmse_step": 1.5063554919679618e-12,
+        "max_error_step": 3.755162847340898e-12,
+        "pairs": 298,
+        "first_time": 1791817080,
+        "implied_seed": 30904.181605175178
+      },
+      "Layer A boundary": {
+        "source": "close",
+        "alpha": 0.06451612903226951,
+        "period": 29.9999999999945,
+        "rmse_step": 1.4315237627408516e-12,
+        "max_error_step": 3.480687960077944e-12,
+        "pairs": 298,
+        "first_time": 1791817080,
+        "implied_seed": 30904.611592932848
+      },
+      "Layer B": {
+        "source": "close",
+        "alpha": 0.22222222222221094,
+        "period": 8.000000000000457,
+        "rmse_step": 1.5446315342713068e-12,
+        "max_error_step": 3.716360552630249e-12,
+        "pairs": 298,
+        "first_time": 1791817080,
+        "implied_seed": 30907.723947326318
+      },
+      "Layer B boundary": {
+        "source": "close",
+        "alpha": 0.1818181818181755,
+        "period": 10.000000000000382,
+        "rmse_step": 1.5210404458176512e-12,
+        "max_error_step": 3.979261364861486e-12,
+        "pairs": 298,
+        "first_time": 1791817080,
+        "implied_seed": 30907.053112238544
+      },
+      "Layer C": {
+        "source": "close",
+        "alpha": 0.49999999999999295,
+        "period": 3.000000000000057,
+        "rmse_step": 1.0528474343441479e-12,
+        "max_error_step": 1.922906278650771e-12,
+        "pairs": 298,
+        "first_time": 1791817080,
+        "implied_seed": 30911.26363887508
+      },
+      "Layer C boundary": {
+        "source": "close",
+        "alpha": 0.49999999999999295,
+        "period": 3.000000000000057,
+        "rmse_step": 1.0528474343441479e-12,
+        "max_error_step": 1.922906278650771e-12,
+        "pairs": 298,
+        "first_time": 1791817080,
+        "implied_seed": 30911.26363887508
+      },
+      "Extra cloud 1": {
+        "source": "close",
+        "alpha": 0.027397260273972077,
+        "period": 72.0000000000014,
+        "rmse_step": 1.5170388591500572e-12,
+        "max_error_step": 3.2873009869760494e-12,
+        "pairs": 298,
+        "first_time": 1791817080,
+        "implied_seed": 30924.789518176138
+      },
+      "Extra cloud 1 boundary": {
+        "source": "close",
+        "alpha": 0.02222222222221026,
+        "period": 89.00000000004844,
+        "rmse_step": 1.478255063457124e-12,
+        "max_error_step": 3.5018724031665727e-12,
+        "pairs": 298,
+        "first_time": 1791817080,
+        "implied_seed": 30934.82044359508
+      },
+      "Extra cloud 2": {
+        "source": "close",
+        "alpha": 0.009216589861749355,
+        "period": 216.00000000004232,
+        "rmse_step": 1.5454261267690766e-12,
+        "max_error_step": 3.695044270557446e-12,
+        "pairs": 298,
+        "first_time": 1791817080,
+        "implied_seed": 30989.373616749363
+      },
+      "Extra cloud 2 boundary": {
+        "source": "close",
+        "alpha": 0.007462686567165398,
+        "period": 266.99999999995623,
+        "rmse_step": 1.5390756964832589e-12,
+        "max_error_step": 3.531452907878929e-12,
+        "pairs": 298,
+        "first_time": 1791817080,
+        "implied_seed": 31004.856946771095
+      }
+    },
+    "start": "04:45",
+    "end": "04:50",
+    "duration_minutes": 5.0,
+    "anchor_ohlc": null
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_20m.csv",
+    "rows_closed": 300,
+    "step_seconds": 60,
+    "layers": {
+      "Layer A": {
+        "source": "close",
+        "alpha": 0.06451612903226935,
+        "period": 29.99999999999458,
+        "rmse_step": 1.4352058737983652e-12,
+        "max_error_step": 3.481270827165872e-12,
+        "pairs": 299,
+        "first_time": 1791817080,
+        "implied_seed": 30904.611592932848
+      },
+      "Layer A boundary": {
+        "source": "close",
+        "alpha": 0.052631578947371194,
+        "period": 36.999999999997996,
+        "rmse_step": 1.454969456406579e-12,
+        "max_error_step": 3.5478286974921502e-12,
+        "pairs": 299,
+        "first_time": 1791817080,
+        "implied_seed": 30906.365410813713
+      },
+      "Layer B": {
+        "source": "close",
+        "alpha": 0.18181818181817547,
+        "period": 10.000000000000384,
+        "rmse_step": 1.518618793307794e-12,
+        "max_error_step": 3.979316876012717e-12,
+        "pairs": 299,
+        "first_time": 1791817080,
+        "implied_seed": 30907.053112238544
+      },
+      "Layer B boundary": {
+        "source": "close",
+        "alpha": 0.15384615384615277,
+        "period": 12.00000000000009,
+        "rmse_step": 1.5575735420023502e-12,
+        "max_error_step": 3.9259706596794786e-12,
+        "pairs": 299,
+        "first_time": 1791817080,
+        "implied_seed": 30906.42554022943
+      },
+      "Layer C": {
+        "source": "close",
+        "alpha": 0.4999999999999926,
+        "period": 3.0000000000000595,
+        "rmse_step": 1.0562592511285942e-12,
+        "max_error_step": 1.928235349168972e-12,
+        "pairs": 299,
+        "first_time": 1791817080,
+        "implied_seed": 30911.263638875087
+      },
+      "Layer C boundary": {
+        "source": "close",
+        "alpha": 0.40000000000000435,
+        "period": 3.999999999999946,
+        "rmse_step": 1.5256121968009443e-12,
+        "max_error_step": 3.661959624423616e-12,
+        "pairs": 299,
+        "first_time": 1791817080,
+        "implied_seed": 30909.945056487122
+      },
+      "Extra cloud 1": {
+        "source": "close",
+        "alpha": 0.02197802197801983,
+        "period": 90.0000000000089,
+        "rmse_step": 1.4483819029540126e-12,
+        "max_error_step": 3.524736058579947e-12,
+        "pairs": 299,
+        "first_time": 1791817080,
+        "implied_seed": 30935.393818495737
+      },
+      "Extra cloud 1 boundary": {
+        "source": "close",
+        "alpha": 0.017857142857144223,
+        "period": 110.99999999999143,
+        "rmse_step": 1.5106362341355688e-12,
+        "max_error_step": 3.4691138850462266e-12,
+        "pairs": 299,
+        "first_time": 1791817080,
+        "implied_seed": 30946.834909850168
+      },
+      "Extra cloud 2": {
+        "source": "close",
+        "alpha": 0.007380073800738234,
+        "period": 269.99999999999164,
+        "rmse_step": 1.4653215682587431e-12,
+        "max_error_step": 3.5587088831334768e-12,
+        "pairs": 299,
+        "first_time": 1791817080,
+        "implied_seed": 31005.702421156373
+      },
+      "Extra cloud 2 boundary": {
+        "source": "close",
+        "alpha": 0.005970149253732893,
+        "period": 333.99999999991303,
+        "rmse_step": 1.5264336490309873e-12,
+        "max_error_step": 3.5655922658861527e-12,
+        "pairs": 299,
+        "first_time": 1791817080,
+        "implied_seed": 31022.477626787033
+      }
+    },
+    "start": "04:45",
+    "end": "05:05",
+    "duration_minutes": 20.0,
+    "anchor_ohlc": null
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_40m.csv",
+    "rows_closed": 299,
+    "step_seconds": 60,
+    "layers": {
+      "Layer A": {
+        "source": "close",
+        "alpha": 0.043478260869561476,
+        "period": 45.00000000000396,
+        "rmse_step": 1.4780898685110914e-12,
+        "max_error_step": 3.50147688621405e-12,
+        "pairs": 298,
+        "first_time": 1791817200,
+        "implied_seed": 30910.714129795484
+      },
+      "Layer A boundary": {
+        "source": "close",
+        "alpha": 0.035087719298251795,
+        "period": 55.99999999998996,
+        "rmse_step": 1.549798573691465e-12,
+        "max_error_step": 3.6677050285760515e-12,
+        "pairs": 298,
+        "first_time": 1791817200,
+        "implied_seed": 30915.85923042651
+      },
+      "Layer B": {
+        "source": "close",
+        "alpha": 0.12499999999999913,
+        "period": 15.000000000000114,
+        "rmse_step": 1.0641573189417393e-12,
+        "max_error_step": 1.8340884366807586e-12,
+        "pairs": 298,
+        "first_time": 1791817200,
+        "implied_seed": 30909.526834195804
+      },
+      "Layer B boundary": {
+        "source": "close",
+        "alpha": 0.10000000000001251,
+        "period": 18.9999999999975,
+        "rmse_step": 1.4782953178356572e-12,
+        "max_error_step": 3.68682862017522e-12,
+        "pairs": 298,
+        "first_time": 1791817200,
+        "implied_seed": 30908.065670266897
+      },
+      "Layer C": {
+        "source": "close",
+        "alpha": 0.33333333333334764,
+        "period": 4.999999999999742,
+        "rmse_step": 1.6727428041687716e-12,
+        "max_error_step": 2.7258195700596843e-12,
+        "pairs": 298,
+        "first_time": 1791817200,
+        "implied_seed": 30916.247418038536
+      },
+      "Layer C boundary": {
+        "source": "close",
+        "alpha": 0.2857142857142658,
+        "period": 6.000000000000488,
+        "rmse_step": 1.8154633766515432e-12,
+        "max_error_step": 4.241940132487798e-12,
+        "pairs": 298,
+        "first_time": 1791817200,
+        "implied_seed": 30915.175821593926
+      },
+      "Extra cloud 1": {
+        "source": "close",
+        "alpha": 0.01459854014598606,
+        "period": 135.99999999999383,
+        "rmse_step": 1.5699248905345295e-12,
+        "max_error_step": 3.383515689847627e-12,
+        "pairs": 298,
+        "first_time": 1791817200,
+        "implied_seed": 30957.8711827826
+      },
+      "Extra cloud 1 boundary": {
+        "source": "close",
+        "alpha": 0.011834319526625232,
+        "period": 168.00000000002836,
+        "rmse_step": 1.490354780182331e-12,
+        "max_error_step": 3.3257285814158877e-12,
+        "pairs": 298,
+        "first_time": 1791817200,
+        "implied_seed": 30971.162411977457
+      },
+      "Extra cloud 2": {
+        "source": "close",
+        "alpha": 0.004901960784312708,
+        "period": 407.0000000000847,
+        "rmse_step": 1.54780409087627e-12,
+        "max_error_step": 3.366695811024556e-12,
+        "pairs": 298,
+        "first_time": 1791817200,
+        "implied_seed": 31038.221287753568
+      },
+      "Extra cloud 2 boundary": {
+        "source": "close",
+        "alpha": 0.003968253968254122,
+        "period": 502.99999999998045,
+        "rmse_step": 1.497004057465221e-12,
+        "max_error_step": 3.4244829194562953e-12,
+        "pairs": 298,
+        "first_time": 1791817200,
+        "implied_seed": 31057.195305640595
+      }
+    },
+    "start": "04:45",
+    "end": "05:25",
+    "duration_minutes": 40.0,
+    "anchor_ohlc": null
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_recent_20m.csv",
+    "rows_closed": 300,
+    "step_seconds": 60,
+    "layers": {
+      "Layer A": {
+        "source": "close",
+        "alpha": 0.062499999999983825,
+        "period": 31.000000000008285,
+        "rmse_step": 8.539289485530617e-13,
+        "max_error_step": 1.6993628726424959e-12,
+        "pairs": 33,
+        "first_time": 1791833160,
+        "implied_seed": 30865.567569732662,
+        "seed_at_end_if_all_closes_processed": 30864.499999999978
+      },
+      "Layer A boundary": {
+        "source": "close",
+        "alpha": 0.05128205128205153,
+        "period": 37.99999999999981,
+        "rmse_step": 1.409165348250037e-12,
+        "max_error_step": 3.3596458948181862e-12,
+        "pairs": 33,
+        "first_time": 1791833160,
+        "implied_seed": 30865.394863012305,
+        "seed_at_end_if_all_closes_processed": 30864.5
+      },
+      "Layer B": {
+        "source": "close",
+        "alpha": 0.1818181818181508,
+        "period": 10.000000000001878,
+        "rmse_step": 1.5383925062385026e-12,
+        "max_error_step": 3.020028671585351e-12,
+        "pairs": 33,
+        "first_time": 1791833160,
+        "implied_seed": 30866.984197552323,
+        "seed_at_end_if_all_closes_processed": 30864.499999999978
+      },
+      "Layer B boundary": {
+        "source": "close",
+        "alpha": 0.1428571428571122,
+        "period": 13.000000000003004,
+        "rmse_step": 1.4182856244746312e-12,
+        "max_error_step": 2.8410607200157756e-12,
+        "pairs": 33,
+        "first_time": 1791833160,
+        "implied_seed": 30866.597593264712,
+        "seed_at_end_if_all_closes_processed": 30864.49999999999
+      },
+      "Layer C": {
+        "source": "close",
+        "alpha": 0.5,
+        "period": 3.0,
+        "rmse_step": 0.0,
+        "max_error_step": 0.0,
+        "pairs": 33,
+        "first_time": 1791833160,
+        "implied_seed": 30868.5,
+        "seed_at_end_if_all_closes_processed": 30864.5
+      },
+      "Layer C boundary": {
+        "source": "close",
+        "alpha": 0.3999999999999732,
+        "period": 4.000000000000335,
+        "rmse_step": 1.8624287644077364e-12,
+        "max_error_step": 3.729017095110976e-12,
+        "pairs": 33,
+        "first_time": 1791833160,
+        "implied_seed": 30868.24096000001,
+        "seed_at_end_if_all_closes_processed": 30864.500000000207
+      },
+      "Extra cloud 1": {
+        "source": "close",
+        "alpha": 0.021505376344085152,
+        "period": 92.00000000000375,
+        "rmse_step": 1.6775055287927829e-12,
+        "max_error_step": 3.1836200342638676e-12,
+        "pairs": 33,
+        "first_time": 1791833160,
+        "implied_seed": 30864.89724037205,
+        "seed_at_end_if_all_closes_processed": 30864.5
+      },
+      "Extra cloud 1 boundary": {
+        "source": "close",
+        "alpha": 0.017391304347818676,
+        "period": 114.000000000049,
+        "rmse_step": 1.5052662789436645e-12,
+        "max_error_step": 3.60739216276329e-12,
+        "pairs": 33,
+        "first_time": 1791833160,
+        "implied_seed": 30864.823789744107,
+        "seed_at_end_if_all_closes_processed": 30864.499999999996
+      },
+      "Extra cloud 2": {
+        "source": "close",
+        "alpha": 0.007194244604304935,
+        "period": 277.0000000004487,
+        "rmse_step": 1.5833520352922086e-12,
+        "max_error_step": 2.8311242239453804e-12,
+        "pairs": 33,
+        "first_time": 1791833160,
+        "implied_seed": 30864.63658828982,
+        "seed_at_end_if_all_closes_processed": 30864.500000000004
+      },
+      "Extra cloud 2 boundary": {
+        "source": "close",
+        "alpha": 0.005813953488377517,
+        "period": 342.99999999967906,
+        "rmse_step": 1.3877420496836417e-12,
+        "max_error_step": 3.100186773963287e-12,
+        "pairs": 33,
+        "first_time": 1791833160,
+        "implied_seed": 30864.610675373675,
+        "seed_at_end_if_all_closes_processed": 30864.5
+      }
+    },
+    "start": "19:00",
+    "end": "19:20",
+    "duration_minutes": 20.0,
+    "anchor_ohlc": {
+      "open": 30866.25,
+      "high": 30870.5,
+      "low": 30864.5,
+      "close": 30870.5
+    }
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_recent_30m.csv",
+    "rows_closed": 304,
+    "step_seconds": 60,
+    "layers": {
+      "Layer A": {
+        "source": "close",
+        "alpha": 0.04166666666665726,
+        "period": 47.000000000010836,
+        "rmse_step": 1.1323826407016835e-12,
+        "max_error_step": 2.4709123636057484e-12,
+        "pairs": 37,
+        "first_time": 1791833160,
+        "implied_seed": 30865.240536285524,
+        "seed_at_end_if_all_closes_processed": 30864.500000000007
+      },
+      "Layer A boundary": {
+        "source": "close",
+        "alpha": 0.03389830508477642,
+        "period": 57.999999999946645,
+        "rmse_step": 1.2818715811035793e-12,
+        "max_error_step": 2.37654340651261e-12,
+        "pairs": 37,
+        "first_time": 1791833160,
+        "implied_seed": 30865.111479815572,
+        "seed_at_end_if_all_closes_processed": 30864.500000000007
+      },
+      "Layer B": {
+        "source": "close",
+        "alpha": 0.11764705882352591,
+        "period": 16.000000000000504,
+        "rmse_step": 1.4867918853344257e-12,
+        "max_error_step": 3.4247743530002595e-12,
+        "pairs": 37,
+        "first_time": 1791833160,
+        "implied_seed": 30866.310730587655,
+        "seed_at_end_if_all_closes_processed": 30864.49999999998
+      },
+      "Layer B boundary": {
+        "source": "close",
+        "alpha": 0.1000000000000106,
+        "period": 18.999999999997883,
+        "rmse_step": 1.5780356017410628e-12,
+        "max_error_step": 3.3136271504474735e-12,
+        "pairs": 37,
+        "first_time": 1791833160,
+        "implied_seed": 30866.091040000007,
+        "seed_at_end_if_all_closes_processed": 30864.500000000022
+      },
+      "Layer C": {
+        "source": "close",
+        "alpha": 0.333333333333357,
+        "period": 4.999999999999574,
+        "rmse_step": 1.6725874446257896e-12,
+        "max_error_step": 2.659206188582175e-12,
+        "pairs": 37,
+        "first_time": 1791833160,
+        "implied_seed": 30867.982510288068,
+        "seed_at_end_if_all_closes_processed": 30864.499999999964
+      },
+      "Layer C boundary": {
+        "source": "close",
+        "alpha": 0.2857142857143302,
+        "period": 5.999999999998909,
+        "rmse_step": 1.913408858517716e-12,
+        "max_error_step": 4.0034642267983145e-12,
+        "pairs": 37,
+        "first_time": 1791833160,
+        "implied_seed": 30867.74022728625,
+        "seed_at_end_if_all_closes_processed": 30864.500000000007
+      },
+      "Extra cloud 1": {
+        "source": "close",
+        "alpha": 0.013986013986017915,
+        "period": 141.99999999995984,
+        "rmse_step": 1.0892027693223559e-12,
+        "max_error_step": 2.3530066783905568e-12,
+        "pairs": 37,
+        "first_time": 1791833160,
+        "implied_seed": 30864.762096448205,
+        "seed_at_end_if_all_closes_processed": 30864.500000000007
+      },
+      "Extra cloud 1 boundary": {
+        "source": "close",
+        "alpha": 0.011363636363636345,
+        "period": 175.00000000000028,
+        "rmse_step": 1.5720742345747152e-12,
+        "max_error_step": 3.182981656024708e-12,
+        "pairs": 37,
+        "first_time": 1791833160,
+        "implied_seed": 30864.714027536338,
+        "seed_at_end_if_all_closes_processed": 30864.5
+      },
+      "Extra cloud 2": {
+        "source": "close",
+        "alpha": 0.004694835680756822,
+        "period": 424.9999999994875,
+        "rmse_step": 1.5729246361193134e-12,
+        "max_error_step": 3.076122689904537e-12,
+        "pairs": 37,
+        "first_time": 1791833160,
+        "implied_seed": 30864.58956397459,
+        "seed_at_end_if_all_closes_processed": 30864.49999999999
+      },
+      "Extra cloud 2 boundary": {
+        "source": "close",
+        "alpha": 0.0038022813688218947,
+        "period": 524.9999999999168,
+        "rmse_step": 1.5949490513877635e-12,
+        "max_error_step": 3.0463132016933514e-12,
+        "pairs": 37,
+        "first_time": 1791833160,
+        "implied_seed": 30864.57266107935,
+        "seed_at_end_if_all_closes_processed": 30864.499999999996
+      }
+    },
+    "start": "18:50",
+    "end": "19:20",
+    "duration_minutes": 30.0,
+    "anchor_ohlc": {
+      "open": 30866.25,
+      "high": 30870.5,
+      "low": 30864.5,
+      "close": 30870.5
+    }
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_recent_bear_end_break.csv",
+    "rows_closed": 299,
+    "step_seconds": 60,
+    "layers": {
+      "Layer A": {
+        "source": "close",
+        "alpha": 0.060606060606058484,
+        "period": 32.00000000000116,
+        "rmse_step": 1.3255779778323504e-12,
+        "max_error_step": 2.8423929876453258e-12,
+        "pairs": 36,
+        "first_time": 1791833520,
+        "implied_seed": 30872.25,
+        "seed_at_end_if_all_closes_processed": 30872.25
+      },
+      "Layer A boundary": {
+        "source": "close",
+        "alpha": 0.048780487804886107,
+        "period": 39.99999999999323,
+        "rmse_step": 1.1719438430922605e-12,
+        "max_error_step": 2.74349987172684e-12,
+        "pairs": 36,
+        "first_time": 1791833520,
+        "implied_seed": 30872.25,
+        "seed_at_end_if_all_closes_processed": 30872.25
+      },
+      "Layer B": {
+        "source": "close",
+        "alpha": 0.1666666666666486,
+        "period": 11.000000000001302,
+        "rmse_step": 1.4939163499294688e-12,
+        "max_error_step": 3.0458413569078857e-12,
+        "pairs": 36,
+        "first_time": 1791833520,
+        "implied_seed": 30872.249999999996,
+        "seed_at_end_if_all_closes_processed": 30872.249999999996
+      },
+      "Layer B boundary": {
+        "source": "close",
+        "alpha": 0.1428571428571407,
+        "period": 13.00000000000021,
+        "rmse_step": 1.764459013732975e-12,
+        "max_error_step": 3.1450397841581434e-12,
+        "pairs": 36,
+        "first_time": 1791833520,
+        "implied_seed": 30872.25,
+        "seed_at_end_if_all_closes_processed": 30872.25
+      },
+      "Layer C": {
+        "source": "close",
+        "alpha": 0.4000000000001074,
+        "period": 3.999999999998658,
+        "rmse_step": 1.687239601444703e-12,
+        "max_error_step": 3.746281063143897e-12,
+        "pairs": 36,
+        "first_time": 1791833520,
+        "implied_seed": 30872.249999999993,
+        "seed_at_end_if_all_closes_processed": 30872.249999999993
+      },
+      "Layer C boundary": {
+        "source": "close",
+        "alpha": 0.4000000000001074,
+        "period": 3.999999999998658,
+        "rmse_step": 1.687239601444703e-12,
+        "max_error_step": 3.746281063143897e-12,
+        "pairs": 36,
+        "first_time": 1791833520,
+        "implied_seed": 30872.249999999993,
+        "seed_at_end_if_all_closes_processed": 30872.249999999993
+      },
+      "Extra cloud 1": {
+        "source": "close",
+        "alpha": 0.020618556701037037,
+        "period": 95.99999999997127,
+        "rmse_step": 1.4947846311681045e-12,
+        "max_error_step": 2.9132252166164108e-12,
+        "pairs": 36,
+        "first_time": 1791833520,
+        "implied_seed": 30872.249999999996,
+        "seed_at_end_if_all_closes_processed": 30872.249999999996
+      },
+      "Extra cloud 1 boundary": {
+        "source": "close",
+        "alpha": 0.01666666666665346,
+        "period": 119.00000000009507,
+        "rmse_step": 1.4788569700429016e-12,
+        "max_error_step": 3.2194386045958368e-12,
+        "pairs": 36,
+        "first_time": 1791833520,
+        "implied_seed": 30872.25,
+        "seed_at_end_if_all_closes_processed": 30872.25
+      },
+      "Extra cloud 2": {
+        "source": "close",
+        "alpha": 0.006920415224902706,
+        "period": 288.00000000045054,
+        "rmse_step": 1.43696307747942e-12,
+        "max_error_step": 2.8016478026415825e-12,
+        "pairs": 36,
+        "first_time": 1791833520,
+        "implied_seed": 30872.250000000004,
+        "seed_at_end_if_all_closes_processed": 30872.250000000004
+      },
+      "Extra cloud 2 boundary": {
+        "source": "close",
+        "alpha": 0.005602240896345623,
+        "period": 356.0000000008233,
+        "rmse_step": 1.4789880365829592e-12,
+        "max_error_step": 3.307534801599843e-12,
+        "pairs": 36,
+        "first_time": 1791833520,
+        "implied_seed": 30872.249999999996,
+        "seed_at_end_if_all_closes_processed": 30872.249999999996
+      }
+    },
+    "start": "19:11",
+    "end": "19:31",
+    "duration_minutes": 20.0,
+    "anchor_ohlc": {
+      "open": 30877.25,
+      "high": 30878.5,
+      "low": 30872.25,
+      "close": 30874.5
+    }
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_recent_15s.csv",
+    "rows_closed": 301,
+    "step_seconds": 15,
+    "layers": {
+      "Layer A": {
+        "source": "close",
+        "alpha": 0.018691588785057434,
+        "period": 105.99999999993872,
+        "rmse_step": 1.4370559951307523e-12,
+        "max_error_step": 3.275209964348491e-12,
+        "pairs": 158,
+        "first_time": 1791833550,
+        "implied_seed": 30875.03025163962,
+        "seed_at_end_if_all_closes_processed": 30875.0
+      },
+      "Layer A boundary": {
+        "source": "close",
+        "alpha": 0.015151515151532359,
+        "period": 130.9999999998501,
+        "rmse_step": 1.4248254275070737e-12,
+        "max_error_step": 3.288994077088603e-12,
+        "pairs": 158,
+        "first_time": 1791833550,
+        "implied_seed": 30875.02418922943,
+        "seed_at_end_if_all_closes_processed": 30875.000000000004
+      },
+      "Layer B": {
+        "source": "close",
+        "alpha": 0.05555555555554801,
+        "period": 35.00000000000489,
+        "rmse_step": 1.548918296977462e-12,
+        "max_error_step": 3.3997804571583856e-12,
+        "pairs": 158,
+        "first_time": 1791833550,
+        "implied_seed": 30875.101930176632,
+        "seed_at_end_if_all_closes_processed": 30874.999999999996
+      },
+      "Layer B boundary": {
+        "source": "close",
+        "alpha": 0.04444444444446988,
+        "period": 43.99999999997425,
+        "rmse_step": 1.4622176685435563e-12,
+        "max_error_step": 3.3645031205509213e-12,
+        "pairs": 158,
+        "first_time": 1791833550,
+        "implied_seed": 30875.078752542457,
+        "seed_at_end_if_all_closes_processed": 30874.999999999985
+      },
+      "Layer C": {
+        "source": "close",
+        "alpha": 0.15384615384615408,
+        "period": 11.99999999999998,
+        "rmse_step": 1.6235382393501144e-12,
+        "max_error_step": 3.638478407452794e-12,
+        "pairs": 158,
+        "first_time": 1791833550,
+        "implied_seed": 30875.35481142925,
+        "seed_at_end_if_all_closes_processed": 30874.999999999993
+      },
+      "Layer C boundary": {
+        "source": "close",
+        "alpha": 0.12500000000000633,
+        "period": 14.99999999999919,
+        "rmse_step": 1.0272539153311948e-12,
+        "max_error_step": 1.8900436771218665e-12,
+        "pairs": 158,
+        "first_time": 1791833550,
+        "implied_seed": 30875.272872924805,
+        "seed_at_end_if_all_closes_processed": 30875.0
+      },
+      "Extra cloud 1": {
+        "source": "close",
+        "alpha": 0.006289308176100841,
+        "period": 316.99999999998926,
+        "rmse_step": 1.4645605593053365e-12,
+        "max_error_step": 3.3453517733761373e-12,
+        "pairs": 158,
+        "first_time": 1791833550,
+        "implied_seed": 30875.00968890142,
+        "seed_at_end_if_all_closes_processed": 30875.0
+      },
+      "Extra cloud 1 boundary": {
+        "source": "close",
+        "alpha": 0.005089058524171031,
+        "period": 392.0000000001542,
+        "rmse_step": 1.4087683116480927e-12,
+        "max_error_step": 3.167365675293965e-12,
+        "pairs": 158,
+        "first_time": 1791833550,
+        "implied_seed": 30875.007800777417,
+        "seed_at_end_if_all_closes_processed": 30875.00000000001
+      },
+      "Extra cloud 2": {
+        "source": "close",
+        "alpha": 0.0021030494216719734,
+        "period": 949.9999999952228,
+        "rmse_step": 1.4978557876088165e-12,
+        "max_error_step": 3.2438600416906382e-12,
+        "pairs": 158,
+        "first_time": 1791833550,
+        "implied_seed": 30875.003183241122,
+        "seed_at_end_if_all_closes_processed": 30874.999999999996
+      },
+      "Extra cloud 2 boundary": {
+        "source": "close",
+        "alpha": 0.0017006802721095805,
+        "period": 1174.9999999994905,
+        "rmse_step": 1.510000966202844e-12,
+        "max_error_step": 3.5481305393769702e-12,
+        "pairs": 158,
+        "first_time": 1791833550,
+        "implied_seed": 30875.002569777436,
+        "seed_at_end_if_all_closes_processed": 30875.000000000004
+      }
+    },
+    "start": "19:11",
+    "end": "19:31",
+    "duration_minutes": 20.0,
+    "anchor_ohlc": {
+      "open": 30877.25,
+      "high": 30878.5,
+      "low": 30875.0,
+      "close": 30877.25
+    }
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_short_15s.csv",
+    "rows_closed": 302,
+    "step_seconds": 15,
+    "layers": {
+      "Layer A": {
+        "source": "close",
+        "alpha": 0.08000000000001663,
+        "period": 23.999999999994802,
+        "rmse_step": 1.5081038222404366e-12,
+        "max_error_step": 3.673561455030949e-12,
+        "pairs": 221,
+        "first_time": 1791832845,
+        "implied_seed": 30866.18,
+        "seed_at_end_if_all_closes_processed": 30866.0
+      },
+      "Layer A boundary": {
+        "source": "close",
+        "alpha": 0.06451612903226431,
+        "period": 29.999999999997,
+        "rmse_step": 1.5515047156760071e-12,
+        "max_error_step": 3.5138558729386205e-12,
+        "pairs": 221,
+        "first_time": 1791832845,
+        "implied_seed": 30866.145161290326,
+        "seed_at_end_if_all_closes_processed": 30866.000000000004
+      },
+      "Layer B": {
+        "source": "close",
+        "alpha": 0.22222222222222737,
+        "period": 7.999999999999792,
+        "rmse_step": 1.4296709990382853e-12,
+        "max_error_step": 3.642114387858442e-12,
+        "pairs": 221,
+        "first_time": 1791832845,
+        "implied_seed": 30866.5,
+        "seed_at_end_if_all_closes_processed": 30866.000000000007
+      },
+      "Layer B boundary": {
+        "source": "close",
+        "alpha": 0.18181818181820983,
+        "period": 9.999999999998305,
+        "rmse_step": 1.60841191673282e-12,
+        "max_error_step": 4.017008947698741e-12,
+        "pairs": 221,
+        "first_time": 1791832845,
+        "implied_seed": 30866.409090909092,
+        "seed_at_end_if_all_closes_processed": 30866.0
+      },
+      "Layer C": {
+        "source": "close",
+        "alpha": 0.5000000000000121,
+        "period": 2.999999999999903,
+        "rmse_step": 9.784297889752596e-13,
+        "max_error_step": 1.9046986210469186e-12,
+        "pairs": 221,
+        "first_time": 1791832845,
+        "implied_seed": 30867.125,
+        "seed_at_end_if_all_closes_processed": 30866.0
+      },
+      "Layer C boundary": {
+        "source": "close",
+        "alpha": 0.5000000000000121,
+        "period": 2.999999999999903,
+        "rmse_step": 9.784297889752596e-13,
+        "max_error_step": 1.9046986210469186e-12,
+        "pairs": 221,
+        "first_time": 1791832845,
+        "implied_seed": 30867.125,
+        "seed_at_end_if_all_closes_processed": 30866.0
+      },
+      "Extra cloud 1": {
+        "source": "close",
+        "alpha": 0.027397260273965728,
+        "period": 72.00000000001832,
+        "rmse_step": 1.4815215977418479e-12,
+        "max_error_step": 3.579109231210964e-12,
+        "pairs": 221,
+        "first_time": 1791832845,
+        "implied_seed": 30866.061643835616,
+        "seed_at_end_if_all_closes_processed": 30866.0
+      },
+      "Extra cloud 1 boundary": {
+        "source": "close",
+        "alpha": 0.022222222222213935,
+        "period": 89.00000000003357,
+        "rmse_step": 1.3938213944841299e-12,
+        "max_error_step": 3.4282854333156365e-12,
+        "pairs": 221,
+        "first_time": 1791832845,
+        "implied_seed": 30866.049999999996,
+        "seed_at_end_if_all_closes_processed": 30865.999999999993
+      },
+      "Extra cloud 2": {
+        "source": "close",
+        "alpha": 0.009216589861743034,
+        "period": 216.00000000019114,
+        "rmse_step": 1.4824083996684892e-12,
+        "max_error_step": 3.204464471551205e-12,
+        "pairs": 221,
+        "first_time": 1791832845,
+        "implied_seed": 30866.02073732719,
+        "seed_at_end_if_all_closes_processed": 30866.000000000004
+      },
+      "Extra cloud 2 boundary": {
+        "source": "close",
+        "alpha": 0.007462686567166317,
+        "period": 266.9999999999232,
+        "rmse_step": 1.5225276110405761e-12,
+        "max_error_step": 3.4950792260346475e-12,
+        "pairs": 221,
+        "first_time": 1791832845,
+        "implied_seed": 30866.016791044778,
+        "seed_at_end_if_all_closes_processed": 30866.0
+      }
+    },
+    "start": "19:18",
+    "end": "19:20",
+    "duration_minutes": 2.0,
+    "anchor_ohlc": {
+      "open": 30866.25,
+      "high": 30867.25,
+      "low": 30866.0,
+      "close": 30866.5
+    }
+  }
+]

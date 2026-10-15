@@ -1,0 +1,68 @@
+{
+  "model": [
+    "forward",
+    "skip_start",
+    "close",
+    "range_extreme_with_net_move",
+    "RMS_residual_equals_mean_TR"
+  ],
+  "branch": "smallest",
+  "grid_points": [
+    1200,
+    12000
+  ],
+  "max_relative_root_change": 8.843073945441482e-06,
+  "K_refined_training_only": 3.255879257592577,
+  "K_compatible_lower": 12.734968308857438,
+  "K_compatible_upper": 1.3565217567773775,
+  "K_intersection_nonempty": false,
+  "training": {
+    "predictions": [
+      160.46514920924767,
+      284.0391228621109,
+      442.55682376765856,
+      205.02450024350017,
+      421.783294173765,
+      198.83022917276037,
+      58.78576720784988,
+      51.22617298071955,
+      50.51175662773394,
+      52.57391639359023,
+      53.63924762372992,
+      53.80934930639307,
+      57.40980781654715,
+      60.40664710193158,
+      60.488799921411996,
+      59.4680047342585,
+      58.91453782108443,
+      58.35458462943571,
+      57.145970663412385,
+      55.018814140598494,
+      58.080275532966624,
+      60.08919675212052,
+      50.45006661214787,
+      51.25457913684952,
+      51.12006484369611,
+      138.31024656165542,
+      381.633110107995,
+      102.60878467868426,
+      269.2974863333986,
+      717.3476857058926
+    ],
+    "interval_matches": 0,
+    "median_relative_error": 0.4111506696082574,
+    "max_relative_error": 2.9164320687403413
+  },
+  "reserved": {
+    "predictions": [
+      59.323468525883406,
+      56.84949650297003,
+      43.279789033133966,
+      40.73427592238978
+    ],
+    "interval_matches": 0,
+    "median_relative_error": 0.12394418743781593,
+    "max_relative_error": 0.5182246059070337
+  },
+  "scope": "Refines only the previous best training model. Finite sign-changing-root search; not a proof about tangent roots or every candidate."
+}

@@ -1,0 +1,613 @@
+- 'button "Logged in as FrankyProfit Active layout: EMA - investigacion PoiSzn"'
+- generic: "11"
+- toolbar:
+  - button "NQ1!":
+    - generic: NQ1!
+  - button "Switch data type":
+  - button "Compare symbols":
+  - separator
+  - radiogroup:
+    - radio "15 seconds":
+      - generic: 15s
+    - radio "30 seconds":
+      - generic: 30s
+    - radio "1 minute" [checked]:
+      - generic: 1m
+    - radio "2 minutes":
+      - generic: 2m
+    - radio "3 minutes":
+      - generic: 3m
+    - radio "5 minutes":
+      - generic: 5m
+    - radio "15 minutes":
+      - generic: 15m
+    - radio "30 minutes":
+      - generic: 30m
+    - radio "1 hour":
+      - generic: 1h
+    - radio "4 hours":
+      - generic: 4h
+    - radio "1 day":
+      - generic: D
+    - radio "1 week":
+      - generic: W
+    - radio "1 month":
+      - generic: M
+    - radio "3 months":
+      - generic: 3M
+    - radio "12 months":
+      - generic: 12M
+  - button "Chart interval":
+  - separator
+  - radiogroup:
+    - radio "Line":
+    - radio "Session volume profile":
+    - radio "Candles" [checked]:
+  - button "Bar's style":
+  - separator
+  - button "Indicators, metrics, and strategies":
+  - button "Favorite indicators":
+  - button "Indicator templates":
+  - separator
+  - button "Create alert":
+  - button "Bar replay":
+  - separator
+  - button "Undo insert PoiSzn · Manual Anchored CCII v5.2":
+  - button [disabled]:
+  - button "Layout setup":
+  - button "All changes saved" [disabled]:
+    - generic: EMA - investigacion PoiSzn
+    - generic: Save
+  - button "Manage layouts":
+  - link "CLEAN":
+    - /url: https://www.tradingview.com/chart/8kCH024h/
+    - generic: C
+  - link "HTF":
+    - /url: https://www.tradingview.com/chart/DSMxjPXR/
+    - generic: H
+  - link "OW LEVELS":
+    - /url: https://www.tradingview.com/chart/Y0MvX5IP/
+    - generic: O
+  - link "RANGOS":
+    - /url: https://www.tradingview.com/chart/Bb3P8Rf8/
+    - generic: R
+  - link "rubick":
+    - /url: https://www.tradingview.com/chart/DvqsdW8t/
+    - generic: R
+  - link "SMTs":
+    - /url: https://www.tradingview.com/chart/US2LCTq5/
+    - generic: S
+  - link "tp zones":
+    - /url: https://www.tradingview.com/chart/8nY0U35g/
+    - generic: T
+  - link "Tu maestro":
+    - /url: https://www.tradingview.com/chart/Xfvkt4x9/
+    - generic: T
+  - separator
+  - button "Quick search":
+  - button "Settings":
+  - button "Fullscreen mode":
+  - button "Take a snapshot":
+  - button "Share your idea with the trade community":
+  - button "Trade":
+    - generic: Trade
+- toolbar:
+  - button "Cross":
+  - button "Cursors" [pressed]:
+  - button "Trendline":
+  - button "Trend tools":
+  - button "Fib retracement":
+  - button "Gann and Fibonacci tools":
+  - button "XABCD pattern":
+  - button "Patterns":
+  - button "Long position":
+  - button "Forecasting and measurement tools":
+  - button "Brush":
+  - button "Geometric shapes":
+  - button "Text":
+  - button "Annotation tools":
+  - button "Icon":
+  - button "Icons":
+  - button "Measure":
+  - button "Zoom in":
+  - button "Magnet mode snaps drawings placed near price bars to the closest OHLC value" [pressed]:
+  - button "Magnets" [pressed]:
+  - button "Keep drawing":
+  - button "Lock drawings and indicators":
+  - button "Lock options":
+  - button "Hide all drawings":
+  - button "Hide options":
+  - button "New drawings will not be synced":
+  - button "Sync drawings options":
+  - button "Remove objects":
+  - button "Remove options":
+  - button "Show Favorite Drawing Tools Toolbar" [pressed]:
+- 'region "Chart #1"':
+  - toolbar:
+    - generic "Change symbol":
+      - generic: "N"
+      - button "Change symbol": NASDAQ 100 E-mini Futures
+    - generic "Change interval":
+      - text: ·
+      - button "Change interval": "1"
+    - generic "CME GLOBEX — Chicago Mercantile Exchange Globex":
+      - text: ·
+      - generic: CME
+    - button "Unflag symbol":
+    - button "More":
+    - button "Market open":
+    - generic: O
+    - generic: 30,895.75
+    - generic: H
+    - generic: 30,909.25
+    - generic: L
+    - generic: 30,895.75
+    - generic: C
+    - generic: 30,903.00
+    - generic: +7.00 (+0.02%)
+  - generic: 30,906.50
+  - generic: Sell
+  - generic "Spread": "0.50"
+  - generic: 30,907.00
+  - generic: Buy
+  - button "Hide indicators legend":
+  - toolbar:
+    - generic "Volume":
+      - generic: Vol
+    - button "Show":
+    - button "Settings":
+    - button "Remove":
+    - button "More":
+  - toolbar:
+    - generic "Character Tree v6.5.36 - Public":
+      - generic: CT6536USR
+    - generic "Profile":
+      - generic: B
+    - generic "Theme":
+      - generic: Dark
+    - generic: Manual
+    - generic "Point 1 price":
+      - generic: 31,228.71
+    - generic "Point 2 price":
+      - generic: 31,228.71
+    - generic "Manual data resolution":
+      - generic: "1"
+    - generic "Setup direction":
+      - generic: Auto
+    - generic "Minimum range (minutes)":
+      - generic: "0"
+    - generic "Direction mode":
+      - generic: Auto
+    - generic "Auto flip confirmation":
+      - generic: C cloud
+    - generic: Balanced
+    - generic "Signal display":
+      - generic: Labels
+    - generic "Signal size":
+      - generic: Tiny
+    - generic "BUY text":
+      - generic: BUY
+    - generic "SELL text":
+      - generic: SELL
+    - generic "EXIT text":
+      - generic: EXIT
+    - generic "COVER text":
+      - generic: COVER
+    - generic "Signal display":
+      - generic: Compact tags
+    - generic "Signal size":
+      - generic: Tiny
+    - generic "GS signals kept":
+      - generic: "12"
+    - generic "GS up warning text":
+      - generic: GS?
+    - generic "GS down warning text":
+      - generic: GS?
+    - generic "GS up text":
+      - generic: GS
+    - generic "GS down text":
+      - generic: GS
+    - generic "Range transparency":
+      - generic: "90"
+    - generic "Fill transparency (0 solid, 100 invisible)":
+      - generic: "87"
+    - button "Hide":
+    - button "Settings":
+    - button "Remove":
+    - button "More":
+    - generic "Layer A": 30,881.56
+    - generic "Layer A boundary": 30,879.92
+    - generic "Layer B": 30,891.28
+    - generic "Layer B boundary": 30,889.86
+    - generic "Layer C": 30,892.93
+    - generic "Layer C boundary": 30,892.80
+    - generic "Extra cloud 1": 30,881.97
+    - generic "Extra cloud 1 boundary": 30,885.73
+    - generic "Extra cloud 2": 30,928.26
+    - generic "Extra cloud 2 boundary": 30,946.70
+    - generic "Bull delivery active": "0.00"
+    - generic "Bear delivery active": "0.00"
+  - toolbar:
+    - generic: 7Cloud
+    - generic "Upper anchor EMA length":
+      - generic: "78"
+    - generic "Lower anchor EMA length":
+      - generic: "84"
+    - generic "Bullish fill transparency":
+      - generic: "72"
+    - generic "Bearish fill transparency":
+      - generic: "88"
+    - generic "Constant fill transparency":
+      - generic: "80"
+    - generic "Boundary line transparency":
+      - generic: "35"
+    - generic "Rung 1 TF":
+      - generic: 1S
+    - generic "Rung 2 TF":
+      - generic: 5S
+    - generic "Rung 3 TF":
+      - generic: 15S
+    - generic "Rung 4 TF":
+      - generic: "1"
+    - generic "Rung 5 TF":
+      - generic: "3"
+    - generic "Rung 6 TF":
+      - generic: "9"
+    - generic "Rung 7 TF":
+      - generic: "27"
+    - generic "Rung 8 TF":
+      - generic: "81"
+    - generic "Rung 9 TF":
+      - generic: "243"
+    - generic "Rung 10 TF":
+      - generic: "729"
+    - generic "Mode":
+      - generic: Manual
+    - generic "N rungs above chart rung":
+      - generic: "2"
+    - generic "Table position":
+      - generic: Top right
+    - generic "Reference 1 TF":
+      - generic: "2"
+    - generic "Reference 2 TF":
+      - generic: "6"
+    - generic "Reference 3 TF":
+      - generic: "15"
+    - generic "Reference 4 TF":
+      - generic: "60"
+    - generic "Reference 5 TF":
+      - generic: "162"
+    - generic "Reference 6 TF":
+      - generic: "486"
+    - button "Hide":
+    - button "Settings":
+    - button "Remove":
+    - button "More":
+    - generic: 30,892.92
+    - generic "R1 E84": 30,892.75
+    - generic "R2 E78": 30,891.38
+    - generic "R2 E84": 30,891.41
+    - generic "R3 E78": 30,889.03
+    - generic "R3 E84": 30,888.47
+    - generic "R4 E78": 30,879.12
+    - generic "R4 E84": 30,879.06
+    - generic "R5 E78": 30,894.63
+    - generic "R5 E84": 30,897.51
+    - generic "R6 E78": 30,972.58
+    - generic "R6 E84": 30,979.94
+    - generic "R7 E78": 31,071.86
+    - generic "R7 E84": 31,078.50
+    - generic "R8 E78": 31,135.63
+    - generic "R8 E84": 31,135.13
+    - generic "R9 E78": 30,915.19
+    - generic "R9 E84": 30,882.38
+    - generic "R10 E78": 30,261.54
+    - generic "R10 E84": 30,215.92
+    - generic "Reference 1 E78": 30,883.95
+    - generic "Reference 1 E84": 30,885.33
+    - generic "Reference 2 E78": 30,935.57
+    - generic "Reference 2 E84": 30,941.85
+    - generic "Reference 3 E78": 31,020.24
+    - generic "Reference 3 E84": 31,027.21
+    - generic "Reference 4 E78": 31,134.78
+    - generic "Reference 4 E84": 31,137.90
+    - generic "Reference 5 E78": 31,053.36
+    - generic "Reference 5 E84": 31,034.37
+    - generic "Reference 6 E78": 30,532.44
+    - generic "Reference 6 E84": 30,481.56
+  - toolbar:
+    - generic "PoiSzn · Manual Anchored CCII v5.2":
+      - generic: PoiSzn CCII
+    - generic: 30,870.50
+    - generic "CSD1 direction":
+      - generic: Click position (nearest wick)
+    - generic "Abandon after N detection bars (0 = never)":
+      - generic: "0"
+    - generic "CSD2 on the anchor candle":
+      - generic: If it sweeps both sides
+    - generic "CSD ordering gate (bear CSD below bull CSD)":
+      - generic: Flag but keep
+    - generic "Allowed inversion (ticks)":
+      - generic: "0"
+    - generic "Tolerance (% of CSD range)":
+      - generic: "10"
+    - generic "IDM must fill within N detection bars (0 = no limit)":
+      - generic: "13"
+    - generic "Fractal tag on labels":
+      - generic: Detection timeframe
+    - generic "Band sizing":
+      - generic: ATR (auto-scale)
+    - 'generic "Ticks mode: half-height (ticks)"':
+      - generic: "2"
+    - 'generic "ATR mode: length"':
+      - generic: "14"
+    - 'generic "ATR mode: half-height (× ATR)"':
+      - generic: "0.08"
+    - generic "After the leg fills":
+      - generic: Show as filled
+    - generic "Extend levels past the last bar (chart bars)":
+      - generic: "10"
+    - generic "Wick search depth (chart bars)":
+      - generic: 1,500
+    - generic "Line width":
+      - generic: "1"
+    - generic "Line style":
+      - generic: Dashed
+    - generic "Stop extending N chart bars after completion (0 = to last bar)":
+      - generic: "0"
+    - generic "Gap must form within N × ATR of the swing extreme":
+      - generic: "0.5"
+    - button "Hide":
+    - button "Settings":
+    - button "Remove":
+    - button "More":
+  - generic "Chart for CME_MINI:NQ1!, 1 minute"
+- toolbar:
+  - button "1 day in 1 minute intervals":
+    - generic: 1D
+  - button "5 days in 5 minutes intervals":
+    - generic: 5D
+  - button "1 month in 30 minutes intervals":
+    - generic: 1M
+  - button "3 months in 1 hour intervals":
+    - generic: 3M
+  - button "6 months in 2 hours intervals":
+    - generic: 6M
+  - button "Year to day in 1 day intervals":
+    - generic: YTD
+  - button "1 year in 1 day intervals":
+    - generic: 1Y
+  - button "5 years in 1 week intervals":
+    - generic: 5Y
+  - button "All data in 1 month intervals":
+    - generic: All
+  - separator
+  - button "Go to":
+  - button "Timezone":
+    - generic: 07:50:01 PM UTC
+  - button "Electronic trading hours": ETH
+  - separator
+  - button "Adjust for contract changes":
+    - generic: B-ADJ
+- toolbar:
+  - button "Watchlist, details, and news":
+  - button "Alerts":
+    - img "68 unread alert notifications": "68"
+  - button "Object tree and data window":
+  - button "AI Copilot":
+  - button "Screeners":
+  - button "Pine":
+  - button "Calendars":
+  - button "Community":
+    - img: "14"
+  - button "Notifications":
+    - img: "31"
+  - button "Chats":
+  - button "Products":
+  - separator
+  - button "Help Center":
+- generic "Trading panel"
+- generic: 1 day in 1 minute intervals
+- generic "Date range":
+- generic "Long position":
+- generic "Short position":
+- generic "Brush":
+- generic "Path":
+- generic "Gann box":
+- generic "Price range":
+- generic "Trendline":
+- generic "Horizontal line":
+- generic "Text":
+- generic "Fib retracement":
+- generic "Horizontal ray":
+- generic "Fixed range volume profile":
+- generic "Vertical line":
+- generic "Rectangle":
+- generic "Price note":
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- log:
+  - list
+- dialog "PoiSzn CCII":
+  - generic: PoiSzn CCII
+  - button "Close menu":
+    - generic: Close menu
+  - tablist:
+    - tab "Inputs" [selected]
+    - tab "Style"
+    - tab "Visibility"
+  - generic: 1 · ANCHOR
+  - generic: 🔒 Lock detection to timeframe
+  - combobox:
+    - generic: Chart
+  - generic "MUST BE SET to keep the sequence pinned to one rung. Blank = follows whatever chart timeframe you are on, so dropping from 44m to 3m recomputes everything on 3m. Set this to the rung you anchored on (e.g. 44) and the marks stay fixed at any chart timeframe.":
+  - generic: CSD1
+  - textbox "YYYY-MM-DD": 2026-10-12
+  - combobox: 19:21
+  - textbox: "30870.5"
+  - generic "Click the CSD1 candle, near the wick you want marked. One click sets both time and price.":
+  - generic: CSD1 direction
+  - combobox:
+    - generic: Click position (nearest wick)
+  - 'generic "Click position: whichever wick your click landed closer to. The two anchors force it. Sweep/body: bull if only the prior high was swept, bear if only the prior low, else the body decides."':
+  - generic: Abandon after N detection bars (0 = never)
+  - textbox: "0"
+  - generic: CSD2 on the anchor candle
+  - combobox:
+    - generic: If it sweeps both sides
+  - generic "An outside bar can be CSD1 at one wick and CSD2 at the other. 'If it sweeps both sides' takes CSD2 on the anchor only when it genuinely swept the prior bar's opposite extreme. 'Always' skips the sweep test. 'Never' waits for a later bar.":
+  - checkbox "Respect intrabar order on the anchor" [checked]
+  - generic: Respect intrabar order on the anchor
+  - generic "CSD2 can only be the anchor's other wick if that wick printed AFTER the CSD1 wick. An up-closing bar is assumed to make its low first, a down-closing bar its high first — the same assumption the engine already uses when it tests the opposite-direction event first on every other bar.":
+  - generic: 2 · FILTERS
+  - generic: CSD ordering gate (bear CSD below bull CSD)
+  - combobox:
+    - generic: Flag but keep
+  - generic "What to do when the bear CSD ends up above the bull CSD. 'Flag but keep' draws the fractal anyway and marks the failure — right for a manual anchor, where you have asserted CSD1 yourself. 'Block and erase' removes the drawings, as the source engine did for auto-detected fractals. 'Off' ignores the check.":
+  - generic: Allowed inversion (ticks)
+  - textbox: "0"
+  - 'generic "Slack before the gate counts an inversion as failed. 0 is strict: any bear CSD at or above the bull CSD fails. Left available but off by default."':
+  - checkbox "IDM ordering gate (bull IDM above bear IDM)" [checked]
+  - generic: IDM ordering gate (bull IDM above bear IDM)
+  - generic "Rejects an IDM candidate that would sit on the wrong side of its counterpart. The leg stays owed and the engine keeps looking.":
+  - checkbox "IDM must sit inside the CSD range"
+  - generic: IDM must sit inside the CSD range
+  - generic "OFF by default. A valid IDM often prints beyond a CSD extreme, so this rejects good legs. The ordering gate above already catches wrong-sided IDMs on its own. Only switch this on if you want a hard distance limit.":
+  - generic: Tolerance (% of CSD range)
+  - textbox: "10"
+  - checkbox "Mark rejected IDM candidates"
+  - generic: Mark rejected IDM candidates
+  - generic: IDM must fill within N detection bars (0 = no limit)
+  - textbox: "13"
+  - generic "Counted from the bar the previous leg fired. Mirrors the source engine's half-cycle rule — a rung-up cycle is 27 bars, so 13 is half of it. An IDM arriving later than this is refused outright and the leg stays permanently owed instead of completing the fractal long after it formed.":
+  - generic: 3 · DRAWING
+  - checkbox "Show event lines" [checked]
+  - generic: Show event lines
+  - checkbox "Show event labels" [checked]
+  - generic: Show event labels
+  - checkbox "Name labels CSD1/CSD2/IDM1/IDM2" [checked]
+  - generic: Name labels CSD1/CSD2/IDM1/IDM2
+  - generic: Fractal tag on labels
+  - combobox:
+    - generic: Detection timeframe
+  - generic "Stamps each label with the fractal it belongs to, so several instances anchored on different rungs stay distinguishable.":
+  - generic: Custom tag
+  - textbox
+  - generic "e.g. A, B, or a session name. Used by Custom text and Both.":
+  - checkbox "Tag IDM labels too" [checked]
+  - generic: Tag IDM labels too
+  - checkbox "Show CSD explosion bands" [checked]
+  - generic: Show CSD explosion bands
+  - generic: Band sizing
+  - combobox:
+    - generic: ATR (auto-scale)
+  - generic "ATR is measured on the DETECTION timeframe, so the band keeps its proportions when you change chart timeframe.":
+  - generic: "Ticks mode: half-height (ticks)"
+  - textbox: "2"
+  - generic: "ATR mode: length"
+  - textbox: "14"
+  - generic: "ATR mode: half-height (× ATR)"
+  - textbox: "0.08"
+  - generic: Bullish line
+  - button
+  - generic: Bearish line
+  - button
+  - generic: Bull CSD band
+  - button
+  - generic: Bear CSD band
+  - button
+  - checkbox "Mark where the next IDM leg is owed" [checked]
+  - generic: Mark where the next IDM leg is owed
+  - generic "Placed on the detection bar after a leg fires. If that bar continues in the same direction as the leg just fired, the marker sits at that bar's extreme. Otherwise it sits at the fired leg's own level, offset to the side the next leg is due.":
+  - generic: After the leg fills
+  - combobox:
+    - generic: Show as filled
+  - 'generic "Show as filled: the marker stays where the leg fell due and its text changes to ✓, so a completed fractal still shows where each debt sat. Hide: the marker is removed on fill."':
+  - generic: Filled marker
+  - button
+  - generic: Owed marker
+  - button
+  - checkbox "Preview the level while the candle is forming" [checked]
+  - generic: Preview the level while the candle is forming
+  - generic "Draws the pending leg's level on the still-developing detection bar, dotted and marked with ?. It tracks the developing high/low and can move or vanish until that bar closes. The solid level is only committed on close.":
+  - checkbox "Start levels where the wick printed" [checked]
+  - generic: Start levels where the wick printed
+  - generic "ON anchors a level's left edge to the moment the detection bar's high or low actually formed, resolved at chart timeframe. OFF starts it at the detection bar's open, which on a 2D rung viewed at 3m can be two days of empty box to the left.":
+  - generic: Extend levels past the last bar (chart bars)
+  - textbox: "10"
+  - generic "Projects levels and their labels into empty space to the right of price, so the text is not sitting behind live candles.":
+  - generic: Wick search depth (chart bars)
+  - textbox: "1500"
+  - 'generic "How far back to look for the bar that printed a level''s price. Needs to cover one detection bar''s worth of chart bars: a 2D rung on 3m is about 960, on 27m about 106. Raise it if levels fall back to starting at the candle open."':
+  - 'checkbox "Debug: show level timestamps"'
+  - generic: "Debug: show level timestamps"
+  - generic "Adds rows showing the CSD1 detection bar's open and close, the tracked wick timestamp, and which of the two was actually used for the level's left edge.":
+  - generic: Line width
+  - textbox: "1"
+  - generic: Line style
+  - combobox:
+    - generic: Dashed
+  - generic: Stop extending N chart bars after completion (0 = to last bar)
+  - textbox: "0"
+  - checkbox "Show status panel" [checked]
+  - generic: Show status panel
+  - generic: 5 · BREAKAWAY GAP (BAG)
+  - checkbox "Show breakaway gaps" [checked]
+  - generic: Show breakaway gaps
+  - 'generic "Two gaps per fractal, each running counter to the CSD that precedes it: the first BULLISH gap after the bearish CSD completes, and the first BEARISH gap after the bullish CSD completes. Drawn only — they never gate a leg."':
+  - generic: BAG timeframe (blank = two rungs below)
+  - combobox:
+    - generic: Chart
+  - 'generic "Blank walks two steps down the ladder 1S·5S·15S·1·3·9·27·81·243·729·2D·5D — so 729m reads 81m, and 5D reads 729m. A detection timeframe off that ladder, such as D or 10D, has no defined step: BAGs are disabled and the panel says so. Set this field explicitly in that case."':
+  - generic: Gap must form within N × ATR of the swing extreme
+  - textbox: "0.5"
+  - generic "Keeps the gap at the turn rather than mid-leg. Measured from the most extreme price reached since that CSD fired, using the detection rung's ATR. A bullish gap must have its lower edge within this distance of the swing low; a bearish gap its upper edge within this distance of the swing high. 0 disables the check.":
+  - generic: Bullish BAG (after bearish CSD)
+  - button
+  - generic: Bearish BAG (after bullish CSD)
+  - button
+  - generic: 4 · ALERTS
+  - checkbox "Emit JSON on completion" [checked]
+  - generic: Emit JSON on completion
+  - button "Defaults":
+    - generic: Defaults
+  - button "Cancel":
+    - generic: Cancel
+  - button "Ok":
+    - generic: Ok

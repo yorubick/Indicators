@@ -1,0 +1,379 @@
+{
+  "START_UTC": "2026-10-12T19:02:00Z",
+  "END_UTC": "2026-10-12T19:22:00Z",
+  "source_seconds": 60,
+  "chart_seconds": 60,
+  "indicator": "Lite v1.2",
+  "original_control": "NQ1!+0 normalized to native symbol; rejected as synthetic control",
+  "alternative_control": "(CME_MINI:NQ1!+CME_MINI:NQ1!)/2 retained in chart export dialog",
+  "double_symbol": "2*CME_MINI:NQ1! retained in chart export dialog",
+  "measurements": {
+    "base_b": {
+      "C": 49.999999999999346,
+      "range_bars": 21,
+      "range_high": 30870.75,
+      "range_low": 30849.0,
+      "six_curve_fits": {
+        "Lane 3 A": {
+          "C": 50.00000000000036,
+          "period": 20.000000000000142,
+          "pairs": 2502,
+          "rmse": 1.482444463234644e-12
+        },
+        "Lane 3 B": {
+          "C": 49.99999999999895,
+          "period": 24.722222222221703,
+          "pairs": 2502,
+          "rmse": 1.7244601578418657e-12
+        },
+        "Lane 2 A": {
+          "C": 49.99999999999835,
+          "period": 6.666666666666447,
+          "pairs": 2502,
+          "rmse": 2.253875008077852e-12
+        },
+        "Lane 2 B": {
+          "C": 49.999999999998835,
+          "period": 8.240740740740549,
+          "pairs": 2502,
+          "rmse": 1.5467476750144576e-12
+        },
+        "Lane 1 A": {
+          "C": 49.999999999999716,
+          "period": 2.2222222222222094,
+          "pairs": 2502,
+          "rmse": 1.76284293694553e-12
+        },
+        "Lane 1 B": {
+          "C": 49.99999999999985,
+          "period": 2.7469135802469054,
+          "pairs": 2502,
+          "rmse": 1.682213257727271e-12
+        }
+      }
+    },
+    "identidad_alternativa_b": {
+      "C": 49.99999999999934,
+      "range_bars": 21,
+      "range_high": 30870.75,
+      "range_low": 30849.0,
+      "six_curve_fits": {
+        "Lane 3 A": {
+          "C": 50.00000000000038,
+          "period": 20.000000000000153,
+          "pairs": 2505,
+          "rmse": 1.4817282764827223e-12
+        },
+        "Lane 3 B": {
+          "C": 49.99999999999894,
+          "period": 24.7222222222217,
+          "pairs": 2505,
+          "rmse": 1.723601520352768e-12
+        },
+        "Lane 2 A": {
+          "C": 49.99999999999829,
+          "period": 6.666666666666439,
+          "pairs": 2505,
+          "rmse": 2.2537039667077804e-12
+        },
+        "Lane 2 B": {
+          "C": 49.999999999998856,
+          "period": 8.240740740740552,
+          "pairs": 2505,
+          "rmse": 1.54634085044409e-12
+        },
+        "Lane 1 A": {
+          "C": 49.99999999999969,
+          "period": 2.222222222222208,
+          "pairs": 2505,
+          "rmse": 1.7626876231456235e-12
+        },
+        "Lane 1 B": {
+          "C": 49.99999999999985,
+          "period": 2.7469135802469054,
+          "pairs": 2505,
+          "rmse": 1.6824019411271055e-12
+        }
+      }
+    },
+    "doble_b": {
+      "C": 49.999999999999325,
+      "range_bars": 21,
+      "range_high": 61741.5,
+      "range_low": 61698.0,
+      "six_curve_fits": {
+        "Lane 3 A": {
+          "C": 50.00000000000038,
+          "period": 20.000000000000153,
+          "pairs": 2506,
+          "rmse": 2.9629445426516838e-12
+        },
+        "Lane 3 B": {
+          "C": 49.999999999998884,
+          "period": 24.72222222222167,
+          "pairs": 2506,
+          "rmse": 3.447300417090961e-12
+        },
+        "Lane 2 A": {
+          "C": 49.99999999999829,
+          "period": 6.666666666666439,
+          "pairs": 2506,
+          "rmse": 4.506541314526791e-12
+        },
+        "Lane 2 B": {
+          "C": 49.999999999998856,
+          "period": 8.240740740740552,
+          "pairs": 2506,
+          "rmse": 3.092250470960687e-12
+        },
+        "Lane 1 A": {
+          "C": 49.99999999999969,
+          "period": 2.222222222222208,
+          "pairs": 2506,
+          "rmse": 3.524847137999703e-12
+        },
+        "Lane 1 B": {
+          "C": 49.99999999999985,
+          "period": 2.7469135802469054,
+          "pairs": 2506,
+          "rmse": 3.3643508320224043e-12
+        }
+      }
+    },
+    "regreso": {
+      "C": 49.999999999999325,
+      "range_bars": 21,
+      "range_high": 30870.75,
+      "range_low": 30849.0,
+      "six_curve_fits": {
+        "Lane 3 A": {
+          "C": 50.00000000000038,
+          "period": 20.000000000000153,
+          "pairs": 2506,
+          "rmse": 1.4814722713258419e-12
+        },
+        "Lane 3 B": {
+          "C": 49.999999999998884,
+          "period": 24.72222222222167,
+          "pairs": 2506,
+          "rmse": 1.7236502085454805e-12
+        },
+        "Lane 2 A": {
+          "C": 49.99999999999829,
+          "period": 6.666666666666439,
+          "pairs": 2506,
+          "rmse": 2.2532706572633955e-12
+        },
+        "Lane 2 B": {
+          "C": 49.999999999998856,
+          "period": 8.240740740740552,
+          "pairs": 2506,
+          "rmse": 1.5461252354803435e-12
+        },
+        "Lane 1 A": {
+          "C": 49.99999999999969,
+          "period": 2.222222222222208,
+          "pairs": 2506,
+          "rmse": 1.7624235689998515e-12
+        },
+        "Lane 1 B": {
+          "C": 49.99999999999985,
+          "period": 2.7469135802469054,
+          "pairs": 2506,
+          "rmse": 1.6821754160112022e-12
+        }
+      }
+    }
+  },
+  "checks": {
+    "base_repeat": {
+      "common_closed_bars": 2710,
+      "mismatches": {
+        "open": 0,
+        "high": 0,
+        "low": 0,
+        "close": 0,
+        "Volume": 0,
+        "Lane 3 A": 0,
+        "Lane 3 B": 0,
+        "Lane 2 A": 0,
+        "Lane 2 B": 0,
+        "Lane 1 A": 0,
+        "Lane 1 B": 0
+      },
+      "max_errors": {
+        "open": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "close": 0.0,
+        "Volume": 0.0,
+        "Lane 3 A": 0.0,
+        "Lane 3 B": 0.0,
+        "Lane 2 A": 0.0,
+        "Lane 2 B": 0.0,
+        "Lane 1 A": 0.0,
+        "Lane 1 B": 0.0
+      }
+    },
+    "identity_vs_native": {
+      "common_closed_bars": 2710,
+      "mismatches": {
+        "open": 0,
+        "high": 0,
+        "low": 0,
+        "close": 0,
+        "Volume": 0,
+        "Lane 3 A": 0,
+        "Lane 3 B": 0,
+        "Lane 2 A": 0,
+        "Lane 2 B": 0,
+        "Lane 1 A": 0,
+        "Lane 1 B": 0
+      },
+      "max_errors": {
+        "open": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "close": 0.0,
+        "Volume": 0.0,
+        "Lane 3 A": 0.0,
+        "Lane 3 B": 0.0,
+        "Lane 2 A": 0.0,
+        "Lane 2 B": 0.0,
+        "Lane 1 A": 0.0,
+        "Lane 1 B": 0.0
+      }
+    },
+    "identity_earlier_export": {
+      "common_closed_bars": 436,
+      "mismatches": {
+        "open": 0,
+        "high": 0,
+        "low": 0,
+        "close": 0,
+        "Volume": 0,
+        "Lane 3 A": 0,
+        "Lane 3 B": 0,
+        "Lane 2 A": 0,
+        "Lane 2 B": 0,
+        "Lane 1 A": 0,
+        "Lane 1 B": 0
+      },
+      "max_errors": {
+        "open": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "close": 0.0,
+        "Volume": 0.0,
+        "Lane 3 A": 0.0,
+        "Lane 3 B": 0.0,
+        "Lane 2 A": 0.0,
+        "Lane 2 B": 0.0,
+        "Lane 1 A": 0.0,
+        "Lane 1 B": 0.0
+      }
+    },
+    "double_vs_native": {
+      "common_closed_bars": 2710,
+      "mismatches": {
+        "open": 0,
+        "high": 0,
+        "low": 0,
+        "close": 0,
+        "Volume": 0,
+        "Lane 3 A": 0,
+        "Lane 3 B": 0,
+        "Lane 2 A": 0,
+        "Lane 2 B": 0,
+        "Lane 1 A": 0,
+        "Lane 1 B": 0
+      },
+      "max_errors": {
+        "open": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "close": 0.0,
+        "Volume": 0.0,
+        "Lane 3 A": 0.0,
+        "Lane 3 B": 0.0,
+        "Lane 2 A": 0.0,
+        "Lane 2 B": 0.0,
+        "Lane 1 A": 0.0,
+        "Lane 1 B": 0.0
+      }
+    },
+    "double_repeat": {
+      "common_closed_bars": 2713,
+      "mismatches": {
+        "open": 0,
+        "high": 0,
+        "low": 0,
+        "close": 0,
+        "Volume": 0,
+        "Lane 3 A": 0,
+        "Lane 3 B": 0,
+        "Lane 2 A": 0,
+        "Lane 2 B": 0,
+        "Lane 1 A": 0,
+        "Lane 1 B": 0
+      },
+      "max_errors": {
+        "open": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "close": 0.0,
+        "Volume": 0.0,
+        "Lane 3 A": 0.0,
+        "Lane 3 B": 0.0,
+        "Lane 2 A": 0.0,
+        "Lane 2 B": 0.0,
+        "Lane 1 A": 0.0,
+        "Lane 1 B": 0.0
+      }
+    },
+    "return_vs_native": {
+      "common_closed_bars": 2710,
+      "mismatches": {
+        "open": 0,
+        "high": 0,
+        "low": 0,
+        "close": 0,
+        "Volume": 0,
+        "Lane 3 A": 0,
+        "Lane 3 B": 0,
+        "Lane 2 A": 0,
+        "Lane 2 B": 0,
+        "Lane 1 A": 0,
+        "Lane 1 B": 0
+      },
+      "max_errors": {
+        "open": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "close": 0.0,
+        "Volume": 0.0,
+        "Lane 3 A": 0.0,
+        "Lane 3 B": 0.0,
+        "Lane 2 A": 0.0,
+        "Lane 2 B": 0.0,
+        "Lane 1 A": 0.0,
+        "Lane 1 B": 0.0
+      }
+    }
+  },
+  "sha256": {
+    "base_a": "1b8827c8776df66ecd700dac7cc234aca870a64cafb78cb4d8db801739a73b41",
+    "base_b": "71a08248357fd3ea7e3f14f735b3b41ace76f093fb16c5a23d8af6bb5ffb385b",
+    "identidad_alternativa_a": "91f6f48649c745caa34dc2ddc22982468c72febcf2d38347891bb2c5598d4939",
+    "identidad_alternativa_b": "6bcceeca2f7c9621c0de25fac09744e27c92c130a12e9b30f87cbc823af85038",
+    "doble_a": "f95b97fc746f946823460c6105add7e46bc48267b1ab09ee7f8bac276247aa9d",
+    "doble_b": "2a0dff5693730ece75eed8336965496d11169e0d1b2a95767c98a15352e7b022",
+    "regreso": "6359b5b64696dae9bb0e3c25a549ed6891781b277edb8113e58ccb6c67f2ba10"
+  },
+  "predeclared_predictions": {
+    "scale_invariant": 50,
+    "Gemini_v4": 77
+  },
+  "interpretation": "C remains 50 under price doubling in this window. Gemini v4 transformed-price prediction 77 fails. This does not identify the generator or establish harmonic alignment.",
+  "limits": "Alternative identity was an exploratory compatibility repair declared before measuring it. Metadata/history context is not fully observable; inference concerns chart OHLCV and plotted Lite recurrence. Character updated externally and excluded."
+}

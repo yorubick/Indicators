@@ -1,0 +1,103 @@
+{
+  "reversed_anchors": {
+    "file": "C_anclas_invertidas_25m.csv",
+    "curve_values": 0,
+    "interpretation": "No hay curvas; no se asigna C cero."
+  },
+  "directions": {
+    "Bull": {
+      "fit": {
+        "file": "G:\\trading\\guias\\analisis\\C_flow_Bull_25m.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 61.91011235955056,
+          "upper_exclusive": 62.083333333333336
+        },
+        "compatible_integer_C_seconds": [
+          62
+        ],
+        "periods": {
+          "Layer A": 25,
+          "Layer A boundary": 31,
+          "Layer B": 8,
+          "Layer B boundary": 10,
+          "Layer C": 3,
+          "Layer C boundary": 3,
+          "Extra cloud 1": 74,
+          "Extra cloud 1 boundary": 92,
+          "Extra cloud 2": 223,
+          "Extra cloud 2 boundary": 276
+        },
+        "pairs_per_curve": 106,
+        "max_rmse_step": 1.64092173372359e-12,
+        "scope": "Direccion de Flow Bands; no es Setup direction del modo Auto Balanced."
+      },
+      "curve_comparison": {
+        "phase_seconds": 0,
+        "reference_shift_seconds": 0,
+        "minute_samples": 104,
+        "values": 1040,
+        "closed_before": 1791843000,
+        "max_error": 0.0,
+        "mean_error": 0.0
+      },
+      "active_signals": {
+        "Bull delivery active": {
+          "timestamps_compared": 432,
+          "different_values": 0
+        },
+        "Bear delivery active": {
+          "timestamps_compared": 432,
+          "different_values": 0
+        }
+      }
+    },
+    "Bear": {
+      "fit": {
+        "file": "G:\\trading\\guias\\analisis\\C_flow_Bear_25m.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 61.91011235955056,
+          "upper_exclusive": 62.083333333333336
+        },
+        "compatible_integer_C_seconds": [
+          62
+        ],
+        "periods": {
+          "Layer A": 25,
+          "Layer A boundary": 31,
+          "Layer B": 8,
+          "Layer B boundary": 10,
+          "Layer C": 3,
+          "Layer C boundary": 3,
+          "Extra cloud 1": 74,
+          "Extra cloud 1 boundary": 92,
+          "Extra cloud 2": 223,
+          "Extra cloud 2 boundary": 276
+        },
+        "pairs_per_curve": 106,
+        "max_rmse_step": 1.64092173372359e-12,
+        "scope": "Direccion de Flow Bands; no es Setup direction del modo Auto Balanced."
+      },
+      "curve_comparison": {
+        "phase_seconds": 0,
+        "reference_shift_seconds": 0,
+        "minute_samples": 104,
+        "values": 1040,
+        "closed_before": 1791843000,
+        "max_error": 0.0,
+        "mean_error": 0.0
+      },
+      "active_signals": {
+        "Bull delivery active": {
+          "timestamps_compared": 432,
+          "different_values": 0
+        },
+        "Bear delivery active": {
+          "timestamps_compared": 432,
+          "different_values": 0
+        }
+      }
+    }
+  }
+}

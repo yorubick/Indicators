@@ -1,0 +1,6 @@
+{
+  "base": "C_contacto_ruptura21_resultados.json",
+  "interval": "Underlying real C within measured C +/-1second.",
+  "bound": "EMA convex recurrence alpha=2/(1+factor*C/dt). Across interval, abs(dEMA/dC)<=m*price_span*maxabs(dalpha/dC); max at C_lower. A contact root is impossible if abs(residual_at_C)>bound+1e-7.",
+  "scope": "Conservative necessary condition only; failure to exclude is not a root. Additional audit registered after exact-contact result, no fit or validation."
+}

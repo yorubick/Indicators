@@ -1,0 +1,253 @@
+1.0-5.7:  Okay, boys, I wanted to include the character tree
+6.7-8.5:  EMA in this video
+8.5-11.0:  So I was supposed to have been a group call
+12.6-17.8:  Something I got a bit tied up and the character tree
+20.1-22.1:  Indicated is just
+22.2-24.2:  Going under some upgrades as we speak
+24.9-26.9:  There's a few bugs that I found
+27.9-32.5:  So let's talk about the auto zoom update
+32.9-34.9:  So what you'll find is that the
+36.6-41.7:  Auto zoom is now automatically shipped with settings that I prefer
+43.4-45.4:  There's another bubble zone and all of that
+45.8-49.8:  Let's just go through all of the settings so everyone's on the same page
+50.7-55.5:  So first one of the top color color theme pretty expand treats either auto
+55.5-61.6:  The colors will be awkward frozen. You can go dark mode light mode or custom
+62.6-67.8:  If you go custom here, it means that's the only time you can change all of these colors
+68.8-70.1:  Everywhere here
+70.1-77.0:  Then there's an option to use one text color
+77.0-78.5:  So if you click that
+78.5-81.1:  The all the text colors just go to white at the back
+84.0-89.3:  These are alerts that can be set on each of these. That's pretty self-explanatory
+89.8-96.2:  This is the date of when you want to and again. This is the time
+96.8-99.2:  Now here is the first important part
+100.2-105.2:  We could set it on auto and then it would choose by long and short
+106.0-108.9:  Or if we know it's only going long then
+110.4-116.7:  We can choose long
+117.0-121.1:  Time frame lock is the same as the CSD CSD idea medium. You can lock
+122.5-124.5:  Let's say a five-minute
+124.7-128.9:  Foot projection and then you'd see those on a one-minute. That's self-explanatory
+129.8-132.3:  This little guide here fairly soon percentage
+133.4-135.5:  40% now what this does is
+136.1-141.3:  You'll find and I can't find any instance right now what you'll find times where
+142.2-144.2:  maybe if your
+145.2-147.2:  Just make a copy of this
+147.9-149.9:  maybe if you
+153.9-157.3:  manually flipping right and
+159.1-167.2:  You click something where the failure swing is pretty pretty tiny and then it sweeps over it
+169.1-171.1:  Just sweeps it takes an entire leg
+172.0-190.3:  Instead just what's going on here whether it's because we're so far back to this if that works out
+192.9-209.4:  He said the points I'll put it here. Let's just call the mortise manual
+211.2-214.6:  Let's go short
+215.5-220.1:  Let's just do auto for now. See if that picks up
+221.2-226.4:  Yeah, right. So this one managed to pick the setup up here
+227.5-231.9:  You just may have missed an entry here
+231.9-237.6:  And that particular one I find that
+238.6-241.2:  Generally we like to keep these things on one second
+243.3-245.3:  Time frame
+245.8-256.3:  Ways that I think it ships down it with one one minute
+258.2-259.7:  Yeah, right
+259.7-263.5:  It's ships down it with one minute. You'll find that if you go one second
+264.3-267.1:  That's your and if there's data available for that
+267.6-269.6:  That this zone may shift
+270.3-272.3:  Upward
+272.3-274.3:  Which sometimes may cause you to miss
+275.3-282.9:  That entry right so we'll keep it on one left. It's fine. It also doesn't mess around with the non-premium guys
+283.8-289.3:  But back to this failure swing percentage if you find that it skipped a failure swing inside here
+289.9-293.1:  You could just come in here and then just drop this down to 25
+293.7-296.4:  And then it would find this the smaller
+298.2-303.2:  The scented failure swing compared to the all our right if not just keep it on 40
+304.7-307.4:  Minimum all our size you could also
+310.4-314.4:  If you find that it's not doing anything you could pick that up to
+315.3-317.7:  2 to 2.2 to 2.5
+318.8-320.2:  so
+321.9-328.0:  This monon or all our size measured. I don't mess with that. We just keep it as typical
+329.1-332.9:  All our regions strength bars you could either keep it as one or two
+334.1-336.1:  Depending on how you want
+336.3-344.1:  How many candles to the left or the right of the all are you want? It's not something I mess around with too much
+344.9-346.9:  this here
+346.9-348.9:  was the first addition
+348.9-356.1:  That caused all of this auto zoom to occur. It was the move anchor to a new or a lot of extremes. So what happens is
+358.3-361.9:  If we click an all are then it
+362.6-369.6:  Gets invalidated and a new high is put in it would automatically switch to that new all on a new setup
+370.3-374.1:  Right here is where you have to go full auto
+375.0-380.4:  Right the mode and you'll find that only when you do that that these now get highlighted
+381.4-383.4:  It drops a setup after 40 bars
+384.8-386.8:  The setup life is 40 bars
+388.4-394.2:  Keep the CSDs until entry. So what that does is keeps the if there was no CSV like this guy
+394.8-402.5:  It'll keep it for about 40 or 50 bars or however many bars you tell it to keep until we come back to it or the time expires
+404.3-406.3:  Right, so that is
+406.9-413.1:  Who ought to keep CSD until entry, right? And then there's the drop it after X amount
+413.1-418.9:  Which is 120 now if you want to back test and see where the failures are which ones have failed
+419.2-422.5:  You can keep all the setup history and then they'll all stay on chart
+423.5-427.9:  You can even click this one and it'll tell you what little X is here why
+428.5-430.5:  There wasn't any setups formed?
+431.2-434.4:  These flow bands are inside here
+435.3-444.0:  You can choose to show them. I'm not I wouldn't play with any of these settings. So you'll see here. There's the blue bands here
+445.1-449.7:  And these are what actually dictate whether we buy in premium or
+451.2-453.4:  They buy in discount and selling premium
+453.7-459.9:  Yeah, you don't need to show the bands, but you can click click that option on and that options on is when
+462.3-465.2:  You get the buy this buy this gun by premium signals
+468.7-473.1:  Yeah, remove the setup and so moving the setup ends with no entry self-explanatory
+473.9-481.9:  Flow background. It just puts up a box over the flow itself. I don't like the box. I
+483.2-485.2:  Don't know who may like the box
+485.4-492.0:  But you'll see now. This is all highlighted here. I don't like it when it added in so I just put in an option to
+492.1-498.3:  Turn that off right as long as you got the flow bands on
+499.0-502.5:  The logic is still there for buy and sell in premium and discount
+502.9-504.9:  You can choose to show the bands or not
+506.5-512.0:  Yeah, this was a later edition where if we click this box and clouds on each signal
+512.0-515.5:  I hard-coded the EMA change into this here
+516.3-518.5:  And it's hard-coded into the OLR
+519.2-521.2:  On the failure swing to the end of the OLR
+522.3-524.3:  It's hard-coded and
+524.7-526.7:  You'll find that
+527.7-533.3:  When a new setup forms a new EMA tree will form as well and what it does is
+534.0-538.4:  It would alternate the colors like you see here. I put it as alternating colors
+538.9-541.5:  You could change that and keep it as not
+542.5-544.5:  alternating you keep it as the same color
+544.5-546.5:  You
+547.6-550.1:  Could show the box if you want it. I don't like it
+550.8-555.9:  Extra clouds are the two extra clouds. I like them on you could keep those on
+557.1-559.1:  And these are just the colors
+559.4-561.4:  Conspirency of the box
+561.7-565.9:  And then obviously these are the two alternating colors and there's the alternating
+566.4-573.7:  Choice here now. So if if it was only down trending we could
+573.7-578.8:  Put it by direction. So one downward direction would be blue
+579.3-582.7:  Output direction would be an orange for example or we could just keep them single
+583.1-587.6:  They're all the same color right right now. It's just alternating. So we know when one box it up
+588.7-590.7:  Is there and when it's not
+590.7-596.3:  continuation signals on cloud tags are is something I'm experimenting with where
+597.3-599.1:  I
+599.1-601.2:  Was looking at
+601.3-603.7:  Signals forming you'll see here here here
+606.0-611.9:  When we get back to tag the EMA's right so it's not some stats. I need to add into that
+611.9-613.9:  But generally you can just keep that off and
+614.9-620.3:  These are the clouds that you would want the tag signals to come off of right?
+620.3-623.9:  So a B and C is the other first three and then X1 X2 are the
+624.6-634.1:  Extra one and two box and clouds and each signal will turn that off
+634.3-636.3:  Right
+637.8-645.9:  The stats table all of this target it's not for you. It's more for I
+647.1-651.2:  Mean you could if you have these these on you'll find that the stats table will show here
+651.5-657.9:  It'll show you the EMA is being tagged half made tagged and how often they ran to let's say two are
+658.5-660.5:  1.5 3 are
+660.5-662.5:  and whatever right that
+663.5-667.4:  Starts putting stats inside a table here for you a
+669.9-677.1:  Low time frame data set it to one minute. That's fine entry level range level entry zone. You could play around with that
+677.9-681.1:  Extend the levels to the current price. So without it on
+682.7-686.9:  Your setup could just stop short of where it is until it's tagged and
+689.3-691.3:  If we have it on
+691.6-693.6:  it obviously
+693.6-695.5:  drags the
+695.5-697.2:  table until
+697.2-699.7:  fan price or when it tags there
+700.8-705.5:  The folks show the folks totally up to you. These are all hard-coded decks of folks inside there
+706.1-708.1:  projection color of the phone zero one box
+708.6-711.8:  line with labels all of that pretty self-explanatory
+713.1-717.8:  Signals on unqualified set up. So what happens is because these are graded into ABC and you
+718.3-723.7:  Where a would be like your high-time frame 729 to 43 daily monthly weekly levels?
+724.3-729.4:  If we took liquidity on those that'll be an a set up b set up may be an
+730.7-734.7:  81 27 9 minute or anyone in 27 or
+735.4-741.2:  Some other time a C set up you can see as a 9 minute maybe a 3 or 5 minute 15 minute
+742.2-743.5:  equal highs
+743.5-745.5:  so you could choose
+745.7-748.7:  Which setups you want. So if you only wanted a and b
+750.1-752.6:  High-time frame setups you just turn these off
+753.0-759.5:  If you want the setups on the unqualified boxes, you click that on and the unqualified you'll see has a u here
+759.9-765.3:  That just means that it's taken some internal liquidity, but it's not nothing to brag about
+766.4-772.6:  Really right? So it's just a model printing with some kind of internal liquidity taken you can choose to have a signal on that
+772.6-776.2:  Or not right totally up to you
+779.3-781.3:  Volume bubbles. I've put them off
+781.4-784.5:  You can have them on the set up all balls. So when we put them on
+785.3-790.4:  at first I wanted to use these for entries you'll start to see them here and
+791.4-798.5:  With that I have the sensitivity sensitivity is high you could put them as low. They'll show less bubbles. I suppose
+799.9-802.8:  I kept it on high
+802.8-809.0:  By colors of the bubbles the transparency added this option. So it's not too imposing on chart
+809.9-815.3:  Style is a bubble. If you don't like a bubble, it'll put a dot, but the dots are not the same size
+815.7-817.7:  You'll see here. It's showing
+818.9-823.9:  Different sizes of volume, but it's not showing it the way the bubble would show it
+827.3-829.7:  Recently, I've just put all of these off anyway
+829.7-835.3:  But let's just go around through it in case you guys want to have them on the bubble hole levels
+835.5-837.5:  You'll see it'll draw lines
+838.4-844.7:  Across here, right? You see that red line red line green line and what that actually does is
+846.0-848.5:  Remember if we got a lot of cells coming in here
+849.0-851.0:  It draws this line here
+851.6-857.4:  Then if we start to close above that and these a lot of big sellers
+857.4-860.7:  Then I know something is potentially changing here like you see
+861.6-863.6:  Yeah, right
+864.3-866.3:  But as long as those levels hold
+866.8-869.7:  We could do that retest and then
+870.6-876.1:  Move higher or lower, but you'll find that these are where you could start to place your stops
+876.5-884.1:  above these whole levels as long as they hold and keep training and stop down because ideally these
+885.5-888.3:  Green bubbles or these red bubbles shouldn't be closed through
+889.1-892.9:  If you're looking for a training delivery, right pretty self-explanatory
+894.3-897.6:  It's just the top or bottom of the volume bubbles
+899.4-904.9:  I will hold levels and together with that I've added a warning a little
+905.9-909.7:  Exclamation you'll see here, so it's telling you now that they look
+910.6-916.8:  We're starting to close to bubbles pay attention again, but the more and keep them off up to you
+918.5-924.3:  Everything now is customizable, so you have the warning color your own color theme warning size
+926.2-936.8:  I've added absorption bubbles, so it tells you when buyers are absorbing or where sellers are absorbing if you feel like
+937.3-941.8:  Let's get down there. So
+942.3-946.2:  By here for example, you see a blue dot. It's telling you that buyers are absorbing
+946.5-951.1:  Yeah, you have an orange dot to tells you sellers are absorbing keep it on keep it off
+951.8-953.8:  It shipped off
+953.8-955.8:  Standard
+956.5-960.3:  CSD likely warning it's just a likelihood you'll see right here for example
+961.0-968.1:  That it's likely that this is going to close through here and put the CSD. That's just a little warning there for you
+968.9-974.0:  Really a swing sizes CSD labeled style. You'll see I have it as text at the moment because
+974.7-980.1:  You can put it as label and when you have it as label I found that when these are on chart printing too much
+980.3-985.3:  But these labels tend to become just too much so change that to text
+986.3-990.5:  All of the failure swing candle someone request of that and
+991.7-993.7:  Let's see if we go yellow. I haven't tested it
+994.1-997.2:  So technically what that would do is here, right?
+997.7-1004.0:  All is in the failure swing candle. So the you know exactly which two candles are the failure swing
+1004.6-1007.5:  Right. I don't use that. So I haven't shipped it standard
+1008.5-1014.0:  Yeah, that's basically it. So what you would just need to do is because it's full auto
+1014.0-1018.0:  If you're using a full auto your anchor right your direction is auto
+1018.4-1024.6:  You'll anchor it once which I did here then you'll find that if you have a direction of
+1025.2-1027.2:  Here we have the direction
+1028.8-1030.8:  Short
+1031.0-1034.1:  It just starts printing only the
+1035.0-1040.0:  Short setups for this. Let's turn these bubbles off for a bit
+1043.0-1048.5:  Bubble I hear off
+1048.8-1052.9:  Well, your job looks a bit cleaner
+1053.6-1059.7:  All of them off. You just anchor once it's a full auto mode and this guy just goes ahead and
+1060.5-1066.0:  Does his own thing all day? You don't have to look for a level it looks for you
+1066.4-1072.5:  But if you were trending down then I you'd be looking for cells if you were trending up you'd be looking for buys
+1073.3-1075.3:  You could change the mode from
+1077.3-1079.3:  Bare mode to ball mode
+1079.4-1082.2:  So this would basically go on
+1083.0-1086.9:  Automatically plotting all of these levels until the end of time
+1087.7-1089.7:  And you'd have all of those on shot
+1090.2-1092.6:  It deletes the ones that had no entry
+1093.6-1095.6:  Sound failures, I think
+1096.1-1098.1:  I'll just have to double check that but mostly
+1098.8-1101.7:  I think 90% 95% of these stay on shot
+1103.0-1105.0:  And yeah, you can see you get
+1106.1-1110.6:  From this level you had another one internally you got a cell signal that came in here
+1112.1-1114.6:  And that's how the full auto mode works. There's nothing else to this
+1115.3-1117.3:  That's just how the full auto mode works
+1118.1-1120.6:  and how the auto zoom would work so
+1121.6-1123.6:  when you came to
+1124.8-1126.6:  Just do this
+1126.6-1129.3:  And you came to PA that was trending down
+1130.3-1132.3:  We keep
+1133.9-1137.1:  Bare mode right we'll see here cell cell cell cell cell
+1140.1-1142.1:  Cells here cells here
+1142.9-1144.9:  Now most of these generally give you
+1146.6-1150.0:  After you sell it gives you a grace period where you could go back to
+1150.8-1153.7:  Break even so even if it came back here, you're already
+1154.4-1160.3:  Uh break even something like this. This was a like some uh an outlier outlier
+1161.3-1163.3:  Outlier outlier
+1163.7-1166.5:  Um, it's crazy a little bit that happened earlier
+1167.4-1171.9:  You could choose to sell the next candle or wait wait to close back in and let's totally up to you
+1173.1-1175.3:  So that's the full auto zoom
+1178.0-1180.8:  ball and bare mode and manual mode so
+1182.4-1185.6:  Nothing else to it. If you're going full auto mode like it shipped
+1186.1-1190.4:  Just anchor some point and let it uh do its thing
+1191.9-1195.6:  Uh keep the normal southern buy signals and the
+1196.7-1198.1:  um
+1198.1-1200.4:  cell premium buy discount
+1200.4-1203.2:  signals on
+1203.2-1206.5:  Right. Let me see if um the character tree ema
+1207.6-1209.6:  indicator is set up
+1210.2-1213.0:  And what we'll do then is we'll just run
+1213.6-1218.2:  Through that if it is set up or under it if it's not then we'll just wait for tomorrow

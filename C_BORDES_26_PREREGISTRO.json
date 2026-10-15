@@ -1,0 +1,14 @@
+{
+ "date":"2026-10-14","day_UTC":"2026-10-12",
+ "source_seconds":60,"chart_seconds":60,"indicator":"Existing Lite v1.2; Character excluded",
+ "cases":[
+  {"id":"1854_1919","START":"18:54","END":"19:19","n":26},
+  {"id":"1855_1920","START":"18:55","END":"19:20","n":26,"known_reference_C":62},
+  {"id":"1856_1921","START":"18:56","END":"19:21","n":26},
+  {"id":"1855_1919","START":"18:55","END":"19:19","n":25},
+  {"id":"1855_1921","START":"18:55","END":"19:21","n":27}
+ ],
+ "hypothesis":"Count-only mechanism predicts equal C in the three n26 cases. No post-sweep formula is fitted or used for acceptance.",
+ "controls":"Two exports per case. Complete range and one hour forward, native closed OHLCV identical to baseline. Six independent consistent EMA fits, stable plotted values. Record H,L,rupture,seed and START/END geometry. Restore18:55–19:20 and compare prior baseline.",
+ "limits":"Fixed count still changes included OHLC, endpoint geometry and time. A C difference rejects count-only for these cases; it does not isolate a hidden temporal anchor from normalized shape."
+}

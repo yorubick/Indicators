@@ -1,0 +1,2529 @@
+{
+  "case_count": 38,
+  "reconstructions_matching": 34,
+  "seed_direction_rules": {
+    "END_body": {
+      "matches": 27,
+      "cases": 34,
+      "counterexamples": [
+        {
+          "start": "19:11",
+          "end": "19:31",
+          "dt": 60,
+          "C": 80,
+          "actual_side": "low",
+          "predicted_side": "high"
+        },
+        {
+          "start": "18:55:00",
+          "end": "19:21:00",
+          "dt": 15,
+          "C": 115,
+          "actual_side": "low",
+          "predicted_side": "high"
+        },
+        {
+          "start": "18:55:00",
+          "end": "19:22:00",
+          "dt": 15,
+          "C": 106,
+          "actual_side": "low",
+          "predicted_side": "high"
+        },
+        {
+          "start": "18:54:00",
+          "end": "19:21:30",
+          "dt": 30,
+          "C": 136,
+          "actual_side": "low",
+          "predicted_side": "high"
+        },
+        {
+          "start": "18:54:00",
+          "end": "19:21:00",
+          "dt": 60,
+          "C": 109,
+          "actual_side": "low",
+          "predicted_side": "high"
+        },
+        {
+          "start": "18:00:00",
+          "end": "19:21:30",
+          "dt": 30,
+          "C": 196,
+          "actual_side": "low",
+          "predicted_side": "high"
+        },
+        {
+          "start": "18:00:00",
+          "end": "19:21:00",
+          "dt": 60,
+          "C": 196,
+          "actual_side": "low",
+          "predicted_side": "high"
+        }
+      ]
+    },
+    "range_net_close": {
+      "matches": 30,
+      "cases": 34,
+      "counterexamples": [
+        {
+          "start": "18:55:00",
+          "end": "19:18:00",
+          "dt": 15,
+          "C": 88,
+          "actual_side": "low",
+          "predicted_side": "high"
+        },
+        {
+          "start": "18:00:00",
+          "end": "19:21:30",
+          "dt": 30,
+          "C": 196,
+          "actual_side": "low",
+          "predicted_side": "high"
+        },
+        {
+          "start": "18:00:00",
+          "end": "19:21:00",
+          "dt": 60,
+          "C": 196,
+          "actual_side": "low",
+          "predicted_side": "high"
+        },
+        {
+          "start": "18:00:00",
+          "end": "19:20:00",
+          "dt": 120,
+          "C": 268,
+          "actual_side": "low",
+          "predicted_side": "high"
+        }
+      ]
+    },
+    "first_breakout": {
+      "matches": 34,
+      "cases": 34,
+      "counterexamples": []
+    }
+  },
+  "causal_reconstructions_matching": 34,
+  "visibility_matching": 34,
+  "values_in_matching_reconstructions": 89690,
+  "scope": "Native Manual source=chart. Reconstructs AFTER END from END low/high and all later closes; checks all ten curves. END and recurrence control does not uniquely certify START. Earlier unpaired measurements still need UI repetition for definitive provenance.",
+  "cases": [
+    {
+      "file": "G:\\trading\\guias\\analisis\\character_manual_30m_1m_recarga.csv",
+      "start": "04:45",
+      "end": "05:15",
+      "dt": 60,
+      "C": 116,
+      "C_interval": {
+        "lower_inclusive": 115.97222222222223,
+        "upper_exclusive": 116.06741573033707
+      },
+      "OHLC_fallback": "G:\\trading\\guias\\analisis\\character_manual_15m_1m.csv",
+      "post_END_OHLC_borrowed_count": 90,
+      "checked_until_UTC_timestamp": 1791787500,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791783360,
+      "first_plots": {
+        "Layer A": null,
+        "Layer A boundary": null,
+        "Layer B": null,
+        "Layer B boundary": null,
+        "Layer C": null,
+        "Layer C boundary": null,
+        "Extra cloud 1": null,
+        "Extra cloud 1 boundary": null,
+        "Extra cloud 2": null,
+        "Extra cloud 2 boundary": null
+      },
+      "visibility_matches": false,
+      "visibility_status": "not_testable_missing_original_prefix",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 31244.25,
+          "values": 0,
+          "max_error": null
+        },
+        {
+          "side": "high",
+          "seed": 31250.5,
+          "values": 0,
+          "max_error": null
+        }
+      ],
+      "best_seed": null,
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "high"
+      },
+      "first_breakout_direction": "bear",
+      "causal_reconstruction": {
+        "values": 0,
+        "max_error": null,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bear",
+        "matches": false
+      },
+      "reconstruction_matches": false
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\character_20m.csv",
+      "start": "04:45",
+      "end": "05:05",
+      "dt": 60,
+      "C": 75,
+      "C_interval": {
+        "lower_inclusive": 74.9438202247191,
+        "upper_exclusive": 75.13888888888889
+      },
+      "OHLC_fallback": "G:\\trading\\guias\\analisis\\character_manual_15m_1m.csv",
+      "post_END_OHLC_borrowed_count": 90,
+      "checked_until_UTC_timestamp": 1791786900,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791783120,
+      "first_plots": {
+        "Layer A": null,
+        "Layer A boundary": null,
+        "Layer B": null,
+        "Layer B boundary": null,
+        "Layer C": null,
+        "Layer C boundary": null,
+        "Extra cloud 1": null,
+        "Extra cloud 1 boundary": null,
+        "Extra cloud 2": null,
+        "Extra cloud 2 boundary": null
+      },
+      "visibility_matches": false,
+      "visibility_status": "not_testable_missing_original_prefix",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 31235.25,
+          "values": 0,
+          "max_error": null
+        },
+        {
+          "side": "high",
+          "seed": 31244.25,
+          "values": 0,
+          "max_error": null
+        }
+      ],
+      "best_seed": null,
+      "seed_side_predictions": {
+        "END_body": "high",
+        "range_net_close": "high",
+        "first_breakout": "high"
+      },
+      "first_breakout_direction": "bear",
+      "causal_reconstruction": {
+        "values": 0,
+        "max_error": null,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bear",
+        "matches": false
+      },
+      "reconstruction_matches": false
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\character_40m.csv",
+      "start": "04:45",
+      "end": "05:25",
+      "dt": 60,
+      "C": 113,
+      "C_interval": {
+        "lower_inclusive": 112.92134831460675,
+        "upper_exclusive": 113.14606741573034
+      },
+      "OHLC_fallback": "G:\\trading\\guias\\analisis\\character_manual_15m_1m.csv",
+      "post_END_OHLC_borrowed_count": 90,
+      "checked_until_UTC_timestamp": 1791788100,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791783360,
+      "first_plots": {
+        "Layer A": null,
+        "Layer A boundary": null,
+        "Layer B": null,
+        "Layer B boundary": null,
+        "Layer C": null,
+        "Layer C boundary": null,
+        "Extra cloud 1": null,
+        "Extra cloud 1 boundary": null,
+        "Extra cloud 2": null,
+        "Extra cloud 2 boundary": null
+      },
+      "visibility_matches": false,
+      "visibility_status": "not_testable_missing_original_prefix",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 31242.0,
+          "values": 0,
+          "max_error": null
+        },
+        {
+          "side": "high",
+          "seed": 31248.75,
+          "values": 0,
+          "max_error": null
+        }
+      ],
+      "best_seed": null,
+      "seed_side_predictions": {
+        "END_body": "high",
+        "range_net_close": "high",
+        "first_breakout": "high"
+      },
+      "first_breakout_direction": "bear",
+      "causal_reconstruction": {
+        "values": 0,
+        "max_error": null,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bear",
+        "matches": false
+      },
+      "reconstruction_matches": false
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\character_recent_20m.csv",
+      "start": "19:00",
+      "end": "19:20",
+      "dt": 60,
+      "C": 77,
+      "C_interval": {
+        "lower_inclusive": 76.96629213483146,
+        "upper_exclusive": 77.08333333333333
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791835140,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833160,
+      "first_plots": {
+        "Layer A": 1791833160,
+        "Layer A boundary": 1791833160,
+        "Layer B": 1791833160,
+        "Layer B boundary": 1791833160,
+        "Layer C": 1791833160,
+        "Layer C boundary": 1791833160,
+        "Extra cloud 1": 1791833160,
+        "Extra cloud 1 boundary": 1791833160,
+        "Extra cloud 2": 1791833160,
+        "Extra cloud 2 boundary": 1791833160
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30864.5,
+          "values": 340,
+          "max_error": 1.4551915228366852e-11
+        },
+        {
+          "side": "high",
+          "seed": 30870.5,
+          "values": 340,
+          "max_error": 5.793716379153921
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30864.5,
+        "values": 340,
+        "max_error": 1.4551915228366852e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 340,
+        "max_error": 1.4551915228366852e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\character_recent_30m.csv",
+      "start": "18:50",
+      "end": "19:20",
+      "dt": 60,
+      "C": 118,
+      "C_interval": {
+        "lower_inclusive": 117.91666666666667,
+        "upper_exclusive": 118.08988764044943
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791835380,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833160,
+      "first_plots": {
+        "Layer A": 1791833160,
+        "Layer A boundary": 1791833160,
+        "Layer B": 1791833160,
+        "Layer B boundary": 1791833160,
+        "Layer C": 1791833160,
+        "Layer C boundary": 1791833160,
+        "Extra cloud 1": 1791833160,
+        "Extra cloud 1 boundary": 1791833160,
+        "Extra cloud 2": 1791833160,
+        "Extra cloud 2 boundary": 1791833160
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30864.5,
+          "values": 380,
+          "max_error": 1.4551915228366852e-11
+        },
+        {
+          "side": "high",
+          "seed": 30870.5,
+          "values": 380,
+          "max_error": 5.864412453927798
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30864.5,
+        "values": 380,
+        "max_error": 1.4551915228366852e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 380,
+        "max_error": 1.4551915228366852e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\character_recent_bear_end_break.csv",
+      "start": "19:11",
+      "end": "19:31",
+      "dt": 60,
+      "C": 80,
+      "C_interval": {
+        "lower_inclusive": 79.88764044943821,
+        "upper_exclusive": 80.11235955056179
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791835680,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833520,
+      "first_plots": {
+        "Layer A": 1791833520,
+        "Layer A boundary": 1791833520,
+        "Layer B": 1791833520,
+        "Layer B boundary": 1791833520,
+        "Layer C": 1791833520,
+        "Layer C boundary": 1791833520,
+        "Extra cloud 1": 1791833520,
+        "Extra cloud 1 boundary": 1791833520,
+        "Extra cloud 2": 1791833520,
+        "Extra cloud 2 boundary": 1791833520
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30872.25,
+          "values": 370,
+          "max_error": 1.4551915228366852e-11
+        },
+        {
+          "side": "high",
+          "seed": 30878.5,
+          "values": 370,
+          "max_error": 6.214985994400195
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30872.25,
+        "values": 370,
+        "max_error": 1.4551915228366852e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "high",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 370,
+        "max_error": 1.4551915228366852e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\character_recent_15s.csv",
+      "start": "19:11",
+      "end": "19:31",
+      "dt": 15,
+      "C": 66,
+      "C_interval": {
+        "lower_inclusive": 65.98314606741573,
+        "upper_exclusive": 66.00694444444444
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791835920,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833550,
+      "first_plots": {
+        "Layer A": 1791833550,
+        "Layer A boundary": 1791833550,
+        "Layer B": 1791833550,
+        "Layer B boundary": 1791833550,
+        "Layer C": 1791833550,
+        "Layer C boundary": 1791833550,
+        "Extra cloud 1": 1791833550,
+        "Extra cloud 1 boundary": 1791833550,
+        "Extra cloud 2": 1791833550,
+        "Extra cloud 2 boundary": 1791833550
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30875.0,
+          "values": 1590,
+          "max_error": 2.9103830456733704e-11
+        },
+        {
+          "side": "high",
+          "seed": 30878.5,
+          "values": 1590,
+          "max_error": 3.4644372168513655
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30875.0,
+        "values": 1590,
+        "max_error": 2.9103830456733704e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 1590,
+        "max_error": 2.9103830456733704e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185400.csv",
+      "start": "18:54:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 123,
+      "C_interval": {
+        "lower_inclusive": 122.95138888888889,
+        "upper_exclusive": 123.00561797752809
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 9.094947017729282e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2465784690539294
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 9.094947017729282e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 9.094947017729282e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185415.csv",
+      "start": "18:54:15",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 118,
+      "C_interval": {
+        "lower_inclusive": 117.95138888888889,
+        "upper_exclusive": 118.00561797752809
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 7.275957614183426e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2464336683478905
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 7.275957614183426e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 7.275957614183426e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185430.csv",
+      "start": "18:54:30",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 67,
+      "C_interval": {
+        "lower_inclusive": 66.99438202247191,
+        "upper_exclusive": 67.04861111111111
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 9.458744898438454e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2437291087117046
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 9.458744898438454e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 9.458744898438454e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185445.csv",
+      "start": "18:54:45",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 67,
+      "C_interval": {
+        "lower_inclusive": 66.99438202247191,
+        "upper_exclusive": 67.04861111111111
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 9.458744898438454e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2437291087117046
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 9.458744898438454e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 9.458744898438454e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185500.csv",
+      "start": "18:55:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 106,
+      "C_interval": {
+        "lower_inclusive": 105.98314606741573,
+        "upper_exclusive": 106.00694444444444
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 8.731149137020111e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2460317490040325
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 8.731149137020111e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 8.731149137020111e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185515.csv",
+      "start": "18:55:15",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 66,
+      "C_interval": {
+        "lower_inclusive": 65.98314606741573,
+        "upper_exclusive": 66.00694444444444
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 4.3655745685100555e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2436332890065387
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 4.3655745685100555e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 4.3655745685100555e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185530.csv",
+      "start": "18:55:30",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 88,
+      "C_interval": {
+        "lower_inclusive": 87.95138888888889,
+        "upper_exclusive": 88.00561797752809
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 8.003553375601768e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2452198904647958
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 8.003553375601768e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 8.003553375601768e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185545.csv",
+      "start": "18:55:45",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 88,
+      "C_interval": {
+        "lower_inclusive": 87.95138888888889,
+        "upper_exclusive": 88.00561797752809
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 8.003553375601768e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2452198904647958
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 8.003553375601768e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 8.003553375601768e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185600.csv",
+      "start": "18:56:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 106,
+      "C_interval": {
+        "lower_inclusive": 105.98314606741573,
+        "upper_exclusive": 106.00694444444444
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 8.731149137020111e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2460317490040325
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 8.731149137020111e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 8.731149137020111e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185615.csv",
+      "start": "18:56:15",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 67,
+      "C_interval": {
+        "lower_inclusive": 66.99438202247191,
+        "upper_exclusive": 67.04861111111111
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 9.458744898438454e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2437291087117046
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 9.458744898438454e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 9.458744898438454e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185630.csv",
+      "start": "18:56:30",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 67,
+      "C_interval": {
+        "lower_inclusive": 66.99438202247191,
+        "upper_exclusive": 67.04861111111111
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 9.458744898438454e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2437291087117046
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 9.458744898438454e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 9.458744898438454e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185645.csv",
+      "start": "18:56:45",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 79,
+      "C_interval": {
+        "lower_inclusive": 78.99305555555556,
+        "upper_exclusive": 79.01685393258427
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 5.4569682106375694e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2446770831011236
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 5.4569682106375694e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 5.4569682106375694e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185700.csv",
+      "start": "18:57:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 67,
+      "C_interval": {
+        "lower_inclusive": 66.99438202247191,
+        "upper_exclusive": 67.04861111111111
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 9.458744898438454e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2437291087117046
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 9.458744898438454e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 9.458744898438454e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185500_end191800.csv",
+      "start": "18:55:00",
+      "end": "19:18:00",
+      "dt": 15,
+      "C": 88,
+      "C_interval": {
+        "lower_inclusive": 87.95138888888889,
+        "upper_exclusive": 88.00561797752809
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838080,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832770,
+      "first_plots": {
+        "Layer A": 1791832770,
+        "Layer A boundary": 1791832770,
+        "Layer B": 1791832770,
+        "Layer B boundary": 1791832770,
+        "Layer C": 1791832770,
+        "Layer C boundary": 1791832770,
+        "Extra cloud 1": 1791832770,
+        "Extra cloud 1 boundary": 1791832770,
+        "Extra cloud 2": 1791832770,
+        "Extra cloud 2 boundary": 1791832770
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30853.5,
+          "values": 3550,
+          "max_error": 9.458744898438454e-11
+        },
+        {
+          "side": "high",
+          "seed": 30856.0,
+          "values": 3550,
+          "max_error": 2.4809161209777812
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30853.5,
+        "values": 3550,
+        "max_error": 9.458744898438454e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "high",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3550,
+        "max_error": 9.458744898438454e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185500_end191900.csv",
+      "start": "18:55:00",
+      "end": "19:19:00",
+      "dt": 15,
+      "C": 115,
+      "C_interval": {
+        "lower_inclusive": 114.97191011235955,
+        "upper_exclusive": 115.02808988764045
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838140,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832770,
+      "first_plots": {
+        "Layer A": 1791832770,
+        "Layer A boundary": 1791832770,
+        "Layer B": 1791832770,
+        "Layer B boundary": 1791832770,
+        "Layer C": 1791832770,
+        "Layer C boundary": 1791832770,
+        "Extra cloud 1": 1791832770,
+        "Extra cloud 1 boundary": 1791832770,
+        "Extra cloud 2": 1791832770,
+        "Extra cloud 2 boundary": 1791832770
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30862.5,
+          "values": 3590,
+          "max_error": 6.912159733474255e-11
+        },
+        {
+          "side": "high",
+          "seed": 30864.75,
+          "values": 3590,
+          "max_error": 2.245607614517212
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30862.5,
+        "values": 3590,
+        "max_error": 6.912159733474255e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3590,
+        "max_error": 6.912159733474255e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185500_end192100.csv",
+      "start": "18:55:00",
+      "end": "19:21:00",
+      "dt": 15,
+      "C": 115,
+      "C_interval": {
+        "lower_inclusive": 114.97191011235955,
+        "upper_exclusive": 115.02808988764045
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838260,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833205,
+      "first_plots": {
+        "Layer A": 1791833205,
+        "Layer A boundary": 1791833205,
+        "Layer B": 1791833205,
+        "Layer B boundary": 1791833205,
+        "Layer C": 1791833205,
+        "Layer C boundary": 1791833205,
+        "Extra cloud 1": 1791833205,
+        "Extra cloud 1 boundary": 1791833205,
+        "Extra cloud 2": 1791833205,
+        "Extra cloud 2 boundary": 1791833205
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30868.75,
+          "values": 3380,
+          "max_error": 6.912159733474255e-11
+        },
+        {
+          "side": "high",
+          "seed": 30870.25,
+          "values": 3380,
+          "max_error": 1.4666680511290906
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30868.75,
+        "values": 3380,
+        "max_error": 6.912159733474255e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "high",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3380,
+        "max_error": 6.912159733474255e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185500_end192200.csv",
+      "start": "18:55:00",
+      "end": "19:22:00",
+      "dt": 15,
+      "C": 106,
+      "C_interval": {
+        "lower_inclusive": 105.98314606741573,
+        "upper_exclusive": 106.00694444444444
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838320,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833205,
+      "first_plots": {
+        "Layer A": 1791833205,
+        "Layer A boundary": 1791833205,
+        "Layer B": 1791833205,
+        "Layer B boundary": 1791833205,
+        "Layer C": 1791833205,
+        "Layer C boundary": 1791833205,
+        "Extra cloud 1": 1791833205,
+        "Extra cloud 1 boundary": 1791833205,
+        "Extra cloud 2": 1791833205,
+        "Extra cloud 2 boundary": 1791833205
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.75,
+          "values": 3420,
+          "max_error": 9.822542779147625e-11
+        },
+        {
+          "side": "high",
+          "seed": 30870.0,
+          "values": 3420,
+          "max_error": 3.1852067787876877
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.75,
+        "values": 3420,
+        "max_error": 9.822542779147625e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "high",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3420,
+        "max_error": 9.822542779147625e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_15s_start185500_end192045.csv",
+      "start": "18:55:00",
+      "end": "19:20:45",
+      "dt": 15,
+      "C": 66,
+      "C_interval": {
+        "lower_inclusive": 65.98314606741573,
+        "upper_exclusive": 66.00694444444444
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838245,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833205,
+      "first_plots": {
+        "Layer A": 1791833205,
+        "Layer A boundary": 1791833205,
+        "Layer B": 1791833205,
+        "Layer B boundary": 1791833205,
+        "Layer C": 1791833205,
+        "Layer C boundary": 1791833205,
+        "Extra cloud 1": 1791833205,
+        "Extra cloud 1 boundary": 1791833205,
+        "Extra cloud 2": 1791833205,
+        "Extra cloud 2 boundary": 1791833205
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30868.0,
+          "values": 3370,
+          "max_error": 3.2741809263825417e-11
+        },
+        {
+          "side": "high",
+          "seed": 30870.5,
+          "values": 3370,
+          "max_error": 2.3999302110132703
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30868.0,
+        "values": 3370,
+        "max_error": 3.2741809263825417e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3370,
+        "max_error": 3.2741809263825417e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\character_manual_15m_1m.csv",
+      "start": "04:45",
+      "end": "05:00",
+      "dt": 60,
+      "C": 60,
+      "C_interval": {
+        "lower_inclusive": 59.8876404494382,
+        "upper_exclusive": 60.1123595505618
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791786600,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791781260,
+      "first_plots": {
+        "Layer A": 1791781260,
+        "Layer A boundary": 1791781260,
+        "Layer B": 1791781260,
+        "Layer B boundary": 1791781260,
+        "Layer C": 1791781260,
+        "Layer C boundary": 1791781260,
+        "Extra cloud 1": 1791781260,
+        "Extra cloud 1 boundary": 1791781260,
+        "Extra cloud 2": 1791781260,
+        "Extra cloud 2 boundary": 1791781260
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 31244.75,
+          "values": 900,
+          "max_error": 9.429104477610963
+        },
+        {
+          "side": "high",
+          "seed": 31254.25,
+          "values": 900,
+          "max_error": 2.546585164964199e-11
+        }
+      ],
+      "best_seed": {
+        "side": "high",
+        "seed": 31254.25,
+        "values": 900,
+        "max_error": 2.546585164964199e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "high",
+        "range_net_close": "high",
+        "first_breakout": "high"
+      },
+      "first_breakout_direction": "bear",
+      "causal_reconstruction": {
+        "values": 900,
+        "max_error": 2.546585164964199e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bear",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\character_5m.csv",
+      "start": "04:45",
+      "end": "04:50",
+      "dt": 60,
+      "C": 60,
+      "C_interval": {
+        "lower_inclusive": 59.8876404494382,
+        "upper_exclusive": 60.1123595505618
+      },
+      "OHLC_fallback": "G:\\trading\\guias\\analisis\\character_manual_15m_1m.csv",
+      "post_END_OHLC_borrowed_count": 90,
+      "checked_until_UTC_timestamp": 1791786000,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791781020,
+      "first_plots": {
+        "Layer A": null,
+        "Layer A boundary": null,
+        "Layer B": null,
+        "Layer B boundary": null,
+        "Layer C": null,
+        "Layer C boundary": null,
+        "Extra cloud 1": null,
+        "Extra cloud 1 boundary": null,
+        "Extra cloud 2": null,
+        "Extra cloud 2 boundary": null
+      },
+      "visibility_matches": false,
+      "visibility_status": "not_testable_missing_original_prefix",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 31244.0,
+          "values": 0,
+          "max_error": null
+        },
+        {
+          "side": "high",
+          "seed": 31247.0,
+          "values": 0,
+          "max_error": null
+        }
+      ],
+      "best_seed": null,
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "high",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 0,
+        "max_error": null,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": false
+      },
+      "reconstruction_matches": false
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\character_short_15s.csv",
+      "start": "19:18",
+      "end": "19:20",
+      "dt": 15,
+      "C": 15,
+      "C_interval": {
+        "lower_inclusive": 14.97191011235955,
+        "upper_exclusive": 15.02808988764045
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791836160,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 2220,
+          "max_error": 3.2741809263825417e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 2220,
+          "max_error": 1.222223249700619
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 2220,
+        "max_error": 3.2741809263825417e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 2220,
+        "max_error": 3.2741809263825417e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_agregacion_1854_192130_30s.csv",
+      "start": "18:54:00",
+      "end": "19:21:30",
+      "dt": 30,
+      "C": 136,
+      "C_interval": {
+        "lower_inclusive": 135.90277777777777,
+        "upper_exclusive": 136.01123595505618
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838290,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833190,
+      "first_plots": {
+        "Layer A": 1791833190,
+        "Layer A boundary": 1791833190,
+        "Layer B": 1791833190,
+        "Layer B boundary": 1791833190,
+        "Layer C": 1791833190,
+        "Layer C boundary": 1791833190,
+        "Extra cloud 1": 1791833190,
+        "Extra cloud 1 boundary": 1791833190,
+        "Extra cloud 2": 1791833190,
+        "Extra cloud 2 boundary": 1791833190
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.5,
+          "values": 1710,
+          "max_error": 4.3655745685100555e-11
+        },
+        {
+          "side": "high",
+          "seed": 30869.25,
+          "values": 1710,
+          "max_error": 2.7049190405632544
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.5,
+        "values": 1710,
+        "max_error": 4.3655745685100555e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "high",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 1710,
+        "max_error": 4.3655745685100555e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_agregacion_1854_192130_1m.csv",
+      "start": "18:54:00",
+      "end": "19:21:00",
+      "dt": 60,
+      "C": 109,
+      "C_interval": {
+        "lower_inclusive": 108.87640449438203,
+        "upper_exclusive": 109.02777777777777
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838260,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833160,
+      "first_plots": {
+        "Layer A": 1791833160,
+        "Layer A boundary": 1791833160,
+        "Layer B": 1791833160,
+        "Layer B boundary": 1791833160,
+        "Layer C": 1791833160,
+        "Layer C boundary": 1791833160,
+        "Extra cloud 1": 1791833160,
+        "Extra cloud 1 boundary": 1791833160,
+        "Extra cloud 2": 1791833160,
+        "Extra cloud 2 boundary": 1791833160
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.5,
+          "values": 860,
+          "max_error": 3.2741809263825417e-11
+        },
+        {
+          "side": "high",
+          "seed": 30870.5,
+          "values": 860,
+          "max_error": 3.918370094823331
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.5,
+        "values": 860,
+        "max_error": 3.2741809263825417e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "high",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 860,
+        "max_error": 3.2741809263825417e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_agregacion_1854_192130_2m.csv",
+      "start": "18:54:00",
+      "end": "19:20:00",
+      "dt": 120,
+      "C": 120,
+      "C_interval": {
+        "lower_inclusive": 119.7752808988764,
+        "upper_exclusive": 120.2247191011236
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833160,
+      "first_plots": {
+        "Layer A": 1791833160,
+        "Layer A boundary": 1791833160,
+        "Layer B": 1791833160,
+        "Layer B boundary": 1791833160,
+        "Layer C": 1791833160,
+        "Layer C boundary": 1791833160,
+        "Extra cloud 1": 1791833160,
+        "Extra cloud 1 boundary": 1791833160,
+        "Extra cloud 2": 1791833160,
+        "Extra cloud 2 boundary": 1791833160
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30864.5,
+          "values": 430,
+          "max_error": 1.0913936421275139e-11
+        },
+        {
+          "side": "high",
+          "seed": 30870.5,
+          "values": 430,
+          "max_error": 5.866671598563698
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30864.5,
+        "values": 430,
+        "max_error": 1.0913936421275139e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 430,
+        "max_error": 1.0913936421275139e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_agregacion_1800_192130_30s.csv",
+      "start": "18:00:00",
+      "end": "19:21:30",
+      "dt": 30,
+      "C": 196,
+      "C_interval": {
+        "lower_inclusive": 195.90277777777777,
+        "upper_exclusive": 196.01123595505618
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838290,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833670,
+      "first_plots": {
+        "Layer A": 1791833670,
+        "Layer A boundary": 1791833670,
+        "Layer B": 1791833670,
+        "Layer B boundary": 1791833670,
+        "Layer C": 1791833670,
+        "Layer C boundary": 1791833670,
+        "Extra cloud 1": 1791833670,
+        "Extra cloud 1 boundary": 1791833670,
+        "Extra cloud 2": 1791833670,
+        "Extra cloud 2 boundary": 1791833670
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.5,
+          "values": 1550,
+          "max_error": 4.3655745685100555e-11
+        },
+        {
+          "side": "high",
+          "seed": 30869.25,
+          "values": 1550,
+          "max_error": 2.669214927816938
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.5,
+        "values": 1550,
+        "max_error": 4.3655745685100555e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "high",
+        "range_net_close": "high",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 1550,
+        "max_error": 4.3655745685100555e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_agregacion_1800_192130_1m.csv",
+      "start": "18:00:00",
+      "end": "19:21:00",
+      "dt": 60,
+      "C": 196,
+      "C_interval": {
+        "lower_inclusive": 195.97222222222223,
+        "upper_exclusive": 196.06741573033707
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838260,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833640,
+      "first_plots": {
+        "Layer A": 1791833640,
+        "Layer A boundary": 1791833640,
+        "Layer B": 1791833640,
+        "Layer B boundary": 1791833640,
+        "Layer C": 1791833640,
+        "Layer C boundary": 1791833640,
+        "Extra cloud 1": 1791833640,
+        "Extra cloud 1 boundary": 1791833640,
+        "Extra cloud 2": 1791833640,
+        "Extra cloud 2 boundary": 1791833640
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.5,
+          "values": 780,
+          "max_error": 3.2741809263825417e-11
+        },
+        {
+          "side": "high",
+          "seed": 30870.5,
+          "values": 780,
+          "max_error": 3.8824944024090655
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.5,
+        "values": 780,
+        "max_error": 3.2741809263825417e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "high",
+        "range_net_close": "high",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 780,
+        "max_error": 3.2741809263825417e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_agregacion_1800_192130_2m.csv",
+      "start": "18:00:00",
+      "end": "19:20:00",
+      "dt": 120,
+      "C": 268,
+      "C_interval": {
+        "lower_inclusive": 267.64044943820227,
+        "upper_exclusive": 268.05555555555554
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791833640,
+      "first_plots": {
+        "Layer A": 1791833640,
+        "Layer A boundary": 1791833640,
+        "Layer B": 1791833640,
+        "Layer B boundary": 1791833640,
+        "Layer C": 1791833640,
+        "Layer C boundary": 1791833640,
+        "Extra cloud 1": 1791833640,
+        "Extra cloud 1 boundary": 1791833640,
+        "Extra cloud 2": 1791833640,
+        "Extra cloud 2 boundary": 1791833640
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30864.5,
+          "values": 390,
+          "max_error": 1.8189894035458565e-11
+        },
+        {
+          "side": "high",
+          "seed": 30870.5,
+          "values": 390,
+          "max_error": 5.86070271889912
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30864.5,
+        "values": 390,
+        "max_error": 1.8189894035458565e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "high",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 390,
+        "max_error": 1.8189894035458565e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1852_verificado.csv",
+      "start": "18:52:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 67,
+      "C_interval": {
+        "lower_inclusive": 66.99438202247191,
+        "upper_exclusive": 67.04861111111111
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 9.458744898438454e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2437291087117046
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 9.458744898438454e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 9.458744898438454e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1853_verificado.csv",
+      "start": "18:53:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 118,
+      "C_interval": {
+        "lower_inclusive": 117.95138888888889,
+        "upper_exclusive": 118.00561797752809
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 7.275957614183426e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2464336683478905
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 7.275957614183426e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 7.275957614183426e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1901_verificado.csv",
+      "start": "19:01:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 47,
+      "C_interval": {
+        "lower_inclusive": 46.99438202247191,
+        "upper_exclusive": 47.048611111111114
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 3.637978807091713e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2410714624384127
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 3.637978807091713e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 3.637978807091713e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1902_verificado.csv",
+      "start": "19:02:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 47,
+      "C_interval": {
+        "lower_inclusive": 46.99438202247191,
+        "upper_exclusive": 47.048611111111114
+      },
+      "OHLC_fallback": null,
+      "post_END_OHLC_borrowed_count": 0,
+      "checked_until_UTC_timestamp": 1791838200,
+      "truncated_at_missing_timestamp": null,
+      "first_strict_close_breakout": 1791832845,
+      "first_plots": {
+        "Layer A": 1791832845,
+        "Layer A boundary": 1791832845,
+        "Layer B": 1791832845,
+        "Layer B boundary": 1791832845,
+        "Layer C": 1791832845,
+        "Layer C boundary": 1791832845,
+        "Extra cloud 1": 1791832845,
+        "Extra cloud 1 boundary": 1791832845,
+        "Extra cloud 2": 1791832845,
+        "Extra cloud 2 boundary": 1791832845
+      },
+      "visibility_matches": true,
+      "visibility_status": "tested",
+      "seed_candidates": [
+        {
+          "side": "low",
+          "seed": 30866.0,
+          "values": 3580,
+          "max_error": 3.637978807091713e-11
+        },
+        {
+          "side": "high",
+          "seed": 30867.25,
+          "values": 3580,
+          "max_error": 1.2410714624384127
+        }
+      ],
+      "best_seed": {
+        "side": "low",
+        "seed": 30866.0,
+        "values": 3580,
+        "max_error": 3.637978807091713e-11
+      },
+      "seed_side_predictions": {
+        "END_body": "low",
+        "range_net_close": "low",
+        "first_breakout": "low"
+      },
+      "first_breakout_direction": "bull",
+      "causal_reconstruction": {
+        "values": 3580,
+        "max_error": 3.637978807091713e-11,
+        "plots_before_prediction": 0,
+        "chosen_direction": "bull",
+        "matches": true
+      },
+      "reconstruction_matches": true
+    }
+  ]
+}

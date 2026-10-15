@@ -1,0 +1,76 @@
+{
+  "cases": "Eleven mastertraining cases n21; accepted CSV pairs explicitly listed.",
+  "files": {
+    "20261012_060000_062000_60s": [
+      "C_frontera_nueva_0600_21_c.csv",
+      "C_frontera_nueva_0600_21_d.csv"
+    ],
+    "20261012_060100_062100_60s": [
+      "C_frontera_shift_0601_c.csv",
+      "C_frontera_shift_0601_d.csv"
+    ],
+    "20261012_180000_184000_120s": [
+      "Lite_180000_184000_2m_a.csv",
+      "Lite_180000_184000_2m_b.csv"
+    ],
+    "20261012_185800_191800_60s": [
+      "Lite_1858_191800_1m_a.csv",
+      "Lite_1858_191800_1m_b.csv"
+    ],
+    "20261012_185900_191900_60s": [
+      "Lite_1859_191900_1m_a.csv",
+      "Lite_1859_191900_1m_b.csv"
+    ],
+    "20261012_190000_190500_15s": [
+      "Lite_190000_190500_15s_a.csv",
+      "Lite_190000_190500_15s_b.csv"
+    ],
+    "20261012_190000_192000_60s": [
+      "Lite_1900_1920_1m_a.csv",
+      "Lite_1900_1920_1m_b.csv"
+    ],
+    "20261012_190100_192100_60s": [
+      "Lite_1901_192100_1m_a.csv",
+      "Lite_1901_192100_1m_b.csv"
+    ],
+    "20261012_190200_192200_60s": [
+      "Lite_1902_192200_1m_a.csv",
+      "Lite_1902_192200_1m_b.csv"
+    ],
+    "20261012_190300_192300_60s": [
+      "Lite_1903_192300_1m_a.csv",
+      "Lite_1903_192300_1m_b.csv"
+    ],
+    "20261012_190400_192400_60s": [
+      "Lite_1904_192400_1m_a.csv",
+      "Lite_1904_192400_1m_b.csv"
+    ]
+  },
+  "event": "First close strictly outside inclusive rangeH/L afterEND; verify firstpublished sixLite curves matches event.",
+  "model": "One of sixLite EMA periods factor*C/dt fitted to a fixedtarget price at firstbreak, using close orHL2 afterEND. Bull seedENDlow, bear seedENDhigh; process all postEND bars including break.",
+  "factors": {
+    "Lane 3 A": 24.0,
+    "Lane 3 B": 29.666666666666668,
+    "Lane 2 A": 8.0,
+    "Lane 2 B": 9.88888888888889,
+    "Lane 1 A": 2.6666666666666665,
+    "Lane 1 B": 3.2962962962962963
+  },
+  "targets": [
+    "range_high",
+    "range_low",
+    "range_mid",
+    "END_close",
+    "break_open",
+    "break_high",
+    "break_low",
+    "break_close",
+    "break_hl2"
+  ],
+  "sources": [
+    "close",
+    "hl2"
+  ],
+  "gate": "Fixed configuration must give abs(EMA_at_observedC-target)<=1e-7 price for all11. Necessary exactcontact, no root optimization, ticksnap or per-case choice.",
+  "scope": "108 exactcontact configurations. Not all postEND mechanisms, optimization objectives or other period scales. Known labels, no reservedvalidation. Close also independently reconstructs firstpublished values."
+}

@@ -1,0 +1,30 @@
+{
+  "prereg_id": "C_ESCALA_50",
+  "requested_window_utc": [
+    "2026-10-12T19:02:00Z",
+    "2026-10-12T19:22:00Z"
+  ],
+  "interval_seconds": 60,
+  "base_symbol": "CME_MINI:NQ1!",
+  "identity_symbol": "CME_MINI:NQ1!+0",
+  "bars_base": 21,
+  "bars_identity": 21,
+  "timestamp_coverage_complete": true,
+  "OHLCV_base_equals_identity": true,
+  "OHLCV_base_equals_master_baseline": true,
+  "baseline_C_observed": 49.99999999999989,
+  "baseline_prediction": 50,
+  "baseline_residual_observed_minus_predicted": -1.0658141036401503e-13,
+  "identity_C_observed": null,
+  "identity_prediction": 50,
+  "identity_gate_complete": false,
+  "identity_gate_missing": "six Lite curves and C fit for the synthetic identity symbol",
+  "scale_x2_evaluated": false,
+  "scope": "Auxiliary audit of the original +0 API route only. It does not assess the later (NQ1!+NQ1!)/2 identity capture or the completed x2 test; matching OHLCV alone does not verify C.",
+  "complete_scale_audit": "resultado_C_escala_50_completa.json",
+  "sha256": {
+    "prereg": "2f931aedb28e26073cce2c97ea1ad0cd2ea63f6a91305361c492156220964b71",
+    "master": "ef9533acdce3e1c2c2db3c72caee5059a2957f7dee4c60e725f6dcf56ccc9c05",
+    "api_snapshot": "2b026090fda7a3c7bd17476010b905a4a045d708378c45d068fd0c3d69752a8d"
+  }
+}

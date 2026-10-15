@@ -1,0 +1,6 @@
+{
+ "date":"2026-10-14",
+ "case":"A_first_start_plus","START_UTC":"2026-10-12T18:53:00Z","END_UTC":"2026-10-12T19:10:45Z",
+ "reason":"Original a/b fail repeat: a recovers C53, b C68. A likely stale recalc is an inference, not a confirmed cause. Preserve both original files and repeat from restored1m reference.",
+ "new_exports":["c","d"],"acceptance":"Same preregistered complete native/aggregate/recurrence/six-C checks; c/d must agree and compare latest original b separately. If it still differs report inconclusive, not averaged C."
+}

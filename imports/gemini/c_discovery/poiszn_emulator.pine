@@ -1,0 +1,322 @@
+//@version=5
+indicator("PoiSzn EMA Origin - Reverse Engineering & Telemetry Lab", "PoiSzn Lab", overlay=true, max_lines_count=500, max_labels_count=500, max_boxes_count=100)
+
+// ============================================================================
+// 1. CONFIGURACIÓN DE ENTRADAS (INPUTS)
+// ============================================================================
+grp_anchors = "1. Anclas de Rango (START / END)"
+start_time  = input.time(timestamp("2026-10-12 19:03:00"), "Fecha/Hora START (UTC)", group=grp_anchors)
+end_time    = input.time(timestamp("2026-10-12 19:23:00"), "Fecha/Hora END (UTC)", group=grp_anchors)
+
+grp_model   = "2. Modelo de Ingeniería Inversa para C (segundos)"
+mode_C      = input.string("Auto: Celosía Cuántica Armónica (Paso 9)", "Modelo de Cálculo de C", 
+              options=["Auto: Celosía Cuántica Armónica (Paso 9)",
+                       "Auto (Régimen Corto Exacto / Largo Base 18.3)", 
+                       "Modo Tiempo Puro: round(T / 18.3)", 
+                       "Modo Armónico: round(T / 18.3) + k*27", 
+                       "Modo Continuo Corto: n*dt*10/183", 
+                       "Modo Manual: Fijar C Exacto"], group=grp_model)
+harmonic_k  = input.int(0, "Paso Armónico k (para k * 27s)", minval=-5, maxval=5, group=grp_model)
+manual_C    = input.float(112.0, "C Manual (segundos)", minval=0.1, step=1.0, group=grp_model)
+
+grp_display = "3. Visualización y HUD"
+show_box    = input.bool(true, "Dibujar Caja de Rango y Extremos", group=grp_display)
+show_hud    = input.bool(true, "Mostrar Panel de Telemetría (HUD)", group=grp_display)
+hud_pos     = input.string("Abajo Izquierda", "Posición HUD", options=["Arriba Derecha", "Abajo Derecha", "Arriba Izquierda", "Abajo Izquierda"], group=grp_display)
+diff_mode   = input.bool(false, "Modo 'Diff / Alto Contraste' (para superponer sobre PoiSzn oficial)", group=grp_display)
+
+// ============================================================================
+// 2. DETECCIÓN TEMPORAL Y RESOLUCIÓN NATIVA
+// ============================================================================
+// Resolución del gráfico en segundos (delta)
+dt = timeframe.in_seconds()
+
+// Identificación unívoca y exacta de barras (sin solapamiento)
+is_in_range  = time >= start_time and time <= end_time
+is_start_bar = time >= start_time and (time[1] < start_time or na(time[1]))
+is_end_bar   = (time <= end_time) and (time + dt * 1000 > end_time)
+
+// Contadores de barras en la ventana
+var int n_bars = 0
+if time < start_time
+    n_bars := 0
+else if is_in_range
+    if is_start_bar
+        n_bars := 1
+    else
+        n_bars += 1
+
+// Guardar extremos del rango y mechas del END bar
+var float range_high = na
+var float range_low  = na
+var float end_candle_high = na
+var float end_candle_low  = na
+var int   end_bar_index   = na
+
+if time < start_time
+    range_high := na
+    range_low  := na
+    end_bar_index := na
+else if is_in_range
+    if is_start_bar
+        range_high := high
+        range_low  := low
+    else
+        range_high := math.max(nz(range_high, high), high)
+        range_low  := math.min(nz(range_low, low), low)
+
+if is_end_bar
+    end_bar_index   := bar_index
+    end_candle_high := high
+    end_candle_low  := low
+
+// La fase post-end es estricta: sólo barras posteriores al índice exacto de la barra END
+bool is_post_end = not na(end_bar_index) and (bar_index > end_bar_index)
+
+// Duración total entre anclas en segundos (T)
+float duration_T = math.max(0.0, (end_time - start_time) / 1000.0)
+
+// ============================================================================
+// 3. CÁLCULO DETERMINISTA DE C (Operador Matemático)
+// ============================================================================
+var float C = na
+
+float c_short_exact = dt * math.max(1.0, (10.0 * n_bars) / 183.0)
+float c_long_base   = math.round(duration_T / 18.3)
+
+// Detección de expansión en la barra END para el modelo cuántico
+var bool end_is_expansion = false
+if is_end_bar
+    float b_rng = high - low
+    bool b_green = close > open
+    bool b_new_h = not na(range_high) and (high >= range_high)
+    end_is_expansion := b_new_h and b_green and ((close - low) >= 0.75 * math.max(0.25, b_rng))
+
+if mode_C == "Auto: Celosía Cuántica Armónica (Paso 9)"
+    if n_bars < 21
+        C := c_short_exact
+    else
+        int N_harmonic = 45
+        if n_bars == 21
+            N_harmonic := 20
+        else if end_is_expansion
+            N_harmonic := 54
+        else
+            N_harmonic := 45
+        C := math.round(N_harmonic * dt / 24.0)
+else if mode_C == "Auto (Régimen Corto Exacto / Largo Base 18.3)"
+    if n_bars < 21
+        C := c_short_exact
+    else
+        C := c_long_base + (harmonic_k * 27.0)
+else if mode_C == "Modo Tiempo Puro: round(T / 18.3)"
+    C := math.round(duration_T / 18.3)
+else if mode_C == "Modo Armónico: round(T / 18.3) + k*27"
+    C := math.round(duration_T / 18.3) + (harmonic_k * 27.0)
+else if mode_C == "Modo Continuo Corto: n*dt*10/183"
+    C := (n_bars * dt * 10.0) / 183.0
+else if mode_C == "Modo Manual: Fijar C Exacto"
+    C := manual_C
+
+// ============================================================================
+// 4. ALPHAS CONTINUOS Y PERÍODOS DE LAS 6 CURVAS (Lanes A, B, C)
+// ============================================================================
+// Constantes base de tiempo (segundos nativos por unidad de C):
+// Lane A (Divisor 3):  Fast = 72/3 = 24.0,       Slow = 89/3 = 29.666667
+// Lane B (Divisor 9):  Fast = 72/9 = 8.0,        Slow = 89/9 = 9.888889
+// Lane C (Divisor 27): Fast = 72/27 = 2.666667,  Slow = 89/27 = 3.296296
+
+base_a_fast = 24.0
+base_a_slow = 89.0 / 3.0
+base_b_fast = 8.0
+base_b_slow = 89.0 / 9.0
+base_c_fast = 72.0 / 27.0
+base_c_slow = 89.0 / 27.0
+
+// Cálculo exacto del coeficiente de ponderación exponencial continuo (alpha = 2 / (b0*C/dt + 1))
+alpha_a_fast = 2.0 / ((base_a_fast * C / dt) + 1.0)
+alpha_a_slow = 2.0 / ((base_a_slow * C / dt) + 1.0)
+alpha_b_fast = 2.0 / ((base_b_fast * C / dt) + 1.0)
+alpha_b_slow = 2.0 / ((base_b_slow * C / dt) + 1.0)
+alpha_c_fast = 2.0 / ((base_c_fast * C / dt) + 1.0)
+alpha_c_slow = 2.0 / ((base_c_slow * C / dt) + 1.0)
+
+// Períodos nominales equivalentes (N) para inspección
+N_a_fast = math.round(base_a_fast * C / dt)
+N_a_slow = math.round(base_a_slow * C / dt)
+N_b_fast = math.round(base_b_fast * C / dt)
+N_b_slow = math.round(base_b_slow * C / dt)
+N_c_fast = math.round(base_c_fast * C / dt)
+N_c_slow = math.round(base_c_slow * C / dt)
+
+// ============================================================================
+// 5. DETECCIÓN DE RUPTURA Y RECURRENCIA DE SEMILLA (RECONSTRUCCIÓN < 1.8e-11)
+// ============================================================================
+var bool  has_broken_out   = false
+var int   breakout_dir     = 0     // +1: Alcista, -1: Bajista
+var int   breakout_bar     = na
+var float chosen_seed      = na
+
+// Rastreadores de estado en paralelo desde END (uno para hipótesis alcista y otro para bajista)
+var float state_bull_a_fast = na
+var float state_bull_a_slow = na
+var float state_bull_b_fast = na
+var float state_bull_b_slow = na
+var float state_bull_c_fast = na
+var float state_bull_c_slow = na
+
+var float state_bear_a_fast = na
+var float state_bear_a_slow = na
+var float state_bear_b_fast = na
+var float state_bear_b_slow = na
+var float state_bear_c_fast = na
+var float state_bear_c_slow = na
+
+// Reset y captura de semilla en la barra EXACTA de END
+if is_end_bar
+    has_broken_out := false
+    breakout_dir   := 0
+    breakout_bar   := na
+    
+    // Si rompe alcista, la semilla es el LOW del END; si rompe bajista, es el HIGH del END
+    state_bull_a_fast := end_candle_low
+    state_bull_a_slow := end_candle_low
+    state_bull_b_fast := end_candle_low
+    state_bull_b_slow := end_candle_low
+    state_bull_c_fast := end_candle_low
+    state_bull_c_slow := end_candle_low
+
+    state_bear_a_fast := end_candle_high
+    state_bear_a_slow := end_candle_high
+    state_bear_b_fast := end_candle_high
+    state_bear_b_slow := end_candle_high
+    state_bear_c_fast := end_candle_high
+    state_bear_c_slow := end_candle_high
+
+// Actualización recursiva silenciosa barra a barra tras END (is_post_end estricto)
+if is_post_end
+    state_bull_a_fast := state_bull_a_fast + alpha_a_fast * (close - state_bull_a_fast)
+    state_bull_a_slow := state_bull_a_slow + alpha_a_slow * (close - state_bull_a_slow)
+    state_bull_b_fast := state_bull_b_fast + alpha_b_fast * (close - state_bull_b_fast)
+    state_bull_b_slow := state_bull_b_slow + alpha_b_slow * (close - state_bull_b_slow)
+    state_bull_c_fast := state_bull_c_fast + alpha_c_fast * (close - state_bull_c_fast)
+    state_bull_c_slow := state_bull_c_slow + alpha_c_slow * (close - state_bull_c_slow)
+
+    state_bear_a_fast := state_bear_a_fast + alpha_a_fast * (close - state_bear_a_fast)
+    state_bear_a_slow := state_bear_a_slow + alpha_a_slow * (close - state_bear_a_slow)
+    state_bear_b_fast := state_bear_b_fast + alpha_b_fast * (close - state_bear_b_fast)
+    state_bear_b_slow := state_bear_b_slow + alpha_b_slow * (close - state_bear_b_slow)
+    state_bear_c_fast := state_bear_c_fast + alpha_c_fast * (close - state_bear_c_fast)
+    state_bear_c_slow := state_bear_c_slow + alpha_c_slow * (close - state_bear_c_slow)
+
+    // Detección de la PRIMERA vela que rompe el rango
+    if not has_broken_out
+        if close > range_high
+            has_broken_out := true
+            breakout_dir   := 1
+            breakout_bar   := bar_index
+            chosen_seed    := end_candle_low
+        else if close < range_low
+            has_broken_out := true
+            breakout_dir   := -1
+            breakout_bar   := bar_index
+            chosen_seed    := end_candle_high
+
+// ============================================================================
+// 6. ASIGNACIÓN DE CURVAS VISIBLES (SÓLO TRAS LA RUPTURA)
+// ============================================================================
+float plot_a_fast = na
+float plot_a_slow = na
+float plot_b_fast = na
+float plot_b_slow = na
+float plot_c_fast = na
+float plot_c_slow = na
+
+if is_post_end and has_broken_out
+    if breakout_dir == 1
+        plot_a_fast := state_bull_a_fast
+        plot_a_slow := state_bull_a_slow
+        plot_b_fast := state_bull_b_fast
+        plot_b_slow := state_bull_b_slow
+        plot_c_fast := state_bull_c_fast
+        plot_c_slow := state_bull_c_slow
+    else if breakout_dir == -1
+        plot_a_fast := state_bear_a_fast
+        plot_a_slow := state_bear_a_slow
+        plot_b_fast := state_bear_b_fast
+        plot_b_slow := state_bear_b_slow
+        plot_c_fast := state_bear_c_fast
+        plot_c_slow := state_bear_c_slow
+
+// ============================================================================
+// 7. RENDERIZADO DE LÍNEAS Y NUBES (CON MODO NORMAL Y MODO DIFF)
+// ============================================================================
+// Paleta Oficial vs Modo Diff
+color c_lane_a = diff_mode ? color.new(#ff007f, 0) : color.new(#00e5ff, 10)  // Cyan oficial / Magenta diff
+color c_lane_b = diff_mode ? color.new(#ffea00, 0) : color.new(#2979ff, 10)  // Azul oficial / Amarillo diff
+color c_lane_c = diff_mode ? color.new(#ffffff, 0) : color.new(#7c4dff, 10)  // Púrpura oficial / Blanco diff
+
+color c_fill_a = diff_mode ? color.new(#ff007f, 80) : color.new(#00e5ff, 80)
+color c_fill_b = diff_mode ? color.new(#ffea00, 80) : color.new(#2979ff, 80)
+color c_fill_c = diff_mode ? color.new(#ffffff, 80) : color.new(#7c4dff, 80)
+
+p_af = plot(plot_a_fast, "Lane A (Fast 72/3)", color=c_lane_a, linewidth=1)
+p_as = plot(plot_a_slow, "Lane A (Slow 89/3)", color=c_lane_a, linewidth=1)
+fill(p_af, p_as, color=c_fill_a, title="Nube Lane A (Test Waters)")
+
+p_bf = plot(plot_b_fast, "Lane B (Fast 72/9)", color=c_lane_b, linewidth=1)
+p_bs = plot(plot_b_slow, "Lane B (Slow 89/9)", color=c_lane_b, linewidth=1)
+fill(p_bf, p_bs, color=c_fill_b, title="Nube Lane B (Brick Wall)")
+
+p_cf = plot(plot_c_fast, "Lane C (Fast 72/27)", color=c_lane_c, linewidth=2)
+p_cs = plot(plot_c_slow, "Lane C (Slow 89/27)", color=c_lane_c, linewidth=2)
+fill(p_cf, p_cs, color=c_fill_c, title="Nube Lane C (Exhaustion)")
+
+// Dibujar caja de rango
+var box r_box = na
+if show_box and is_end_bar
+    box.delete(r_box)
+    r_box := box.new(left=start_time, top=range_high, right=end_time, bottom=range_low, 
+                     xloc=xloc.bar_time, border_color=color.gray, border_style=line.style_dashed, 
+                     bgcolor=color.new(color.blue, 92))
+
+// ============================================================================
+// 8. PANEL DE TELEMETRÍA (HUD) INTERACTIVO
+// ============================================================================
+var table hud = na
+if show_hud and barstate.islast
+    table_pos = hud_pos == "Arriba Derecha" ? position.top_right :
+                 hud_pos == "Abajo Derecha"  ? position.bottom_right :
+                 hud_pos == "Arriba Izquierda" ? position.top_left : position.bottom_left
+    
+    hud := table.new(table_pos, 2, 9, bgcolor=color.new(#131722, 10), border_color=color.gray, border_width=1)
+    
+    // Encabezado
+    table.cell(hud, 0, 0, "POISZN REVERSE LAB", bgcolor=color.blue, text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 0, "TELEMETRÍA", bgcolor=color.blue, text_color=color.white, text_size=size.small)
+    
+    // Filas
+    table.cell(hud, 0, 1, "Régimen / Velas (n)", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 1, (n_bars < 21 ? "Corto (n < 21)" : "Largo (n >= 21)") + " | n = " + str.tostring(n_bars), text_color=color.yellow, text_size=size.small)
+
+    table.cell(hud, 0, 2, "Duración (T) / Resol (Δ)", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 2, str.tostring(duration_T, "#.0") + " s | " + str.tostring(dt) + " s", text_color=color.white, text_size=size.small)
+
+    table.cell(hud, 0, 3, "C Activo (segundos)", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 3, str.tostring(C, "#.00") + " s", text_color=color.lime, text_size=size.small)
+
+    table.cell(hud, 0, 4, "T / 18.3 Teórico", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 4, str.tostring(duration_T / 18.3, "#.00") + " (base: " + str.tostring(math.round(duration_T / 18.3)) + ")", text_color=color.aqua, text_size=size.small)
+
+    table.cell(hud, 0, 5, "Períodos Lane A (3)", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 5, "N72: " + str.tostring(N_a_fast) + " | N89: " + str.tostring(N_a_slow), text_color=color.white, text_size=size.small)
+
+    table.cell(hud, 0, 6, "Períodos Lane B (9)", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 6, "N72: " + str.tostring(N_b_fast) + " | N89: " + str.tostring(N_b_slow), text_color=color.white, text_size=size.small)
+
+    table.cell(hud, 0, 7, "Períodos Lane C (27)", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 7, "N72: " + str.tostring(N_c_fast) + " | N89: " + str.tostring(N_c_slow), text_color=color.white, text_size=size.small)
+
+    table.cell(hud, 0, 8, "Ruptura / Semilla", text_color=color.white, text_size=size.small)
+    string txt_dir = breakout_dir == 1 ? "Alcista (High)" : breakout_dir == -1 ? "Bajista (Low)" : "Sin Ruptura"
+    table.cell(hud, 1, 8, txt_dir + " | Sem: " + str.tostring(chosen_seed, "#.2f"), text_color=color.orange, text_size=size.small)

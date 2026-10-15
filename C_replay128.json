@@ -1,0 +1,98 @@
+{
+  "START": "2026-10-12T19:04:00Z",
+  "END": "2026-10-12T19:28:00Z",
+  "dt": 60,
+  "results": [
+    {
+      "mode": "directo",
+      "last_exported": "2026-10-12T19:31:00+00:00",
+      "last_included": "2026-10-12T19:30:00+00:00",
+      "fits_Lite": {
+        "Lane 3 A": {
+          "pairs": 1,
+          "denominator": 45.704852394980584,
+          "C": 128.00000000056883
+        },
+        "Lane 3 B": {
+          "pairs": 1,
+          "denominator": 46.31571710992707,
+          "C": 127.99999999846781
+        },
+        "Lane 2 A": {
+          "pairs": 1,
+          "denominator": 39.792353726185326,
+          "C": 128.0000000001511
+        },
+        "Lane 2 B": {
+          "pairs": 1,
+          "denominator": 41.400143583774785,
+          "C": 128.00000000006543
+        },
+        "Lane 1 A": {
+          "pairs": 1,
+          "denominator": 26.329513471128934,
+          "C": 127.99999999956135
+        },
+        "Lane 1 B": {
+          "pairs": 1,
+          "denominator": 29.634351307967716,
+          "C": 128.0000000001497
+        }
+      },
+      "historical_plot_differences": [],
+      "historical_OHLC_differences": [],
+      "nonempty_historical_plot_cells_compared": 32
+    },
+    {
+      "mode": "antes_END",
+      "last_exported": "2026-10-12T19:27:00+00:00",
+      "last_included": "2026-10-12T19:26:00+00:00",
+      "fits_Lite": {},
+      "historical_plot_differences": [],
+      "historical_OHLC_differences": [],
+      "nonempty_historical_plot_cells_compared": 0
+    },
+    {
+      "mode": "secuencial",
+      "last_exported": "2026-10-12T19:31:00+00:00",
+      "last_included": "2026-10-12T19:30:00+00:00",
+      "fits_Lite": {
+        "Lane 3 A": {
+          "pairs": 1,
+          "denominator": 45.704852394980584,
+          "C": 128.00000000056883
+        },
+        "Lane 3 B": {
+          "pairs": 1,
+          "denominator": 46.31571710992707,
+          "C": 127.99999999846781
+        },
+        "Lane 2 A": {
+          "pairs": 1,
+          "denominator": 39.792353726185326,
+          "C": 128.0000000001511
+        },
+        "Lane 2 B": {
+          "pairs": 1,
+          "denominator": 41.400143583774785,
+          "C": 128.00000000006543
+        },
+        "Lane 1 A": {
+          "pairs": 1,
+          "denominator": 26.329513471128934,
+          "C": 127.99999999956135
+        },
+        "Lane 1 B": {
+          "pairs": 1,
+          "denominator": 29.634351307967716,
+          "C": 128.0000000001497
+        }
+      },
+      "historical_plot_differences": [],
+      "historical_OHLC_differences": [],
+      "nonempty_historical_plot_cells_compared": 32
+    }
+  ],
+  "direct_vs_sequential_plot_differences": [],
+  "scope": "One case C128. Direct replay select19:32 versus select19:28 plus four forward steps. Exclude last row; one pair per Lite curve is not a residual validation. Agreement with full-history levels and repeated exports corroborates. Does not exclude END-to-breakout or internal-series effects."
+}

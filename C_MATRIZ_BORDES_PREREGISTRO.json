@@ -1,0 +1,8 @@
+{
+ "date":"2026-10-14","day_UTC":"2026-10-12",
+ "source_seconds":60,"chart_seconds":60,"indicator":"Existing Lite v1.2; Character excluded",
+ "new_cases":[{"id":"1854_1921","START":"18:54","END":"19:21","n":28},{"id":"1856_1919","START":"18:56","END":"19:19","n":24}],
+ "controls":"Native NQ1!; two CSV exports per new case, closed rows only; exact OHLCV versus baseline, complete window and one hour forward, consistent six independent EMA fits. Restore18:55–19:20 and compare native reference curves/C62.",
+ "analysis":"Complete3x3 grid START18:54–18:56 x END19:19–19:21 from seven prior cases plus two new ones. No fitted model predictions for missing cells. Report arithmetic interaction and confounds; any resulting formula is exploratory.",
+ "limits":"Not independent out-of-sample validation of a learned model. Times,count and geometry vary jointly; no hidden anchor or harmonic generator established."
+}

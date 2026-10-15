@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-14",
+  "layout": "https://www.tradingview.com/chart/xqM5dZIf/",
+  "symbol": "CME_MINI:NQ1!",
+  "chart_seconds": 1,
+  "source_seconds": 1,
+  "version": "Existing Lite v1.2; update not applied",
+  "cases": [
+    {"id": "r1402_n20", "START_UTC": "2026-10-14T14:02:00Z", "END_UTC": "2026-10-14T14:02:19Z", "bars": 20, "prediction_C": 1.092896174863388, "hypothesis": "previous short rule"},
+    {"id": "r1402_n21", "START_UTC": "2026-10-14T14:02:00Z", "END_UTC": "2026-10-14T14:02:20Z", "bars": 21, "prediction_C": 1, "hypothesis": "local replication hypothesis, not universal long rule"},
+    {"id": "r1404_n20", "START_UTC": "2026-10-14T14:04:00Z", "END_UTC": "2026-10-14T14:04:19Z", "bars": 20, "prediction_C": 1.092896174863388, "hypothesis": "previous short rule"},
+    {"id": "r1404_n21", "START_UTC": "2026-10-14T14:04:00Z", "END_UTC": "2026-10-14T14:04:20Z", "bars": 21, "prediction_C": 1, "hypothesis": "local replication hypothesis, not universal long rule"}
+  ],
+  "selection": "Fixed two subsequent minute starts, no inspection of their C. Coverage-only eligibility: all native1s timestamps in each range and600seconds afterEND. If missing, retain failure; do not replace after readingC.",
+  "acceptance": "Exact axes anchors, repeated closed OHLCV and six Lite plots, six inferredC agree within1e-6seconds; EMA recurrence RMSE<=1e-8. Verify firstbreakout visibility and seed with suppliedC. Do not inferCfrom no plots.",
+  "scope": "Four prospective predictions for two disjoint short ranges in same session. Not independent markets or sessions. No master dataset mutation or fitting coefficients to newC. Twenty-one may coincide with a floor/quantization even when branch depends on price."
+}

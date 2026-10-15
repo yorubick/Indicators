@@ -1,0 +1,113 @@
+{
+  "A": {
+    "fit": {
+      "file": "G:\\trading\\guias\\analisis\\C_perfil_A_fuente1m.csv",
+      "source_seconds": 60,
+      "C_seconds_interval": {
+        "lower_inclusive": 61.91011235955056,
+        "upper_exclusive": 62.083333333333336
+      },
+      "compatible_integer_C_seconds": [
+        62
+      ],
+      "periods": {
+        "Layer A": 25,
+        "Layer A boundary": 31,
+        "Layer B": 8,
+        "Layer B boundary": 10,
+        "Layer C": 3,
+        "Layer C boundary": 3,
+        "Extra cloud 1": 74,
+        "Extra cloud 1 boundary": 92,
+        "Extra cloud 2": 223,
+        "Extra cloud 2 boundary": 276
+      },
+      "pairs_per_curve": 103,
+      "max_rmse_step": 1.6233027082181673e-12,
+      "scope": "Control empirico de este rango; no implica invariancia de todas las se\u00f1ales o modos."
+    },
+    "comparison": {
+      "phase_seconds": 0,
+      "reference_shift_seconds": 0,
+      "minute_samples": 94,
+      "values": 940,
+      "closed_before": 1791842400,
+      "max_error": 0.0,
+      "mean_error": 0.0
+    }
+  },
+  "C": {
+    "fit": {
+      "file": "G:\\trading\\guias\\analisis\\C_perfil_C_fuente1m.csv",
+      "source_seconds": 60,
+      "C_seconds_interval": {
+        "lower_inclusive": 61.91011235955056,
+        "upper_exclusive": 62.083333333333336
+      },
+      "compatible_integer_C_seconds": [
+        62
+      ],
+      "periods": {
+        "Layer A": 25,
+        "Layer A boundary": 31,
+        "Layer B": 8,
+        "Layer B boundary": 10,
+        "Layer C": 3,
+        "Layer C boundary": 3,
+        "Extra cloud 1": 74,
+        "Extra cloud 1 boundary": 92,
+        "Extra cloud 2": 223,
+        "Extra cloud 2 boundary": 276
+      },
+      "pairs_per_curve": 103,
+      "max_rmse_step": 1.6233027082181673e-12,
+      "scope": "Control empirico de este rango; no implica invariancia de todas las se\u00f1ales o modos."
+    },
+    "comparison": {
+      "phase_seconds": 0,
+      "reference_shift_seconds": 0,
+      "minute_samples": 94,
+      "values": 940,
+      "closed_before": 1791842400,
+      "max_error": 0.0,
+      "mean_error": 0.0
+    }
+  },
+  "D": {
+    "fit": {
+      "file": "G:\\trading\\guias\\analisis\\C_perfil_D_fuente1m.csv",
+      "source_seconds": 60,
+      "C_seconds_interval": {
+        "lower_inclusive": 61.91011235955056,
+        "upper_exclusive": 62.083333333333336
+      },
+      "compatible_integer_C_seconds": [
+        62
+      ],
+      "periods": {
+        "Layer A": 25,
+        "Layer A boundary": 31,
+        "Layer B": 8,
+        "Layer B boundary": 10,
+        "Layer C": 3,
+        "Layer C boundary": 3,
+        "Extra cloud 1": 74,
+        "Extra cloud 1 boundary": 92,
+        "Extra cloud 2": 223,
+        "Extra cloud 2 boundary": 276
+      },
+      "pairs_per_curve": 104,
+      "max_rmse_step": 1.6275308480371817e-12,
+      "scope": "Control empirico de este rango; no implica invariancia de todas las se\u00f1ales o modos."
+    },
+    "comparison": {
+      "phase_seconds": 0,
+      "reference_shift_seconds": 0,
+      "minute_samples": 94,
+      "values": 940,
+      "closed_before": 1791842400,
+      "max_error": 0.0,
+      "mean_error": 0.0
+    }
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "mode": "Auto Balanced",
+  "END_UTC": "19:20:00",
+  "wick_time_UTC": "19:30:00",
+  "setup_direction": "Bullish",
+  "chart_seconds": 5,
+  "price_control": "30871 real low; 30872/30873 synthetic input prices",
+  "comparisons": {
+    "30872": {
+      "timestamps_with_same_OHLC": 672,
+      "curves": {
+        "Layer A": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Layer A boundary": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Layer B": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Layer B boundary": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Layer C": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Layer C boundary": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Extra cloud 1": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Extra cloud 1 boundary": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Extra cloud 2": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Extra cloud 2 boundary": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        }
+      }
+    },
+    "30873": {
+      "timestamps_with_same_OHLC": 672,
+      "curves": {
+        "Layer A": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Layer A boundary": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Layer B": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Layer B boundary": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Layer C": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Layer C boundary": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Extra cloud 1": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Extra cloud 1 boundary": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Extra cloud 2": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        },
+        "Extra cloud 2 boundary": {
+          "values": 672,
+          "different_values": 0,
+          "max_absolute_difference": 0.0,
+          "rmse_difference": 0.0
+        }
+      }
+    }
+  },
+  "C_scope": "C no asignado: recurrencia de cierres del grafico no validada en Auto.",
+  "wick_time_controls": {
+    "19:31": {
+      "timestamps_with_same_OHLC": 672,
+      "curves": {
+        "Layer A": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 1.7868510067128227,
+          "rmse_difference": 0.5936211725763006
+        },
+        "Layer A boundary": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 1.7805723137862515,
+          "rmse_difference": 0.6956073070429153
+        },
+        "Layer B": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 0.6645273531612474,
+          "rmse_difference": 0.23632552552104089
+        },
+        "Layer B boundary": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 0.9963728600705508,
+          "rmse_difference": 0.2584732651001177
+        },
+        "Layer C": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 0.6080434550458449,
+          "rmse_difference": 0.194979576279549
+        },
+        "Layer C boundary": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 0.6237048995280929,
+          "rmse_difference": 0.20513728641418652
+        },
+        "Extra cloud 1": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 1.49097790261294,
+          "rmse_difference": 1.0076350004904557
+        },
+        "Extra cloud 1 boundary": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 1.4663932376024604,
+          "rmse_difference": 1.0537668553229025
+        },
+        "Extra cloud 2": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 1.2175709556504444,
+          "rmse_difference": 1.0237532220520935
+        },
+        "Extra cloud 2 boundary": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 1.1285655737628986,
+          "rmse_difference": 0.9529810248606012
+        }
+      }
+    },
+    "19:32": {
+      "timestamps_with_same_OHLC": 672,
+      "curves": {
+        "Layer A": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 1.174969768475421,
+          "rmse_difference": 0.356663870551765
+        },
+        "Layer A boundary": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 1.1883111593779176,
+          "rmse_difference": 0.4225228671281847
+        },
+        "Layer B": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 0.3977086331542523,
+          "rmse_difference": 0.1560146377979958
+        },
+        "Layer B boundary": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 0.5441844370761828,
+          "rmse_difference": 0.16410178379245755
+        },
+        "Layer C": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 0.3780806757276878,
+          "rmse_difference": 0.12062656968368538
+        },
+        "Layer C boundary": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 0.4046380128929741,
+          "rmse_difference": 0.13118851921519487
+        },
+        "Extra cloud 1": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 0.9861819107172778,
+          "rmse_difference": 0.6504054538033156
+        },
+        "Extra cloud 1 boundary": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 0.9910239616219769,
+          "rmse_difference": 0.6865546716345279
+        },
+        "Extra cloud 2": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 0.8421651398130052,
+          "rmse_difference": 0.7046122575720281
+        },
+        "Extra cloud 2 boundary": {
+          "values": 672,
+          "different_values": 672,
+          "max_absolute_difference": 0.7885625423878082,
+          "rmse_difference": 0.6645530180222283
+        }
+      }
+    }
+  },
+  "manual_control": {
+    "timestamps_with_same_OHLC": 60,
+    "curves": {
+      "Layer A": {
+        "values": 60,
+        "different_values": 0,
+        "max_absolute_difference": 0.0,
+        "rmse_difference": 0.0
+      },
+      "Layer A boundary": {
+        "values": 60,
+        "different_values": 0,
+        "max_absolute_difference": 0.0,
+        "rmse_difference": 0.0
+      },
+      "Layer B": {
+        "values": 60,
+        "different_values": 0,
+        "max_absolute_difference": 0.0,
+        "rmse_difference": 0.0
+      },
+      "Layer B boundary": {
+        "values": 60,
+        "different_values": 0,
+        "max_absolute_difference": 0.0,
+        "rmse_difference": 0.0
+      },
+      "Layer C": {
+        "values": 60,
+        "different_values": 0,
+        "max_absolute_difference": 0.0,
+        "rmse_difference": 0.0
+      },
+      "Layer C boundary": {
+        "values": 60,
+        "different_values": 0,
+        "max_absolute_difference": 0.0,
+        "rmse_difference": 0.0
+      },
+      "Extra cloud 1": {
+        "values": 60,
+        "different_values": 0,
+        "max_absolute_difference": 0.0,
+        "rmse_difference": 0.0
+      },
+      "Extra cloud 1 boundary": {
+        "values": 60,
+        "different_values": 0,
+        "max_absolute_difference": 0.0,
+        "rmse_difference": 0.0
+      },
+      "Extra cloud 2": {
+        "values": 60,
+        "different_values": 0,
+        "max_absolute_difference": 0.0,
+        "rmse_difference": 0.0
+      },
+      "Extra cloud 2 boundary": {
+        "values": 60,
+        "different_values": 0,
+        "max_absolute_difference": 0.0,
+        "rmse_difference": 0.0
+      }
+    }
+  },
+  "manual_extractions": [
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_manual_1920_1930_precio30871.csv",
+      "source_seconds": 60,
+      "C_seconds_interval": {
+        "lower_inclusive": 59.8876404494382,
+        "upper_exclusive": 60.1123595505618
+      },
+      "compatible_integer_C_seconds": [
+        60
+      ],
+      "periods": {
+        "Layer A": 24,
+        "Layer A boundary": 30,
+        "Layer B": 8,
+        "Layer B boundary": 10,
+        "Layer C": 3,
+        "Layer C boundary": 3,
+        "Extra cloud 1": 72,
+        "Extra cloud 1 boundary": 89,
+        "Extra cloud 2": 216,
+        "Extra cloud 2 boundary": 267
+      },
+      "pairs_per_curve": 450,
+      "max_rmse_step": 1.602932137576119e-12,
+      "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+    },
+    {
+      "file": "G:\\trading\\guias\\analisis\\C_manual_1920_1930_precio30873.csv",
+      "source_seconds": 60,
+      "C_seconds_interval": {
+        "lower_inclusive": 59.8876404494382,
+        "upper_exclusive": 60.1123595505618
+      },
+      "compatible_integer_C_seconds": [
+        60
+      ],
+      "periods": {
+        "Layer A": 24,
+        "Layer A boundary": 30,
+        "Layer B": 8,
+        "Layer B boundary": 10,
+        "Layer C": 3,
+        "Layer C boundary": 3,
+        "Extra cloud 1": 72,
+        "Extra cloud 1 boundary": 89,
+        "Extra cloud 2": 216,
+        "Extra cloud 2 boundary": 267
+      },
+      "pairs_per_curve": 451,
+      "max_rmse_step": 1.6011674664993723e-12,
+      "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+    }
+  ]
+}

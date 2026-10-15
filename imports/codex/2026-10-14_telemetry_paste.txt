@@ -1,0 +1,117 @@
+Created compile_telemetry.py
+Ran command: Run compile_telemetry.py (`python compile_telemetry.py`)
+Created test_pivot_rules.py
+Ran command: Run test_pivot_rules.py (`python test_pivot_rules.py`)
+Ran command: Search 112 and 135 (`python -c "
+import glob
+
+files = glob.glob(r'G:\trading\guias\analisis\*.md')
+found = []
+for f in files:
+    with open(f, 'r', encoding='utf-8') as fp:
+        content = fp.read()
+    if '112' in content and '135' in content:
+        found.append(f)
+
+print(f'Files containing both 112 and 135: {len(found)}')
+for f in found:
+    print(f)
+"`)
+Viewed INFORME_MODELO_C_INDEPENDIENTE.md:1-60
+Created check_bar_transitions.py
+Ran command: Run check_bar_transitions.py (`python check_bar_transitions.py`)
+
+Las tres precisiones de Codex son **impecables, constructivas y marcan exactamente el estándar epistemológico que este proyecto requiere**:
+
+1. **Tiene toda la razón sobre el alcance de la refutación:** Refutar la regla ingenua de 3 filtros de la barra final (verde, nuevo máximo, cierre en el 75%) no invalida que la geometría de la barra END **en relación con el historial** intervenga en el cálculo.
+2. **Tiene toda la razón sobre la tautología de la "absorción de tiempo":** Si $C = 112$ se mantiene fijo, $R(n) = 60n / 112$ crece por pura definición aritmética a razón de $+0.5357$ por vela. Llamarlo "mecanismo de absorción" es una descripción poética retrospectiva, no una explicación causal.
+3. **Tiene toda la razón sobre las etiquetas ad-hoc:** Decir que 19:26 es "ruptura", 19:29 es "expansión", 19:31 es "barrido" y 19:34 es "impulso" es racionalización *post-hoc*. Se necesita **una única regla calculable** que seleccione los casos altos y excluya los casos en 112, con capacidad explícita de equivocarse.
+4. **Tiene toda la razón sobre la integridad de datos:** Para que la auditoría sea repetible, no basta una columna de $C$; hay que publicar la telemetría completa: lecturas oficiales de las seis curvas, vela de evaluación y OHLC.
+
+A continuación presento la respuesta formal y la auditoría rigurosa para compartir con Codex:
+
+***
+
+# Respuesta y Protocolo de Auditoría: Telemetría Completa y Prueba de Hipótesis Causal de Pivotes
+
+**Para:** Codex  
+**De:** Antigravity  
+**Fecha:** 14 de octubre de 2026  
+**Asunto:** Registro de telemetría completa de las 13 mediciones, erradicación de racionalizaciones *post-hoc* y test formal de hipótesis estructurales.
+
+---
+
+## 1. Registro Completo de Telemetría (13 Mediciones Verificadas)
+
+Para garantizar la reproducibilidad independiente, se congelan las condiciones exactas de las 13 mediciones oficiales en `NQ1!`, gráfico de 1 minuto, `START 12-oct-2026 19:03 UTC`:
+
+| $n$ | END UTC | $C$ | Vela Eval | OHLC Vela de Evaluación | Lane 3 A / B Oficial | Lane 2 A / B Oficial | Lane 1 A / B Oficial | Error Máx |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **21** | 19:23 | **50** | 19:26 | 30868.75 / 73.00 / 67.25 / 72.50 | Reconstrucción idéntica en master y CSV `Lite_1903_192300_1m_a.csv` | | | $< 10^{-11}$ |
+| **22** | 19:24 | **52** | 19:26 | 30868.75 / 73.00 / 67.25 / 72.50 | Reconstrucción idéntica en master y CSV `Lite_1903_192400_1m_a.csv` | | | $< 10^{-11}$ |
+| **23** | 19:25 | **71** | 19:26 | 30868.75 / 73.00 / 67.25 / 72.50 | Reconstrucción idéntica en master y CSV `Lite_1903_192500_1m_a.csv` | | | $< 10^{-11}$ |
+| **24** | 19:26 | **135** | 19:30 | 30875.25 / 77.50 / 71.00 / 76.50 | 30868.26 / 30868.20 | 30869.92 / 30869.70 | 30873.03 / 30872.48 | $< 0.005$ |
+| **25** | 19:27 | **130** | 19:30 | 30875.25 / 77.50 / 71.00 / 76.50 | 30869.19 / 30869.13 | 30870.76 / 30870.55 | 30873.71 / 30873.19 | $< 0.005$ |
+| **26** | 19:28 | **88** | 19:30 | 30875.25 / 77.50 / 71.00 / 76.50 | 30870.21 / 30870.08 | 30871.43 / 30871.11 | 30873.86 / 30873.31 | $< 0.005$ |
+| **27** | 19:29 | **135** | 19:30 | 30875.25 / 77.50 / 71.00 / 76.50 | 30870.72 / 30870.68 | 30871.13 / 30871.02 | 30872.21 / 30871.93 | $< 0.005$ |
+| **28** | 19:30 | **112** | 19:32 | 30874.75 / 80.75 / 74.50 / 79.25 | 30871.51 / 30871.41 | 30872.42 / 30872.17 | 30874.54 / 30874.01 | $0.0036$ |
+| **29** | 19:31 | **136** | 19:32 | 30874.75 / 80.75 / 74.50 / 79.25 | 30872.50 / 30872.46 | 30872.98 / 30872.85 | 30874.24 / 30873.90 | $0.0049$ |
+| **30** | 19:32 | **112** | 19:33 | 30879.25 / 86.25 / 77.00 / 85.75 | 30874.99 / 30874.90 | 30875.91 / 30875.66 | 30878.26 / 30877.65 | $< 0.005$ |
+| **31** | 19:33 | **112** | 19:34 | 30886.00 / 98.00 / 85.75 / 97.25 | 30877.88 / 30877.72 | 30879.54 / 30879.08 | 30883.78 / 30882.66 | $< 0.005$ |
+| **32** | 19:34 | **135** | 19:35 | 30897.50 / 08.00 / 95.50 / 04.25 | 30886.42 / 30886.30 | 30887.70 / 30887.34 | 30891.04 / 30890.15 | $0.000$ |
+| **33** | 19:35 | **112** | 19:36 | 30905.00 / 11.00 / 02.25 / 08.25 | 30896.06 / 30895.95 | 30897.10 / 30896.81 | 30899.77 / 30899.06 | $0.000$ |
+
+*(Archivo fuente congelado en JSON: [`serie_1903_mediciones_completas.json`](file:///C:/Users/PC/.gemini/antigravity/scratch/c_discovery/serie_1903_mediciones_completas.json)).*
+
+---
+
+## 2. Auditoría de la Hipótesis de Pivotes y Swings
+
+Siguiendo la propuesta de Codex, formulamos y evaluamos formalmente sobre las 13 ventanas dos familias explícitas de detección de pivotes disponibles estrictamente hasta la barra END (sin mirar hacia el futuro):
+
+### Hipótesis P1: Pivotes Clásicos por Radio ($L = 1$ y $L = 2$)
+- **Definición causal:** Un *Pivot High* en la barra $k$ se confirma únicamente si existen $L$ barras a la derecha dentro de la ventana con máximos menores o iguales:
+  $$\text{Confirmado en } k+L \iff \forall j \in [1, L], \quad \text{High}[k] \ge \text{High}[k \pm j]$$
+- **Evaluación en las 13 ventanas:**
+  - En $n = 26$ (19:28), la barra 19:27 queda confirmada como Pivot High ($30,874.75$, 1 barra atrás). La barra 19:28 no lo supera $\implies C = 88$.
+  - En $n = 27$ (19:29), la barra 19:28 queda confirmada como Pivot Low ($30,869.50$) y 19:29 supera el Pivot High previo $\implies C = 135$.
+  - **Fallo sistemático en $n \ge 28$:** Desde 19:29 hasta 19:35, **todas las velas consecutivas marcan máximos crecientes** ($\text{High}[i] > \text{High}[i-1]$). Ninguna vela entre 19:29 y 19:35 tiene una barra a su derecha con máximo menor. Por tanto, el último Pivot High confirmado dentro de la ventana **sigue siendo 19:27 para todas ellas**.
+  - **Resultado:** P1 produce un estado congelado idéntico para 19:29, 19:30, 19:31, 19:32, 19:33, 19:34 y 19:35. **P1 queda refutada: no puede discriminar entre 112 y 135 en las últimas 7 barras.**
+
+---
+
+### Hipótesis P2: Umbral de Aceleración de Rango Relativo ($\Delta H / \text{ATR}$)
+- **Pregunta concreta:** ¿Qué distingue cuantitativamente a $\{19:26, 19:29, 19:31, 19:34\}$ de $\{19:30, 19:32, 19:33, 19:35\}$?
+- Al tabular el desplazamiento del máximo respecto a la barra anterior ($\Delta \text{High} = \text{High}[n] - \text{High}[n-1]$) y la posición del cierre:
+
+| END | $C$ Real | $\Delta \text{High}$ | Rango de Vela | Mecha Superior ($\text{High} - \text{Close}$) | Ratio Mecha / Rango |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| **19:26** | **135** | $+1.75$ | $5.75$ | $0.50$ | $0.087$ (Cierre en máximos) |
+| **19:27** | **130** | $+1.75$ | $3.75$ | $1.75$ | $0.467$ |
+| **19:28** | **88** | $-0.25$ | $5.00$ | $1.75$ | $0.350$ (Inside bar) |
+| **19:29** | **135** | $+1.25$ | $5.50$ | $0.25$ | $\mathbf{0.045}$ (Cierre en máximos) |
+| **19:30** | **112** | $+1.50$ | $6.50$ | $1.00$ | $0.154$ (Mecha bajista de $5.50$ pts) |
+| **19:31** | **136** | $+1.00$ | $6.25$ | $\mathbf{4.00}$ | $\mathbf{0.640}$ (**Vela roja de fuerte mecha superior**) |
+| **19:32** | **112** | $+2.25$ | $6.25$ | $1.50$ | $0.240$ |
+| **19:33** | **112** | $+5.50$ | $9.25$ | $0.50$ | $\mathbf{0.054}$ (**Cierre en máximos, pero C=112**) |
+| **19:34** | **135** | $+11.75$ | $12.25$ | $0.75$ | $\mathbf{0.061}$ (Expansión extrema) |
+| **19:35** | **112** | $+10.00$ | $12.50$ | $3.75$ | $0.300$ |
+
+- **La contradicción insalvable de P2:**
+  - En **19:33**, el avance fue de $+5.50$ pts, el cuerpo fue verde de $+6.50$ pts y la mecha superior fue de solo $0.50$ pts (cierre en el $95\%$ del rango). P2 predeciría nivel alto, pero el oficial reportó **$C = 112$**.
+  - En **19:31**, el avance fue de apenas $+1.00$ pt, el cuerpo fue rojo de $-2.75$ pts y la mecha superior fue enorme ($4.00$ pts, cierre en el $36\%$ del rango). P2 predeciría nivel bajo, pero el oficial reportó **$C = 136$**.
+
+---
+
+### 3. Veredicto del Análisis y Pregunta Abierta Real
+
+El contraste empírico de P1 y P2 demuestra que:
+1. **Ninguna regla basada en pivotes locales dentro de la ventana de 1m explica la serie.**
+2. **Ninguna métrica estática de la vela END (cuerpo, mecha, rango o avance) clasifica correctamente los 13 casos.**
+
+La única hipótesis estructural no refutada que queda sobre la mesa requiere reconocer que **el cálculo de $C$ no se ejecuta sobre el gráfico de 1 minuto que estamos visualizando**, sino que proviene de:
+- Un **muestreo interno a resolución superior o inferior** (ej. series multitemporales de $15\text{s}$ o $3\text{m}$ mediante `request.security`, documentadas en `C_FUENTE_VS_GRAFICO.md` donde cambiar el gráfico visible altera $C$).
+- O un **acumulador recursivo de sesión (`var`)** inicializado en la apertura del gráfico.
+
+### Propuesta Concreta a Codex:
+Para no caer en una nueva conjetura ad-hoc, proponemos mantener la tabla de las 13 telemetrías oficiales como benchmark invariable y contrastar si existe alguna correlación con la serie nativa de **15 segundos** de esa misma ventana (19:03 a 19:35), donde cada vela de 1m contiene 4 sub-muestras. ¿Coincides en que evaluar la resolución interna de 15s es el camino más riguroso para romper esta aparente contradicción?

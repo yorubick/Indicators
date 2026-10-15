@@ -1,0 +1,449 @@
+{
+  "training_long_cases": 32,
+  "validation_used": false,
+  "scope": "Exact signatures, no statistical fitting or thresholds. Absolute START/END omitted intentionally: timestamp+count would often identify a window, preventing informative collisions; no claim of clock independence. Added candidate features are not proven original inputs.",
+  "results": [
+    {
+      "signature": "count_range_flags",
+      "fields": [
+        "dt",
+        "n",
+        "range",
+        "newH",
+        "newL"
+      ],
+      "groups": 29,
+      "repeated_input_groups": 3,
+      "contradictory_pairs": 1,
+      "counterexamples": [
+        {
+          "inputs": {
+            "dt": 60,
+            "n": 23,
+            "range": 21.75,
+            "newH": false,
+            "newL": false
+          },
+          "case_A": {
+            "id": "20261012_190100_192300_60s",
+            "C": 76.9999999999985
+          },
+          "case_B": {
+            "id": "20261012_190200_192400_60s",
+            "C": 55.000000000000334
+          }
+        }
+      ],
+      "interpretation": "Insufficient for deterministic C"
+    },
+    {
+      "signature": "count_global_flags",
+      "fields": [
+        "dt",
+        "n",
+        "H",
+        "L",
+        "newH",
+        "newL"
+      ],
+      "groups": 29,
+      "repeated_input_groups": 3,
+      "contradictory_pairs": 1,
+      "counterexamples": [
+        {
+          "inputs": {
+            "dt": 60,
+            "n": 23,
+            "H": 30870.75,
+            "L": 30849.0,
+            "newH": false,
+            "newL": false
+          },
+          "case_A": {
+            "id": "20261012_190100_192300_60s",
+            "C": 76.9999999999985
+          },
+          "case_B": {
+            "id": "20261012_190200_192400_60s",
+            "C": 55.000000000000334
+          }
+        }
+      ],
+      "interpretation": "Insufficient for deterministic C"
+    },
+    {
+      "signature": "count_global_flags_confirmation",
+      "fields": [
+        "dt",
+        "n",
+        "H",
+        "L",
+        "newH",
+        "newL",
+        "confirmedH_END",
+        "confirmedL_END"
+      ],
+      "groups": 32,
+      "repeated_input_groups": 0,
+      "contradictory_pairs": 0,
+      "counterexamples": [],
+      "interpretation": "No contradiction found; not validated, potentially unique inputs"
+    },
+    {
+      "signature": "count_global_ages_flags",
+      "fields": [
+        "dt",
+        "n",
+        "H",
+        "L",
+        "ageH",
+        "ageL",
+        "newH",
+        "newL"
+      ],
+      "groups": 32,
+      "repeated_input_groups": 0,
+      "contradictory_pairs": 0,
+      "counterexamples": [],
+      "interpretation": "No contradiction found; not validated, potentially unique inputs"
+    },
+    {
+      "signature": "count_global_ages_pivot_ages",
+      "fields": [
+        "dt",
+        "n",
+        "H",
+        "L",
+        "ageH",
+        "ageL",
+        "age_pivotH",
+        "age_pivotL",
+        "newH",
+        "newL"
+      ],
+      "groups": 32,
+      "repeated_input_groups": 0,
+      "contradictory_pairs": 0,
+      "counterexamples": [],
+      "interpretation": "No contradiction found; not validated, potentially unique inputs"
+    },
+    {
+      "signature": "count_global_END",
+      "fields": [
+        "dt",
+        "n",
+        "H",
+        "L",
+        "END_OHLC"
+      ],
+      "groups": 32,
+      "repeated_input_groups": 0,
+      "contradictory_pairs": 0,
+      "counterexamples": [],
+      "interpretation": "No contradiction found; not validated, potentially unique inputs"
+    },
+    {
+      "signature": "count_global_START",
+      "fields": [
+        "dt",
+        "n",
+        "H",
+        "L",
+        "START_OHLC"
+      ],
+      "groups": 32,
+      "repeated_input_groups": 0,
+      "contradictory_pairs": 0,
+      "counterexamples": [],
+      "interpretation": "No contradiction found; not validated, potentially unique inputs"
+    },
+    {
+      "signature": "global_END_flags",
+      "fields": [
+        "dt",
+        "H",
+        "L",
+        "END_OHLC",
+        "newH",
+        "newL"
+      ],
+      "groups": 24,
+      "repeated_input_groups": 4,
+      "contradictory_pairs": 10,
+      "counterexamples": [
+        {
+          "inputs": {
+            "dt": 60,
+            "H": 30870.75,
+            "L": 30849.0,
+            "END_OHLC": [
+              30868.75,
+              30870.75,
+              30866.75,
+              30868.5
+            ],
+            "newH": true,
+            "newL": false
+          },
+          "case_A": {
+            "id": "20261012_190100_192200_60s",
+            "C": 76.99999999999841
+          },
+          "case_B": {
+            "id": "20261012_190200_192200_60s",
+            "C": 49.99999999999989
+          }
+        },
+        {
+          "inputs": {
+            "dt": 60,
+            "H": 30870.75,
+            "L": 30849.0,
+            "END_OHLC": [
+              30868.25,
+              30869.5,
+              30864.25,
+              30866.5
+            ],
+            "newH": false,
+            "newL": false
+          },
+          "case_A": {
+            "id": "20261012_190100_192300_60s",
+            "C": 76.9999999999985
+          },
+          "case_B": {
+            "id": "20261012_190200_192300_60s",
+            "C": 51.99999999999978
+          }
+        },
+        {
+          "inputs": {
+            "dt": 60,
+            "H": 30870.75,
+            "L": 30849.0,
+            "END_OHLC": [
+              30868.25,
+              30869.5,
+              30864.25,
+              30866.5
+            ],
+            "newH": false,
+            "newL": false
+          },
+          "case_A": {
+            "id": "20261012_190100_192300_60s",
+            "C": 76.9999999999985
+          },
+          "case_B": {
+            "id": "20261012_190300_192300_60s",
+            "C": 49.99999999999983
+          }
+        }
+      ],
+      "interpretation": "Insufficient for deterministic C"
+    },
+    {
+      "signature": "global_ages_END",
+      "fields": [
+        "dt",
+        "H",
+        "L",
+        "ageH",
+        "ageL",
+        "END_OHLC"
+      ],
+      "groups": 24,
+      "repeated_input_groups": 4,
+      "contradictory_pairs": 10,
+      "counterexamples": [
+        {
+          "inputs": {
+            "dt": 60,
+            "H": 30870.75,
+            "L": 30849.0,
+            "ageH": 0,
+            "ageL": 12,
+            "END_OHLC": [
+              30868.75,
+              30870.75,
+              30866.75,
+              30868.5
+            ]
+          },
+          "case_A": {
+            "id": "20261012_190100_192200_60s",
+            "C": 76.99999999999841
+          },
+          "case_B": {
+            "id": "20261012_190200_192200_60s",
+            "C": 49.99999999999989
+          }
+        },
+        {
+          "inputs": {
+            "dt": 60,
+            "H": 30870.75,
+            "L": 30849.0,
+            "ageH": 1,
+            "ageL": 13,
+            "END_OHLC": [
+              30868.25,
+              30869.5,
+              30864.25,
+              30866.5
+            ]
+          },
+          "case_A": {
+            "id": "20261012_190100_192300_60s",
+            "C": 76.9999999999985
+          },
+          "case_B": {
+            "id": "20261012_190200_192300_60s",
+            "C": 51.99999999999978
+          }
+        },
+        {
+          "inputs": {
+            "dt": 60,
+            "H": 30870.75,
+            "L": 30849.0,
+            "ageH": 1,
+            "ageL": 13,
+            "END_OHLC": [
+              30868.25,
+              30869.5,
+              30864.25,
+              30866.5
+            ]
+          },
+          "case_A": {
+            "id": "20261012_190100_192300_60s",
+            "C": 76.9999999999985
+          },
+          "case_B": {
+            "id": "20261012_190300_192300_60s",
+            "C": 49.99999999999983
+          }
+        }
+      ],
+      "interpretation": "Insufficient for deterministic C"
+    },
+    {
+      "signature": "global_ages_pivots_END",
+      "fields": [
+        "dt",
+        "H",
+        "L",
+        "ageH",
+        "ageL",
+        "age_pivotH",
+        "age_pivotL",
+        "END_OHLC"
+      ],
+      "groups": 24,
+      "repeated_input_groups": 4,
+      "contradictory_pairs": 10,
+      "counterexamples": [
+        {
+          "inputs": {
+            "dt": 60,
+            "H": 30870.75,
+            "L": 30849.0,
+            "ageH": 0,
+            "ageL": 12,
+            "age_pivotH": 2,
+            "age_pivotL": 5,
+            "END_OHLC": [
+              30868.75,
+              30870.75,
+              30866.75,
+              30868.5
+            ]
+          },
+          "case_A": {
+            "id": "20261012_190100_192200_60s",
+            "C": 76.99999999999841
+          },
+          "case_B": {
+            "id": "20261012_190200_192200_60s",
+            "C": 49.99999999999989
+          }
+        },
+        {
+          "inputs": {
+            "dt": 60,
+            "H": 30870.75,
+            "L": 30849.0,
+            "ageH": 1,
+            "ageL": 13,
+            "age_pivotH": 1,
+            "age_pivotL": 6,
+            "END_OHLC": [
+              30868.25,
+              30869.5,
+              30864.25,
+              30866.5
+            ]
+          },
+          "case_A": {
+            "id": "20261012_190100_192300_60s",
+            "C": 76.9999999999985
+          },
+          "case_B": {
+            "id": "20261012_190200_192300_60s",
+            "C": 51.99999999999978
+          }
+        },
+        {
+          "inputs": {
+            "dt": 60,
+            "H": 30870.75,
+            "L": 30849.0,
+            "ageH": 1,
+            "ageL": 13,
+            "age_pivotH": 1,
+            "age_pivotL": 6,
+            "END_OHLC": [
+              30868.25,
+              30869.5,
+              30864.25,
+              30866.5
+            ]
+          },
+          "case_A": {
+            "id": "20261012_190100_192300_60s",
+            "C": 76.9999999999985
+          },
+          "case_B": {
+            "id": "20261012_190300_192300_60s",
+            "C": 49.99999999999983
+          }
+        }
+      ],
+      "interpretation": "Insufficient for deterministic C"
+    },
+    {
+      "signature": "all_relative_observable",
+      "fields": [
+        "dt",
+        "n",
+        "H",
+        "L",
+        "ageH",
+        "ageL",
+        "age_pivotH",
+        "age_pivotL",
+        "newH",
+        "newL",
+        "START_OHLC",
+        "END_OHLC"
+      ],
+      "groups": 32,
+      "repeated_input_groups": 0,
+      "contradictory_pairs": 0,
+      "counterexamples": [],
+      "interpretation": "No contradiction found; not validated, potentially unique inputs"
+    }
+  ]
+}

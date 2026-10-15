@@ -1,0 +1,6 @@
+{
+ "date":"2026-10-14",
+ "correction":"Original price-only identification called19:10first strict pivot after19:05; that description was incorrect.19:07low30857.75is strictly below19:06low30858.50and19:08low30859.75.19:10low30849.00is the deepest retracement in this phase, and19:17is last before renewed close expansion19:19. Keep original protocol/results; do not relabel19:10as earliest.",
+ "registered_before_new_measurements":[{"id":"A_earliest_base","START":"18:52","END":"19:07"},{"id":"A_earliest_start_minus","START":"18:51","END":"19:07"},{"id":"A_earliest_start_plus","START":"18:53","END":"19:07"},{"id":"A_earliest_end_minus","START":"18:52","END":"19:06"},{"id":"A_earliest_end_plus","START":"18:52","END":"19:08"}],
+ "analysis":"Three mitigation interpretations retained: earliest local pivot19:07, deepest19:10,last19:17. All new cases get same two-export/native/six-fit checks. No source/length tuning."
+}

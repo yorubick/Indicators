@@ -1,0 +1,1337 @@
+{
+  "configuration": {
+    "source_seconds_both": 15,
+    "START": "2026-10-12T18:55:00Z",
+    "END": "2026-10-12T19:20:00Z"
+  },
+  "native_Character": {
+    "file": "G:\\trading\\guias\\analisis\\manual\\C_source15_chart15_antes_b.csv",
+    "source_seconds": 15,
+    "C_seconds_interval": {
+      "lower_inclusive": 105.98314606741573,
+      "upper_exclusive": 106.00694444444444
+    },
+    "compatible_integer_C_seconds": [
+      106
+    ],
+    "periods": {
+      "Layer A": 170,
+      "Layer A boundary": 210,
+      "Layer B": 57,
+      "Layer B boundary": 70,
+      "Layer C": 19,
+      "Layer C boundary": 23,
+      "Extra cloud 1": 509,
+      "Extra cloud 1 boundary": 629,
+      "Extra cloud 2": 1526,
+      "Extra cloud 2 boundary": 1887
+    },
+    "pairs_per_curve": 6261,
+    "max_rmse_step": 1.5080438125636696e-12,
+    "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+  },
+  "native_Lite": {
+    "Lane 3 A": {
+      "C": 105.99999999999723,
+      "period": 169.5999999999956,
+      "pairs": 6261,
+      "rmse": 1.5257932826875318e-12
+    },
+    "Lane 3 B": {
+      "C": 106.00000000006325,
+      "period": 209.64444444456956,
+      "pairs": 6261,
+      "rmse": 2.26615610035475e-12
+    },
+    "Lane 2 A": {
+      "C": 105.9999999999957,
+      "period": 56.533333333331036,
+      "pairs": 6261,
+      "rmse": 1.5519824972354815e-12
+    },
+    "Lane 2 B": {
+      "C": 106.00000000000732,
+      "period": 69.88148148148632,
+      "pairs": 6261,
+      "rmse": 1.5671942932585315e-12
+    },
+    "Lane 1 A": {
+      "C": 105.99999999999929,
+      "period": 18.844444444444317,
+      "pairs": 6261,
+      "rmse": 1.7403917786598273e-12
+    },
+    "Lane 1 B": {
+      "C": 105.999999999996,
+      "period": 23.29382716049295,
+      "pairs": 6261,
+      "rmse": 1.995381230603152e-12
+    }
+  },
+  "native_repeat": {
+    "offset_seconds": 0,
+    "visibility_mismatches": 0,
+    "curves": {
+      "Lane 3 A": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Lane 3 B": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Lane 2 A": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Lane 2 B": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Lane 1 A": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Lane 1 B": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Layer A": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Layer A boundary": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Layer B": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Layer B boundary": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Layer C": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Layer C boundary": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Extra cloud 1": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Extra cloud 1 boundary": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Extra cloud 2": {
+        "values": 6281,
+        "max_error": 0.0
+      },
+      "Extra cloud 2 boundary": {
+        "values": 6281,
+        "max_error": 0.0
+      }
+    }
+  },
+  "coarse_repeat": {
+    "offset_seconds": 0,
+    "visibility_mismatches": 0,
+    "curves": {
+      "Lane 3 A": {
+        "values": 1571,
+        "max_error": 0.0
+      },
+      "Lane 3 B": {
+        "values": 1571,
+        "max_error": 0.0
+      },
+      "Lane 2 A": {
+        "values": 1571,
+        "max_error": 0.0
+      },
+      "Lane 2 B": {
+        "values": 1571,
+        "max_error": 0.0
+      },
+      "Lane 1 A": {
+        "values": 1571,
+        "max_error": 0.0
+      },
+      "Lane 1 B": {
+        "values": 1571,
+        "max_error": 0.0
+      },
+      "Layer A": {
+        "values": 1576,
+        "max_error": 0.0
+      },
+      "Layer A boundary": {
+        "values": 1576,
+        "max_error": 0.0
+      },
+      "Layer B": {
+        "values": 1576,
+        "max_error": 0.0
+      },
+      "Layer B boundary": {
+        "values": 1576,
+        "max_error": 0.0
+      },
+      "Layer C": {
+        "values": 1576,
+        "max_error": 0.0
+      },
+      "Layer C boundary": {
+        "values": 1576,
+        "max_error": 0.0
+      },
+      "Extra cloud 1": {
+        "values": 1576,
+        "max_error": 0.0
+      },
+      "Extra cloud 1 boundary": {
+        "values": 1576,
+        "max_error": 0.0
+      },
+      "Extra cloud 2": {
+        "values": 1576,
+        "max_error": 0.0
+      },
+      "Extra cloud 2 boundary": {
+        "values": 1576,
+        "max_error": 0.0
+      }
+    }
+  },
+  "predeclared_mappings": [
+    {
+      "offset_seconds": 45,
+      "visibility_mismatches": 46,
+      "curves": {
+        "Lane 3 A": {
+          "values": 1565,
+          "max_error": 22.05561836492052
+        },
+        "Lane 3 B": {
+          "values": 1565,
+          "max_error": 22.720862203659635
+        },
+        "Lane 2 A": {
+          "values": 1565,
+          "max_error": 22.348590672045248
+        },
+        "Lane 2 B": {
+          "values": 1565,
+          "max_error": 21.91778201949637
+        },
+        "Lane 1 A": {
+          "values": 1565,
+          "max_error": 17.482168258055026
+        },
+        "Lane 1 B": {
+          "values": 1565,
+          "max_error": 18.824346780227643
+        },
+        "Layer A": {
+          "values": 1570,
+          "max_error": 0.03250092995585874
+        },
+        "Layer A boundary": {
+          "values": 1570,
+          "max_error": 0.02672712089770357
+        },
+        "Layer B": {
+          "values": 1570,
+          "max_error": 0.08226650525102741
+        },
+        "Layer B boundary": {
+          "values": 1570,
+          "max_error": 0.07013630475194077
+        },
+        "Layer C": {
+          "values": 1570,
+          "max_error": 0.14975482499721693
+        },
+        "Layer C boundary": {
+          "values": 1570,
+          "max_error": 0.14107033756226883
+        },
+        "Extra cloud 1": {
+          "values": 1570,
+          "max_error": 0.011467895528767258
+        },
+        "Extra cloud 1 boundary": {
+          "values": 1570,
+          "max_error": 0.009328919073595898
+        },
+        "Extra cloud 2": {
+          "values": 1570,
+          "max_error": 0.0038959364574111532
+        },
+        "Extra cloud 2 boundary": {
+          "values": 1570,
+          "max_error": 0.0031561447576677892
+        }
+      }
+    },
+    {
+      "offset_seconds": 0,
+      "visibility_mismatches": 30,
+      "curves": {
+        "Lane 3 A": {
+          "values": 1569,
+          "max_error": 24.716016940714326
+        },
+        "Lane 3 B": {
+          "values": 1569,
+          "max_error": 24.689216508886602
+        },
+        "Lane 2 A": {
+          "values": 1569,
+          "max_error": 30.339286610698764
+        },
+        "Lane 2 B": {
+          "values": 1569,
+          "max_error": 28.232234686427546
+        },
+        "Lane 1 A": {
+          "values": 1569,
+          "max_error": 33.731283725799585
+        },
+        "Lane 1 B": {
+          "values": 1569,
+          "max_error": 33.36287062462725
+        },
+        "Layer A": {
+          "values": 1574,
+          "max_error": 3.966563365273032
+        },
+        "Layer A boundary": {
+          "values": 1574,
+          "max_error": 3.2446933774117497
+        },
+        "Layer B": {
+          "values": 1574,
+          "max_error": 9.290437282954372
+        },
+        "Layer B boundary": {
+          "values": 1574,
+          "max_error": 8.159662552614463
+        },
+        "Layer C": {
+          "values": 1574,
+          "max_error": 17.68101212010515
+        },
+        "Layer C boundary": {
+          "values": 1574,
+          "max_error": 15.954259348727646
+        },
+        "Extra cloud 1": {
+          "values": 1574,
+          "max_error": 1.3181005214646575
+        },
+        "Extra cloud 1 boundary": {
+          "values": 1574,
+          "max_error": 1.088596330362634
+        },
+        "Extra cloud 2": {
+          "values": 1574,
+          "max_error": 0.6248014770753798
+        },
+        "Extra cloud 2 boundary": {
+          "values": 1574,
+          "max_error": 0.5507403492956655
+        }
+      }
+    },
+    {
+      "offset_seconds": 15,
+      "visibility_mismatches": 30,
+      "curves": {
+        "Lane 3 A": {
+          "values": 1566,
+          "max_error": 23.79091116968266
+        },
+        "Lane 3 B": {
+          "values": 1566,
+          "max_error": 24.069222649941366
+        },
+        "Lane 2 A": {
+          "values": 1566,
+          "max_error": 27.861352223691938
+        },
+        "Lane 2 B": {
+          "values": 1566,
+          "max_error": 25.991774233665637
+        },
+        "Lane 1 A": {
+          "values": 1566,
+          "max_error": 28.908052854174457
+        },
+        "Lane 1 B": {
+          "values": 1566,
+          "max_error": 28.836046998483653
+        },
+        "Layer A": {
+          "values": 1571,
+          "max_error": 2.7927040168906387
+        },
+        "Layer A boundary": {
+          "values": 1571,
+          "max_error": 2.2854754285253875
+        },
+        "Layer B": {
+          "values": 1571,
+          "max_error": 6.574287198847742
+        },
+        "Layer B boundary": {
+          "values": 1571,
+          "max_error": 5.76041359487499
+        },
+        "Layer C": {
+          "values": 1571,
+          "max_error": 11.636358201249095
+        },
+        "Layer C boundary": {
+          "values": 1571,
+          "max_error": 10.64599577057379
+        },
+        "Extra cloud 1": {
+          "values": 1571,
+          "max_error": 0.8942386445960437
+        },
+        "Extra cloud 1 boundary": {
+          "values": 1571,
+          "max_error": 0.7165467987797456
+        },
+        "Extra cloud 2": {
+          "values": 1571,
+          "max_error": 0.4161354341376864
+        },
+        "Extra cloud 2 boundary": {
+          "values": 1571,
+          "max_error": 0.3668061658645456
+        }
+      }
+    },
+    {
+      "offset_seconds": 30,
+      "visibility_mismatches": 30,
+      "curves": {
+        "Lane 3 A": {
+          "values": 1561,
+          "max_error": 22.888374047783145
+        },
+        "Lane 3 B": {
+          "values": 1561,
+          "max_error": 23.341179360388196
+        },
+        "Lane 2 A": {
+          "values": 1561,
+          "max_error": 25.08716990112589
+        },
+        "Lane 2 B": {
+          "values": 1561,
+          "max_error": 23.75504305546201
+        },
+        "Lane 1 A": {
+          "values": 1561,
+          "max_error": 23.210343570957775
+        },
+        "Lane 1 B": {
+          "values": 1561,
+          "max_error": 23.70107447355258
+        },
+        "Layer A": {
+          "values": 1566,
+          "max_error": 1.436667584865063
+        },
+        "Layer A boundary": {
+          "values": 1566,
+          "max_error": 1.1765818203857634
+        },
+        "Layer B": {
+          "values": 1566,
+          "max_error": 3.374211255573755
+        },
+        "Layer B boundary": {
+          "values": 1566,
+          "max_error": 2.9569181289043627
+        },
+        "Layer C": {
+          "values": 1566,
+          "max_error": 5.946169674276462
+        },
+        "Layer C boundary": {
+          "values": 1566,
+          "max_error": 5.409862421151047
+        },
+        "Extra cloud 1": {
+          "values": 1566,
+          "max_error": 0.4624491469730856
+        },
+        "Extra cloud 1 boundary": {
+          "values": 1566,
+          "max_error": 0.36171698409089004
+        },
+        "Extra cloud 2": {
+          "values": 1566,
+          "max_error": 0.20839757200155873
+        },
+        "Extra cloud 2 boundary": {
+          "values": 1566,
+          "max_error": 0.18359648898695013
+        }
+      }
+    }
+  ],
+  "exploratory_coarse_Lite_chart_close_fit_using_15s_period_scale": {
+    "Lane 3 A": {
+      "C": 17.479525460293665,
+      "period": 27.967240736469865,
+      "pairs": 1568,
+      "rmse": 0.21678914344051953
+    },
+    "Lane 3 B": {
+      "C": 17.30582641403144,
+      "period": 34.22707890775107,
+      "pairs": 1568,
+      "rmse": 0.17898459193299146
+    },
+    "Lane 2 A": {
+      "C": 19.110113526938296,
+      "period": 10.192060547700425,
+      "pairs": 1568,
+      "rmse": 0.5408752982429577
+    },
+    "Lane 2 B": {
+      "C": 18.674349173178374,
+      "period": 12.311237603058336,
+      "pairs": 1568,
+      "rmse": 0.45963988404461775
+    },
+    "Lane 1 A": {
+      "C": 22.80730348969662,
+      "period": 4.054631731501621,
+      "pairs": 1568,
+      "rmse": 1.0624319045819035
+    },
+    "Lane 1 B": {
+      "C": 21.860789417496452,
+      "period": 4.803975946067122,
+      "pairs": 1568,
+      "rmse": 0.9583892162889943
+    }
+  },
+  "return_Character": {
+    "file": "G:\\trading\\guias\\analisis\\manual\\C_source15_chart15_regreso_b.csv",
+    "source_seconds": 15,
+    "C_seconds_interval": {
+      "lower_inclusive": 105.98314606741573,
+      "upper_exclusive": 106.00694444444444
+    },
+    "compatible_integer_C_seconds": [
+      106
+    ],
+    "periods": {
+      "Layer A": 170,
+      "Layer A boundary": 210,
+      "Layer B": 57,
+      "Layer B boundary": 70,
+      "Layer C": 19,
+      "Layer C boundary": 23,
+      "Extra cloud 1": 509,
+      "Extra cloud 1 boundary": 629,
+      "Extra cloud 2": 1526,
+      "Extra cloud 2 boundary": 1887
+    },
+    "pairs_per_curve": 6269,
+    "max_rmse_step": 1.5086844695669749e-12,
+    "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+  },
+  "return_Lite": {
+    "Lane 3 A": {
+      "C": 105.99999999999726,
+      "period": 169.59999999999562,
+      "pairs": 6269,
+      "rmse": 1.525402588890507e-12
+    },
+    "Lane 3 B": {
+      "C": 106.00000000006386,
+      "period": 209.64444444457075,
+      "pairs": 6269,
+      "rmse": 2.2665573286065217e-12
+    },
+    "Lane 2 A": {
+      "C": 105.99999999999578,
+      "period": 56.53333333333108,
+      "pairs": 6269,
+      "rmse": 1.5520675110894513e-12
+    },
+    "Lane 2 B": {
+      "C": 106.0000000000073,
+      "period": 69.8814814814863,
+      "pairs": 6269,
+      "rmse": 1.5669497843339739e-12
+    },
+    "Lane 1 A": {
+      "C": 105.99999999999939,
+      "period": 18.844444444444335,
+      "pairs": 6269,
+      "rmse": 1.7407907095706963e-12
+    },
+    "Lane 1 B": {
+      "C": 105.99999999999623,
+      "period": 23.293827160493,
+      "pairs": 6269,
+      "rmse": 1.9960422099952843e-12
+    }
+  },
+  "roundtrip": {
+    "offset_seconds": 0,
+    "visibility_mismatches": 0,
+    "curves": {
+      "Lane 3 A": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Lane 3 B": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Lane 2 A": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Lane 2 B": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Lane 1 A": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Lane 1 B": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Layer A": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Layer A boundary": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Layer B": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Layer B boundary": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Layer C": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Layer C boundary": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Extra cloud 1": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Extra cloud 1 boundary": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Extra cloud 2": {
+        "values": 6282,
+        "max_error": 0.0
+      },
+      "Extra cloud 2 boundary": {
+        "values": 6282,
+        "max_error": 0.0
+      }
+    }
+  },
+  "return_repeat": {
+    "offset_seconds": 0,
+    "visibility_mismatches": 0,
+    "curves": {
+      "Lane 3 A": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Lane 3 B": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Lane 2 A": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Lane 2 B": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Lane 1 A": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Lane 1 B": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Layer A": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Layer A boundary": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Layer B": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Layer B boundary": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Layer C": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Layer C boundary": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Extra cloud 1": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Extra cloud 1 boundary": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Extra cloud 2": {
+        "values": 6290,
+        "max_error": 0.0
+      },
+      "Extra cloud 2 boundary": {
+        "values": 6290,
+        "max_error": 0.0
+      }
+    }
+  },
+  "exploratory_coarse_Lite_four_native_updates": {
+    "Lane 3 A": {
+      "C": 66.00000000002831,
+      "pairs": 1549,
+      "rmse": 4.819025030623454e-12
+    },
+    "Lane 3 B": {
+      "C": 66.00000000000622,
+      "pairs": 1549,
+      "rmse": 4.19941990436962e-12
+    },
+    "Lane 2 A": {
+      "C": 65.99999999999866,
+      "pairs": 1549,
+      "rmse": 4.522686960458956e-12
+    },
+    "Lane 2 B": {
+      "C": 66.0000000000073,
+      "pairs": 1549,
+      "rmse": 5.3051327207976095e-12
+    },
+    "Lane 1 A": {
+      "C": 65.99999999998792,
+      "pairs": 1549,
+      "rmse": 6.075420318485422e-12
+    },
+    "Lane 1 B": {
+      "C": 66.00000000000375,
+      "pairs": 1549,
+      "rmse": 4.061866006977977e-12
+    }
+  },
+  "Character_fixed_C106_recurrence_chart60": {
+    "Layer A": {
+      "fixed_native_period": 170,
+      "pairs": 1554,
+      "max_error": 0.3600264910310216,
+      "rmse": 0.01100383474949382
+    },
+    "Layer A boundary": {
+      "fixed_native_period": 210,
+      "pairs": 1554,
+      "max_error": 0.3303260673164914,
+      "rmse": 0.010055203815294055
+    },
+    "Layer B": {
+      "fixed_native_period": 57,
+      "pairs": 1554,
+      "max_error": 0.3689529129405855,
+      "rmse": 0.011175717194533983
+    },
+    "Layer B boundary": {
+      "fixed_native_period": 70,
+      "pairs": 1554,
+      "max_error": 0.3836808599407959,
+      "rmse": 0.011664420864470705
+    },
+    "Layer C": {
+      "fixed_native_period": 19,
+      "pairs": 1554,
+      "max_error": 0.42382509012168157,
+      "rmse": 0.012273801241956362
+    },
+    "Layer C boundary": {
+      "fixed_native_period": 23,
+      "pairs": 1554,
+      "max_error": 0.39319859339957475,
+      "rmse": 0.011522935950189009
+    },
+    "Extra cloud 1": {
+      "fixed_native_period": 509,
+      "pairs": 1554,
+      "max_error": 0.2071827488252893,
+      "rmse": 0.00594756022404003
+    },
+    "Extra cloud 1 boundary": {
+      "fixed_native_period": 629,
+      "pairs": 1554,
+      "max_error": 0.18689283573257853,
+      "rmse": 0.005259873955785883
+    },
+    "Extra cloud 2": {
+      "fixed_native_period": 1526,
+      "pairs": 1554,
+      "max_error": 0.12831613972957712,
+      "rmse": 0.0034875400979070617
+    },
+    "Extra cloud 2 boundary": {
+      "fixed_native_period": 1887,
+      "pairs": 1554,
+      "max_error": 0.11610814734376618,
+      "rmse": 0.0031657071378315975
+    }
+  },
+  "predeclared_control30": {
+    "repeat": {
+      "offset_seconds": 0,
+      "visibility_mismatches": 27190,
+      "curves": {
+        "Lane 3 A": {
+          "values": 3154,
+          "max_error": 0.0
+        },
+        "Lane 3 B": {
+          "values": 3154,
+          "max_error": 0.0
+        },
+        "Lane 2 A": {
+          "values": 3154,
+          "max_error": 0.0
+        },
+        "Lane 2 B": {
+          "values": 3154,
+          "max_error": 0.0
+        },
+        "Lane 1 A": {
+          "values": 3154,
+          "max_error": 0.0
+        },
+        "Lane 1 B": {
+          "values": 3154,
+          "max_error": 0.0
+        },
+        "Layer A": {
+          "values": 435,
+          "max_error": 0.0
+        },
+        "Layer A boundary": {
+          "values": 435,
+          "max_error": 0.0
+        },
+        "Layer B": {
+          "values": 435,
+          "max_error": 0.0
+        },
+        "Layer B boundary": {
+          "values": 435,
+          "max_error": 0.0
+        },
+        "Layer C": {
+          "values": 435,
+          "max_error": 0.0
+        },
+        "Layer C boundary": {
+          "values": 435,
+          "max_error": 0.0
+        },
+        "Extra cloud 1": {
+          "values": 435,
+          "max_error": 0.0
+        },
+        "Extra cloud 1 boundary": {
+          "values": 435,
+          "max_error": 0.0
+        },
+        "Extra cloud 2": {
+          "values": 435,
+          "max_error": 0.0
+        },
+        "Extra cloud 2 boundary": {
+          "values": 435,
+          "max_error": 0.0
+        }
+      }
+    },
+    "mapping": {
+      "offset_seconds": 15,
+      "visibility_mismatches": 0,
+      "curves": {
+        "Lane 3 A": {
+          "values": 3142,
+          "max_error": 14.021522733502934
+        },
+        "Lane 3 B": {
+          "values": 3142,
+          "max_error": 14.215775040265726
+        },
+        "Lane 2 A": {
+          "values": 3142,
+          "max_error": 13.830832517331146
+        },
+        "Lane 2 B": {
+          "values": 3142,
+          "max_error": 13.773354626038781
+        },
+        "Lane 1 A": {
+          "values": 3142,
+          "max_error": 11.906258588849596
+        },
+        "Lane 1 B": {
+          "values": 3142,
+          "max_error": 12.460564147913828
+        },
+        "Layer A": {
+          "values": 3142,
+          "max_error": 0.025703815295855748
+        },
+        "Layer A boundary": {
+          "values": 3142,
+          "max_error": 0.020924626758642262
+        },
+        "Layer B": {
+          "values": 3142,
+          "max_error": 0.07232768871108419
+        },
+        "Layer B boundary": {
+          "values": 3142,
+          "max_error": 0.059859853423404275
+        },
+        "Layer C": {
+          "values": 3142,
+          "max_error": 0.18225000000165892
+        },
+        "Layer C boundary": {
+          "values": 3142,
+          "max_error": 0.15755208333212067
+        },
+        "Extra cloud 1": {
+          "values": 3142,
+          "max_error": 0.00875446095233201
+        },
+        "Extra cloud 1 boundary": {
+          "values": 3142,
+          "max_error": 0.007097577654349152
+        },
+        "Extra cloud 2": {
+          "values": 3142,
+          "max_error": 0.0029392402757366654
+        },
+        "Extra cloud 2 boundary": {
+          "values": 3142,
+          "max_error": 0.0023784275217622053
+        }
+      }
+    },
+    "Lite_two_native_updates": {
+      "Lane 3 A": {
+        "C": 78.99999999997317,
+        "pairs": 3128,
+        "rmse": 2.614854154643179e-12
+      },
+      "Lane 3 B": {
+        "C": 79.0000000000206,
+        "pairs": 3128,
+        "rmse": 2.865758308937645e-12
+      },
+      "Lane 2 A": {
+        "C": 79.00000000001313,
+        "pairs": 3128,
+        "rmse": 2.625350755130124e-12
+      },
+      "Lane 2 B": {
+        "C": 79.00000000002768,
+        "pairs": 3128,
+        "rmse": 3.0936636386209748e-12
+      },
+      "Lane 1 A": {
+        "C": 78.9999999999917,
+        "pairs": 3128,
+        "rmse": 2.4032177237611894e-12
+      },
+      "Lane 1 B": {
+        "C": 78.9999999999998,
+        "pairs": 3128,
+        "rmse": 2.9665963637169978e-12
+      }
+    },
+    "Character_fixed_C106_recurrence": {
+      "Layer A": {
+        "fixed_native_period": 170,
+        "pairs": 3128,
+        "max_error": 0.19666983098068158,
+        "rmse": 0.00533841890907166
+      },
+      "Layer A boundary": {
+        "fixed_native_period": 210,
+        "pairs": 3128,
+        "max_error": 0.17813401670355233,
+        "rmse": 0.004884818039404453
+      },
+      "Layer B": {
+        "fixed_native_period": 57,
+        "pairs": 3128,
+        "max_error": 0.1914065226119419,
+        "rmse": 0.006321682304708381
+      },
+      "Layer B boundary": {
+        "fixed_native_period": 70,
+        "pairs": 3128,
+        "max_error": 0.18538171017644345,
+        "rmse": 0.006104997082835282
+      },
+      "Layer C": {
+        "fixed_native_period": 19,
+        "pairs": 3128,
+        "max_error": 0.3894277836807305,
+        "rmse": 0.011113477068720328
+      },
+      "Layer C boundary": {
+        "fixed_native_period": 23,
+        "pairs": 3128,
+        "max_error": 0.3508321303525008,
+        "rmse": 0.009823488757948312
+      },
+      "Extra cloud 1": {
+        "fixed_native_period": 509,
+        "pairs": 3128,
+        "max_error": 0.09904668081799173,
+        "rmse": 0.0026815310907517148
+      },
+      "Extra cloud 1 boundary": {
+        "fixed_native_period": 629,
+        "pairs": 3128,
+        "max_error": 0.09045225806039525,
+        "rmse": 0.0023293019744664604
+      },
+      "Extra cloud 2": {
+        "fixed_native_period": 1526,
+        "pairs": 3128,
+        "max_error": 0.06377526524011046,
+        "rmse": 0.001616144910169274
+      },
+      "Extra cloud 2 boundary": {
+        "fixed_native_period": 1887,
+        "pairs": 3128,
+        "max_error": 0.05789500994796981,
+        "rmse": 0.0014752083779165145
+      }
+    }
+  },
+  "posthoc_first90_minutes": {
+    "60": {
+      "scope": "19:20\u201320:50 UTC, definido despu\u00e9s de ver discrepancias completas; no reemplaza prueba completa",
+      "Character_recurrence": {
+        "Layer A": {
+          "fixed_native_period": 170,
+          "pairs": 88,
+          "max_error": 1.0913936421275139e-11,
+          "rmse": 4.653718126550894e-12
+        },
+        "Layer A boundary": {
+          "fixed_native_period": 210,
+          "pairs": 88,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 3.699470127717937e-12
+        },
+        "Layer B": {
+          "fixed_native_period": 57,
+          "pairs": 88,
+          "max_error": 1.0913936421275139e-11,
+          "rmse": 3.290675645014893e-12
+        },
+        "Layer B boundary": {
+          "fixed_native_period": 70,
+          "pairs": 88,
+          "max_error": 1.0913936421275139e-11,
+          "rmse": 3.49028859491317e-12
+        },
+        "Layer C": {
+          "fixed_native_period": 19,
+          "pairs": 88,
+          "max_error": 1.0913936421275139e-11,
+          "rmse": 3.596400540933832e-12
+        },
+        "Layer C boundary": {
+          "fixed_native_period": 23,
+          "pairs": 88,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 3.554335929651259e-12
+        },
+        "Extra cloud 1": {
+          "fixed_native_period": 509,
+          "pairs": 88,
+          "max_error": 1.0913936421275139e-11,
+          "rmse": 3.973868376785062e-12
+        },
+        "Extra cloud 1 boundary": {
+          "fixed_native_period": 629,
+          "pairs": 88,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 2.227797943108433e-12
+        },
+        "Extra cloud 2": {
+          "fixed_native_period": 1526,
+          "pairs": 88,
+          "max_error": 1.0913936421275139e-11,
+          "rmse": 3.1979618979368117e-12
+        },
+        "Extra cloud 2 boundary": {
+          "fixed_native_period": 1887,
+          "pairs": 88,
+          "max_error": 1.0913936421275139e-11,
+          "rmse": 3.425043802749394e-12
+        }
+      },
+      "mapping": {
+        "offset_seconds": 45,
+        "visibility_mismatches": 46,
+        "curves": {
+          "Lane 3 A": {
+            "values": 84,
+            "max_error": 4.694196788575937
+          },
+          "Lane 3 B": {
+            "values": 84,
+            "max_error": 4.560794369655923
+          },
+          "Lane 2 A": {
+            "values": 84,
+            "max_error": 5.864196118644031
+          },
+          "Lane 2 B": {
+            "values": 84,
+            "max_error": 5.851991123625339
+          },
+          "Lane 1 A": {
+            "values": 84,
+            "max_error": 4.918400005368312
+          },
+          "Lane 1 B": {
+            "values": 84,
+            "max_error": 5.319926973694237
+          },
+          "Layer A": {
+            "values": 89,
+            "max_error": 0.03250092995585874
+          },
+          "Layer A boundary": {
+            "values": 89,
+            "max_error": 0.02672712089770357
+          },
+          "Layer B": {
+            "values": 89,
+            "max_error": 0.08226650525102741
+          },
+          "Layer B boundary": {
+            "values": 89,
+            "max_error": 0.07013630475194077
+          },
+          "Layer C": {
+            "values": 89,
+            "max_error": 0.14975482499721693
+          },
+          "Layer C boundary": {
+            "values": 89,
+            "max_error": 0.14107033756226883
+          },
+          "Extra cloud 1": {
+            "values": 89,
+            "max_error": 0.011467895528767258
+          },
+          "Extra cloud 1 boundary": {
+            "values": 89,
+            "max_error": 0.009328919073595898
+          },
+          "Extra cloud 2": {
+            "values": 89,
+            "max_error": 0.0038959364574111532
+          },
+          "Extra cloud 2 boundary": {
+            "values": 89,
+            "max_error": 0.0031561447576677892
+          }
+        }
+      }
+    },
+    "30": {
+      "scope": "19:20\u201320:50 UTC, definido despu\u00e9s de ver discrepancias completas; no reemplaza prueba completa",
+      "Character_recurrence": {
+        "Layer A": {
+          "fixed_native_period": 170,
+          "pairs": 178,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 3.0364141470657726e-12
+        },
+        "Layer A boundary": {
+          "fixed_native_period": 210,
+          "pairs": 178,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 2.5724394843074972e-12
+        },
+        "Layer B": {
+          "fixed_native_period": 57,
+          "pairs": 178,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 2.4389065334762233e-12
+        },
+        "Layer B boundary": {
+          "fixed_native_period": 70,
+          "pairs": 178,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 2.4389065334762233e-12
+        },
+        "Layer C": {
+          "fixed_native_period": 19,
+          "pairs": 178,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 2.4082272426117065e-12
+        },
+        "Layer C boundary": {
+          "fixed_native_period": 23,
+          "pairs": 178,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 2.4842151717387012e-12
+        },
+        "Extra cloud 1": {
+          "fixed_native_period": 509,
+          "pairs": 178,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 2.8986073249293572e-12
+        },
+        "Extra cloud 1 boundary": {
+          "fixed_native_period": 629,
+          "pairs": 178,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 1.8087414943734095e-12
+        },
+        "Extra cloud 2": {
+          "fixed_native_period": 1526,
+          "pairs": 178,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 2.198400640628163e-12
+        },
+        "Extra cloud 2 boundary": {
+          "fixed_native_period": 1887,
+          "pairs": 178,
+          "max_error": 7.275957614183426e-12,
+          "rmse": 2.4842151717387012e-12
+        }
+      },
+      "mapping": {
+        "offset_seconds": 15,
+        "visibility_mismatches": 0,
+        "curves": {
+          "Lane 3 A": {
+            "values": 179,
+            "max_error": 2.7472062858360005
+          },
+          "Lane 3 B": {
+            "values": 179,
+            "max_error": 2.7010885574200074
+          },
+          "Lane 2 A": {
+            "values": 179,
+            "max_error": 3.669126439792308
+          },
+          "Lane 2 B": {
+            "values": 179,
+            "max_error": 3.5719466962291335
+          },
+          "Lane 1 A": {
+            "values": 179,
+            "max_error": 3.181105026324076
+          },
+          "Lane 1 B": {
+            "values": 179,
+            "max_error": 3.3900410366768483
+          },
+          "Layer A": {
+            "values": 179,
+            "max_error": 0.025703815295855748
+          },
+          "Layer A boundary": {
+            "values": 179,
+            "max_error": 0.020924626758642262
+          },
+          "Layer B": {
+            "values": 179,
+            "max_error": 0.07232768871108419
+          },
+          "Layer B boundary": {
+            "values": 179,
+            "max_error": 0.059859853423404275
+          },
+          "Layer C": {
+            "values": 179,
+            "max_error": 0.18225000000165892
+          },
+          "Layer C boundary": {
+            "values": 179,
+            "max_error": 0.15755208333212067
+          },
+          "Extra cloud 1": {
+            "values": 179,
+            "max_error": 0.00875446095233201
+          },
+          "Extra cloud 1 boundary": {
+            "values": 179,
+            "max_error": 0.007097577654349152
+          },
+          "Extra cloud 2": {
+            "values": 179,
+            "max_error": 0.0029392402757366654
+          },
+          "Extra cloud 2 boundary": {
+            "values": 179,
+            "max_error": 0.0023784275217622053
+          }
+        }
+      }
+    }
+  }
+}

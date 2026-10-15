@@ -1,0 +1,1273 @@
+{
+  "source_path": "C:\\Users\\PC\\.gemini\\antigravity\\brain\\0d7f3bfd-8524-49c4-8cc4-be41c8fbcb27\\scratch\\PoiSzn_C_Detector_Lab.pine",
+  "sha256": "bd4fd5694982867eefbc5bb7b6b6abf3a93cbe2578e75dba392d60709ff5138f",
+  "tick_assumed_verified_NQ": 0.25,
+  "scope": "Offline emulation of current Pine formulas and 180min causal state; not compilation or Pine runtime validation. Original source unchanged. Inputs equal native chart source, exact aligned anchors.",
+  "summary": {
+    "short": {
+      "cases": 7,
+      "matches": 7
+    },
+    "long": {
+      "cases": 35,
+      "matches": 4
+    }
+  },
+  "cases": [
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_18",
+      "bars": 18,
+      "original_C": 60.000000000001684,
+      "prediction": {
+        "C": 60,
+        "branch": "short"
+      },
+      "error_seconds": -1.6839862837514374e-12,
+      "match": true,
+      "manual_engine": {
+        "supplied_C": 60.000000000001684,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 534,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 890,
+            "max_error": 1.8189894035458565e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 60,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 534,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 890,
+            "max_error": 1.8189894035458565e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_19",
+      "bars": 19,
+      "original_C": 62.29508196721091,
+      "prediction": {
+        "C": 62.295081967213115,
+        "branch": "short"
+      },
+      "error_seconds": 2.2026824808563106e-12,
+      "match": true,
+      "manual_engine": {
+        "supplied_C": 62.29508196721091,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 540,
+            "max_error": 3.2741809263825417e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 900,
+            "max_error": 1.8189894035458565e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 62.295081967213115,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 540,
+            "max_error": 3.2741809263825417e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 900,
+            "max_error": 1.8189894035458565e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_20",
+      "bars": 20,
+      "original_C": 65.57377049180404,
+      "prediction": {
+        "C": 65.57377049180327,
+        "branch": "short"
+      },
+      "error_seconds": -7.673861546209082e-13,
+      "match": true,
+      "manual_engine": {
+        "supplied_C": 65.57377049180404,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 546,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 910,
+            "max_error": 3.637978807091713e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 65.57377049180327,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 546,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 910,
+            "max_error": 3.637978807091713e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_21",
+      "bars": 21,
+      "original_C": 76.99999999999633,
+      "prediction": {
+        "C": 114,
+        "branch": "consolidation",
+        "ticks": 197,
+        "start_position": 0.8984771573604061,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 37.000000000003666,
+      "match": false,
+      "manual_engine": {
+        "supplied_C": 76.99999999999633,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 552,
+            "max_error": 3.2741809263825417e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 920,
+            "max_error": 2.1827872842550278e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 114,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 552,
+            "max_error": 13.837760623995564,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 920,
+            "max_error": 13.674741011898732,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_22",
+      "bars": 22,
+      "original_C": 76.99999999999663,
+      "prediction": {
+        "C": 116,
+        "branch": "consolidation",
+        "ticks": 197,
+        "start_position": 0.8984771573604061,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 39.00000000000337,
+      "match": false,
+      "manual_engine": {
+        "supplied_C": 76.99999999999663,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 558,
+            "max_error": 4.001776687800884e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 930,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 116,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 558,
+            "max_error": 14.449378825524036,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 930,
+            "max_error": 14.29768742543456,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_23",
+      "bars": 23,
+      "original_C": 76.99999999999655,
+      "prediction": {
+        "C": 118,
+        "branch": "consolidation",
+        "ticks": 197,
+        "start_position": 0.8984771573604061,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 41.00000000000345,
+      "match": false,
+      "manual_engine": {
+        "supplied_C": 76.99999999999655,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 564,
+            "max_error": 4.001776687800884e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 940,
+            "max_error": 3.637978807091713e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 118,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 564,
+            "max_error": 15.072083872972144,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 940,
+            "max_error": 14.93058841054517,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_0600_24",
+      "bars": 24,
+      "original_C": 73.00000000000334,
+      "prediction": {
+        "C": 221,
+        "branch": "pivot_add_count",
+        "ticks": 197,
+        "start_position": 0.8984771573604061,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": 147.99999999999665,
+      "match": false,
+      "manual_engine": {
+        "supplied_C": 73.00000000000334,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 570,
+            "max_error": 1.8189894035458565e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 950,
+            "max_error": 2.1827872842550278e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 221,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 570,
+            "max_error": 37.576634108569124,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 950,
+            "max_error": 37.65532609521688,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_18",
+      "bars": 18,
+      "original_C": 60.0,
+      "prediction": {
+        "C": 60,
+        "branch": "short"
+      },
+      "error_seconds": 0.0,
+      "match": true,
+      "manual_engine": {
+        "supplied_C": 60.0,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1032,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1720,
+            "max_error": 2.1827872842550278e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 60,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1032,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1720,
+            "max_error": 2.1827872842550278e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_19",
+      "bars": 19,
+      "original_C": 62.295081967211935,
+      "prediction": {
+        "C": 62.295081967213115,
+        "branch": "short"
+      },
+      "error_seconds": 1.1795009413617663e-12,
+      "match": true,
+      "manual_engine": {
+        "supplied_C": 62.295081967211935,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1038,
+            "max_error": 4.001776687800884e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1730,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 62.295081967213115,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1038,
+            "max_error": 4.001776687800884e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1730,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_20",
+      "bars": 20,
+      "original_C": 65.57377049180356,
+      "prediction": {
+        "C": 65.57377049180327,
+        "branch": "short"
+      },
+      "error_seconds": -2.8421709430404007e-13,
+      "match": true,
+      "manual_engine": {
+        "supplied_C": 65.57377049180356,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1044,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1740,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 65.57377049180327,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1044,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1740,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_21",
+      "bars": 21,
+      "original_C": 61.999999999999154,
+      "prediction": {
+        "C": 248,
+        "branch": "consolidation",
+        "ticks": 429,
+        "start_position": 0.8717948717948718,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 186.00000000000085,
+      "match": false,
+      "manual_engine": {
+        "supplied_C": 61.999999999999154,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1050,
+            "max_error": 2.1827872842550278e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1750,
+            "max_error": 1.8189894035458565e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 248,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1050,
+            "max_error": 28.13556737228646,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1750,
+            "max_error": 30.458422892315866,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_22",
+      "bars": 22,
+      "original_C": 61.99999999999912,
+      "prediction": {
+        "C": 451,
+        "branch": "pivot_add_count",
+        "ticks": 429,
+        "start_position": 0.8717948717948718,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": 389.0000000000009,
+      "match": false,
+      "manual_engine": {
+        "supplied_C": 61.99999999999912,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1056,
+            "max_error": 3.2741809263825417e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1760,
+            "max_error": 2.546585164964199e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 451,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1056,
+            "max_error": 35.69185308062515,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1760,
+            "max_error": 36.03826413824936,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_23",
+      "bars": 23,
+      "original_C": 82.99999999999876,
+      "prediction": {
+        "C": 252,
+        "branch": "consolidation",
+        "ticks": 429,
+        "start_position": 0.8717948717948718,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 169.00000000000125,
+      "match": false,
+      "manual_engine": {
+        "supplied_C": 82.99999999999876,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1062,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1770,
+            "max_error": 2.546585164964199e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 252,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1062,
+            "max_error": 23.126198626148835,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1770,
+            "max_error": 23.287215011107037,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_nueva_1400_24",
+      "bars": 24,
+      "original_C": 76.00000000000095,
+      "prediction": {
+        "C": 254,
+        "branch": "consolidation",
+        "ticks": 429,
+        "start_position": 0.8717948717948718,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 177.99999999999903,
+      "match": false,
+      "manual_engine": {
+        "supplied_C": 76.00000000000095,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1068,
+            "max_error": 3.2741809263825417e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1780,
+            "max_error": 2.1827872842550278e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 254,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1068,
+            "max_error": 24.641392334160628,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1780,
+            "max_error": 24.973799042658356,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_shift_0601",
+      "bars": 21,
+      "original_C": 79.99999999999943,
+      "prediction": {
+        "C": 98,
+        "branch": "consolidation",
+        "ticks": 169,
+        "start_position": 0.9940828402366864,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 18.00000000000057,
+      "match": false,
+      "manual_engine": {
+        "supplied_C": 79.99999999999943,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 582,
+            "max_error": 4.001776687800884e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 970,
+            "max_error": 3.2741809263825417e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 98,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 582,
+            "max_error": 7.167379347472888,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 970,
+            "max_error": 6.700603545705235,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_fronteras_nuevas.json",
+      "case": "C_frontera_shift_1401",
+      "bars": 21,
+      "original_C": 61.99999999999911,
+      "prediction": {
+        "C": 450,
+        "branch": "pivot_add_count",
+        "ticks": 429,
+        "start_position": 0.9277389277389277,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": 388.0000000000009,
+      "match": false,
+      "manual_engine": {
+        "supplied_C": 61.99999999999911,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1056,
+            "max_error": 3.2741809263825417e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1760,
+            "max_error": 2.546585164964199e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 450,
+        "breakout_side": "bear",
+        "families": {
+          "Lite": {
+            "compared_values": 1056,
+            "max_error": 35.6603250568005,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1760,
+            "max_error": 36.03826413824936,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:00:00\u201319:20:00",
+      "bars": 21,
+      "original_C": 76.99999999999851,
+      "prediction": {
+        "C": 77,
+        "branch": "root",
+        "ticks": 98,
+        "start_position": 0.16326530612244897,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 1.4921397450962104e-12,
+      "match": true
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:00:00\u201319:21:00",
+      "bars": 22,
+      "original_C": 101.99999999999835,
+      "prediction": {
+        "C": 81,
+        "branch": "root_pivot",
+        "ticks": 98,
+        "start_position": 0.16326530612244897,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": -20.99999999999835,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:00:00\u201319:22:00",
+      "bars": 23,
+      "original_C": 76.99999999999841,
+      "prediction": {
+        "C": 78,
+        "branch": "root",
+        "ticks": 99,
+        "start_position": 0.16161616161616163,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 1.0000000000015916,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:00:00\u201319:23:00",
+      "bars": 24,
+      "original_C": 76.9999999999985,
+      "prediction": {
+        "C": 82,
+        "branch": "root_pivot",
+        "ticks": 99,
+        "start_position": 0.16161616161616163,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": 5.000000000001506,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:00:00\u201319:24:00",
+      "bars": 25,
+      "original_C": 59.99999999999963,
+      "prediction": {
+        "C": 78,
+        "branch": "root",
+        "ticks": 99,
+        "start_position": 0.16161616161616163,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 18.00000000000037,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:01:00\u201319:21:00",
+      "bars": 21,
+      "original_C": 76.99999999999798,
+      "prediction": {
+        "C": 72,
+        "branch": "root_pivot",
+        "ticks": 86,
+        "start_position": 0.1744186046511628,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": -4.999999999997982,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:01:00\u201319:22:00",
+      "bars": 22,
+      "original_C": 76.99999999999841,
+      "prediction": {
+        "C": 68,
+        "branch": "root",
+        "ticks": 87,
+        "start_position": 0.1724137931034483,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": -8.999999999998408,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:01:00\u201319:23:00",
+      "bars": 23,
+      "original_C": 76.9999999999985,
+      "prediction": {
+        "C": 72,
+        "branch": "root_pivot",
+        "ticks": 87,
+        "start_position": 0.1724137931034483,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": -4.999999999998494,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:01:00\u201319:24:00",
+      "bars": 24,
+      "original_C": 76.99999999999822,
+      "prediction": {
+        "C": 68,
+        "branch": "root",
+        "ticks": 87,
+        "start_position": 0.1724137931034483,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": -8.999999999998224,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:02:00\u201319:21:00",
+      "bars": 20,
+      "original_C": 65.57377049180305,
+      "prediction": {
+        "C": 65.57377049180327,
+        "branch": "short"
+      },
+      "error_seconds": 2.2737367544323206e-13,
+      "match": true
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:02:00\u201319:22:00",
+      "bars": 21,
+      "original_C": 49.99999999999989,
+      "prediction": {
+        "C": 68,
+        "branch": "expansion",
+        "ticks": 87,
+        "start_position": 0.4827586206896552,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 18.000000000000107,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:02:00\u201319:23:00",
+      "bars": 22,
+      "original_C": 51.99999999999978,
+      "prediction": {
+        "C": 109,
+        "branch": "pivot_add_count",
+        "ticks": 87,
+        "start_position": 0.4827586206896552,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": 57.00000000000022,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:02:00\u201319:24:00",
+      "bars": 23,
+      "original_C": 55.000000000000334,
+      "prediction": {
+        "C": 54,
+        "branch": "consolidation",
+        "ticks": 87,
+        "start_position": 0.4827586206896552,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": -1.000000000000334,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:02:00\u201319:25:00",
+      "bars": 24,
+      "original_C": 71.00000000000176,
+      "prediction": {
+        "C": 70,
+        "branch": "expansion",
+        "ticks": 89,
+        "start_position": 0.47191011235955055,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": -1.0000000000017621,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:03:00\u201319:23:00",
+      "bars": 21,
+      "original_C": 49.99999999999983,
+      "prediction": {
+        "C": 108,
+        "branch": "pivot_add_count",
+        "ticks": 87,
+        "start_position": 0.42528735632183906,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": 58.00000000000017,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:03:00\u201319:24:00",
+      "bars": 22,
+      "original_C": 51.99999999999968,
+      "prediction": {
+        "C": 52,
+        "branch": "consolidation",
+        "ticks": 87,
+        "start_position": 0.42528735632183906,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 3.197442310920451e-13,
+      "match": true
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:03:00\u201319:25:00",
+      "bars": 23,
+      "original_C": 71.00000000000131,
+      "prediction": {
+        "C": 70,
+        "branch": "expansion",
+        "ticks": 89,
+        "start_position": 0.4157303370786517,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": -1.0000000000013074,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:04:00\u201319:24:00",
+      "bars": 21,
+      "original_C": 49.99999999999971,
+      "prediction": {
+        "C": 50,
+        "branch": "consolidation",
+        "ticks": 87,
+        "start_position": 0.4367816091954023,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 2.913225216616411e-13,
+      "match": true
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:04:00\u201319:25:00",
+      "bars": 22,
+      "original_C": 71.00000000000131,
+      "prediction": {
+        "C": 70,
+        "branch": "expansion",
+        "ticks": 89,
+        "start_position": 0.42696629213483145,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": -1.0000000000013074,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:04:00\u201319:26:00",
+      "bars": 23,
+      "original_C": 71.00000000000114,
+      "prediction": {
+        "C": 75,
+        "branch": "expansion",
+        "ticks": 96,
+        "start_position": 0.3958333333333333,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 3.999999999998863,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:04:00\u201319:27:00",
+      "bars": 24,
+      "original_C": 71.00000000000108,
+      "prediction": {
+        "C": 81,
+        "branch": "expansion",
+        "ticks": 103,
+        "start_position": 0.36893203883495146,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 9.99999999999892,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:04:00\u201319:28:00",
+      "bars": 25,
+      "original_C": 128.00000000000065,
+      "prediction": {
+        "C": 128,
+        "branch": "pivot_add_count",
+        "ticks": 103,
+        "start_position": 0.36893203883495146,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": true
+      },
+      "error_seconds": -6.536993168992922e-13,
+      "match": true
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:04:00\u201319:29:00",
+      "bars": 26,
+      "original_C": 134.00000000000446,
+      "prediction": {
+        "C": 85,
+        "branch": "expansion",
+        "ticks": 108,
+        "start_position": 0.35185185185185186,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": -49.00000000000446,
+      "match": false
+    },
+    {
+      "dataset": "C_matriz.json",
+      "case": "19:04:00\u201319:30:00",
+      "bars": 27,
+      "original_C": 109.00000000000102,
+      "prediction": {
+        "C": 90,
+        "branch": "expansion",
+        "ticks": 114,
+        "start_position": 0.3333333333333333,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": -19.000000000001023,
+      "match": false
+    },
+    {
+      "dataset": "C_21_regimenes.json",
+      "case": "C_21_alcista",
+      "bars": 21,
+      "original_C": 69.00000000000038,
+      "prediction": {
+        "C": 276,
+        "branch": "root",
+        "ticks": 351,
+        "start_position": 0.09116809116809117,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 206.9999999999996,
+      "match": false,
+      "manual_engine": {
+        "supplied_C": 69.00000000000038,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 1050,
+            "max_error": 3.2741809263825417e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1750,
+            "max_error": 2.9103830456733704e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 276,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 1050,
+            "max_error": 27.85965809183108,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1750,
+            "max_error": 33.35877055941455,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    },
+    {
+      "dataset": "C_21_regimenes.json",
+      "case": "C_21_lateral",
+      "bars": 21,
+      "original_C": 75.00000000000104,
+      "prediction": {
+        "C": 87,
+        "branch": "consolidation",
+        "ticks": 150,
+        "start_position": 0.2866666666666667,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      },
+      "error_seconds": 11.999999999998963,
+      "match": false,
+      "manual_engine": {
+        "supplied_C": 75.00000000000104,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 972,
+            "max_error": 3.2741809263825417e-11,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1620,
+            "max_error": 2.546585164964199e-11,
+            "visibility_mismatches": 0
+          }
+        }
+      },
+      "automatic_engine": {
+        "supplied_C": 87,
+        "breakout_side": "bull",
+        "families": {
+          "Lite": {
+            "compared_values": 972,
+            "max_error": 5.19222762480058,
+            "visibility_mismatches": 0
+          },
+          "Character": {
+            "compared_values": 1620,
+            "max_error": 5.2559040544656455,
+            "visibility_mismatches": 0
+          }
+        }
+      }
+    }
+  ]
+}

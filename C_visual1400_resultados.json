@@ -1,0 +1,524 @@
+{
+  "cases": {
+    "1421": {
+      "C": 62,
+      "n": 22,
+      "H": 30974.5,
+      "L": 30867.25,
+      "rupture": "2026-10-12T14:26:00+00:00",
+      "fits": {
+        "Lane 3 A": {
+          "C": 61.99999999999405,
+          "period": 24.79999999999762,
+          "pairs": 3055,
+          "rmse": 1.696726151091098e-12
+        },
+        "Lane 3 B": {
+          "C": 61.99999999999468,
+          "period": 30.655555555552926,
+          "pairs": 3055,
+          "rmse": 1.7183942154039855e-12
+        },
+        "Lane 2 A": {
+          "C": 61.9999999999995,
+          "period": 8.2666666666666,
+          "pairs": 3055,
+          "rmse": 1.5618632119486082e-12
+        },
+        "Lane 2 B": {
+          "C": 61.99999999999958,
+          "period": 10.218518518518449,
+          "pairs": 3055,
+          "rmse": 1.558766316053114e-12
+        },
+        "Lane 1 A": {
+          "C": 61.999999999999886,
+          "period": 2.7555555555555507,
+          "pairs": 3055,
+          "rmse": 1.621493821742926e-12
+        },
+        "Lane 1 B": {
+          "C": 61.999999999997975,
+          "period": 3.4061728395060618,
+          "pairs": 3055,
+          "rmse": 2.4007339165459733e-12
+        }
+      },
+      "repeat": {
+        "common_closed_bars": 3248,
+        "columns": {
+          "open": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "high": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "low": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "close": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "Volume": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "Lane 3 A": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 3 B": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 2 A": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 2 B": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 1 A": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 1 B": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          }
+        }
+      },
+      "native_common_bars": 3042,
+      "geometry": {
+        "START": {
+          "open_position": 0.8717948717948718,
+          "close_position": 0.9254079254079254,
+          "absolute_body": 0.053613053613053616,
+          "upper_wick": 0.04195804195804196,
+          "lower_wick": 0.04428904428904429
+        },
+        "END": {
+          "open_position": 0.4358974358974359,
+          "close_position": 0.2540792540792541,
+          "absolute_body": 0.18181818181818182,
+          "upper_wick": 0.011655011655011656,
+          "lower_wick": 0.03496503496503497
+        },
+        "efficiency": 0.2801556420233463,
+        "normalized_variation": 2.3962703962703964,
+        "signed_slope_per_bar": -0.025773962532855813,
+        "mean_absolute_body": 0.1119940665395211,
+        "mean_upper_wick": 0.03782581055308328,
+        "mean_lower_wick": 0.03644840008476372
+      },
+      "EMA_endpoint_distances": [
+        {
+          "period": 24,
+          "START": -0.15431250627908372,
+          "END": -0.24472318377361676
+        },
+        {
+          "period": 29.666666666666668,
+          "START": -0.19975469814780894,
+          "END": -0.3090750721863909
+        },
+        {
+          "period": 8,
+          "START": -0.056997266398253796,
+          "END": -0.11225079925416584
+        },
+        {
+          "period": 9.88888888888889,
+          "START": -0.0639796982319401,
+          "END": -0.11634475118292024
+        },
+        {
+          "period": 2.6666666666666665,
+          "START": -0.01429599690168829,
+          "END": -0.09071755575288591
+        },
+        {
+          "period": 3.2962962962962963,
+          "START": -0.024679765702859718,
+          "END": -0.10294091443507877
+        },
+        {
+          "period": 72,
+          "START": -0.4492436980048877,
+          "END": -0.6921249348880213
+        },
+        {
+          "period": 89,
+          "START": -0.5092453325648563,
+          "END": -0.7947052072013915
+        }
+      ],
+      "signature8": {
+        "signs": {
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "END": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        },
+        "crossings": [
+          2,
+          0,
+          2,
+          4,
+          8,
+          4,
+          0,
+          0
+        ],
+        "order": {
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1,
+            6,
+            7
+          ],
+          "END": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1,
+            6,
+            7
+          ]
+        }
+      }
+    },
+    "1422": {
+      "C": 83,
+      "n": 23,
+      "H": 30974.5,
+      "L": 30867.25,
+      "rupture": "2026-10-12T14:26:00+00:00",
+      "fits": {
+        "Lane 3 A": {
+          "C": 82.99999999999912,
+          "period": 33.19999999999965,
+          "pairs": 3055,
+          "rmse": 1.4827828716174108e-12
+        },
+        "Lane 3 B": {
+          "C": 82.99999999998788,
+          "period": 41.038888888882894,
+          "pairs": 3055,
+          "rmse": 1.7995657332693766e-12
+        },
+        "Lane 2 A": {
+          "C": 82.99999999999766,
+          "period": 11.066666666666354,
+          "pairs": 3055,
+          "rmse": 1.7545992312159967e-12
+        },
+        "Lane 2 B": {
+          "C": 82.99999999999226,
+          "period": 13.679629629628353,
+          "pairs": 3055,
+          "rmse": 2.309446590540002e-12
+        },
+        "Lane 1 A": {
+          "C": 83.00000000000003,
+          "period": 3.68888888888889,
+          "pairs": 3055,
+          "rmse": 1.751865036703468e-12
+        },
+        "Lane 1 B": {
+          "C": 83.00000000000011,
+          "period": 4.5598765432098824,
+          "pairs": 3055,
+          "rmse": 1.7407980769281886e-12
+        }
+      },
+      "repeat": {
+        "common_closed_bars": 3248,
+        "columns": {
+          "open": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "high": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "low": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "close": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "Volume": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 0
+          },
+          "Lane 3 A": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 3 B": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 2 A": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 2 B": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 1 A": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          },
+          "Lane 1 B": {
+            "max_error": 0.0,
+            "visibility_mismatches": 0,
+            "tolerance": 1e-08
+          }
+        }
+      },
+      "native_common_bars": 3042,
+      "geometry": {
+        "START": {
+          "open_position": 0.8717948717948718,
+          "close_position": 0.9254079254079254,
+          "absolute_body": 0.053613053613053616,
+          "upper_wick": 0.04195804195804196,
+          "lower_wick": 0.04428904428904429
+        },
+        "END": {
+          "open_position": 0.2494172494172494,
+          "close_position": 0.2540792540792541,
+          "absolute_body": 0.004662004662004662,
+          "upper_wick": 0.046620046620046623,
+          "lower_wick": 0.08158508158508158
+        },
+        "efficiency": 0.2801556420233463,
+        "normalized_variation": 2.3962703962703964,
+        "signed_slope_per_bar": -0.024671310244432774,
+        "mean_absolute_body": 0.10732745515354213,
+        "mean_upper_wick": 0.03820816864295125,
+        "mean_lower_wick": 0.03841086449782102
+      },
+      "EMA_endpoint_distances": [
+        {
+          "period": 24,
+          "START": -0.15431250627908372,
+          "END": -0.2251453290717274
+        },
+        {
+          "period": 29.666666666666668,
+          "START": -0.19975469814780894,
+          "END": -0.2889180022611981
+        },
+        {
+          "period": 8,
+          "START": -0.056997266398253796,
+          "END": -0.08730617719769586
+        },
+        {
+          "period": 9.88888888888889,
+          "START": -0.0639796982319401,
+          "END": -0.094975307088094
+        },
+        {
+          "period": 2.6666666666666665,
+          "START": -0.01429599690168829,
+          "END": -0.04123525261495122
+        },
+        {
+          "period": 3.2962962962962963,
+          "START": -0.024679765702859718,
+          "END": -0.05502014392219611
+        },
+        {
+          "period": 72,
+          "START": -0.4492436980048877,
+          "END": -0.6731626079048031
+        },
+        {
+          "period": 89,
+          "START": -0.5092453325648563,
+          "END": -0.7770450914858057
+        }
+      ],
+      "signature8": {
+        "signs": {
+          "START": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ],
+          "END": [
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1,
+            -1
+          ]
+        },
+        "crossings": [
+          2,
+          0,
+          2,
+          4,
+          8,
+          4,
+          0,
+          0
+        ],
+        "order": {
+          "START": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1,
+            6,
+            7
+          ],
+          "END": [
+            4,
+            5,
+            2,
+            3,
+            0,
+            1,
+            6,
+            7
+          ]
+        }
+      }
+    }
+  },
+  "same_eight_EMA_discrete_signature": true,
+  "return_check": {
+    "common_closed_bars": 2725,
+    "columns": {
+      "open": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "high": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "low": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "close": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "Volume": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "Lane 3 A": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 3 B": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 2 A": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 2 B": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 1 A": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 1 B": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      }
+    }
+  },
+  "sha256": {
+    "C_visual1400_1421_a.csv": "0746f802fe28cd491f8b5c83ee22c97e986597851a548ab107da33621a93c2c1",
+    "C_visual1400_1421_b.csv": "28056719fe4670e162cd37a06cb7767d3f79eb5202ab01814d97d3ad1a257e65",
+    "C_visual1400_1422_a.csv": "69ef54bbdbd72d2f423d32162f585cc73d72eb9099c4d95df57bb79c99a06d57",
+    "C_visual1400_1422_b.csv": "e20377692f2339b03ee8fea2b72e89dcde80f6dfa70481f1e1574468fba1c7ab"
+  },
+  "scope": "Known pair repeated in Litev1.2; different count, endpoint OHLC and continuous geometry. Output curve difference is not evidence of upstream harmonic cause."
+}

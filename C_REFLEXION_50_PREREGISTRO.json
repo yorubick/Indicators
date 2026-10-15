@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-14",
+  "START_UTC": "2026-10-12T19:02:00Z",
+  "END_UTC": "2026-10-12T19:22:00Z",
+  "chart_seconds": 60,
+  "source_seconds": 60,
+  "indicator": "Existing Lite v1.2; Character excluded",
+  "symbol": "70000-CME_MINI:NQ1!",
+  "prediction_direction_symmetric_C": 50,
+  "acceptance": "Fresh native baseline; expression retained. Require O'=70000-O, C'=70000-C, H'=70000-L, L'=70000-H and identical Volume over common closed timestamps. Complete range and one hour forward. Infer C independently in six lanes, repeat export and return native. Different C is valid and must be reported, not rejected.",
+  "lane_mapping": "Compare each Lite lane against 70000-original same lane only as a test of symmetric response. Exact correspondence is not required to accept C measurement. EMA seed should reflect if direction reverses; inspect visibility and recurrence.",
+  "limits": "Single window with complete synthetic history reflected. Internal symbol requests and metadata not fully observable. A C change alone would not locate the direction dependence. C=50 would not prove harmonics."
+}

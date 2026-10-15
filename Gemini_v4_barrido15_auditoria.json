@@ -1,0 +1,73 @@
+{
+  "scope": "Five earlier published native15s controls; no certified unseen/prospective claim. No fitting. Reaudited pairs16curves and Lite/CharacterC.",
+  "metrics": {
+    "cases": 5,
+    "exact_tol_1e_7": 0,
+    "within3": 1,
+    "within5": 1,
+    "MAE_full_precision": 27.8000000000074,
+    "MAE_rounded_errors_like_Gemini": 27.8
+  },
+  "cases": [
+    {
+      "id": "Lite_185500_192100_15s",
+      "START": "2026-10-12T18:55:00+00:00",
+      "END": "2026-10-12T19:21:00+00:00",
+      "dt": 15,
+      "bars": 105,
+      "C": 115.00000000001354,
+      "python_prediction": 67.0,
+      "branch": "15S_BASE_67",
+      "already_in112": false,
+      "repeat16cells": 91760
+    },
+    {
+      "id": "Lite_185500_192115_15s",
+      "START": "2026-10-12T18:55:00+00:00",
+      "END": "2026-10-12T19:21:15+00:00",
+      "dt": 15,
+      "bars": 106,
+      "C": 106.00000000001216,
+      "python_prediction": 67.0,
+      "branch": "15S_BASE_67",
+      "already_in112": false,
+      "repeat16cells": 91792
+    },
+    {
+      "id": "Lite_185500_192130_15s",
+      "START": "2026-10-12T18:55:00+00:00",
+      "END": "2026-10-12T19:21:30+00:00",
+      "dt": 15,
+      "bars": 107,
+      "C": 78.9999999999991,
+      "python_prediction": 67.0,
+      "branch": "15S_BASE_67",
+      "already_in112": false,
+      "repeat16cells": 91840
+    },
+    {
+      "id": "Lite_185500_192145_15s",
+      "START": "2026-10-12T18:55:00+00:00",
+      "END": "2026-10-12T19:21:45+00:00",
+      "dt": 15,
+      "bars": 108,
+      "C": 66.00000000000118,
+      "python_prediction": 67.0,
+      "branch": "15S_BASE_67",
+      "already_in112": false,
+      "repeat16cells": 91888
+    },
+    {
+      "id": "Lite_185500_192200_15s",
+      "START": "2026-10-12T18:55:00+00:00",
+      "END": "2026-10-12T19:22:00+00:00",
+      "dt": 15,
+      "bars": 109,
+      "C": 106.00000000001337,
+      "python_prediction": 67.0,
+      "branch": "15S_BASE_67",
+      "already_in112": false,
+      "repeat16cells": 91904
+    }
+  ]
+}

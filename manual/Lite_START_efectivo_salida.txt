@@ -1,0 +1,280 @@
+{
+  "190000": {
+    "native_fits": {
+      "Lane 3 A": {
+        "C": 16.39344262295045,
+        "period": 26.229508196720715,
+        "pairs": 6340,
+        "rmse": 1.5051915347977593e-12
+      },
+      "Lane 3 B": {
+        "C": 16.393442622951643,
+        "period": 32.422586520948805,
+        "pairs": 6340,
+        "rmse": 1.9535035817530752e-12
+      },
+      "Lane 2 A": {
+        "C": 16.393442622950943,
+        "period": 8.74316939890717,
+        "pairs": 6340,
+        "rmse": 2.3110787989297127e-12
+      },
+      "Lane 2 B": {
+        "C": 16.393442622950577,
+        "period": 10.807528840315566,
+        "pairs": 6340,
+        "rmse": 1.5614746251576856e-12
+      },
+      "Lane 1 A": {
+        "C": 16.393442622950975,
+        "period": 2.9143897996357286,
+        "pairs": 6340,
+        "rmse": 1.495809579583486e-12
+      },
+      "Lane 1 B": {
+        "C": 16.393442622950865,
+        "period": 3.602509613438585,
+        "pairs": 6340,
+        "rmse": 1.733106217453227e-12
+      }
+    },
+    "repeat": {
+      "offset_seconds": 0,
+      "visibility_mismatches": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 6362,
+          "max_error": 0.0
+        },
+        "Lane 3 B": {
+          "values": 6362,
+          "max_error": 0.0
+        },
+        "Lane 2 A": {
+          "values": 6362,
+          "max_error": 0.0
+        },
+        "Lane 2 B": {
+          "values": 6362,
+          "max_error": 0.0
+        },
+        "Lane 1 A": {
+          "values": 6362,
+          "max_error": 0.0
+        },
+        "Lane 1 B": {
+          "values": 6362,
+          "max_error": 0.0
+        }
+      }
+    },
+    "inclusive_source_bars": 20,
+    "range_high": 30863.5,
+    "range_low": 30846.0
+  },
+  "190015": {
+    "native_fits": {
+      "Lane 3 A": {
+        "C": 15.573770491803947,
+        "period": 24.918032786886315,
+        "pairs": 6342,
+        "rmse": 1.5600478589874922e-12
+      },
+      "Lane 3 B": {
+        "C": 15.573770491802762,
+        "period": 30.801457194898795,
+        "pairs": 6342,
+        "rmse": 2.2817480541443866e-12
+      },
+      "Lane 2 A": {
+        "C": 15.573770491803366,
+        "period": 8.306010928961795,
+        "pairs": 6342,
+        "rmse": 1.5591803358736791e-12
+      },
+      "Lane 2 B": {
+        "C": 15.573770491803074,
+        "period": 10.267152398299805,
+        "pairs": 6342,
+        "rmse": 1.7940732410328659e-12
+      },
+      "Lane 1 A": {
+        "C": 15.573770491803257,
+        "period": 2.7686703096539125,
+        "pairs": 6342,
+        "rmse": 1.5225808581890883e-12
+      },
+      "Lane 1 B": {
+        "C": 15.573770491802893,
+        "period": 3.4223841327665614,
+        "pairs": 6342,
+        "rmse": 2.422168893546699e-12
+      }
+    },
+    "repeat": {
+      "offset_seconds": 0,
+      "visibility_mismatches": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 6363,
+          "max_error": 0.0
+        },
+        "Lane 3 B": {
+          "values": 6363,
+          "max_error": 0.0
+        },
+        "Lane 2 A": {
+          "values": 6363,
+          "max_error": 0.0
+        },
+        "Lane 2 B": {
+          "values": 6363,
+          "max_error": 0.0
+        },
+        "Lane 1 A": {
+          "values": 6363,
+          "max_error": 0.0
+        },
+        "Lane 1 B": {
+          "values": 6363,
+          "max_error": 0.0
+        }
+      }
+    },
+    "inclusive_source_bars": 19,
+    "range_high": 30863.5,
+    "range_low": 30846.0
+  },
+  "coarse_START15": {
+    "independent_C_fits": {
+      "Lane 3 A": {
+        "C": 15.573770491804666,
+        "pairs": 1574,
+        "rmse": 3.5632498407705967e-12
+      },
+      "Lane 3 B": {
+        "C": 15.573770491798516,
+        "pairs": 1574,
+        "rmse": 6.977455616383204e-12
+      },
+      "Lane 2 A": {
+        "C": 15.573770491801355,
+        "pairs": 1574,
+        "rmse": 2.811394090101682e-12
+      },
+      "Lane 2 B": {
+        "C": 15.57377049180145,
+        "pairs": 1574,
+        "rmse": 3.985417098583793e-12
+      },
+      "Lane 1 A": {
+        "C": 15.573770491804204,
+        "pairs": 1574,
+        "rmse": 2.103055204075489e-12
+      },
+      "Lane 1 B": {
+        "C": 15.573770491801586,
+        "pairs": 1574,
+        "rmse": 4.155832359356443e-12
+      }
+    },
+    "repeat": {
+      "offset_seconds": 0,
+      "visibility_mismatches": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 1596,
+          "max_error": 0.0
+        },
+        "Lane 3 B": {
+          "values": 1596,
+          "max_error": 0.0
+        },
+        "Lane 2 A": {
+          "values": 1596,
+          "max_error": 0.0
+        },
+        "Lane 2 B": {
+          "values": 1596,
+          "max_error": 0.0
+        },
+        "Lane 1 A": {
+          "values": 1596,
+          "max_error": 0.0
+        },
+        "Lane 1 B": {
+          "values": 1596,
+          "max_error": 0.0
+        }
+      }
+    },
+    "direct_native_levels": {
+      "offset_seconds": 45,
+      "visibility_mismatches": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 1591,
+          "max_error": 0.022219690818019444
+        },
+        "Lane 3 B": {
+          "values": 1591,
+          "max_error": 0.05581635521593853
+        },
+        "Lane 2 A": {
+          "values": 1591,
+          "max_error": 1.3625067367684096e-06
+        },
+        "Lane 2 B": {
+          "values": 1591,
+          "max_error": 2.2246455046115443e-05
+        },
+        "Lane 1 A": {
+          "values": 1591,
+          "max_error": 0.0
+        },
+        "Lane 1 B": {
+          "values": 1591,
+          "max_error": 0.0
+        }
+      }
+    },
+    "reconstruction": {
+      "seed": 30858.0,
+      "END_native": "2026-10-12T19:04:45+00:00",
+      "C_supplied": 15.573770491803279,
+      "range_high": 30863.5,
+      "range_low": 30846.0,
+      "first_break": {
+        "time": "2026-10-12T19:19:15+00:00",
+        "side": "bull"
+      },
+      "visibility_mismatches_after_END": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 1591,
+          "max_error": 1.8189894035458565e-11
+        },
+        "Lane 3 B": {
+          "values": 1591,
+          "max_error": 4.3655745685100555e-11
+        },
+        "Lane 2 A": {
+          "values": 1591,
+          "max_error": 1.0913936421275139e-11
+        },
+        "Lane 2 B": {
+          "values": 1591,
+          "max_error": 1.4551915228366852e-11
+        },
+        "Lane 1 A": {
+          "values": 1591,
+          "max_error": 3.637978807091713e-12
+        },
+        "Lane 1 B": {
+          "values": 1591,
+          "max_error": 1.0913936421275139e-11
+        }
+      }
+    }
+  }
+}

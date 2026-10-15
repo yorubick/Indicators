@@ -1,0 +1,386 @@
+{
+  "preregistration": {
+    "registered_at_UTC": "2026-10-14T15:23:31Z",
+    "purpose": "Out-of-window transfer of the preregistered price-scale invariance, testing both long and short regimes at multiple chart intervals",
+    "source_master": "master_all_C_cases.json",
+    "reference_measurements": "C_test_timeframes_1900_1920.json",
+    "symbol_base": "CME_MINI:NQ1!",
+    "symbol_double": "2*CME_MINI:NQ1!",
+    "transform": {
+      "price_fields": "O,H,L,Close multiplied by 2",
+      "volume": "unchanged",
+      "timestamps": "unchanged",
+      "chart_and_source_interval": "unchanged"
+    },
+    "locked_prediction": "C_double equals C_base, separately in each case; no coefficient refit or quantization",
+    "acceptance": "Base pair repeats exactly; two stable double exports; full inclusive START/END and 540 following native bars; exact 2x OHLC, unchanged volume, six Lite curves scale 2x with identical visibility; fit each of six curves within 1e-6 of locked C; EMA recurrence RMSE below 1e-8; endpoint seed reconstruction error below 1e-8. If the price/volume transformation or symbol metadata fails, mark that case incompatible and do not score its C prediction.",
+    "scope": "All cases use one market episode, so they test transfer over chart interval and short/long n regimes, not independent-session generalization.",
+    "cases": [
+      {
+        "id": "tf15_long",
+        "master_case_id": "20261012_190000_192000_15s",
+        "START_UTC": "2026-10-12T19:00:00Z",
+        "END_UTC": "2026-10-12T19:20:00Z",
+        "source_seconds": 15,
+        "chart_seconds": 15,
+        "bars_inclusive": 81,
+        "regime": "long",
+        "C_base_locked": 66.99999999999912,
+        "C_double_prediction": 66.99999999999912,
+        "base_exports": [
+          "C_pack_tf15_g.csv",
+          "C_pack_tf15_h.csv"
+        ],
+        "double_exports": [
+          "C_escala_tf15_doble_a.csv",
+          "C_escala_tf15_doble_b.csv"
+        ],
+        "double_screenshot": "C_escala_tf15_doble.png"
+      },
+      {
+        "id": "tf60_long",
+        "master_case_id": "20261012_190000_192000_60s",
+        "START_UTC": "2026-10-12T19:00:00Z",
+        "END_UTC": "2026-10-12T19:20:00Z",
+        "source_seconds": 60,
+        "chart_seconds": 60,
+        "bars_inclusive": 21,
+        "regime": "long",
+        "C_base_locked": 76.99999999999851,
+        "C_double_prediction": 76.99999999999851,
+        "base_exports": [
+          "C_pack_tf60_a.csv",
+          "C_pack_tf60_b.csv"
+        ],
+        "double_exports": [
+          "C_escala_tf60_doble_a.csv",
+          "C_escala_tf60_doble_b.csv"
+        ],
+        "double_screenshot": "C_escala_tf60_doble.png"
+      },
+      {
+        "id": "tf120_short",
+        "master_case_id": "20261012_190000_192000_120s",
+        "START_UTC": "2026-10-12T19:00:00Z",
+        "END_UTC": "2026-10-12T19:20:00Z",
+        "source_seconds": 120,
+        "chart_seconds": 120,
+        "bars_inclusive": 11,
+        "regime": "short",
+        "C_base_locked": 120.00000000000124,
+        "C_double_prediction": 120.00000000000124,
+        "base_exports": [
+          "C_pack_tf120_c.csv",
+          "C_pack_tf120_d.csv"
+        ],
+        "double_exports": [
+          "C_escala_tf120_doble_a.csv",
+          "C_escala_tf120_doble_b.csv"
+        ],
+        "double_screenshot": "C_escala_tf120_doble.png"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "case": "tf15_long",
+      "master_case_id": "20261012_190000_192000_15s",
+      "START_UTC": "2026-10-12T19:00:00Z",
+      "END_UTC": "2026-10-12T19:20:00Z",
+      "source_seconds": 15,
+      "bars": 81,
+      "regime": "long",
+      "base_exports": [
+        "C_pack_tf15_g.csv",
+        "C_pack_tf15_h.csv"
+      ],
+      "base_repeat_stability": {
+        "common_rows": 8532,
+        "left_only_rows": 0,
+        "right_only_rows": 0,
+        "compared_nonempty_values": 90312,
+        "mismatches": 0,
+        "visibility_mismatches": 0,
+        "first_mismatch": null
+      },
+      "base_master_OHLCV_mismatches": 0,
+      "base_target_rows_present": 81,
+      "base_C_fit": {
+        "C_mean": 66.99999999999912,
+        "C_by_lane": {
+          "Lane 3 A": {
+            "C": 66.99999999998772,
+            "period": 107.19999999998035,
+            "pairs": 7909,
+            "rmse": 1.5363871219376694e-12
+          },
+          "Lane 3 B": {
+            "C": 66.99999999999756,
+            "period": 132.5111111111063,
+            "pairs": 7909,
+            "rmse": 1.8426544273027127e-12
+          },
+          "Lane 2 A": {
+            "C": 67.00000000000287,
+            "period": 35.73333333333486,
+            "pairs": 7909,
+            "rmse": 2.0619649454847347e-12
+          },
+          "Lane 2 B": {
+            "C": 67.0000000000071,
+            "period": 44.17037037037506,
+            "pairs": 7909,
+            "rmse": 2.2599819745905284e-12
+          },
+          "Lane 1 A": {
+            "C": 66.99999999999835,
+            "period": 11.911111111110817,
+            "pairs": 7909,
+            "rmse": 2.312156329694188e-12
+          },
+          "Lane 1 B": {
+            "C": 67.00000000000112,
+            "period": 14.723456790123702,
+            "pairs": 7909,
+            "rmse": 1.7235744720221355e-12
+          }
+        },
+        "C_spread": 1.9383605831535533e-11,
+        "max_EMA_RMSE": 2.312156329694188e-12
+      },
+      "base_reconstruction": {
+        "window_high": 30868.75,
+        "window_low": 30846.0,
+        "first_breakout_unix": 1791832845,
+        "first_breakout_utc": "2026-10-12T19:20:45+00:00",
+        "direction": "up",
+        "seed": 30866.0,
+        "future_bars_checked": 540,
+        "reconstruction_values": 3228,
+        "max_reconstruction_error": 8.003553375601768e-11,
+        "visibility_mismatches": 0
+      },
+      "double_exports": [
+        "C_escala_tf15_doble_a.csv",
+        "C_escala_tf15_doble_b.csv"
+      ],
+      "double_screenshot": "G:\\trading\\guias\\analisis\\manual\\C_escala_tf15_doble.png",
+      "double": {
+        "status": "pending_missing_double_exports",
+        "exports_present": [
+          false,
+          false
+        ]
+      },
+      "sha256": {
+        "base_exports": {
+          "C_pack_tf15_g.csv": "b60eab0abe83df91cfdb39f99f05e2b966022eac05e0101f87782329ff47c240",
+          "C_pack_tf15_h.csv": "b60eab0abe83df91cfdb39f99f05e2b966022eac05e0101f87782329ff47c240"
+        },
+        "double_exports": {}
+      }
+    },
+    {
+      "case": "tf60_long",
+      "master_case_id": "20261012_190000_192000_60s",
+      "START_UTC": "2026-10-12T19:00:00Z",
+      "END_UTC": "2026-10-12T19:20:00Z",
+      "source_seconds": 60,
+      "bars": 21,
+      "regime": "long",
+      "base_exports": [
+        "C_pack_tf60_a.csv",
+        "C_pack_tf60_b.csv"
+      ],
+      "base_repeat_stability": {
+        "common_rows": 2160,
+        "left_only_rows": 0,
+        "right_only_rows": 0,
+        "compared_nonempty_values": 22620,
+        "mismatches": 0,
+        "visibility_mismatches": 0,
+        "first_mismatch": null
+      },
+      "base_master_OHLCV_mismatches": 0,
+      "base_target_rows_present": 21,
+      "base_C_fit": {
+        "C_mean": 76.99999999999936,
+        "C_by_lane": {
+          "Lane 3 A": {
+            "C": 76.99999999999862,
+            "period": 30.799999999999446,
+            "pairs": 1967,
+            "rmse": 1.5238962319847293e-12
+          },
+          "Lane 3 B": {
+            "C": 76.99999999999619,
+            "period": 38.07222222222034,
+            "pairs": 1967,
+            "rmse": 2.1343591949573407e-12
+          },
+          "Lane 2 A": {
+            "C": 77.00000000000158,
+            "period": 10.266666666666877,
+            "pairs": 1967,
+            "rmse": 1.7327546652391304e-12
+          },
+          "Lane 2 B": {
+            "C": 77.00000000000033,
+            "period": 12.690740740740797,
+            "pairs": 1967,
+            "rmse": 1.7829402268515368e-12
+          },
+          "Lane 1 A": {
+            "C": 76.99999999999999,
+            "period": 3.4222222222222216,
+            "pairs": 1967,
+            "rmse": 1.745548864166202e-12
+          },
+          "Lane 1 B": {
+            "C": 76.9999999999995,
+            "period": 4.23024691358022,
+            "pairs": 1967,
+            "rmse": 1.7562710438437672e-12
+          }
+        },
+        "C_spread": 5.3859139370615594e-12,
+        "max_EMA_RMSE": 2.1343591949573407e-12
+      },
+      "base_reconstruction": {
+        "window_high": 30870.5,
+        "window_low": 30846.0,
+        "first_breakout_unix": 1791833160,
+        "first_breakout_utc": "2026-10-12T19:26:00+00:00",
+        "direction": "up",
+        "seed": 30864.5,
+        "future_bars_checked": 540,
+        "reconstruction_values": 3210,
+        "max_reconstruction_error": 4.001776687800884e-11,
+        "visibility_mismatches": 0
+      },
+      "double_exports": [
+        "C_escala_tf60_doble_a.csv",
+        "C_escala_tf60_doble_b.csv"
+      ],
+      "double_screenshot": "G:\\trading\\guias\\analisis\\manual\\C_escala_tf60_doble.png",
+      "double": {
+        "status": "pending_missing_double_exports",
+        "exports_present": [
+          false,
+          false
+        ]
+      },
+      "sha256": {
+        "base_exports": {
+          "C_pack_tf60_a.csv": "7f2bd097c1565c4a936d7b14a38618ea288f696174201854055f25bea43418d9",
+          "C_pack_tf60_b.csv": "9594352854c8c3d58d9b8d9c78f9096149c831a227e4a0b4dcb523af378755e1"
+        },
+        "double_exports": {}
+      }
+    },
+    {
+      "case": "tf120_short",
+      "master_case_id": "20261012_190000_192000_120s",
+      "START_UTC": "2026-10-12T19:00:00Z",
+      "END_UTC": "2026-10-12T19:20:00Z",
+      "source_seconds": 120,
+      "bars": 11,
+      "regime": "short",
+      "base_exports": [
+        "C_pack_tf120_c.csv",
+        "C_pack_tf120_d.csv"
+      ],
+      "base_repeat_stability": {
+        "common_rows": 1074,
+        "left_only_rows": 0,
+        "right_only_rows": 0,
+        "compared_nonempty_values": 11316,
+        "mismatches": 0,
+        "visibility_mismatches": 0,
+        "first_mismatch": null
+      },
+      "base_master_OHLCV_mismatches": 0,
+      "base_target_rows_present": 11,
+      "base_C_fit": {
+        "C_mean": 120.00000000000124,
+        "C_by_lane": {
+          "Lane 3 A": {
+            "C": 120.000000000002,
+            "period": 24.0000000000004,
+            "pairs": 988,
+            "rmse": 1.9257453979403273e-12
+          },
+          "Lane 3 B": {
+            "C": 120.00000000000362,
+            "period": 29.666666666667563,
+            "pairs": 988,
+            "rmse": 1.9283052894544913e-12
+          },
+          "Lane 2 A": {
+            "C": 120.0000000000021,
+            "period": 8.00000000000014,
+            "pairs": 988,
+            "rmse": 1.540560534926487e-12
+          },
+          "Lane 2 B": {
+            "C": 119.99999999999962,
+            "period": 9.888888888888857,
+            "pairs": 988,
+            "rmse": 1.5554238754441979e-12
+          },
+          "Lane 1 A": {
+            "C": 119.99999999999922,
+            "period": 2.666666666666649,
+            "pairs": 988,
+            "rmse": 1.7032498286868538e-12
+          },
+          "Lane 1 B": {
+            "C": 120.0000000000008,
+            "period": 3.296296296296318,
+            "pairs": 988,
+            "rmse": 1.7366396899034476e-12
+          }
+        },
+        "C_spread": 4.405364961712621e-12,
+        "max_EMA_RMSE": 1.9283052894544913e-12
+      },
+      "base_reconstruction": {
+        "window_high": 30870.5,
+        "window_low": 30846.0,
+        "first_breakout_unix": 1791833160,
+        "first_breakout_utc": "2026-10-12T19:26:00+00:00",
+        "direction": "up",
+        "seed": 30864.5,
+        "future_bars_checked": 540,
+        "reconstruction_values": 3228,
+        "max_reconstruction_error": 3.637978807091713e-11,
+        "visibility_mismatches": 0
+      },
+      "double_exports": [
+        "C_escala_tf120_doble_a.csv",
+        "C_escala_tf120_doble_b.csv"
+      ],
+      "double_screenshot": "G:\\trading\\guias\\analisis\\manual\\C_escala_tf120_doble.png",
+      "double": {
+        "status": "pending_missing_double_exports",
+        "exports_present": [
+          false,
+          false
+        ]
+      },
+      "sha256": {
+        "base_exports": {
+          "C_pack_tf120_c.csv": "a2ffbe9814e6e54ce95099de0d3dc2786c8411566424d1f7a5f51e5c3a8179a7",
+          "C_pack_tf120_d.csv": "3ad0eafb4606b27accb8c78260abbf9c237d281cfb77cb7fe8a0d44ea84dac24"
+        },
+        "double_exports": {}
+      }
+    }
+  ],
+  "status": "pending_double_measurements",
+  "sha256": {
+    "prereg": "ac505ab03dfd199ef1eeb62f48beef3788e163dcf715dc767bd616abcb5eb462",
+    "master": "ef9533acdce3e1c2c2db3c72caee5059a2957f7dee4c60e725f6dcf56ccc9c05",
+    "reference": "92a539f85c0401cb197af5a1e2b1ada45ff905127d0695425964cdc1fe2fefe6"
+  }
+}

@@ -1,0 +1,2 @@
+# Preserve every original byte; do not apply Windows newline conversion.
+* -text

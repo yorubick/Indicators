@@ -1,0 +1,473 @@
+{
+  "status": "dimensionless_candidates_rejected_for_unified_generation",
+  "master_sha256": "ef9533acdce3e1c2c2db3c72caee5059a2957f7dee4c60e725f6dcf56ccc9c05",
+  "equation_family": "C = Delta * g(n, normalized OHLCV); no absolute price, no piecewise n threshold",
+  "partition": {
+    "rule": "same fixed temporal rule as independent audit; split determined from timestamps before fitting",
+    "training_Lite": 51,
+    "training_by_source_seconds": {
+      "60": 48,
+      "120": 3
+    },
+    "holdout_Lite": 94,
+    "holdout_by_source_seconds": {
+      "15": 39,
+      "60": 54,
+      "120": 1
+    },
+    "blindness_note": "All labels were already collected; the fit excludes the temporal holdout, but this is not prospective or genuinely human-blind."
+  },
+  "models": {
+    "constant_q": {
+      "features": [],
+      "mean": [],
+      "scale": [],
+      "beta_intercept_then_standardized_features": [
+        1.22735722704382
+      ],
+      "training_rank": 1,
+      "training_rows": 51,
+      "formula": "C_hat = Delta * (beta0 + sum_j beta_j * standardized(feature_j))",
+      "metrics": {
+        "development": {
+          "n": 51,
+          "MAE": 9.995424206326794,
+          "RMSE": 13.271313090913026,
+          "max_abs_residual": 42.35856637735836,
+          "within_1": 1
+        },
+        "development_short_n_lt_21": {
+          "n": 16,
+          "MAE": 11.903989874638402,
+          "RMSE": 12.47196056071919,
+          "max_abs_residual": 22.692703310833323,
+          "within_1": 0
+        },
+        "development_long_n_ge_21": {
+          "n": 35,
+          "MAE": 9.122937043670056,
+          "RMSE": 13.62111649017159,
+          "max_abs_residual": 42.35856637735836,
+          "within_1": 1
+        },
+        "development_by_source_seconds": {
+          "60": {
+            "n": 48,
+            "MAE": 9.596994535519181,
+            "RMSE": 12.991560091316591,
+            "max_abs_residual": 42.35856637735836,
+            "within_1": 1
+          },
+          "120": {
+            "n": 3,
+            "MAE": 16.370298939248553,
+            "RMSE": 17.1371418844868,
+            "max_abs_residual": 22.692703310833323,
+            "within_1": 0
+          }
+        },
+        "locked_holdout": {
+          "n": 94,
+          "MAE": 32.61108617671017,
+          "RMSE": 44.23830891832868,
+          "max_abs_residual": 104.58964159429522,
+          "within_1": 0
+        },
+        "locked_holdout_short_n_lt_21": {
+          "n": 19,
+          "MAE": 11.64310426500237,
+          "RMSE": 12.727581463210552,
+          "max_abs_residual": 27.28286724525715,
+          "within_1": 0
+        },
+        "locked_holdout_long_n_ge_21": {
+          "n": 75,
+          "MAE": 37.92297492767613,
+          "RMSE": 49.10978103140981,
+          "max_abs_residual": 104.58964159429522,
+          "within_1": 0
+        },
+        "locked_holdout_by_source_seconds": {
+          "15": {
+            "n": 39,
+            "MAE": 59.4484861409887,
+            "RMSE": 64.90604627707556,
+            "max_abs_residual": 104.58964159429522,
+            "within_1": 0
+          },
+          "60": {
+            "n": 54,
+            "MAE": 13.327190256795152,
+            "RMSE": 18.716835363319895,
+            "max_abs_residual": 60.35856637737919,
+            "within_1": 0
+          },
+          "120": {
+            "n": 1,
+            "MAE": 27.28286724525715,
+            "RMSE": 27.28286724525715,
+            "max_abs_residual": 27.28286724525715,
+            "within_1": 0
+          }
+        }
+      },
+      "Character_only_compatible": 0,
+      "Character_only_cases": 34
+    },
+    "linear_n": {
+      "features": [
+        "n"
+      ],
+      "mean": [
+        22.607843137254903
+      ],
+      "scale": [
+        4.915276033469331
+      ],
+      "beta_intercept_then_standardized_features": [
+        1.2273572270438204,
+        0.1833299413211566
+      ],
+      "training_rank": 2,
+      "training_rows": 51,
+      "training_columns": 2,
+      "training_singular_values": [
+        7.14142842854285,
+        7.14142842854285
+      ],
+      "formula": "C_hat = Delta * (beta0 + sum_j beta_j * standardized(feature_j))",
+      "metrics": {
+        "development": {
+          "n": 51,
+          "MAE": 5.0400435836691075,
+          "RMSE": 6.5756114357671125,
+          "max_abs_residual": 23.577928853906002,
+          "within_1": 4
+        },
+        "development_short_n_lt_21": {
+          "n": 16,
+          "MAE": 3.2404335170762333,
+          "RMSE": 3.4053866036821776,
+          "max_abs_residual": 6.5448654402014625,
+          "within_1": 0
+        },
+        "development_long_n_ge_21": {
+          "n": 35,
+          "MAE": 5.862722471254421,
+          "RMSE": 7.596287489359794,
+          "max_abs_residual": 23.577928853906002,
+          "within_1": 4
+        },
+        "development_by_source_seconds": {
+          "60": {
+            "n": 48,
+            "MAE": 5.061407527747714,
+            "RMSE": 6.665972874023941,
+            "max_abs_residual": 23.577928853906002,
+            "within_1": 4
+          },
+          "120": {
+            "n": 3,
+            "MAE": 4.698220478411405,
+            "RMSE": 4.908585142959505,
+            "max_abs_residual": 6.5448654402014625,
+            "within_1": 0
+          }
+        },
+        "locked_holdout": {
+          "n": 94,
+          "MAE": 16.023669188688235,
+          "RMSE": 22.24326508029876,
+          "max_abs_residual": 58.493707672831036,
+          "within_1": 5
+        },
+        "locked_holdout_short_n_lt_21": {
+          "n": 19,
+          "MAE": 9.134236346167594,
+          "RMSE": 14.334954315484959,
+          "max_abs_residual": 32.47644029594129,
+          "within_1": 2
+        },
+        "locked_holdout_long_n_ge_21": {
+          "n": 75,
+          "MAE": 17.768992175460127,
+          "RMSE": 23.833695952113793,
+          "max_abs_residual": 58.493707672831036,
+          "within_1": 3
+        },
+        "locked_holdout_by_source_seconds": {
+          "15": {
+            "n": 39,
+            "MAE": 21.11359386943969,
+            "RMSE": 27.25567443990297,
+            "max_abs_residual": 58.493707672831036,
+            "within_1": 3
+          },
+          "60": {
+            "n": 54,
+            "MAE": 12.187475868978035,
+            "RMSE": 17.70490976625154,
+            "max_abs_residual": 52.7673273784097,
+            "within_1": 2
+          },
+          "120": {
+            "n": 1,
+            "MAE": 24.671045903732406,
+            "RMSE": 24.671045903732406,
+            "max_abs_residual": 24.671045903732406,
+            "within_1": 0
+          }
+        }
+      },
+      "Character_only_compatible": 0,
+      "Character_only_cases": 34
+    },
+    "log_n": {
+      "features": [
+        "ln_n"
+      ],
+      "mean": [
+        3.100800997199773
+      ],
+      "scale": [
+        0.17478792391082915
+      ],
+      "beta_intercept_then_standardized_features": [
+        1.2273572270438204,
+        0.1899665157519486
+      ],
+      "training_rank": 2,
+      "training_rows": 51,
+      "training_columns": 2,
+      "training_singular_values": [
+        7.14142842854285,
+        7.141428428542849
+      ],
+      "formula": "C_hat = Delta * (beta0 + sum_j beta_j * standardized(feature_j))",
+      "metrics": {
+        "development": {
+          "n": 51,
+          "MAE": 4.177802506655389,
+          "RMSE": 5.792163319564283,
+          "max_abs_residual": 20.63135955033539,
+          "within_1": 8
+        },
+        "development_short_n_lt_21": {
+          "n": 16,
+          "MAE": 1.055315182885363,
+          "RMSE": 1.2559063077457386,
+          "max_abs_residual": 2.4321786535749084,
+          "within_1": 4
+        },
+        "development_long_n_ge_21": {
+          "n": 35,
+          "MAE": 5.605225283235972,
+          "RMSE": 6.940090862897225,
+          "max_abs_residual": 20.63135955033539,
+          "within_1": 4
+        },
+        "development_by_source_seconds": {
+          "60": {
+            "n": 48,
+            "MAE": 4.2790194605440535,
+            "RMSE": 5.935663920224821,
+            "max_abs_residual": 20.63135955033539,
+            "within_1": 8
+          },
+          "120": {
+            "n": 3,
+            "MAE": 2.558331244436753,
+            "RMSE": 2.573315345398257,
+            "max_abs_residual": 2.942972165977892,
+            "within_1": 0
+          }
+        },
+        "locked_holdout": {
+          "n": 94,
+          "MAE": 26.413584891922554,
+          "RMSE": 38.18416030670862,
+          "max_abs_residual": 143.36264187080724,
+          "within_1": 5
+        },
+        "locked_holdout_short_n_lt_21": {
+          "n": 19,
+          "MAE": 27.524070870630847,
+          "RMSE": 52.11260660763332,
+          "max_abs_residual": 143.36264187080724,
+          "within_1": 4
+        },
+        "locked_holdout_long_n_ge_21": {
+          "n": 75,
+          "MAE": 26.132261777316458,
+          "RMSE": 33.75521246888638,
+          "max_abs_residual": 79.26910478997985,
+          "within_1": 1
+        },
+        "locked_holdout_by_source_seconds": {
+          "15": {
+            "n": 39,
+            "MAE": 37.341647993052376,
+            "RMSE": 43.11286821970641,
+            "max_abs_residual": 79.26910478997985,
+            "within_1": 2
+          },
+          "60": {
+            "n": 54,
+            "MAE": 17.817815635928998,
+            "RMSE": 33.44941311085507,
+            "max_abs_residual": 143.36264187080724,
+            "within_1": 3
+          },
+          "120": {
+            "n": 1,
+            "MAE": 64.39066377151181,
+            "RMSE": 64.39066377151181,
+            "max_abs_residual": 64.39066377151181,
+            "within_1": 0
+          }
+        }
+      },
+      "Character_only_compatible": 0,
+      "Character_only_cases": 34
+    },
+    "normalized_ohlcv": {
+      "features": [
+        "ln_n",
+        "window_range_bp",
+        "close_path_bp",
+        "signed_efficiency",
+        "volume_weighted_body_bp",
+        "ln_1p_mean_volume",
+        "volume_hhi"
+      ],
+      "mean": [
+        3.1008009971997743,
+        21.60956830457685,
+        42.42210940573142,
+        0.09090952046736332,
+        0.17811351038799675,
+        5.995587002091939,
+        0.05325677464808578
+      ],
+      "scale": [
+        0.17478792391082912,
+        9.478667500088088,
+        17.012979656625625,
+        0.3456881114893346,
+        0.8178479927701898,
+        1.0292893616586258,
+        0.008581663892773183
+      ],
+      "beta_intercept_then_standardized_features": [
+        1.2273572270438204,
+        0.14961429751752173,
+        -0.052934954606365,
+        0.06164957304931654,
+        -0.0844981043908315,
+        0.12368101358798915,
+        -0.021200836816998074,
+        -0.008858633237186248
+      ],
+      "training_rank": 8,
+      "training_rows": 51,
+      "training_columns": 8,
+      "training_singular_values": [
+        11.697735599288697,
+        10.399655982741349,
+        9.50741725404923,
+        7.1414284285428495,
+        3.863489581423088,
+        2.3405909171893127,
+        0.910185268681009,
+        0.6211277134817695
+      ],
+      "formula": "C_hat = Delta * (beta0 + sum_j beta_j * standardized(feature_j))",
+      "metrics": {
+        "development": {
+          "n": 51,
+          "MAE": 3.8433024538810687,
+          "RMSE": 5.350299376618728,
+          "max_abs_residual": 18.52052126952556,
+          "within_1": 12
+        },
+        "development_short_n_lt_21": {
+          "n": 16,
+          "MAE": 2.191356056653061,
+          "RMSE": 2.485300774861141,
+          "max_abs_residual": 3.6472869224722757,
+          "within_1": 4
+        },
+        "development_long_n_ge_21": {
+          "n": 35,
+          "MAE": 4.598477949756731,
+          "RMSE": 6.2360320610542495,
+          "max_abs_residual": 18.52052126952556,
+          "within_1": 8
+        },
+        "development_by_source_seconds": {
+          "60": {
+            "n": 48,
+            "MAE": 4.044801401030424,
+            "RMSE": 5.5117660155474395,
+            "max_abs_residual": 18.52052126952556,
+            "within_1": 10
+          },
+          "120": {
+            "n": 3,
+            "MAE": 0.6193192994913991,
+            "RMSE": 0.7509489784902379,
+            "max_abs_residual": 1.1827049953048885,
+            "within_1": 2
+          }
+        },
+        "locked_holdout": {
+          "n": 94,
+          "MAE": 27.250525368443206,
+          "RMSE": 38.86306618968348,
+          "max_abs_residual": 143.36448765056934,
+          "within_1": 5
+        },
+        "locked_holdout_short_n_lt_21": {
+          "n": 19,
+          "MAE": 26.440484914927048,
+          "RMSE": 50.0530837427802,
+          "max_abs_residual": 143.36448765056934,
+          "within_1": 2
+        },
+        "locked_holdout_long_n_ge_21": {
+          "n": 75,
+          "MAE": 27.45573561666729,
+          "RMSE": 35.47221471016735,
+          "max_abs_residual": 82.06848765292129,
+          "within_1": 3
+        },
+        "locked_holdout_by_source_seconds": {
+          "15": {
+            "n": 39,
+            "MAE": 39.94530055501512,
+            "RMSE": 45.584003712192334,
+            "max_abs_residual": 82.06848765292129,
+            "within_1": 3
+          },
+          "60": {
+            "n": 54,
+            "MAE": 17.748732013956637,
+            "RMSE": 33.022423456840315,
+            "max_abs_residual": 143.36448765056934,
+            "within_1": 2
+          },
+          "120": {
+            "n": 1,
+            "MAE": 45.25113423441225,
+            "RMSE": 45.25113423441225,
+            "max_abs_residual": 45.25113423441225,
+            "within_1": 0
+          }
+        }
+      },
+      "Character_only_compatible": 0,
+      "Character_only_cases": 34
+    }
+  },
+  "residual_csv": "G:\\trading\\guias\\analisis\\residuos_C_ley_dimensionless.csv"
+}

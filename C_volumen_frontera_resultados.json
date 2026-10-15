@@ -1,0 +1,498 @@
+{
+  "spec": {
+    "sources": [
+      "C_recorte1903_30_c.csv",
+      "C_recorte1903_30_d.csv"
+    ],
+    "join": "All selected timestamps must have identical OHLC and Volume in both closed-bar exports. Native15s, no disaggregation of1m.",
+    "simple_models": "Same22 volume features from previous1m test, raw=n*dt*10/183*feature. Common K>0 across nine cases; observed C+/-1second generous necessary interval.",
+    "peak_descriptor": "dt,n,H,L,ENDclose,peak_volume_timestamp,peak_volume_value,peak_barOHLC; first timestamp wins ties. Identical descriptor and differentC rejects any function exclusively of those inputs.",
+    "suffix_descriptor": "dt,END and last80 complete OHLCV bars; not n or earlier history. Sufficiency only, no fitted classifier.",
+    "scope": "Known overlapping local9, exploratory. No training32/reserved validation. Rejects explicit simple families only, not all volume dependence."
+  },
+  "joined_cases": 9,
+  "selected_bar_references_verified": 738,
+  "models": [
+    {
+      "feature": "1+CV",
+      "K_interval": [
+        0.8833694583156271,
+        0.5711054076662276
+      ],
+      "survives": false
+    },
+    {
+      "feature": "1+VWAP_offset_range",
+      "K_interval": [
+        1.2545555621478652,
+        0.8123127420704459
+      ],
+      "survives": false
+    },
+    {
+      "feature": "1+VWAP_offset_std",
+      "K_interval": [
+        1.181649520606189,
+        0.7631076363801736
+      ],
+      "survives": false
+    },
+    {
+      "feature": "1+abs_corrPV",
+      "K_interval": [
+        1.0803746646205172,
+        0.6961855511170622
+      ],
+      "survives": false
+    },
+    {
+      "feature": "1+corrPV2",
+      "K_interval": [
+        1.2370681024682104,
+        0.7995596438147021
+      ],
+      "survives": false
+    },
+    {
+      "feature": "1-abs_corrPV",
+      "K_interval": [
+        1.5664963046130587,
+        1.0225907328880166
+      ],
+      "survives": false
+    },
+    {
+      "feature": "1-corrPV2",
+      "K_interval": [
+        1.3234354846167882,
+        0.8593881420025395
+      ],
+      "survives": false
+    },
+    {
+      "feature": "EMA20_over_end",
+      "K_interval": [
+        1.1394589220783946,
+        0.604810697480096
+      ],
+      "survives": false
+    },
+    {
+      "feature": "EMA20_over_mean",
+      "K_interval": [
+        1.231704231627117,
+        0.7828512013630231
+      ],
+      "survives": false
+    },
+    {
+      "feature": "Neff_over_n",
+      "K_interval": [
+        1.5350346727128659,
+        0.9965267610809996
+      ],
+      "survives": false
+    },
+    {
+      "feature": "end_over_EMA20",
+      "K_interval": [
+        1.9503800866349297,
+        0.8391196214958399
+      ],
+      "survives": false
+    },
+    {
+      "feature": "end_over_mean",
+      "K_interval": [
+        1.8785583822981817,
+        0.7929861416661634
+      ],
+      "survives": false
+    },
+    {
+      "feature": "first_over_mean",
+      "K_interval": [
+        1.5735671010516692,
+        0.6091052972218357
+      ],
+      "survives": false
+    },
+    {
+      "feature": "inverse1+CV",
+      "K_interval": [
+        1.8512266853307893,
+        1.2015967089162136
+      ],
+      "survives": false
+    },
+    {
+      "feature": "inverse1+corrPV",
+      "K_interval": [
+        1.5136574077424334,
+        0.9857118941852356
+      ],
+      "survives": false
+    },
+    {
+      "feature": "inverse1+corrPV2",
+      "K_interval": [
+        1.3219297393387581,
+        0.8582704037211604
+      ],
+      "survives": false
+    },
+    {
+      "feature": "inverse1-corrPV",
+      "K_interval": [
+        1.04393295370335,
+        0.6710782292715546
+      ],
+      "survives": false
+    },
+    {
+      "feature": "inverse1-corrPV2",
+      "K_interval": [
+        1.2356606221070254,
+        0.79851971973563
+      ],
+      "survives": false
+    },
+    {
+      "feature": "mean_over_EMA20",
+      "K_interval": [
+        1.3276865275357472,
+        0.8765885229545298
+      ],
+      "survives": false
+    },
+    {
+      "feature": "mean_over_end",
+      "K_interval": [
+        1.2265415549597856,
+        0.6307141993957703
+      ],
+      "survives": false
+    },
+    {
+      "feature": "mean_over_first",
+      "K_interval": [
+        1.7410341138713898,
+        0.5850102719033233
+      ],
+      "survives": false
+    },
+    {
+      "feature": "n_over_Neff",
+      "K_interval": [
+        1.0653291051400149,
+        0.6886301553523588
+      ],
+      "survives": false
+    }
+  ],
+  "simple_models_surviving": 0,
+  "peak_descriptor_collisions": [],
+  "last80_OHLCV_collisions": [
+    {
+      "case_A": {
+        "START": "2026-10-12T19:03:00+00:00",
+        "END": "2026-10-12T19:23:15+00:00",
+        "C": 60.99999999999963,
+        "bars": 82,
+        "first_volume": 126.0,
+        "total_volume": 8345.0,
+        "peak_bar": {
+          "time": 1791832830,
+          "open": 30866.0,
+          "high": 30868.75,
+          "low": 30866.0,
+          "close": 30868.25,
+          "volume": 236.0
+        },
+        "volume_rank_first": 22
+      },
+      "case_B": {
+        "START": "2026-10-12T19:03:15+00:00",
+        "END": "2026-10-12T19:23:15+00:00",
+        "C": 53.999999999999204,
+        "bars": 81,
+        "first_volume": 138.0,
+        "total_volume": 8219.0,
+        "peak_bar": {
+          "time": 1791832830,
+          "open": 30866.0,
+          "high": 30868.75,
+          "low": 30866.0,
+          "close": 30868.25,
+          "volume": 236.0
+        },
+        "volume_rank_first": 19
+      }
+    },
+    {
+      "case_A": {
+        "START": "2026-10-12T19:03:00+00:00",
+        "END": "2026-10-12T19:23:45+00:00",
+        "C": 88.00000000000166,
+        "bars": 84,
+        "first_volume": 126.0,
+        "total_volume": 8539.0,
+        "peak_bar": {
+          "time": 1791832830,
+          "open": 30866.0,
+          "high": 30868.75,
+          "low": 30866.0,
+          "close": 30868.25,
+          "volume": 236.0
+        },
+        "volume_rank_first": 22
+      },
+      "case_B": {
+        "START": "2026-10-12T19:03:30+00:00",
+        "END": "2026-10-12T19:23:45+00:00",
+        "C": 60.9999999999996,
+        "bars": 82,
+        "first_volume": 64.0,
+        "total_volume": 8275.0,
+        "peak_bar": {
+          "time": 1791832830,
+          "open": 30866.0,
+          "high": 30868.75,
+          "low": 30866.0,
+          "close": 30868.25,
+          "volume": 236.0
+        },
+        "volume_rank_first": 64
+      }
+    },
+    {
+      "case_A": {
+        "START": "2026-10-12T19:03:15+00:00",
+        "END": "2026-10-12T19:23:15+00:00",
+        "C": 53.999999999999204,
+        "bars": 81,
+        "first_volume": 138.0,
+        "total_volume": 8219.0,
+        "peak_bar": {
+          "time": 1791832830,
+          "open": 30866.0,
+          "high": 30868.75,
+          "low": 30866.0,
+          "close": 30868.25,
+          "volume": 236.0
+        },
+        "volume_rank_first": 19
+      },
+      "case_B": {
+        "START": "2026-10-12T19:03:30+00:00",
+        "END": "2026-10-12T19:23:15+00:00",
+        "C": 60.99999999999961,
+        "bars": 80,
+        "first_volume": 64.0,
+        "total_volume": 8081.0,
+        "peak_bar": {
+          "time": 1791832830,
+          "open": 30866.0,
+          "high": 30868.75,
+          "low": 30866.0,
+          "close": 30868.25,
+          "volume": 236.0
+        },
+        "volume_rank_first": 62
+      }
+    },
+    {
+      "case_A": {
+        "START": "2026-10-12T19:03:15+00:00",
+        "END": "2026-10-12T19:23:45+00:00",
+        "C": 88.00000000000159,
+        "bars": 83,
+        "first_volume": 138.0,
+        "total_volume": 8413.0,
+        "peak_bar": {
+          "time": 1791832830,
+          "open": 30866.0,
+          "high": 30868.75,
+          "low": 30866.0,
+          "close": 30868.25,
+          "volume": 236.0
+        },
+        "volume_rank_first": 19
+      },
+      "case_B": {
+        "START": "2026-10-12T19:03:30+00:00",
+        "END": "2026-10-12T19:23:45+00:00",
+        "C": 60.9999999999996,
+        "bars": 82,
+        "first_volume": 64.0,
+        "total_volume": 8275.0,
+        "peak_bar": {
+          "time": 1791832830,
+          "open": 30866.0,
+          "high": 30868.75,
+          "low": 30866.0,
+          "close": 30868.25,
+          "volume": 236.0
+        },
+        "volume_rank_first": 64
+      }
+    }
+  ],
+  "details": [
+    {
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:15+00:00",
+      "C": 60.99999999999963,
+      "bars": 82,
+      "first_volume": 126.0,
+      "total_volume": 8345.0,
+      "peak_bar": {
+        "time": 1791832830,
+        "open": 30866.0,
+        "high": 30868.75,
+        "low": 30866.0,
+        "close": 30868.25,
+        "volume": 236.0
+      },
+      "volume_rank_first": 22
+    },
+    {
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:30+00:00",
+      "C": 67.00000000000017,
+      "bars": 83,
+      "first_volume": 126.0,
+      "total_volume": 8470.0,
+      "peak_bar": {
+        "time": 1791832830,
+        "open": 30866.0,
+        "high": 30868.75,
+        "low": 30866.0,
+        "close": 30868.25,
+        "volume": 236.0
+      },
+      "volume_rank_first": 22
+    },
+    {
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "C": 88.00000000000166,
+      "bars": 84,
+      "first_volume": 126.0,
+      "total_volume": 8539.0,
+      "peak_bar": {
+        "time": 1791832830,
+        "open": 30866.0,
+        "high": 30868.75,
+        "low": 30866.0,
+        "close": 30868.25,
+        "volume": 236.0
+      },
+      "volume_rank_first": 22
+    },
+    {
+      "START": "2026-10-12T19:03:15+00:00",
+      "END": "2026-10-12T19:23:15+00:00",
+      "C": 53.999999999999204,
+      "bars": 81,
+      "first_volume": 138.0,
+      "total_volume": 8219.0,
+      "peak_bar": {
+        "time": 1791832830,
+        "open": 30866.0,
+        "high": 30868.75,
+        "low": 30866.0,
+        "close": 30868.25,
+        "volume": 236.0
+      },
+      "volume_rank_first": 19
+    },
+    {
+      "START": "2026-10-12T19:03:15+00:00",
+      "END": "2026-10-12T19:23:30+00:00",
+      "C": 67.00000000000017,
+      "bars": 82,
+      "first_volume": 138.0,
+      "total_volume": 8344.0,
+      "peak_bar": {
+        "time": 1791832830,
+        "open": 30866.0,
+        "high": 30868.75,
+        "low": 30866.0,
+        "close": 30868.25,
+        "volume": 236.0
+      },
+      "volume_rank_first": 19
+    },
+    {
+      "START": "2026-10-12T19:03:15+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "C": 88.00000000000159,
+      "bars": 83,
+      "first_volume": 138.0,
+      "total_volume": 8413.0,
+      "peak_bar": {
+        "time": 1791832830,
+        "open": 30866.0,
+        "high": 30868.75,
+        "low": 30866.0,
+        "close": 30868.25,
+        "volume": 236.0
+      },
+      "volume_rank_first": 19
+    },
+    {
+      "START": "2026-10-12T19:03:30+00:00",
+      "END": "2026-10-12T19:23:15+00:00",
+      "C": 60.99999999999961,
+      "bars": 80,
+      "first_volume": 64.0,
+      "total_volume": 8081.0,
+      "peak_bar": {
+        "time": 1791832830,
+        "open": 30866.0,
+        "high": 30868.75,
+        "low": 30866.0,
+        "close": 30868.25,
+        "volume": 236.0
+      },
+      "volume_rank_first": 62
+    },
+    {
+      "START": "2026-10-12T19:03:30+00:00",
+      "END": "2026-10-12T19:23:30+00:00",
+      "C": 67.00000000000018,
+      "bars": 81,
+      "first_volume": 64.0,
+      "total_volume": 8206.0,
+      "peak_bar": {
+        "time": 1791832830,
+        "open": 30866.0,
+        "high": 30868.75,
+        "low": 30866.0,
+        "close": 30868.25,
+        "volume": 236.0
+      },
+      "volume_rank_first": 63
+    },
+    {
+      "START": "2026-10-12T19:03:30+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "C": 60.9999999999996,
+      "bars": 82,
+      "first_volume": 64.0,
+      "total_volume": 8275.0,
+      "peak_bar": {
+        "time": 1791832830,
+        "open": 30866.0,
+        "high": 30868.75,
+        "low": 30866.0,
+        "close": 30868.25,
+        "volume": 236.0
+      },
+      "volume_rank_first": 64
+    }
+  ],
+  "training32_used": false,
+  "reserved_validation_used": false
+}

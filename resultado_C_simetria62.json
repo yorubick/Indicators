@@ -1,0 +1,32 @@
+{
+  "preregistered": "C_SIMETRIA_62_PREREGISTRO.json",
+  "validation_amendment": "C_SIMETRIA_62_ENMIENDA_VALIDACION.json",
+  "evidence_amendment": "C_SIMETRIA_62_ENMIENDA_EVIDENCIA.json",
+  "registered_at_UTC": "2026-10-14T15:28:47Z",
+  "validation_amendment_at_UTC": "2026-10-14T15:34:30Z",
+  "evidence_amendment_at_UTC": "2026-10-14T15:35:11Z",
+  "preregistration_sha256": "30e6c69cccd82023783bdd05b3a67a121e4419a454eb1b92a48e42cdddc44a8d",
+  "amendment_sha256": "d830b0fc693ea5e68fd49d4376793fdf5f2eba780ac9e8ff97cd1b4bb84d97cd",
+  "evidence_amendment_sha256": "8c5c78bb6c245e99be02fa13fa3c5fc4dd99f7ce2f35f667c280b04ae1f4b89d",
+  "master_sha256": "ef9533acdce3e1c2c2db3c72caee5059a2957f7dee4c60e725f6dcf56ccc9c05",
+  "status": "pending_measurements",
+  "missing_exports": [
+    "manual\\C_simetria62_base_a.csv",
+    "manual\\C_simetria62_base_b.csv",
+    "manual\\C_simetria62_regreso.csv",
+    "manual\\C_simetria62_doble_a.csv",
+    "manual\\C_simetria62_doble_b.csv",
+    "manual\\C_simetria62_traslacion_a.csv",
+    "manual\\C_simetria62_traslacion_b.csv",
+    "manual\\C_simetria62_reflejo_a.csv",
+    "manual\\C_simetria62_reflejo_b.csv"
+  ],
+  "missing_screenshots": [
+    "manual\\C_simetria62_base.png",
+    "manual\\C_simetria62_doble.png",
+    "manual\\C_simetria62_traslacion.png",
+    "manual\\C_simetria62_reflejo.png",
+    "manual\\C_simetria62_regreso.png"
+  ],
+  "locked_prediction_C": 61.99999999999884
+}

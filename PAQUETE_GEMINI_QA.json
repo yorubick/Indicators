@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "total_cases": 179,
+  "Lite_measured": 145,
+  "Character_only": 34,
+  "OHLCV_complete": 179,
+  "original112_covered": 112,
+  "outside112_controls_covered": 9,
+  "double_cross_controls_covered": 25,
+  "continuous_END_positions": 17,
+  "timeframe_controls": 3,
+  "master_sha256": "ef9533acdce3e1c2c2db3c72caee5059a2957f7dee4c60e725f6dcf56ccc9c05",
+  "warning": "Coverage within known verified manifest; Character-only hasnullC_Lite. Auxiliaryreports retain alternativeconfigurations separately. Alllabels known; no blindvalidation claim."
+}

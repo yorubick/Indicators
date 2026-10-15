@@ -1,0 +1,170 @@
+{
+  "scope": "Valores historicos y C Manual en estos cortes; no auditoria completa de repintado.",
+  "cases": [
+    {
+      "cutoff_UTC": "19:26",
+      "file": "C_historial_replay_1926.csv",
+      "last_bar_UTC": "2026-10-12T19:25:00+00:00",
+      "first_visible_UTC": null,
+      "matching_confirmed_curve_values": 0,
+      "max_confirmed_curve_difference": null,
+      "last_row_numeric_curve_values": 0,
+      "last_row_matches_previous_reference_plots": true,
+      "last_row_OHLC": {
+        "open": "30869.25",
+        "high": "30871.25",
+        "low": "30867",
+        "close": "30868.75"
+      },
+      "last_row_final_reference_OHLC": {
+        "open": "30869.25",
+        "high": "30871.25",
+        "low": "30867",
+        "close": "30868.75"
+      },
+      "extraction_unavailable_reason": "Layer A: faltan muestras consecutivas de curvas"
+    },
+    {
+      "cutoff_UTC": "19:27",
+      "file": "C_historial_replay_1927.csv",
+      "last_bar_UTC": "2026-10-12T19:26:00+00:00",
+      "first_visible_UTC": null,
+      "matching_confirmed_curve_values": 0,
+      "max_confirmed_curve_difference": null,
+      "last_row_numeric_curve_values": 0,
+      "last_row_matches_previous_reference_plots": true,
+      "last_row_OHLC": {
+        "open": "30868.75",
+        "high": "30873",
+        "low": "30867.25",
+        "close": "30872.5"
+      },
+      "last_row_final_reference_OHLC": {
+        "open": "30868.75",
+        "high": "30873",
+        "low": "30867.25",
+        "close": "30872.5"
+      },
+      "extraction_unavailable_reason": "Layer A: faltan muestras consecutivas de curvas"
+    },
+    {
+      "cutoff_UTC": "19:31",
+      "file": "C_historial_replay_1931.csv",
+      "last_bar_UTC": "2026-10-12T19:30:00+00:00",
+      "first_visible_UTC": "2026-10-12T19:26:00+00:00",
+      "matching_confirmed_curve_values": 40,
+      "max_confirmed_curve_difference": 0,
+      "last_row_numeric_curve_values": 10,
+      "last_row_matches_previous_reference_plots": true,
+      "last_row_OHLC": {
+        "open": "30875.25",
+        "high": "30877.5",
+        "low": "30871",
+        "close": "30876.5"
+      },
+      "last_row_final_reference_OHLC": {
+        "open": "30875.25",
+        "high": "30877.5",
+        "low": "30871",
+        "close": "30876.5"
+      },
+      "extraction_unavailable_reason": "Layer A: faltan muestras consecutivas de curvas"
+    },
+    {
+      "cutoff_UTC": "19:33",
+      "file": "C_historial_replay_1933.csv",
+      "last_bar_UTC": "2026-10-12T19:32:00+00:00",
+      "first_visible_UTC": "2026-10-12T19:26:00+00:00",
+      "matching_confirmed_curve_values": 60,
+      "max_confirmed_curve_difference": 0,
+      "last_row_numeric_curve_values": 10,
+      "last_row_matches_previous_reference_plots": true,
+      "last_row_OHLC": {
+        "open": "30874.75",
+        "high": "30874.75",
+        "low": "30874.75",
+        "close": "30874.75"
+      },
+      "last_row_final_reference_OHLC": {
+        "open": "30874.75",
+        "high": "30880.75",
+        "low": "30874.5",
+        "close": "30879.25"
+      },
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_historial_replay_1933.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 133.82022471910113,
+          "upper_exclusive": 134.02777777777777
+        },
+        "compatible_integer_C_seconds": [
+          134
+        ],
+        "periods": {
+          "Layer A": 54,
+          "Layer A boundary": 66,
+          "Layer B": 18,
+          "Layer B boundary": 22,
+          "Layer C": 6,
+          "Layer C boundary": 7,
+          "Extra cloud 1": 161,
+          "Extra cloud 1 boundary": 199,
+          "Extra cloud 2": 482,
+          "Extra cloud 2 boundary": 596
+        },
+        "pairs_per_curve": 5,
+        "max_rmse_step": 2.1798178990707497e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      }
+    },
+    {
+      "cutoff_UTC": "19:40",
+      "file": "C_historial_replay_1940.csv",
+      "last_bar_UTC": "2026-10-12T19:39:00+00:00",
+      "first_visible_UTC": "2026-10-12T19:26:00+00:00",
+      "matching_confirmed_curve_values": 130,
+      "max_confirmed_curve_difference": 0,
+      "last_row_numeric_curve_values": 10,
+      "last_row_matches_previous_reference_plots": true,
+      "last_row_OHLC": {
+        "open": "30901",
+        "high": "30901.5",
+        "low": "30896.25",
+        "close": "30896.5"
+      },
+      "last_row_final_reference_OHLC": {
+        "open": "30901",
+        "high": "30901.5",
+        "low": "30896.25",
+        "close": "30896.5"
+      },
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_historial_replay_1940.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 133.82022471910113,
+          "upper_exclusive": 134.02777777777777
+        },
+        "compatible_integer_C_seconds": [
+          134
+        ],
+        "periods": {
+          "Layer A": 54,
+          "Layer A boundary": 66,
+          "Layer B": 18,
+          "Layer B boundary": 22,
+          "Layer C": 6,
+          "Layer C boundary": 7,
+          "Extra cloud 1": 161,
+          "Extra cloud 1 boundary": 199,
+          "Extra cloud 2": 482,
+          "Extra cloud 2 boundary": 596
+        },
+        "pairs_per_curve": 12,
+        "max_rmse_step": 2.1329421430332914e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      }
+    }
+  ]
+}

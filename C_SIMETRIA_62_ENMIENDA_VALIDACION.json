@@ -1,0 +1,8 @@
+{
+  "issued_at_UTC": "2026-10-14T15:34:30Z",
+  "amends": "C_SIMETRIA_62_PREREGISTRO.json",
+  "scope": "Validation rigor only; no symbol, data window, model, prediction, or scoring thresholds changed",
+  "additional_coverage_requirement": "For every export require the inclusive 26-bar range and each of the next 540 consecutive 1-minute timestamps. Repeated-export and affine comparisons must share at least those 566 timestamps; missing common timestamps fail acceptance.",
+  "reason": "The initial audit counted 540 post-END rows without asserting they were consecutive or common across exports. The auditor was tightened before any preregistered C=62 export was present.",
+  "implementation": "auditar_C_simetria62.py"
+}

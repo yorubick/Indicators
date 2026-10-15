@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.python-version.local
+
+# Local/editor/temporary output
+.vscode/
+.idea/
+*.tmp
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,37 @@
+{
+  "selection": "OHLC only, no original C consulted; candidate half-hours07..18 excluding14,21bars; positive maxER and minER with range>=10",
+  "selected": {
+    "bull": {
+      "START": "2026-10-12T15:30:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "net": 63.25,
+      "ER": 0.5659955257270693,
+      "range": 87.75,
+      "Gemini_prediction_before_measurement": {
+        "C": 276,
+        "branch": "root",
+        "ticks": 351,
+        "start_position": 0.09116809116809117,
+        "new_high": true,
+        "new_low": false,
+        "previous_high_confirmed": false
+      }
+    },
+    "lateral": {
+      "START": "2026-10-12T07:00:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "net": 2.0,
+      "ER": 0.018779342723004695,
+      "range": 37.5,
+      "Gemini_prediction_before_measurement": {
+        "C": 87,
+        "branch": "consolidation",
+        "ticks": 150,
+        "start_position": 0.2866666666666667,
+        "new_high": false,
+        "new_low": false,
+        "previous_high_confirmed": false
+      }
+    }
+  }
+}

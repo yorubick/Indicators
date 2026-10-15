@@ -1,0 +1,9 @@
+{
+  "selectors": [
+    "volume_cross_1",
+    "volume_cross_1.5"
+  ],
+  "selection": "First up-cross as specified in C_reinicio_subrango_preregistro.json; inclusive event..END.",
+  "mapping": "C=K*selected_n*dt*10/183*volume_feature. Same22 features as prior volume test; one positiveK shared by nine controls; observedC+/-1second.",
+  "scope": "Exploratory second stage selected after descriptor audit; labels known. No training32 or validation, no arbitrary per-case coefficients."
+}

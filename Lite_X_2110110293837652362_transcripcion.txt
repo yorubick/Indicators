@@ -1,0 +1,88 @@
+1.4-11.6:  Okay, it's a quick informal run through on the poison EMA light version that I gave you guys today
+12.1-14.1:  a lot of you may be having
+14.5-17.1:  questions about how to anchor it where to anchor it
+18.1-20.1:  It's pretty simple
+21.0-24.6:  I've just gone into a great detail inside my discord
+25.5-27.5:  for how to do this and
+28.2-31.7:  basically what you would ideally need to look for is
+33.1-35.1:  Like if it's a bearish set up
+35.7-40.2:  We look for a high to a low to an addressment, right?
+40.7-44.9:  If it's a bullish set up look for a low to a high
+45.7-47.7:  to an addressment and
+49.1-54.9:  We would then come in and anchor the points from the high
+55.7-57.7:  to the retracement
+58.9-60.9:  What that would do is
+61.9-67.2:  It would find its own EMA's based on the box that you draw
+69.3-79.9:  So these particular EMA's or calculations are based on this box if I went here and here
+81.5-84.3:  These are now different EMA's
+87.3-90.6:  Based on a different box what I've gone and done
+91.7-93.7:  I've kept it here is
+94.1-96.1:  This is a very stripped-down version
+96.5-98.5:  if we are on a
+99.3-103.5:  current PA use the second state if you have it not keep it to one minute
+104.6-106.9:  dark theme lighting that's of explanatory
+108.0-113.7:  show PD arrays now these are a PD arrays you'll see on chart here and
+115.4-117.4:  They are not
+118.2-123.3:  based or shown or calculated on the actual touch chart chart time frame
+124.3-131.4:  that calculated on a totally separate lower time frame for this right and
+133.8-135.8:  What's
+135.8-137.8:  interesting to note here is that
+138.2-140.2:  when you're using
+140.4-149.9:  These EMA's for example, let's just see if we can get anything in here and replay more really quickly is
+151.4-153.4:  The
+153.4-155.3:  Right
+155.3-157.1:  is that
+157.1-160.3:  If you're bullish, then the FEGs
+161.1-163.1:  Should want to contain
+163.8-167.0:  What price is doing so you would ideally look?
+167.8-169.8:  Take any setups?
+170.1-172.1:  It's too fast. Hold on
+172.6-174.6:  Let's pause that back
+175.4-181.5:  You would ideally want to take setups
+182.8-189.1:  At these FEGs that form right you'll see them forming and we look for FEG FEG
+190.9-195.7:  Until they get screwed over as long as these FEGs are holding right there
+196.3-198.1:  right here
+198.1-200.1:  All right as long as they are holding
+200.7-206.5:  This delivery should be good the moment these FEGs start to inverse you'll find that
+207.8-209.6:  They now become
+209.6-213.2:  barriers or brick walls start to send price lower so that's
+213.8-219.5:  the reason why I kept the PD arrays with the FEGs I FEGs and volume imbalances on and
+220.4-222.8:  We've kept the box height
+223.7-225.7:  projections on
+226.1-228.1:  What those do is
+229.7-231.7:  You are
+231.7-235.1:  They give us the deviations
+235.5-242.2:  Based on the size of the box of this was for standard deviations or for for projection
+243.5-245.5:  Level right here
+246.2-255.2:  So I found that to be pretty neat because if you chose any sort of
+256.1-260.4:  I alone in a basement
+261.0-265.8:  You'll find that these tend to do some do things
+266.6-271.6:  At one to one and a half two to two and a half and then three and a half to four
+272.7-274.7:  right
+275.2-277.0:  The
+277.1-279.1:  Box today that I think we drew
+281.0-283.0:  Was this high?
+283.2-285.2:  That low that replacement
+285.9-292.0:  It gave us four deviations down here, which is why I wasn't too
+293.0-295.0:  bearish so this is the P version
+295.4-297.4:  go ahead and play around with it and
+299.6-302.1:  You'll find that when you're ready
+303.7-307.5:  When you're ready come and see me because what we can do
+308.4-310.4:  this is the
+310.5-315.4:  whole version right so that same range that we just drew right now
+316.3-319.1:  You could anchor that high to that load that
+325.1-339.8:  There and we could change the signals to bearish and you'll find
+341.6-344.0:  There's the fella here the breakdown
+344.6-350.1:  Two cells here a cell here here and here and down here
+351.0-355.9:  Right there was the entire delivery with one two three four five six
+357.2-359.4:  six almost near zero drawdown
+360.9-366.0:  Signals now this guy does a whole lot of other stuff inside here like
+367.2-372.6:  I mean you were to cover these will cover where to cover your shorts because
+373.5-379.2:  You'll notice here the calculation of the math involved here at these cover levels price has a very
+379.9-385.1:  Stupid tendency to want to retrace or go against your positions
+385.5-388.2:  so that's just a premium version and
+389.0-393.4:  This is the reversion of the light version that I gave you guys
+394.5-396.5:  What projections and peteries?
+397.3-401.9:  Play around with it. Let me know what you think DME send me
+403.7-408.0:  Post a few screens on X and I'll repost
+409.2-411.2:  the best ones for you

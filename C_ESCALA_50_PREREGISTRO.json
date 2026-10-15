@@ -1,0 +1,15 @@
+{
+  "date":"2026-10-14",
+  "START_UTC":"2026-10-12T19:02:00Z",
+  "END_UTC":"2026-10-12T19:22:00Z",
+  "chart_seconds":60,
+  "source_seconds":60,
+  "version":"Existing loaded Litev1.2; do not apply its update. Character was updated externally toCT6558 and is not a primary measurement in this experiment.",
+  "steps":[
+    {"id":"base","symbol":"CME_MINI:NQ1!","prediction_C":50},
+    {"id":"identity","symbol":"CME_MINI:NQ1!+0","prediction_C":50,"acceptance":"Must retain synthetic context and reproduce full nativeOHLC,volume and Lite curves, or explain unsupported context. Stop interpreting further transformations if this fails."},
+    {"id":"double","symbol":"2*CME_MINI:NQ1!","prediction_invariant_C":50,"prediction_Gemini_v4_C":77,"acceptance":"Only after identity accepted. Verify all OHLC'=2OHLC, native timestamps, volume, plots recurrence and metadata."},
+    {"id":"return","symbol":"CME_MINI:NQ1!","prediction_C":50}
+  ],
+  "scope":"Local discriminating price-scale test, not a proof of all harmonic models or exclusive amplitude dependence. Historical spreads may differ in volume/metadata/feeds; require actual compatibility before interpreting C. No test if identity normalized to original without synthetic context evidence. Original main layout not changed."
+}

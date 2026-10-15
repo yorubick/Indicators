@@ -1,0 +1,192 @@
+{
+  "scope": "Locate local START transition88->61 across four removals. Only numerical candidate is linear interpolation fixed by known endpoints; predictions81.25,74.5,67.75 before measurement. It is not a general formula, and integer C alone is not used to pre-reject it. Diagnostic observations retain all failures. Counts and OHLC prefix change jointly.",
+  "cases": [
+    {
+      "id": "C_recorte1903_15",
+      "START": "2026-10-12T19:03:15+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "dt": 15,
+      "bars": 83,
+      "removed_bars": 1,
+      "predictions": {
+        "linear_interpolation": 81.25
+      },
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 88.00000000000159,
+      "model_matches": {
+        "linear_interpolation": false
+      },
+      "repeat_cells": 127056,
+      "Character_interval": {
+        "lower_inclusive": 87.95138888888889,
+        "upper_exclusive": 88.00561797752809
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 87.99999999999143,
+          "period": 140.7999999999863,
+          "pairs": 7340,
+          "rmse": 1.5989512806209456e-12
+        },
+        "Lane 3 B": {
+          "C": 88.00000000001427,
+          "period": 174.04444444447267,
+          "pairs": 7340,
+          "rmse": 1.5053043884412487e-12
+        },
+        "Lane 2 A": {
+          "C": 87.99999999999865,
+          "period": 46.93333333333261,
+          "pairs": 7340,
+          "rmse": 2.101537960059955e-12
+        },
+        "Lane 2 B": {
+          "C": 88.00000000000685,
+          "period": 58.01481481481933,
+          "pairs": 7340,
+          "rmse": 1.644745270538821e-12
+        },
+        "Lane 1 A": {
+          "C": 87.99999999999828,
+          "period": 15.644444444444137,
+          "pairs": 7340,
+          "rmse": 1.517434679164933e-12
+        },
+        "Lane 1 B": {
+          "C": 88.00000000000006,
+          "period": 19.338271604938285,
+          "pairs": 7340,
+          "rmse": 2.283944267370359e-12
+        }
+      }
+    },
+    {
+      "id": "C_recorte1903_30",
+      "START": "2026-10-12T19:03:30+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "dt": 15,
+      "bars": 82,
+      "removed_bars": 2,
+      "predictions": {
+        "linear_interpolation": 74.5
+      },
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 60.9999999999996,
+      "model_matches": {
+        "linear_interpolation": false
+      },
+      "repeat_cells": 127104,
+      "Character_interval": {
+        "lower_inclusive": 60.98314606741573,
+        "upper_exclusive": 61.00694444444444
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 60.999999999999766,
+          "period": 97.59999999999962,
+          "pairs": 7343,
+          "rmse": 1.7082973994858693e-12
+        },
+        "Lane 3 B": {
+          "C": 61.000000000002125,
+          "period": 120.64444444444865,
+          "pairs": 7343,
+          "rmse": 1.8250034990187093e-12
+        },
+        "Lane 2 A": {
+          "C": 60.999999999998636,
+          "period": 32.53333333333261,
+          "pairs": 7343,
+          "rmse": 1.615084707370113e-12
+        },
+        "Lane 2 B": {
+          "C": 60.99999999999914,
+          "period": 40.21481481481425,
+          "pairs": 7343,
+          "rmse": 1.5403124387069728e-12
+        },
+        "Lane 1 A": {
+          "C": 60.99999999999888,
+          "period": 10.844444444444244,
+          "pairs": 7343,
+          "rmse": 1.7681886982183012e-12
+        },
+        "Lane 1 B": {
+          "C": 60.99999999999907,
+          "period": 13.404938271604735,
+          "pairs": 7343,
+          "rmse": 1.7631806876682662e-12
+        }
+      }
+    },
+    {
+      "id": "C_recorte1903_45",
+      "START": "2026-10-12T19:03:45+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "dt": 15,
+      "bars": 81,
+      "removed_bars": 3,
+      "predictions": {
+        "linear_interpolation": 67.75
+      },
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 60.9999999999996,
+      "model_matches": {
+        "linear_interpolation": false
+      },
+      "repeat_cells": 127168,
+      "Character_interval": {
+        "lower_inclusive": 60.98314606741573,
+        "upper_exclusive": 61.00694444444444
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 60.999999999999716,
+          "period": 97.59999999999954,
+          "pairs": 7347,
+          "rmse": 1.7081354098319348e-12
+        },
+        "Lane 3 B": {
+          "C": 61.00000000000211,
+          "period": 120.64444444444862,
+          "pairs": 7347,
+          "rmse": 1.8246650376232076e-12
+        },
+        "Lane 2 A": {
+          "C": 60.99999999999869,
+          "period": 32.533333333332635,
+          "pairs": 7347,
+          "rmse": 1.6150804109037699e-12
+        },
+        "Lane 2 B": {
+          "C": 60.99999999999914,
+          "period": 40.21481481481425,
+          "pairs": 7347,
+          "rmse": 1.5404003745920303e-12
+        },
+        "Lane 1 A": {
+          "C": 60.99999999999888,
+          "period": 10.844444444444244,
+          "pairs": 7347,
+          "rmse": 1.7678564354092972e-12
+        },
+        "Lane 1 B": {
+          "C": 60.999999999999055,
+          "period": 13.40493827160473,
+          "pairs": 7347,
+          "rmse": 1.7633960077366215e-12
+        }
+      }
+    }
+  ],
+  "failures": []
+}

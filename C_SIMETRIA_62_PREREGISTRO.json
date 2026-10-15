@@ -1,0 +1,54 @@
+{
+  "registered_at_UTC": "2026-10-14T15:28:47Z",
+  "purpose": "Preregistered out-of-window test of price affine invariance at a distinct measured C value",
+  "source_master": "master_all_C_cases.json",
+  "master_case_id": "20261012_185500_192000_60s",
+  "symbol_base": "CME_MINI:NQ1!",
+  "START_UTC": "2026-10-12T18:55:00Z",
+  "END_UTC": "2026-10-12T19:20:00Z",
+  "source_seconds": 60,
+  "chart_seconds": 60,
+  "bars_inclusive": 26,
+  "locked_C_base": 61.99999999999884,
+  "locked_prediction_all_transforms": 61.99999999999884,
+  "indicator": "Existing Lite v1.2; Character excluded",
+  "transformations": [
+    {
+      "id": "double",
+      "symbol": "2*CME_MINI:NQ1!",
+      "a": 2,
+      "b": 0,
+      "expected_price": "O,H,L,C multiplied by 2",
+      "expected_volume": "unchanged",
+      "expected_C": 61.99999999999884,
+      "exports": ["C_simetria62_doble_a.csv", "C_simetria62_doble_b.csv"]
+    },
+    {
+      "id": "translation",
+      "symbol": "CME_MINI:NQ1!+10000",
+      "a": 1,
+      "b": 10000,
+      "expected_price": "O,H,L,C increased by 10000",
+      "expected_volume": "unchanged",
+      "expected_C": 61.99999999999884,
+      "exports": ["C_simetria62_traslacion_a.csv", "C_simetria62_traslacion_b.csv"]
+    },
+    {
+      "id": "reflection",
+      "symbol": "70000-CME_MINI:NQ1!",
+      "a": -1,
+      "b": 70000,
+      "expected_price": "O,C mapped to 70000-price; H,L mapped to 70000-L,70000-H",
+      "expected_volume": "unchanged",
+      "expected_C": 61.99999999999884,
+      "exports": ["C_simetria62_reflejo_a.csv", "C_simetria62_reflejo_b.csv"]
+    }
+  ],
+  "exports": {
+    "base": ["C_simetria62_base_a.csv", "C_simetria62_base_b.csv"],
+    "return_native": "C_simetria62_regreso.csv"
+  },
+  "acceptance": "Capture each listed export after this registration. Require the formula to remain visible in the symbol field; common timestamps; full inclusive 26-bar window and 540 post-END bars; exact OHLC transform and unchanged Volume on the measured range; repeated exports consistent; all six Lite lanes affine-equivariant within 1e-8 with identical visibility; each lane independently fits locked C within 1e-6 and RMSE below 1e-8; recurrence reconstruction error below 1e-8 with zero visibility mismatches. The return export must match the native baseline. Report failed or incompatible transformations without scoring their C prediction.",
+  "locked_model_implication": "For Y'_t=aY_t+b and P'_t=aP_t+b, EMA alpha=(Y'_t-Y'_{t-1})/(P'_t-Y'_{t-1}) equals the native alpha; therefore C remains invariant. This tests that implication outside the prior C=50 window, not the unknown OHLCV-to-C law itself.",
+  "limits": "The three transforms share one market episode and one C=62 window. Passing supports price-affine invariance of the fitted EMA coefficient in this case, but does not establish volume independence, identify C=f(OHLCV,Delta), or generalize across sessions/timeframes. Existing C=62 exports are reference measurements only; only post-registration named exports are scored."
+}

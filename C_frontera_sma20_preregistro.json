@@ -1,0 +1,25 @@
+{
+  "cases": "Only master dataset training cases with exactly21 bars; reserved validation not used.",
+  "target_series": [
+    "close",
+    "hl2",
+    "hlc3",
+    "ohlc4"
+  ],
+  "driver_series": [
+    "close",
+    "hl2",
+    "hlc3",
+    "ohlc4"
+  ],
+  "coefficient": "y0=mean(target bars0..19), y1=mean(target bars1..20); alpha=(y1-y0)/(driver_bar20-y0). Equivalent least-squares one-update fit y1=y0+alpha*(driver20-y0).",
+  "policies": [
+    "positive",
+    "absolute"
+  ],
+  "admissibility": "Denominator nonzero; coefficient (raw or absolute per fixed policy) must satisfy0<alpha<=1. No clipping or per-case fallback in long branch.",
+  "mapping": "N=2/alpha-1; C=K*dt*N, one positiveK shared by all eleven trainingC21, generous observedC+/-1second intervals.",
+  "short_branch": "Previously observed short relationship retained only as reference; matching its cutoff does not establish original mechanism.",
+  "gate": "Reject incomplete coverage or empty commonK interval. Only survivors may be tested on other training lengths before reserved validation.",
+  "scope": "32 finite candidates, known overlapping training labels. Exploratory. Does not exclude all rolling20 calculations, external series, initialization or postEND data."
+}

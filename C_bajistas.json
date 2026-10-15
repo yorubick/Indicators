@@ -1,0 +1,186 @@
+{
+  "cases": [
+    {
+      "start": "04:45",
+      "end": "05:15",
+      "source_seconds": 60,
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_bear_0445_0515_b.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 115.97222222222223,
+          "upper_exclusive": 116.06741573033707
+        },
+        "compatible_integer_C_seconds": [
+          116
+        ],
+        "periods": {
+          "Layer A": 46,
+          "Layer A boundary": 57,
+          "Layer B": 15,
+          "Layer B boundary": 19,
+          "Layer C": 5,
+          "Layer C boundary": 6,
+          "Extra cloud 1": 139,
+          "Extra cloud 1 boundary": 172,
+          "Extra cloud 2": 418,
+          "Extra cloud 2 boundary": 516
+        },
+        "pairs_per_curve": 1964,
+        "max_rmse_step": 1.8080731270462204e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      },
+      "repeat_file": "G:\\trading\\guias\\analisis\\C_bear_0445_0515_a.csv",
+      "repeated_common_values": 21000,
+      "range_high": 31259.75,
+      "range_low": 31227.25,
+      "END_high": 31250.5,
+      "END_low": 31244.25,
+      "chosen_direction": "bear",
+      "first_breakout_UTC": "2026-10-12T05:36:00+00:00",
+      "first_plot_UTC": "2026-10-12T05:36:00+00:00",
+      "values_compared": 700,
+      "max_error": 2.9103830456733704e-11,
+      "unexpected_plots_before_breakout": 0,
+      "missing_plots_after_breakout": 0,
+      "matches": true
+    },
+    {
+      "start": "04:45",
+      "end": "05:25",
+      "source_seconds": 60,
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_bear_0445_0525_b.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 112.92134831460675,
+          "upper_exclusive": 113.14606741573034
+        },
+        "compatible_integer_C_seconds": [
+          113
+        ],
+        "periods": {
+          "Layer A": 45,
+          "Layer A boundary": 56,
+          "Layer B": 15,
+          "Layer B boundary": 19,
+          "Layer C": 5,
+          "Layer C boundary": 6,
+          "Extra cloud 1": 136,
+          "Extra cloud 1 boundary": 168,
+          "Extra cloud 2": 407,
+          "Extra cloud 2 boundary": 503
+        },
+        "pairs_per_curve": 1965,
+        "max_rmse_step": 1.8068985012635875e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      },
+      "repeat_file": "G:\\trading\\guias\\analisis\\C_bear_0445_0525_a.csv",
+      "repeated_common_values": 21010,
+      "range_high": 31259.75,
+      "range_low": 31227.25,
+      "END_high": 31248.75,
+      "END_low": 31242.0,
+      "chosen_direction": "bear",
+      "first_breakout_UTC": "2026-10-12T05:36:00+00:00",
+      "first_plot_UTC": "2026-10-12T05:36:00+00:00",
+      "values_compared": 800,
+      "max_error": 2.1827872842550278e-11,
+      "unexpected_plots_before_breakout": 0,
+      "missing_plots_after_breakout": 0,
+      "matches": true
+    },
+    {
+      "start": "04:45",
+      "end": "05:30",
+      "source_seconds": 60,
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_bear_0445_0530_b.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 110.0,
+          "upper_exclusive": 110.13888888888889
+        },
+        "compatible_integer_C_seconds": [
+          110
+        ],
+        "periods": {
+          "Layer A": 44,
+          "Layer A boundary": 54,
+          "Layer B": 15,
+          "Layer B boundary": 18,
+          "Layer C": 5,
+          "Layer C boundary": 6,
+          "Extra cloud 1": 132,
+          "Extra cloud 1 boundary": 163,
+          "Extra cloud 2": 396,
+          "Extra cloud 2 boundary": 490
+        },
+        "pairs_per_curve": 1966,
+        "max_rmse_step": 1.810460649144149e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      },
+      "repeat_file": "G:\\trading\\guias\\analisis\\C_bear_0445_0530_a.csv",
+      "repeated_common_values": 21010,
+      "range_high": 31259.75,
+      "range_low": 31227.25,
+      "END_high": 31245.5,
+      "END_low": 31236.0,
+      "chosen_direction": "bear",
+      "first_breakout_UTC": "2026-10-12T05:36:00+00:00",
+      "first_plot_UTC": "2026-10-12T05:36:00+00:00",
+      "values_compared": 850,
+      "max_error": 2.1827872842550278e-11,
+      "unexpected_plots_before_breakout": 0,
+      "missing_plots_after_breakout": 0,
+      "matches": true
+    },
+    {
+      "start": "04:50",
+      "end": "05:25",
+      "source_seconds": 60,
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_bear_0450_0525_b.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 112.92134831460675,
+          "upper_exclusive": 113.14606741573034
+        },
+        "compatible_integer_C_seconds": [
+          113
+        ],
+        "periods": {
+          "Layer A": 45,
+          "Layer A boundary": 56,
+          "Layer B": 15,
+          "Layer B boundary": 19,
+          "Layer C": 5,
+          "Layer C boundary": 6,
+          "Extra cloud 1": 136,
+          "Extra cloud 1 boundary": 168,
+          "Extra cloud 2": 407,
+          "Extra cloud 2 boundary": 503
+        },
+        "pairs_per_curve": 1966,
+        "max_rmse_step": 1.8067831458207428e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      },
+      "repeat_file": "G:\\trading\\guias\\analisis\\C_bear_0450_0525_a.csv",
+      "repeated_common_values": 21020,
+      "range_high": 31259.75,
+      "range_low": 31227.25,
+      "END_high": 31248.75,
+      "END_low": 31242.0,
+      "chosen_direction": "bear",
+      "first_breakout_UTC": "2026-10-12T05:36:00+00:00",
+      "first_plot_UTC": "2026-10-12T05:36:00+00:00",
+      "values_compared": 800,
+      "max_error": 2.1827872842550278e-11,
+      "unexpected_plots_before_breakout": 0,
+      "missing_plots_after_breakout": 0,
+      "matches": true
+    }
+  ],
+  "matching_count": 4,
+  "scope": "NQ1!, Manual profile B, source=chart 1m, same date with overlapping ranges. C recovered from original plots; dual-branch simulation receives C but never fits seed from plots. First 90min after END."
+}

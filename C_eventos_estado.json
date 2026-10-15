@@ -1,0 +1,613 @@
+{
+  "transitions": [
+    {
+      "START": "2026-10-12T06:00:00+00:00",
+      "END_before": "2026-10-12T06:20:00+00:00",
+      "END_after": "2026-10-12T06:21:00+00:00",
+      "C_before": 76.99999999999633,
+      "C_after": 76.99999999999663,
+      "C_changed": false,
+      "delta_C": 2.984279490192421e-13,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": true
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791786060,
+        "open": 31164.75,
+        "high": 31172.25,
+        "low": 31163.25,
+        "close": 31171.25
+      }
+    },
+    {
+      "START": "2026-10-12T06:00:00+00:00",
+      "END_before": "2026-10-12T06:21:00+00:00",
+      "END_after": "2026-10-12T06:22:00+00:00",
+      "C_before": 76.99999999999663,
+      "C_after": 76.99999999999655,
+      "C_changed": false,
+      "delta_C": -8.526512829121202e-14,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": false
+      },
+      "any_event": false,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791786120,
+        "open": 31170.5,
+        "high": 31178.0,
+        "low": 31170.0,
+        "close": 31176.5
+      }
+    },
+    {
+      "START": "2026-10-12T06:00:00+00:00",
+      "END_before": "2026-10-12T06:22:00+00:00",
+      "END_after": "2026-10-12T06:23:00+00:00",
+      "C_before": 76.99999999999655,
+      "C_after": 73.00000000000334,
+      "C_changed": true,
+      "delta_C": -3.999999999993207,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": true,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791786180,
+        "open": 31176.0,
+        "high": 31176.5,
+        "low": 31171.75,
+        "close": 31171.75
+      }
+    },
+    {
+      "START": "2026-10-12T19:00:00+00:00",
+      "END_before": "2026-10-12T19:20:00+00:00",
+      "END_after": "2026-10-12T19:21:00+00:00",
+      "C_before": 76.99999999999851,
+      "C_after": 101.99999999999835,
+      "C_changed": true,
+      "delta_C": 24.999999999999844,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": true,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791832860,
+        "open": 30870.0,
+        "high": 30870.5,
+        "low": 30866.5,
+        "close": 30868.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:00:00+00:00",
+      "END_before": "2026-10-12T19:21:00+00:00",
+      "END_after": "2026-10-12T19:22:00+00:00",
+      "C_before": 101.99999999999835,
+      "C_after": 76.99999999999841,
+      "C_changed": true,
+      "delta_C": -24.999999999999943,
+      "events": {
+        "new_global_H": true,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": false,
+      "added_bar": {
+        "time": 1791832920,
+        "open": 30868.75,
+        "high": 30870.75,
+        "low": 30866.75,
+        "close": 30868.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:00:00+00:00",
+      "END_before": "2026-10-12T19:22:00+00:00",
+      "END_after": "2026-10-12T19:23:00+00:00",
+      "C_before": 76.99999999999841,
+      "C_after": 76.9999999999985,
+      "C_changed": false,
+      "delta_C": 8.526512829121202e-14,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": true,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791832980,
+        "open": 30868.25,
+        "high": 30869.5,
+        "low": 30864.25,
+        "close": 30866.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:00:00+00:00",
+      "END_before": "2026-10-12T19:23:00+00:00",
+      "END_after": "2026-10-12T19:24:00+00:00",
+      "C_before": 76.9999999999985,
+      "C_after": 59.99999999999963,
+      "C_changed": true,
+      "delta_C": -16.999999999998863,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": true
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791833040,
+        "open": 30866.5,
+        "high": 30870.0,
+        "low": 30866.25,
+        "close": 30869.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:01:00+00:00",
+      "END_before": "2026-10-12T19:21:00+00:00",
+      "END_after": "2026-10-12T19:22:00+00:00",
+      "C_before": 76.99999999999798,
+      "C_after": 76.99999999999841,
+      "C_changed": false,
+      "delta_C": 4.263256414560601e-13,
+      "events": {
+        "new_global_H": true,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": false,
+      "added_bar": {
+        "time": 1791832920,
+        "open": 30868.75,
+        "high": 30870.75,
+        "low": 30866.75,
+        "close": 30868.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:01:00+00:00",
+      "END_before": "2026-10-12T19:22:00+00:00",
+      "END_after": "2026-10-12T19:23:00+00:00",
+      "C_before": 76.99999999999841,
+      "C_after": 76.9999999999985,
+      "C_changed": false,
+      "delta_C": 8.526512829121202e-14,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": true,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791832980,
+        "open": 30868.25,
+        "high": 30869.5,
+        "low": 30864.25,
+        "close": 30866.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:01:00+00:00",
+      "END_before": "2026-10-12T19:23:00+00:00",
+      "END_after": "2026-10-12T19:24:00+00:00",
+      "C_before": 76.9999999999985,
+      "C_after": 76.99999999999822,
+      "C_changed": false,
+      "delta_C": -2.7000623958883807e-13,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": true
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791833040,
+        "open": 30866.5,
+        "high": 30870.0,
+        "low": 30866.25,
+        "close": 30869.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:02:00+00:00",
+      "END_before": "2026-10-12T19:22:00+00:00",
+      "END_after": "2026-10-12T19:23:00+00:00",
+      "C_before": 49.99999999999989,
+      "C_after": 51.99999999999978,
+      "C_changed": true,
+      "delta_C": 1.9999999999998863,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": true,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791832980,
+        "open": 30868.25,
+        "high": 30869.5,
+        "low": 30864.25,
+        "close": 30866.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:02:00+00:00",
+      "END_before": "2026-10-12T19:23:00+00:00",
+      "END_after": "2026-10-12T19:24:00+00:00",
+      "C_before": 51.99999999999978,
+      "C_after": 55.000000000000334,
+      "C_changed": true,
+      "delta_C": 3.0000000000005542,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": true
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791833040,
+        "open": 30866.5,
+        "high": 30870.0,
+        "low": 30866.25,
+        "close": 30869.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:02:00+00:00",
+      "END_before": "2026-10-12T19:24:00+00:00",
+      "END_after": "2026-10-12T19:25:00+00:00",
+      "C_before": 55.000000000000334,
+      "C_after": 71.00000000000176,
+      "C_changed": true,
+      "delta_C": 16.000000000001428,
+      "events": {
+        "new_global_H": true,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": false,
+      "added_bar": {
+        "time": 1791833100,
+        "open": 30869.25,
+        "high": 30871.25,
+        "low": 30867.0,
+        "close": 30868.75
+      }
+    },
+    {
+      "START": "2026-10-12T19:03:00+00:00",
+      "END_before": "2026-10-12T19:23:00+00:00",
+      "END_after": "2026-10-12T19:24:00+00:00",
+      "C_before": 49.99999999999983,
+      "C_after": 51.99999999999968,
+      "C_changed": true,
+      "delta_C": 1.9999999999998508,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": true
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791833040,
+        "open": 30866.5,
+        "high": 30870.0,
+        "low": 30866.25,
+        "close": 30869.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:03:00+00:00",
+      "END_before": "2026-10-12T19:24:00+00:00",
+      "END_after": "2026-10-12T19:25:00+00:00",
+      "C_before": 51.99999999999968,
+      "C_after": 71.00000000000131,
+      "C_changed": true,
+      "delta_C": 19.000000000001627,
+      "events": {
+        "new_global_H": true,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": false,
+      "added_bar": {
+        "time": 1791833100,
+        "open": 30869.25,
+        "high": 30871.25,
+        "low": 30867.0,
+        "close": 30868.75
+      }
+    },
+    {
+      "START": "2026-10-12T19:04:00+00:00",
+      "END_before": "2026-10-12T19:24:00+00:00",
+      "END_after": "2026-10-12T19:25:00+00:00",
+      "C_before": 49.99999999999971,
+      "C_after": 71.00000000000131,
+      "C_changed": true,
+      "delta_C": 21.0000000000016,
+      "events": {
+        "new_global_H": true,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": false,
+      "added_bar": {
+        "time": 1791833100,
+        "open": 30869.25,
+        "high": 30871.25,
+        "low": 30867.0,
+        "close": 30868.75
+      }
+    },
+    {
+      "START": "2026-10-12T19:04:00+00:00",
+      "END_before": "2026-10-12T19:25:00+00:00",
+      "END_after": "2026-10-12T19:26:00+00:00",
+      "C_before": 71.00000000000131,
+      "C_after": 71.00000000000114,
+      "C_changed": false,
+      "delta_C": -1.7053025658242404e-13,
+      "events": {
+        "new_global_H": true,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": false,
+      "added_bar": {
+        "time": 1791833160,
+        "open": 30868.75,
+        "high": 30873.0,
+        "low": 30867.25,
+        "close": 30872.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:04:00+00:00",
+      "END_before": "2026-10-12T19:26:00+00:00",
+      "END_after": "2026-10-12T19:27:00+00:00",
+      "C_before": 71.00000000000114,
+      "C_after": 71.00000000000108,
+      "C_changed": false,
+      "delta_C": -5.684341886080802e-14,
+      "events": {
+        "new_global_H": true,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": false,
+      "added_bar": {
+        "time": 1791833220,
+        "open": 30872.25,
+        "high": 30874.75,
+        "low": 30871.0,
+        "close": 30873.0
+      }
+    },
+    {
+      "START": "2026-10-12T19:04:00+00:00",
+      "END_before": "2026-10-12T19:27:00+00:00",
+      "END_after": "2026-10-12T19:28:00+00:00",
+      "C_before": 71.00000000000108,
+      "C_after": 128.00000000000065,
+      "C_changed": true,
+      "delta_C": 56.999999999999574,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": true,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791833280,
+        "open": 30873.25,
+        "high": 30874.5,
+        "low": 30869.5,
+        "close": 30872.75
+      }
+    },
+    {
+      "START": "2026-10-12T19:04:00+00:00",
+      "END_before": "2026-10-12T19:28:00+00:00",
+      "END_after": "2026-10-12T19:29:00+00:00",
+      "C_before": 128.00000000000065,
+      "C_after": 134.00000000000446,
+      "C_changed": true,
+      "delta_C": 6.0000000000038085,
+      "events": {
+        "new_global_H": true,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": true
+      },
+      "any_event": true,
+      "same_global_extrema": false,
+      "added_bar": {
+        "time": 1791833340,
+        "open": 30873.25,
+        "high": 30876.0,
+        "low": 30870.5,
+        "close": 30875.75
+      }
+    },
+    {
+      "START": "2026-10-12T19:04:00+00:00",
+      "END_before": "2026-10-12T19:29:00+00:00",
+      "END_after": "2026-10-12T19:30:00+00:00",
+      "C_before": 134.00000000000446,
+      "C_after": 109.00000000000102,
+      "C_changed": true,
+      "delta_C": -25.00000000000344,
+      "events": {
+        "new_global_H": true,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": false,
+      "added_bar": {
+        "time": 1791833400,
+        "open": 30875.25,
+        "high": 30877.5,
+        "low": 30871.0,
+        "close": 30876.5
+      }
+    }
+  ],
+  "counts": {
+    "closed_consecutive_END_transitions": 21,
+    "C_change_without_defined_event": 0,
+    "defined_event_without_C_change": 7
+  },
+  "no_event_change_witnesses": [],
+  "event_no_change_witnesses": [
+    {
+      "START": "2026-10-12T06:00:00+00:00",
+      "END_before": "2026-10-12T06:20:00+00:00",
+      "END_after": "2026-10-12T06:21:00+00:00",
+      "C_before": 76.99999999999633,
+      "C_after": 76.99999999999663,
+      "C_changed": false,
+      "delta_C": 2.984279490192421e-13,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": true
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791786060,
+        "open": 31164.75,
+        "high": 31172.25,
+        "low": 31163.25,
+        "close": 31171.25
+      }
+    },
+    {
+      "START": "2026-10-12T19:00:00+00:00",
+      "END_before": "2026-10-12T19:22:00+00:00",
+      "END_after": "2026-10-12T19:23:00+00:00",
+      "C_before": 76.99999999999841,
+      "C_after": 76.9999999999985,
+      "C_changed": false,
+      "delta_C": 8.526512829121202e-14,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": true,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791832980,
+        "open": 30868.25,
+        "high": 30869.5,
+        "low": 30864.25,
+        "close": 30866.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:01:00+00:00",
+      "END_before": "2026-10-12T19:21:00+00:00",
+      "END_after": "2026-10-12T19:22:00+00:00",
+      "C_before": 76.99999999999798,
+      "C_after": 76.99999999999841,
+      "C_changed": false,
+      "delta_C": 4.263256414560601e-13,
+      "events": {
+        "new_global_H": true,
+        "new_global_L": false,
+        "new_confirmed_local_H": false,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": false,
+      "added_bar": {
+        "time": 1791832920,
+        "open": 30868.75,
+        "high": 30870.75,
+        "low": 30866.75,
+        "close": 30868.5
+      }
+    },
+    {
+      "START": "2026-10-12T19:01:00+00:00",
+      "END_before": "2026-10-12T19:22:00+00:00",
+      "END_after": "2026-10-12T19:23:00+00:00",
+      "C_before": 76.99999999999841,
+      "C_after": 76.9999999999985,
+      "C_changed": false,
+      "delta_C": 8.526512829121202e-14,
+      "events": {
+        "new_global_H": false,
+        "new_global_L": false,
+        "new_confirmed_local_H": true,
+        "new_confirmed_local_L": false
+      },
+      "any_event": true,
+      "same_global_extrema": true,
+      "added_bar": {
+        "time": 1791832980,
+        "open": 30868.25,
+        "high": 30869.5,
+        "low": 30864.25,
+        "close": 30866.5
+      }
+    }
+  ],
+  "scope": "Training only, adjacent END additions, strict first-record H/L and radio1 pivot detector. Tests only these events; other events, count, leg ages, state initialization remain possible. No causal price edit, no formula of C."
+}

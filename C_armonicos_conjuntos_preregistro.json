@@ -1,0 +1,25 @@
+{
+  "source": "C_matriz_frontera15s_volumen.json, nueve controles conocidos",
+  "price": "close, timestamps nativos consecutivos",
+  "models": {
+    "single": [
+      1
+    ],
+    "ternary": [
+      1,
+      3,
+      9
+    ],
+    "binary_control": [
+      1,
+      2,
+      4
+    ]
+  },
+  "regression": "intercepto+tendencia lineal+cos/sin de cada componente h/P; mínimos cuadrados",
+  "period_domain_bars": "[18.000001,4*n], común a los tres modelos; resuelve h=9 sin alias de Nyquist",
+  "selection": "mínimo error cuadrático de precio; fases/amplitudes libres estimadas solo del precio",
+  "search": "mallas logarítmicas721/2161, refinar todos los mínimos locales con60pasos golden-section; extremos incluidos",
+  "C_mapping": "C=K*dt*P, K positivo común; permitir C observado +/-1 segundo para cubrir redondeos",
+  "scope": "Exploratorio, etiquetas ya conocidas, no validación independiente. No nueva medición TradingView. Rechaza solo este estimador y esta conversión, no todos los armónicos."
+}

@@ -1,0 +1,432 @@
+[
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_manual_15m_1m.csv",
+    "start": "04:45",
+    "end": "05:00",
+    "C_over_source_interval": {
+      "lower_inclusive": 0.99812734082397,
+      "upper_exclusive": 1.0018726591760299
+    },
+    "source_seconds": 60,
+    "C_seconds_interval": [
+      59.8876404494382,
+      60.11235955056179
+    ],
+    "possible_integer_C_seconds": [
+      60
+    ],
+    "consistent": true,
+    "predicted": {
+      "Layer A": 24,
+      "Layer A boundary": 30,
+      "Layer B": 8,
+      "Layer B boundary": 10,
+      "Layer C": 3,
+      "Layer C boundary": 3,
+      "Extra cloud 1": 72,
+      "Extra cloud 1 boundary": 89,
+      "Extra cloud 2": 216,
+      "Extra cloud 2 boundary": 267
+    },
+    "observed": {
+      "Layer A": 24,
+      "Layer A boundary": 30,
+      "Layer B": 8,
+      "Layer B boundary": 10,
+      "Layer C": 3,
+      "Layer C boundary": 3,
+      "Extra cloud 1": 72,
+      "Extra cloud 1 boundary": 89,
+      "Extra cloud 2": 216,
+      "Extra cloud 2 boundary": 267
+    },
+    "all_ten_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_manual_30m_1m_recarga.csv",
+    "start": "04:45",
+    "end": "05:15",
+    "C_over_source_interval": {
+      "lower_inclusive": 1.9328703703703705,
+      "upper_exclusive": 1.9344569288389513
+    },
+    "source_seconds": 60,
+    "C_seconds_interval": [
+      115.97222222222223,
+      116.06741573033707
+    ],
+    "possible_integer_C_seconds": [
+      116
+    ],
+    "consistent": true,
+    "predicted": {
+      "Layer A": 46,
+      "Layer A boundary": 57,
+      "Layer B": 15,
+      "Layer B boundary": 19,
+      "Layer C": 5,
+      "Layer C boundary": 6,
+      "Extra cloud 1": 139,
+      "Extra cloud 1 boundary": 172,
+      "Extra cloud 2": 418,
+      "Extra cloud 2 boundary": 516
+    },
+    "observed": {
+      "Layer A": 46,
+      "Layer A boundary": 57,
+      "Layer B": 15,
+      "Layer B boundary": 19,
+      "Layer C": 5,
+      "Layer C boundary": 6,
+      "Extra cloud 1": 139,
+      "Extra cloud 1 boundary": 172,
+      "Extra cloud 2": 418,
+      "Extra cloud 2 boundary": 516
+    },
+    "all_ten_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_5m.csv",
+    "start": "04:45",
+    "end": "04:50",
+    "C_over_source_interval": {
+      "lower_inclusive": 0.99812734082397,
+      "upper_exclusive": 1.0018726591760299
+    },
+    "source_seconds": 60,
+    "C_seconds_interval": [
+      59.8876404494382,
+      60.11235955056179
+    ],
+    "possible_integer_C_seconds": [
+      60
+    ],
+    "consistent": true,
+    "predicted": {
+      "Layer A": 24,
+      "Layer A boundary": 30,
+      "Layer B": 8,
+      "Layer B boundary": 10,
+      "Layer C": 3,
+      "Layer C boundary": 3,
+      "Extra cloud 1": 72,
+      "Extra cloud 1 boundary": 89,
+      "Extra cloud 2": 216,
+      "Extra cloud 2 boundary": 267
+    },
+    "observed": {
+      "Layer A": 24,
+      "Layer A boundary": 30,
+      "Layer B": 8,
+      "Layer B boundary": 10,
+      "Layer C": 3,
+      "Layer C boundary": 3,
+      "Extra cloud 1": 72,
+      "Extra cloud 1 boundary": 89,
+      "Extra cloud 2": 216,
+      "Extra cloud 2 boundary": 267
+    },
+    "all_ten_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_20m.csv",
+    "start": "04:45",
+    "end": "05:05",
+    "C_over_source_interval": {
+      "lower_inclusive": 1.249063670411985,
+      "upper_exclusive": 1.2523148148148149
+    },
+    "source_seconds": 60,
+    "C_seconds_interval": [
+      74.9438202247191,
+      75.13888888888889
+    ],
+    "possible_integer_C_seconds": [
+      75
+    ],
+    "consistent": true,
+    "predicted": {
+      "Layer A": 30,
+      "Layer A boundary": 37,
+      "Layer B": 10,
+      "Layer B boundary": 12,
+      "Layer C": 3,
+      "Layer C boundary": 4,
+      "Extra cloud 1": 90,
+      "Extra cloud 1 boundary": 111,
+      "Extra cloud 2": 270,
+      "Extra cloud 2 boundary": 334
+    },
+    "observed": {
+      "Layer A": 30,
+      "Layer A boundary": 37,
+      "Layer B": 10,
+      "Layer B boundary": 12,
+      "Layer C": 3,
+      "Layer C boundary": 4,
+      "Extra cloud 1": 90,
+      "Extra cloud 1 boundary": 111,
+      "Extra cloud 2": 270,
+      "Extra cloud 2 boundary": 334
+    },
+    "all_ten_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_40m.csv",
+    "start": "04:45",
+    "end": "05:25",
+    "C_over_source_interval": {
+      "lower_inclusive": 1.8820224719101124,
+      "upper_exclusive": 1.8857677902621723
+    },
+    "source_seconds": 60,
+    "C_seconds_interval": [
+      112.92134831460675,
+      113.14606741573034
+    ],
+    "possible_integer_C_seconds": [
+      113
+    ],
+    "consistent": true,
+    "predicted": {
+      "Layer A": 45,
+      "Layer A boundary": 56,
+      "Layer B": 15,
+      "Layer B boundary": 19,
+      "Layer C": 5,
+      "Layer C boundary": 6,
+      "Extra cloud 1": 136,
+      "Extra cloud 1 boundary": 168,
+      "Extra cloud 2": 407,
+      "Extra cloud 2 boundary": 503
+    },
+    "observed": {
+      "Layer A": 45,
+      "Layer A boundary": 56,
+      "Layer B": 15,
+      "Layer B boundary": 19,
+      "Layer C": 5,
+      "Layer C boundary": 6,
+      "Extra cloud 1": 136,
+      "Extra cloud 1 boundary": 168,
+      "Extra cloud 2": 407,
+      "Extra cloud 2 boundary": 503
+    },
+    "all_ten_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_recent_20m.csv",
+    "start": "19:00",
+    "end": "19:20",
+    "C_over_source_interval": {
+      "lower_inclusive": 1.2827715355805243,
+      "upper_exclusive": 1.2847222222222223
+    },
+    "source_seconds": 60,
+    "C_seconds_interval": [
+      76.96629213483146,
+      77.08333333333334
+    ],
+    "possible_integer_C_seconds": [
+      77
+    ],
+    "consistent": true,
+    "predicted": {
+      "Layer A": 31,
+      "Layer A boundary": 38,
+      "Layer B": 10,
+      "Layer B boundary": 13,
+      "Layer C": 3,
+      "Layer C boundary": 4,
+      "Extra cloud 1": 92,
+      "Extra cloud 1 boundary": 114,
+      "Extra cloud 2": 277,
+      "Extra cloud 2 boundary": 343
+    },
+    "observed": {
+      "Layer A": 31,
+      "Layer A boundary": 38,
+      "Layer B": 10,
+      "Layer B boundary": 13,
+      "Layer C": 3,
+      "Layer C boundary": 4,
+      "Extra cloud 1": 92,
+      "Extra cloud 1 boundary": 114,
+      "Extra cloud 2": 277,
+      "Extra cloud 2 boundary": 343
+    },
+    "all_ten_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_recent_30m.csv",
+    "start": "18:50",
+    "end": "19:20",
+    "C_over_source_interval": {
+      "lower_inclusive": 1.9652777777777777,
+      "upper_exclusive": 1.9681647940074907
+    },
+    "source_seconds": 60,
+    "C_seconds_interval": [
+      117.91666666666666,
+      118.08988764044943
+    ],
+    "possible_integer_C_seconds": [
+      118
+    ],
+    "consistent": true,
+    "predicted": {
+      "Layer A": 47,
+      "Layer A boundary": 58,
+      "Layer B": 16,
+      "Layer B boundary": 19,
+      "Layer C": 5,
+      "Layer C boundary": 6,
+      "Extra cloud 1": 142,
+      "Extra cloud 1 boundary": 175,
+      "Extra cloud 2": 425,
+      "Extra cloud 2 boundary": 525
+    },
+    "observed": {
+      "Layer A": 47,
+      "Layer A boundary": 58,
+      "Layer B": 16,
+      "Layer B boundary": 19,
+      "Layer C": 5,
+      "Layer C boundary": 6,
+      "Extra cloud 1": 142,
+      "Extra cloud 1 boundary": 175,
+      "Extra cloud 2": 425,
+      "Extra cloud 2 boundary": 525
+    },
+    "all_ten_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_recent_bear_end_break.csv",
+    "start": "19:11",
+    "end": "19:31",
+    "C_over_source_interval": {
+      "lower_inclusive": 1.3314606741573034,
+      "upper_exclusive": 1.3352059925093633
+    },
+    "source_seconds": 60,
+    "C_seconds_interval": [
+      79.88764044943821,
+      80.1123595505618
+    ],
+    "possible_integer_C_seconds": [
+      80
+    ],
+    "consistent": true,
+    "predicted": {
+      "Layer A": 32,
+      "Layer A boundary": 40,
+      "Layer B": 11,
+      "Layer B boundary": 13,
+      "Layer C": 4,
+      "Layer C boundary": 4,
+      "Extra cloud 1": 96,
+      "Extra cloud 1 boundary": 119,
+      "Extra cloud 2": 288,
+      "Extra cloud 2 boundary": 356
+    },
+    "observed": {
+      "Layer A": 32,
+      "Layer A boundary": 40,
+      "Layer B": 11,
+      "Layer B boundary": 13,
+      "Layer C": 4,
+      "Layer C boundary": 4,
+      "Extra cloud 1": 96,
+      "Extra cloud 1 boundary": 119,
+      "Extra cloud 2": 288,
+      "Extra cloud 2 boundary": 356
+    },
+    "all_ten_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_recent_15s.csv",
+    "start": "19:11",
+    "end": "19:31",
+    "C_over_source_interval": {
+      "lower_inclusive": 4.398876404494382,
+      "upper_exclusive": 4.400462962962963
+    },
+    "source_seconds": 15,
+    "C_seconds_interval": [
+      65.98314606741573,
+      66.00694444444444
+    ],
+    "possible_integer_C_seconds": [
+      66
+    ],
+    "consistent": true,
+    "predicted": {
+      "Layer A": 106,
+      "Layer A boundary": 131,
+      "Layer B": 35,
+      "Layer B boundary": 44,
+      "Layer C": 12,
+      "Layer C boundary": 15,
+      "Extra cloud 1": 317,
+      "Extra cloud 1 boundary": 392,
+      "Extra cloud 2": 950,
+      "Extra cloud 2 boundary": 1175
+    },
+    "observed": {
+      "Layer A": 106,
+      "Layer A boundary": 131,
+      "Layer B": 35,
+      "Layer B boundary": 44,
+      "Layer C": 12,
+      "Layer C boundary": 15,
+      "Extra cloud 1": 317,
+      "Extra cloud 1 boundary": 392,
+      "Extra cloud 2": 950,
+      "Extra cloud 2 boundary": 1175
+    },
+    "all_ten_match": true
+  },
+  {
+    "file": "G:\\trading\\guias\\analisis\\character_short_15s.csv",
+    "start": "19:18",
+    "end": "19:20",
+    "C_over_source_interval": {
+      "lower_inclusive": 0.99812734082397,
+      "upper_exclusive": 1.0018726591760299
+    },
+    "source_seconds": 15,
+    "C_seconds_interval": [
+      14.97191011235955,
+      15.028089887640448
+    ],
+    "possible_integer_C_seconds": [
+      15
+    ],
+    "consistent": true,
+    "predicted": {
+      "Layer A": 24,
+      "Layer A boundary": 30,
+      "Layer B": 8,
+      "Layer B boundary": 10,
+      "Layer C": 3,
+      "Layer C boundary": 3,
+      "Extra cloud 1": 72,
+      "Extra cloud 1 boundary": 89,
+      "Extra cloud 2": 216,
+      "Extra cloud 2 boundary": 267
+    },
+    "observed": {
+      "Layer A": 24,
+      "Layer A boundary": 30,
+      "Layer B": 8,
+      "Layer B boundary": 10,
+      "Layer C": 3,
+      "Layer C boundary": 3,
+      "Extra cloud 1": 72,
+      "Extra cloud 1 boundary": 89,
+      "Extra cloud 2": 216,
+      "Extra cloud 2 boundary": 267
+    },
+    "all_ten_match": true
+  }
+]

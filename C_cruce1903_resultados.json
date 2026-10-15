@@ -1,0 +1,120 @@
+{
+  "scope": "Local interaction model from known endpoints: if START still includes19:03:15, C67 before finalbar and88 after; if it excludes thatbar, C61 both before/after. Predicts67/61 for two new windows before measurement. Other properties and count change together; not proof of causal pivot detection or a general generator.",
+  "cases": [
+    {
+      "id": "C_cruce1903_15",
+      "START": "2026-10-12T19:03:15+00:00",
+      "END": "2026-10-12T19:23:30+00:00",
+      "dt": 15,
+      "bars": 82,
+      "prediction_C": 67,
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 67.00000000000017,
+      "prediction_match": true,
+      "repeat_cells": 127136,
+      "Character_interval": {
+        "lower_inclusive": 66.99438202247191,
+        "upper_exclusive": 67.04861111111111
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 66.99999999999152,
+          "period": 107.19999999998643,
+          "pairs": 7386,
+          "rmse": 1.5436290823249463e-12
+        },
+        "Lane 3 B": {
+          "C": 67.0000000000084,
+          "period": 132.51111111112772,
+          "pairs": 7386,
+          "rmse": 1.838133705092095e-12
+        },
+        "Lane 2 A": {
+          "C": 66.99999999999949,
+          "period": 35.733333333333064,
+          "pairs": 7386,
+          "rmse": 2.0588111295100452e-12
+        },
+        "Lane 2 B": {
+          "C": 67.00000000000212,
+          "period": 44.17037037037177,
+          "pairs": 7386,
+          "rmse": 2.2619956727184797e-12
+        },
+        "Lane 1 A": {
+          "C": 66.99999999999939,
+          "period": 11.911111111111001,
+          "pairs": 7386,
+          "rmse": 2.320308164128421e-12
+        },
+        "Lane 1 B": {
+          "C": 67.00000000000013,
+          "period": 14.723456790123485,
+          "pairs": 7386,
+          "rmse": 1.7273428713106002e-12
+        }
+      }
+    },
+    {
+      "id": "C_cruce1903_30",
+      "START": "2026-10-12T19:03:30+00:00",
+      "END": "2026-10-12T19:23:30+00:00",
+      "dt": 15,
+      "bars": 81,
+      "prediction_C": 61,
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 67.00000000000018,
+      "prediction_match": false,
+      "repeat_cells": 127200,
+      "Character_interval": {
+        "lower_inclusive": 66.99438202247191,
+        "upper_exclusive": 67.04861111111111
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 66.99999999999153,
+          "period": 107.19999999998645,
+          "pairs": 7390,
+          "rmse": 1.5437103203383046e-12
+        },
+        "Lane 3 B": {
+          "C": 67.0000000000084,
+          "period": 132.51111111112772,
+          "pairs": 7390,
+          "rmse": 1.8377491609462594e-12
+        },
+        "Lane 2 A": {
+          "C": 66.99999999999949,
+          "period": 35.733333333333064,
+          "pairs": 7390,
+          "rmse": 2.0588246304779634e-12
+        },
+        "Lane 2 B": {
+          "C": 67.00000000000212,
+          "period": 44.17037037037177,
+          "pairs": 7390,
+          "rmse": 2.26188351331271e-12
+        },
+        "Lane 1 A": {
+          "C": 66.99999999999942,
+          "period": 11.911111111111007,
+          "pairs": 7390,
+          "rmse": 2.320187849485711e-12
+        },
+        "Lane 1 B": {
+          "C": 67.00000000000013,
+          "period": 14.723456790123485,
+          "pairs": 7390,
+          "rmse": 1.7271513943684536e-12
+        }
+      }
+    }
+  ],
+  "failures": []
+}

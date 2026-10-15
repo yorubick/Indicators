@@ -1,0 +1,246 @@
+{
+  "scope": "15s source=chart. END00 does not cover all of inclusive1m END; END45 does. No formula or branch classification inferred.",
+  "cases": [
+    {
+      "id": "C_rama24_res_1902_00",
+      "START": "2026-10-12T19:02:00+00:00",
+      "END": "2026-10-12T19:22:00+00:00",
+      "dt": 15,
+      "bars": 81,
+      "prediction_C": 50,
+      "baseline_1m_C": 49.99999999999989,
+      "coverage_matches_full_1m_window": false,
+      "aggregation_exact": true,
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 66.99999999999964,
+      "prediction_match": false,
+      "repeat_cells": 123040,
+      "Character_interval": {
+        "lower_inclusive": 66.99438202247191,
+        "upper_exclusive": 67.04861111111111
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 66.99999999999118,
+          "period": 107.19999999998589,
+          "pairs": 7128,
+          "rmse": 1.538350759396157e-12
+        },
+        "Lane 3 B": {
+          "C": 67.00000000000608,
+          "period": 132.51111111112314,
+          "pairs": 7128,
+          "rmse": 1.8448698173083426e-12
+        },
+        "Lane 2 A": {
+          "C": 66.9999999999994,
+          "period": 35.733333333333015,
+          "pairs": 7128,
+          "rmse": 2.0507492835506624e-12
+        },
+        "Lane 2 B": {
+          "C": 67.00000000000158,
+          "period": 44.170370370371415,
+          "pairs": 7128,
+          "rmse": 2.2648840068691314e-12
+        },
+        "Lane 1 A": {
+          "C": 66.99999999999972,
+          "period": 11.91111111111106,
+          "pairs": 7128,
+          "rmse": 2.3256893652377134e-12
+        },
+        "Lane 1 B": {
+          "C": 66.99999999999987,
+          "period": 14.72345679012343,
+          "pairs": 7128,
+          "rmse": 1.7249749010603883e-12
+        }
+      }
+    },
+    {
+      "id": "C_rama24_res_1902_45",
+      "START": "2026-10-12T19:02:00+00:00",
+      "END": "2026-10-12T19:22:45+00:00",
+      "dt": 15,
+      "bars": 84,
+      "prediction_C": 51,
+      "baseline_1m_C": 49.99999999999989,
+      "coverage_matches_full_1m_window": true,
+      "aggregation_exact": true,
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 66.99999999999976,
+      "prediction_match": false,
+      "repeat_cells": 123104,
+      "Character_interval": {
+        "lower_inclusive": 66.99438202247191,
+        "upper_exclusive": 67.04861111111111
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 66.99999999999176,
+          "period": 107.19999999998682,
+          "pairs": 7132,
+          "rmse": 1.5377386671960242e-12
+        },
+        "Lane 3 B": {
+          "C": 67.00000000000658,
+          "period": 132.51111111112414,
+          "pairs": 7132,
+          "rmse": 1.8450671646074812e-12
+        },
+        "Lane 2 A": {
+          "C": 66.99999999999903,
+          "period": 35.733333333332816,
+          "pairs": 7132,
+          "rmse": 2.0552603117466376e-12
+        },
+        "Lane 2 B": {
+          "C": 67.00000000000169,
+          "period": 44.17037037037149,
+          "pairs": 7132,
+          "rmse": 2.26672865460242e-12
+        },
+        "Lane 1 A": {
+          "C": 66.99999999999969,
+          "period": 11.911111111111053,
+          "pairs": 7132,
+          "rmse": 2.3261984100310765e-12
+        },
+        "Lane 1 B": {
+          "C": 66.99999999999977,
+          "period": 14.723456790123407,
+          "pairs": 7132,
+          "rmse": 1.7251591916681227e-12
+        }
+      }
+    },
+    {
+      "id": "C_rama24_res_1903_00",
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:00+00:00",
+      "dt": 15,
+      "bars": 81,
+      "prediction_C": 50,
+      "baseline_1m_C": 49.99999999999983,
+      "coverage_matches_full_1m_window": false,
+      "aggregation_exact": true,
+      "pair": [
+        "g",
+        "h"
+      ],
+      "C": 66.99999999999947,
+      "prediction_match": false,
+      "repeat_cells": 123200,
+      "Character_interval": {
+        "lower_inclusive": 66.99438202247191,
+        "upper_exclusive": 67.04861111111111
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 66.99999999999149,
+          "period": 107.19999999998639,
+          "pairs": 7139,
+          "rmse": 1.5356987074037032e-12
+        },
+        "Lane 3 B": {
+          "C": 67.00000000000459,
+          "period": 132.5111111111202,
+          "pairs": 7139,
+          "rmse": 1.8398158761136963e-12
+        },
+        "Lane 2 A": {
+          "C": 66.99999999999908,
+          "period": 35.733333333332844,
+          "pairs": 7139,
+          "rmse": 2.0532089257949776e-12
+        },
+        "Lane 2 B": {
+          "C": 67.0000000000019,
+          "period": 44.17037037037163,
+          "pairs": 7139,
+          "rmse": 2.2602772417804425e-12
+        },
+        "Lane 1 A": {
+          "C": 66.99999999999982,
+          "period": 11.911111111111078,
+          "pairs": 7139,
+          "rmse": 2.326820917317238e-12
+        },
+        "Lane 1 B": {
+          "C": 66.99999999999991,
+          "period": 14.723456790123437,
+          "pairs": 7139,
+          "rmse": 1.7213109456269356e-12
+        }
+      }
+    },
+    {
+      "id": "C_rama24_res_1903_45",
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "dt": 15,
+      "bars": 84,
+      "prediction_C": 51,
+      "baseline_1m_C": 49.99999999999983,
+      "coverage_matches_full_1m_window": true,
+      "aggregation_exact": true,
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 88.00000000000166,
+      "prediction_match": false,
+      "repeat_cells": 123168,
+      "Character_interval": {
+        "lower_inclusive": 87.95138888888889,
+        "upper_exclusive": 88.00561797752809
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 87.99999999999203,
+          "period": 140.79999999998725,
+          "pairs": 7136,
+          "rmse": 1.6019259572848505e-12
+        },
+        "Lane 3 B": {
+          "C": 88.00000000001405,
+          "period": 174.04444444447225,
+          "pairs": 7136,
+          "rmse": 1.5041152255271173e-12
+        },
+        "Lane 2 A": {
+          "C": 87.99999999999811,
+          "period": 46.93333333333233,
+          "pairs": 7136,
+          "rmse": 2.1018883463830117e-12
+        },
+        "Lane 2 B": {
+          "C": 88.00000000000767,
+          "period": 58.01481481481987,
+          "pairs": 7136,
+          "rmse": 1.6293274780174113e-12
+        },
+        "Lane 1 A": {
+          "C": 87.9999999999983,
+          "period": 15.64444444444414,
+          "pairs": 7136,
+          "rmse": 1.5179434221270584e-12
+        },
+        "Lane 1 B": {
+          "C": 87.9999999999999,
+          "period": 19.33827160493825,
+          "pairs": 7136,
+          "rmse": 2.2832476653158988e-12
+        }
+      }
+    }
+  ],
+  "failures": []
+}

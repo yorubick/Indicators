@@ -1,0 +1,98 @@
+{
+  "failures": [],
+  "scope": "Two prospective disjoint13oct ranges chosen from OHLC before C measurements; tests defined event-only change hypothesis, not a complete formula. Existing validation27 untouched.",
+  "cases": [
+    {
+      "id": "noevent_1",
+      "START": "2026-10-13T06:00:00+00:00",
+      "END_before": "2026-10-13T06:20:00+00:00",
+      "END_after": "2026-10-13T06:21:00+00:00",
+      "predicted_delta_C": 0,
+      "measured_delta_C": 1.9895196601282805e-13,
+      "prediction_match": true,
+      "events": {
+        "newH": false,
+        "newL": false,
+        "pivotH": false,
+        "pivotL": false
+      },
+      "same_global_extrema": true,
+      "measured": [
+        {
+          "prefix": "C_noevent_1_before",
+          "pair": [
+            "c",
+            "d"
+          ],
+          "C": 74.99999999999902,
+          "bars": 21,
+          "Character_interval": {
+            "lower_inclusive": 74.9438202247191,
+            "upper_exclusive": 75.13888888888889
+          },
+          "repeat_cells": 43136
+        },
+        {
+          "prefix": "C_noevent_1_after",
+          "pair": [
+            "c",
+            "d"
+          ],
+          "C": 74.99999999999922,
+          "bars": 22,
+          "Character_interval": {
+            "lower_inclusive": 74.9438202247191,
+            "upper_exclusive": 75.13888888888889
+          },
+          "repeat_cells": 43152
+        }
+      ]
+    },
+    {
+      "id": "noevent_2",
+      "START": "2026-10-13T06:25:00+00:00",
+      "END_before": "2026-10-13T06:45:00+00:00",
+      "END_after": "2026-10-13T06:46:00+00:00",
+      "predicted_delta_C": 0,
+      "measured_delta_C": -3.0000000000033538,
+      "prediction_match": false,
+      "events": {
+        "newH": false,
+        "newL": false,
+        "pivotH": false,
+        "pivotL": false
+      },
+      "same_global_extrema": true,
+      "measured": [
+        {
+          "prefix": "C_noevent_2_before",
+          "pair": [
+            "e",
+            "f"
+          ],
+          "C": 87.0000000000034,
+          "bars": 21,
+          "Character_interval": {
+            "lower_inclusive": 86.85393258426966,
+            "upper_exclusive": 87.07865168539325
+          },
+          "repeat_cells": 43168
+        },
+        {
+          "prefix": "C_noevent_2_after",
+          "pair": [
+            "e",
+            "f"
+          ],
+          "C": 84.00000000000004,
+          "bars": 22,
+          "Character_interval": {
+            "lower_inclusive": 83.93258426966293,
+            "upper_exclusive": 84.02777777777777
+          },
+          "repeat_cells": 43184
+        }
+      ]
+    }
+  ]
+}

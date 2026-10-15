@@ -1,0 +1,128 @@
+{
+  "R4 E78": {
+    "close": {
+      "rmse": 0.0,
+      "max_error": 0.0,
+      "pairs": 306
+    },
+    "high": {
+      "rmse": 0.14901621592339717,
+      "max_error": 0.6012658227846259,
+      "pairs": 306
+    },
+    "low": {
+      "rmse": 0.14158894869034458,
+      "max_error": 0.4683544303807139,
+      "pairs": 306
+    },
+    "hl2": {
+      "rmse": 0.08202152633050588,
+      "max_error": 0.28797468354241573,
+      "pairs": 306
+    },
+    "ohlc4": {
+      "rmse": 0.07576655160994769,
+      "max_error": 0.2832278481000685,
+      "pairs": 306
+    }
+  },
+  "R4 E84": {
+    "close": {
+      "rmse": 0.0,
+      "max_error": 0.0,
+      "pairs": 306
+    },
+    "high": {
+      "rmse": 0.13849742421108627,
+      "max_error": 0.5588235294089827,
+      "pairs": 306
+    },
+    "low": {
+      "rmse": 0.13159443466533763,
+      "max_error": 0.4352941176475724,
+      "pairs": 306
+    },
+    "hl2": {
+      "rmse": 0.0762317715307694,
+      "max_error": 0.2676470588266966,
+      "pairs": 306
+    },
+    "ohlc4": {
+      "rmse": 0.07041832443743587,
+      "max_error": 0.26323529411820346,
+      "pairs": 306
+    }
+  },
+  "character_full_reconstruction": {
+    "anchor_utc": "2026-10-12 05:00",
+    "seed_high": 31254.25,
+    "anchor_ohlc": {
+      "open": 31253.5,
+      "high": 31254.25,
+      "low": 31244.75,
+      "close": 31246.25
+    },
+    "layers": {
+      "Layer A": {
+        "period": 24,
+        "points": 877,
+        "max_error": 1.4551915228366852e-11,
+        "rmse": 4.33630068601312e-12
+      },
+      "Layer A boundary": {
+        "period": 30,
+        "points": 877,
+        "max_error": 1.0913936421275139e-11,
+        "rmse": 4.164092636023513e-12
+      },
+      "Layer B": {
+        "period": 8,
+        "points": 877,
+        "max_error": 7.275957614183426e-12,
+        "rmse": 2.733146855695909e-12
+      },
+      "Layer B boundary": {
+        "period": 10,
+        "points": 877,
+        "max_error": 7.275957614183426e-12,
+        "rmse": 3.0809573814386587e-12
+      },
+      "Layer C": {
+        "period": 3,
+        "points": 877,
+        "max_error": 0.0,
+        "rmse": 0.0
+      },
+      "Layer C boundary": {
+        "period": 3,
+        "points": 877,
+        "max_error": 0.0,
+        "rmse": 0.0
+      },
+      "Extra cloud 1": {
+        "period": 72,
+        "points": 877,
+        "max_error": 1.8189894035458565e-11,
+        "rmse": 6.41509270909347e-12
+      },
+      "Extra cloud 1 boundary": {
+        "period": 89,
+        "points": 877,
+        "max_error": 2.546585164964199e-11,
+        "rmse": 8.28458190820041e-12
+      },
+      "Extra cloud 2": {
+        "period": 216,
+        "points": 877,
+        "max_error": 3.637978807091713e-11,
+        "rmse": 1.473945030115356e-11
+      },
+      "Extra cloud 2 boundary": {
+        "period": 267,
+        "points": 877,
+        "max_error": 2.546585164964199e-11,
+        "rmse": 1.0353359050123914e-11
+      }
+    }
+  }
+}

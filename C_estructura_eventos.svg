@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1100" height="680" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 680" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1100" height="680"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-680)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="45" y="651" style="font-family: Times-Roman; font-size: 16px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1302) scale(1,-1)">12 octubre 2026 UTC - eventos estructurales registrados sobre precio</text>
+			<g transform="">
+				<g transform="">
+					<g transform="">
+						<path d="M 70,225 L 1045,225 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 70,225 L 70,220 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 232.5,225 L 232.5,220 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 395,225 L 395,220 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 557.5,225 L 557.5,220 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 720,225 L 720,220 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 882.5,225 L 882.5,220 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 1045,225 L 1045,220 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,70,220)">
+							<text x="-2.5" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">0</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,232.5,220)">
+							<text x="-5.0" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">10</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,395,220)">
+							<text x="-5.0" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">20</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,557.5,220)">
+							<text x="-5.0" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">30</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,720,220)">
+							<text x="-5.0" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">40</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,882.5,220)">
+							<text x="-5.0" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">50</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,1045,220)">
+							<text x="-5.0" y="-10.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-20) scale(1,-1)">60</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<g transform="">
+						<path d="M 70,225 L 70,580 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<path d="M 70,318.00738 L 65,318.00738 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 70,422.804428 L 65,422.804428 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+						<path d="M 70,527.601476 L 65,527.601476 Z" style="stroke: rgb(0%,0%,0%); stroke-linecap: butt; stroke-width: 1;"/>
+					</g>
+					<g transform="">
+						<g transform=" matrix(1,0,0,1,65,318.00738)">
+							<text x="-25.0" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">30860</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,65,422.804428)">
+							<text x="-25.0" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">30880</text>
+						</g>
+						<g transform=" matrix(1,0,0,1,65,527.601476)">
+							<text x="-25.0" y="-4.0" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,-8) scale(1,-1)">30900</text>
+						</g>
+					</g>
+				</g>
+				<g transform="">
+					<polyline points="70 403.155, 86.25 409.7048, 102.5 380.8856, 118.75 390.0554, 135 399.2251, 151.25 413.6347, 167.5 411.0148, 183.75 431.9742, 200 441.1439, 216.25 449.0037, 232.5 442.4539, 248.75 405.7749, 265 397.9151, 281.25 375.6458, 297.5 350.7565, 313.75 308.8376, 330 262.9889, 346.25 276.0886, 362.5 299.6679, 378.75 308.8376, 395 297.048, 411.25 278.7085, 427.5 303.5978, 443.75 259.059, 460 266.9188, 476.25 278.7085, 492.5 314.0775, 508.75 307.5277, 525 308.8376, 541.25 323.2472, 557.5 333.7269, 573.75 320.6273, 590 325.8672, 606.25 328.4871, 622.5 270.8487, 638.75 286.5683, 655 300.9779, 671.25 298.3579, 687.5 289.1882, 703.75 315.3875, 720 312.7675, 736.25 299.6679, 752.5 286.5683, 768.75 333.7269, 785 352.0664, 801.25 373.0258, 817.5 362.5461, 833.75 362.5461, 850 352.0664, 866.25 367.786, 882.5 363.8561, 898.75 383.5055, 915 386.1255, 931.25 384.8155, 947.5 400.5351, 963.75 404.4649, 980 393.9852, 996.25 418.8745, 1012.5 452.9336, 1028.75 513.1919, 1045 549.8708" style="stroke: rgb(20%,25%,33%); stroke-linecap: round; stroke-width: 1.5; fill: None; fill-rule: evenodd;"/>
+				</g>
+			</g>
+			<path d="M 232.5,225 L 232.5,580 Z" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 3, 4;"/>
+			<circle cx="232.5" cy="456.86346863468634" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(74%,7%,23%); fill-rule: evenodd;"/>
+			<text x="236.5" y="461.86346863468634" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,923) scale(1,-1)">1</text>
+			<text x="70" y="625" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1250) scale(1,-1)">1: 18:45 - High previo</text>
+			<path d="M 346.25,225 L 346.25,580 Z" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 3, 4;"/>
+			<circle cx="346.25" cy="235.47970479704796" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(74%,7%,23%); fill-rule: evenodd;"/>
+			<text x="350.25" y="240.47970479704796" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,480) scale(1,-1)">2</text>
+			<text x="390" y="625" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1250) scale(1,-1)">2: 18:52 - Origen low</text>
+			<path d="M 378.75,225 L 378.75,580 Z" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 3, 4;"/>
+			<circle cx="378.75" cy="325.8671586715867" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(74%,7%,23%); fill-rule: evenodd;"/>
+			<text x="382.75" y="330.8671586715867" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,661) scale(1,-1)">3</text>
+			<text x="710" y="625" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1250) scale(1,-1)">3: 18:54 - High recuperacion</text>
+			<path d="M 557.5,225 L 557.5,580 Z" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 3, 4;"/>
+			<circle cx="557.5" cy="333.7269372693727" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(74%,7%,23%); fill-rule: evenodd;"/>
+			<text x="561.5" y="338.7269372693727" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,677) scale(1,-1)">4</text>
+			<text x="70" y="608" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1216) scale(1,-1)">4: 19:05 - Close rompe high</text>
+			<path d="M 590,225 L 590,580 Z" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 3, 4;"/>
+			<circle cx="590.0" cy="306.21771217712177" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(74%,7%,23%); fill-rule: evenodd;"/>
+			<text x="594.0" y="311.21771217712177" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,622) scale(1,-1)">5</text>
+			<text x="390" y="608" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1216) scale(1,-1)">5: 19:07 - Primer pivot</text>
+			<path d="M 638.75,225 L 638.75,580 Z" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 3, 4;"/>
+			<circle cx="638.75" cy="260.3690036900369" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(74%,7%,23%); fill-rule: evenodd;"/>
+			<text x="642.75" y="265.3690036900369" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,530) scale(1,-1)">6</text>
+			<text x="710" y="608" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1216) scale(1,-1)">6: 19:10 - Retroceso profundo</text>
+			<path d="M 752.5,225 L 752.5,580 Z" style="stroke: rgb(79%,83%,88%); stroke-linecap: butt; stroke-width: 1; stroke-dasharray: 3, 4;"/>
+			<circle cx="752.5" cy="273.4686346863469" r="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(74%,7%,23%); fill-rule: evenodd;"/>
+			<text x="756.5" y="278.4686346863469" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,556) scale(1,-1)">7</text>
+			<text x="70" y="591" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,1182) scale(1,-1)">7: 19:17 - Ultimo pivot</text>
+			<text x="70" y="207" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,414) scale(1,-1)">x: minutos desde18:35. Linea=close; puntos=high/low/close del evento. No son señales del indicador.</text>
+			<text x="70" y="158" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,316) scale(1,-1)">B: stall provisional</text>
+			<rect x="265.0" y="155" width="81.25" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(70%,32%,3%); fill-rule: evenodd;"/>
+			<text x="354.25" y="157" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,314) scale(1,-1)">18:47-18:52</text>
+			<text x="70" y="129" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,258) scale(1,-1)">A: primer pivot</text>
+			<rect x="346.25" y="126" width="243.75" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(0%,51%,78%); fill-rule: evenodd;"/>
+			<text x="598.0" y="128" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,256) scale(1,-1)">18:52-19:07</text>
+			<text x="70" y="100" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,200) scale(1,-1)">A: mas profundo</text>
+			<rect x="346.25" y="97" width="292.5" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(48%,22%,92%); fill-rule: evenodd;"/>
+			<text x="646.75" y="99" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,198) scale(1,-1)">18:52-19:10</text>
+			<text x="70" y="71" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,142) scale(1,-1)">A: ultimo pivot</text>
+			<rect x="346.25" y="68" width="406.25" height="12" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(1%,58%,41%); fill-rule: evenodd;"/>
+			<text x="760.5" y="70" style="font-family: Times-Roman; font-size: 9px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,140) scale(1,-1)">18:52-19:17</text>
+			<text x="70" y="28" style="font-family: Times-Roman; font-size: 10px;fill: rgb(0%,0%,0%); stroke:none;" transform="translate(0,56) scale(1,-1)">Pivots1vela confirmada; interpretacion operativa provisional. Anclas congeladas antes de las nuevas mediciones C.</text>
+		</g>
+	</g>
+</svg>

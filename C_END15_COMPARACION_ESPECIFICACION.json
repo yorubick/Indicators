@@ -1,0 +1,13 @@
+{
+ "date":"2026-10-14",
+ "analysis_type":"Exploratory; all nine C labels already known; no blind prediction",
+ "source":"manual/C_estructura15_barrido_191845_b.csv",
+ "comparison":"All nine endpoints, fixed START18:52 and 15s data",
+ "reference_EMA_periods_bars":[24,29.666666666666668,8,9.88888888888889,2.6666666666666665,3.2962962962962963,72,89],
+ "families":"Above fixed bar periods, and same periods multiplied by4 to preserve the prior 1m physical smoothing times. Neither is asserted to be the protected author length. No period search or C-derived length.",
+ "features":"END price-vs-EMA signs, slopes, three paired cloud positions/order/width, complete eight EMA order and close crossings since START. Compare composite discrete signatures; preserve continuous distances. END shape, close path efficiency/variation and close/volume ranks since START.",
+ "seed_check":"Repeat proxy initialization with first loaded close +/-100. Reject any claim of stable signature if these scenarios differ; not a bound on actual hidden state.",
+ "non_EMA_checks":"Collisions in last candle direction, close vs previous, modulo3/9/27 n; shared H/L and rupture confirmed by prior audit.",
+ "acceptance":"Complete contiguous native history through all ENDs; scoped OHLCV equality to each paired measurement; do not fit thresholds to nine known labels",
+ "limits":"Disproving tested proxy signatures does not disprove other lengths, multitimeframe EMAs, continuous feature transforms or unobserved state. A unique signature in nine cases is not a formula."
+}

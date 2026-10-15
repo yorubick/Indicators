@@ -1,0 +1,1074 @@
+{
+  "preregistered": {
+    "date": "2026-10-14",
+    "day_UTC": "2026-10-12",
+    "END_UTC": "2026-10-12T19:20:00Z",
+    "START_times_UTC": [
+      "18:48",
+      "18:49",
+      "18:50",
+      "18:51",
+      "18:52",
+      "18:53",
+      "18:54",
+      "18:55",
+      "18:56",
+      "18:57",
+      "18:58",
+      "18:59",
+      "19:00",
+      "19:01",
+      "19:02"
+    ],
+    "source_seconds": 60,
+    "chart_seconds": 60,
+    "indicator": "Existing Lite v1.2; Character excluded",
+    "controls": "Native CME_MINI:NQ1!, fixed END and source. Two CSV exports per configuration; exclude final row. Require complete window and one hour forward, exact common OHLCV versus original native baseline, repeated six-curve values, and consistent six-lane C fits. Restore START18:55 and verify C62/reference curves.",
+    "analysis": "Tabulate C,n,H,L,first post-END close outside range, seed and endpoint geometry. Compare adjacent windows and separately windows retaining H/L and rupture. Do not fit and tune formula interactively to each observation. Any proposed model after this sweep is exploratory and needs new controls.",
+    "limits": "START movement changes count and included geometry simultaneously. Shared extrema/rupture do not preserve all shape or history; results cannot alone establish an exclusively temporal mechanism or a pre-START anchor."
+  },
+  "results": [
+    {
+      "START": "18:48",
+      "n": 33,
+      "C": 117.99999999999913,
+      "H": 30877.5,
+      "L": 30844.25,
+      "range": 33.25,
+      "rupture_UTC": "2026-10-12T19:32:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30875.5,
+      "start_close": 30871.0,
+      "END_close": 30870.5,
+      "high_times": [
+        "18:48"
+      ],
+      "low_times": [
+        "18:52"
+      ],
+      "repeat_common_bars": 2730,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 118.00000000001187,
+          "period": 47.20000000000474,
+          "pairs": 2516,
+          "rmse": 1.8312245539176204e-12
+        },
+        "Lane 3 B": {
+          "C": 117.99999999998471,
+          "period": 58.34444444443689,
+          "pairs": 2516,
+          "rmse": 1.5263608674887809e-12
+        },
+        "Lane 2 A": {
+          "C": 117.99999999999744,
+          "period": 15.733333333332993,
+          "pairs": 2516,
+          "rmse": 1.5628405634833644e-12
+        },
+        "Lane 2 B": {
+          "C": 118.000000000008,
+          "period": 19.448148148149468,
+          "pairs": 2516,
+          "rmse": 1.7063556840681508e-12
+        },
+        "Lane 1 A": {
+          "C": 117.99999999999669,
+          "period": 5.244444444444297,
+          "pairs": 2516,
+          "rmse": 2.4307975129510427e-12
+        },
+        "Lane 1 B": {
+          "C": 117.99999999999606,
+          "period": 6.4827160493825,
+          "pairs": 2516,
+          "rmse": 2.4521196396212793e-12
+        }
+      }
+    },
+    {
+      "START": "18:49",
+      "n": 32,
+      "C": 134.00000000001083,
+      "H": 30871.75,
+      "L": 30844.25,
+      "range": 27.5,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30871.0,
+      "start_close": 30866.25,
+      "END_close": 30870.5,
+      "high_times": [
+        "18:49"
+      ],
+      "low_times": [
+        "18:52"
+      ],
+      "repeat_common_bars": 2730,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 134.00000000001447,
+          "period": 53.60000000000579,
+          "pairs": 2522,
+          "rmse": 1.590146324675919e-12
+        },
+        "Lane 3 B": {
+          "C": 134.00000000003206,
+          "period": 66.2555555555714,
+          "pairs": 2522,
+          "rmse": 2.081067919112397e-12
+        },
+        "Lane 2 A": {
+          "C": 134.00000000000637,
+          "period": 17.866666666667516,
+          "pairs": 2522,
+          "rmse": 1.7447416919524805e-12
+        },
+        "Lane 2 B": {
+          "C": 134.00000000000725,
+          "period": 22.08518518518638,
+          "pairs": 2522,
+          "rmse": 1.7347802014360798e-12
+        },
+        "Lane 1 A": {
+          "C": 134.00000000000603,
+          "period": 5.955555555555822,
+          "pairs": 2522,
+          "rmse": 2.4964264762741256e-12
+        },
+        "Lane 1 B": {
+          "C": 133.9999999999989,
+          "period": 7.361728395061668,
+          "pairs": 2522,
+          "rmse": 1.7228745593352368e-12
+        }
+      }
+    },
+    {
+      "START": "18:50",
+      "n": 31,
+      "C": 117.99999999999913,
+      "H": 30870.5,
+      "L": 30844.25,
+      "range": 26.25,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30866.0,
+      "start_close": 30858.25,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "18:52"
+      ],
+      "repeat_common_bars": 2730,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 118.00000000001177,
+          "period": 47.20000000000471,
+          "pairs": 2522,
+          "rmse": 1.8312851090138683e-12
+        },
+        "Lane 3 B": {
+          "C": 117.99999999998472,
+          "period": 58.344444444436895,
+          "pairs": 2522,
+          "rmse": 1.528573037023171e-12
+        },
+        "Lane 2 A": {
+          "C": 117.9999999999975,
+          "period": 15.733333333333,
+          "pairs": 2522,
+          "rmse": 1.5633875740648635e-12
+        },
+        "Lane 2 B": {
+          "C": 118.00000000000796,
+          "period": 19.44814814814946,
+          "pairs": 2522,
+          "rmse": 1.706611725400767e-12
+        },
+        "Lane 1 A": {
+          "C": 117.99999999999673,
+          "period": 5.244444444444299,
+          "pairs": 2522,
+          "rmse": 2.429208293530007e-12
+        },
+        "Lane 1 B": {
+          "C": 117.99999999999615,
+          "period": 6.482716049382504,
+          "pairs": 2522,
+          "rmse": 2.4536304044118003e-12
+        }
+      }
+    },
+    {
+      "START": "18:51",
+      "n": 30,
+      "C": 117.9999999999991,
+      "H": 30870.5,
+      "L": 30844.25,
+      "range": 26.25,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30859.25,
+      "start_close": 30849.5,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "18:52"
+      ],
+      "repeat_common_bars": 2731,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 118.00000000001182,
+          "period": 47.20000000000473,
+          "pairs": 2523,
+          "rmse": 1.8311457230666413e-12
+        },
+        "Lane 3 B": {
+          "C": 117.99999999998455,
+          "period": 58.34444444443681,
+          "pairs": 2523,
+          "rmse": 1.529278812813887e-12
+        },
+        "Lane 2 A": {
+          "C": 117.9999999999975,
+          "period": 15.733333333333,
+          "pairs": 2523,
+          "rmse": 1.563114536531695e-12
+        },
+        "Lane 2 B": {
+          "C": 118.0000000000079,
+          "period": 19.448148148149453,
+          "pairs": 2523,
+          "rmse": 1.7065942960690353e-12
+        },
+        "Lane 1 A": {
+          "C": 117.99999999999673,
+          "period": 5.244444444444299,
+          "pairs": 2523,
+          "rmse": 2.4287269467022597e-12
+        },
+        "Lane 1 B": {
+          "C": 117.99999999999615,
+          "period": 6.482716049382504,
+          "pairs": 2523,
+          "rmse": 2.453260848131682e-12
+        }
+      }
+    },
+    {
+      "START": "18:52",
+      "n": 29,
+      "C": 124.99999999999767,
+      "H": 30870.5,
+      "L": 30844.25,
+      "range": 26.25,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30849.5,
+      "start_close": 30852.0,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "18:52"
+      ],
+      "repeat_common_bars": 2731,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 125.0000000000101,
+          "period": 50.00000000000404,
+          "pairs": 2523,
+          "rmse": 1.6991204802990527e-12
+        },
+        "Lane 3 B": {
+          "C": 124.99999999995944,
+          "period": 61.805555555535506,
+          "pairs": 2523,
+          "rmse": 2.0395956452585335e-12
+        },
+        "Lane 2 A": {
+          "C": 125.00000000000404,
+          "period": 16.666666666667204,
+          "pairs": 2523,
+          "rmse": 1.5577451035339956e-12
+        },
+        "Lane 2 B": {
+          "C": 125.00000000000597,
+          "period": 20.601851851852835,
+          "pairs": 2523,
+          "rmse": 1.7307916407356891e-12
+        },
+        "Lane 1 A": {
+          "C": 125.00000000000026,
+          "period": 5.555555555555567,
+          "pairs": 2523,
+          "rmse": 1.7057483843604864e-12
+        },
+        "Lane 1 B": {
+          "C": 125.00000000000617,
+          "period": 6.867283950617622,
+          "pairs": 2523,
+          "rmse": 2.3314091156446502e-12
+        }
+      }
+    },
+    {
+      "START": "18:53",
+      "n": 28,
+      "C": 120.99999999999132,
+      "H": 30870.5,
+      "L": 30846.0,
+      "range": 24.5,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30851.75,
+      "start_close": 30856.5,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "19:00"
+      ],
+      "repeat_common_bars": 2731,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 120.9999999999767,
+          "period": 48.399999999990676,
+          "pairs": 2523,
+          "rmse": 2.1234733038065542e-12
+        },
+        "Lane 3 B": {
+          "C": 120.99999999997823,
+          "period": 59.82777777776701,
+          "pairs": 2523,
+          "rmse": 1.996899292329584e-12
+        },
+        "Lane 2 A": {
+          "C": 120.99999999999547,
+          "period": 16.13333333333273,
+          "pairs": 2523,
+          "rmse": 1.7294381075220429e-12
+        },
+        "Lane 2 B": {
+          "C": 120.99999999999712,
+          "period": 19.942592592592117,
+          "pairs": 2523,
+          "rmse": 1.5011056440420933e-12
+        },
+        "Lane 1 A": {
+          "C": 121.00000000000018,
+          "period": 5.377777777777785,
+          "pairs": 2523,
+          "rmse": 1.7333686555998457e-12
+        },
+        "Lane 1 B": {
+          "C": 121.00000000000027,
+          "period": 6.647530864197546,
+          "pairs": 2523,
+          "rmse": 1.5762270692052775e-12
+        }
+      }
+    },
+    {
+      "START": "18:54",
+      "n": 27,
+      "C": 134.00000000001089,
+      "H": 30870.5,
+      "L": 30846.0,
+      "range": 24.5,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30856.0,
+      "start_close": 30858.25,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "19:00"
+      ],
+      "repeat_common_bars": 2731,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 134.00000000001464,
+          "period": 53.60000000000585,
+          "pairs": 2523,
+          "rmse": 1.5905329523451002e-12
+        },
+        "Lane 3 B": {
+          "C": 134.00000000003214,
+          "period": 66.25555555557146,
+          "pairs": 2523,
+          "rmse": 2.0808348590436356e-12
+        },
+        "Lane 2 A": {
+          "C": 134.0000000000064,
+          "period": 17.86666666666752,
+          "pairs": 2523,
+          "rmse": 1.7445468285249228e-12
+        },
+        "Lane 2 B": {
+          "C": 134.00000000000725,
+          "period": 22.08518518518638,
+          "pairs": 2523,
+          "rmse": 1.7344635903769953e-12
+        },
+        "Lane 1 A": {
+          "C": 134.00000000000605,
+          "period": 5.955555555555824,
+          "pairs": 2523,
+          "rmse": 2.4964693470380247e-12
+        },
+        "Lane 1 B": {
+          "C": 133.9999999999989,
+          "period": 7.361728395061668,
+          "pairs": 2523,
+          "rmse": 1.7226143107766055e-12
+        }
+      }
+    },
+    {
+      "START": "18:55",
+      "n": 26,
+      "C": 61.99999999999823,
+      "H": 30870.5,
+      "L": 30846.0,
+      "range": 24.5,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30858.0,
+      "start_close": 30856.0,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "19:00"
+      ],
+      "repeat_common_bars": 2731,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 61.99999999999534,
+          "period": 24.799999999998136,
+          "pairs": 2523,
+          "rmse": 1.7077339199256915e-12
+        },
+        "Lane 3 B": {
+          "C": 61.999999999996774,
+          "period": 30.655555555553963,
+          "pairs": 2523,
+          "rmse": 1.7310782844946387e-12
+        },
+        "Lane 2 A": {
+          "C": 61.999999999999645,
+          "period": 8.26666666666662,
+          "pairs": 2523,
+          "rmse": 1.5671408162452371e-12
+        },
+        "Lane 2 B": {
+          "C": 61.99999999999967,
+          "period": 10.218518518518465,
+          "pairs": 2523,
+          "rmse": 1.5583833068645152e-12
+        },
+        "Lane 1 A": {
+          "C": 62.000000000000036,
+          "period": 2.7555555555555573,
+          "pairs": 2523,
+          "rmse": 1.6093489000619066e-12
+        },
+        "Lane 1 B": {
+          "C": 61.99999999999792,
+          "period": 3.406172839506058,
+          "pairs": 2523,
+          "rmse": 2.388047215865209e-12
+        }
+      }
+    },
+    {
+      "START": "18:56",
+      "n": 25,
+      "C": 109.00000000000584,
+      "H": 30870.5,
+      "L": 30846.0,
+      "range": 24.5,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30856.75,
+      "start_close": 30852.5,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "19:00"
+      ],
+      "repeat_common_bars": 2731,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 108.99999999999255,
+          "period": 43.599999999997024,
+          "pairs": 2523,
+          "rmse": 1.6238885714817414e-12
+        },
+        "Lane 3 B": {
+          "C": 109.0000000000289,
+          "period": 53.894444444458735,
+          "pairs": 2523,
+          "rmse": 1.960410714022158e-12
+        },
+        "Lane 2 A": {
+          "C": 109.00000000000811,
+          "period": 14.533333333334415,
+          "pairs": 2523,
+          "rmse": 2.268944193255783e-12
+        },
+        "Lane 2 B": {
+          "C": 109.00000000000887,
+          "period": 17.96481481481628,
+          "pairs": 2523,
+          "rmse": 1.9970348299512737e-12
+        },
+        "Lane 1 A": {
+          "C": 108.99999999999652,
+          "period": 4.84444444444429,
+          "pairs": 2523,
+          "rmse": 2.441335110107098e-12
+        },
+        "Lane 1 B": {
+          "C": 109.00000000000004,
+          "period": 5.988271604938274,
+          "pairs": 2523,
+          "rmse": 1.758037773299032e-12
+        }
+      }
+    },
+    {
+      "START": "18:57",
+      "n": 24,
+      "C": 76.99999999999743,
+      "H": 30870.5,
+      "L": 30846.0,
+      "range": 24.5,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30852.0,
+      "start_close": 30857.25,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "19:00"
+      ],
+      "repeat_common_bars": 2731,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 77.00000000000088,
+          "period": 30.800000000000352,
+          "pairs": 2523,
+          "rmse": 1.5097116151886589e-12
+        },
+        "Lane 3 B": {
+          "C": 76.99999999998757,
+          "period": 38.07222222221608,
+          "pairs": 2523,
+          "rmse": 2.1294664149297737e-12
+        },
+        "Lane 2 A": {
+          "C": 76.99999999999892,
+          "period": 10.266666666666522,
+          "pairs": 2523,
+          "rmse": 1.737612433278833e-12
+        },
+        "Lane 2 B": {
+          "C": 76.99999999999764,
+          "period": 12.690740740740353,
+          "pairs": 2523,
+          "rmse": 1.788179173348416e-12
+        },
+        "Lane 1 A": {
+          "C": 76.99999999999987,
+          "period": 3.4222222222222163,
+          "pairs": 2523,
+          "rmse": 1.754660282793591e-12
+        },
+        "Lane 1 B": {
+          "C": 76.99999999999967,
+          "period": 4.230246913580229,
+          "pairs": 2523,
+          "rmse": 1.7507290947782235e-12
+        }
+      }
+    },
+    {
+      "START": "18:58",
+      "n": 23,
+      "C": 76.99999999999743,
+      "H": 30870.5,
+      "L": 30846.0,
+      "range": 24.5,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30857.0,
+      "start_close": 30848.75,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "19:00"
+      ],
+      "repeat_common_bars": 2731,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 77.00000000000088,
+          "period": 30.800000000000352,
+          "pairs": 2523,
+          "rmse": 1.5097116151886589e-12
+        },
+        "Lane 3 B": {
+          "C": 76.99999999998757,
+          "period": 38.07222222221608,
+          "pairs": 2523,
+          "rmse": 2.1294664149297737e-12
+        },
+        "Lane 2 A": {
+          "C": 76.99999999999892,
+          "period": 10.266666666666522,
+          "pairs": 2523,
+          "rmse": 1.737612433278833e-12
+        },
+        "Lane 2 B": {
+          "C": 76.99999999999764,
+          "period": 12.690740740740353,
+          "pairs": 2523,
+          "rmse": 1.788179173348416e-12
+        },
+        "Lane 1 A": {
+          "C": 76.99999999999987,
+          "period": 3.4222222222222163,
+          "pairs": 2523,
+          "rmse": 1.754660282793591e-12
+        },
+        "Lane 1 B": {
+          "C": 76.99999999999967,
+          "period": 4.230246913580229,
+          "pairs": 2523,
+          "rmse": 1.7507290947782235e-12
+        }
+      }
+    },
+    {
+      "START": "18:59",
+      "n": 22,
+      "C": 76.99999999999741,
+      "H": 30870.5,
+      "L": 30846.0,
+      "range": 24.5,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30849.0,
+      "start_close": 30850.25,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "19:00"
+      ],
+      "repeat_common_bars": 2731,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 77.00000000000087,
+          "period": 30.800000000000345,
+          "pairs": 2524,
+          "rmse": 1.5094541234061794e-12
+        },
+        "Lane 3 B": {
+          "C": 76.99999999998755,
+          "period": 38.07222222221607,
+          "pairs": 2524,
+          "rmse": 2.1290732214705736e-12
+        },
+        "Lane 2 A": {
+          "C": 76.99999999999892,
+          "period": 10.266666666666522,
+          "pairs": 2524,
+          "rmse": 1.7372691354916433e-12
+        },
+        "Lane 2 B": {
+          "C": 76.99999999999766,
+          "period": 12.690740740740354,
+          "pairs": 2524,
+          "rmse": 1.7878834017765907e-12
+        },
+        "Lane 1 A": {
+          "C": 76.99999999999984,
+          "period": 3.4222222222222154,
+          "pairs": 2524,
+          "rmse": 1.754374483515457e-12
+        },
+        "Lane 1 B": {
+          "C": 76.99999999999966,
+          "period": 4.2302469135802285,
+          "pairs": 2524,
+          "rmse": 1.7509880247823815e-12
+        }
+      }
+    },
+    {
+      "START": "19:00",
+      "n": 21,
+      "C": 76.99999999999741,
+      "H": 30870.5,
+      "L": 30846.0,
+      "range": 24.5,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30850.0,
+      "start_close": 30852.5,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "19:00"
+      ],
+      "repeat_common_bars": 2732,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 77.00000000000087,
+          "period": 30.800000000000345,
+          "pairs": 2524,
+          "rmse": 1.5094541234061794e-12
+        },
+        "Lane 3 B": {
+          "C": 76.99999999998755,
+          "period": 38.07222222221607,
+          "pairs": 2524,
+          "rmse": 2.1290732214705736e-12
+        },
+        "Lane 2 A": {
+          "C": 76.99999999999892,
+          "period": 10.266666666666522,
+          "pairs": 2524,
+          "rmse": 1.7372691354916433e-12
+        },
+        "Lane 2 B": {
+          "C": 76.99999999999766,
+          "period": 12.690740740740354,
+          "pairs": 2524,
+          "rmse": 1.7878834017765907e-12
+        },
+        "Lane 1 A": {
+          "C": 76.99999999999984,
+          "period": 3.4222222222222154,
+          "pairs": 2524,
+          "rmse": 1.754374483515457e-12
+        },
+        "Lane 1 B": {
+          "C": 76.99999999999966,
+          "period": 4.2302469135802285,
+          "pairs": 2524,
+          "rmse": 1.7509880247823815e-12
+        }
+      }
+    },
+    {
+      "START": "19:01",
+      "n": 20,
+      "C": 65.57377049180381,
+      "H": 30870.5,
+      "L": 30849.0,
+      "range": 21.5,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30852.75,
+      "start_close": 30859.25,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "19:10"
+      ],
+      "repeat_common_bars": 2732,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 65.57377049180384,
+          "period": 26.229508196721536,
+          "pairs": 2524,
+          "rmse": 1.4995963936615617e-12
+        },
+        "Lane 3 B": {
+          "C": 65.5737704918084,
+          "period": 32.422586520949714,
+          "pairs": 2524,
+          "rmse": 1.9965941594273896e-12
+        },
+        "Lane 2 A": {
+          "C": 65.57377049180087,
+          "period": 8.743169398906783,
+          "pairs": 2524,
+          "rmse": 2.36834286458846e-12
+        },
+        "Lane 2 B": {
+          "C": 65.57377049180309,
+          "period": 10.807528840315694,
+          "pairs": 2524,
+          "rmse": 1.5507445379608471e-12
+        },
+        "Lane 1 A": {
+          "C": 65.57377049180349,
+          "period": 2.91438979963571,
+          "pairs": 2524,
+          "rmse": 1.4805551326993308e-12
+        },
+        "Lane 1 B": {
+          "C": 65.57377049180323,
+          "period": 3.6025096134385723,
+          "pairs": 2524,
+          "rmse": 1.7321302151812368e-12
+        }
+      }
+    },
+    {
+      "START": "19:02",
+      "n": 19,
+      "C": 62.29508196721107,
+      "H": 30870.5,
+      "L": 30849.0,
+      "range": 21.5,
+      "rupture_UTC": "2026-10-12T19:26:00+00:00",
+      "direction": "bull",
+      "seed": 30864.5,
+      "start_open": 30859.5,
+      "start_close": 30858.0,
+      "END_close": 30870.5,
+      "high_times": [
+        "19:20"
+      ],
+      "low_times": [
+        "19:10"
+      ],
+      "repeat_common_bars": 2732,
+      "native_common_bars": 2725,
+      "fits": {
+        "Lane 3 A": {
+          "C": 62.295081967213726,
+          "period": 24.91803278688549,
+          "pairs": 2524,
+          "rmse": 1.5608832840777888e-12
+        },
+        "Lane 3 B": {
+          "C": 62.2950819672029,
+          "period": 30.801457194894766,
+          "pairs": 2524,
+          "rmse": 2.2357714837552866e-12
+        },
+        "Lane 2 A": {
+          "C": 62.29508196721257,
+          "period": 8.306010928961676,
+          "pairs": 2524,
+          "rmse": 1.5681207732371596e-12
+        },
+        "Lane 2 B": {
+          "C": 62.295081967212575,
+          "period": 10.267152398299851,
+          "pairs": 2524,
+          "rmse": 1.807888752383048e-12
+        },
+        "Lane 1 A": {
+          "C": 62.29508196721307,
+          "period": 2.7686703096539143,
+          "pairs": 2524,
+          "rmse": 1.5235226483784353e-12
+        },
+        "Lane 1 B": {
+          "C": 62.29508196721155,
+          "period": 3.4223841327665605,
+          "pairs": 2524,
+          "rmse": 2.4348628467011924e-12
+        }
+      }
+    }
+  ],
+  "same_extrema_rupture_seed_as_1855": [
+    "18:53",
+    "18:54",
+    "18:55",
+    "18:56",
+    "18:57",
+    "18:58",
+    "18:59",
+    "19:00"
+  ],
+  "return_check": {
+    "common_closed_bars": 2731,
+    "columns": {
+      "open": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "high": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "low": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "close": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "Volume": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 0
+      },
+      "Lane 3 A": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 3 B": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 2 A": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 2 B": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 1 A": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      },
+      "Lane 1 B": {
+        "max_error": 0.0,
+        "visibility_mismatches": 0,
+        "tolerance": 1e-08
+      }
+    }
+  },
+  "return_fits": {
+    "Lane 3 A": {
+      "C": 61.999999999995346,
+      "period": 24.79999999999814,
+      "pairs": 2524,
+      "rmse": 1.707462771944261e-12
+    },
+    "Lane 3 B": {
+      "C": 61.999999999996774,
+      "period": 30.655555555553963,
+      "pairs": 2524,
+      "rmse": 1.7307353283758708e-12
+    },
+    "Lane 2 A": {
+      "C": 61.99999999999961,
+      "period": 8.266666666666614,
+      "pairs": 2524,
+      "rmse": 1.5672205655746828e-12
+    },
+    "Lane 2 B": {
+      "C": 61.99999999999965,
+      "period": 10.218518518518461,
+      "pairs": 2524,
+      "rmse": 1.558311899257786e-12
+    },
+    "Lane 1 A": {
+      "C": 62.00000000000006,
+      "period": 2.755555555555558,
+      "pairs": 2524,
+      "rmse": 1.6092048754270799e-12
+    },
+    "Lane 1 B": {
+      "C": 61.9999999999979,
+      "period": 3.4061728395060573,
+      "pairs": 2524,
+      "rmse": 2.387585934622486e-12
+    }
+  },
+  "sha256": {
+    "C_startSweep1920_1848_a.csv": "118e8c52cb58fb862cf13ed43a62547313931550224a8ac7f50fa6019226a8de",
+    "C_startSweep1920_1848_b.csv": "be28f04ce39c68b0f5b7429500a63914c1a9560241cc7d409c69631cc01a4b37",
+    "C_startSweep1920_1849_a.csv": "ae1cb79b75646b57dbd92e84b0bdad47493e93d52be25bd5010a5c0c65da4f23",
+    "C_startSweep1920_1849_b.csv": "e72a0ce15bc849924dddf9d53b1fc08f41e9d9ba478acea178a1b68574f5fa54",
+    "C_startSweep1920_1850_a.csv": "ca141a6423e383641fd3d262ec9e030a6d3ca24491175a5319a2432b9807c94d",
+    "C_startSweep1920_1850_b.csv": "5a30104bc377455393bdb514f2529aef83e06e5239948f03475f823c74b7cab8",
+    "C_startSweep1920_1851_a.csv": "99a1439f776873c28b61ccf68d669877daa3c229a3015906039651f33d5bce91",
+    "C_startSweep1920_1851_b.csv": "a29034001ae438134cec5dee25205c15161cc10db010023b57b7fd50c7b137c5",
+    "C_startSweep1920_1852_a.csv": "019a4281c4bb2dd7dce9f11dd1a6bb62664bd448729c0bf26611efe012c0ed52",
+    "C_startSweep1920_1852_b.csv": "41490a2c776e86629c15b67c5e2bfc84541261d485ad04a23fec9b6fceb6f1e4",
+    "C_startSweep1920_1853_a.csv": "e1af6220ad3df16ba0568ace4ed0dc9f8077bcc4735326f09674bd100d9b8c90",
+    "C_startSweep1920_1853_b.csv": "c68f6b6100b2b9e3cc67a858e173311d302a96b777d55427ca29a06993bef53b",
+    "C_startSweep1920_1854_a.csv": "f137dccfc0b30525ffe3906b5a09d6132ca591e97762a88829c1973139068b0a",
+    "C_startSweep1920_1854_b.csv": "7071786d1b2520aff0918b0f632d1fb92305d17a8c0b48f39e11a72e503c5ac7",
+    "C_startSweep1920_1855_a.csv": "d9ab8ee27f5a7d1e3ab0096b9ab64b5f54e830055031842dc2be5b4dafa6a996",
+    "C_startSweep1920_1855_b.csv": "2405af086ca97ad4bde803cd8f9240ff1e6de5ebb178f4119c301f27a72afe54",
+    "C_startSweep1920_1856_a.csv": "16dc58392edd65544f1bf02f9fa2bb9bf9b0c9eda905ed0946476ffed6b8a229",
+    "C_startSweep1920_1856_b.csv": "cf3c371e232dd949195b84c8d8c800f2a4defce5eae37d6a300ad8892dc206d7",
+    "C_startSweep1920_1857_a.csv": "73d1e01fa3d17b3ab6e1edef274fbe175a5a5ca81111002ae44a4ed5216f7a7c",
+    "C_startSweep1920_1857_b.csv": "473c53a2b68ea93fce54edf79b009e3a5c8b1f846aaabe22088fa4bc2960710b",
+    "C_startSweep1920_1858_a.csv": "5a6621705c8c440770a16fcf414a1e4310638ba24bc314f18804436e2e0899ad",
+    "C_startSweep1920_1858_b.csv": "933526153d009755a84216766972f5b4af29c395e3c7bf6f8518580a604c0973",
+    "C_startSweep1920_1859_a.csv": "7b4ad371f845694dd70d50d456a9acaf1330bf9a615fcc0db1e7a1380ce26efb",
+    "C_startSweep1920_1859_b.csv": "c985aadd9cdfed2ca38bde8331f64524a879065aab8e3bfaea09d3ff9f155c98",
+    "C_startSweep1920_1900_a.csv": "b7267f399a8a52ff226a73f2b613fd1220e7cb92d5f58d7fec6b8b766f521f93",
+    "C_startSweep1920_1900_b.csv": "6e8641b830e92adabd62db5398353647160671e57be7d98b9a91cf3742c69b56",
+    "C_startSweep1920_1901_a.csv": "2cdb60cc6d54e798a7f7e8a36bad386d51260d836750eb8823cfeb8eb7ed1a9d",
+    "C_startSweep1920_1901_b.csv": "8af865b1670e763a60625c3232e1f08f009a62f471ecf24bd9ee1505079ec7e7",
+    "C_startSweep1920_1902_a.csv": "e3f7e1194e8497e7b20519ba4f0887d1cb0fb8c5a91f1e81cecd00f025b05db0",
+    "C_startSweep1920_1902_b.csv": "f7365fce53dfd72b66ed3633228edfa9251aca9b438240d94232594827370f25",
+    "C_startSweep1920_regreso.csv": "b4eab6111afd3c88db1b0dbaf9e206c0adf67cb1cb9b2a1e4b33646b24aacdc1"
+  },
+  "limits": "START count and included geometry vary together; equal extrema and rupture do not fix all normalized shape/history. All inferred rules after sweep are exploratory."
+}

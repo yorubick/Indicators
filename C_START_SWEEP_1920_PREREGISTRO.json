@@ -1,0 +1,10 @@
+{
+ "date":"2026-10-14",
+ "day_UTC":"2026-10-12",
+ "END_UTC":"2026-10-12T19:20:00Z",
+ "START_times_UTC":["18:48","18:49","18:50","18:51","18:52","18:53","18:54","18:55","18:56","18:57","18:58","18:59","19:00","19:01","19:02"],
+ "source_seconds":60,"chart_seconds":60,"indicator":"Existing Lite v1.2; Character excluded",
+ "controls":"Native CME_MINI:NQ1!, fixed END and source. Two CSV exports per configuration; exclude final row. Require complete window and one hour forward, exact common OHLCV versus original native baseline, repeated six-curve values, and consistent six-lane C fits. Restore START18:55 and verify C62/reference curves.",
+ "analysis":"Tabulate C,n,H,L,first post-END close outside range, seed and endpoint geometry. Compare adjacent windows and separately windows retaining H/L and rupture. Do not fit and tune formula interactively to each observation. Any proposed model after this sweep is exploratory and needs new controls.",
+ "limits":"START movement changes count and included geometry simultaneously. Shared extrema/rupture do not preserve all shape or history; results cannot alone establish an exclusively temporal mechanism or a pre-START anchor."
+}

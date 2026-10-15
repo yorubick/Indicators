@@ -1,0 +1,483 @@
+{
+  "preregistered": "C_TRASLACION_50_PREREGISTRO.json",
+  "range": "12 October 2026 19:02\u201319:22 UTC, 21 bars; chart/source 60s",
+  "expression_retained_in_UI": "CME_MINI:NQ1!+10000",
+  "measurements": {
+    "base": {
+      "C": 49.99999999999932,
+      "range_bars": 21,
+      "range_high": 30870.75,
+      "range_low": 30849.0,
+      "six_curve_fits": {
+        "Lane 3 A": {
+          "C": 50.00000000000036,
+          "period": 20.000000000000146,
+          "pairs": 2509,
+          "rmse": 1.4815047819163976e-12
+        },
+        "Lane 3 B": {
+          "C": 49.99999999999888,
+          "period": 24.722222222221667,
+          "pairs": 2509,
+          "rmse": 1.7249779960206637e-12
+        },
+        "Lane 2 A": {
+          "C": 49.99999999999835,
+          "period": 6.666666666666447,
+          "pairs": 2509,
+          "rmse": 2.2533854977361793e-12
+        },
+        "Lane 2 B": {
+          "C": 49.999999999998835,
+          "period": 8.240740740740549,
+          "pairs": 2509,
+          "rmse": 1.5459103417409597e-12
+        },
+        "Lane 1 A": {
+          "C": 49.99999999999969,
+          "period": 2.222222222222208,
+          "pairs": 2509,
+          "rmse": 1.7616764261821972e-12
+        },
+        "Lane 1 B": {
+          "C": 49.999999999999815,
+          "period": 2.7469135802469036,
+          "pairs": 2509,
+          "rmse": 1.681542707256411e-12
+        }
+      }
+    },
+    "mas10000_a": {
+      "C": 49.99999999999883,
+      "range_bars": 21,
+      "range_high": 40870.75,
+      "range_low": 40849.0,
+      "six_curve_fits": {
+        "Lane 3 A": {
+          "C": 49.999999999999716,
+          "period": 19.999999999999886,
+          "pairs": 2509,
+          "rmse": 2.965982787117915e-12
+        },
+        "Lane 3 B": {
+          "C": 49.9999999999964,
+          "period": 24.722222222220445,
+          "pairs": 2509,
+          "rmse": 3.169106760614506e-12
+        },
+        "Lane 2 A": {
+          "C": 49.99999999999715,
+          "period": 6.666666666666287,
+          "pairs": 2509,
+          "rmse": 3.296494205185105e-12
+        },
+        "Lane 2 B": {
+          "C": 49.99999999999866,
+          "period": 8.24074074074052,
+          "pairs": 2509,
+          "rmse": 2.5151585178239294e-12
+        },
+        "Lane 1 A": {
+          "C": 49.999999999999844,
+          "period": 2.222222222222215,
+          "pairs": 2509,
+          "rmse": 2.515598361961242e-12
+        },
+        "Lane 1 B": {
+          "C": 50.00000000000117,
+          "period": 2.7469135802469777,
+          "pairs": 2509,
+          "rmse": 3.0327560788718356e-12
+        }
+      }
+    },
+    "mas10000_b": {
+      "C": 49.99999999999883,
+      "range_bars": 21,
+      "range_high": 40870.75,
+      "range_low": 40849.0,
+      "six_curve_fits": {
+        "Lane 3 A": {
+          "C": 49.999999999999716,
+          "period": 19.999999999999886,
+          "pairs": 2509,
+          "rmse": 2.965982787117915e-12
+        },
+        "Lane 3 B": {
+          "C": 49.9999999999964,
+          "period": 24.722222222220445,
+          "pairs": 2509,
+          "rmse": 3.169106760614506e-12
+        },
+        "Lane 2 A": {
+          "C": 49.99999999999715,
+          "period": 6.666666666666287,
+          "pairs": 2509,
+          "rmse": 3.296494205185105e-12
+        },
+        "Lane 2 B": {
+          "C": 49.99999999999866,
+          "period": 8.24074074074052,
+          "pairs": 2509,
+          "rmse": 2.5151585178239294e-12
+        },
+        "Lane 1 A": {
+          "C": 49.999999999999844,
+          "period": 2.222222222222215,
+          "pairs": 2509,
+          "rmse": 2.515598361961242e-12
+        },
+        "Lane 1 B": {
+          "C": 50.00000000000117,
+          "period": 2.7469135802469777,
+          "pairs": 2509,
+          "rmse": 3.0327560788718356e-12
+        }
+      }
+    },
+    "regreso": {
+      "C": 49.999999999999325,
+      "range_bars": 21,
+      "range_high": 30870.75,
+      "range_low": 30849.0,
+      "six_curve_fits": {
+        "Lane 3 A": {
+          "C": 50.00000000000038,
+          "period": 20.000000000000153,
+          "pairs": 2510,
+          "rmse": 1.4816101261027786e-12
+        },
+        "Lane 3 B": {
+          "C": 49.99999999999889,
+          "period": 24.722222222221674,
+          "pairs": 2510,
+          "rmse": 1.7252473069248396e-12
+        },
+        "Lane 2 A": {
+          "C": 49.99999999999835,
+          "period": 6.666666666666447,
+          "pairs": 2510,
+          "rmse": 2.252937311428356e-12
+        },
+        "Lane 2 B": {
+          "C": 49.999999999998806,
+          "period": 8.240740740740545,
+          "pairs": 2510,
+          "rmse": 1.5457835419360916e-12
+        },
+        "Lane 1 A": {
+          "C": 49.99999999999967,
+          "period": 2.2222222222222077,
+          "pairs": 2510,
+          "rmse": 1.7616113607530515e-12
+        },
+        "Lane 1 B": {
+          "C": 49.99999999999985,
+          "period": 2.7469135802469054,
+          "pairs": 2510,
+          "rmse": 1.6815534958317483e-12
+        }
+      }
+    }
+  },
+  "recurrence_540_post_END": {
+    "base": {
+      "window_high": 30870.75,
+      "window_low": 30849.0,
+      "first_breakout_unix": 1791833160,
+      "first_breakout_utc": "2026-10-12T19:26:00+00:00",
+      "direction": "up",
+      "seed": 30866.75,
+      "future_bars_checked": 540,
+      "reconstruction_values": 3222,
+      "max_reconstruction_error": 1.8189894035458565e-11,
+      "visibility_mismatches": 0
+    },
+    "mas10000_a": {
+      "window_high": 40870.75,
+      "window_low": 40849.0,
+      "first_breakout_unix": 1791833160,
+      "first_breakout_utc": "2026-10-12T19:26:00+00:00",
+      "direction": "up",
+      "seed": 40866.75,
+      "future_bars_checked": 540,
+      "reconstruction_values": 3222,
+      "max_reconstruction_error": 3.637978807091713e-11,
+      "visibility_mismatches": 0
+    },
+    "mas10000_b": {
+      "window_high": 40870.75,
+      "window_low": 40849.0,
+      "first_breakout_unix": 1791833160,
+      "first_breakout_utc": "2026-10-12T19:26:00+00:00",
+      "direction": "up",
+      "seed": 40866.75,
+      "future_bars_checked": 540,
+      "reconstruction_values": 3222,
+      "max_reconstruction_error": 3.637978807091713e-11,
+      "visibility_mismatches": 0
+    },
+    "regreso": {
+      "window_high": 30870.75,
+      "window_low": 30849.0,
+      "first_breakout_unix": 1791833160,
+      "first_breakout_utc": "2026-10-12T19:26:00+00:00",
+      "direction": "up",
+      "seed": 30866.75,
+      "future_bars_checked": 540,
+      "reconstruction_values": 3222,
+      "max_reconstruction_error": 1.8189894035458565e-11,
+      "visibility_mismatches": 0
+    }
+  },
+  "comparisons": {
+    "translation": {
+      "common_closed_bars": 2717,
+      "columns": {
+        "open": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "high": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "low": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "close": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "Volume": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "Lane 3 A": {
+          "max_error": 2.9103830456733704e-11,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 3 B": {
+          "max_error": 2.9103830456733704e-11,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 2 A": {
+          "max_error": 1.8189894035458565e-11,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 2 B": {
+          "max_error": 1.4551915228366852e-11,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 1 A": {
+          "max_error": 7.275957614183426e-12,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 1 B": {
+          "max_error": 1.0913936421275139e-11,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        }
+      }
+    },
+    "repeat": {
+      "common_closed_bars": 2717,
+      "columns": {
+        "open": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "high": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "low": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "close": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "Volume": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "Lane 3 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 3 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 2 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 2 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 1 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 1 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        }
+      }
+    },
+    "return": {
+      "common_closed_bars": 2717,
+      "columns": {
+        "open": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "high": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "low": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "close": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "Volume": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "Lane 3 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 3 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 2 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 2 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 1 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 1 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        }
+      }
+    },
+    "prior_native_baseline": {
+      "common_closed_bars": 2710,
+      "columns": {
+        "open": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "high": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "low": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "close": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "Volume": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 0
+        },
+        "Lane 3 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 3 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 2 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 2 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 1 A": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        },
+        "Lane 1 B": {
+          "max_error": 0.0,
+          "visibility_mismatches": 0,
+          "tolerance": 1e-08
+        }
+      }
+    }
+  },
+  "sha256": {
+    "base": "f4f98bd86048ec8f15daf8236c4f2f4c4d32314ded9f7b50f7ce5ca29712762d",
+    "mas10000_a": "09e5742bdb782a7058a18f209114e430d10bd946515a95ba4ca9c8aaf49aab46",
+    "mas10000_b": "900d4c86da7d5f82608069b41903a15912dc00a90f857b89e28c9a55e0698b33",
+    "regreso": "9de272510e018c0a48f16d239dc51337903cde94a188ace43eed9aa509cb29d3"
+  },
+  "result": "C=50 before, after P+10000, and on return. Translation matches OHLCV exactly and Lite curves within floating-point precision.",
+  "limits": "Single window. Both Gemini v4 and translation invariance predict 50. Does not establish harmonics or exclude indirect level dependence in other regimes. Synthetic metadata/internal requests not fully observable."
+}

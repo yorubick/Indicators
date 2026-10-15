@@ -1,0 +1,752 @@
+{
+  "formula": "N=K*C/source_seconds; select smallest or largest positive root of whole-path condition; C_pred=max(source_seconds,N*source_seconds/K)",
+  "grid": [
+    1.00001,
+    10000.0,
+    1200
+  ],
+  "EMA_evaluation_phase": "before",
+  "training_count": 34,
+  "reserved_count": 4,
+  "conditions": [
+    "signed_area_zero",
+    "signed_energy_zero",
+    "mean_wick_position_half",
+    "RMS_residual_equals_mean_TR"
+  ],
+  "model_count": 2304,
+  "models_with_roots_all_nonfloor_training": 152,
+  "nonfloor_training_count": 30,
+  "best_root_coverage": [
+    {
+      "model": [
+        "forward",
+        "all",
+        "close",
+        "range_low",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "nonfloor_cases_with_roots": 30,
+      "missing_nonfloor_cases": []
+    },
+    {
+      "model": [
+        "forward",
+        "all",
+        "close",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "nonfloor_cases_with_roots": 30,
+      "missing_nonfloor_cases": []
+    },
+    {
+      "model": [
+        "forward",
+        "all",
+        "hlc3",
+        "range_low",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "nonfloor_cases_with_roots": 30,
+      "missing_nonfloor_cases": []
+    },
+    {
+      "model": [
+        "forward",
+        "all",
+        "hlc3",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "nonfloor_cases_with_roots": 30,
+      "missing_nonfloor_cases": []
+    },
+    {
+      "model": [
+        "forward",
+        "all",
+        "ohlc4",
+        "range_low",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "nonfloor_cases_with_roots": 30,
+      "missing_nonfloor_cases": []
+    }
+  ],
+  "models_with_compatible_K_nonfloor_training": 0,
+  "selection": "Root branch and K selected only by earlier training cases, without choosing roots nearest the known C. Four latest ranges checked afterwards.",
+  "scope": "Finite grid, sign-changing roots, selected EMA phase, explicit seeds and inclusions. Missing/tangent roots and other adaptive rules not excluded. Same-date overlapping windows.",
+  "best_training_models": [
+    {
+      "model": [
+        "forward",
+        "skip_start",
+        "close",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "smallest",
+      "K_training_only": 1.7003389507105393,
+      "K_compatible_lower": 8.953665401796975,
+      "K_compatible_upper": 0.622624160038765,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 0.6223676646809335,
+      "K_max_nonfloor": 8.96048594295241,
+      "training": {
+        "predictions": [
+          90.30987406518373,
+          278.05712354926465,
+          466.94509333735584,
+          174.18734905466036,
+          621.8391579082178,
+          269.01359605774286,
+          73.46793408428105,
+          45.4989938628078,
+          43.19102635486956,
+          45.98298843345542,
+          47.16377416991543,
+          46.36337024977883,
+          53.268149486435895,
+          60.4453111662286,
+          62.597712261025585,
+          61.158755073074424,
+          60.41431052550929,
+          59.49692633746209,
+          57.77008882279037,
+          53.7920553035711,
+          63.02635735867182,
+          49.656003281158554,
+          45.44535144191302,
+          47.52458039041054,
+          45.581102315816736,
+          137.84536161686887,
+          533.9775520896943,
+          110.18024372033277,
+          293.34686613615617,
+          1040.845978256162
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4304432559521115,
+        "max_relative_error": 4.269823372103541
+      },
+      "reserved": {
+        "predictions": [
+          63.55928841231421,
+          57.36934098679512,
+          40.61910186359148,
+          34.36670517689107
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.2022786485055048,
+        "max_relative_error": 0.5138191441797024
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "skip_start",
+        "close",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "largest",
+      "K_training_only": 1.7003389507105393,
+      "K_compatible_lower": 8.953665401796975,
+      "K_compatible_upper": 0.622624160038765,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 0.6223676646809335,
+      "K_max_nonfloor": 8.96048594295241,
+      "training": {
+        "predictions": [
+          90.30987406518373,
+          278.05712354926465,
+          466.94509333735584,
+          174.18734905466036,
+          621.8391579082178,
+          269.01359605774286,
+          73.46793408428105,
+          45.4989938628078,
+          43.19102635486956,
+          45.98298843345542,
+          47.16377416991543,
+          46.36337024977883,
+          53.268149486435895,
+          60.4453111662286,
+          62.597712261025585,
+          61.158755073074424,
+          60.41431052550929,
+          59.49692633746209,
+          57.77008882279037,
+          53.7920553035711,
+          63.02635735867182,
+          49.656003281158554,
+          45.44535144191302,
+          47.52458039041054,
+          45.581102315816736,
+          137.84536161686887,
+          533.9775520896943,
+          110.18024372033277,
+          293.34686613615617,
+          1040.845978256162
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4304432559521115,
+        "max_relative_error": 4.269823372103541
+      },
+      "reserved": {
+        "predictions": [
+          63.55928841231421,
+          57.36934098679512,
+          40.61910186359148,
+          34.36670517689107
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.2022786485055048,
+        "max_relative_error": 0.5138191441797024
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "all",
+        "close",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "smallest",
+      "K_training_only": 1.7431778507872235,
+      "K_compatible_lower": 10.174308925365173,
+      "K_compatible_upper": 0.6558948750993436,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 0.6556246735853549,
+      "K_max_nonfloor": 10.182059303521992,
+      "training": {
+        "predictions": [
+          99.39857853863693,
+          266.13239211498876,
+          447.90082896687295,
+          273.6581524612398,
+          689.2486600107972,
+          272.5602732241454,
+          73.44575563761833,
+          48.03863165426116,
+          44.380848143598335,
+          42.12959934018479,
+          44.85294846315719,
+          46.004716183954976,
+          45.223982329922215,
+          51.959075411126385,
+          58.959857089362735,
+          61.05936255140296,
+          59.6557679876163,
+          58.92961829480244,
+          58.03477898337005,
+          56.350378802161636,
+          64.37277652500802,
+          49.224937989057345,
+          45.080670583374065,
+          47.00687866788107,
+          45.22005260272238,
+          134.68092608962942,
+          511.70011733369967,
+          109.6536584073909,
+          275.8692376781249,
+          1020.6700973786365
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4167621195270767,
+        "max_relative_error": 4.841090339074552
+      },
+      "reserved": {
+        "predictions": [
+          63.564768794021354,
+          58.55817388547907,
+          44.29774219279016,
+          30.65998010007705
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.20257742241630633,
+        "max_relative_error": 0.5037442891061096
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "all",
+        "close",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "largest",
+      "K_training_only": 1.7431778507872235,
+      "K_compatible_lower": 10.174308925365173,
+      "K_compatible_upper": 0.6558948750993436,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 0.6556246735853549,
+      "K_max_nonfloor": 10.182059303521992,
+      "training": {
+        "predictions": [
+          99.39857853863693,
+          266.13239211498876,
+          447.90082896687295,
+          273.6581524612398,
+          689.2486600107972,
+          272.5602732241454,
+          73.44575563761833,
+          48.03863165426116,
+          44.380848143598335,
+          42.12959934018479,
+          44.85294846315719,
+          46.004716183954976,
+          45.223982329922215,
+          51.959075411126385,
+          58.959857089362735,
+          61.05936255140296,
+          59.6557679876163,
+          58.92961829480244,
+          58.03477898337005,
+          56.350378802161636,
+          64.37277652500802,
+          49.224937989057345,
+          45.080670583374065,
+          47.00687866788107,
+          45.22005260272238,
+          134.68092608962942,
+          511.70011733369967,
+          109.6536584073909,
+          275.8692376781249,
+          1020.6700973786365
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4167621195270767,
+        "max_relative_error": 4.841090339074552
+      },
+      "reserved": {
+        "predictions": [
+          63.564768794021354,
+          58.55817388547907,
+          44.29774219279016,
+          30.65998010007705
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.20257742241630633,
+        "max_relative_error": 0.5037442891061096
+      }
+    },
+    {
+      "model": [
+        "reverse",
+        "all",
+        "ohlc4",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "smallest",
+      "K_training_only": 4.778173563724442,
+      "K_compatible_lower": 28.358580988877755,
+      "K_compatible_upper": 1.7238170278343692,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.7229619598642132,
+      "K_max_nonfloor": 28.37506214791817,
+      "training": {
+        "predictions": [
+          688.8630488744485,
+          288.42275146506313,
+          224.08863654825868,
+          387.7016409022837,
+          531.123667052205,
+          168.50099658128997,
+          48.812408404286096,
+          55.71516035811515,
+          55.42476093744982,
+          54.46806908867448,
+          54.06136373666895,
+          53.75882895689469,
+          53.21327652570834,
+          53.835943043093046,
+          54.01612152936487,
+          52.37776549054844,
+          50.92064398205537,
+          50.52509519314628,
+          50.51059760721786,
+          49.88992561793008,
+          47.78150481538911,
+          73.53713714297884,
+          51.59817822413871,
+          53.70851633484231,
+          51.136555227573425,
+          148.78232519634122,
+          404.64975543978375,
+          70.67565454239347,
+          222.43268052746265,
+          570.7634772468915
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4749347953131444,
+        "max_relative_error": 4.938474559262487
+      },
+      "reserved": {
+        "predictions": [
+          59.21417257094461,
+          57.46665963901968,
+          44.423548560121375,
+          41.95821053196643
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.11173924793963996,
+        "max_relative_error": 0.5129944098388163
+      }
+    },
+    {
+      "model": [
+        "reverse",
+        "all",
+        "ohlc4",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "largest",
+      "K_training_only": 4.778173563724442,
+      "K_compatible_lower": 28.358580988877755,
+      "K_compatible_upper": 1.7238170278343692,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.7229619598642132,
+      "K_max_nonfloor": 28.37506214791817,
+      "training": {
+        "predictions": [
+          688.8630488744485,
+          288.42275146506313,
+          224.08863654825868,
+          387.7016409022837,
+          531.123667052205,
+          168.50099658128997,
+          48.812408404286096,
+          55.71516035811515,
+          55.42476093744982,
+          54.46806908867448,
+          54.06136373666895,
+          53.75882895689469,
+          53.21327652570834,
+          53.835943043093046,
+          54.01612152936487,
+          52.37776549054844,
+          50.92064398205537,
+          50.52509519314628,
+          50.51059760721786,
+          49.88992561793008,
+          47.78150481538911,
+          73.53713714297884,
+          51.59817822413871,
+          53.70851633484231,
+          51.136555227573425,
+          148.78232519634122,
+          404.64975543978375,
+          70.67565454239347,
+          222.43268052746265,
+          570.7634772468915
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4749347953131444,
+        "max_relative_error": 4.938474559262487
+      },
+      "reserved": {
+        "predictions": [
+          59.21417257094461,
+          57.46665963901968,
+          44.423548560121375,
+          41.95821053196643
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.11173924793963996,
+        "max_relative_error": 0.5129944098388163
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "skip_both",
+        "close",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "smallest",
+      "K_training_only": 1.7428944599211234,
+      "K_compatible_lower": 10.42764990601144,
+      "K_compatible_upper": 0.6301608030002713,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 0.6299012028577924,
+      "K_max_nonfloor": 10.435593269108765,
+      "training": {
+        "predictions": [
+          81.28678368280123,
+          308.1550910176975,
+          417.77339885582296,
+          209.8540631263005,
+          706.5258591794264,
+          246.96625548698842,
+          71.07662436899685,
+          44.95318046353173,
+          42.64649618576636,
+          45.492059785642375,
+          46.718556971130745,
+          45.94807603039242,
+          53.05536631117738,
+          60.48355615384646,
+          62.6773971183679,
+          61.167629820685306,
+          60.387792980490424,
+          59.434923078536116,
+          57.631359945216815,
+          53.52986547327747,
+          60.935264533766414,
+          51.707227590554616,
+          44.468168019429626,
+          45.43910226065742,
+          45.59743411416792,
+          136.93333464683099,
+          581.2400316383435,
+          107.5925236971594,
+          291.90963340859776,
+          1033.7091009445912
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4370027205248071,
+        "max_relative_error": 4.98750728118158
+      },
+      "reserved": {
+        "predictions": [
+          63.28092333179074,
+          56.98745451833707,
+          40.05795510265878,
+          33.836922739259734
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.2138842782774626,
+        "max_relative_error": 0.5170554701835841
+      }
+    },
+    {
+      "model": [
+        "forward",
+        "skip_both",
+        "close",
+        "range_extreme_with_net_move",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "largest",
+      "K_training_only": 1.7428944599211234,
+      "K_compatible_lower": 10.42764990601144,
+      "K_compatible_upper": 0.6301608030002713,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 0.6299012028577924,
+      "K_max_nonfloor": 10.435593269108765,
+      "training": {
+        "predictions": [
+          81.28678368280123,
+          308.1550910176975,
+          417.77339885582296,
+          209.8540631263005,
+          706.5258591794264,
+          246.96625548698842,
+          71.07662436899685,
+          44.95318046353173,
+          42.64649618576636,
+          45.492059785642375,
+          46.718556971130745,
+          45.94807603039242,
+          53.05536631117738,
+          60.48355615384646,
+          62.6773971183679,
+          61.167629820685306,
+          60.387792980490424,
+          59.434923078536116,
+          57.631359945216815,
+          53.52986547327747,
+          60.935264533766414,
+          51.707227590554616,
+          44.468168019429626,
+          45.43910226065742,
+          45.59743411416792,
+          136.93333464683099,
+          581.2400316383435,
+          107.5925236971594,
+          291.90963340859776,
+          1033.7091009445912
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.4370027205248071,
+        "max_relative_error": 4.98750728118158
+      },
+      "reserved": {
+        "predictions": [
+          63.28092333179074,
+          56.98745451833707,
+          40.05795510265878,
+          33.836922739259734
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.2138842782774626,
+        "max_relative_error": 0.5170554701835841
+      }
+    },
+    {
+      "model": [
+        "reverse",
+        "all",
+        "ohlc4",
+        "range_high",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "smallest",
+      "K_training_only": 4.692821952657911,
+      "K_compatible_lower": 28.358580988877755,
+      "K_compatible_upper": 1.3998817961988552,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.3991874103872486,
+      "K_max_nonfloor": 28.37506214791817,
+      "training": {
+        "predictions": [
+          701.3918794200728,
+          187.70092816411312,
+          678.7272232573246,
+          394.7530398255703,
+          540.7835819426035,
+          171.56564119589837,
+          49.70019356625748,
+          56.72849066243277,
+          56.43280954588027,
+          55.4587176782227,
+          55.04461529360582,
+          54.73657810374273,
+          54.18110333171482,
+          54.815094717366875,
+          54.99855023486596,
+          53.33039627726543,
+          51.84677308822189,
+          51.44403017886046,
+          51.42926891527112,
+          50.797308333583295,
+          61.96438567437443,
+          74.87460811283286,
+          52.53663011597618,
+          54.68535041110117,
+          52.06661126146877,
+          151.48833264385155,
+          412.0094014891937,
+          58.43834162098922,
+          131.66961291234264,
+          295.9908257199695
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.3760588354986771,
+        "max_relative_error": 5.0464817191385585
+      },
+      "reserved": {
+        "predictions": [
+          60.29114183973164,
+          58.51184567682031,
+          45.231510480933466,
+          42.721333638382966
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.09558383292488953,
+        "max_relative_error": 0.5041369010438956
+      }
+    },
+    {
+      "model": [
+        "reverse",
+        "all",
+        "ohlc4",
+        "range_high",
+        "RMS_residual_equals_mean_TR"
+      ],
+      "root_branch": "largest",
+      "K_training_only": 4.692821952657911,
+      "K_compatible_lower": 28.358580988877755,
+      "K_compatible_upper": 1.3998817961988552,
+      "K_compatible_intersection_nonempty": false,
+      "K_min_nonfloor": 1.3991874103872486,
+      "K_max_nonfloor": 28.37506214791817,
+      "training": {
+        "predictions": [
+          701.3918794200728,
+          187.70092816411312,
+          678.7272232573246,
+          394.7530398255703,
+          540.7835819426035,
+          171.56564119589837,
+          49.70019356625748,
+          56.72849066243277,
+          56.43280954588027,
+          55.4587176782227,
+          55.04461529360582,
+          54.73657810374273,
+          54.18110333171482,
+          54.815094717366875,
+          54.99855023486596,
+          53.33039627726543,
+          51.84677308822189,
+          51.44403017886046,
+          51.42926891527112,
+          50.797308333583295,
+          61.96438567437443,
+          74.87460811283286,
+          52.53663011597618,
+          54.68535041110117,
+          52.06661126146877,
+          151.48833264385155,
+          412.0094014891937,
+          58.43834162098922,
+          131.66961291234264,
+          295.9908257199695
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.3760588354986771,
+        "max_relative_error": 5.0464817191385585
+      },
+      "reserved": {
+        "predictions": [
+          60.29114183973164,
+          58.51184567682031,
+          45.231510480933466,
+          42.721333638382966
+        ],
+        "interval_matches": 0,
+        "median_relative_error": 0.09558383292488953,
+        "max_relative_error": 0.5041369010438956
+      }
+    }
+  ],
+  "reserved_cases": [
+    {
+      "start": "18:52:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 67,
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1852_verificado.csv"
+    },
+    {
+      "start": "18:53:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 118,
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1853_verificado.csv"
+    },
+    {
+      "start": "19:01:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 47,
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1901_verificado.csv"
+    },
+    {
+      "start": "19:02:00",
+      "end": "19:20:00",
+      "dt": 15,
+      "C": 47,
+      "file": "G:\\trading\\guias\\analisis\\C_barrido_15s_start1902_verificado.csv"
+    }
+  ]
+}

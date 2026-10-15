@@ -1,0 +1,486 @@
+{
+  "192015": {
+    "expected_C": 79,
+    "fits": {
+      "Lane 3 A": {
+        "C": 79.00000000000456,
+        "period": 126.4000000000073,
+        "pairs": 6310,
+        "rmse": 1.510670492660095e-12
+      },
+      "Lane 3 B": {
+        "C": 78.99999999999328,
+        "period": 156.24444444443117,
+        "pairs": 6310,
+        "rmse": 1.6058812162799326e-12
+      },
+      "Lane 2 A": {
+        "C": 78.99999999999417,
+        "period": 42.13333333333023,
+        "pairs": 6310,
+        "rmse": 1.5434406672896012e-12
+      },
+      "Lane 2 B": {
+        "C": 79.00000000000614,
+        "period": 52.08148148148553,
+        "pairs": 6310,
+        "rmse": 1.7369840706244848e-12
+      },
+      "Lane 1 A": {
+        "C": 78.99999999999918,
+        "period": 14.044444444444297,
+        "pairs": 6310,
+        "rmse": 1.5077135260224256e-12
+      },
+      "Lane 1 B": {
+        "C": 79.00000000000196,
+        "period": 17.360493827160926,
+        "pairs": 6310,
+        "rmse": 1.7425713952139078e-12
+      }
+    },
+    "repeat": {
+      "offset_seconds": 0,
+      "visibility_mismatches": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 6332,
+          "max_error": 0.0
+        },
+        "Lane 3 B": {
+          "values": 6332,
+          "max_error": 0.0
+        },
+        "Lane 2 A": {
+          "values": 6332,
+          "max_error": 0.0
+        },
+        "Lane 2 B": {
+          "values": 6332,
+          "max_error": 0.0
+        },
+        "Lane 1 A": {
+          "values": 6332,
+          "max_error": 0.0
+        },
+        "Lane 1 B": {
+          "values": 6332,
+          "max_error": 0.0
+        }
+      }
+    },
+    "coarse_chart_seconds": 30,
+    "coarse_comparison": {
+      "offset_seconds": 15,
+      "visibility_mismatches": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 3147,
+          "max_error": 0.0
+        },
+        "Lane 3 B": {
+          "values": 3147,
+          "max_error": 0.0
+        },
+        "Lane 2 A": {
+          "values": 3147,
+          "max_error": 0.0
+        },
+        "Lane 2 B": {
+          "values": 3147,
+          "max_error": 0.0
+        },
+        "Lane 1 A": {
+          "values": 3147,
+          "max_error": 0.0
+        },
+        "Lane 1 B": {
+          "values": 3147,
+          "max_error": 0.0
+        }
+      }
+    },
+    "first_native_plot": "2026-10-12T19:20:45+00:00",
+    "first_coarse_plot": "2026-10-12T19:20:30+00:00",
+    "coarse_chart_low_seed_reconstruction": {
+      "seed": 30864.5,
+      "END_native": "2026-10-12T19:20:15+00:00",
+      "C_supplied": 79,
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "first_break": {
+        "time": "2026-10-12T19:20:45+00:00",
+        "side": "bull"
+      },
+      "visibility_mismatches_after_END": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 3147,
+          "max_error": 4.729372449219227e-11
+        },
+        "Lane 3 B": {
+          "values": 3147,
+          "max_error": 8.731149137020111e-11
+        },
+        "Lane 2 A": {
+          "values": 3147,
+          "max_error": 2.9103830456733704e-11
+        },
+        "Lane 2 B": {
+          "values": 3147,
+          "max_error": 4.3655745685100555e-11
+        },
+        "Lane 1 A": {
+          "values": 3147,
+          "max_error": 1.0913936421275139e-11
+        },
+        "Lane 1 B": {
+          "values": 3147,
+          "max_error": 2.1827872842550278e-11
+        }
+      }
+    }
+  },
+  "192045": {
+    "expected_C": 66,
+    "fits": {
+      "Lane 3 A": {
+        "C": 66.00000000001235,
+        "period": 105.60000000001976,
+        "pairs": 6287,
+        "rmse": 1.7161711723055468e-12
+      },
+      "Lane 3 B": {
+        "C": 65.99999999999551,
+        "period": 130.53333333332446,
+        "pairs": 6287,
+        "rmse": 1.5978238201484968e-12
+      },
+      "Lane 2 A": {
+        "C": 66.00000000000435,
+        "period": 35.20000000000232,
+        "pairs": 6287,
+        "rmse": 1.7033355862949563e-12
+      },
+      "Lane 2 B": {
+        "C": 65.99999999999534,
+        "period": 43.511111111108036,
+        "pairs": 6287,
+        "rmse": 1.833636575829685e-12
+      },
+      "Lane 1 A": {
+        "C": 65.9999999999977,
+        "period": 11.733333333332924,
+        "pairs": 6287,
+        "rmse": 2.280040523075764e-12
+      },
+      "Lane 1 B": {
+        "C": 66.00000000000244,
+        "period": 14.503703703704241,
+        "pairs": 6287,
+        "rmse": 1.7179051398876178e-12
+      }
+    },
+    "repeat": {
+      "offset_seconds": 0,
+      "visibility_mismatches": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 6309,
+          "max_error": 0.0
+        },
+        "Lane 3 B": {
+          "values": 6309,
+          "max_error": 0.0
+        },
+        "Lane 2 A": {
+          "values": 6309,
+          "max_error": 0.0
+        },
+        "Lane 2 B": {
+          "values": 6309,
+          "max_error": 0.0
+        },
+        "Lane 1 A": {
+          "values": 6309,
+          "max_error": 0.0
+        },
+        "Lane 1 B": {
+          "values": 6309,
+          "max_error": 0.0
+        }
+      }
+    },
+    "coarse_chart_seconds": 60,
+    "coarse_comparison": {
+      "offset_seconds": 45,
+      "visibility_mismatches": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 1566,
+          "max_error": 2.221547279972583
+        },
+        "Lane 3 B": {
+          "values": 1566,
+          "max_error": 2.4230658269661944
+        },
+        "Lane 2 A": {
+          "values": 1566,
+          "max_error": 0.8947236084131873
+        },
+        "Lane 2 B": {
+          "values": 1566,
+          "max_error": 1.161139881482086
+        },
+        "Lane 1 A": {
+          "values": 1566,
+          "max_error": 0.05795464570110198
+        },
+        "Lane 1 B": {
+          "values": 1566,
+          "max_error": 0.12719985373769305
+        }
+      }
+    },
+    "first_native_plot": "2026-10-12T19:26:45+00:00",
+    "first_coarse_plot": "2026-10-12T19:26:00+00:00",
+    "coarse_chart_low_seed_reconstruction": {
+      "seed": 30864.5,
+      "END_native": "2026-10-12T19:20:45+00:00",
+      "C_supplied": 66,
+      "range_high": 30870.5,
+      "range_low": 30846.0,
+      "first_break": {
+        "time": "2026-10-12T19:26:45+00:00",
+        "side": "bull"
+      },
+      "visibility_mismatches_after_END": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 1566,
+          "max_error": 7.639755494892597e-11
+        },
+        "Lane 3 B": {
+          "values": 1566,
+          "max_error": 7.275957614183426e-11
+        },
+        "Lane 2 A": {
+          "values": 1566,
+          "max_error": 3.2741809263825417e-11
+        },
+        "Lane 2 B": {
+          "values": 1566,
+          "max_error": 4.001776687800884e-11
+        },
+        "Lane 1 A": {
+          "values": 1566,
+          "max_error": 2.1827872842550278e-11
+        },
+        "Lane 1 B": {
+          "values": 1566,
+          "max_error": 1.8189894035458565e-11
+        }
+      }
+    }
+  },
+  "minute21_control": {
+    "native_fits": {
+      "Lane 3 A": {
+        "C": 66.00000000001289,
+        "period": 105.60000000002063,
+        "pairs": 6293,
+        "rmse": 1.7185646621232877e-12
+      },
+      "Lane 3 B": {
+        "C": 65.99999999999486,
+        "period": 130.53333333332316,
+        "pairs": 6293,
+        "rmse": 1.5956249004667749e-12
+      },
+      "Lane 2 A": {
+        "C": 66.00000000000414,
+        "period": 35.200000000002206,
+        "pairs": 6293,
+        "rmse": 1.7055201399575733e-12
+      },
+      "Lane 2 B": {
+        "C": 65.99999999999517,
+        "period": 43.51111111110792,
+        "pairs": 6293,
+        "rmse": 1.8291411854473205e-12
+      },
+      "Lane 1 A": {
+        "C": 65.99999999999766,
+        "period": 11.733333333332915,
+        "pairs": 6293,
+        "rmse": 2.2822269931033174e-12
+      },
+      "Lane 1 B": {
+        "C": 66.00000000000246,
+        "period": 14.503703703704245,
+        "pairs": 6293,
+        "rmse": 1.7179195703845478e-12
+      }
+    },
+    "coarse_independent_C_fits": {
+      "Lane 3 A": {
+        "C": 66.00000000002933,
+        "pairs": 1562,
+        "rmse": 4.8419938062551085e-12
+      },
+      "Lane 3 B": {
+        "C": 65.9999999999946,
+        "pairs": 1562,
+        "rmse": 4.224242419755552e-12
+      },
+      "Lane 2 A": {
+        "C": 66.0000000000147,
+        "pairs": 1562,
+        "rmse": 4.500063068559874e-12
+      },
+      "Lane 2 B": {
+        "C": 66.0000000000073,
+        "pairs": 1562,
+        "rmse": 5.189154440499918e-12
+      },
+      "Lane 1 A": {
+        "C": 65.99999999998727,
+        "pairs": 1562,
+        "rmse": 6.092650650138508e-12
+      },
+      "Lane 1 B": {
+        "C": 65.9999999999923,
+        "pairs": 1562,
+        "rmse": 4.051207242039531e-12
+      }
+    },
+    "native_repeat": {
+      "offset_seconds": 0,
+      "visibility_mismatches": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 6315,
+          "max_error": 0.0
+        },
+        "Lane 3 B": {
+          "values": 6315,
+          "max_error": 0.0
+        },
+        "Lane 2 A": {
+          "values": 6315,
+          "max_error": 0.0
+        },
+        "Lane 2 B": {
+          "values": 6315,
+          "max_error": 0.0
+        },
+        "Lane 1 A": {
+          "values": 6315,
+          "max_error": 0.0
+        },
+        "Lane 1 B": {
+          "values": 6315,
+          "max_error": 0.0
+        }
+      }
+    },
+    "coarse_repeat": {
+      "offset_seconds": 0,
+      "visibility_mismatches": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 1584,
+          "max_error": 0.0
+        },
+        "Lane 3 B": {
+          "values": 1584,
+          "max_error": 0.0
+        },
+        "Lane 2 A": {
+          "values": 1584,
+          "max_error": 0.0
+        },
+        "Lane 2 B": {
+          "values": 1584,
+          "max_error": 0.0
+        },
+        "Lane 1 A": {
+          "values": 1584,
+          "max_error": 0.0
+        },
+        "Lane 1 B": {
+          "values": 1584,
+          "max_error": 0.0
+        }
+      }
+    },
+    "comparison": {
+      "offset_seconds": 45,
+      "visibility_mismatches": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 1579,
+          "max_error": 0.17117077045259066
+        },
+        "Lane 3 B": {
+          "values": 1579,
+          "max_error": 0.18401546167660854
+        },
+        "Lane 2 A": {
+          "values": 1579,
+          "max_error": 0.08022148908275994
+        },
+        "Lane 2 B": {
+          "values": 1579,
+          "max_error": 0.09968284473870881
+        },
+        "Lane 1 A": {
+          "values": 1579,
+          "max_error": 0.008199553132726578
+        },
+        "Lane 1 B": {
+          "values": 1579,
+          "max_error": 0.01578660762970685
+        }
+      }
+    },
+    "seed_reconstruction": {
+      "seed": 30866.5,
+      "END_native": "2026-10-12T19:21:45+00:00",
+      "C_supplied": 66,
+      "range_high": 30870.5,
+      "range_low": 30846.0,
+      "first_break": {
+        "time": "2026-10-12T19:26:45+00:00",
+        "side": "bull"
+      },
+      "visibility_mismatches_after_END": [],
+      "curves": {
+        "Lane 3 A": {
+          "values": 1579,
+          "max_error": 7.639755494892597e-11
+        },
+        "Lane 3 B": {
+          "values": 1579,
+          "max_error": 7.275957614183426e-11
+        },
+        "Lane 2 A": {
+          "values": 1579,
+          "max_error": 3.2741809263825417e-11
+        },
+        "Lane 2 B": {
+          "values": 1579,
+          "max_error": 4.001776687800884e-11
+        },
+        "Lane 1 A": {
+          "values": 1579,
+          "max_error": 2.1827872842550278e-11
+        },
+        "Lane 1 B": {
+          "values": 1579,
+          "max_error": 1.8189894035458565e-11
+        }
+      }
+    }
+  }
+}

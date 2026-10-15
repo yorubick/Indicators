@@ -1,0 +1,107 @@
+{
+  "scope": "Offline numerical emulation of supplied Pine manual EMA state, using correct C, matching resolution and exact END. No Pine compiler validation. Original Gemini file unchanged.",
+  "cases": [
+    {
+      "comparison": "Lite_1855_1920_1m_comparacion.json",
+      "C_supplied_correctly": 62,
+      "chart_seconds_matches_res_sec": 60,
+      "first_visible_errors": {
+        "Lane 3 A": {
+          "UTC": "2026-10-12T19:26:00+00:00",
+          "error_points": 0.2071364536495821
+        },
+        "Lane 3 B": {
+          "UTC": "2026-10-12T19:26:00+00:00",
+          "error_points": 0.18235625721354154
+        },
+        "Lane 2 A": {
+          "UTC": "2026-10-12T19:26:00+00:00",
+          "error_points": 0.2559911399039265
+        },
+        "Lane 2 B": {
+          "UTC": "2026-10-12T19:26:00+00:00",
+          "error_points": 0.2671668648981722
+        },
+        "Lane 1 A": {
+          "UTC": "2026-10-12T19:26:00+00:00",
+          "error_points": 0.04754640983446734
+        },
+        "Lane 1 B": {
+          "UTC": "2026-10-12T19:26:00+00:00",
+          "error_points": 0.0881769177140086
+        }
+      },
+      "maximum_visible_error_points": 0.2671668648981722,
+      "premature_plot_cells": 30,
+      "compared_values": 510
+    },
+    {
+      "comparison": "Lite_185415_1920_15s_comparacion.json",
+      "C_supplied_correctly": 118,
+      "chart_seconds_matches_res_sec": 15,
+      "first_visible_errors": {
+        "Lane 3 A": {
+          "UTC": "2026-10-12T19:20:45+00:00",
+          "error_points": 0.0
+        },
+        "Lane 3 B": {
+          "UTC": "2026-10-12T19:20:45+00:00",
+          "error_points": 0.0
+        },
+        "Lane 2 A": {
+          "UTC": "2026-10-12T19:20:45+00:00",
+          "error_points": 0.0
+        },
+        "Lane 2 B": {
+          "UTC": "2026-10-12T19:20:45+00:00",
+          "error_points": 3.637978807091713e-12
+        },
+        "Lane 1 A": {
+          "UTC": "2026-10-12T19:20:45+00:00",
+          "error_points": 0.0
+        },
+        "Lane 1 B": {
+          "UTC": "2026-10-12T19:20:45+00:00",
+          "error_points": 0.0
+        }
+      },
+      "maximum_visible_error_points": 9.458744898438454e-11,
+      "premature_plot_cells": 12,
+      "compared_values": 2148
+    },
+    {
+      "comparison": "Lite_0445_053000_1m_comparacion.json",
+      "C_supplied_correctly": 110,
+      "chart_seconds_matches_res_sec": 60,
+      "first_visible_errors": {
+        "Lane 3 A": {
+          "UTC": "2026-10-12T05:36:00+00:00",
+          "error_points": 7.214310136860149
+        },
+        "Lane 3 B": {
+          "UTC": "2026-10-12T05:36:00+00:00",
+          "error_points": 7.603890741800569
+        },
+        "Lane 2 A": {
+          "UTC": "2026-10-12T05:36:00+00:00",
+          "error_points": 4.154144835207262
+        },
+        "Lane 2 B": {
+          "UTC": "2026-10-12T05:36:00+00:00",
+          "error_points": 4.867377824590221
+        },
+        "Lane 1 A": {
+          "UTC": "2026-10-12T05:36:00+00:00",
+          "error_points": 0.7665831856720615
+        },
+        "Lane 1 B": {
+          "UTC": "2026-10-12T05:36:00+00:00",
+          "error_points": 1.2536648099121521
+        }
+      },
+      "maximum_visible_error_points": 7.603890741800569,
+      "premature_plot_cells": 30,
+      "compared_values": 510
+    }
+  ]
+}

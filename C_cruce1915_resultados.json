@@ -1,0 +1,120 @@
+{
+  "scope": "Local hypothesis: C61 at END19:23:15 persists for START19:03:15 and19:03:30, calibrated from known START19:03:00/END19:23:15. Predictions fixed before measurement. Not a general generator or independent episode replication.",
+  "cases": [
+    {
+      "id": "C_cruce1915_15",
+      "START": "2026-10-12T19:03:15+00:00",
+      "END": "2026-10-12T19:23:15+00:00",
+      "dt": 15,
+      "bars": 81,
+      "prediction_C": 61,
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 53.999999999999204,
+      "prediction_match": false,
+      "repeat_cells": 127600,
+      "Character_interval": {
+        "lower_inclusive": 53.99305555555556,
+        "upper_exclusive": 54.01685393258427
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 53.99999999999889,
+          "period": 86.39999999999823,
+          "pairs": 7416,
+          "rmse": 1.9059687279920442e-12
+        },
+        "Lane 3 B": {
+          "C": 53.99999999999554,
+          "period": 106.79999999999117,
+          "pairs": 7416,
+          "rmse": 1.5297310370751991e-12
+        },
+        "Lane 2 A": {
+          "C": 53.99999999999941,
+          "period": 28.799999999999685,
+          "pairs": 7416,
+          "rmse": 1.5598179228340154e-12
+        },
+        "Lane 2 B": {
+          "C": 53.99999999999841,
+          "period": 35.59999999999896,
+          "pairs": 7416,
+          "rmse": 2.0847441821365797e-12
+        },
+        "Lane 1 A": {
+          "C": 54.00000000000109,
+          "period": 9.600000000000193,
+          "pairs": 7416,
+          "rmse": 2.32552366567978e-12
+        },
+        "Lane 1 B": {
+          "C": 54.000000000001904,
+          "period": 11.866666666667085,
+          "pairs": 7416,
+          "rmse": 1.5699314856665051e-12
+        }
+      }
+    },
+    {
+      "id": "C_cruce1915_30",
+      "START": "2026-10-12T19:03:30+00:00",
+      "END": "2026-10-12T19:23:15+00:00",
+      "dt": 15,
+      "bars": 80,
+      "prediction_C": 61,
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 60.99999999999961,
+      "prediction_match": true,
+      "repeat_cells": 127664,
+      "Character_interval": {
+        "lower_inclusive": 60.98314606741573,
+        "upper_exclusive": 61.00694444444444
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 61.00000000000174,
+          "period": 97.6000000000028,
+          "pairs": 7419,
+          "rmse": 1.6990681603024684e-12
+        },
+        "Lane 3 B": {
+          "C": 61.000000000000625,
+          "period": 120.6444444444457,
+          "pairs": 7419,
+          "rmse": 1.820725939307979e-12
+        },
+        "Lane 2 A": {
+          "C": 60.99999999999836,
+          "period": 32.53333333333246,
+          "pairs": 7419,
+          "rmse": 1.6134167531055048e-12
+        },
+        "Lane 2 B": {
+          "C": 60.999999999999154,
+          "period": 40.21481481481426,
+          "pairs": 7419,
+          "rmse": 1.5433916590674694e-12
+        },
+        "Lane 1 A": {
+          "C": 60.99999999999896,
+          "period": 10.84444444444426,
+          "pairs": 7419,
+          "rmse": 1.7685379088919943e-12
+        },
+        "Lane 1 B": {
+          "C": 60.99999999999881,
+          "period": 13.404938271604678,
+          "pairs": 7419,
+          "rmse": 1.756126099080785e-12
+        }
+      }
+    }
+  ],
+  "failures": []
+}

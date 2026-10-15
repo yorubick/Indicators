@@ -1,0 +1,6531 @@
+{
+  "cases": 23,
+  "tested_selector_signatures": 36,
+  "rejected_signatures": 36,
+  "rejected_with_linear_count_factor": 36,
+  "results": [
+    {
+      "source": "wick",
+      "radius": 1,
+      "selector": "last_high_and_low",
+      "scope": "structure_only",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 48,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 1,
+      "selector": "last_high_and_low",
+      "scope": "to_END",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 18,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 1,
+      "selector": "last_high_and_low",
+      "scope": "to_END_with_global_extrema",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 10,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:22:00+00:00",
+                "price": 30870.75,
+                "side": "H"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              },
+              {
+                "close": 30866.5,
+                "high": 30869.5,
+                "low": 30864.25,
+                "open": 30868.25,
+                "time": 1791832980
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "first_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ],
+          "second_F_conservative_interval": [
+            2.333333333333328,
+            2.4285714285714235
+          ]
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "first_F_conservative_interval": [
+            3.304347826086891,
+            3.3913043478260216
+          ],
+          "second_F_conservative_interval": [
+            2.318181818181808,
+            2.409090909090899
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 1,
+      "selector": "last_opposite_pair",
+      "scope": "structure_only",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 61,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:23:00",
+            "bars": 24,
+            "C": 76.9999999999985
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:23:00",
+            "bars": 24,
+            "C": 76.9999999999985
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.166666666666604,
+            3.2499999999999374
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 1,
+      "selector": "last_opposite_pair",
+      "scope": "to_END",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 18,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 1,
+      "selector": "last_opposite_pair",
+      "scope": "to_END_with_global_extrema",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 10,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              },
+              {
+                "close": 30866.5,
+                "high": 30869.5,
+                "low": 30864.25,
+                "open": 30868.25,
+                "time": 1791832980
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "first_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ],
+          "second_F_conservative_interval": [
+            2.333333333333328,
+            2.4285714285714235
+          ]
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "first_F_conservative_interval": [
+            3.304347826086891,
+            3.3913043478260216
+          ],
+          "second_F_conservative_interval": [
+            2.318181818181808,
+            2.409090909090899
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 1,
+      "selector": "last_confirmed_pivot",
+      "scope": "structure_only",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 48,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 1,
+      "selector": "last_confirmed_pivot",
+      "scope": "to_END",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 18,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 1,
+      "selector": "last_confirmed_pivot",
+      "scope": "to_END_with_global_extrema",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 10,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:22:00+00:00",
+                "price": 30870.75,
+                "side": "H"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              },
+              {
+                "close": 30866.5,
+                "high": 30869.5,
+                "low": 30864.25,
+                "open": 30868.25,
+                "time": 1791832980
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "first_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ],
+          "second_F_conservative_interval": [
+            2.333333333333328,
+            2.4285714285714235
+          ]
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "first_F_conservative_interval": [
+            3.304347826086891,
+            3.3913043478260216
+          ],
+          "second_F_conservative_interval": [
+            2.318181818181808,
+            2.409090909090899
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 2,
+      "selector": "last_high_and_low",
+      "scope": "structure_only",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 57,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30863.25,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30863.25,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "first_F_conservative_interval": [
+            3.619047619047548,
+            3.7142857142856434
+          ],
+          "second_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.619047619047548,
+            3.7142857142856434
+          ],
+          "second_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 2,
+      "selector": "last_high_and_low",
+      "scope": "to_END",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 18,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30863.25,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30863.25,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 2,
+      "selector": "last_high_and_low",
+      "scope": "to_END_with_global_extrema",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 10,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30863.25,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30863.25,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              },
+              {
+                "close": 30866.5,
+                "high": 30869.5,
+                "low": 30864.25,
+                "open": 30868.25,
+                "time": 1791832980
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "first_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ],
+          "second_F_conservative_interval": [
+            2.333333333333328,
+            2.4285714285714235
+          ]
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "first_F_conservative_interval": [
+            3.304347826086891,
+            3.3913043478260216
+          ],
+          "second_F_conservative_interval": [
+            2.318181818181808,
+            2.409090909090899
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 2,
+      "selector": "last_opposite_pair",
+      "scope": "structure_only",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 57,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30863.25,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30863.25,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "first_F_conservative_interval": [
+            3.619047619047548,
+            3.7142857142856434
+          ],
+          "second_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.619047619047548,
+            3.7142857142856434
+          ],
+          "second_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 2,
+      "selector": "last_opposite_pair",
+      "scope": "to_END",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 18,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30863.25,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30863.25,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 2,
+      "selector": "last_opposite_pair",
+      "scope": "to_END_with_global_extrema",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 10,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30863.25,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30863.25,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              },
+              {
+                "close": 30866.5,
+                "high": 30869.5,
+                "low": 30864.25,
+                "open": 30868.25,
+                "time": 1791832980
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "first_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ],
+          "second_F_conservative_interval": [
+            2.333333333333328,
+            2.4285714285714235
+          ]
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "first_F_conservative_interval": [
+            3.304347826086891,
+            3.3913043478260216
+          ],
+          "second_F_conservative_interval": [
+            2.318181818181808,
+            2.409090909090899
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 2,
+      "selector": "last_confirmed_pivot",
+      "scope": "structure_only",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 57,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "first_F_conservative_interval": [
+            3.619047619047548,
+            3.7142857142856434
+          ],
+          "second_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.619047619047548,
+            3.7142857142856434
+          ],
+          "second_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 2,
+      "selector": "last_confirmed_pivot",
+      "scope": "to_END",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 18,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ]
+        }
+      ]
+    },
+    {
+      "source": "wick",
+      "radius": 2,
+      "selector": "last_confirmed_pivot",
+      "scope": "to_END_with_global_extrema",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 10,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30851.5,
+                "side": "L"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              },
+              {
+                "close": 30866.5,
+                "high": 30869.5,
+                "low": 30864.25,
+                "open": 30868.25,
+                "time": 1791832980
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "first_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ],
+          "second_F_conservative_interval": [
+            2.333333333333328,
+            2.4285714285714235
+          ]
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "first_F_conservative_interval": [
+            3.304347826086891,
+            3.3913043478260216
+          ],
+          "second_F_conservative_interval": [
+            2.318181818181808,
+            2.409090909090899
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 1,
+      "selector": "last_high_and_low",
+      "scope": "structure_only",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 26,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:21:00+00:00",
+                "price": 30868.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:23:00",
+            "bars": 24,
+            "C": 76.9999999999985
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.166666666666604,
+            3.2499999999999374
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 1,
+      "selector": "last_high_and_low",
+      "scope": "to_END",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 18,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:21:00+00:00",
+                "price": 30868.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 1,
+      "selector": "last_high_and_low",
+      "scope": "to_END_with_global_extrema",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 10,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:21:00+00:00",
+                "price": 30868.5,
+                "side": "L"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:21:00+00:00",
+                "price": 30868.5,
+                "side": "L"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              },
+              {
+                "close": 30866.5,
+                "high": 30869.5,
+                "low": 30864.25,
+                "open": 30868.25,
+                "time": 1791832980
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "first_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ],
+          "second_F_conservative_interval": [
+            2.333333333333328,
+            2.4285714285714235
+          ]
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "first_F_conservative_interval": [
+            3.304347826086891,
+            3.3913043478260216
+          ],
+          "second_F_conservative_interval": [
+            2.318181818181808,
+            2.409090909090899
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 1,
+      "selector": "last_opposite_pair",
+      "scope": "structure_only",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 54,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:24:00",
+            "bars": 25,
+            "C": 59.99999999999963
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:21:00+00:00",
+                "price": 30868.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:23:00",
+            "bars": 24,
+            "C": 76.9999999999985
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.166666666666604,
+            3.2499999999999374
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 1,
+      "selector": "last_opposite_pair",
+      "scope": "to_END",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 18,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:21:00+00:00",
+                "price": 30868.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 1,
+      "selector": "last_opposite_pair",
+      "scope": "to_END_with_global_extrema",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 10,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:21:00+00:00",
+                "price": 30868.5,
+                "side": "L"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:21:00+00:00",
+                "price": 30868.5,
+                "side": "L"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              },
+              {
+                "close": 30866.5,
+                "high": 30869.5,
+                "low": 30864.25,
+                "open": 30868.25,
+                "time": 1791832980
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "first_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ],
+          "second_F_conservative_interval": [
+            2.333333333333328,
+            2.4285714285714235
+          ]
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "first_F_conservative_interval": [
+            3.304347826086891,
+            3.3913043478260216
+          ],
+          "second_F_conservative_interval": [
+            2.318181818181808,
+            2.409090909090899
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 1,
+      "selector": "last_confirmed_pivot",
+      "scope": "structure_only",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 26,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:21:00+00:00",
+                "price": 30868.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:23:00",
+            "bars": 24,
+            "C": 76.9999999999985
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.166666666666604,
+            3.2499999999999374
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 1,
+      "selector": "last_confirmed_pivot",
+      "scope": "to_END",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 18,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:21:00+00:00",
+                "price": 30868.5,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 1,
+      "selector": "last_confirmed_pivot",
+      "scope": "to_END_with_global_extrema",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 10,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:21:00+00:00",
+                "price": 30868.5,
+                "side": "L"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:21:00+00:00",
+                "price": 30868.5,
+                "side": "L"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              },
+              {
+                "close": 30866.5,
+                "high": 30869.5,
+                "low": 30864.25,
+                "open": 30868.25,
+                "time": 1791832980
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "first_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ],
+          "second_F_conservative_interval": [
+            2.333333333333328,
+            2.4285714285714235
+          ]
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "first_F_conservative_interval": [
+            3.304347826086891,
+            3.3913043478260216
+          ],
+          "second_F_conservative_interval": [
+            2.318181818181808,
+            2.409090909090899
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 2,
+      "selector": "last_high_and_low",
+      "scope": "structure_only",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 72,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30859.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30859.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "first_F_conservative_interval": [
+            3.619047619047548,
+            3.7142857142856434
+          ],
+          "second_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 2,
+      "selector": "last_high_and_low",
+      "scope": "to_END",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 18,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30859.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 2,
+      "selector": "last_high_and_low",
+      "scope": "to_END_with_global_extrema",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 10,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              },
+              {
+                "close": 30866.5,
+                "high": 30869.5,
+                "low": 30864.25,
+                "open": 30868.25,
+                "time": 1791832980
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "first_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ],
+          "second_F_conservative_interval": [
+            2.333333333333328,
+            2.4285714285714235
+          ]
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "first_F_conservative_interval": [
+            3.304347826086891,
+            3.3913043478260216
+          ],
+          "second_F_conservative_interval": [
+            2.318181818181808,
+            2.409090909090899
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 2,
+      "selector": "last_opposite_pair",
+      "scope": "structure_only",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 72,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30859.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30859.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "first_F_conservative_interval": [
+            3.619047619047548,
+            3.7142857142856434
+          ],
+          "second_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 2,
+      "selector": "last_opposite_pair",
+      "scope": "to_END",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 18,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:14:00+00:00",
+                "price": 30859.5,
+                "side": "H"
+              },
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30859.5,
+                "high": 30863.25,
+                "low": 30853.75,
+                "open": 30854.75,
+                "time": 1791832440
+              },
+              {
+                "close": 30859.0,
+                "high": 30862.0,
+                "low": 30858.5,
+                "open": 30859.75,
+                "time": 1791832500
+              },
+              {
+                "close": 30856.5,
+                "high": 30859.75,
+                "low": 30854.5,
+                "open": 30859.25,
+                "time": 1791832560
+              },
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 2,
+      "selector": "last_opposite_pair",
+      "scope": "to_END_with_global_extrema",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 10,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              },
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              },
+              {
+                "close": 30866.5,
+                "high": 30869.5,
+                "low": 30864.25,
+                "open": 30868.25,
+                "time": 1791832980
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "first_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ],
+          "second_F_conservative_interval": [
+            2.333333333333328,
+            2.4285714285714235
+          ]
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "first_F_conservative_interval": [
+            3.304347826086891,
+            3.3913043478260216
+          ],
+          "second_F_conservative_interval": [
+            2.318181818181808,
+            2.409090909090899
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 2,
+      "selector": "last_confirmed_pivot",
+      "scope": "structure_only",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 72,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:20:00",
+            "bars": 21,
+            "C": 76.99999999999851
+          },
+          "second": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "first_F_conservative_interval": [
+            3.619047619047548,
+            3.7142857142856434
+          ],
+          "second_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 2,
+      "selector": "last_confirmed_pivot",
+      "scope": "to_END",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 18,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:17:00+00:00",
+                "price": 30854.0,
+                "side": "L"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30854.0,
+                "high": 30857.25,
+                "low": 30851.5,
+                "open": 30856.75,
+                "time": 1791832620
+              },
+              {
+                "close": 30863.0,
+                "high": 30863.0,
+                "low": 30853.5,
+                "open": 30854.0,
+                "time": 1791832680
+              },
+              {
+                "close": 30866.5,
+                "high": 30868.75,
+                "low": 30862.5,
+                "open": 30862.75,
+                "time": 1791832740
+              },
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:21:00",
+            "bars": 22,
+            "C": 101.99999999999835
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:21:00",
+            "bars": 21,
+            "C": 76.99999999999798
+          },
+          "first_F_conservative_interval": [
+            4.590909090909016,
+            4.681818181818107
+          ],
+          "second_F_conservative_interval": [
+            3.619047619047523,
+            3.714285714285618
+          ]
+        },
+        {
+          "first": {
+            "START": "19:00:00",
+            "END": "19:22:00",
+            "bars": 23,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "first_F_conservative_interval": [
+            3.3043478260868873,
+            3.3913043478260176
+          ],
+          "second_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ]
+        }
+      ]
+    },
+    {
+      "source": "close",
+      "radius": 2,
+      "selector": "last_confirmed_pivot",
+      "scope": "to_END_with_global_extrema",
+      "defined_cases": 23,
+      "missing": [],
+      "contradictory_pairs": 10,
+      "rejected_as_sole_input": true,
+      "witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              }
+            ]
+          }
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "identical_selected_input": {
+            "events": [
+              {
+                "UTC": "2026-10-12T19:20:00+00:00",
+                "price": 30870.5,
+                "side": "H"
+              }
+            ],
+            "high": 30870.75,
+            "low": 30849.0,
+            "selected_OHLC": [
+              {
+                "close": 30870.5,
+                "high": 30870.5,
+                "low": 30864.5,
+                "open": 30866.25,
+                "time": 1791832800
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.5,
+                "low": 30866.5,
+                "open": 30870.0,
+                "time": 1791832860
+              },
+              {
+                "close": 30868.5,
+                "high": 30870.75,
+                "low": 30866.75,
+                "open": 30868.75,
+                "time": 1791832920
+              },
+              {
+                "close": 30866.5,
+                "high": 30869.5,
+                "low": 30864.25,
+                "open": 30868.25,
+                "time": 1791832980
+              }
+            ]
+          }
+        }
+      ],
+      "rejected_with_linear_total_count_factor": true,
+      "count_factor_witnesses": [
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:22:00",
+            "bars": 22,
+            "C": 76.99999999999841
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:22:00",
+            "bars": 21,
+            "C": 49.99999999999989
+          },
+          "first_F_conservative_interval": [
+            3.454545454545382,
+            3.545454545454473
+          ],
+          "second_F_conservative_interval": [
+            2.333333333333328,
+            2.4285714285714235
+          ]
+        },
+        {
+          "first": {
+            "START": "19:01:00",
+            "END": "19:23:00",
+            "bars": 23,
+            "C": 76.9999999999985
+          },
+          "second": {
+            "START": "19:02:00",
+            "END": "19:23:00",
+            "bars": 22,
+            "C": 51.99999999999978
+          },
+          "first_F_conservative_interval": [
+            3.304347826086891,
+            3.3913043478260216
+          ],
+          "second_F_conservative_interval": [
+            2.318181818181808,
+            2.409090909090899
+          ]
+        }
+      ]
+    }
+  ],
+  "scope": "Direct input collisions; no K, no regression, no global floor. A collision refutes dependence solely on selected signature, not a selector used with total count or prefix state. No collision is not validation. One date/overlapping ranges."
+}

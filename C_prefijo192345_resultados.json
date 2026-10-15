@@ -1,0 +1,155 @@
+{
+  "scope": "Local sufficiency hypothesis: unchanged H/L, extreme ages, radius1 pivot ages, ENDclose and last21OHLC imply sameC88 as observed START19:03. n and prefix differ together, so failure does not isolate which is causal. Prior broader suffix hypotheses failed; no general generator asserted.",
+  "baseline": {
+    "START": "2026-10-12T19:03:00+00:00",
+    "END": "2026-10-12T19:23:45+00:00",
+    "bars": 84,
+    "C": 88,
+    "descriptor": {
+      "H": 30870.75,
+      "L": 30849.0,
+      "END_close": 30866.5,
+      "age_H": 5,
+      "age_L": 54,
+      "age_pivot_H": 5,
+      "age_pivot_L": 1
+    }
+  },
+  "cases": [
+    {
+      "id": "C_prefijo192345_1902",
+      "START": "2026-10-12T19:02:00+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "dt": 15,
+      "bars": 88,
+      "prediction_C": 88,
+      "preserved_descriptor": {
+        "H": 30870.75,
+        "L": 30849.0,
+        "END_close": 30866.5,
+        "age_H": 5,
+        "age_L": 54,
+        "age_pivot_H": 5,
+        "age_pivot_L": 1
+      },
+      "last21_exact": true,
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 78.9999999999994,
+      "prediction_match": false,
+      "repeat_cells": 125616,
+      "Character_interval": {
+        "lower_inclusive": 78.99305555555556,
+        "upper_exclusive": 79.01685393258427
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 78.99999999999945,
+          "period": 126.39999999999911,
+          "pairs": 7317,
+          "rmse": 1.5083900535393013e-12
+        },
+        "Lane 3 B": {
+          "C": 79.00000000000085,
+          "period": 156.24444444444615,
+          "pairs": 7317,
+          "rmse": 1.6153464806127579e-12
+        },
+        "Lane 2 A": {
+          "C": 78.99999999999629,
+          "period": 42.13333333333136,
+          "pairs": 7317,
+          "rmse": 1.5366792843859926e-12
+        },
+        "Lane 2 B": {
+          "C": 79.00000000000098,
+          "period": 52.08148148148213,
+          "pairs": 7317,
+          "rmse": 1.73072686462107e-12
+        },
+        "Lane 1 A": {
+          "C": 78.99999999999896,
+          "period": 14.04444444444426,
+          "pairs": 7317,
+          "rmse": 1.510645694817849e-12
+        },
+        "Lane 1 B": {
+          "C": 78.99999999999989,
+          "period": 17.360493827160468,
+          "pairs": 7317,
+          "rmse": 1.7331959832378009e-12
+        }
+      }
+    },
+    {
+      "id": "C_prefijo192345_1904",
+      "START": "2026-10-12T19:04:00+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "dt": 15,
+      "bars": 80,
+      "prediction_C": 88,
+      "preserved_descriptor": {
+        "H": 30870.75,
+        "L": 30849.0,
+        "END_close": 30866.5,
+        "age_H": 5,
+        "age_L": 54,
+        "age_pivot_H": 5,
+        "age_pivot_L": 1
+      },
+      "last21_exact": true,
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 60.9999999999996,
+      "prediction_match": false,
+      "repeat_cells": 125680,
+      "Character_interval": {
+        "lower_inclusive": 60.98314606741573,
+        "upper_exclusive": 61.00694444444444
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 60.99999999999978,
+          "period": 97.59999999999965,
+          "pairs": 7321,
+          "rmse": 1.708780720488395e-12
+        },
+        "Lane 3 B": {
+          "C": 61.00000000000209,
+          "period": 120.64444444444858,
+          "pairs": 7321,
+          "rmse": 1.826101908733259e-12
+        },
+        "Lane 2 A": {
+          "C": 60.99999999999862,
+          "period": 32.5333333333326,
+          "pairs": 7321,
+          "rmse": 1.6151794114884375e-12
+        },
+        "Lane 2 B": {
+          "C": 60.99999999999914,
+          "period": 40.21481481481425,
+          "pairs": 7321,
+          "rmse": 1.5412913138948334e-12
+        },
+        "Lane 1 A": {
+          "C": 60.99999999999881,
+          "period": 10.844444444444234,
+          "pairs": 7321,
+          "rmse": 1.768499645002213e-12
+        },
+        "Lane 1 B": {
+          "C": 60.999999999999176,
+          "period": 13.404938271604756,
+          "pairs": 7321,
+          "rmse": 1.7627957235890547e-12
+        }
+      }
+    }
+  ],
+  "failures": []
+}

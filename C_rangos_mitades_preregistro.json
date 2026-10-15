@@ -1,0 +1,14 @@
+{
+  "inputs": "dt,n,half lengths and high/low of each half, full high/low",
+  "sources": [
+    "wick",
+    "close"
+  ],
+  "odd_split": [
+    "floor",
+    "ceil"
+  ],
+  "candidate_statistic": "Q=(R1/n1+R2/n2)/(R/n), D=log2(Q) if all widths positive.",
+  "gate": "Exact descriptor collision with differentC rejects any function solely of these inputs, including any rounding or shared adaptive exponent. No fitted constants.",
+  "scope": "Final-window half extrema only; does not cover rolling histories, recursive state, additional sources/volume or inputs outsideSTART..END. Nine overlapping known cases, no validation."
+}

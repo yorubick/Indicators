@@ -1,0 +1,32 @@
+{
+  "event_types": [
+    "pivot_H_r1",
+    "pivot_H_r2",
+    "pivot_H_r3",
+    "pivot_L_r1",
+    "pivot_L_r2",
+    "pivot_L_r3",
+    "record_H",
+    "record_L",
+    "max_volume",
+    "volume_cross_1",
+    "volume_cross_1.5",
+    "volume_cross_2",
+    "volume_cross_3"
+  ],
+  "choice": [
+    "first",
+    "last"
+  ],
+  "reset_at": [
+    "event",
+    "confirmation"
+  ],
+  "pivots": "Strict left, nonstrict right; wick source radius1/2/3, confirmation at i+radius within END.",
+  "records": "Strict new global H/L sinceSTART, events only t>=1; confirmation same candle.",
+  "max_volume": "First highest-volume candle within range; its position is the latest reset on strict running volume records including firstbar.",
+  "volume_cross": "First EMA volume initialized with STARTvolume; previousEMA updated alpha2/21. Up-cross V_t>threshold*previousEMA and V_previous<=threshold*EMA_before_previous; t>=1. Confirmation same candle.",
+  "descriptor": "dt,END,globalH/L,selectedevent side/type/absolute timestamp/OHLCV,entireOHLCV from reset throughEND. No totaln/START or state preceding reset.",
+  "tests": "Identical descriptor/differentC refutes C=f(descriptor). Also test C=n*f(descriptor) permitting observedC+/-1; and C=K*selected_duration with commonK positive +/-1.",
+  "scope": "Known overlapping9, no independent validation or training32. Reset forgets prefix except globalH/L. No collision does not prove a model; retained prefix-dependent seed or prehistory not excluded."
+}

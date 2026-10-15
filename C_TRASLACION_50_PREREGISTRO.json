@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-14",
+  "START_UTC": "2026-10-12T19:02:00Z",
+  "END_UTC": "2026-10-12T19:22:00Z",
+  "chart_seconds": 60,
+  "source_seconds": 60,
+  "indicator": "Existing Lite v1.2; Character excluded",
+  "symbol": "CME_MINI:NQ1!+10000",
+  "prediction_invariant_C": 50,
+  "prediction_Gemini_v4_C": 50,
+  "controls": "Use previous exact synthetic identity and obtain fresh native baseline. Require expression retained, OHLC transformed by +10000 on common closed timestamps, volume unchanged, complete 21-bar range and one-hour forward coverage. Fit six Lite recurrences independently, compare plots to original +10000, repeat export, return native and verify.",
+  "interpretation": "This does not distinguish Gemini v4 from translation invariance: both predict 50. It tests sensitivity to price level and percentage changes for this window. Synthetic metadata and internal source requests remain not fully observable. No universal harmonic conclusion."
+}

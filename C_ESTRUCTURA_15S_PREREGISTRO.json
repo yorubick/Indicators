@@ -1,0 +1,11 @@
+{
+  "date":"2026-10-14",
+  "day_UTC":"2026-10-12",
+  "source_seconds":15,"chart_seconds":15,
+  "indicator":"Loaded Lite v1.2; Character excluded; no update",
+  "selection":"All20boxes from C_ANCLAS_ESTRUCTURA_PREREGISTRO.json and C_ANCLAS_ESTRUCTURA_CORRECCION_1907.json, without moving structural labels according to C",
+  "mapping":"Original1m STARTxx:00 becomes15s STARTxx:00; original1m END minute becomes15s ENDxx:45. Both describe whole minute cells; native n15=4*n60. Equal physical elapsed coverage does not imply equal C under changing source resolution.",
+  "controls":"Two exports per case, last row excluded, full range and1hour after last subbar. Six independent EMA fits step15/period_seconds15, recurrence/seed/visibility checks. Aggregate each four15sOHLCV samples to a minute and compare corresponding original1m range/hour. Record any discrepancies without erasing failed full-source controls. Restore source/chart1m,START18:55,END19:20,C62 and prior curves.",
+  "known_prediction":"Only cases n15<21 use prior short rule max(15,n15*15*10/183). Other C values have no preregistered numerical prediction. Compare C in seconds and C/source_seconds separately.",
+  "limits":"This changes sampling and generator branch together.1m event labels stay fixed; no claim that15s pivot classification is identical. Phase1had a late22:00volume mismatch outside selected ranges; preserve this limitation. No new-setup predictive rule yet."
+}

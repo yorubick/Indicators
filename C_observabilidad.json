@@ -1,0 +1,253 @@
+{
+  "START": "2026-10-12T18:55:00Z",
+  "END": "2026-10-12T19:20:00Z",
+  "chart_seconds": 60,
+  "Lite_source": "explicit 1m",
+  "Character_source": "Chart",
+  "results": [
+    {
+      "cut_requested": "1925",
+      "file": "G:\\trading\\guias\\analisis\\manual\\C_observabilidad_1925_b.csv",
+      "last_row_UTC": "2026-10-12T19:24:00+00:00",
+      "last_included_row_UTC": "2026-10-12T19:23:00+00:00",
+      "range_OHLC_complete": true,
+      "repeated_plot_cells": 6960,
+      "reference_nonempty_plot_cells": 0,
+      "plot_mismatches": [],
+      "OHLC_mismatches": [],
+      "Lite_C_observable": false,
+      "Lite_fits": {},
+      "Character_extraction": {
+        "not_extracted": "Layer A: faltan muestras consecutivas de curvas"
+      },
+      "excluded_last_row_matches_previous_reference_plots": true
+    },
+    {
+      "cut_requested": "1929",
+      "file": "G:\\trading\\guias\\analisis\\manual\\C_observabilidad_1929_d.csv",
+      "last_row_UTC": "2026-10-12T19:28:00+00:00",
+      "last_included_row_UTC": "2026-10-12T19:27:00+00:00",
+      "range_OHLC_complete": true,
+      "repeated_plot_cells": 4784,
+      "reference_nonempty_plot_cells": 32,
+      "plot_mismatches": [],
+      "OHLC_mismatches": [],
+      "Lite_C_observable": true,
+      "Lite_fits": {
+        "Lane 3 A": {
+          "pairs": 1,
+          "denominator": 44.792341130564274,
+          "N": 24.79999999994531,
+          "C": 61.99999999986327,
+          "rmse": 1.1102230246251565e-16
+        },
+        "Lane 3 B": {
+          "pairs": 1,
+          "denominator": 48.7883114054117,
+          "N": 30.655555555711363,
+          "C": 62.00000000031511,
+          "rmse": 5.551115123125783e-17
+        },
+        "Lane 2 A": {
+          "pairs": 1,
+          "denominator": 21.15917175930084,
+          "N": 8.266666666655919,
+          "C": 61.99999999991939,
+          "rmse": 0.0
+        },
+        "Lane 2 B": {
+          "pairs": 1,
+          "denominator": 25.595178460804327,
+          "N": 10.218518518543078,
+          "C": 62.000000000149015,
+          "rmse": 0.0
+        },
+        "Lane 1 A": {
+          "pairs": 1,
+          "denominator": 5.4837843996303075,
+          "N": 2.7555555555630753,
+          "C": 62.000000000169194,
+          "rmse": 0.0
+        },
+        "Lane 1 B": {
+          "pairs": 1,
+          "denominator": 7.512856359472844,
+          "N": 3.4061728395021946,
+          "C": 61.99999999992758,
+          "rmse": 0.0
+        }
+      },
+      "Character_extraction": {
+        "not_extracted": "Layer A: faltan muestras consecutivas de curvas"
+      },
+      "excluded_last_row_matches_previous_reference_plots": true
+    },
+    {
+      "cut_requested": "1933",
+      "file": "G:\\trading\\guias\\analisis\\manual\\C_observabilidad_1933_d.csv",
+      "last_row_UTC": "2026-10-12T19:32:00+00:00",
+      "last_included_row_UTC": "2026-10-12T19:31:00+00:00",
+      "range_OHLC_complete": true,
+      "repeated_plot_cells": 4784,
+      "reference_nonempty_plot_cells": 96,
+      "plot_mismatches": [],
+      "OHLC_mismatches": [],
+      "Lite_C_observable": true,
+      "Lite_fits": {
+        "Lane 3 A": {
+          "pairs": 5,
+          "denominator": 259.53516378328845,
+          "N": 24.800000000055014,
+          "C": 62.00000000013753,
+          "rmse": 1.2875940300393693e-12
+        },
+        "Lane 3 B": {
+          "pairs": 5,
+          "denominator": 292.4314272158335,
+          "N": 30.655555555621458,
+          "C": 62.000000000133284,
+          "rmse": 1.8131436054164456e-12
+        },
+        "Lane 2 A": {
+          "pairs": 5,
+          "denominator": 95.06177739511779,
+          "N": 8.26666666666836,
+          "C": 62.000000000012705,
+          "rmse": 1.0248730546226082e-12
+        },
+        "Lane 2 B": {
+          "pairs": 5,
+          "denominator": 121.59257182278681,
+          "N": 10.218518518521842,
+          "C": 62.00000000002016,
+          "rmse": 1.6180584903944223e-12
+        },
+        "Lane 1 A": {
+          "pairs": 5,
+          "denominator": 24.007188127969716,
+          "N": 2.755555555557987,
+          "C": 62.000000000054705,
+          "rmse": 1.150356282694987e-12
+        },
+        "Lane 1 B": {
+          "pairs": 5,
+          "denominator": 30.477143508770837,
+          "N": 3.4061728395060706,
+          "C": 61.99999999999814,
+          "rmse": 2.6245798134451266e-12
+        }
+      },
+      "Character_extraction": {
+        "file": "G:\\trading\\guias\\analisis\\manual\\C_observabilidad_1933_d.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 61.91011235955056,
+          "upper_exclusive": 62.083333333333336
+        },
+        "compatible_integer_C_seconds": [
+          62
+        ],
+        "periods": {
+          "Layer A": 25,
+          "Layer A boundary": 31,
+          "Layer B": 8,
+          "Layer B boundary": 10,
+          "Layer C": 3,
+          "Layer C boundary": 3,
+          "Extra cloud 1": 74,
+          "Extra cloud 1 boundary": 92,
+          "Extra cloud 2": 223,
+          "Extra cloud 2 boundary": 276
+        },
+        "pairs_per_curve": 5,
+        "max_rmse_step": 1.8559709535203203e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      },
+      "excluded_last_row_matches_previous_reference_plots": true
+    },
+    {
+      "cut_requested": "1940",
+      "file": "G:\\trading\\guias\\analisis\\manual\\C_observabilidad_1940_d.csv",
+      "last_row_UTC": "2026-10-12T19:39:00+00:00",
+      "last_included_row_UTC": "2026-10-12T19:38:00+00:00",
+      "range_OHLC_complete": true,
+      "repeated_plot_cells": 4784,
+      "reference_nonempty_plot_cells": 208,
+      "plot_mismatches": [],
+      "OHLC_mismatches": [],
+      "Lite_C_observable": true,
+      "Lite_fits": {
+        "Lane 3 A": {
+          "pairs": 12,
+          "denominator": 4566.2819143227625,
+          "N": 24.800000000020244,
+          "C": 62.00000000005061,
+          "rmse": 1.3418186605683837e-12
+        },
+        "Lane 3 B": {
+          "pairs": 12,
+          "denominator": 5093.2931930361,
+          "N": 30.65555555558414,
+          "C": 62.00000000005781,
+          "rmse": 1.5563117036317014e-12
+        },
+        "Lane 2 A": {
+          "pairs": 12,
+          "denominator": 1989.9988542077108,
+          "N": 8.266666666666024,
+          "C": 61.99999999999518,
+          "rmse": 1.5381163207948266e-12
+        },
+        "Lane 2 B": {
+          "pairs": 12,
+          "denominator": 2410.151134186471,
+          "N": 10.218518518521853,
+          "C": 62.00000000002023,
+          "rmse": 1.675706177126914e-12
+        },
+        "Lane 1 A": {
+          "pairs": 12,
+          "denominator": 695.1103957950334,
+          "N": 2.7555555555561297,
+          "C": 62.000000000012925,
+          "rmse": 1.164527430074542e-12
+        },
+        "Lane 1 B": {
+          "pairs": 12,
+          "denominator": 845.8892969734626,
+          "N": 3.4061728395056976,
+          "C": 61.999999999991346,
+          "rmse": 2.1085569825614655e-12
+        }
+      },
+      "Character_extraction": {
+        "file": "G:\\trading\\guias\\analisis\\manual\\C_observabilidad_1940_d.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 61.91011235955056,
+          "upper_exclusive": 62.083333333333336
+        },
+        "compatible_integer_C_seconds": [
+          62
+        ],
+        "periods": {
+          "Layer A": 25,
+          "Layer A boundary": 31,
+          "Layer B": 8,
+          "Layer B boundary": 10,
+          "Layer C": 3,
+          "Layer C boundary": 3,
+          "Extra cloud 1": 74,
+          "Extra cloud 1 boundary": 92,
+          "Extra cloud 2": 223,
+          "Extra cloud 2 boundary": 276
+        },
+        "pairs_per_curve": 12,
+        "max_rmse_step": 1.7524713591268375e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      },
+      "excluded_last_row_matches_previous_reference_plots": true
+    }
+  ],
+  "scope": "One bullish range. First fit has one pair per curve: zero regression residual is tautological there; use agreement of six C estimates, repeated exports and exact historical levels as corroboration. Does not exclude END-to-breakout data."
+}

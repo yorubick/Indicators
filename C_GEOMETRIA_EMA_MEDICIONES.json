@@ -1,0 +1,12 @@
+{
+ "date":"2026-10-14",
+ "scope":"Exploratory measurements on nine already labeled ranges; not blind prediction or model validation",
+ "source":"Native closed 1m OHLCV from C_simetria1855_base.csv;9cases from C_matriz_bordes_resultados.json",
+ "geometry":["START/END open and close position within H-L","absolute START/END body divided by H-L","close-path efficiency abs(last-first)/sum(abs(close changes))","close total variation divided by H-L","range-normalized linear close slope","mean absolute body and upper/lower wick divided by H-L"],
+ "EMA_proxy_periods_bars":[24,29.666666666666668,8,9.88888888888889,2.6666666666666665,3.2962962962962963,72,89],
+ "EMA_proxy_definitions":"Fixed close EMAs, alpha2/(N+1), seeded at first loaded close. First6periods derive from known output architecture at C60, not claimed to be author's hidden historical lengths.72/89 added separately as longer exploratory proxies. Do not optimize lengths using C.",
+ "history_sensitivity":"Report loaded prehistory bars and retained seed coefficient. Recompute with first-close +/-100point seed as explicit sensitivity check, not a guaranteed bound on unknown true history. Signs with differing sensitivity variants are marked uncertain.",
+ "EMA_measurements":"At START and END: close-minus-EMA divided by H-L, EMA one-bar slope divided by H-L. For first6periods, cloud pair widths and above/below/between state at each endpoint. Also count close/EMA sign crossings inside range.",
+ "candidate_check":"Group same first6 endpoint above/below signatures and same3 cloud-state signatures; different C in a group rejects those particular state-only mappings. Do not claim rejection of all EMA/harmonic models. No regression or threshold tuning to nine labels.",
+ "symmetry":"Use absolute or orientation-aware geometry. Verify each feature's behavior under price reflection before claiming invariance. Signed measures intentionally reverse; no universal invariance assumed."
+}

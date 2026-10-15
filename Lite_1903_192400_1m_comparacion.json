@@ -1,0 +1,126 @@
+{
+  "file": "G:\\trading\\guias\\analisis\\manual\\Lite_1903_192400_1m_b.csv",
+  "chart_seconds": 60,
+  "START_UTC": "2026-10-12T19:03:00Z",
+  "END_UTC": "2026-10-12T19:24:00Z",
+  "Lite_source_seconds": 60,
+  "Character_source": "Chart",
+  "Character_extraction": {
+    "file": "G:\\trading\\guias\\analisis\\manual\\Lite_1903_192400_1m_b.csv",
+    "source_seconds": 60,
+    "C_seconds_interval": {
+      "lower_inclusive": 51.80555555555556,
+      "upper_exclusive": 52.02247191011236
+    },
+    "compatible_integer_C_seconds": [
+      52
+    ],
+    "periods": {
+      "Layer A": 21,
+      "Layer A boundary": 26,
+      "Layer B": 7,
+      "Layer B boundary": 9,
+      "Layer C": 2,
+      "Layer C boundary": 3,
+      "Extra cloud 1": 62,
+      "Extra cloud 1 boundary": 77,
+      "Extra cloud 2": 187,
+      "Extra cloud 2 boundary": 231
+    },
+    "pairs_per_curve": 1471,
+    "max_rmse_step": 1.74993143108645e-12,
+    "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+  },
+  "repeat_cells_compared": 9222,
+  "Lite_fits": {
+    "Lane 3 A": {
+      "source": "close",
+      "period": 20.800000000000217,
+      "pairs": 1471,
+      "rmse": 1.5926471168715706e-12
+    },
+    "Lane 3 B": {
+      "source": "close",
+      "period": 25.71111111111062,
+      "pairs": 1471,
+      "rmse": 1.9344747370151133e-12
+    },
+    "Lane 2 A": {
+      "source": "close",
+      "period": 6.933333333333045,
+      "pairs": 1471,
+      "rmse": 1.5446922579333806e-12
+    },
+    "Lane 2 B": {
+      "source": "close",
+      "period": 8.570370370370355,
+      "pairs": 1471,
+      "rmse": 2.297228824351692e-12
+    },
+    "Lane 1 A": {
+      "source": "close",
+      "period": 2.311111111111147,
+      "pairs": 1471,
+      "rmse": 1.7829919969901725e-12
+    },
+    "Lane 1 B": {
+      "source": "close",
+      "period": 2.856790123456788,
+      "pairs": 1471,
+      "rmse": 1.496382614838044e-12
+    }
+  },
+  "Lite_C_assuming_unrounded_family": {
+    "Lane 3 A": 52.00000000000054,
+    "Lane 3 B": 51.999999999999005,
+    "Lane 2 A": 51.99999999999784,
+    "Lane 2 B": 51.9999999999999,
+    "Lane 1 A": 52.00000000000081,
+    "Lane 1 B": 51.99999999999996
+  },
+  "closest_Character_layers": {
+    "Lane 3 A": {
+      "layer": "Layer A",
+      "compared_values": 1473,
+      "max_error": 11.381169176354888,
+      "RMSE_levels": 0.7168509766719376,
+      "Character_period": 20.999999999999964
+    },
+    "Lane 3 B": {
+      "layer": "Layer A boundary",
+      "compared_values": 1473,
+      "max_error": 11.570902472376474,
+      "RMSE_levels": 0.8060936828409956,
+      "Character_period": 25.9999999999985
+    },
+    "Lane 2 A": {
+      "layer": "Layer B",
+      "compared_values": 1473,
+      "max_error": 9.640946609983075,
+      "RMSE_levels": 0.38406174723375497,
+      "Character_period": 7.000000000000146
+    },
+    "Lane 2 B": {
+      "layer": "Layer B boundary",
+      "compared_values": 1473,
+      "max_error": 9.984107820913778,
+      "RMSE_levels": 0.5626671668431897,
+      "Character_period": 9.000000000000313
+    },
+    "Lane 1 A": {
+      "layer": "Layer C",
+      "compared_values": 1473,
+      "max_error": 5.911791397309571,
+      "RMSE_levels": 0.6220613350311772,
+      "Character_period": 1.9999999999999636
+    },
+    "Lane 1 B": {
+      "layer": "Layer C boundary",
+      "compared_values": 1473,
+      "max_error": 7.010859101097594,
+      "RMSE_levels": 0.3088622066197768,
+      "Character_period": 3.0000000000000107
+    }
+  },
+  "scope": "Measured range; Lite source explicitly equal to chart. No assumption of shared C generator."
+}

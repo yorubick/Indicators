@@ -1,0 +1,23 @@
+{
+  "source": "lambda*close+(1-lambda)*HL2, lambda in[0,1], fixed across all9cases",
+  "objective": "C integer1..600 must maximize absolute ENDgap of same72/89EMAfamily",
+  "seeds": [
+    "START_open",
+    "START_high",
+    "START_low",
+    "START_close",
+    "bootstrap20_low",
+    "bootstrap20_high"
+  ],
+  "divisors": [
+    3.0,
+    9.0,
+    27.0,
+    1.0,
+    0.3333333333333333
+  ],
+  "tolerance_normalized": 1e-10,
+  "constraint": "For every competitorj: abs(Dobserved(lambda)) >= abs(Dj(lambda))-tolerance. Necessary condition; allows all maximizing ties, weaker than smallestCtie policy.",
+  "method": "Exact affine dependence of signed gap onlambda; split at sign zeros, solve linear inequalities, intersect closed intervals across competitors and cases. Float arithmetic, no sampling of lambda.",
+  "scope": "Fixed generator family only; includes HL2(lambda0),close(lambda1),HLC3(lambda1/3). Labels known, exploratory feasibility test, not prospective. No validation data scored."
+}

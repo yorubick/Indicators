@@ -1,0 +1,14 @@
+{
+ "date":"2026-10-14","day_UTC":"2026-10-12","source_seconds":60,"chart_seconds":60,"indicator":"Loaded Lite v1.2; do not update; Character excluded",
+ "price_events_file":"C_ANCLAS_ESTRUCTURA_IDENTIFICACION.json",
+ "B_interpretation":"Provisional failure-swing proxy: last inside/stalling candle during descent18:45–18:52 before renewed lower lows.18:47H30881.75<=18:46H30884.50 andL30875.25=previousL;18:48takes low30870.50. The displayed video compresses two-candle stall; this operational inside-bar proxy is not confirmed proprietary FS definition. Preserve adjacent18:46candidate via neighbor control.",
+ "boxes":[{"id":"A_first","START":"18:52","END":"19:10","role":"Origin low to first mitigation pivot"},{"id":"A_last","START":"18:52","END":"19:17","role":"Origin low to last mitigation pivot before renewed expansion"},{"id":"B_stall","START":"18:47","END":"18:52","role":"Provisional pre-low stall to manipulation low"}],
+ "measurement_cases":[
+  {"id":"A_first_base","START":"18:52","END":"19:10"},{"id":"A_first_start_minus","START":"18:51","END":"19:10"},{"id":"A_first_start_plus","START":"18:53","END":"19:10"},{"id":"A_first_end_minus","START":"18:52","END":"19:09"},{"id":"A_first_end_plus","START":"18:52","END":"19:11"},
+  {"id":"A_last_base","START":"18:52","END":"19:17"},{"id":"A_last_start_minus","START":"18:51","END":"19:17"},{"id":"A_last_start_plus","START":"18:53","END":"19:17"},{"id":"A_last_end_minus","START":"18:52","END":"19:16"},{"id":"A_last_end_plus","START":"18:52","END":"19:18"},
+  {"id":"B_stall_base","START":"18:47","END":"18:52"},{"id":"B_stall_start_minus","START":"18:46","END":"18:52"},{"id":"B_stall_start_plus","START":"18:48","END":"18:52"},{"id":"B_stall_end_minus","START":"18:47","END":"18:51"},{"id":"B_stall_end_plus","START":"18:47","END":"18:53"}
+ ],
+ "controls":"Two native exports each; full range and hour forward; OHLCV matches price-only source; six independent consistent C fits and repeated curve values. Save primary-box screenshots. Restore18:55–19:20 and matchC62/reference curves.",
+ "analysis":"Report C versus n, total time and same registered leg times. Short-n cases assessed separately under previous max(60,n*60*10/183) rule. Do not treat visual respect of curves as proof. A new-setup blind test requires a predeclared predictive rule; no rule is invented if these cases do not support one.",
+ "limits":"Previously known dataset and label architecture, not blind. Structural interpretation provisional; equality does not count as sweep. First versus last mitigation kept as distinct candidates."
+}

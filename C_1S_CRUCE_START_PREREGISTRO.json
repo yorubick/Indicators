@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-14",
+  "source_seconds": 1,
+  "chart_seconds": 1,
+  "version": "Loaded Lite v1.2, no update",
+  "START_UTC": "2026-10-14T14:04:01Z",
+  "cases": [
+    {"id":"start01_end32","END_UTC":"2026-10-14T14:04:32Z","bars":32,"prediction_count_only":1,"prediction_END_only":2},
+    {"id":"start01_end33","END_UTC":"2026-10-14T14:04:33Z","bars":33,"prediction_count_only":2,"prediction_END_only":1}
+  ],
+  "controls": "START00 END32 n33 C2 and START00 END33 n34 C1 verified previously",
+  "acceptance": "Exact axis anchors; all native1s range and600 following timestamps; paired stable OHLCV and six Lite plots; C agreement1e-6 and EMA recurrenceRMSE1e-8; reconstruct seed and visibility. Compare extrema and breakout explicitly, do not assume conserved.",
+  "scope": "Two local discriminating hypotheses, no claim either is the true algorithm; selected from previous outcomes, predictions for new START frozen before measurements. Same episode."
+}

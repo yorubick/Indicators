@@ -1,0 +1,14 @@
+{
+  "date":"2026-10-14",
+  "START_UTC":"2026-10-14T14:02:00Z",
+  "chart_seconds":1,
+  "source_seconds":1,
+  "version":"Loaded Litev1.2, no update",
+  "hypothesis":"C=round(n/18.3) in these long1s windows",
+  "cases":[
+    {"id":"r1402_n27","bars":27,"END_UTC":"2026-10-14T14:02:26Z","prediction_C":1},
+    {"id":"r1402_n28","bars":28,"END_UTC":"2026-10-14T14:02:27Z","prediction_C":2}
+  ],
+  "acceptance":"Exact axes anchors, paired stable closed nativeOHLCV and6Liteplots, complete range and600seconds afterEND, Cagreement1e-6, recurrenceRMSE1e-8, seed/visibility reconstruction error1e-8",
+  "scope":"Two prospective predictions for a concrete formula. Cannot distinguish all continuous rounded models from all discrete grids. Same episode as previously measured20/21."
+}

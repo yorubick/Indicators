@@ -1,0 +1,146 @@
+{
+  "scope": "Two new C observations of a local transition. Frozen candidate rules calibrated from known endpoints, not general generators. No reserved validation used.",
+  "cases": [
+    {
+      "id": "C_transicion1923_15",
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:15+00:00",
+      "dt": 15,
+      "bars": 82,
+      "events": {
+        "new_high": false,
+        "new_low": false,
+        "confirmed_high": false,
+        "confirmed_low": false
+      },
+      "END_body": -3.0,
+      "predictions": {
+        "confirmed_low_switch": 67,
+        "red_END_body_switch": 88
+      },
+      "pair": [
+        "e",
+        "f"
+      ],
+      "C": 60.99999999999963,
+      "model_matches": {
+        "confirmed_low_switch": false,
+        "red_END_body_switch": false
+      },
+      "repeat_cells": 125216,
+      "Character_interval": {
+        "lower_inclusive": 60.98314606741573,
+        "upper_exclusive": 61.00694444444444
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 61.000000000001954,
+          "period": 97.60000000000312,
+          "pairs": 7291,
+          "rmse": 1.7002855225482927e-12
+        },
+        "Lane 3 B": {
+          "C": 61.00000000000051,
+          "period": 120.64444444444547,
+          "pairs": 7291,
+          "rmse": 1.8202224660248455e-12
+        },
+        "Lane 2 A": {
+          "C": 60.99999999999833,
+          "period": 32.53333333333244,
+          "pairs": 7291,
+          "rmse": 1.6154824170396753e-12
+        },
+        "Lane 2 B": {
+          "C": 60.999999999999076,
+          "period": 40.214814814814204,
+          "pairs": 7291,
+          "rmse": 1.545664063111848e-12
+        },
+        "Lane 1 A": {
+          "C": 60.999999999998956,
+          "period": 10.844444444444258,
+          "pairs": 7291,
+          "rmse": 1.76933117766214e-12
+        },
+        "Lane 1 B": {
+          "C": 60.99999999999895,
+          "period": 13.404938271604706,
+          "pairs": 7291,
+          "rmse": 1.7582725748472e-12
+        }
+      }
+    },
+    {
+      "id": "C_transicion1923_30",
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:30+00:00",
+      "dt": 15,
+      "bars": 83,
+      "events": {
+        "new_high": false,
+        "new_low": false,
+        "confirmed_high": false,
+        "confirmed_low": false
+      },
+      "END_body": 3.75,
+      "predictions": {
+        "confirmed_low_switch": 67,
+        "red_END_body_switch": 67
+      },
+      "pair": [
+        "c",
+        "d"
+      ],
+      "C": 67.00000000000017,
+      "model_matches": {
+        "confirmed_low_switch": true,
+        "red_END_body_switch": true
+      },
+      "repeat_cells": 123728,
+      "Character_interval": {
+        "lower_inclusive": 66.99438202247191,
+        "upper_exclusive": 67.04861111111111
+      },
+      "Lite_fits": {
+        "Lane 3 A": {
+          "C": 66.99999999999179,
+          "period": 107.19999999998686,
+          "pairs": 7198,
+          "rmse": 1.5430538327481466e-12
+        },
+        "Lane 3 B": {
+          "C": 67.00000000000833,
+          "period": 132.51111111112758,
+          "pairs": 7198,
+          "rmse": 1.837471269331165e-12
+        },
+        "Lane 2 A": {
+          "C": 66.99999999999936,
+          "period": 35.73333333333299,
+          "pairs": 7198,
+          "rmse": 2.051385806198941e-12
+        },
+        "Lane 2 B": {
+          "C": 67.000000000002,
+          "period": 44.17037037037169,
+          "pairs": 7198,
+          "rmse": 2.26188496452674e-12
+        },
+        "Lane 1 A": {
+          "C": 66.99999999999942,
+          "period": 11.911111111111007,
+          "pairs": 7198,
+          "rmse": 2.3260032040918377e-12
+        },
+        "Lane 1 B": {
+          "C": 67.00000000000016,
+          "period": 14.723456790123493,
+          "pairs": 7198,
+          "rmse": 1.7242242665510701e-12
+        }
+      }
+    }
+  ],
+  "failures": []
+}

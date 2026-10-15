@@ -1,0 +1,437 @@
+Browser tab: 1, Title: "NQ1! 30,805.00 ▲ +0.04% EMA - investigacion PoiSzn", URL: "https://www.tradingview.com/chart/uXfdB8FS/".
+0 AXWebArea NQ1! 30,805.00 ▲ +0.04% EMA - investigacion PoiSzn, URL: tradingview.com/chart/uXfdB8FS/
+	1 container
+		2 pop up button Logged in as FrankyProfit Active layout: EMA - investigacion PoiSzn
+		3 text 11
+		4 toolbar
+			452 container
+				453 button NQ1!, Help: Symbol search, ID: header-toolbar-symbol-search
+				454 button Description: Switch data type, ID: header-toolbar-switch-data-type
+				455 pop up button Description: Compare symbols, ID: header-toolbar-compare
+				456 container header-toolbar-intervals
+					457 radio button Description: 15 seconds, Value: 0
+						458 container
+							459 text 15 s
+					460 radio button Description: 30 seconds, Value: 0
+						461 container
+							462 text 30 s
+					463 radio button Description: 1 minute, Value: 1
+						464 container
+							465 text 1 m
+					466 radio button Description: 2 minutes, Value: 0
+						467 container
+							468 text 2 m
+					469 radio button Description: 3 minutes, Value: 0
+						470 container
+							471 text 3 m
+					472 radio button Description: 5 minutes, Value: 0
+						473 container
+							474 text 5 m
+					475 radio button Description: 15 minutes, Value: 0
+						476 container
+							477 text 15 m
+					478 radio button Description: 30 minutes, Value: 0
+						479 container
+							480 text 30 m
+					481 radio button Description: 1 hour, Value: 0
+						482 container
+							483 text 1 h
+					484 radio button Description: 4 hours, Value: 0
+						485 container
+							486 text 4 h
+					487 radio button Description: 1 day, Value: 0
+						488 text D
+					489 radio button Description: 1 week, Value: 0
+						490 text W
+					491 radio button Description: 1 month, Value: 0
+						492 text M
+					493 radio button Description: 3 months, Value: 0
+						494 container
+							495 text 3 M
+					496 radio button Description: 12 months, Value: 0
+						497 container
+							498 text 12 M
+					499 pop up button Chart interval
+				500 container header-toolbar-chart-styles
+					501 radio button Description: Line, Value: 0
+					502 radio button Description: Session volume profile, Value: 0
+					503 radio button Description: Candles, Value: 1
+					504 pop up button Bar's style
+				505 container header-toolbar-indicators
+					506 button Indicators, metrics, and strategies
+					507 pop up button Favorite indicators
+				508 pop up button Indicator templates
+				509 button Description: Create alert, ID: header-toolbar-alerts
+				510 checkbox Description: Bar replay, Value: 1, ID: header-toolbar-replay
+				513 pop up button Description: Layout setup, ID: header-toolbar-layouts
+				514 container header-toolbar-save-load
+					515 button (disabled) All changes saved
+						516 text EMA - investigacion PoiSzn
+						517 text Save
+					518 pop up button Manage layouts
+					519 link Description: CLEAN, Value: tradingview.com/chart/8kCH024h/
+					520 link Description: HTF, Value: tradingview.com/chart/DSMxjPXR/
+					521 link Description: OW LEVELS, Value: tradingview.com/chart/Y0MvX5IP/
+					522 link Description: RANGOS, Value: tradingview.com/chart/Bb3P8Rf8/
+					523 link Description: rubick, Value: tradingview.com/chart/DvqsdW8t/
+					524 link Description: SMTs, Value: tradingview.com/chart/US2LCTq5/
+					525 link Description: tp zones, Value: tradingview.com/chart/8nY0U35g/
+					526 link Description: Tu maestro, Value: tradingview.com/chart/Xfvkt4x9/
+				527 button Description: Quick search, ID: header-toolbar-quick-search
+				528 button Description: Settings, ID: header-toolbar-properties
+				529 button Description: Fullscreen mode, ID: header-toolbar-fullscreen
+				530 pop up button Take a snapshot
+			85 pop up button Share your idea with the trade community
+			86 container
+				87 button Trade
+					88 text Trade
+				439 button Trading options
+		89 toolbar drawing-toolbar
+			90 container
+				91 container
+					92 button Cross
+					93 checkbox Description: Cursors, Value: 1
+				94 container
+					95 button Trendline
+					96 checkbox Description: Trend tools, Value: 0
+				97 container
+					98 button Fib retracement
+					99 checkbox Description: Gann and Fibonacci tools, Value: 0
+				100 container
+					101 button XABCD pattern
+					102 checkbox Description: Patterns, Value: 0
+				103 container
+					104 button Long position
+					105 checkbox Description: Forecasting and measurement tools, Value: 0
+				106 container
+					107 button Brush
+					108 checkbox Description: Geometric shapes, Value: 0
+				109 container
+					110 button Text
+					111 checkbox Description: Annotation tools, Value: 0
+				112 container
+					113 button Icon
+					114 checkbox Description: Icons, Value: 0
+				115 button Measure
+				116 button Zoom in
+				117 container
+					118 checkbox Description: Magnet mode snaps drawings placed near price bars to the closest OHLC value, Value: 1
+					119 checkbox Description: Magnets, Value: 1
+				120 checkbox Description: Keep drawing, Value: 0
+				121 container
+					122 checkbox Description: Lock drawings and indicators, Value: 0
+					123 checkbox Description: Lock options, Value: 0
+				124 container
+					125 checkbox Description: Hide all drawings, Value: 0
+					126 checkbox Description: Hide options, Value: 0
+				127 container
+					128 checkbox Description: New drawings will not be synced, Value: 0
+					129 checkbox Description: Sync drawings options, Value: 0
+				130 container
+					131 button Remove objects
+					132 button Remove options
+				133 checkbox Description: Show Favorite Drawing Tools Toolbar, Value: 1, ID: drawing-toolbar-favorite-drawings
+		538 container
+			539 text Select date
+			540 text 10x
+			541 text 1m
+		134 container Chart #1
+			135 container
+				136 toolbar
+					137 container
+						138 container Change symbol
+							139 container
+								140 image
+								141 text N
+							142 button Change symbol
+						143 container Change interval
+							582 text ·
+							145 button Change interval
+						146 container CME GLOBEX — Chicago Mercantile Exchange Globex
+							583 text ·
+							148 text CME
+					149 container
+						150 button Unflag symbol
+						151 button More
+							152 image
+					533 button Replay mode
+					534 container
+						535 text O 30,868.25 H 30,869.50 L 30,864.25 C 30,866.50 −2.00 (−0.01%)
+				156 container
+					157 text 30,866.50 SELL
+					536 text 0.00
+					537 text 30,866.50 BUY
+				160 container
+					161 button Hide indicators legend
+					162 toolbar
+						163 text Vol
+						164 container
+							165 button Hide
+								166 image
+							167 button Settings
+								168 image
+							169 button Remove
+								170 image
+							171 button More
+								172 image
+						173 text 350
+					174 toolbar
+						175 container
+							176 text CT6536USR
+							177 text B
+							178 text Dark
+							179 text Manual
+							180 text 30,865.83
+							181 text 30,870.00
+							182 text Auto
+							183 text 0
+							184 text Auto
+							185 text C cloud
+							186 text Balanced
+							187 text Labels
+							188 text Tiny
+							189 text BUY
+							190 text SELL
+							191 text EXIT
+							192 text COVER
+							193 text Compact tags
+							194 text Tiny
+							195 text 12
+							196 text GS?
+							197 text GS?
+							198 text GS
+							199 text GS
+							200 text 90
+							201 text 87
+						202 container
+							203 button Hide
+								204 image
+							205 button Settings
+								206 image
+							207 button Remove
+								208 image
+							209 button More
+								210 image
+						211 button Update available
+						212 container
+							213 text ∅
+							214 text ∅
+							215 text ∅
+							216 text ∅
+							217 text ∅
+							218 text ∅
+							219 text ∅
+							220 text ∅
+							221 text ∅
+							222 text ∅
+							223 text 0.00
+							224 text 0.00
+					225 toolbar
+						226 container
+							227 text 7Cloud
+							228 text 78
+							229 text 84
+							230 text 72
+							231 text 88
+							232 text 80
+							233 text 35
+							234 text 1S
+							235 text 5S
+							236 text 15S
+							237 text 1
+							238 text 3
+							239 text 9
+							240 text 27
+							241 text 81
+							242 text 243
+							243 text 729
+							244 text Manual
+							245 text 2
+							246 text Top right
+							247 text 2
+							248 text 6
+							249 text 15
+							250 text 60
+							251 text 162
+							252 text 486
+						253 container
+							254 button Show
+								255 image
+							256 button Settings
+								257 image
+							258 button Remove
+								259 image
+							260 button More
+								261 image
+					262 toolbar
+						263 container
+							264 text PoiSzn CCII
+							265 text 30,870.50
+							266 text Click position (nearest wick)
+							267 text 0
+							268 text If it sweeps both sides
+							269 text Flag but keep
+							270 text 0
+							271 text 10
+							272 text 13
+							273 text Detection timeframe
+							274 text ATR (auto-scale)
+							275 text 2
+							276 text 14
+							277 text 0.08
+							278 text Show as filled
+							279 text 10
+							280 text 1,500
+							281 text 1
+							282 text Dashed
+							283 text 0
+							284 text 0.5
+						285 container
+							286 button Show
+								287 image
+							288 button Settings
+								289 image
+							290 button Remove
+								291 image
+							292 button More
+								293 image
+					294 toolbar
+						295 container
+							296 text PS EMA LITE
+							297 text 1
+							298 text Dark
+						299 container
+							300 button Hide
+								301 image
+							302 button Settings
+								303 image
+							304 button Remove
+								305 image
+							306 button More
+								307 image
+				315 image Chart for CME_MINI:NQ1!, 1 minute
+		316 toolbar
+			317 container
+				318 button 1 day in 1 minute intervals
+					319 text 1D
+				320 button 5 days in 5 minutes intervals
+					321 text 5D
+				322 button 1 month in 30 minutes intervals
+					323 text 1M
+				324 button 3 months in 1 hour intervals
+					325 text 3M
+				326 button 6 months in 2 hours intervals
+					327 text 6M
+				328 button Year to day in 1 day intervals
+					329 text YTD
+				330 button 1 year in 1 day intervals
+					331 text 1Y
+				332 button 5 years in 1 week intervals
+					333 text 5Y
+				334 button All data in 1 month intervals
+					335 text All
+				336 button Go to
+			337 container
+				338 button Timezone
+					339 text 05:27:00 AM UTC
+				340 pop up button Electronic trading hours
+				341 checkbox Description: Adjust for contract changes, Value: 0
+					342 text B-ADJ
+		343 container
+			584 toolbar
+				585 checkbox Description: Watchlist, details, and news, Value: 0
+				586 checkbox Description: Alerts, Value: 0
+					587 container 71 unread alert notifications
+				588 checkbox Description: Object tree and data window, Value: 1
+				589 checkbox Description: AI Copilot, Value: 0
+				590 checkbox Description: Screeners, Value: 0
+				591 checkbox Description: Pine, Value: 0
+				592 checkbox Description: Calendars, Value: 0
+				593 checkbox Description: Community, Value: 0
+				594 checkbox Description: Notifications, Value: 0
+				595 checkbox Description: Chats, Value: 0
+				596 pop up button Products
+				597 checkbox Description: Help Center, Value: 0
+			559 container
+				560 tab group
+					561 tab (selectable, settable, boolean) Object tree, Value: 0, ID: object_tree
+					562 tab (selected, settable, boolean) Data window, Value: 1, ID: data-window
+				598 container
+					599 table
+						600 container
+							601 text Date
+							602 text Mon 12 Oct '26
+							603 text Time
+							604 text 07:23 PM
+						605 row NQ1! · 1 · CME Open 30,868.25 High 30,869.50 Low 30,864.25 Close 30,866.50 Change −2.00 (−0.01%) Vol 350 Last day change +9.00 (+0.03%)
+							606 text NQ1! · 1 · CME
+							607 toolbar
+								608 button Hide data
+							609 text Open
+							610 text 30,868.25
+							611 text High
+							612 text 30,869.50
+							613 text Low
+							614 text 30,864.25
+							615 text Close
+							616 text 30,866.50
+							617 text Change
+							618 text −2.00 (−0.01%)
+							619 text Vol
+							620 text 350
+							621 text Last day change
+							622 text +9.00 (+0.03%)
+						623 row Vol Volume 350
+							624 text Vol
+							625 toolbar
+								626 button Hide data
+							627 text Volume
+							628 text 350
+						629 row CT6536USR (B, Dark, Manual, 30,865.83, 30,870.00, , Auto, 0, Auto, C cloud, Balanced, Labels, Tiny, BUY, SELL, EXIT, COVER, Compact tags, Tiny, 12, GS?, GS?, GS, GS, 90, 87) Layer A ∅ Layer A boundary ∅ Layer B ∅ Layer B boundary ∅ Layer C ∅ Layer C boundary ∅ Extra cloud 1 ∅ Extra cloud 1 boundary ∅ Extra cloud 2 ∅ Extra cloud 2 boundary ∅ Bull delivery active 0.00 Bear delivery active 0.00
+							630 text CT6536USR (B, Dark, Manual, 30,865.83, 30,870.00, , Auto, 0, Auto, C cloud, Balanced, Labels, Tiny, BUY, SELL, EXIT, COVER, Compact tags, Tiny, 12, GS?, GS?, GS, GS, 90, 87)
+							631 toolbar
+								632 button Hide data
+							633 text Layer A
+							634 text ∅
+							635 text Layer A boundary
+							636 text ∅
+							637 text Layer B
+							638 text ∅
+							639 text Layer B boundary
+							640 text ∅
+							641 text Layer C
+							642 text ∅
+							643 text Layer C boundary
+							644 text ∅
+							645 text Extra cloud 1
+							646 text ∅
+							647 text Extra cloud 1 boundary
+							648 text ∅
+							649 text Extra cloud 2
+							650 text ∅
+							651 text Extra cloud 2 boundary
+							652 text ∅
+							653 text Bull delivery active
+							654 text 0.00
+							655 text Bear delivery active
+							656 text 0.00
+						657 row 7Cloud (78, 84, 72, 88, 80, 35, 1S, 5S, 15S, 1, 3, 9, 27, 81, 243, 729, Manual, 2, Top right, 2, 6, 15, 60, 162, 486)
+							658 text 7Cloud (78, 84, 72, 88, 80, 35, 1S, 5S, 15S, 1, 3, 9, 27, 81, 243, 729, Manual, 2, Top right, 2, 6, 15, 60, 162, 486)
+							659 toolbar
+								660 button Show data
+						661 row PS EMA LITE (1, Dark)
+							662 text PS EMA LITE (1, Dark)
+							663 toolbar
+								664 button Hide data
+		445 toolbar footer-chart-panel
+			446 container
+				447 button Open Replay Trading
+					448 text Replay Trading
+				449 pop up button (collapsed) Description: Open context menu, ID: :rgad:, Secondary Actions: Expand
+			450 button Open panel
+			451 button Maximize panel
+		358 container Trading panel
+	580 container common-tooltip-wrapper
+		581 text Object tree and data window
+
+The focused UI element is 562 tab (selected, settable, boolean) Data window, Value: 1, ID: data-window

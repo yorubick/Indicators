@@ -1,0 +1,383 @@
+{
+  "cases": [
+    {
+      "requested_START_UTC": "18:55:00",
+      "requested_END_UTC": "19:20:00",
+      "source_seconds": 15,
+      "first_source_open_UTC": "18:55:00",
+      "last_source_open_UTC": "19:20:00",
+      "bars_in_timestamp_window": 101,
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "end_OHLC": {
+        "open": 30866.25,
+        "high": 30867.25,
+        "low": 30866.0,
+        "close": 30866.5
+      },
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_15s_start185500.csv",
+        "source_seconds": 15,
+        "C_seconds_interval": {
+          "lower_inclusive": 105.98314606741573,
+          "upper_exclusive": 106.00694444444444
+        },
+        "compatible_integer_C_seconds": [
+          106
+        ],
+        "periods": {
+          "Layer A": 170,
+          "Layer A boundary": 210,
+          "Layer B": 57,
+          "Layer B boundary": 70,
+          "Layer C": 19,
+          "Layer C boundary": 23,
+          "Extra cloud 1": 509,
+          "Extra cloud 1 boundary": 629,
+          "Extra cloud 2": 1526,
+          "Extra cloud 2 boundary": 1887
+        },
+        "pairs_per_curve": 395,
+        "max_rmse_step": 1.5716462289422084e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      }
+    },
+    {
+      "requested_START_UTC": "18:55:00",
+      "requested_END_UTC": "19:20:15",
+      "source_seconds": 15,
+      "first_source_open_UTC": "18:55:00",
+      "last_source_open_UTC": "19:20:15",
+      "bars_in_timestamp_window": 102,
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "end_OHLC": {
+        "open": 30866.0,
+        "high": 30867.0,
+        "low": 30864.5,
+        "close": 30866.0
+      },
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_end_quarter_192015.csv",
+        "source_seconds": 15,
+        "C_seconds_interval": {
+          "lower_inclusive": 78.99305555555556,
+          "upper_exclusive": 79.01685393258427
+        },
+        "compatible_integer_C_seconds": [
+          79
+        ],
+        "periods": {
+          "Layer A": 126,
+          "Layer A boundary": 156,
+          "Layer B": 42,
+          "Layer B boundary": 52,
+          "Layer C": 14,
+          "Layer C boundary": 17,
+          "Extra cloud 1": 379,
+          "Extra cloud 1 boundary": 469,
+          "Extra cloud 2": 1138,
+          "Extra cloud 2 boundary": 1406
+        },
+        "pairs_per_curve": 395,
+        "max_rmse_step": 1.5685150784881684e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      }
+    },
+    {
+      "requested_START_UTC": "18:55:00",
+      "requested_END_UTC": "19:20:30",
+      "source_seconds": 15,
+      "first_source_open_UTC": "18:55:00",
+      "last_source_open_UTC": "19:20:30",
+      "bars_in_timestamp_window": 103,
+      "range_high": 30868.75,
+      "range_low": 30846.0,
+      "end_OHLC": {
+        "open": 30866.0,
+        "high": 30868.75,
+        "low": 30866.0,
+        "close": 30868.25
+      },
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_end_quarter_192030.csv",
+        "source_seconds": 15,
+        "C_seconds_interval": {
+          "lower_inclusive": 66.99438202247191,
+          "upper_exclusive": 67.04861111111111
+        },
+        "compatible_integer_C_seconds": [
+          67
+        ],
+        "periods": {
+          "Layer A": 107,
+          "Layer A boundary": 133,
+          "Layer B": 36,
+          "Layer B boundary": 44,
+          "Layer C": 12,
+          "Layer C boundary": 15,
+          "Extra cloud 1": 322,
+          "Extra cloud 1 boundary": 398,
+          "Extra cloud 2": 965,
+          "Extra cloud 2 boundary": 1193
+        },
+        "pairs_per_curve": 395,
+        "max_rmse_step": 1.5181709639695735e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      }
+    },
+    {
+      "requested_START_UTC": "18:55:00",
+      "requested_END_UTC": "19:20:45",
+      "source_seconds": 15,
+      "first_source_open_UTC": "18:55:00",
+      "last_source_open_UTC": "19:20:45",
+      "bars_in_timestamp_window": 104,
+      "range_high": 30870.5,
+      "range_low": 30846.0,
+      "end_OHLC": {
+        "open": 30868.25,
+        "high": 30870.5,
+        "low": 30868.0,
+        "close": 30870.5
+      },
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_15s_start185500_end192045.csv",
+        "source_seconds": 15,
+        "C_seconds_interval": {
+          "lower_inclusive": 65.98314606741573,
+          "upper_exclusive": 66.00694444444444
+        },
+        "compatible_integer_C_seconds": [
+          66
+        ],
+        "periods": {
+          "Layer A": 106,
+          "Layer A boundary": 131,
+          "Layer B": 35,
+          "Layer B boundary": 44,
+          "Layer C": 12,
+          "Layer C boundary": 15,
+          "Extra cloud 1": 317,
+          "Extra cloud 1 boundary": 392,
+          "Extra cloud 2": 950,
+          "Extra cloud 2 boundary": 1175
+        },
+        "pairs_per_curve": 371,
+        "max_rmse_step": 1.5664674002772778e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      }
+    },
+    {
+      "requested_START_UTC": "18:54:00",
+      "requested_END_UTC": "19:20:00",
+      "source_seconds": 60,
+      "first_source_open_UTC": "18:54:00",
+      "last_source_open_UTC": "19:20:00",
+      "bars_in_timestamp_window": 27,
+      "range_high": 30870.5,
+      "range_low": 30846.0,
+      "end_OHLC": {
+        "open": 30866.25,
+        "high": 30870.5,
+        "low": 30864.5,
+        "close": 30870.5
+      },
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_1m_start185400_end192000.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 133.82022471910113,
+          "upper_exclusive": 134.02777777777777
+        },
+        "compatible_integer_C_seconds": [
+          134
+        ],
+        "periods": {
+          "Layer A": 54,
+          "Layer A boundary": 66,
+          "Layer B": 18,
+          "Layer B boundary": 22,
+          "Layer C": 6,
+          "Layer C boundary": 7,
+          "Extra cloud 1": 161,
+          "Extra cloud 1 boundary": 199,
+          "Extra cloud 2": 482,
+          "Extra cloud 2 boundary": 596
+        },
+        "pairs_per_curve": 92,
+        "max_rmse_step": 1.8826796859502323e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      }
+    },
+    {
+      "requested_START_UTC": "18:54:15",
+      "requested_END_UTC": "19:20:00",
+      "source_seconds": 60,
+      "first_source_open_UTC": "18:55:00",
+      "last_source_open_UTC": "19:20:00",
+      "bars_in_timestamp_window": 26,
+      "range_high": 30870.5,
+      "range_low": 30846.0,
+      "end_OHLC": {
+        "open": 30866.25,
+        "high": 30870.5,
+        "low": 30864.5,
+        "close": 30870.5
+      },
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_1m_start185415_end192000.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 61.91011235955056,
+          "upper_exclusive": 62.083333333333336
+        },
+        "compatible_integer_C_seconds": [
+          62
+        ],
+        "periods": {
+          "Layer A": 25,
+          "Layer A boundary": 31,
+          "Layer B": 8,
+          "Layer B boundary": 10,
+          "Layer C": 3,
+          "Layer C boundary": 3,
+          "Extra cloud 1": 74,
+          "Extra cloud 1 boundary": 92,
+          "Extra cloud 2": 223,
+          "Extra cloud 2 boundary": 276
+        },
+        "pairs_per_curve": 92,
+        "max_rmse_step": 1.6811010306351138e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      }
+    },
+    {
+      "requested_START_UTC": "18:54:30",
+      "requested_END_UTC": "19:20:00",
+      "source_seconds": 60,
+      "first_source_open_UTC": "18:55:00",
+      "last_source_open_UTC": "19:20:00",
+      "bars_in_timestamp_window": 26,
+      "range_high": 30870.5,
+      "range_low": 30846.0,
+      "end_OHLC": {
+        "open": 30866.25,
+        "high": 30870.5,
+        "low": 30864.5,
+        "close": 30870.5
+      },
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_1m_start185430_end192000.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 61.91011235955056,
+          "upper_exclusive": 62.083333333333336
+        },
+        "compatible_integer_C_seconds": [
+          62
+        ],
+        "periods": {
+          "Layer A": 25,
+          "Layer A boundary": 31,
+          "Layer B": 8,
+          "Layer B boundary": 10,
+          "Layer C": 3,
+          "Layer C boundary": 3,
+          "Extra cloud 1": 74,
+          "Extra cloud 1 boundary": 92,
+          "Extra cloud 2": 223,
+          "Extra cloud 2 boundary": 276
+        },
+        "pairs_per_curve": 92,
+        "max_rmse_step": 1.6811010306351138e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      }
+    },
+    {
+      "requested_START_UTC": "18:55:00",
+      "requested_END_UTC": "19:20:00",
+      "source_seconds": 60,
+      "first_source_open_UTC": "18:55:00",
+      "last_source_open_UTC": "19:20:00",
+      "bars_in_timestamp_window": 26,
+      "range_high": 30870.5,
+      "range_low": 30846.0,
+      "end_OHLC": {
+        "open": 30866.25,
+        "high": 30870.5,
+        "low": 30864.5,
+        "close": 30870.5
+      },
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_25m_live_confirmado.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 61.91011235955056,
+          "upper_exclusive": 62.083333333333336
+        },
+        "compatible_integer_C_seconds": [
+          62
+        ],
+        "periods": {
+          "Layer A": 25,
+          "Layer A boundary": 31,
+          "Layer B": 8,
+          "Layer B boundary": 10,
+          "Layer C": 3,
+          "Layer C boundary": 3,
+          "Extra cloud 1": 74,
+          "Extra cloud 1 boundary": 92,
+          "Extra cloud 2": 223,
+          "Extra cloud 2 boundary": 276
+        },
+        "pairs_per_curve": 72,
+        "max_rmse_step": 1.6908103852520248e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      }
+    },
+    {
+      "requested_START_UTC": "18:55:00",
+      "requested_END_UTC": "19:20:30",
+      "source_seconds": 60,
+      "first_source_open_UTC": "18:55:00",
+      "last_source_open_UTC": "19:20:00",
+      "bars_in_timestamp_window": 26,
+      "range_high": 30870.5,
+      "range_low": 30846.0,
+      "end_OHLC": {
+        "open": 30866.25,
+        "high": 30870.5,
+        "low": 30864.5,
+        "close": 30870.5
+      },
+      "extraction": {
+        "file": "G:\\trading\\guias\\analisis\\C_1m_start185500_end192030.csv",
+        "source_seconds": 60,
+        "C_seconds_interval": {
+          "lower_inclusive": 61.91011235955056,
+          "upper_exclusive": 62.083333333333336
+        },
+        "compatible_integer_C_seconds": [
+          62
+        ],
+        "periods": {
+          "Layer A": 25,
+          "Layer A boundary": 31,
+          "Layer B": 8,
+          "Layer B boundary": 10,
+          "Layer C": 3,
+          "Layer C boundary": 3,
+          "Extra cloud 1": 74,
+          "Extra cloud 1 boundary": 92,
+          "Extra cloud 2": 223,
+          "Extra cloud 2 boundary": 276
+        },
+        "pairs_per_curve": 93,
+        "max_rmse_step": 1.6720546834694708e-12,
+        "scope": "C inferido de plots originales; no generado solo desde OHLC. Perfil B probado."
+      }
+    }
+  ],
+  "scope": "Recuperacion de C y evidencia compatible con seleccionar aperturas START<=time<=END; no lectura de codigo privado."
+}

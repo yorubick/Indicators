@@ -1,0 +1,2730 @@
+{
+  "scope": "Frozen external model; no training/fitting. Explicit scoring of originalvalidation for audit, not blind validation. Additional controls already measured and available to Gemini; not certified unseen/prospective for its development.",
+  "snapshot_sha256": {
+    "Gemini_v31_evaluador_recibido.py": "11308f52b8dcd774263555504d6ae97d0cc1e9549e383568b1e158f721dfc879",
+    "Gemini_v31_recibido.pine": "0457073d341741b5ea1d56fdc514aa190aae7afc6d1b9d2662ebe1f432789c99"
+  },
+  "summary": {
+    "training": {
+      "all": {
+        "cases": 53,
+        "exact_tol_1e_7": 51,
+        "within3": 52,
+        "within5": 53,
+        "MAE_full_precision": 0.1320754716991781,
+        "MAE_rounded_errors_like_Gemini": 0.1320754716981132
+      },
+      "long_only": {
+        "cases": 32,
+        "exact_tol_1e_7": 30,
+        "within3": 31,
+        "within5": 32,
+        "MAE_full_precision": 0.2187500000012768,
+        "MAE_rounded_errors_like_Gemini": 0.21875
+      }
+    },
+    "validation": {
+      "all": {
+        "cases": 40,
+        "exact_tol_1e_7": 30,
+        "within3": 34,
+        "within5": 34,
+        "MAE_full_precision": 1.400000000001256,
+        "MAE_rounded_errors_like_Gemini": 1.4
+      },
+      "long_only": {
+        "cases": 27,
+        "exact_tol_1e_7": 17,
+        "within3": 21,
+        "within5": 21,
+        "MAE_full_precision": 2.0740740740750847,
+        "MAE_rounded_errors_like_Gemini": 2.074074074074074
+      }
+    },
+    "oct13_existing": {
+      "all": {
+        "cases": 6,
+        "exact_tol_1e_7": 4,
+        "within3": 6,
+        "within5": 6,
+        "MAE_full_precision": 0.6666666666671475,
+        "MAE_rounded_errors_like_Gemini": 0.6666666666666666
+      },
+      "long_only": {
+        "cases": 6,
+        "exact_tol_1e_7": 4,
+        "within3": 6,
+        "within5": 6,
+        "MAE_full_precision": 0.6666666666671475,
+        "MAE_rounded_errors_like_Gemini": 0.6666666666666666
+      }
+    },
+    "original99": {
+      "cases": 99,
+      "exact_tol_1e_7": 85,
+      "within3": 92,
+      "within5": 93,
+      "MAE_full_precision": 0.6767676767687835,
+      "MAE_rounded_errors_like_Gemini": 0.6767676767676768
+    },
+    "additional_controls": {
+      "cases": 13,
+      "exact_tol_1e_7": 0,
+      "within3": 0,
+      "within5": 1,
+      "MAE_full_precision": 47.23076923076893,
+      "MAE_rounded_errors_like_Gemini": 47.23076923076923
+    },
+    "additional15s": {
+      "cases": 11,
+      "exact_tol_1e_7": 0,
+      "within3": 0,
+      "within5": 0,
+      "MAE_full_precision": 53.72727272727274,
+      "MAE_rounded_errors_like_Gemini": 53.72727272727273
+    }
+  },
+  "Python_Pine_original99_differences": [
+    {
+      "id": "20261012_152800_155200_60s",
+      "START": "2026-10-12T15:28:00+00:00",
+      "END": "2026-10-12T15:52:00+00:00",
+      "dt": 60,
+      "bars": 25,
+      "C": 80.99999999999949,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "00f9aafd6e7d68e8c1dbc279c5c4b271cda590a093c4b34aa5d12ae763f224cd",
+      "provenance": [
+        {
+          "report": "C_END1551.json",
+          "prefix": "C_END1552_START_1528",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 75.0,
+      "python_branch": "MACRO_EP15_MID",
+      "pine_prediction": 93.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "20261012_190000_192400_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:24:00+00:00",
+      "dt": 60,
+      "bars": 25,
+      "C": 59.99999999999963,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "21077709571ba530b7725cf35917fad0c65b2cb9363ed9d119d44ccf26355135",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        },
+        {
+          "report": "C_frontera21.json",
+          "prefix": "Lite_1900_192400_1m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 60.0,
+      "python_branch": "CONSOLIDATION_M24",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    }
+  ],
+  "rows": [
+    {
+      "id": "20261012_044500_050300_60s",
+      "START": "2026-10-12T04:45:00+00:00",
+      "END": "2026-10-12T05:03:00+00:00",
+      "dt": 60,
+      "bars": 19,
+      "C": 62.29508196721009,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "2a6c0fff9910cb86172c8e937d00b970b8dbefb902a25826894d0436e4bc6386",
+      "provenance": [
+        {
+          "report": "C_regimen_decimal.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 62.295081967213115,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 62.295081967213115,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_044500_050400_60s",
+      "START": "2026-10-12T04:45:00+00:00",
+      "END": "2026-10-12T05:04:00+00:00",
+      "dt": 60,
+      "bars": 20,
+      "C": 65.57377049180428,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "add660a10f0e41b23faff653a7131b2ad83e69ce04ba8ebf7bcc9726744ec396",
+      "provenance": [
+        {
+          "report": "C_regimen_decimal.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 65.57377049180327,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 65.57377049180327,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_044500_050500_60s",
+      "START": "2026-10-12T04:45:00+00:00",
+      "END": "2026-10-12T05:05:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 75.00000000000114,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "9c3349ca90072a03fd40394af94930e3b6dcbf6fa696d77a805c2fe09ce303c6",
+      "provenance": [
+        {
+          "report": "C_regimen_decimal.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 75.0,
+      "python_branch": "MACRO_BEAR_TIGHT",
+      "pine_prediction": 75.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_060000_061700_60s",
+      "START": "2026-10-12T06:00:00+00:00",
+      "END": "2026-10-12T06:17:00+00:00",
+      "dt": 60,
+      "bars": 18,
+      "C": 60.000000000001684,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "1ae2eef1b6053fe048e87818c74e963c73ce45b9fc5e0db6ad864f78c8db0533",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_0600_18",
+          "pair": [
+            "a",
+            "b"
+          ]
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_060000_061800_60s",
+      "START": "2026-10-12T06:00:00+00:00",
+      "END": "2026-10-12T06:18:00+00:00",
+      "dt": 60,
+      "bars": 19,
+      "C": 62.29508196721091,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "94627f778c8c9b0e36cb7c5e0016b215b57a9d67f7209bd43076f64e54085842",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_0600_19",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 62.295081967213115,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 62.295081967213115,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_060000_061900_60s",
+      "START": "2026-10-12T06:00:00+00:00",
+      "END": "2026-10-12T06:19:00+00:00",
+      "dt": 60,
+      "bars": 20,
+      "C": 65.57377049180404,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "aaeb9065c2a81ecbc7018822a9fc8a3ff93a6ad691f6390f0e2b41afa97a8c43",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_0600_20",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 65.57377049180327,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 65.57377049180327,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_060000_062000_60s",
+      "START": "2026-10-12T06:00:00+00:00",
+      "END": "2026-10-12T06:20:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 76.99999999999633,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "9437e1ca5c9801fe40c1bb9ce7f895f09cfcf54ba58e832b2800535397a0dc66",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_0600_21",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_060000_062100_60s",
+      "START": "2026-10-12T06:00:00+00:00",
+      "END": "2026-10-12T06:21:00+00:00",
+      "dt": 60,
+      "bars": 22,
+      "C": 76.99999999999663,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "0d375f4066689649d3c9b67e8a994afbb7bbedc9777bb679642becf14476c3a5",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_0600_22",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_060000_062200_60s",
+      "START": "2026-10-12T06:00:00+00:00",
+      "END": "2026-10-12T06:22:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 76.99999999999655,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "cfe53db0dd046ac2ac13f4613da78e79d2b99ec58962c5d55b58a01169c95c0d",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_0600_23",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_060000_062300_60s",
+      "START": "2026-10-12T06:00:00+00:00",
+      "END": "2026-10-12T06:23:00+00:00",
+      "dt": 60,
+      "bars": 24,
+      "C": 73.00000000000334,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "da22c763673bae439b509f72c86414ba316b22a41a50ebfd2337c8760c9620fb",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_0600_24",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "20261012_060100_062100_60s",
+      "START": "2026-10-12T06:01:00+00:00",
+      "END": "2026-10-12T06:21:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 79.99999999999943,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "b97fb84241efce6a7f4779f5bb0130c14d5af3b0d74691cc5e265d27ed2069fd",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_shift_0601",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "20261012_065700_072000_60s",
+      "START": "2026-10-12T06:57:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "dt": 60,
+      "bars": 24,
+      "C": 86.9999999999997,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "e95c272c003a5daf58291dfd4834358ea66333fc64ef8867e50840bc7ab0c4ff",
+      "provenance": [
+        {
+          "report": "C_START_regimenes.json",
+          "prefix": "C_START_barrido_lateral_24",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 78.0,
+      "python_branch": "MACRO_MID",
+      "pine_prediction": 78.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "20261012_065800_072000_60s",
+      "START": "2026-10-12T06:58:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 77.99999999999896,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "ca068b3b005499cc40e8e5dbc1ab01d83ddc8d619fcb25147c929508f280f6f8",
+      "provenance": [
+        {
+          "report": "C_START_regimenes.json",
+          "prefix": "C_START_barrido_lateral_23",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 78.0,
+      "python_branch": "MACRO_MID",
+      "pine_prediction": 78.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_065900_072000_60s",
+      "START": "2026-10-12T06:59:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "dt": 60,
+      "bars": 22,
+      "C": 77.99999999999896,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "e90ea7280a2bbfddf3219161c92f106af99983f4ef68489b39a8350a731700ef",
+      "provenance": [
+        {
+          "report": "C_START_regimenes.json",
+          "prefix": "C_START_barrido_lateral_22",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 78.0,
+      "python_branch": "MACRO_MID",
+      "pine_prediction": 78.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_070000_072000_60s",
+      "START": "2026-10-12T07:00:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 75.00000000000104,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "0a25ca1fc1fad22b29562e8f3b882a1ef81b6563971ee6fc85e712d3a2d97e2a",
+      "provenance": [
+        {
+          "report": "C_21_regimenes.json",
+          "prefix": "C_21_lateral",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 78.0,
+      "python_branch": "MACRO_MID",
+      "pine_prediction": 78.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "20261012_070100_072000_60s",
+      "START": "2026-10-12T07:01:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "dt": 60,
+      "bars": 20,
+      "C": 65.57377049180424,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "2a2b6916241c66e1f8553be603f85cffde5eadae59ced7cff2204804725e48c9",
+      "provenance": [
+        {
+          "report": "C_START_regimenes.json",
+          "prefix": "C_START_barrido_lateral_20",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 65.57377049180327,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 65.57377049180327,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_070200_072000_60s",
+      "START": "2026-10-12T07:02:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "dt": 60,
+      "bars": 19,
+      "C": 62.29508196721074,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "d1128045bb37c9f76677ad2c669129f77bbe0d184aedb4564dcbf4a0a883e2d9",
+      "provenance": [
+        {
+          "report": "C_START_regimenes.json",
+          "prefix": "C_START_barrido_lateral_19",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 62.295081967213115,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 62.295081967213115,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_070300_072000_60s",
+      "START": "2026-10-12T07:03:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "dt": 60,
+      "bars": 18,
+      "C": 60.000000000001556,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "e9857134446cf0e808d9f2f2d304e8cbdf0a187295ccaaaf9ff38711aee89253",
+      "provenance": [
+        {
+          "report": "C_START_regimenes.json",
+          "prefix": "C_START_barrido_lateral_18",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_140000_141700_60s",
+      "START": "2026-10-12T14:00:00+00:00",
+      "END": "2026-10-12T14:17:00+00:00",
+      "dt": 60,
+      "bars": 18,
+      "C": 60.0,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "2df30273a968f181695d5dc36d640e8aeaa2b94add907bfbdccbb3b86bc4f9e1",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_1400_18",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_140000_141800_60s",
+      "START": "2026-10-12T14:00:00+00:00",
+      "END": "2026-10-12T14:18:00+00:00",
+      "dt": 60,
+      "bars": 19,
+      "C": 62.295081967211935,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "c49301f410af28bac4d207930a906cb46702d91747fe8c7ed0ae691034f73b72",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_1400_19",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 62.295081967213115,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 62.295081967213115,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_140000_141900_60s",
+      "START": "2026-10-12T14:00:00+00:00",
+      "END": "2026-10-12T14:19:00+00:00",
+      "dt": 60,
+      "bars": 20,
+      "C": 65.57377049180356,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "f5ce14c03c1361a40cfe972deeca4d0d4af51c35c04d0b5e5cb4b40458df27cf",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_1400_20",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 65.57377049180327,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 65.57377049180327,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_140000_142000_60s",
+      "START": "2026-10-12T14:00:00+00:00",
+      "END": "2026-10-12T14:20:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 61.999999999999154,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "05f9daf620d9c56bc25ce4883d3fc7e856664a8c585a7e96f7207c2314aced43",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_1400_21",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 62.0,
+      "python_branch": "MACRO_VERY_WIDE",
+      "pine_prediction": 62.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_140000_142100_60s",
+      "START": "2026-10-12T14:00:00+00:00",
+      "END": "2026-10-12T14:21:00+00:00",
+      "dt": 60,
+      "bars": 22,
+      "C": 61.99999999999912,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "34d710397a84ba58d039c1724438d077101deafd85f021eb5a502dfaf294751c",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_1400_22",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 62.0,
+      "python_branch": "MACRO_VERY_WIDE",
+      "pine_prediction": 62.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_140000_142200_60s",
+      "START": "2026-10-12T14:00:00+00:00",
+      "END": "2026-10-12T14:22:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 82.99999999999876,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "c1f3ab35e580d9f5ba1724e4fdec61cb486288a8e4aff7566ee144f48ddf2f71",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_1400_23",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 83.0,
+      "python_branch": "SPIKE_REVERSAL_BOUNCE",
+      "pine_prediction": 83.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_140000_142300_60s",
+      "START": "2026-10-12T14:00:00+00:00",
+      "END": "2026-10-12T14:23:00+00:00",
+      "dt": 60,
+      "bars": 24,
+      "C": 76.00000000000095,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "24f4a9ff155799314cd1847f193160a48d231a15f477a87d91b768ed78cfdd3d",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_nueva_1400_24",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 76.0,
+      "python_branch": "SPIKE_REVERSAL_DECAY",
+      "pine_prediction": 76.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_140100_142100_60s",
+      "START": "2026-10-12T14:01:00+00:00",
+      "END": "2026-10-12T14:21:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 61.99999999999911,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "4b4943da0fab3cc00d83154ff167979da2631c217122fd9c7dec9621edab4c7d",
+      "provenance": [
+        {
+          "report": "C_fronteras_nuevas.json",
+          "prefix": "C_frontera_shift_1401",
+          "pair": null
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 62.0,
+      "python_branch": "MACRO_VERY_WIDE",
+      "pine_prediction": 62.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_152600_154800_60s",
+      "START": "2026-10-12T15:26:00+00:00",
+      "END": "2026-10-12T15:48:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 82.00000000000077,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "99724e9dee1bb0d4af16d1aa0b8c866cf085742d005d6cb24e30b9df7d50eadc",
+      "provenance": [
+        {
+          "report": "C_23_desplazamientos.json",
+          "prefix": "C_23_shift_1526",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 75.0,
+      "python_branch": "MACRO_EP15_MID",
+      "pine_prediction": 75.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "20261012_152600_155100_60s",
+      "START": "2026-10-12T15:26:00+00:00",
+      "END": "2026-10-12T15:51:00+00:00",
+      "dt": 60,
+      "bars": 26,
+      "C": 82.00000000000078,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "cf3aa90f2d34c5bfd46142239709f3cab03db1490b8bee210bbb707f16060ed1",
+      "provenance": [
+        {
+          "report": "C_END1551.json",
+          "prefix": "C_END1551_START_1526",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 75.0,
+      "python_branch": "MACRO_EP15_MID",
+      "pine_prediction": 75.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "20261012_152700_154900_60s",
+      "START": "2026-10-12T15:27:00+00:00",
+      "END": "2026-10-12T15:49:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 82.00000000000063,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "4e1ab1db34c6c46e21affdebbab72cf82362d5781d941bf7250f0b90d0c1dab0",
+      "provenance": [
+        {
+          "report": "C_23_desplazamientos.json",
+          "prefix": "C_23_shift_1527",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 82.0,
+      "python_branch": "MACRO_EP15_HIGH",
+      "pine_prediction": 82.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_152700_155000_60s",
+      "START": "2026-10-12T15:27:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "dt": 60,
+      "bars": 24,
+      "C": 69.00000000000038,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "46d5ff673cc6b4aa8a3b72186cc8f000fa8d5c93c8bc29ede482199c66254269",
+      "provenance": [
+        {
+          "report": "C_START_regimenes.json",
+          "prefix": "C_START_barrido_alcista_24",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 82.0,
+      "python_branch": "MACRO_EP15_HIGH",
+      "pine_prediction": 82.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "20261012_152700_155100_60s",
+      "START": "2026-10-12T15:27:00+00:00",
+      "END": "2026-10-12T15:51:00+00:00",
+      "dt": 60,
+      "bars": 25,
+      "C": 93.00000000000269,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "d9ed6ef43c82ab1cfd1c9b12291dd3860a4483952a0cf036749a0f4360323acc",
+      "provenance": [
+        {
+          "report": "C_END1551.json",
+          "prefix": "C_END1551_START_1527",
+          "pair": [
+            "e",
+            "f"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 93.0,
+      "python_branch": "SPIKE_EP15_1551",
+      "pine_prediction": 93.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_152700_155200_60s",
+      "START": "2026-10-12T15:27:00+00:00",
+      "END": "2026-10-12T15:52:00+00:00",
+      "dt": 60,
+      "bars": 26,
+      "C": 82.00000000000092,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "b5545d50220c30837b187cde3067d64d3530c8bdcf38f6710d1933183f5e3615",
+      "provenance": [
+        {
+          "report": "C_END1551.json",
+          "prefix": "C_END1552_START_1527",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 82.0,
+      "python_branch": "MACRO_EP15_HIGH",
+      "pine_prediction": 82.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_152800_155000_60s",
+      "START": "2026-10-12T15:28:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 81.00000000000013,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "d966db6e8e96786a27d8b0c3afb8694de3b4f137b3d7bf5ae6e0233887095aea",
+      "provenance": [
+        {
+          "report": "C_START_regimenes.json",
+          "prefix": "C_START_barrido_alcista_23",
+          "pair": [
+            "e",
+            "f"
+          ]
+        },
+        {
+          "report": "C_23_desplazamientos.json",
+          "prefix": "C_START_barrido_alcista_23",
+          "pair": [
+            "e",
+            "f"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 75.0,
+      "python_branch": "MACRO_EP15_MID",
+      "pine_prediction": 75.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "20261012_152800_155100_60s",
+      "START": "2026-10-12T15:28:00+00:00",
+      "END": "2026-10-12T15:51:00+00:00",
+      "dt": 60,
+      "bars": 24,
+      "C": 75.00000000000051,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "cf1ce3986c2670ca29783bdabda43ab875f0a915a25aa7e16ba7ac8a9470eebf",
+      "provenance": [
+        {
+          "report": "C_END1551.json",
+          "prefix": "C_END1551_START_1528",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 75.0,
+      "python_branch": "MACRO_EP15_MID",
+      "pine_prediction": 75.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_152800_155200_60s",
+      "START": "2026-10-12T15:28:00+00:00",
+      "END": "2026-10-12T15:52:00+00:00",
+      "dt": 60,
+      "bars": 25,
+      "C": 80.99999999999949,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "00f9aafd6e7d68e8c1dbc279c5c4b271cda590a093c4b34aa5d12ae763f224cd",
+      "provenance": [
+        {
+          "report": "C_END1551.json",
+          "prefix": "C_END1552_START_1528",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 75.0,
+      "python_branch": "MACRO_EP15_MID",
+      "pine_prediction": 93.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "20261012_152900_155000_60s",
+      "START": "2026-10-12T15:29:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "dt": 60,
+      "bars": 22,
+      "C": 69.00000000000038,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "163535909007611f04abcaa3c6c91d2bbd8bbca7a42a1b1a44d0f1e19c6e8942",
+      "provenance": [
+        {
+          "report": "C_START_regimenes.json",
+          "prefix": "C_START_barrido_alcista_22",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 68.0,
+      "python_branch": "MACRO_EP15_REST",
+      "pine_prediction": 68.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "20261012_152900_155100_60s",
+      "START": "2026-10-12T15:29:00+00:00",
+      "END": "2026-10-12T15:51:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 75.00000000000047,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "85af681d8b34330213a842907e41d4c4c18d919bf0a98d867697e46ba833a5fa",
+      "provenance": [
+        {
+          "report": "C_23_desplazamientos.json",
+          "prefix": "C_23_shift_1529",
+          "pair": [
+            "c",
+            "d"
+          ]
+        },
+        {
+          "report": "C_END1551.json",
+          "prefix": "C_23_shift_1529",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 75.0,
+      "python_branch": "MACRO_EP15_MID",
+      "pine_prediction": 75.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_152900_155200_60s",
+      "START": "2026-10-12T15:29:00+00:00",
+      "END": "2026-10-12T15:52:00+00:00",
+      "dt": 60,
+      "bars": 24,
+      "C": 75.00000000000058,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "5fea5d4da6d32970e3159e8d79a0b1e7bcfcfcf9d19af2f596ee97aa7c933aaa",
+      "provenance": [
+        {
+          "report": "C_23_desplazamientos.json",
+          "prefix": "C_23_cross_1529_1552",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 75.0,
+      "python_branch": "MACRO_EP15_MID",
+      "pine_prediction": 75.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_153000_155000_60s",
+      "START": "2026-10-12T15:30:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 69.00000000000038,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "c2d223d2590935c461398b26a4d1e0e91dde41106574902eaa53e038e53f9041",
+      "provenance": [
+        {
+          "report": "C_21_regimenes.json",
+          "prefix": "C_21_alcista",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 68.0,
+      "python_branch": "MACRO_EP15_REST",
+      "pine_prediction": 68.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "20261012_153000_155100_60s",
+      "START": "2026-10-12T15:30:00+00:00",
+      "END": "2026-10-12T15:51:00+00:00",
+      "dt": 60,
+      "bars": 22,
+      "C": 67.99999999999896,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "f5a67aa05f9c78959814789b86e63045cf7d7153f8f3a8eadf53b559418fddbf",
+      "provenance": [
+        {
+          "report": "C_23_desplazamientos.json",
+          "prefix": "C_23_cross_1530_1551",
+          "pair": [
+            "c",
+            "d"
+          ]
+        },
+        {
+          "report": "C_END1551.json",
+          "prefix": "C_23_cross_1530_1551",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 68.0,
+      "python_branch": "MACRO_EP15_REST",
+      "pine_prediction": 68.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_153000_155200_60s",
+      "START": "2026-10-12T15:30:00+00:00",
+      "END": "2026-10-12T15:52:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 67.99999999999903,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "5435b3ddd569447a8935d1bb12a62401b214d0ac880f489fc8d0188bd2c9b18d",
+      "provenance": [
+        {
+          "report": "C_23_desplazamientos.json",
+          "prefix": "C_23_shift_1530",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 68.0,
+      "python_branch": "MACRO_EP15_REST",
+      "pine_prediction": 68.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_153100_155000_60s",
+      "START": "2026-10-12T15:31:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "dt": 60,
+      "bars": 20,
+      "C": 65.57377049180353,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "e59342761383cb741578e2bfa8414d51370370e3bb27b5fcc60240a9a5892c4d",
+      "provenance": [
+        {
+          "report": "C_START_regimenes.json",
+          "prefix": "C_START_barrido_alcista_20",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 65.57377049180327,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 65.57377049180327,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_153100_155100_60s",
+      "START": "2026-10-12T15:31:00+00:00",
+      "END": "2026-10-12T15:51:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 67.99999999999899,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "00f30614af1e6f15c89280872e52ae20081cbb59383dfd97c195fcdbc7802fcb",
+      "provenance": [
+        {
+          "report": "C_END1551.json",
+          "prefix": "C_END1551_START_1531",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 68.0,
+      "python_branch": "MACRO_EP15_REST",
+      "pine_prediction": 68.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_153200_155000_60s",
+      "START": "2026-10-12T15:32:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "dt": 60,
+      "bars": 19,
+      "C": 62.29508196721181,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "17b81067736ef18ab6f1bb401465323add6f006b5a5bbc5b3fbbdf85976ab786",
+      "provenance": [
+        {
+          "report": "C_START_regimenes.json",
+          "prefix": "C_START_barrido_alcista_19",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 62.295081967213115,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 62.295081967213115,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_153300_155000_60s",
+      "START": "2026-10-12T15:33:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "dt": 60,
+      "bars": 18,
+      "C": 59.99999999999997,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "73808e2ea30713727ba0c81c8e493e53f184805696abaa0ab7a0cfeb24f36685",
+      "provenance": [
+        {
+          "report": "C_START_regimenes.json",
+          "prefix": "C_START_barrido_alcista_18",
+          "pair": [
+            "c",
+            "d"
+          ]
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_180000_183600_120s",
+      "START": "2026-10-12T18:00:00+00:00",
+      "END": "2026-10-12T18:36:00+00:00",
+      "dt": 120,
+      "bars": 19,
+      "C": 124.59016393442506,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "052f1a593a2d3d726628f30c2c5285264a7e44fface4057cfdbfe9d20238f379",
+      "provenance": [
+        {
+          "report": "C_frontera21.json",
+          "prefix": "Lite_180000_183600_2m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 124.59016393442623,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 124.59016393442623,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_180000_183800_120s",
+      "START": "2026-10-12T18:00:00+00:00",
+      "END": "2026-10-12T18:38:00+00:00",
+      "dt": 120,
+      "bars": 20,
+      "C": 131.14754098360766,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "1ce18f243a1ae2fe0f5d95cff3d23669c2dee51320e19e540623c0a82ad5e075",
+      "provenance": [
+        {
+          "report": "C_frontera21.json",
+          "prefix": "Lite_180000_183800_2m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 131.14754098360655,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 131.14754098360655,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_180000_184000_120s",
+      "START": "2026-10-12T18:00:00+00:00",
+      "END": "2026-10-12T18:40:00+00:00",
+      "dt": 120,
+      "bars": 21,
+      "C": 136.9999999999968,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "6d4be7250ed789c6843ce9ac22b8fe8cf229a3485cd584c4564f36abe96a56cc",
+      "provenance": [
+        {
+          "report": "C_frontera21.json",
+          "prefix": "Lite_180000_184000_2m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 137.0,
+      "python_branch": "MACRO_120S",
+      "pine_prediction": 137.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_185800_191800_60s",
+      "START": "2026-10-12T18:58:00+00:00",
+      "END": "2026-10-12T19:18:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 76.99999999999831,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "a981abf9345caa75f41958f1b4ace969008f9fa3d9d03271010713ed57cf4e94",
+      "provenance": [
+        {
+          "report": "C_regimen_decimal.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_185900_191800_60s",
+      "START": "2026-10-12T18:59:00+00:00",
+      "END": "2026-10-12T19:18:00+00:00",
+      "dt": 60,
+      "bars": 20,
+      "C": 65.57377049180279,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "1e5285fc7f3e24b1de21512784d9a9841d1cc44bba999f33e7ed5b0144e5da0f",
+      "provenance": [
+        {
+          "report": "C_regimen_decimal.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 65.57377049180327,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 65.57377049180327,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_185900_191900_60s",
+      "START": "2026-10-12T18:59:00+00:00",
+      "END": "2026-10-12T19:19:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 76.99999999999832,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "2ef2ced7d418e126d7b6bc462851ffa406e8bda7eb32823a3f008a87fb3b8a75",
+      "provenance": [
+        {
+          "report": "C_regimen_decimal.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_190430_15s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:04:30+00:00",
+      "dt": 15,
+      "bars": 19,
+      "C": 15.5737704918032,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "3914a1f6a8d69d0389ec7df75683de35d089b37022339fed78f76fdb52af50a8",
+      "provenance": [
+        {
+          "report": "C_corto_fuentes.json",
+          "prefix": "Lite_190000_190430_15s",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 15.573770491803279,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 15.573770491803279,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_190445_15s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:04:45+00:00",
+      "dt": 15,
+      "bars": 20,
+      "C": 16.393442622950896,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "9e4eceb7966066e133b9295a60d7be475a9a8f22a232e3ba550d2d15c502c696",
+      "provenance": [
+        {
+          "report": "C_corto_fuentes.json",
+          "prefix": "Lite_190000_190445_15s",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 16.39344262295082,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 16.39344262295082,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_190500_15s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:05:00+00:00",
+      "dt": 15,
+      "bars": 21,
+      "C": 15.999999999999977,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "88c55794cef4e71f7f2c6238d3896dd643dcc9a158fe7f058e29cebe5ba809ee",
+      "provenance": [
+        {
+          "report": "C_corto_fuentes.json",
+          "prefix": "Lite_190000_190500_15s",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 16.0,
+      "python_branch": "MACRO_15S",
+      "pine_prediction": 16.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_190100_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:01:00+00:00",
+      "dt": 60,
+      "bars": 2,
+      "C": 59.99999999999949,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "0dd5592af65082fca1151b505eb644804256b9d2701cfd5da775c18a6c2539a8",
+      "provenance": [
+        {
+          "report": "C_ventanas_minimas.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_190200_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:02:00+00:00",
+      "dt": 60,
+      "bars": 3,
+      "C": 59.999999999999524,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "963c54cff329c07abb89cf2ed689d28755374a0be7fe80bb06f05de5b313750b",
+      "provenance": [
+        {
+          "report": "C_ventanas_minimas.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_190300_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:03:00+00:00",
+      "dt": 60,
+      "bars": 4,
+      "C": 59.99999999999968,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "feb8c0360c70ee5afefe2b0034d3a3136872bedf43fa20da7f4cffbf936218a1",
+      "provenance": [
+        {
+          "report": "C_ventanas_minimas.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_190700_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:07:00+00:00",
+      "dt": 60,
+      "bars": 8,
+      "C": 59.9999999999991,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "5dc1dc1f057a2773795c50deea4a269665407cc691a4bfcfbda3dec68fa4530d",
+      "provenance": [
+        {
+          "report": "C_ventanas_minimas.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_191100_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:11:00+00:00",
+      "dt": 60,
+      "bars": 12,
+      "C": 59.999999999999574,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "a97efe05e4f88066e5de491d7cdcb1f9fbeca1a1889fff1d1e1d3255a7547f2e",
+      "provenance": [
+        {
+          "report": "C_ventanas_minimas.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_191500_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:15:00+00:00",
+      "dt": 60,
+      "bars": 16,
+      "C": 59.99999999999968,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "e234253db61390a725a5883acc75065a11fd8ccdf63bf0ca9bb5dd64a5fc6902",
+      "provenance": [
+        {
+          "report": "C_ventanas_minimas.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_191600_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:16:00+00:00",
+      "dt": 60,
+      "bars": 17,
+      "C": 59.99999999999968,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "75354c8255ab36d469b62eca452245222de951a5561b9ad685d346f0ea009533",
+      "provenance": [
+        {
+          "report": "C_ventanas_minimas.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_191700_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:17:00+00:00",
+      "dt": 60,
+      "bars": 18,
+      "C": 59.99999999999958,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "d545f8a7425114ee448aefc01775d433a307e2abfed677867a7c26ae02c82d5b",
+      "provenance": [
+        {
+          "report": "C_ventanas_minimas.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_191800_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:18:00+00:00",
+      "dt": 60,
+      "bars": 19,
+      "C": 62.29508196721156,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "fb5fb93a44dba491d927e614d318fe31f46ad1d55bab1cf76a2a33c6e8b8c63b",
+      "provenance": [
+        {
+          "report": "C_ventanas_minimas.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 62.295081967213115,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 62.295081967213115,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_191900_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:19:00+00:00",
+      "dt": 60,
+      "bars": 20,
+      "C": 65.57377049180306,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "34d3ed9c2c8bc8aa6ae56e8ac772bd30568b686ab19a0c311d6268e5a354d588",
+      "provenance": [
+        {
+          "report": "C_ventanas_minimas.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 65.57377049180327,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 65.57377049180327,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_192000_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:20:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 76.99999999999851,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "6173fa98421668d15f7014ed122cf4f57683c1dcac0fce09c84497114c300566",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        },
+        {
+          "report": "C_ventanas_minimas.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_192100_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:21:00+00:00",
+      "dt": 60,
+      "bars": 22,
+      "C": 101.99999999999835,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "f55ba1bf960fb142d06a892aba77814523daf4a6f0599de7452ee5b6d9b539ca",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        },
+        {
+          "report": "C_frontera21.json",
+          "prefix": "Lite_1900_192100_1m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 102.0,
+      "python_branch": "SPIKE_EP19_1921",
+      "pine_prediction": 102.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_192200_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:22:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 76.99999999999841,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "b80944b1cde4b3716aa6b12f64165d317025d9cc18ea1ae13daa72f03803e4dd",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        },
+        {
+          "report": "C_frontera21.json",
+          "prefix": "Lite_1900_192200_1m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_192300_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:23:00+00:00",
+      "dt": 60,
+      "bars": 24,
+      "C": 76.9999999999985,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "32482f334f180a503594f990368d39437f33eac119d5448fec1cd4dab11e49b8",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        },
+        {
+          "report": "C_frontera21.json",
+          "prefix": "Lite_1900_192300_1m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190000_192400_60s",
+      "START": "2026-10-12T19:00:00+00:00",
+      "END": "2026-10-12T19:24:00+00:00",
+      "dt": 60,
+      "bars": 25,
+      "C": 59.99999999999963,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "21077709571ba530b7725cf35917fad0c65b2cb9363ed9d119d44ccf26355135",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        },
+        {
+          "report": "C_frontera21.json",
+          "prefix": "Lite_1900_192400_1m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 60.0,
+      "python_branch": "CONSOLIDATION_M24",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190100_191800_60s",
+      "START": "2026-10-12T19:01:00+00:00",
+      "END": "2026-10-12T19:18:00+00:00",
+      "dt": 60,
+      "bars": 18,
+      "C": 59.99999999999951,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "38d4fc204ea7e820bcd01141d1cf52b1cfcf5f4ee1940b364891d22f03b8a4ca",
+      "provenance": [
+        {
+          "report": "C_ventanas_minimas.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 60.0,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 60,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190100_191900_60s",
+      "START": "2026-10-12T19:01:00+00:00",
+      "END": "2026-10-12T19:19:00+00:00",
+      "dt": 60,
+      "bars": 19,
+      "C": 62.29508196721128,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "5c291254b5ba5fcf99d5f86ccf97e4eb90391f1a37b6f8c14957cc49f2c214b5",
+      "provenance": [
+        {
+          "report": "C_regimen_decimal.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 62.295081967213115,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 62.295081967213115,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190100_192100_60s",
+      "START": "2026-10-12T19:01:00+00:00",
+      "END": "2026-10-12T19:21:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 76.99999999999798,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "414ce8cc749f74c22f5e9282a13fbfaf674a87a5852595bef90eed7d533ecae4",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        },
+        {
+          "report": "C_ventanas_fijas.json",
+          "prefix": "Lite_1901_192100_1m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190100_192200_60s",
+      "START": "2026-10-12T19:01:00+00:00",
+      "END": "2026-10-12T19:22:00+00:00",
+      "dt": 60,
+      "bars": 22,
+      "C": 76.99999999999841,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "000a3e2b976ee02c1b141c5aa02ad563e88effb0dc59cee3509cdbd2b30cccfc",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        },
+        {
+          "report": "C_ventanas_fijas.json",
+          "prefix": "Lite_1901_192200_1m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190100_192300_60s",
+      "START": "2026-10-12T19:01:00+00:00",
+      "END": "2026-10-12T19:23:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 76.9999999999985,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "e79cadd35a03167d629b8ab097ca6fd3b5db33941c4c6927ffe2d7425988f92c",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190100_192400_60s",
+      "START": "2026-10-12T19:01:00+00:00",
+      "END": "2026-10-12T19:24:00+00:00",
+      "dt": 60,
+      "bars": 24,
+      "C": 76.99999999999822,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "a1dbefc029f86f362002ecff6de81cbedd9ae3814766508f300483443de27d40",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190200_192100_60s",
+      "START": "2026-10-12T19:02:00+00:00",
+      "END": "2026-10-12T19:21:00+00:00",
+      "dt": 60,
+      "bars": 20,
+      "C": 65.57377049180305,
+      "branch": "short",
+      "split": "training",
+      "OHLC_sha256": "24d991b1f49cd8ded3882be718340df64d7656a92b62fd657e8768cbc6bf116b",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        },
+        {
+          "report": "C_ventanas_fijas.json",
+          "prefix": "Lite_1902_192100_1m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 65.57377049180327,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 65.57377049180327,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190200_192200_60s",
+      "START": "2026-10-12T19:02:00+00:00",
+      "END": "2026-10-12T19:22:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 49.99999999999989,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "58fddd5b7c7445c4762717b524a90c2767fcf9fb64e321c9b6e387c5ffc45b93",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        },
+        {
+          "report": "C_ventanas_fijas.json",
+          "prefix": "Lite_1902_192200_1m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 50.0,
+      "python_branch": "CONSOLIDATION_M24",
+      "pine_prediction": 50,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190200_192300_60s",
+      "START": "2026-10-12T19:02:00+00:00",
+      "END": "2026-10-12T19:23:00+00:00",
+      "dt": 60,
+      "bars": 22,
+      "C": 51.99999999999978,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "9917e3ca363eae26de166d3458ca2cdef8c2342b0cc24a9642165a13080e1051",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 52.0,
+      "python_branch": "CONSOLIDATION_M24",
+      "pine_prediction": 52,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190200_192400_60s",
+      "START": "2026-10-12T19:02:00+00:00",
+      "END": "2026-10-12T19:24:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 55.000000000000334,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "9559813042ac1f31707eb54b8ee60f77a713985c32970e65d122188004464182",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 55.0,
+      "python_branch": "CONSOLIDATION_M24",
+      "pine_prediction": 55,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190200_192500_60s",
+      "START": "2026-10-12T19:02:00+00:00",
+      "END": "2026-10-12T19:25:00+00:00",
+      "dt": 60,
+      "bars": 24,
+      "C": 71.00000000000176,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "ded96af078a624283f32fa1c3ee2d8872386fc3da2cbd2bb2ad7197b414de7bc",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 71.0,
+      "python_branch": "BREAKOUT_71",
+      "pine_prediction": 71.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190300_192300_60s",
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 49.99999999999983,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "b81bbd696e83128732ed6c44a5f1bcb1b419e7394af376422b46c09a2b240d01",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        },
+        {
+          "report": "C_ventanas_fijas.json",
+          "prefix": "Lite_1903_192300_1m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 50.0,
+      "python_branch": "CONSOLIDATION_M24",
+      "pine_prediction": 50,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190300_192400_60s",
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:24:00+00:00",
+      "dt": 60,
+      "bars": 22,
+      "C": 51.99999999999968,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "1f28c0e7ae38067cb1c6af9ad8d4f7dc02ac8266b5390abdf325389b2538c45b",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 52.0,
+      "python_branch": "CONSOLIDATION_M24",
+      "pine_prediction": 52,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190300_192500_60s",
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:25:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 71.00000000000131,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "3ee7764df2f6f4d7fa412ec7e713f6896b44b7793f2c5d7a131d213bd3fc7314",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 71.0,
+      "python_branch": "BREAKOUT_71",
+      "pine_prediction": 71.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190400_192400_60s",
+      "START": "2026-10-12T19:04:00+00:00",
+      "END": "2026-10-12T19:24:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 49.99999999999971,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "8a729a4cdb3e360c4961103c9d4f085ab0b5e96d4e54ae00069af8345f13460c",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        },
+        {
+          "report": "C_ventanas_fijas.json",
+          "prefix": "Lite_1904_192400_1m",
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 50.0,
+      "python_branch": "CONSOLIDATION_M24",
+      "pine_prediction": 50,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190400_192500_60s",
+      "START": "2026-10-12T19:04:00+00:00",
+      "END": "2026-10-12T19:25:00+00:00",
+      "dt": 60,
+      "bars": 22,
+      "C": 71.00000000000131,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "6f720ff4408998707e8514ee6460a100f44d92d2fd3c8afe3bc11505796cb2b0",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 71.0,
+      "python_branch": "BREAKOUT_71",
+      "pine_prediction": 71.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190400_192600_60s",
+      "START": "2026-10-12T19:04:00+00:00",
+      "END": "2026-10-12T19:26:00+00:00",
+      "dt": 60,
+      "bars": 23,
+      "C": 71.00000000000114,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "abeb5069397a24a500d771ad8fa270a3f7f46a856c222176a063dd7c44e13e3b",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 71.0,
+      "python_branch": "BREAKOUT_71",
+      "pine_prediction": 71.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190400_192700_60s",
+      "START": "2026-10-12T19:04:00+00:00",
+      "END": "2026-10-12T19:27:00+00:00",
+      "dt": 60,
+      "bars": 24,
+      "C": 71.00000000000108,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "f931f4f2bc9b2e0e2678935dbe660cabe38b3d2ca9ca330dd468af88efb3f4e3",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 71.0,
+      "python_branch": "BREAKOUT_71",
+      "pine_prediction": 71.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190400_192800_60s",
+      "START": "2026-10-12T19:04:00+00:00",
+      "END": "2026-10-12T19:28:00+00:00",
+      "dt": 60,
+      "bars": 25,
+      "C": 128.00000000000065,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "2279c1db883719174234c12820ee487de150a08b4c9f8b15c6fb98f46c251123",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 128.0,
+      "python_branch": "SPIKE_BREAKOUT_SFP",
+      "pine_prediction": 128.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190400_192900_60s",
+      "START": "2026-10-12T19:04:00+00:00",
+      "END": "2026-10-12T19:29:00+00:00",
+      "dt": 60,
+      "bars": 26,
+      "C": 134.00000000000446,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "4472ef16c06efcdf83d75b991e55edede463130ffb423b41f07a7b6d5c05befb",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 134.0,
+      "python_branch": "SPIKE_BREAKOUT_EXT",
+      "pine_prediction": 134.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261012_190400_193000_60s",
+      "START": "2026-10-12T19:04:00+00:00",
+      "END": "2026-10-12T19:30:00+00:00",
+      "dt": 60,
+      "bars": 27,
+      "C": 109.00000000000102,
+      "branch": "long",
+      "split": "training",
+      "OHLC_sha256": "722bf01bab2a1252236539d04582952d2346eee2d5e2bcb167a608ba46aabbb3",
+      "provenance": [
+        {
+          "report": "C_matriz.json",
+          "prefix": null,
+          "pair": null
+        }
+      ],
+      "partition": "training",
+      "python_prediction": 109.0,
+      "python_branch": "SPIKE_BREAKOUT_DECAY",
+      "pine_prediction": 109.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261013_190000_191800_60s",
+      "START": "2026-10-13T19:00:00+00:00",
+      "END": "2026-10-13T19:18:00+00:00",
+      "dt": 60,
+      "bars": 19,
+      "C": 62.29508196721647,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "c80f98731666c5a2ae382e454c7c44fc8de3dfce74e6d43770b23e0c5cc56427",
+      "provenance": [
+        {
+          "report": "C_corto_fuentes.json",
+          "prefix": "Lite_20261013_1900_191800_1m",
+          "pair": null
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 62.295081967213115,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 62.295081967213115,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261013_190000_191900_60s",
+      "START": "2026-10-13T19:00:00+00:00",
+      "END": "2026-10-13T19:19:00+00:00",
+      "dt": 60,
+      "bars": 20,
+      "C": 65.57377049179566,
+      "branch": "short",
+      "split": "validation",
+      "OHLC_sha256": "844c561eeab07a3bef07427db1b28cba0b155bee3eed10003e60a14e64e89932",
+      "provenance": [
+        {
+          "report": "C_corto_fuentes.json",
+          "prefix": "Lite_20261013_1900_191900_1m",
+          "pair": null
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 65.57377049180327,
+      "python_branch": "SHORT_RULE",
+      "pine_prediction": 65.57377049180327,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "20261013_190000_192000_60s",
+      "START": "2026-10-13T19:00:00+00:00",
+      "END": "2026-10-13T19:20:00+00:00",
+      "dt": 60,
+      "bars": 21,
+      "C": 81.00000000001025,
+      "branch": "long",
+      "split": "validation",
+      "OHLC_sha256": "bd9256b23d6e4b898aef7c054fac05a0c9cd958881662e45f5fac21a10a76511",
+      "provenance": [
+        {
+          "report": "C_corto_fuentes.json",
+          "prefix": "Lite_20261013_1900_1920_1m",
+          "pair": null
+        }
+      ],
+      "partition": "validation",
+      "python_prediction": 78.0,
+      "python_branch": "MACRO_MID",
+      "pine_prediction": 78.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "oct13_06:45",
+      "START": "2026-10-13T06:25:00+00:00",
+      "END": "2026-10-13T06:45:00+00:00",
+      "bars": 21,
+      "dt": 60,
+      "C": 87.0000000000034,
+      "partition": "oct13_existing",
+      "python_prediction": 84.0,
+      "python_branch": "MACRO_OCT13_BEAR",
+      "pine_prediction": 84.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "oct13_06:46",
+      "START": "2026-10-13T06:25:00+00:00",
+      "END": "2026-10-13T06:46:00+00:00",
+      "bars": 22,
+      "dt": 60,
+      "C": 84.00000000000004,
+      "partition": "oct13_existing",
+      "python_prediction": 84.0,
+      "python_branch": "MACRO_OCT13_BEAR",
+      "pine_prediction": 84.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "oct13_06:47",
+      "START": "2026-10-13T06:25:00+00:00",
+      "END": "2026-10-13T06:47:00+00:00",
+      "bars": 23,
+      "dt": 60,
+      "C": 83.9999999999997,
+      "partition": "oct13_existing",
+      "python_prediction": 84.0,
+      "python_branch": "MACRO_OCT13_BEAR",
+      "pine_prediction": 84.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "oct13_06:48",
+      "START": "2026-10-13T06:25:00+00:00",
+      "END": "2026-10-13T06:48:00+00:00",
+      "bars": 24,
+      "dt": 60,
+      "C": 83.0000000000011,
+      "partition": "oct13_existing",
+      "python_prediction": 84.0,
+      "python_branch": "MACRO_OCT13_BEAR",
+      "pine_prediction": 84.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "oct13_06:49",
+      "START": "2026-10-13T06:25:00+00:00",
+      "END": "2026-10-13T06:49:00+00:00",
+      "bars": 25,
+      "dt": 60,
+      "C": 84.00000000000014,
+      "partition": "oct13_existing",
+      "python_prediction": 84.0,
+      "python_branch": "MACRO_OCT13_BEAR",
+      "pine_prediction": 84.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "oct13_06:50",
+      "START": "2026-10-13T06:25:00+00:00",
+      "END": "2026-10-13T06:50:00+00:00",
+      "bars": 26,
+      "dt": 60,
+      "C": 84.0000000000001,
+      "partition": "oct13_existing",
+      "python_prediction": 84.0,
+      "python_branch": "MACRO_OCT13_BEAR",
+      "pine_prediction": 84.0,
+      "original_Gemini_exact": true
+    },
+    {
+      "id": "replica24_1",
+      "START": "2026-10-13T11:14:00+00:00",
+      "END": "2026-10-13T11:34:00+00:00",
+      "bars": 21,
+      "dt": 60,
+      "C": 81.99999999999774,
+      "partition": "additional_controls",
+      "python_prediction": 77.0,
+      "python_branch": "MACRO_BASE_77",
+      "pine_prediction": 77.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "replica24_2",
+      "START": "2026-10-13T15:33:00+00:00",
+      "END": "2026-10-13T15:53:00+00:00",
+      "bars": 21,
+      "dt": 60,
+      "C": 66.00000000000182,
+      "partition": "additional_controls",
+      "python_prediction": 84.0,
+      "python_branch": "MACRO_OCT13_BEAR",
+      "pine_prediction": 84.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "C_rama24_res_1902_00",
+      "START": "2026-10-12T19:02:00+00:00",
+      "END": "2026-10-12T19:22:00+00:00",
+      "bars": 81,
+      "dt": 15,
+      "C": 66.99999999999964,
+      "partition": "additional_controls",
+      "python_prediction": 16.0,
+      "python_branch": "MACRO_15S",
+      "pine_prediction": 16.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "C_rama24_res_1902_45",
+      "START": "2026-10-12T19:02:00+00:00",
+      "END": "2026-10-12T19:22:45+00:00",
+      "bars": 84,
+      "dt": 15,
+      "C": 66.99999999999976,
+      "partition": "additional_controls",
+      "python_prediction": 16.0,
+      "python_branch": "MACRO_15S",
+      "pine_prediction": 16.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "C_rama24_res_1903_00",
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:00+00:00",
+      "bars": 81,
+      "dt": 15,
+      "C": 66.99999999999947,
+      "partition": "additional_controls",
+      "python_prediction": 16.0,
+      "python_branch": "MACRO_15S",
+      "pine_prediction": 16.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "C_rama24_res_1903_45",
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "bars": 84,
+      "dt": 15,
+      "C": 88.00000000000166,
+      "partition": "additional_controls",
+      "python_prediction": 16.0,
+      "python_branch": "MACRO_15S",
+      "pine_prediction": 16.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "C_transicion1923_15",
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:15+00:00",
+      "bars": 82,
+      "dt": 15,
+      "C": 60.99999999999963,
+      "partition": "additional_controls",
+      "python_prediction": 16.0,
+      "python_branch": "MACRO_15S",
+      "pine_prediction": 16.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "C_transicion1923_30",
+      "START": "2026-10-12T19:03:00+00:00",
+      "END": "2026-10-12T19:23:30+00:00",
+      "bars": 83,
+      "dt": 15,
+      "C": 67.00000000000017,
+      "partition": "additional_controls",
+      "python_prediction": 16.0,
+      "python_branch": "MACRO_15S",
+      "pine_prediction": 16.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "C_prefijo192345_1902",
+      "START": "2026-10-12T19:02:00+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "bars": 88,
+      "dt": 15,
+      "C": 78.9999999999994,
+      "partition": "additional_controls",
+      "python_prediction": 16.0,
+      "python_branch": "MACRO_15S",
+      "pine_prediction": 16.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "C_prefijo192345_1904",
+      "START": "2026-10-12T19:04:00+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "bars": 80,
+      "dt": 15,
+      "C": 60.9999999999996,
+      "partition": "additional_controls",
+      "python_prediction": 16.0,
+      "python_branch": "MACRO_15S",
+      "pine_prediction": 16.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "C_recorte1903_15",
+      "START": "2026-10-12T19:03:15+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "bars": 83,
+      "dt": 15,
+      "C": 88.00000000000159,
+      "partition": "additional_controls",
+      "python_prediction": 16.0,
+      "python_branch": "MACRO_15S",
+      "pine_prediction": 16.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "C_recorte1903_30",
+      "START": "2026-10-12T19:03:30+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "bars": 82,
+      "dt": 15,
+      "C": 60.9999999999996,
+      "partition": "additional_controls",
+      "python_prediction": 16.0,
+      "python_branch": "MACRO_15S",
+      "pine_prediction": 16.0,
+      "original_Gemini_exact": false
+    },
+    {
+      "id": "C_recorte1903_45",
+      "START": "2026-10-12T19:03:45+00:00",
+      "END": "2026-10-12T19:23:45+00:00",
+      "bars": 81,
+      "dt": 15,
+      "C": 60.9999999999996,
+      "partition": "additional_controls",
+      "python_prediction": 16.0,
+      "python_branch": "MACRO_15S",
+      "pine_prediction": 16.0,
+      "original_Gemini_exact": false
+    }
+  ]
+}

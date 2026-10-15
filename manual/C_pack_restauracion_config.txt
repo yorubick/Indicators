@@ -1,0 +1,542 @@
+Browser tab: 1, Title: "NQ1! 30,799.50 ▲ +0.03% EMA - investigacion PoiSzn", URL: "https://www.tradingview.com/chart/uXfdB8FS/".
+0 AXWebArea NQ1! 30,799.50 ▲ +0.03% EMA - investigacion PoiSzn, URL: tradingview.com/chart/uXfdB8FS/
+	1 container
+		2 pop up button Logged in as FrankyProfit Active layout: EMA - investigacion PoiSzn
+		3 text 11
+		4 toolbar
+			3246 container
+				3247 button NQ1!, Help: Symbol search, ID: header-toolbar-symbol-search
+				3248 button Description: Switch data type, ID: header-toolbar-switch-data-type
+				3249 pop up button Description: Compare symbols, ID: header-toolbar-compare
+				3250 container header-toolbar-intervals
+					3251 radio button Description: 15 seconds, Value: 0
+						3252 container
+							3253 text 15 s
+					3254 radio button Description: 30 seconds, Value: 0
+						3255 container
+							3256 text 30 s
+					3257 radio button Description: 1 minute, Value: 1
+						3258 container
+							3259 text 1 m
+					3260 radio button Description: 2 minutes, Value: 0
+						3261 container
+							3262 text 2 m
+					3263 radio button Description: 3 minutes, Value: 0
+						3264 container
+							3265 text 3 m
+					3266 radio button Description: 5 minutes, Value: 0
+						3267 container
+							3268 text 5 m
+					3269 radio button Description: 15 minutes, Value: 0
+						3270 container
+							3271 text 15 m
+					3272 radio button Description: 30 minutes, Value: 0
+						3273 container
+							3274 text 30 m
+					3275 radio button Description: 1 hour, Value: 0
+						3276 container
+							3277 text 1 h
+					3278 radio button Description: 4 hours, Value: 0
+						3279 container
+							3280 text 4 h
+					3281 radio button Description: 1 day, Value: 0
+						3282 text D
+					3283 radio button Description: 1 week, Value: 0
+						3284 text W
+					3285 radio button Description: 1 month, Value: 0
+						3286 text M
+					3287 radio button Description: 3 months, Value: 0
+						3288 container
+							3289 text 3 M
+					3290 radio button Description: 12 months, Value: 0
+						3291 container
+							3292 text 12 M
+					3293 pop up button Chart interval
+				3294 container header-toolbar-chart-styles
+					3295 radio button Description: Line, Value: 0
+					3296 radio button Description: Session volume profile, Value: 0
+					3297 radio button Description: Candles, Value: 1
+					3298 pop up button Bar's style
+				3299 container header-toolbar-indicators
+					3300 button Indicators, metrics, and strategies
+					3301 pop up button Favorite indicators
+				3302 pop up button Indicator templates
+				3303 button Description: Create alert, ID: header-toolbar-alerts
+				3304 checkbox Description: Bar replay, Value: 0, ID: header-toolbar-replay
+				3347 container header-toolbar-undo-redo
+					3348 button Undo scale price chart only
+				3305 pop up button Description: Layout setup, ID: header-toolbar-layouts
+				3306 container header-toolbar-save-load
+					3307 button Save all charts for all symbols and intervals on your layout
+						3308 text EMA - investigacion PoiSzn
+						3309 text Save
+					3310 pop up button Manage layouts
+					3311 link Description: CLEAN, Value: tradingview.com/chart/8kCH024h/
+					3312 link Description: EMA - investigacion PoiSzn, Value: tradingview.com/chart/uXfdB8FS/
+					3313 link Description: HTF, Value: tradingview.com/chart/DSMxjPXR/
+					3314 link Description: OW LEVELS, Value: tradingview.com/chart/Y0MvX5IP/
+					3315 link Description: RANGOS, Value: tradingview.com/chart/Bb3P8Rf8/
+					3316 link Description: rubick, Value: tradingview.com/chart/DvqsdW8t/
+					3317 link Description: SMTs, Value: tradingview.com/chart/US2LCTq5/
+					3318 link Description: tp zones, Value: tradingview.com/chart/8nY0U35g/
+					3319 link Description: Tu maestro, Value: tradingview.com/chart/Xfvkt4x9/
+				3320 button Description: Quick search, ID: header-toolbar-quick-search
+				3321 button Description: Settings, ID: header-toolbar-properties
+				3322 button Description: Fullscreen mode, ID: header-toolbar-fullscreen
+				3323 pop up button Take a snapshot
+			83 pop up button Share your idea with the trade community
+			84 container
+				85 button Trade
+					86 text Trade
+		87 toolbar drawing-toolbar
+			88 container
+				89 container
+					90 button Cross
+					91 checkbox Description: Cursors, Value: 1
+				92 container
+					93 button Trendline
+					94 checkbox Description: Trend tools, Value: 0
+				95 container
+					96 button Fib retracement
+					97 checkbox Description: Gann and Fibonacci tools, Value: 0
+				98 container
+					99 button XABCD pattern
+					100 checkbox Description: Patterns, Value: 0
+				101 container
+					102 button Long position
+					103 checkbox Description: Forecasting and measurement tools, Value: 0
+				104 container
+					105 button Brush
+					106 checkbox Description: Geometric shapes, Value: 0
+				107 container
+					108 button Text
+					109 checkbox Description: Annotation tools, Value: 0
+				110 container
+					111 button Icon
+					112 checkbox Description: Icons, Value: 0
+				113 button Measure
+				114 button Zoom in
+				115 container
+					116 checkbox Description: Magnet mode snaps drawings placed near price bars to the closest OHLC value, Value: 1
+					117 checkbox Description: Magnets, Value: 1
+				118 checkbox Description: Keep drawing, Value: 0
+				119 container
+					120 checkbox Description: Lock drawings and indicators, Value: 0
+					121 checkbox Description: Lock options, Value: 0
+				122 container
+					123 checkbox Description: Hide all drawings, Value: 0
+					124 checkbox Description: Hide options, Value: 0
+				125 container
+					126 checkbox Description: New drawings will not be synced, Value: 0
+					127 checkbox Description: Sync drawings options, Value: 0
+				128 container
+					129 button Remove objects
+					130 button Remove options
+				131 checkbox Description: Show Favorite Drawing Tools Toolbar, Value: 1, ID: drawing-toolbar-favorite-drawings
+		132 container Chart #1
+			133 container
+				134 toolbar
+					135 container
+						2779 container Change symbol
+							2780 container
+								2781 image
+								2782 text N
+							2783 button Change symbol
+						2784 container Change interval
+							3146 text ·
+							2786 button Change interval
+						2787 container CME GLOBEX — Chicago Mercantile Exchange Globex
+							3147 text ·
+							2789 text CME
+					147 container
+						148 button Unflag symbol
+						149 button More
+							150 image
+					3121 button Market open
+					3555 container
+						3556 text O 30,797.00 H 30,801.50 L 30,796.50 C 30,799.50 +3.25 (+0.01%)
+				154 container
+					155 text 30,799.00 SELL
+					3124 text 0.75
+					3125 text 30,799.75 BUY
+				158 container
+					159 button Hide indicators legend
+					160 toolbar
+						161 text Vol
+						162 container
+							163 button Hide
+								164 image
+							165 button Settings
+								166 image
+							167 button Remove
+								168 image
+							169 button More
+								170 image
+						3326 text 106
+					172 toolbar
+						173 container
+							174 text CT6536USR
+							175 text B
+							176 text Dark
+							177 text Manual
+							178 text 30,865.83
+							179 text 30,870.00
+							180 text Auto
+							181 text 0
+							182 text Auto
+							183 text C cloud
+							184 text Balanced
+							185 text Labels
+							186 text Tiny
+							187 text BUY
+							188 text SELL
+							189 text EXIT
+							190 text COVER
+							191 text Compact tags
+							192 text Tiny
+							193 text 12
+							194 text GS?
+							195 text GS?
+							196 text GS
+							197 text GS
+							198 text 90
+							199 text 87
+						200 container
+							201 button Hide
+								202 image
+							203 button Settings
+								204 image
+							205 button Remove
+								206 image
+							207 button More
+								208 image
+						209 button Update available
+						3362 container
+							3363 text 30,779.36
+							3364 text 30,778.23
+							3365 text 30,785.69
+							3366 text 30,784.62
+							3367 text 30,790.61
+							3368 text 30,790.61
+							3369 text 30,783.03
+							3370 text 30,787.79
+							3371 text 30,811.40
+							3372 text 30,814.61
+							3373 text 0.00
+							3374 text 0.00
+					223 toolbar
+						224 container
+							225 text 7Cloud
+							226 text 78
+							227 text 84
+							228 text 72
+							229 text 88
+							230 text 80
+							231 text 35
+							232 text 1S
+							233 text 5S
+							234 text 15S
+							235 text 1
+							236 text 3
+							237 text 9
+							238 text 27
+							239 text 81
+							240 text 243
+							241 text 729
+							242 text Manual
+							243 text 2
+							244 text Top right
+							245 text 2
+							246 text 6
+							247 text 15
+							248 text 60
+							249 text 162
+							250 text 486
+						251 container
+							252 button Show
+								253 image
+							254 button Settings
+								255 image
+							256 button Remove
+								257 image
+							258 button More
+								259 image
+					260 toolbar
+						261 container
+							262 text PoiSzn CCII
+							263 text 30,870.50
+							264 text Click position (nearest wick)
+							265 text 0
+							266 text If it sweeps both sides
+							267 text Flag but keep
+							268 text 0
+							269 text 10
+							270 text 13
+							271 text Detection timeframe
+							272 text ATR (auto-scale)
+							273 text 2
+							274 text 14
+							275 text 0.08
+							276 text Show as filled
+							277 text 10
+							278 text 1,500
+							279 text 1
+							280 text Dashed
+							281 text 0
+							282 text 0.5
+						283 container
+							284 button Show
+								285 image
+							286 button Settings
+								287 image
+							288 button Remove
+								289 image
+							290 button More
+								291 image
+					292 toolbar
+						293 container
+							2909 text PS EMA LITE
+							2910 text 1
+							2911 text Dark
+						297 container
+							298 button Hide
+								299 image
+							300 button Settings
+								301 image
+							302 button Remove
+								303 image
+							304 button More
+								305 image
+						3340 container
+							3341 text 30,779.41
+							3342 text 30,778.28
+							3343 text 30,785.53
+							3344 text 30,784.51
+							3345 text 30,791.08
+							3346 text 30,789.92
+				313 image Chart for CME_MINI:NQ1!, 1 minute
+		314 toolbar
+			315 container
+				316 button 1 day in 1 minute intervals
+					317 text 1D
+				318 button 5 days in 5 minutes intervals
+					319 text 5D
+				320 button 1 month in 30 minutes intervals
+					321 text 1M
+				322 button 3 months in 1 hour intervals
+					323 text 3M
+				324 button 6 months in 2 hours intervals
+					325 text 6M
+				326 button Year to day in 1 day intervals
+					327 text YTD
+				328 button 1 year in 1 day intervals
+					329 text 1Y
+				330 button 5 years in 1 week intervals
+					331 text 5Y
+				332 button All data in 1 month intervals
+					333 text All
+				334 button Go to
+			335 container
+				336 button Timezone
+					337 text 06:44:20 AM UTC
+				338 pop up button Electronic trading hours
+				339 checkbox Description: Adjust for contract changes, Value: 0
+					340 text B-ADJ
+		341 container
+			342 toolbar
+				343 checkbox Description: Watchlist, details, and news, Value: 0
+				344 checkbox Description: Alerts, Value: 0
+					345 container 72 unread alert notifications
+				346 checkbox Description: Object tree and data window, Value: 0
+				347 checkbox Description: AI Copilot, Value: 0
+				348 checkbox Description: Screeners, Value: 0
+				349 checkbox Description: Pine, Value: 0
+				350 checkbox Description: Calendars, Value: 0
+				351 checkbox Description: Community, Value: 0
+				352 checkbox Description: Notifications, Value: 0
+				353 checkbox Description: Chats, Value: 0
+				354 pop up button Products
+				355 checkbox Description: Help Center, Value: 0
+		356 container Trading panel
+	3375 container common-tooltip-wrapper
+		3376 text Character Tree v6.5.36 - Public 
+	3377 container overlap-manager-root
+		3378 container
+			3379 container CT6536USR
+				3380 container CT6536USR
+					3381 text CT6536USR
+					3382 button Close menu
+					3383 tab group indicator-properties-dialog-tabs
+						3384 tab (selected, settable, boolean) Inputs, Value: 1, ID: inputs
+						3385 tab (selectable, settable, boolean) Style, Value: 0, ID: style
+						3386 tab (selectable, settable, boolean) Visibility, Value: 0, ID: visibilities
+					3387 container
+						3388 text APPEARANCE Profile
+						3389 combo box (collapsed) Value: B, ID: in_0, Secondary Actions: Expand
+							3390 text B
+						3391 text Theme
+						3392 combo box (collapsed) Value: Dark, ID: in_1, Secondary Actions: Expand
+							3393 text Dark
+						3394 checkbox (settable, integer) Description: Show delivery signals, Value: 1
+						3395 text Show delivery signals SETUP Box selection
+						3396 combo box (collapsed) Value: Manual, ID: in_3, Secondary Actions: Expand
+							3397 text Manual
+						3398 container Manual uses START and END. Auto Balanced uses END and a later retracement wick to find the range automatically.
+						3399 text Point 1 price
+						3400 text field (settable) 30865.825141172434
+						3401 text Point 1 time
+						3402 text field (settable) 2026-10-12
+						3403 combo box (settable) 18:55
+						3404 container Manual: click the range START candle. Auto: click the fixed box END candle.
+						3405 text Point 2 price
+						3406 text field (settable) 30870.00293571817
+						3407 text Point 2 time
+						3408 text field (settable) 2026-10-12
+						3409 combo box (settable) 19:20
+						3410 container Manual: click the range END candle (price is ignored). Auto: click the later RETRACEMENT WICK, including its price. When changing modes, reposition both points for their new roles.
+						3411 text Manual data resolution
+						3412 combo box (collapsed) Value: Chart, ID: in_8, Secondary Actions: Expand
+							3413 text Chart
+						3414 text Setup direction
+						3415 combo box (collapsed) Value: Auto, ID: in_9, Secondary Actions: Expand
+							3416 text Auto
+						3417 container Auto Balanced only. Auto: Point 2 price above the END candle high = bullish (uses the wick low), below = bearish (uses the wick high). Bullish / Bearish: forces the side, so Point 2 price no longer matters.
+						3418 text Minimum range (minutes)
+						3419 text field (settable) 0
+						3420 container Auto Balanced only. 0 = no minimum. Above 0, shorter ranges are rejected; if the Character fitted to the wick cannot support a range this long, the shortest-window estimated box is drawn.
+						3421 text FLOW BANDS SIGNALS
+						3422 checkbox (settable, integer) Description: Show Flow Bands signals, Value: 1
+						3423 text Show Flow Bands signals Direction mode
+						3424 combo box (collapsed) Value: Auto, ID: in_12, Secondary Actions: Expand
+							3425 text Auto
+						3426 checkbox (settable, integer) Description: Show Auto flips (BULL FLOW / BEAR FLOW), Value: 1
+						3427 text Show Auto flips (BULL FLOW / BEAR FLOW)
+						3428 checkbox (settable, integer) Description: Show Auto direction tag, Value: 1
+						3429 text Show Auto direction tag
+						3430 container Auto only. Marks the starting side at END and shows the live side on the last bar.
+						3431 text Auto flip confirmation
+						3432 combo box (collapsed) Value: C cloud, ID: in_15, Secondary Actions: Expand
+							3433 text C cloud
+						3434 container Auto only. What the flip close must also clear. C cloud: the full-Character cloud (slowest, ignores chop around the C/3 cloud; hold and cancel window = one C). C/3 cloud: the slow Character cloud (hold = one C/3). C/9 swing: the last confirmed C/9 swing.
+						3435 text Auto flip speed
+						3436 combo box (collapsed) Value: Balanced, ID: in_16, Secondary Actions: Expand
+							3437 text Balanced
+						3438 container Auto only. Flips when completed C/9 candles close beyond the inner band the current side should defend AND beyond the selected confirmation. Balanced = two consecutive closes, Fast = one.
+						3439 text BUY colour
+						3440 button
+						3441 text SELL colour
+						3442 button
+						3443 text EXIT colour
+						3444 button
+						3445 text COVER colour
+						3446 button
+						3447 text Signal display
+						3448 combo box (collapsed) Value: Pane labels, ID: in_21, Secondary Actions: Expand
+							3449 text Pane labels
+						3450 text Signal size
+						3451 combo box (collapsed) Value: Tiny, ID: in_22, Secondary Actions: Expand
+							3452 text Tiny
+						3453 text Label text colour
+						3454 button
+						3455 checkbox (settable, integer) Description: Show BUY, Value: 1
+						3456 text Show BUY
+						3457 checkbox (settable, integer) Description: Show SELL, Value: 1
+						3458 text Show SELL
+						3459 checkbox (settable, integer) Description: Show EXIT, Value: 1
+						3460 text Show EXIT
+						3461 checkbox (settable, integer) Description: Show COVER, Value: 1
+						3462 text Show COVER BUY text
+						3463 text field (settable) BUY
+						3464 text SELL text
+						3465 text field (settable) SELL
+						3466 text EXIT text
+						3467 text field (settable) EXIT
+						3468 text COVER text
+						3469 text field (settable) COVER
+						3470 text 3. CHARACTER EMAS
+						3471 checkbox (settable, integer) Description: Show extra EMA clouds, Value: 1
+						3472 text Show extra EMA clouds
+						3473 checkbox (settable, integer) Description: Show EMA timeframe labels, Value: 1
+						3474 text Show EMA timeframe labels
+						3475 container Show the Character family seconds and the nearest TradingView candle timeframe at the current EMA values. Labels only; the EMAs remain on the native Character source.
+						3476 text Extra cloud 1 colour
+						3477 button
+						3478 text Extra cloud 2 colour
+						3479 button
+						3480 text GEAR SHIFTS
+						3481 checkbox (settable, integer) Description: Show gear shifts, Value: 1
+						3482 text Show gear shifts
+						3483 checkbox (settable, integer) Description: Use chart data when source data is missing, Value: 1
+						3484 text Use chart data when source data is missing
+						3485 container Processes closed chart candles if finer source candles are unavailable. Results may differ from the selected source. Small gears still require finer data.
+						3486 checkbox (settable, integer) Description: Show hidden speed clouds, Value: 1
+						3487 text Show hidden speed clouds
+						3488 checkbox (settable, integer) Description: Show GS compression boxes, Value: 1
+						3489 text Show GS compression boxes Signal display
+						3490 combo box (collapsed) Value: Compact tags, ID: in_40, Secondary Actions: Expand
+							3491 text Compact tags
+						3492 text Signal size
+						3493 combo box (collapsed) Value: Tiny, ID: in_41, Secondary Actions: Expand
+							3494 text Tiny
+						3495 text GS signals kept
+						3496 text field (settable) 12
+						3497 checkbox (settable, integer) Description: Show GS Up?, Value: 1
+						3498 text Show GS Up?
+						3499 checkbox (settable, integer) Description: Show GS Down?, Value: 1
+						3500 text Show GS Down?
+						3501 checkbox (settable, integer) Description: Show GS up, Value: 1
+						3502 text Show GS up
+						3503 checkbox (settable, integer) Description: Show GS down, Value: 1
+						3504 text Show GS down GS up warning text
+						3505 text field (settable) GS?
+						3506 text GS down warning text
+						3507 text field (settable) GS?
+						3508 text GS up text
+						3509 text field (settable) GS
+						3510 text GS down text
+						3511 text field (settable) GS
+						3512 text GS up warning colour
+						3513 button
+						3514 text GS down warning colour
+						3515 button
+						3516 text GS up colour
+						3517 button
+						3518 text GS down colour
+						3519 button
+						3520 text GS label text colour
+						3521 button
+						3522 text Compression colour
+						3523 button
+						3524 text Speed cloud 1 colour
+						3525 button
+						3526 text Speed cloud 2 colour
+						3527 button
+						3528 text PROJECTIONS
+						3529 checkbox (settable, integer) Description: Show fib projections, Value: 0
+						3530 text Show fib projections
+						3531 container Show or hide the standard horizontal price projections and their labels.
+						3532 checkbox (settable, integer) Description: Show Feigenbaum lines, Value: 0
+						3533 text Show Feigenbaum lines
+						3534 container Show or hide the vertical timing lines and M-end label.
+						3535 text DISPLAY
+						3536 checkbox (settable, integer) Description: Show range, Value: 1
+						3537 text Show range
+						3538 checkbox (settable, integer) Description: Show PD arrays, Value: 0
+						3539 text Show PD arrays Range transparency
+						3540 text field (settable) 90
+						3541 text PD ARRAY COLOURS
+						3542 checkbox (settable, integer) Description: Show PD array 50% lines, Value: 1
+						3543 text Show PD array 50% lines Bullish arrays
+						3544 button
+						3545 text Bearish arrays
+						3546 button
+						3547 text Mitigated arrays
+						3548 button
+						3549 text Fill transparency (0 solid, 100 invisible)
+						3550 text field (settable) 87
+					3551 pop up button (collapsed) Defaults, ID: property-actions, Secondary Actions: Expand
+					3552 container
+						3553 button Cancel
+						3554 button Ok
+
+The focused UI element is 3379 container CT6536USR

@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-14",
+  "START_UTC": "2026-10-14T14:04:00Z",
+  "source_seconds": 1,
+  "chart_seconds": 1,
+  "version": "Loaded original Lite v1.2; do not apply update",
+  "initial_counts": [25, 30, 40],
+  "predictions_C": {"25": 1, "30": 1, "40": 1},
+  "hypothesis": "Local plateau persists through40; deliberately falsifiable, not a universal formula",
+  "adaptive_rule": "If a tested count differs from1 by more than1e-6, measure every unmeasured integer count between the last confirmed1 count and first different count, in ascending order. If all remain1, stop this block at40 and record no transition found. Do not extrapolate or fit a new formula after outcomes.",
+  "acceptance": "Exact axes anchors; all range and600 following native1s samples present; stable paired closed OHLCV and six Lite plots; agreementC1e-6, recurrenceRMSE1e-8, seed and visibility reconstruction error1e-8",
+  "scope": "Known START, new prospective END measurements; same episode as previous replicates; no independent-market validation. Distinct plateau value is not assumed integer. No forced direction or replay test."
+}

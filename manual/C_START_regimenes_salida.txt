@@ -1,0 +1,317 @@
+{
+  "cases": [
+    {
+      "prefix": "C_START_barrido_alcista_18",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "regime": "alcista",
+      "START": "2026-10-12T15:33:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "bars": 18,
+      "C": 59.99999999999997,
+      "baseline_21_C": 69.00000000000038,
+      "prediction_before_measurement": 60,
+      "prediction_kind": "short_rule",
+      "prediction_match": true,
+      "high": 30965.5,
+      "low": 30886.5,
+      "same_global_extrema_as21": false,
+      "same_last21_OHLC": null,
+      "Character_interval": {
+        "lower_inclusive": 59.8876404494382,
+        "upper_exclusive": 60.1123595505618
+      },
+      "repeated_curve_cells": 39936,
+      "max_fit_rmse": 1.9418460322342393e-12
+    },
+    {
+      "prefix": "C_START_barrido_alcista_19",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "regime": "alcista",
+      "START": "2026-10-12T15:32:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "bars": 19,
+      "C": 62.29508196721181,
+      "baseline_21_C": 69.00000000000038,
+      "prediction_before_measurement": 62.295081967213115,
+      "prediction_kind": "short_rule",
+      "prediction_match": true,
+      "high": 30965.5,
+      "low": 30877.75,
+      "same_global_extrema_as21": true,
+      "same_last21_OHLC": null,
+      "Character_interval": {
+        "lower_inclusive": 62.13483146067416,
+        "upper_exclusive": 62.359550561797754
+      },
+      "repeated_curve_cells": 39920,
+      "max_fit_rmse": 2.427627812523061e-12
+    },
+    {
+      "prefix": "C_START_barrido_alcista_20",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "regime": "alcista",
+      "START": "2026-10-12T15:31:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "bars": 20,
+      "C": 65.57377049180353,
+      "baseline_21_C": 69.00000000000038,
+      "prediction_before_measurement": 65.57377049180327,
+      "prediction_kind": "short_rule",
+      "prediction_match": true,
+      "high": 30965.5,
+      "low": 30877.75,
+      "same_global_extrema_as21": true,
+      "same_last21_OHLC": null,
+      "Character_interval": {
+        "lower_inclusive": 65.50561797752809,
+        "upper_exclusive": 65.69444444444444
+      },
+      "repeated_curve_cells": 39920,
+      "max_fit_rmse": 2.3871977710154885e-12
+    },
+    {
+      "prefix": "C_START_barrido_alcista_22",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "regime": "alcista",
+      "START": "2026-10-12T15:29:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "bars": 22,
+      "C": 69.00000000000038,
+      "baseline_21_C": 69.00000000000038,
+      "prediction_before_measurement": 69.00000000000038,
+      "prediction_kind": "last21_only",
+      "prediction_match": true,
+      "high": 30965.5,
+      "low": 30877.75,
+      "same_global_extrema_as21": true,
+      "same_last21_OHLC": true,
+      "Character_interval": {
+        "lower_inclusive": 68.87640449438203,
+        "upper_exclusive": 69.02777777777777
+      },
+      "repeated_curve_cells": 39920,
+      "max_fit_rmse": 2.402893452470851e-12
+    },
+    {
+      "prefix": "C_START_barrido_alcista_23",
+      "pair": [
+        "e",
+        "f"
+      ],
+      "regime": "alcista",
+      "START": "2026-10-12T15:28:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "bars": 23,
+      "C": 81.00000000000013,
+      "baseline_21_C": 69.00000000000038,
+      "prediction_before_measurement": 69.00000000000038,
+      "prediction_kind": "last21_only",
+      "prediction_match": false,
+      "high": 30965.5,
+      "low": 30877.75,
+      "same_global_extrema_as21": true,
+      "same_last21_OHLC": true,
+      "Character_interval": {
+        "lower_inclusive": 80.97222222222223,
+        "upper_exclusive": 81.01123595505618
+      },
+      "repeated_curve_cells": 39968,
+      "max_fit_rmse": 2.4902807481947056e-12
+    },
+    {
+      "prefix": "C_START_barrido_alcista_24",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "regime": "alcista",
+      "START": "2026-10-12T15:27:00+00:00",
+      "END": "2026-10-12T15:50:00+00:00",
+      "bars": 24,
+      "C": 69.00000000000038,
+      "baseline_21_C": 69.00000000000038,
+      "prediction_before_measurement": 69.00000000000038,
+      "prediction_kind": "last21_only",
+      "prediction_match": true,
+      "high": 30965.5,
+      "low": 30877.75,
+      "same_global_extrema_as21": true,
+      "same_last21_OHLC": true,
+      "Character_interval": {
+        "lower_inclusive": 68.87640449438203,
+        "upper_exclusive": 69.02777777777777
+      },
+      "repeated_curve_cells": 39920,
+      "max_fit_rmse": 2.402893452470851e-12
+    },
+    {
+      "prefix": "C_START_barrido_lateral_18",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "regime": "lateral",
+      "START": "2026-10-12T07:03:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "bars": 18,
+      "C": 60.000000000001556,
+      "baseline_21_C": 75.00000000000104,
+      "prediction_before_measurement": 60,
+      "prediction_kind": "short_rule",
+      "prediction_match": true,
+      "high": 31194.5,
+      "low": 31157.0,
+      "same_global_extrema_as21": true,
+      "same_last21_OHLC": null,
+      "Character_interval": {
+        "lower_inclusive": 59.8876404494382,
+        "upper_exclusive": 60.1123595505618
+      },
+      "repeated_curve_cells": 39952,
+      "max_fit_rmse": 1.9559193205148054e-12
+    },
+    {
+      "prefix": "C_START_barrido_lateral_19",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "regime": "lateral",
+      "START": "2026-10-12T07:02:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "bars": 19,
+      "C": 62.29508196721074,
+      "baseline_21_C": 75.00000000000104,
+      "prediction_before_measurement": 62.295081967213115,
+      "prediction_kind": "short_rule",
+      "prediction_match": true,
+      "high": 31194.5,
+      "low": 31157.0,
+      "same_global_extrema_as21": true,
+      "same_last21_OHLC": null,
+      "Character_interval": {
+        "lower_inclusive": 62.13483146067416,
+        "upper_exclusive": 62.359550561797754
+      },
+      "repeated_curve_cells": 39952,
+      "max_fit_rmse": 2.443917580028309e-12
+    },
+    {
+      "prefix": "C_START_barrido_lateral_20",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "regime": "lateral",
+      "START": "2026-10-12T07:01:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "bars": 20,
+      "C": 65.57377049180424,
+      "baseline_21_C": 75.00000000000104,
+      "prediction_before_measurement": 65.57377049180327,
+      "prediction_kind": "short_rule",
+      "prediction_match": true,
+      "high": 31194.5,
+      "low": 31157.0,
+      "same_global_extrema_as21": true,
+      "same_last21_OHLC": null,
+      "Character_interval": {
+        "lower_inclusive": 65.50561797752809,
+        "upper_exclusive": 65.69444444444444
+      },
+      "repeated_curve_cells": 39952,
+      "max_fit_rmse": 2.3657189667086953e-12
+    },
+    {
+      "prefix": "C_START_barrido_lateral_22",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "regime": "lateral",
+      "START": "2026-10-12T06:59:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "bars": 22,
+      "C": 77.99999999999896,
+      "baseline_21_C": 75.00000000000104,
+      "prediction_before_measurement": 75.00000000000104,
+      "prediction_kind": "last21_only",
+      "prediction_match": false,
+      "high": 31194.5,
+      "low": 31157.0,
+      "same_global_extrema_as21": true,
+      "same_last21_OHLC": true,
+      "Character_interval": {
+        "lower_inclusive": 77.91666666666667,
+        "upper_exclusive": 78.08988764044943
+      },
+      "repeated_curve_cells": 39952,
+      "max_fit_rmse": 2.405204088748762e-12
+    },
+    {
+      "prefix": "C_START_barrido_lateral_23",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "regime": "lateral",
+      "START": "2026-10-12T06:58:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "bars": 23,
+      "C": 77.99999999999896,
+      "baseline_21_C": 75.00000000000104,
+      "prediction_before_measurement": 75.00000000000104,
+      "prediction_kind": "last21_only",
+      "prediction_match": false,
+      "high": 31194.5,
+      "low": 31157.0,
+      "same_global_extrema_as21": true,
+      "same_last21_OHLC": true,
+      "Character_interval": {
+        "lower_inclusive": 77.91666666666667,
+        "upper_exclusive": 78.08988764044943
+      },
+      "repeated_curve_cells": 39952,
+      "max_fit_rmse": 2.405204088748762e-12
+    },
+    {
+      "prefix": "C_START_barrido_lateral_24",
+      "pair": [
+        "c",
+        "d"
+      ],
+      "regime": "lateral",
+      "START": "2026-10-12T06:57:00+00:00",
+      "END": "2026-10-12T07:20:00+00:00",
+      "bars": 24,
+      "C": 86.9999999999997,
+      "baseline_21_C": 75.00000000000104,
+      "prediction_before_measurement": 75.00000000000104,
+      "prediction_kind": "last21_only",
+      "prediction_match": false,
+      "high": 31194.5,
+      "low": 31157.0,
+      "same_global_extrema_as21": true,
+      "same_last21_OHLC": true,
+      "Character_interval": {
+        "lower_inclusive": 86.85393258426966,
+        "upper_exclusive": 87.07865168539325
+      },
+      "repeated_curve_cells": 39952,
+      "max_fit_rmse": 2.1009469454957274e-12
+    }
+  ],
+  "failures": []
+}

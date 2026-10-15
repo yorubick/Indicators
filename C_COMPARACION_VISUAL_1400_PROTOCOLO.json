@@ -1,0 +1,8 @@
+{
+ "date":"2026-10-14","day_UTC":"2026-10-12",
+ "source_seconds":60,"chart_seconds":60,"indicator":"Existing Lite v1.2",
+ "cases":[{"START":"14:00","END":"14:21","expected_previous_C":62},{"START":"14:00","END":"14:22","expected_previous_C":83}],
+ "controls":"Two native CSV exports per case; independent six-curve C, exact OHLCV against longer-history source and prior master, complete range and one hour forward. Capture chart per case; restore18:55–19:20 and C62. No adjustment of proxy periods.",
+ "visual":"Use each screenshot for actual Lite plot; plot normalized native price and fixed EMA proxies from historical CSV separately. Label proxies clearly; do not mistake output periods selected by C for upstream cause.",
+ "limits":"Repeat of known historical cases, not blind validation. Pair illustrates same state signature but differing C; continuous distances/geometry can differ."
+}

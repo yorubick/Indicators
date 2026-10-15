@@ -1,0 +1,336 @@
+[000] 2026-10-13T15:09:56 | https://x.com/traderkane/status/2110025248259125696
+      Am I doing this vest thing correctly?
+
+[001] 2026-10-14T13:55:10 | https://x.com/PoiSzn/status/2110368823513591927
+      Number too small sir you are embarassing us here in South Africa. We took you as one of our own because you did big numbers. Cape Town wont forgive you
+
+[002] 2026-10-14T09:09:13 | https://x.com/KoMul8s/status/2110296859210068009
+      Strange then, cause I can't select it and put it on my chart to begin with as I don't have the seconds tf, so I can't update it, wherevI usually would
+
+[003] 2026-10-14T09:11:45 | https://x.com/PoiSzn/status/2110297498182947018
+      click that link and go look at the description  2 hours ago v 1.3 was added
+
+[004] 2026-10-14T08:56:08 | https://x.com/KoMul8s/status/2110293569311326256
+      FYI, You have the v1.2  linked still, not the v.1.3
+
+[005] 2026-10-14T08:58:52 | https://x.com/PoiSzn/status/2110294255667175866
+      FYI its the same link and all gets updated in tv in the same place.  There are no separate links for different versions
+
+[006] 2026-10-14T08:16:32 | https://x.com/ICT_Concepts/status/2110283602860687757
+      Imagine trading ICT and thinking that macros were not a thing... lol
+
+[007] 2026-10-14T08:20:28 | https://x.com/PoiSzn/status/2110284589591933234
+      Let me hop on with you sometime and give you some toys to play with. Dm me your tv username Darling  You'll find confirmation for your buys right there too
+
+[008] 2026-10-14T07:20:45 | https://x.com/PoiSzn/status/2110269562906116535
+      PoiSzn EMA Origin Lite v1.3 is LIVE!  Now standardised for 1-minute data, making it accessible to more TradingView users, including Essential plans.   Manual range anchoring  Dynamic EMA clouds  Fib projections  Optional PDA 1-second data remains optional for supported
+
+[009] 2026-10-14T07:21:03 | https://x.com/PoiSzn/status/2110269639657951712
+      
+
+[010] 2026-10-14T02:59:26 | https://x.com/JoshScrivner/status/2110203799562494270
+      So I need TV premium to be able to run this?  Can't get it to work on Essential.
+
+[011] 2026-10-14T04:27:15 | https://x.com/PoiSzn/status/2110225898876100617
+      What is it saying ? Trying using only 1 minute data timeframe
+
+[012] 2026-10-13T20:47:52 | https://x.com/PoiSzn/status/2110110293837652362
+      Here is a Very Informal Run Through of the EMA Lite Indicator I gave to you all Earlier Today  Let me know your thoughts in the comments  Link attached below so you can grab yours too!!
+
+[013] 2026-10-13T20:47:59 | https://x.com/PoiSzn/status/2110110321411080564
+      
+
+[014] 2026-10-13T16:48:04 | https://x.com/PoiSzn/status/2110049945935888627
+      Head on over to  https:// whop.com/poiszn and look for the character tree product and checkout for a 7 day trial
+
+[015] 2026-10-13T14:11:03 | https://x.com/agathoscrow/status/2110010430559039722
+      Thanks for this, man. I'm in the mentorship but couldn't get the other one to work without seconds-data. This one works well!
+
+[016] 2026-10-13T14:14:46 | https://x.com/PoiSzn/status/2110011364810871212
+      dm me , this one is way simplere than the one in mentorship, you need to be using that one
+
+[017] 2026-10-13T12:51:47 | https://x.com/PoiSzn/status/2109990484345053335
+      20,000 of you saw this chart yesterday, and a lot of you asked how to get it.  So I made a free version.   PoiSzn EMA Origin Lite: anchor any range and it projects the EMA clouds from it. Then watch how price reacts to them.  It’s the base of my full version, without the
+
+[018] 2026-10-13T12:52:19 | https://x.com/PoiSzn/status/2109990619086995922
+      
+
+[019] 2026-10-13T10:58:24 | https://x.com/Trade___X/status/2109961947248505003
+      You’re reasoning can differ from mine, no issues. There’s usually multiple reasons as to why when a level is valid.   The question is did you trust your analysis enough to trade towards it?
+
+[020] 2026-10-13T11:12:45 | https://x.com/PoiSzn/status/2109965559010099573
+      Agreed
+
+[021] 2026-10-13T10:48:40 | https://x.com/Trade___X/status/2109959499813376425
+      Think I made my point clear   Trading is a game of probabilities, the more you can stack in your favour, the more probable your trade outcome is.  If you're still only looking for REH's or REL's your scope is massively limited.
+
+[022] 2026-10-13T10:52:54 | https://x.com/PoiSzn/status/2109960564877525087
+      Its Actually this Sibi that its visiting.  Let me know if you want to know why
+
+[023] 2026-10-13T10:12:12 | https://x.com/agathoscrow/status/2109950322957508854
+      Love the smell of fresh EMAs in the morning.
+
+[024] 2026-10-13T10:14:27 | https://x.com/PoiSzn/status/2109950887497969988
+      
+
+[025] 2026-10-12T21:51:18 | https://x.com/Fossiefoss321/status/2109763868268572858
+      Dig it
+
+[026] 2026-10-13T05:47:09 | https://x.com/PoiSzn/status/2109883619691176050
+      
+
+[027] 2026-10-12T22:37:46 | https://x.com/xel_arjona/status/2109775560872517975
+      Nice one!  Seems to me like 5 sets of anchored [Time-Weighted] exponentially weighted MA's, each one with max defined boundaries that make them stop growing in it own linear time window.
+
+[028] 2026-10-13T05:46:26 | https://x.com/PoiSzn/status/2109883440460189930
+      25% there!
+
+[029] 2026-10-12T23:37:30 | https://x.com/theonlymorpheus/status/2109790596269236590
+      Nice
+
+[030] 2026-10-13T05:45:21 | https://x.com/PoiSzn/status/2109883167700332682
+      I miss you wth have you been.  Dm me on discord
+
+[031] 2026-10-13T02:10:50 | https://x.com/ThakkarPulin/status/2109829182553223565
+      Is it free, how do we get it
+
+[032] 2026-10-13T05:44:57 | https://x.com/PoiSzn/status/2109883066957394141
+      Check my pinned post for the trial
+
+[033] 2026-10-13T02:12:18 | https://x.com/evandrogalindo/status/2109829552729989228
+      Madrid trend
+
+[034] 2026-10-13T05:44:27 | https://x.com/PoiSzn/status/2109882939865739649
+      Had to search what that is and no it isn’t
+
+[035] 2026-10-13T04:43:03 | https://x.com/panocharts/status/2109867487244308937
+      Just use ema clouds
+
+[036] 2026-10-13T05:42:42 | https://x.com/PoiSzn/status/2109882501854536152
+      lol thanks
+
+[037] 2026-10-12T21:49:48 | https://x.com/PoiSzn/status/2109763490957361308
+      It’s something! No vwap here just pure EMAs with a twist on the length to make it a cloud
+
+[038] 2026-10-12T14:21:53 | https://x.com/PoiSzn/status/2109650769565610372
+      Im changing the way everyone views EMA's  These are EMA's  in a way no one has ever seen before.  I can guarantee you!
+
+[039] 2026-10-12T21:48:47 | https://x.com/PoiSzn/status/2109763235482153410
+      The first two EMAs test the waters  The 3rd is the brick  wall   The last two are there for exhaustion  Every rejection under them is an opportunity to fade  Let me show you all some more tomorrow
+
+[040] 2026-10-12T18:25:16 | https://x.com/_EricaBr__/status/2109712018228056533
+      bold claim man, lets see if it actually helps entries
+
+[041] 2026-10-12T21:47:37 | https://x.com/PoiSzn/status/2109762942279237989
+      Go test it out for yourself in my whop
+
+[042] 2026-10-12T20:03:00 | https://x.com/revighst/status/2109736615178608799
+      You know, EMAs have never really lined up for me specifically when looking to enter.  BUT   an EMA 8 is one of the best momentum indicators, for me, when looking to leave a trade and spot exhaustion.  This is really cool though!
+
+[043] 2026-10-12T14:35:21 | https://x.com/Olu_1/status/2109654156394873232
+      YT dropping? Also bro,  how are the Auto Zoom emas different from the Emas on the Character Tree indi? Thnx 4 d gems.
+
+[044] 2026-10-12T14:37:39 | https://x.com/PoiSzn/status/2109654735846576526
+      theyre the same but different, different anchor points, i may remove those from auto zoom completely and kee them separate.
+
+[045] 2026-10-12T10:22:29 | https://x.com/BRUNOFe15661881/status/2109590520922005948
+      Nah i dont know u
+
+[046] 2026-10-12T10:55:02 | https://x.com/PoiSzn/status/2109598715082117525
+      
+
+[047] 2026-10-12T10:04:09 | https://x.com/BRUNOFe15661881/status/2109585908827607134
+      No i just have a working brain....nothing crazy
+
+[048] 2026-10-12T10:19:53 | https://x.com/PoiSzn/status/2109589866082132421
+      can you share some with me please
+
+[049] 2026-10-12T09:36:32 | https://x.com/BRUNOFe15661881/status/2109578959427899404
+      Yes dumbass
+
+[050] 2026-10-12T09:38:19 | https://x.com/PoiSzn/status/2109579406633316716
+      you work for them?
+
+[051] 2026-10-12T09:15:24 | https://x.com/EdwardXLreal/status/2109573638923956329
+      Loading…
+
+[052] 2026-10-12T09:23:29 | https://x.com/PoiSzn/status/2109575674210226431
+      This open to South African traders?
+
+[053] 2026-10-12T07:52:13 | https://x.com/PoiSzn/status/2109552707321110606
+      Auto Zoom Model and Character Tree EMA on Fridays Close into Open Today.  Both indicators are on a free trial right now, walkthrough videos included.  Grab access + join the free Discord:  https:// whop.com/PoiSzn
+
+[054] 2026-10-12T07:53:18 | https://x.com/PoiSzn/status/2109552978499969470
+      https:// whop.com/poiszn/zoom-mo del-auto-anchor/ …   https:// whop.com/poiszn/poiszn- character-tree-ema-indicator/ …
+
+[055] 2026-10-08T18:43:25 | https://x.com/hazeldaniels_/status/2108267035989795021
+      Wht criteria do you use to  filter out signals?,  for instance the first buy signal ddnt work,
+
+[056] 2026-10-08T18:48:39 | https://x.com/PoiSzn/status/2108268351546179637
+      This becomes a game of breakevens   Take the entry go to BE asap if it takes you so be it brush it off so the next
+
+[057] 2026-10-08T18:47:22 | https://x.com/PoiSzn/status/2108268028228256101
+      I’m here everyday brother
+
+[058] 2026-10-08T15:17:25 | https://x.com/Zuz913/status/2108215192760848577
+      Name of indicator? How much?
+
+[059] 2026-10-08T15:28:03 | https://x.com/PoiSzn/status/2108217869150638343
+      There’s two , you can try them out for free in my whop   Auto zoom and character tree
+
+[060] 2026-10-07T15:09:57 | https://x.com/Olu_1/status/2107850926274855385
+      This is next level!!!!  This is on manual mode correct?
+
+[061] 2026-10-07T15:25:58 | https://x.com/PoiSzn/status/2107854958943158377
+      Full auto
+
+[062] 2026-10-05T18:29:32 | https://x.com/Olu_1/status/2107176377174630445
+      Hi  @PoiSzn  mine's a lil different even though still took the buy but set stops at the H1 low. Any thoughts? Your setup is sitting right inside the blue shades fs.
+
+[063] 2026-10-05T21:12:00 | https://x.com/PoiSzn/status/2107217263900156308
+      Nq or Mnq on that chart ?
+
+[064] 2026-10-05T16:54:41 | https://x.com/Mikaka_it/status/2107152508372042054
+      What are the triangle alerts? ∆!
+
+[065] 2026-10-05T16:57:30 | https://x.com/PoiSzn/status/2107153216656027836
+      Warnings that the bubbles are getting closed through
+
+[066] 2026-10-05T12:05:55 | https://x.com/KermitHtown75/status/2107079836426785225
+      Thank you!
+
+[067] 2026-10-05T12:10:09 | https://x.com/PoiSzn/status/2107080900534321199
+      update pushed, its on 1 min standard now shipped
+
+[068] 2026-10-05T11:41:06 | https://x.com/KermitHtown75/status/2107073593825738853
+      This was working until this morning, without the need for Premium plan on TV....
+
+[069] 2026-10-05T11:55:24 | https://x.com/PoiSzn/status/2107077192517656679
+      set this to 1 minutes , its defaulted to 1 second  I will push an update that puts it back to 1 minute as standard
+
+[070] 2026-10-05T11:53:54 | https://x.com/PoiSzn/status/2107076812287455698
+      i suspect its the po3 timeframes i added in i may have to remove them
+
+[071] 2026-10-05T11:51:56 | https://x.com/PoiSzn/status/2107076317174702442
+      no idea what happened i did make some updates so let me see what affected it
+
+[072] 2026-10-05T08:54:23 | https://x.com/Meh_Blargh/status/2107031637485912193
+      I’m making sure to use this more for when key lvls are hit; OTE, session sweeps, POC, etc.  Otherwise shooting for smaller targets with the mindset of getting reversed.
+
+[073] 2026-10-05T09:10:38 | https://x.com/PoiSzn/status/2107035726097572054
+      So I've added those into the update, it will tell you what liquidity was swept if it falls within the parameters of what i set liquidity sweep to be.  all th major ones.
+
+[074] 2026-10-05T05:38:44 | https://x.com/PoiSzn/status/2106982397497479340
+      I just added a transparency filter and dots option for now
+
+[075] 2026-10-02T12:44:12 | https://x.com/Mikaka_it/status/2106002307179528446
+      Do you have to select a series of candles like a Fibonacci tool or it does self identify the pattern?
+
+[076] 2026-10-02T12:47:34 | https://x.com/PoiSzn/status/2106003155792318471
+      video should be out today, i will show you exactly how i do it
+
+[077] 2026-10-02T02:00:03 | https://x.com/Sarah__Baro/status/2105840201809772644
+      bro this finna be crazy once you get it automated
+
+[078] 2026-10-02T09:23:55 | https://x.com/PoiSzn/status/2105951902999720076
+      one click!
+
+[079] 2026-09-30T14:19:52 | https://x.com/MaggoSaurabh/status/2105301607860908222
+      Indicator name ?
+
+[080] 2026-09-30T14:28:35 | https://x.com/PoiSzn/status/2105303800256815496
+      will post the links later today
+
+[081] 2026-09-29T17:09:19 | https://x.com/Jagooooota/status/2104981863089799610
+      Hey Poiszn, Why did you not look to buy it here? We have the CSD there too.
+
+[082] 2026-09-29T17:31:43 | https://x.com/PoiSzn/status/2104987500783755525
+      My target levels weren’t hit
+
+[083] 2026-09-29T09:34:44 | https://x.com/Mikaka_it/status/2104867461715644630
+      For how is written, 100 total user to any script, not each one unfortunately.   The only hack is multiple accounts
+
+[084] 2026-09-29T10:00:03 | https://x.com/PoiSzn/status/2104873835577393643
+      yeah its ambiguous
+
+[085] 2026-09-29T09:31:14 | https://x.com/GJ7RWT/status/2104866580806959502
+      1 of 2 things will happen. Either lots of paid for indicators will become open source or paid for indicator prices are going to go through the roof !
+
+[086] 2026-09-29T09:59:49 | https://x.com/PoiSzn/status/2104873776735514829
+      yeah , or  @LuxAlgo  is going to be smiling even more soon!
+
+[087] 2026-09-29T09:21:15 | https://x.com/GJ7RWT/status/2104864070465720424
+      So those with more than 100 invitees can call the same script xxxa, xxxb,xxxc and just have 100 on each ?
+
+[088] 2026-09-29T09:25:12 | https://x.com/PoiSzn/status/2104865062695620640
+      Technically yes but I think TV is a bit to smart for that
+
+[089] 2026-09-29T08:20:57 | https://x.com/XBT26x/status/2104848895951978742
+      Probably 30$ per 100
+
+[090] 2026-09-29T08:32:33 | https://x.com/PoiSzn/status/2104851815154253947
+      per user after 100 users are reached
+
+[091] 2026-09-28T03:58:29 | https://x.com/Sarah__Baro/status/2104420457374232603
+      Curious what angle you take on iFVGS here
+
+[092] 2026-09-28T18:44:31 | https://x.com/PoiSzn/status/2104643432316534861
+      I could talk about fvgs ifvgs and breakaway gaps for days what do you want to know
+
+[093] 2026-09-16T20:51:11 | https://x.com/agathoscrow/status/2100326655893893167
+      Do you ever use these ranges (the bullish/bearish CSDs, etc) for continuation trades? Or is the indicator really aimed at reversals? It seems like you're looking for a reversal, but if candles start closing going the other way, do you redraw the zones, or trade them as they are?
+
+[094] 2026-09-17T02:11:13 | https://x.com/PoiSzn/status/2100407195913322761
+      The indicator isn’t for reversals at all it is equally good at continuations   Just be sure of what you’re trying to achieve beforehand then long the bottom of fractal consolidations and short the tops
+
+[095] 2026-09-16T20:53:45 | https://x.com/agathoscrow/status/2100327302219329725
+      I'm also interested why you anchor where you do. In Trade 1 from the video, you anchored BEFORE the local swing low extreme. In Trade 2, you anchored AFTER the local swing high extreme. In Trade 3, you anchored BEFORE the local swing high again. Is there a set way to decide?
+
+[096] 2026-09-17T02:09:38 | https://x.com/PoiSzn/status/2100406795449585749
+      Made that video already and uploaded to YT it just isn’t publicly visible yet   Waiting to see how many people are interested  here to begin with or am I wasting my time
+
+[097] 2026-09-16T22:34:59 | https://x.com/scoots_magootch/status/2100352779545989401
+      The 27m levels almost overlap the 9m, right?
+
+[098] 2026-09-17T02:08:27 | https://x.com/PoiSzn/status/2100406497180111145
+      I haven’t checked but possibly , nothing wrong even if they do
+
+[099] 2026-09-13T16:22:12 | https://x.com/Psibirskiy/status/2099171800706163020
+      Yeh I couldnt see it initially too. Cheers
+
+[100] 2026-09-13T16:22:48 | https://x.com/PoiSzn/status/2099171951143014475
+      It’s there now
+
+[101] 2026-09-13T13:08:28 | https://x.com/katakluzo/status/2099123045642219574
+      Hey, brother. Thanks for this! Will experiment with these this week.  (I grabbed the 7 Cloud EMA indicator but didn't see the CSD indicator on there...will check again later when I'm on a laptop instead of my phone. Thanks again!)
+
+[102] 2026-09-13T16:16:54 | https://x.com/PoiSzn/status/2099170467458298276
+      Check now it should be good
+
+[103] 2026-09-11T22:12:04 | https://x.com/katakluzo/status/2098535071812616584
+      In other words, is this a lesson on how to read price, or is it a lesson on how to use your indicators? Both are fine, obviously. But if you wanted it to be more of the first, I think it did end up being more of the second. Indicators do look cool tho!
+
+[104] 2026-09-12T06:32:39 | https://x.com/PoiSzn/status/2098661048710508740
+      Its a lesson in how I read price fractally, like I said , the indicator is only there to make drawing easier and more accurate
+
+[105] 2026-09-11T22:09:59 | https://x.com/katakluzo/status/2098534545414881645
+      I watched the video earlier. It looks cool/helpful, but I'm not sure I can grok it without the indicators. Do you think it could work without them? For example, picking the timeframe based on the EMAs seemed pretty important...do we skip that step if we don't have your indicator?
+
+[106] 2026-09-12T06:31:05 | https://x.com/PoiSzn/status/2098660654257156313
+      I will dig into that in the next video , ofcourse you can do it without an indicator , the indicator is only there to make drawing easier without any human error
+
+[107] 2026-08-20T10:26:42 | https://x.com/Renovartu/status/2090385028559610024
+      Mitigation or its the range that took liquidity?
+
+[108] 2026-08-20T10:48:05 | https://x.com/PoiSzn/status/2090390407825834430
+      Both
+
+[109] 2026-08-19T14:18:28 | https://x.com/CJ900X/status/2090080963950739831
+      M I T I G A T I O N  (What do I win if I am right?)
+
+[110] 2026-08-20T10:47:41 | https://x.com/PoiSzn/status/2090390307787473361
+      Feet pics ofcourse
+
+[111] 2026-08-04T17:31:02 | https://x.com/AyatollahAndile/status/2084693608771277161
+      At least you caught the monster
+

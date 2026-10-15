@@ -1,0 +1,14 @@
+{
+  "issued_at_UTC": "2026-10-14T15:35:11Z",
+  "amends": "C_SIMETRIA_62_PREREGISTRO.json",
+  "scope": "Adds provenance evidence only; no symbol, data window, model, prediction, or scoring threshold changed",
+  "required_screenshots": {
+    "base": "C_simetria62_base.png",
+    "double": "C_simetria62_doble.png",
+    "translation": "C_simetria62_traslacion.png",
+    "reflection": "C_simetria62_reflejo.png",
+    "return_native": "C_simetria62_regreso.png"
+  },
+  "evidence_requirement": "Each screenshot must show the chart symbol/expression and timeframe for its corresponding CSV series. The auditor checks presence and records hashes; a human reviewer must visually confirm that the displayed expression matches the preregistered formula.",
+  "reason": "CSV values can verify the observed affine transform but do not independently prove which formula was displayed in the chart UI. The UI capture attempt timed out before any chart interaction."
+}

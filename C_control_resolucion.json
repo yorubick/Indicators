@@ -1,0 +1,110 @@
+[
+  {
+    "phase_seconds": 0,
+    "reference_shift_seconds": -60,
+    "minute_samples": 93,
+    "values": 930,
+    "closed_before": 1791842400,
+    "max_error": 0.0,
+    "mean_error": 0.0
+  },
+  {
+    "phase_seconds": 15,
+    "reference_shift_seconds": -60,
+    "minute_samples": 93,
+    "values": 930,
+    "closed_before": 1791842400,
+    "max_error": 0.0,
+    "mean_error": 0.0
+  },
+  {
+    "phase_seconds": 30,
+    "reference_shift_seconds": -60,
+    "minute_samples": 93,
+    "values": 930,
+    "closed_before": 1791842400,
+    "max_error": 0.0,
+    "mean_error": 0.0
+  },
+  {
+    "phase_seconds": 45,
+    "reference_shift_seconds": 0,
+    "minute_samples": 94,
+    "values": 940,
+    "closed_before": 1791842400,
+    "max_error": 0.0,
+    "mean_error": 0.0
+  },
+  {
+    "phase_seconds": 0,
+    "reference_shift_seconds": 0,
+    "minute_samples": 93,
+    "values": 930,
+    "closed_before": 1791842400,
+    "max_error": 7.921875,
+    "mean_error": 0.5802966445637531
+  },
+  {
+    "phase_seconds": 15,
+    "reference_shift_seconds": 0,
+    "minute_samples": 93,
+    "values": 930,
+    "closed_before": 1791842400,
+    "max_error": 7.921875,
+    "mean_error": 0.5802966445637531
+  },
+  {
+    "phase_seconds": 30,
+    "reference_shift_seconds": 0,
+    "minute_samples": 93,
+    "values": 930,
+    "closed_before": 1791842400,
+    "max_error": 7.921875,
+    "mean_error": 0.5802966445637531
+  },
+  {
+    "phase_seconds": 45,
+    "reference_shift_seconds": -60,
+    "minute_samples": 93,
+    "values": 930,
+    "closed_before": 1791842400,
+    "max_error": 7.921875,
+    "mean_error": 0.5802966445637531
+  },
+  {
+    "phase_seconds": 45,
+    "reference_shift_seconds": 60,
+    "minute_samples": 93,
+    "values": 930,
+    "closed_before": 1791842400,
+    "max_error": 7.921875,
+    "mean_error": 0.5802966445637531
+  },
+  {
+    "phase_seconds": 0,
+    "reference_shift_seconds": 60,
+    "minute_samples": 92,
+    "values": 920,
+    "closed_before": 1791842400,
+    "max_error": 15.3828125,
+    "mean_error": 1.0825301708989963
+  },
+  {
+    "phase_seconds": 15,
+    "reference_shift_seconds": 60,
+    "minute_samples": 92,
+    "values": 920,
+    "closed_before": 1791842400,
+    "max_error": 15.3828125,
+    "mean_error": 1.0825301708989963
+  },
+  {
+    "phase_seconds": 30,
+    "reference_shift_seconds": 60,
+    "minute_samples": 92,
+    "values": 920,
+    "closed_before": 1791842400,
+    "max_error": 15.3828125,
+    "mean_error": 1.0825301708989963
+  }
+]

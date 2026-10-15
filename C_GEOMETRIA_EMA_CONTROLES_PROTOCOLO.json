@@ -1,0 +1,8 @@
+{
+ "date":"2026-10-14",
+ "selection":"All master_all_C_cases.json cases with dt60, measured C_Lite, bars>=21, complete current native OHLCV coverage, excluding the9grid timestamp pairs. Verify OHLCV equality. Report exclusions; do not select by C.",
+ "source":"C_startSweep1920_geometria_historia_larga.csv",
+ "features":"Same geometry formulas and fixed periods from C_GEOMETRIA_EMA_MEDICIONES.json. No periods or thresholds optimized. Add group check using8EMA endpoint signs,crossing counts and endpoint rank order. +/-100 seed sensitivity and unstable features reported.",
+ "evaluation":"Known historical labels, overlapping windows, not blind validation. Group collisions refute particular state-only mappings; compare feature monotonicity descriptively without fitting C. No inferred C labels.",
+ "visual":"Normalize price and reference EMA traces by observed range H-L. Plot a collision pair with common discrete EMA signatures and different measured C, along with numeric endpoint distances. Pair selection illustrative after analysis, not independent prediction."
+}

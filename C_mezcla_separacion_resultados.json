@@ -1,0 +1,810 @@
+{
+  "spec": {
+    "source": "lambda*close+(1-lambda)*HL2, lambda in[0,1], fixed across all9cases",
+    "objective": "C integer1..600 must maximize absolute ENDgap of same72/89EMAfamily",
+    "seeds": [
+      "START_open",
+      "START_high",
+      "START_low",
+      "START_close",
+      "bootstrap20_low",
+      "bootstrap20_high"
+    ],
+    "divisors": [
+      3.0,
+      9.0,
+      27.0,
+      1.0,
+      0.3333333333333333
+    ],
+    "tolerance_normalized": 1e-10,
+    "constraint": "For every competitorj: abs(Dobserved(lambda)) >= abs(Dj(lambda))-tolerance. Necessary condition; allows all maximizing ties, weaker than smallestCtie policy.",
+    "method": "Exact affine dependence of signed gap onlambda; split at sign zeros, solve linear inequalities, intersect closed intervals across competitors and cases. Float arithmetic, no sampling of lambda.",
+    "scope": "Fixed generator family only; includes HL2(lambda0),close(lambda1),HLC3(lambda1/3). Labels known, exploratory feasibility test, not prospective. No validation data scored."
+  },
+  "models": [
+    {
+      "seed": "START_open",
+      "divisor": 3.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 8.0,
+            "Dobserved_affine": [
+              0.019984147147930398,
+              -0.00019360744818330833
+            ],
+            "Dcompetitor_affine": [
+              0.024255263394144966,
+              -0.00312568022135451
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_open",
+      "divisor": 9.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 48.0,
+            "Dobserved_affine": [
+              0.03810851115129121,
+              -0.0012541062605638809
+            ],
+            "Dcompetitor_affine": [
+              0.03866077425664194,
+              -0.001740369037569911
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_open",
+      "divisor": 27.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 62.0,
+            "Dobserved_affine": [
+              0.01848479752487997,
+              -0.003330548749847395
+            ],
+            "Dcompetitor_affine": [
+              0.019057514592238478,
+              -0.0033138476839822406
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_open",
+      "divisor": 1.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 2.0,
+            "Dobserved_affine": [
+              0.0076728857139484186,
+              -7.116680133711917e-05
+            ],
+            "Dcompetitor_affine": [
+              0.014238325368643778,
+              -0.003431662571398486
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_open",
+      "divisor": 0.3333333333333333,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 1.0,
+            "Dobserved_affine": [
+              0.0027257183404660323,
+              -3.140772487675303e-05
+            ],
+            "Dcompetitor_affine": [
+              0.028091386373956806,
+              -0.0029371206882096157
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_high",
+      "divisor": 3.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 8.0,
+            "Dobserved_affine": [
+              0.018353128008248287,
+              -0.00019360744818375242
+            ],
+            "Dcompetitor_affine": [
+              0.02425452395870098,
+              -0.003125680221354843
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_high",
+      "divisor": 9.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 47.0,
+            "Dobserved_affine": [
+              0.03785743181456436,
+              -0.001254106260564103
+            ],
+            "Dcompetitor_affine": [
+              0.038487134569915815,
+              -0.0017857852861662415
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_high",
+      "divisor": 27.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 62.0,
+            "Dobserved_affine": [
+              0.018484677853101705,
+              -0.003330548749847284
+            ],
+            "Dcompetitor_affine": [
+              0.01905736942853009,
+              -0.0033138476839822406
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_high",
+      "divisor": 1.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 2.0,
+            "Dobserved_affine": [
+              0.006199277932026459,
+              -7.116680133689712e-05
+            ],
+            "Dcompetitor_affine": [
+              0.014238300166918405,
+              -0.003431662571398264
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_high",
+      "divisor": 0.3333333333333333,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 1.0,
+            "Dobserved_affine": [
+              0.002040278263312989,
+              -3.140772487619792e-05
+            ],
+            "Dcompetitor_affine": [
+              0.02808914035090304,
+              -0.0029371206882095047
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_low",
+      "divisor": 3.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 10.0,
+            "Dobserved_affine": [
+              0.025692714136818562,
+              -0.00019360744818325282
+            ],
+            "Dcompetitor_affine": [
+              0.031193133566344455,
+              -0.0027434826918656396
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_low",
+      "divisor": 9.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 53.0,
+            "Dobserved_affine": [
+              0.038987288829836486,
+              -0.001254106260564325
+            ],
+            "Dcompetitor_affine": [
+              0.03928020771404461,
+              -0.0015313885356440515
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_low",
+      "divisor": 27.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 62.0,
+            "Dobserved_affine": [
+              0.018485216376103675,
+              -0.003330548749847395
+            ],
+            "Dcompetitor_affine": [
+              0.019058022665218055,
+              -0.0033138476839822406
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_low",
+      "divisor": 1.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 3.0,
+            "Dobserved_affine": [
+              0.012830512950675,
+              -7.116680133684161e-05
+            ],
+            "Dcompetitor_affine": [
+              0.02809924745464476,
+              -0.0029371206882098377
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_low",
+      "divisor": 0.3333333333333333,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 1.0,
+            "Dobserved_affine": [
+              0.0051247586105002685,
+              -3.140772487675303e-05
+            ],
+            "Dcompetitor_affine": [
+              0.02809924745464476,
+              -0.0029371206882098377
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_close",
+      "divisor": 3.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 9.0,
+            "Dobserved_affine": [
+              0.024061694997136174,
+              -0.00019360744818341935
+            ],
+            "Dcompetitor_affine": [
+              0.028097001431590884,
+              -0.0029371206882097267
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_close",
+      "divisor": 9.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 51.0,
+            "Dobserved_affine": [
+              0.0387362094931093,
+              -0.001254106260564103
+            ],
+            "Dcompetitor_affine": [
+              0.03909640807957848,
+              -0.0016114437107876967
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_close",
+      "divisor": 27.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 62.0,
+            "Dobserved_affine": [
+              0.01848509670432552,
+              -0.003330548749847506
+            ],
+            "Dcompetitor_affine": [
+              0.019057877501509668,
+              -0.0033138476839822406
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_close",
+      "divisor": 1.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 3.0,
+            "Dobserved_affine": [
+              0.011356905168752984,
+              -7.116680133673059e-05
+            ],
+            "Dcompetitor_affine": [
+              0.028097001431590884,
+              -0.0029371206882097267
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "START_close",
+      "divisor": 0.3333333333333333,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 1.0,
+            "Dobserved_affine": [
+              0.004439318533347669,
+              -3.140772487675303e-05
+            ],
+            "Dcompetitor_affine": [
+              0.028097001431590884,
+              -0.0029371206882097267
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "bootstrap20_low",
+      "divisor": 3.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 16.0,
+            "Dobserved_affine": [
+              0.039967308623312936,
+              -0.00018981117171290585
+            ],
+            "Dcompetitor_affine": [
+              0.04249626879229573,
+              -0.0017197857501313196
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "bootstrap20_low",
+      "divisor": 9.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 62.0,
+            "Dobserved_affine": [
+              0.04537095259524693,
+              -0.0012264137627094884
+            ],
+            "Dcompetitor_affine": [
+              0.04550578393017757,
+              -0.001195825364993075
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "bootstrap20_low",
+      "divisor": 27.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 62.0,
+            "Dobserved_affine": [
+              0.01851503543625954,
+              -0.003330050497323933
+            ],
+            "Dcompetitor_affine": [
+              0.019092440363649876,
+              -0.0033132830691171566
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "bootstrap20_low",
+      "divisor": 1.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 3.0,
+            "Dobserved_affine": [
+              0.020775214939475595,
+              -8.698760009384632e-05
+            ],
+            "Dcompetitor_affine": [
+              0.028356082866514143,
+              -0.0029340437069805825
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "bootstrap20_low",
+      "divisor": 0.3333333333333333,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 1.0,
+            "Dobserved_affine": [
+              0.008172405374286568,
+              -4.098006671035548e-05
+            ],
+            "Dcompetitor_affine": [
+              0.028356082866514143,
+              -0.0029340437069805825
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "bootstrap20_high",
+      "divisor": 3.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 1.0,
+            "Dobserved_affine": [
+              -0.0016838172270872143,
+              -0.00018981117171301687
+            ],
+            "Dcompetitor_affine": [
+              -0.009650903241869457,
+              -0.0055537929827682575
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "bootstrap20_high",
+      "divisor": 9.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 35.0,
+            "Dobserved_affine": [
+              0.032576524522642925,
+              -0.0012264137627094884
+            ],
+            "Dcompetitor_affine": [
+              0.03419334785599226,
+              -0.00241974820633839
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "bootstrap20_high",
+      "divisor": 27.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 62.0,
+            "Dobserved_affine": [
+              0.018469671970977264,
+              -0.003330050497323933
+            ],
+            "Dcompetitor_affine": [
+              0.01903997510203359,
+              -0.0033132830691171566
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "bootstrap20_high",
+      "divisor": 1.0,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 2.0,
+            "Dobserved_affine": [
+              -0.009027323760815054,
+              -8.698760009406836e-05
+            ],
+            "Dcompetitor_affine": [
+              0.01423373768504721,
+              -0.0034314844517974175
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "seed": "bootstrap20_high",
+      "divisor": 0.3333333333333333,
+      "feasible_lambda_intervals": [],
+      "cases_processed": 1,
+      "audit": [
+        {
+          "START": "2026-10-12T19:03:00+00:00",
+          "END": "2026-10-12T19:23:15+00:00",
+          "C": 60.99999999999963,
+          "case_lambda_intervals": [],
+          "joint_lambda_intervals_after_case": [],
+          "last_constraint_processed": {
+            "competitor_C": 1.0,
+            "Dobserved_affine": [
+              -0.004648780000303443,
+              -4.0980066710938345e-05
+            ],
+            "Dcompetitor_affine": [
+              0.02794730054666883,
+              -0.0029340437069806935
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "feasible_models": 0,
+  "training32_scored": false,
+  "reserved_validation_used": false
+}

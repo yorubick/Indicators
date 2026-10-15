@@ -1,0 +1,33 @@
+{
+  "scope": "Independent inverse of firstpublished values and ENDseed for two cases where breakout is the first bar afterEND; no postbreak samples. Does not establish prebreak computation time. Same verified EMA/seed assumptions.",
+  "results": [
+    {
+      "id": "20261012_185800_191800_60s",
+      "first_break_time": "2026-10-12T19:19:00+00:00",
+      "seed_END": 30853.5,
+      "C_recovered_from_first_sample": {
+        "Lane 3 A": 77.00000000014239,
+        "Lane 3 B": 77.00000000016291,
+        "Lane 2 A": 77.00000000003074,
+        "Lane 2 B": 77.00000000011596,
+        "Lane 1 A": 76.9999999999966,
+        "Lane 1 B": 76.99999999995117
+      },
+      "max_error": 1.646043301661848e-10
+    },
+    {
+      "id": "20261012_185900_191900_60s",
+      "first_break_time": "2026-10-12T19:20:00+00:00",
+      "seed_END": 30862.5,
+      "C_recovered_from_first_sample": {
+        "Lane 3 A": 76.99999999987708,
+        "Lane 3 B": 77.00000000021691,
+        "Lane 2 A": 77.00000000006405,
+        "Lane 2 B": 77.00000000009608,
+        "Lane 1 A": 76.99999999996581,
+        "Lane 1 B": 77.00000000002085
+      },
+      "max_error": 2.1859136722923722e-10
+    }
+  ]
+}
