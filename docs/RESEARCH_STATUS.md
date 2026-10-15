@@ -45,6 +45,8 @@ La lectura oficial en 19:37 resultó vacía (`∅`) porque no hubo ruptura del h
 - **START 19:18, END 19:33** (`CTRL-20261014-1918-1933-15S`): $C = 39\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Falsifica el tope inferior $\max(60)$ en fuente de 15s y muestra un salto cuántico de exactamente $27\text{ s}$ ($3^3$) desde $66\text{ s}$ ($66 - 27 = 39$). Ver [informe](../experimentos/15s_serie_1903/CONTROL_1918_1933_EVAL_1934.md).
 - **START 19:23, END 19:33** (`CTRL-20261014-1923-1933-15S`): $C = 33\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Coincide exactamente con la predicción lineal base $T \cdot 10 / 183 = 6000 / 183 = 32.79 \implies \mathbf{33.0\text{ s}}$. Ver [informe](../experimentos/15s_serie_1903/CONTROL_1923_1933_EVAL_1934.md).
 - **START 19:28, END 19:33** (`CTRL-20261014-1928-1933-15S`): $C = 16\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Confirma la predicción ciega exacta $3000 / 183 = 16.39 \implies \mathbf{16.0\text{ s}}$, demostrando la ecuación analítica universal $C = \operatorname{round}(T / 18.3)$ en $T = 300\text{ s}, 600\text{ s}, 1200\text{ s}$. Ver [informe](../experimentos/15s_serie_1903/CONTROL_1928_1933_EVAL_1934.md).
+- **START 19:30, END 19:33** (`CTRL-20261014-1930-1933-15S`): $C = 15\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Demuestra empíricamente el piso físico $\max(\Delta t_{\text{source}}, \dots)$: como $1800/183 = 9.84 < 15$, el operador se clava en el límite inferior de la resolución $\Delta t = 15\text{ s}$. Ver [informe](../experimentos/15s_serie_1903/CONTROL_1930_1933_EVAL_1934.md).
+
 
 
 
