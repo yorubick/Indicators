@@ -39,7 +39,7 @@ def files_under_root():
         dirnames[:] = sorted(d for d in dirnames if d not in EXCLUDED_DIRS)
         for filename in sorted(filenames):
             path = Path(directory) / filename
-            if path == OUTPUT or path.suffix.lower() in EXCLUDED_SUFFIXES or path.is_symlink():
+            if path in {OUTPUT, OUTPUT.with_suffix(".csv.tmp")} or path.suffix.lower() in EXCLUDED_SUFFIXES or path.is_symlink():
                 continue
             yield path
 
@@ -78,3 +78,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
