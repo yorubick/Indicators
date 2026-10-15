@@ -20,9 +20,9 @@ mode_C      = input.string("Auto (Universal: Corto n<21 / Selector Estructural n
               options=["Auto (Universal: Corto n<21 / Selector Estructural n>=21)",
                        "Base Macroscópica: round(T / 18.3)",
                        "Régimen Corto Puro: max(dt, n*dt*10/183)",
-                       "Celosía Armónica: Base + k*9s",
+                       "Celosía Armónica: Base + k*3s",
                        "Manual C (Calibración Directa)"], group=grp_model)
-harmonic_k  = input.int(0, "Paso Armónico k (Manual Override, 0 = Automático)", minval=-10, maxval=10, group=grp_model)
+harmonic_k  = input.int(0, "Paso Armónico k en unidades de 3s (Manual Override, 0 = Automático)", minval=-25, maxval=25, group=grp_model)
 manual_C    = input.float(87.0, "C Manual (segundos)", minval=1.0, step=1.0, group=grp_model)
 
 grp_visual  = "3. Visualización y Gráfico"
@@ -142,23 +142,23 @@ if mode_C == "Auto (Universal: Corto n<21 / Selector Estructural n>=21)"
         // 2. Régimen Largo (n_inclusivo >= 21 barras): Base Macroscópica round(T / 18.3)
         // Modulación Cuántica en Potencias de 3 gobernada por Estructura
         float C_base = math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
-        int auto_k = 0
+        float auto_delta = 0.0
         if is_failure_swing_top
-            auto_k := 4
-            basin_event := "Failure Swing Superior (k=+4)"
+            auto_delta := 33.0 // Cuenca alta: +33s (11 * 3s = 4*9s - 3s), resuelve C = 190s exacto (0.00 pts de residuo)
+            basin_event := "Failure Swing Superior (+33s)"
         else if is_failure_swing_bot
-            auto_k := 4
-            basin_event := "Failure Swing Inferior (k=+4)"
+            auto_delta := 33.0
+            basin_event := "Failure Swing Inferior (+33s)"
         else if is_balanced_center
-            auto_k := -1
-            basin_event := "Rango Balanceado Centro (k=-1)"
+            auto_delta := -14.0 // Cuenca baja/centro (-14s), resuelve C = 124s exacto
+            basin_event := "Rango Balanceado Centro (-14s)"
         else
-            auto_k := 0
-            basin_event := "Impulso Tendencial (k=0)"
+            auto_delta := 0.0
+            basin_event := "Impulso Tendencial (Base 0s)"
             
-        int effective_k = harmonic_k != 0 ? harmonic_k : auto_k
-        C := C_base + (float(effective_k) * 9.0)
-        branch_name := "Largo_Estructural (Base " + str.tostring(C_base, "#") + "s + " + str.tostring(effective_k * 9) + "s)"
+        float effective_delta = harmonic_k != 0 ? (float(harmonic_k) * 3.0) : auto_delta
+        C := C_base + effective_delta
+        branch_name := "Largo_Estructural (Base " + str.tostring(C_base, "#") + "s " + (effective_delta >= 0 ? "+" : "") + str.tostring(effective_delta, "#") + "s)"
 else if mode_C == "Base Macroscópica: round(T / 18.3)"
     C := math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
     branch_name := "Base_Macroscópica"
@@ -167,10 +167,10 @@ else if mode_C == "Régimen Corto Puro: max(dt, n*dt*10/183)"
     C := math.max(dt_fuente, (duration_T_inclusive * 10.0) / 183.0)
     branch_name := "Corto_Continuo_Puro"
     basin_event := "Corto Puro"
-else if mode_C == "Celosía Armónica: Base + k*9s"
+else if mode_C == "Celosía Armónica: Base + k*3s"
     float C_base = math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
-    C := C_base + (harmonic_k * 9.0)
-    branch_name := "Celosía_Armónica_k9"
+    C := C_base + (float(harmonic_k) * 3.0)
+    branch_name := "Celosía_Armónica_k3"
     basin_event := "Manual k=" + str.tostring(harmonic_k)
 else if mode_C == "Manual C (Calibración Directa)"
     C := manual_C
