@@ -117,16 +117,22 @@ C_{\text{discreto}} \in \mathbb{Z}^+ & \text{si } n_{\text{inclusivo}} \ge 21 \q
 
 Donde en el Régimen Largo:
 $$C_{\text{base}} = \operatorname{round}\left(\frac{n_{\text{inclusivo}} \cdot \Delta t_{\text{fuente}} \cdot 10}{183}\right) = \operatorname{round}\left(\frac{T_{\text{inclusivo}}}{18.3}\right)$$
-$$C_{\text{discreto}} = C_{\text{base}} + \Delta C_{\text{cuenca}}$$
+$$C_{\text{discreto}} = C_{\text{base}} + (k_{\text{estructural}} \cdot 9.0)$$
 
-La desviación $\Delta C_{\text{cuenca}}$ está modulada por la celosía armónica en potencias de 3 ($\Delta C \in \{0, \pm 3, \pm 6, \pm 9, \pm 12, \pm 27\}$) y anclada a las zonas de consolidación o extremos estructurales del rango.
+Donde $k_{\text{estructural}}$ se calcula causalmente a partir de la geometría de la vela END y el rango:
+1. **Cuenca Alta ($k = +4$, $+36\text{s}$)**: Si se detecta un *Failure Swing* en el extremo de la caja (cierre en tercio superior con mecha de rechazo $> 35\%$ y contracción de volumen $< 0.75 \times \text{media}$), lo cual desacelera las curvas para contener el retesteo institucional.
+2. **Cuenca Baja/Central ($k = -1$, $-9\text{s}$)**: Si el precio cierra en consolidación balanceada en el centro de la caja ($0.40 \le \text{pos} \le 0.60$).
+3. **Cuenca Neutra ($k = 0$, $0\text{s}$)**: Si el precio se encuentra en impulso tendencial o expansión directa.
 
 ---
 
 ## 4. Estado de Implementación en Código
 
-El motor de código abierto [`PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine`](../PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine) ha sido actualizado (commit `b49a04f`):
+El motor de código abierto [`PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine`](../PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine) ha sido completamente actualizado (commit `bcf6597`):
 - Cálculo de $n_{\text{inclusivo}} = \operatorname{floor}(T / \Delta t) + 1$.
-- Transición continua exacta con visualización a 4 decimales en HUD para $n < 21$.
-- Transición entera limpia para $n \ge 21$.
-- Modos operativos: Auto, Base Macroscópica, Celosía Armónica y Calibración Manual.
+- Soporte nativo para timeframes `15S`, `1m`, `2m`, `3m`, `5m` y `Chart`.
+- **Modo Auto Universal**:
+  - Para $n < 21$: Ejecuta de forma 100% analítica y autónoma la ley continua con 4 decimales en HUD.
+  - Para $n \ge 21$: Evalúa dinámicamente la estructura de la vela END (volumen relativo, mechas y posición en el rango) para seleccionar automáticamente la cuenca armónica $k \cdot 9\text{s}$ sobre la base insesgada $\operatorname{round}(T/18.3)$.
+- Fila 10 en el HUD: Muestra el estado activo de la cuenca estructural (`Failure Swing Superior`, `Rango Balanceado Centro`, `Impulso Tendencial` o `Fase Continua`).
+- Modos manuales conservados para calibración de laboratorio y holdout.
