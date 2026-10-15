@@ -16,13 +16,13 @@ end_time    = input.time(timestamp("2026-10-12 19:33:00"), "Fecha/Hora END (UTC)
 source_res  = input.string("15S", "Resolución de Fuente Interna", options=["15S", "1m", "Chart"], group=grp_anchors)
 
 grp_model   = "2. Operador Matemático Universal de C"
-mode_C      = input.string("Auto: Híbrido Universal (Recomendado)", "Modo de Cálculo de C",
-              options=["Auto: Híbrido Universal (Recomendado)",
-                       "Base Lineal: round(T / 18.3)",
-                       "Régimen Corto Base: n*dt*10/183",
-                       "Celosía Armónica: round(T / 18.3) + k*27",
+mode_C      = input.string("Auto: Dinámico Universal (Recomendado)", "Modo de Cálculo de C",
+              options=["Auto: Dinámico Universal (Recomendado)",
+                       "Base Analítica Universal: round(T / 18.3)",
+                       "Régimen Corto Continuo: max(dt, T / 18.3)",
+                       "Celosía Armónica: round(T / 18.3) + k*9",
                        "Manual C (Calibración)"], group=grp_model)
-harmonic_k  = input.int(0, "Paso Armónico k (para k * 27s)", minval=-5, maxval=5, group=grp_model)
+harmonic_k  = input.int(0, "Paso Armónico k (para k * 9s o k * 27s)", minval=-5, maxval=5, group=grp_model)
 manual_C    = input.float(87.0, "C Manual (segundos)", minval=1.0, step=1.0, group=grp_model)
 
 grp_visual  = "3. Visualización y Gráfico"
@@ -104,41 +104,49 @@ if not na(piv_l)
     last_confirmed_pl := piv_l
 
 // Cálculo del Operador según el Régimen
-if mode_C == "Auto: Híbrido Universal (Recomendado)"
-    // 1. Piso Físico y Régimen Corto Base (n < 21 barras o T <= 600s)
-    if n_bars < 21 or duration_T <= 600.0
-        float c_linear = (duration_T * 10.0) / 183.0
-        C := math.max(dt_fuente, math.round(c_linear))
-        branch_name := "Base_Lineal"
+if mode_C == "Auto: Dinámico Universal (Recomendado)"
+    // 1. Régimen Corto Continuo (n < 21 barras): Ley Analítica Exacta Universal
+    if n_bars < 21
+        C := math.max(dt_fuente, (duration_T * 10.0) / 183.0)
+        branch_name := "Corto_Continuo (n<21)"
     else
-        // 2. Régimen Largo: Celosía Armónica y Estructura Intraminuto
-        float end_range = end_candle_high - end_candle_low
-        bool is_impulse = not na(end_candle_close) and not na(last_confirmed_ph) and (end_candle_close >= last_confirmed_ph) and ((end_candle_close - end_candle_low) >= 0.8 * math.max(0.25, end_range))
-        bool is_deep_pullback = not na(end_candle_close) and not na(end_candle_open) and (end_candle_close < end_candle_open) and ((end_candle_high - end_candle_close) >= 0.75 * math.max(0.25, end_range))
+        // 2. Régimen Largo Cuantizado (n >= 21 barras): Base Macroscópica + Resonancia Armónica
+        float c_base = math.round(duration_T / 18.3)
+        float end_range = math.max(syminfo.mintick, end_candle_high - end_candle_low)
+        float body_size = math.abs(end_candle_close - end_candle_open)
+        float upper_wick = end_candle_high - math.max(end_candle_open, end_candle_close)
+        float close_pos = (end_candle_close - end_candle_low) / end_range
+        float up_wick_ratio = upper_wick / end_range
+        
+        // Dinámica estructural adimensional (sin niveles de precio fijos ni marcas temporales)
+        bool is_breakout = not na(range_high) and (end_candle_close >= range_high) and (close_pos >= 0.85) and (up_wick_ratio <= 0.10)
+        bool is_expansion = (body_size >= 0.65 * end_range) and (close_pos >= 0.75)
+        bool is_rejection = (up_wick_ratio >= 0.40) or (end_candle_close < end_candle_open and (end_candle_high - end_candle_close) >= 0.70 * end_range)
 
-        if is_impulse
-            C := 123.0
-            branch_name := "Impulso_Peak_123"
-        else if is_deep_pullback
-            C := 67.0
-            branch_name := "Contracción_67"
+        int k_shift = 0
+        if is_breakout
+            k_shift := 4 // +36s (+4*9s) en ruptura mayor por encima del rango
+            branch_name := "Excitación_Ruptura (+36s)"
+        else if is_expansion
+            k_shift := 2 // +18s (+2*9s) en expansión direccional
+            branch_name := "Excitación_Expansión (+18s)"
+        else if is_rejection
+            k_shift := -2 // -18s (-2*9s) en absorción o rechazo
+            branch_name := "Contracción_Rechazo (-18s)"
         else
-            // Meseta armónica estable (87s / 88s según timeframe de fuente)
-            if dt_fuente <= 15.0
-                C := 87.0
-                branch_name := "Meseta_87"
-            else
-                C := math.round(duration_T / 18.3)
-                branch_name := "Base_Macroscópica"
-else if mode_C == "Base Lineal: round(T / 18.3)"
+            k_shift := 0 // Nivel base fundamental de meseta
+            branch_name := "Estado_Base_Meseta (k=0)"
+            
+        C := math.max(dt_fuente, c_base + (k_shift * 9.0))
+else if mode_C == "Base Analítica Universal: round(T / 18.3)"
     C := math.max(dt_fuente, math.round(duration_T / 18.3))
-    branch_name := "Lineal_Puro"
-else if mode_C == "Régimen Corto Base: n*dt*10/183"
-    C := math.max(dt_fuente, (n_bars * dt_fuente * 10.0) / 183.0)
-    branch_name := "Corto_Continuo"
-else if mode_C == "Celosía Armónica: round(T / 18.3) + k*27"
-    C := math.max(dt_fuente, math.round(duration_T / 18.3) + (harmonic_k * 27.0))
-    branch_name := "Celosía_Armónica"
+    branch_name := "Base_Analítica_Universal"
+else if mode_C == "Régimen Corto Continuo: max(dt, T / 18.3)"
+    C := math.max(dt_fuente, (duration_T * 10.0) / 183.0)
+    branch_name := "Corto_Continuo_Puro"
+else if mode_C == "Celosía Armónica: round(T / 18.3) + k*9"
+    C := math.max(dt_fuente, math.round(duration_T / 18.3) + (harmonic_k * 9.0))
+    branch_name := "Celosía_Armónica_k9"
 else if mode_C == "Manual C (Calibración)"
     C := manual_C
     branch_name := "Manual"
