@@ -13,7 +13,7 @@ indicator("PoiSzn EMA Origin Lite v1.3 (Open Source)", "PoiSzn Lite v1.3", overl
 grp_anchors = "1. Anclas de Rango (START / END)"
 start_time  = input.time(timestamp("2026-10-12 19:03:00"), "Fecha/Hora START (UTC)", group=grp_anchors)
 end_time    = input.time(timestamp("2026-10-12 19:33:00"), "Fecha/Hora END (UTC)", group=grp_anchors)
-source_res  = input.string("15S", "Resolución de Fuente Interna", options=["15S", "1m", "Chart"], group=grp_anchors)
+source_res  = input.string("15S", "Resolución de Fuente Interna", options=["15S", "1m", "2m", "3m", "5m", "Chart"], group=grp_anchors)
 
 grp_model   = "2. Operador Matemático de C"
 mode_C      = input.string("Auto (Régimen Corto n<21 / Base n>=21)", "Modo de Selección de C",
@@ -40,6 +40,12 @@ if source_res == "15S"
     dt_fuente := 15.0
 else if source_res == "1m"
     dt_fuente := 60.0
+else if source_res == "2m"
+    dt_fuente := 120.0
+else if source_res == "3m"
+    dt_fuente := 180.0
+else if source_res == "5m"
+    dt_fuente := 300.0
 else
     dt_fuente := float(dt_chart)
 
