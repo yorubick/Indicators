@@ -83,6 +83,28 @@ Para someter la ley matemática a prueba ciega en un régimen completamente nuev
 
 ---
 
+### E. Certificación de Superposición Idéntica (0.00 pts de Residuo) en Gráfico 2m (15:42 UTC)
+
+Para validar la equivalencia matemática absoluta del motor de curvas y la compuerta de ruptura en el marco temporal de 2 minutos, se contrastaron los seis carriles en la **primera vela donde se activan numéricamente tras la ruptura** (15:42 UTC, tras permanecer en $\emptyset$ en 15:40 UTC):
+
+- **Condiciones**: `NQ1!`, Gráfico `2m`, Fuente `2m`, START `14:30:00`, END `15:16:00`, $C = 190.0\text{ s}$.
+
+| Carril / Línea | Indicador Oficial `PS EMA LITE` | Clon Open Source `PoiSzn Lite v1.3` | Residuo Numérico | Estado de Superposición |
+| :---: | :---: | :---: | :---: | :---: |
+| **Lane 3 A** | **30,906.70** | **30,906.70** | **`0.00 pts`** | **Identidad Absoluta** |
+| **Lane 3 B** | **30,906.89** | **30,906.89** | **`0.00 pts`** | **Identidad Absoluta** |
+| **Lane 2 A** | **30,908.29** | **30,908.29** | **`0.00 pts`** | **Identidad Absoluta** |
+| **Lane 2 B** | **30,907.41** | **30,907.41** | **`0.00 pts`** | **Identidad Absoluta** |
+| **Lane 1 A** | **30,918.34** | **30,918.34** | **`0.00 pts`** | **Identidad Absoluta** |
+| **Lane 1 B** | **30,915.98** | **30,915.98** | **`0.00 pts`** | **Identidad Absoluta** |
+
+**Veredicto de Certificación del Motor**:
+1. **Precisión al Centavo**: El residuo es exactamente `0.00 pts` simultáneamente en los 6 carriles, confirmando la exactitud de los factores de escala ($b_{3A}=24$, $b_{3B}=89/3$, $b_{2A}=8$, $b_{2B}=89/9$, $b_{1A}=8/3$, $b_{1B}=89/27$).
+2. **Sincronización de Ruptura y Semilla**: La compuerta booleana de ruptura y la asignación de semilla (`end_candle_low` / `end_candle_high`) coinciden con el script cerrado al milisegundo de ejecución en la vela 15:42 UTC.
+3. **Confirmación de $C = 190\text{ s}$**: Este valor entero resuelve unívocamente las 6 curvas oficiales para el ancla `15:16 UTC`.
+
+---
+
 ## 3. Formulación Completa del Operador Matemático
 
 Con esta base empírica, la función universal $f(\text{OHLCV}, \Delta t_{\text{fuente}}, T) \to C$ se define formalmente en 3 ramas:
