@@ -41,7 +41,9 @@ La lectura oficial en 19:37 resultó vacía (`∅`) porque no hubo ruptura del h
 ## Controles de Desplazamiento de START (END 19:33, Eval 19:34, Fuente 15s) — 14-oct-2026
 
 - **START 19:08, END 19:33** (`CTRL-20261014-1908-1933-15S`): $C = 70\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Revela un cambio de $\Delta C = -17\text{ s}$ para $\Delta T = -300\text{ s}$ respecto a START 19:03 ($C = 87\text{ s}$), con tasa $\Delta T / \Delta C \approx 17.65 \approx 18.3$. Ver [informe](../experimentos/15s_serie_1903/CONTROL_1908_1933_EVAL_1934.md).
+- **START 19:10, END 19:33** (`CTRL-20261014-1910-1933-15S`): $C = 66\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Idéntico a START 19:13, demostrando la meseta cuántica estable de 66 s. Ver [informe](../experimentos/15s_serie_1903/CONTROL_1910_1933_EVAL_1934.md).
 - **START 19:13, END 19:33** (`CTRL-20261014-1913-1933-15S`): $C = 66\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Conecta exactamente con la ley de régimen corto para $n_{\Delta} = 20$ barras: $\operatorname{round}(20 \times 60 \times 10 / 183) = \operatorname{round}(65.5738) = \mathbf{66.0\text{ s}}$. Ver [informe](../experimentos/15s_serie_1903/CONTROL_1913_1933_EVAL_1934.md).
+
 - **START 19:15, END 19:33** (`CTRL-20261014-1915-1933-15S`): $C = 77\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Registra una bifurcación de estado ($77 = 66 + 11$) en la ventana de 18 min. Ver [informe](../experimentos/15s_serie_1903/CONTROL_1915_1933_EVAL_1934.md).
 - **START 19:18, END 19:33** (`CTRL-20261014-1918-1933-15S`): $C = 39\text{ s}$ confirmado en las 6 líneas con residuo $< 0.005$ pt. Falsifica el tope inferior $\max(60)$ en fuente de 15s y muestra un salto cuántico de exactamente $27\text{ s}$ ($3^3$) desde $66\text{ s}$ ($66 - 27 = 39$). Ver [informe](../experimentos/15s_serie_1903/CONTROL_1918_1933_EVAL_1934.md).
 
