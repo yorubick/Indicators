@@ -1,0 +1,370 @@
+//@version=5
+indicator("PoiSzn EMA Origin Lite v1.3 (Open Source)", "PoiSzn Lite v1.3", overlay=true, max_lines_count=500, max_labels_count=500, max_boxes_count=100)
+
+// ============================================================================
+// POISZN EMA ORIGIN LITE v1.3 - OPEN SOURCE ENGINE
+// Reconstrucción determinista basada en el operador matemático universal de C
+// Autores: FrankyProfit & Antigravity (Auditoría Adversaria NQ1! Octubre 2026)
+// ============================================================================
+
+// ============================================================================
+// 1. CONFIGURACIÓN DE ENTRADAS (INPUTS)
+// ============================================================================
+grp_anchors = "1. Anclas de Rango (START / END)"
+start_time  = input.time(timestamp("2026-10-12 19:03:00"), "Fecha/Hora START (UTC)", group=grp_anchors)
+end_time    = input.time(timestamp("2026-10-12 19:33:00"), "Fecha/Hora END (UTC)", group=grp_anchors)
+source_res  = input.string("15S", "Resolución de Fuente Interna", options=["15S", "1m", "Chart"], group=grp_anchors)
+
+grp_model   = "2. Operador Matemático Universal de C"
+mode_C      = input.string("Auto: Híbrido Universal (Recomendado)", "Modo de Cálculo de C",
+              options=["Auto: Híbrido Universal (Recomendado)",
+                       "Base Lineal: round(T / 18.3)",
+                       "Régimen Corto Base: n*dt*10/183",
+                       "Celosía Armónica: round(T / 18.3) + k*27",
+                       "Manual C (Calibración)"], group=grp_model)
+harmonic_k  = input.int(0, "Paso Armónico k (para k * 27s)", minval=-5, maxval=5, group=grp_model)
+manual_C    = input.float(87.0, "C Manual (segundos)", minval=1.0, step=1.0, group=grp_model)
+
+grp_visual  = "3. Visualización y Gráfico"
+show_box    = input.bool(true, "Dibujar Caja de Rango y Semilla", group=grp_visual)
+show_clouds = input.bool(true, "Rellenar Nubes de Tendencia (Lanes)", group=grp_visual)
+show_hud    = input.bool(true, "Mostrar Panel HUD de Telemetría", group=grp_visual)
+hud_pos_str = input.string("Abajo Derecha", "Posición HUD", options=["Arriba Derecha", "Abajo Derecha", "Arriba Izquierda", "Abajo Izquierda"], group=grp_visual)
+
+// ============================================================================
+// 2. DETECCIÓN TEMPORAL Y FUENTE DE DATOS
+// ============================================================================
+dt_chart = timeframe.in_seconds()
+float dt_fuente = dt_chart
+if source_res == "15S"
+    dt_fuente := 15.0
+else if source_res == "1m"
+    dt_fuente := 60.0
+else
+    dt_fuente := float(dt_chart)
+
+// Identificación unívoca de barras en la ventana
+bool is_in_range  = time >= start_time and time <= end_time
+bool is_start_bar = time >= start_time and (time[1] < start_time or na(time[1]))
+bool is_end_bar   = (time <= end_time) and (time + int(dt_chart * 1000) > end_time)
+
+// Contadores de barras y extremos del rango
+var int   n_bars          = 0
+var float range_high      = na
+var float range_low       = na
+var float end_candle_high = na
+var float end_candle_low  = na
+var float end_candle_open = na
+var float end_candle_close= na
+var int   end_bar_index   = na
+
+if time < start_time
+    n_bars          := 0
+    range_high      := na
+    range_low       := na
+    end_bar_index   := na
+else if is_in_range
+    if is_start_bar
+        n_bars     := 1
+        range_high := high
+        range_low  := low
+    else
+        n_bars     += 1
+        range_high := math.max(nz(range_high, high), high)
+        range_low  := math.min(nz(range_low, low), low)
+
+if is_end_bar
+    end_bar_index    := bar_index
+    end_candle_high  := high
+    end_candle_low   := low
+    end_candle_open  := open
+    end_candle_close := close
+
+bool is_post_end = not na(end_bar_index) and (bar_index > end_bar_index)
+float duration_T = math.max(0.0, float(end_time - start_time) / 1000.0)
+
+// Sub-barras para muestreo intraminuto (llamada a nivel global obligatoria en Pine v5)
+sub_closes = request.security_lower_tf(syminfo.tickerid, "15S", close)
+
+// ============================================================================
+// 3. OPERADOR MATEMÁTICO UNIVERSAL DE C
+// ============================================================================
+var float C = na
+var string branch_name = "Inactivo"
+
+// Detección causal de pivotes y estructura a nivel global
+piv_h = ta.pivothigh(high, 2, 2)
+piv_l = ta.pivotlow(low, 2, 2)
+
+var float last_confirmed_ph = na
+var float last_confirmed_pl = na
+if not na(piv_h)
+    last_confirmed_ph := piv_h
+if not na(piv_l)
+    last_confirmed_pl := piv_l
+
+// Cálculo del Operador según el Régimen
+if mode_C == "Auto: Híbrido Universal (Recomendado)"
+    // 1. Piso Físico y Régimen Corto Base (n < 21 barras o T <= 600s)
+    if n_bars < 21 or duration_T <= 600.0
+        float c_linear = (duration_T * 10.0) / 183.0
+        C := math.max(dt_fuente, math.round(c_linear))
+        branch_name := "Base_Lineal"
+    else
+        // 2. Régimen Largo: Celosía Armónica y Estructura Intraminuto
+        float end_range = end_candle_high - end_candle_low
+        bool is_impulse = not na(end_candle_close) and not na(last_confirmed_ph) and (end_candle_close >= last_confirmed_ph) and ((end_candle_close - end_candle_low) >= 0.8 * math.max(0.25, end_range))
+        bool is_deep_pullback = not na(end_candle_close) and not na(end_candle_open) and (end_candle_close < end_candle_open) and ((end_candle_high - end_candle_close) >= 0.75 * math.max(0.25, end_range))
+
+        if is_impulse
+            C := 123.0
+            branch_name := "Impulso_Peak_123"
+        else if is_deep_pullback
+            C := 67.0
+            branch_name := "Contracción_67"
+        else
+            // Meseta armónica estable (87s / 88s según timeframe de fuente)
+            if dt_fuente <= 15.0
+                C := 87.0
+                branch_name := "Meseta_87"
+            else
+                C := math.round(duration_T / 18.3)
+                branch_name := "Base_Macroscópica"
+else if mode_C == "Base Lineal: round(T / 18.3)"
+    C := math.max(dt_fuente, math.round(duration_T / 18.3))
+    branch_name := "Lineal_Puro"
+else if mode_C == "Régimen Corto Base: n*dt*10/183"
+    C := math.max(dt_fuente, (n_bars * dt_fuente * 10.0) / 183.0)
+    branch_name := "Corto_Continuo"
+else if mode_C == "Celosía Armónica: round(T / 18.3) + k*27"
+    C := math.max(dt_fuente, math.round(duration_T / 18.3) + (harmonic_k * 27.0))
+    branch_name := "Celosía_Armónica"
+else if mode_C == "Manual C (Calibración)"
+    C := manual_C
+    branch_name := "Manual"
+
+// ============================================================================
+// 4. FACTORES BASE Y ALPHAS DE LAS 6 CURVAS OFICIALES
+// ============================================================================
+// Factores de escala temporal exacta b0:
+// Lane 3 A (Fast): 24.0          Lane 3 B (Slow): 89 / 3 ≈ 29.6667
+// Lane 2 A (Fast): 8.0           Lane 2 B (Slow): 89 / 9 ≈ 9.8889
+// Lane 1 A (Fast): 8 / 3 ≈ 2.6667 Lane 1 B (Slow): 89 / 27 ≈ 3.2963
+
+b_3a = 24.0
+b_3b = 89.0 / 3.0
+b_2a = 8.0
+b_2b = 89.0 / 9.0
+b_1a = 8.0 / 3.0
+b_1b = 89.0 / 27.0
+
+alpha_3a = 2.0 / ((b_3a * C / dt_fuente) + 1.0)
+alpha_3b = 2.0 / ((b_3b * C / dt_fuente) + 1.0)
+alpha_2a = 2.0 / ((b_2a * C / dt_fuente) + 1.0)
+alpha_2b = 2.0 / ((b_2b * C / dt_fuente) + 1.0)
+alpha_1a = 2.0 / ((b_1a * C / dt_fuente) + 1.0)
+alpha_1b = 2.0 / ((b_1b * C / dt_fuente) + 1.0)
+
+// Períodos nominales equivalentes (N)
+N_3a = math.round(b_3a * C / dt_fuente)
+N_3b = math.round(b_3b * C / dt_fuente)
+N_2a = math.round(b_2a * C / dt_fuente)
+N_2b = math.round(b_2b * C / dt_fuente)
+N_1a = math.round(b_1a * C / dt_fuente)
+N_1b = math.round(b_1b * C / dt_fuente)
+
+// ============================================================================
+// 5. COMPUERTA DE RUPTURA, SEMILLA Y RECURRENCIA EMA
+// ============================================================================
+var bool  has_broken_out = false
+var int   breakout_dir   = 0     // +1: Alcista, -1: Bajista
+var float chosen_seed    = na
+
+// Estados recurrentes en paralelo (alcista y bajista)
+var float s_bull_3a = na
+var float s_bull_3b = na
+var float s_bull_2a = na
+var float s_bull_2b = na
+var float s_bull_1a = na
+var float s_bull_1b = na
+
+var float s_bear_3a = na
+var float s_bear_3b = na
+var float s_bear_2a = na
+var float s_bear_2b = na
+var float s_bear_1a = na
+var float s_bear_1b = na
+
+// Inicialización de Semilla en la barra de END
+if is_end_bar
+    has_broken_out := false
+    breakout_dir   := 0
+    chosen_seed    := na
+    
+    // Alcista: Semilla = Low de END
+    s_bull_3a := end_candle_low
+    s_bull_3b := end_candle_low
+    s_bull_2a := end_candle_low
+    s_bull_2b := end_candle_low
+    s_bull_1a := end_candle_low
+    s_bull_1b := end_candle_low
+
+    // Bajista: Semilla = High de END
+    s_bear_3a := end_candle_high
+    s_bear_3b := end_candle_high
+    s_bear_2a := end_candle_high
+    s_bear_2b := end_candle_high
+    s_bear_1a := end_candle_high
+    s_bear_1b := end_candle_high
+
+// Actualización recurrente barra a barra tras END
+if is_post_end
+    bool has_subbars = (source_res == "15S") and (dt_chart >= 60) and (array.size(sub_closes) > 0)
+
+    if has_subbars
+        for i = 0 to array.size(sub_closes) - 1
+            float sc = array.get(sub_closes, i)
+            s_bull_3a := s_bull_3a + alpha_3a * (sc - s_bull_3a)
+            s_bull_3b := s_bull_3b + alpha_3b * (sc - s_bull_3b)
+            s_bull_2a := s_bull_2a + alpha_2a * (sc - s_bull_2a)
+            s_bull_2b := s_bull_2b + alpha_2b * (sc - s_bull_2b)
+            s_bull_1a := s_bull_1a + alpha_1a * (sc - s_bull_1a)
+            s_bull_1b := s_bull_1b + alpha_1b * (sc - s_bull_1b)
+
+            s_bear_3a := s_bear_3a + alpha_3a * (sc - s_bear_3a)
+            s_bear_3b := s_bear_3b + alpha_3b * (sc - s_bear_3b)
+            s_bear_2a := s_bear_2a + alpha_2a * (sc - s_bear_2a)
+            s_bear_2b := s_bear_2b + alpha_2b * (sc - s_bear_2b)
+            s_bear_1a := s_bear_1a + alpha_1a * (sc - s_bear_1a)
+            s_bear_1b := s_bear_1b + alpha_1b * (sc - s_bear_1b)
+    else
+        // Actualización estándar contra el cierre de la barra actual
+        s_bull_3a := s_bull_3a + alpha_3a * (close - s_bull_3a)
+        s_bull_3b := s_bull_3b + alpha_3b * (close - s_bull_3b)
+        s_bull_2a := s_bull_2a + alpha_2a * (close - s_bull_2a)
+        s_bull_2b := s_bull_2b + alpha_2b * (close - s_bull_2b)
+        s_bull_1a := s_bull_1a + alpha_1a * (close - s_bull_1a)
+        s_bull_1b := s_bull_1b + alpha_1b * (close - s_bull_1b)
+
+        s_bear_3a := s_bear_3a + alpha_3a * (close - s_bear_3a)
+        s_bear_3b := s_bear_3b + alpha_3b * (close - s_bear_3b)
+        s_bear_2a := s_bear_2a + alpha_2a * (close - s_bear_2a)
+        s_bear_2b := s_bear_2b + alpha_2b * (close - s_bear_2b)
+        s_bear_1a := s_bear_1a + alpha_1a * (close - s_bear_1a)
+        s_bear_1b := s_bear_1b + alpha_1b * (close - s_bear_1b)
+
+    // Detección de Ruptura de Rango (Compuerta Booleana)
+    if not has_broken_out
+        if close > range_high
+            has_broken_out := true
+            breakout_dir   := 1
+            chosen_seed    := end_candle_low
+        else if close < range_low
+            has_broken_out := true
+            breakout_dir   := -1
+            chosen_seed    := end_candle_high
+
+// ============================================================================
+// 6. ASIGNACIÓN Y RENDERIZADO DE CURVAS ACTIVAS
+// ============================================================================
+float lane_3a = na
+float lane_3b = na
+float lane_2a = na
+float lane_2b = na
+float lane_1a = na
+float lane_1b = na
+
+if is_post_end and has_broken_out
+    if breakout_dir == 1
+        lane_3a := s_bull_3a
+        lane_3b := s_bull_3b
+        lane_2a := s_bull_2a
+        lane_2b := s_bull_2b
+        lane_1a := s_bull_1a
+        lane_1b := s_bull_1b
+    else if breakout_dir == -1
+        lane_3a := s_bear_3a
+        lane_3b := s_bear_3b
+        lane_2a := s_bear_2a
+        lane_2b := s_bear_2b
+        lane_1a := s_bear_1a
+        lane_1b := s_bear_1b
+
+// Paleta Oficial de PoiSzn EMA Origin Lite
+c_lane3 = color.new(#00e5ff, 15)  // Cyan oficial (Lane 3)
+c_lane2 = color.new(#2979ff, 15)  // Azul oficial (Lane 2)
+c_lane1 = color.new(#d500f9, 15)  // Magenta / Púrpura oficial (Lane 1)
+
+// Trazado de las 6 líneas
+p_3a = plot(lane_3a, "Lane 3 A (Fast)", color=c_lane3, linewidth=2)
+p_3b = plot(lane_3b, "Lane 3 B (Slow)", color=c_lane3, linewidth=1)
+p_2a = plot(lane_2a, "Lane 2 A (Fast)", color=c_lane2, linewidth=2)
+p_2b = plot(lane_2b, "Lane 2 B (Slow)", color=c_lane2, linewidth=1)
+p_1a = plot(lane_1a, "Lane 1 A (Fast)", color=c_lane1, linewidth=2)
+p_1b = plot(lane_1b, "Lane 1 B (Slow)", color=c_lane1, linewidth=1)
+
+// Relleno de nubes (colores condicionales en ámbito global)
+color c_fill_3 = show_clouds ? color.new(#00e5ff, 82) : na
+color c_fill_2 = show_clouds ? color.new(#2979ff, 82) : na
+color c_fill_1 = show_clouds ? color.new(#d500f9, 82) : na
+
+fill(p_3a, p_3b, color=c_fill_3, title="Nube Lane 3")
+fill(p_2a, p_2b, color=c_fill_2, title="Nube Lane 2")
+fill(p_1a, p_1b, color=c_fill_1, title="Nube Lane 1")
+
+// ============================================================================
+// 7. CAJA DE RANGO Y ANCLAS VISUALES
+// ============================================================================
+var box range_box = na
+if show_box and is_end_bar and not na(range_high) and not na(range_low)
+    box.delete(range_box)
+    range_box := box.new(left=start_time, top=range_high, right=end_time, bottom=range_low,
+                         xloc=xloc.bar_time, border_color=color.gray, border_style=line.style_dashed,
+                         bgcolor=color.new(color.blue, 92))
+
+// ============================================================================
+// 8. PANEL DE TELEMETRÍA (HUD)
+// ============================================================================
+var table hud = na
+if show_hud and barstate.islast
+    string table_pos = position.bottom_right
+    if hud_pos_str == "Arriba Derecha"
+        table_pos := position.top_right
+    else if hud_pos_str == "Abajo Derecha"
+        table_pos := position.bottom_right
+    else if hud_pos_str == "Arriba Izquierda"
+        table_pos := position.top_left
+    else if hud_pos_str == "Abajo Izquierda"
+        table_pos := position.bottom_left
+
+    hud := table.new(table_pos, 2, 9, bgcolor=color.new(#131722, 10), border_color=color.gray, border_width=1)
+    
+    table.cell(hud, 0, 0, "POISZN LITE v1.3", bgcolor=color.new(#2979ff, 20), text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 0, "TELEMETRÍA", bgcolor=color.new(#2979ff, 20), text_color=color.white, text_size=size.small)
+
+    table.cell(hud, 0, 1, "C (segundos)", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 1, str.tostring(C, "#.##") + " s", text_color=color.yellow, text_size=size.small)
+
+    table.cell(hud, 0, 2, "Rama Operador", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 2, branch_name, text_color=color.aqua, text_size=size.small)
+
+    table.cell(hud, 0, 3, "Duración T (seg)", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 3, str.tostring(duration_T, "#") + " s (" + str.tostring(n_bars) + " barras)", text_color=color.white, text_size=size.small)
+
+    table.cell(hud, 0, 4, "Resolución Fuente", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 4, source_res + " (dt=" + str.tostring(dt_fuente, "#") + "s)", text_color=color.white, text_size=size.small)
+
+    table.cell(hud, 0, 5, "Semilla END", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 5, na(chosen_seed) ? "Esperando Ruptura" : str.tostring(chosen_seed, "#.2f"), text_color=color.white, text_size=size.small)
+
+    table.cell(hud, 0, 6, "Estado Compuerta", text_color=color.white, text_size=size.small)
+    string st_break = has_broken_out ? (breakout_dir == 1 ? "ACTIVA (Alcista)" : "ACTIVA (Bajista)") : "INACTIVA (Sin Ruptura)"
+    color col_break = has_broken_out ? color.green : color.orange
+    table.cell(hud, 1, 6, st_break, text_color=col_break, text_size=size.small)
+
+    table.cell(hud, 0, 7, "Períodos N (3A/2A/1A)", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 7, str.tostring(N_3a) + " / " + str.tostring(N_2a) + " / " + str.tostring(N_1a), text_color=color.white, text_size=size.small)
+
+    table.cell(hud, 0, 8, "Lectura Lane 1A / 3A", text_color=color.white, text_size=size.small)
+    string txt_lanes = na(lane_1a) ? "∅" : (str.tostring(lane_1a, "#.2f") + " | " + str.tostring(lane_3a, "#.2f"))
+    table.cell(hud, 1, 8, txt_lanes, text_color=color.white, text_size=size.small)
