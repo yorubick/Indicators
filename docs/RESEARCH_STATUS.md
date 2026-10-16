@@ -16,6 +16,10 @@ Las **curvas** están resueltas cuando se conoce C, y el **régimen corto** (men
 | R4 | **La resolución de la fuente cambia C.** Con las mismas anclas, $C_{15\,s} \ne C_{1\,m}$. | 13 inversiones de la serie 19:03, con 6 curvas cada una. | No dice qué variables de la fuente lo determinan. |
 | R5 | **Seven Cloud, cierres históricos.** Una instancia recién añadida desde el código guardado coincide con el estudio oficial en 392 barras × 32 curvas (12.544 valores, 0 discrepancias). | [`SEVEN_CLOUD_AUDIT_2026-10-16.md`](SEVEN_CLOUD_AUDIT_2026-10-16.md), `python tools/audit_seven_cloud_exports.py`. | La instancia ya cargada en el gráfico no coincidió, y la paridad dentro de la vela en formación (20:32–20:34 UTC) sigue abierta. |
 
+## Evaluador
+
+Toda regla de C se mide con [`tools/evaluador_C.py`](EVALUADOR_C.md): validación cruzada por grupo, comparación con el azar y predicciones registradas antes de medir. Marcador al 16-oct-2026: ninguna regla predice el régimen largo. El modo Auto del clon Pine acierta 1/110 en el maestro y 0/11 en los casos de 2 m, por debajo de la línea base `round(T/18.3)`, que acierta 8/110.
+
 ## Lo que sigue abierto
 
 1. **La regla del régimen largo ($n \ge 21$).** Es el objetivo principal y está sin resolver.

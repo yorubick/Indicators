@@ -10,7 +10,7 @@
 | `imports/codex/` | Adjuntos pegados a chats de Codex | Material con procedencia conversacional; no equivale a exportación oficial por sí solo. |
 | `docs/` | Índices y guía de trabajo añadidos para centralizar el proyecto | Mantener aquí el resumen durable y enlazar documentos fuente en vez de duplicarlos. |
 | `experimentos/` | Carpetas estructuradas de experimentos reproducibles | Contienen README con ficha técnica, telemetría JSON y scripts de inversión/auditoría. |
-| `tools/` | Herramientas de mantenimiento (catálogo, auditoría Seven Cloud, reorganización) y scripts de análisis añadidos desde el 15-oct | Se ejecutan desde la raíz del repositorio: `python tools/<script>.py`. |
+| `tools/` | Herramientas de mantenimiento (catálogo, auditoría Seven Cloud, reorganización), el [evaluador de reglas de C](EVALUADOR_C.md) y scripts de análisis añadidos desde el 15-oct | Se ejecutan desde la raíz del repositorio: `python tools/<script>.py`. |
 | `reports/` | Los 97 informes Markdown históricos que estaban en la raíz | Registro de la investigación. Las conclusiones vigentes están en `docs/RESEARCH_STATUS.md`; si un informe y ese documento no coinciden, manda `RESEARCH_STATUS`. |
 | `pine/` | Clones Pine de código abierto (`PoiSzn_*`) y versiones recibidas de Gemini (`Gemini_*_recibido.pine`) | Las versiones recibidas son instantáneas con SHA-256 registrado: no editarlas. |
 | `media/` | Capturas JPG/PNG y gráficos SVG generados | `media/audio/` guarda los audios de las guías y sus transcripciones automáticas. |
