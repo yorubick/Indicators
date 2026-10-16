@@ -44,7 +44,7 @@ Se incluyen las exportaciones originales sin renombrar ni transformar:
 - `seven_cloud_post_save_post_reload_2026-10-16_2032UTC.csv`
 - `seven_cloud_saved_script_added_2026-10-16_2035UTC.csv`
 
-El código Pine versionado está en [`../PoiSzn_Seven_Cloud_EMA_v1_2_OpenSource.pine`](../PoiSzn_Seven_Cloud_EMA_v1_2_OpenSource.pine). En `calc_ema_pair()` declara `lookahead=barmerge.lookahead_off`.
+El código Pine versionado está en [`../PoiSzn_Seven_Cloud_EMA_v1_2_OpenSource.pine`](../pine/PoiSzn_Seven_Cloud_EMA_v1_2_OpenSource.pine). En `calc_ema_pair()` declara `lookahead=barmerge.lookahead_off`.
 
 ## Siguiente comprobación
 

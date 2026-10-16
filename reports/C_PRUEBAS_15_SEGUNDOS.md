@@ -6,7 +6,7 @@
 
 Se completó el barrido de START cada 15 segundos y un control adicional moviendo END cada minuto. **Todavía no se identificó la fórmula generadora de C.** Los números de este informe se extraen de las diez curvas originales por su recurrencia EMA y la familia 72/89.
 
-![Mediciones de sensibilidad](G:/trading/guias/analisis/C_sensibilidad_15s.png)
+![Mediciones de sensibilidad](../media/C_sensibilidad_15s.png)
 
 Las líneas de la figura conectan muestras. No representan una interpolación ni una predicción entre ellas.
 

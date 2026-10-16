@@ -46,7 +46,7 @@ def main():
     # Guard against silently auditing a subsequently changed formula.
     for token in ['ticks * 0.786','ticks * 0.577','bar_cnt - 21','start_pos < 0.25']:
         assert token in text,token
-    digest=hashlib.sha256(raw).hexdigest();(ROOT/'Gemini_hibrido_auditado.pine').write_bytes(raw)
+    digest=hashlib.sha256(raw).hexdigest();(ROOT/'pine/Gemini_hibrido_auditado.pine').write_bytes(raw)
     cases=[]
     for dataset in ['C_fronteras_nuevas.json','C_matriz.json','C_21_regimenes.json']:
         if not (ROOT/dataset).exists():continue

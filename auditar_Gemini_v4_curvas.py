@@ -50,7 +50,7 @@ def simulate(case,C):
     return stats
 
 def main():
-    text=(ROOT/'Gemini_v4_recibido.pine').read_text(encoding='utf-8-sig')
+    text=(ROOT/'pine/Gemini_v4_recibido.pine').read_text(encoding='utf-8-sig')
     for token in ['s_bull_l3a := end_low','s_bear_l3a := end_high','if close > rng_high','else if close < rng_low','if time > end_time','89.0 / (1.0/3.0)']:
         assert token in text
     pine=translate_pine_engine();cases=json.loads((ROOT/'C_matriz_frontera15s.json').read_text())['cases'];results=[]

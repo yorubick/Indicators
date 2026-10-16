@@ -21,4 +21,4 @@ axes[1].set_xlabel('Final UTC')
 fig.suptitle('Character Tree: sensibilidad de C a las anclas',fontsize=16,ha='left',x=.02)
 fig.text(.02,-.035,'NQ1! · 12 oct 2026 · Perfil B · Manual · Fuente y gráfico: 15 segundos\n'
          'C se recupera de los plots originales. Su fórmula generadora sigue pendiente.',fontsize=10,color='#444444')
-fig.savefig(ROOT/'C_sensibilidad_15s.png',dpi=170,bbox_inches='tight')
+fig.savefig(ROOT/'media/C_sensibilidad_15s.png',dpi=170,bbox_inches='tight')

@@ -14,12 +14,12 @@ import numpy as np
 
 model_dir = next((ROOT/'.tools'/'modelos_asr'/'models--Systran--faster-whisper-base.en'/'snapshots').iterdir())
 model = WhisperModel(str(model_dir), device='cpu', compute_type='int8', cpu_threads=4)
-with wave.open(str(Path(__file__).with_name('Lite_X_2110110293837652362_audio.wav')), 'rb') as audio_file:
+with wave.open(str((Path(__file__).parent / 'media/audio/Lite_X_2110110293837652362_audio.wav')), 'rb') as audio_file:
     assert audio_file.getframerate() == 16000 and audio_file.getnchannels() == 1
     audio = np.frombuffer(audio_file.readframes(audio_file.getnframes()), dtype=np.int16).astype(np.float32)/32768
 segments, _ = model.transcribe(audio, language='en', beam_size=5, vad_filter=True)
 out = []
-destination = Path(__file__).with_name('Lite_X_2110110293837652362_transcripcion.json')
+destination = (Path(__file__).parent / 'media/audio/Lite_X_2110110293837652362_transcripcion.json')
 for segment in segments:
     out.append({'start': segment.start, 'end': segment.end, 'text': segment.text})
     destination.write_text(json.dumps(out, indent=2), encoding='utf-8')

@@ -2,7 +2,7 @@
 
 ## Antes de medir
 
-- Revisa `docs/RESEARCH_STATUS.md`, `MODELOS_REFUTADOS_PARA_GEMINI.md` y los resultados existentes en `manual/`.
+- Revisa `docs/RESEARCH_STATUS.md`, `reports/MODELOS_REFUTADOS_PARA_GEMINI.md` y los resultados existentes en `manual/`.
 - Escribe la hipótesis, el resultado predicho y los controles antes de abrir la lectura oficial. Marca si la predicción es ciega o retrospectiva.
 - Confirma versión/nombre del indicador oficial, símbolo/contrato, fecha, sesión, timezone, timeframe y fuente de barras.
 

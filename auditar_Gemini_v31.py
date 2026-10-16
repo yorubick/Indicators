@@ -72,7 +72,7 @@ def main():
     summary['additional15s']=metrics([r for r in newrows if r['dt']==15])
     mismatches=[r for r in oldrows if abs(r['python_prediction']-r['pine_prediction'])>1e-7]
     out={'scope':'Frozen external model; no training/fitting. Explicit scoring of originalvalidation for audit, not blind validation. Additional controls already measured and available to Gemini; not certified unseen/prospective for its development.',
-         'snapshot_sha256':{f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in ['Gemini_v31_evaluador_recibido.py','Gemini_v31_recibido.pine']},
+         'snapshot_sha256':{f:hashlib.sha256((ROOT/f).read_bytes()).hexdigest() for f in ['Gemini_v31_evaluador_recibido.py','pine/Gemini_v31_recibido.pine']},
          'summary':summary,'Python_Pine_original99_differences':mismatches,'rows':rows}
     (ROOT/'Gemini_v31_auditoria.json').write_text(json.dumps(out,indent=2),encoding='utf-8')
     print(json.dumps({'summary':summary,'Python_Pine_different_predictions':len(mismatches),

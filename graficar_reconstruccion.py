@@ -47,5 +47,5 @@ err.set_xlabel('12 octubre 2026 · UTC')
 err.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M',tz=timezone.utc))
 for axis in [ax,err]:
     axis.grid(alpha=.2)
-fig.savefig(ROOT/'reconstruccion_character.png',dpi=160)
+fig.savefig(ROOT/'media/reconstruccion_character.png',dpi=160)
 print('Figura guardada. Error máximo:',max(abs(a-b) for k in periods for a,b in zip(replica[k],original[k])))

@@ -14,7 +14,7 @@ def candidate(case):
     else:C=77;branch='C_default_macro'
     return {'C':C,'branch':branch,'range_points':R,'new_high_at_END':new_high,'previous_global_high':previous_high,'END_high':rows[-1]['high'],'time_span_seconds':span,'bars':n}
 def main():
-    attached=ATTACHMENT.read_text(encoding='utf-8-sig');pine=attached[attached.index('//@version=5'):].strip()+'\n';digest=hashlib.sha256(pine.encode()).hexdigest();(ROOT/'Gemini_estados_v2_recibido.pine').write_text(pine,encoding='utf-8')
+    attached=ATTACHMENT.read_text(encoding='utf-8-sig');pine=attached[attached.index('//@version=5'):].strip()+'\n';digest=hashlib.sha256(pine.encode()).hexdigest();(ROOT/'pine/Gemini_estados_v2_recibido.pine').write_text(pine,encoding='utf-8')
     assert all(s in pine for s in ['rng_pts <= 22.25','bar_cnt <= 25','rng_pts <= 26.0','C_calc := 71.0','C_calc := 77.0'])
     dataset=json.loads((ROOT/'C_dataset_verificado.json').read_text());train=[c for c in dataset['cases']if c['split']=='training'];results=[]
     for c in train:

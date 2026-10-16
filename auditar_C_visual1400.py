@@ -69,7 +69,7 @@ def main():
         if i>=3:chart2.lines[i].strokeDashArray=[4,3]
     drawing.add(chart2);drawing.add(String(60,310,'B: salidas Lite REALES A de las tres capas; continuo=C62, discontinuo=C83; misma escala H/L',fontSize=11))
     drawing.add(String(60,55,'La firma discreta de8EMAs coincide; las distancias y geometria no. C62/83 confirmado por6recurrencias.',fontSize=11))
-    renderSVG.drawToFile(drawing,str(ROOT/'C_comparacion1400_normalizada.svg'))
+    renderSVG.drawToFile(drawing,str(ROOT/'media/C_comparacion1400_normalizada.svg'))
     print(json.dumps({'summary':{k:{n:v[n] for n in ['C','n','H','L','rupture']} for k,v in output.items()},'same_signature8':True,'return_verified':True},indent=2))
 
 if __name__=='__main__':main()

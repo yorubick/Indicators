@@ -6,7 +6,7 @@ Este repositorio reúne la investigación de ingeniería inversa del indicador P
 
 1. Lee [el estado de la investigación](docs/RESEARCH_STATUS.md) para separar resultados verificados, hipótesis y preguntas abiertas.
 2. Consulta [el mapa del proyecto](docs/PROJECT_MAP.md) para localizar datos, scripts, informes e importaciones.
-3. Antes de repetir una prueba, revisa [los modelos ya refutados](MODELOS_REFUTADOS_PARA_GEMINI.md), [el informe de v4](GEMINI_V4_REVISION.md) y [la guía para continuar](COMO_CONTINUAR_MANUALMENTE.md).
+3. Antes de repetir una prueba, revisa [los modelos ya refutados](reports/MODELOS_REFUTADOS_PARA_GEMINI.md), [el informe de v4](reports/GEMINI_V4_REVISION.md) y [la guía para continuar](reports/COMO_CONTINUAR_MANUALMENTE.md).
 4. Registra cada medición nueva con el protocolo de [contribución y experimentos](docs/CONTRIBUTING.md).
 
 ## Estado resumido al 16-oct-2026
@@ -20,8 +20,8 @@ Este repositorio reúne la investigación de ingeniería inversa del indicador P
 
 ## Datos y procedencia
 
-- Exportaciones y capturas manuales de TradingView: [`manual/`](manual/). Se conservan sus nombres originales.
-- Importaciones de Gemini y Codex: [`imports/`](imports/), copiadas sin modificar. El inventario de copia y hashes SHA-256 está en [`docs/IMPORT_MANIFEST.csv`](docs/IMPORT_MANIFEST.csv).
+- Exportaciones y capturas manuales de TradingView: [`manual/`](manual). Se conservan sus nombres originales.
+- Importaciones de Gemini y Codex: [`imports/`](imports), copiadas sin modificar. El inventario de copia y hashes SHA-256 está en [`docs/IMPORT_MANIFEST.csv`](docs/IMPORT_MANIFEST.csv).
 - Inventario de todos los archivos y su SHA-256: [`docs/FILE_CATALOG.csv`](docs/FILE_CATALOG.csv). Para regenerarlo: `python tools/build_file_catalog.py`.
 - Repositorio remoto: [`github.com/yorubick/Indicators`](https://github.com/yorubick/Indicators).
 

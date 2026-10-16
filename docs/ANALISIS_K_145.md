@@ -1,6 +1,6 @@
 # Auditoría de C y k en los 145 casos Lite medidos
 
-> **Nota de revisión (16-oct-2026).** La columna rotulada «Pine v1.3» usa $n = \lfloor T/\Delta t \rfloor$ **sin** el $+1$. El clon `PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine` (línea 104) usa `floor(T/dt) + 1`, es decir, la base que aquí se llama «heredada». La lectura compatible con el clon es por tanto la heredada, donde la fórmula corta acierta 35/35. El «14/57» muestra que el conteo no inclusivo es incorrecto, no que la ley corta falle. La conclusión sobre $k$ y la celosía de 9 s se mantiene: 7/110 frente a 12,2 esperados por azar.
+> **Nota de revisión (16-oct-2026).** La columna rotulada «Pine v1.3» usa $n = \lfloor T/\Delta t \rfloor$ **sin** el $+1$. El clon `pine/PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine` (línea 104) usa `floor(T/dt) + 1`, es decir, la base que aquí se llama «heredada». La lectura compatible con el clon es por tanto la heredada, donde la fórmula corta acierta 35/35. El «14/57» muestra que el conteo no inclusivo es incorrecto, no que la ley corta falle. La conclusión sobre $k$ y la celosía de 9 s se mantiene: 7/110 frente a 12,2 esperados por azar.
 
 Fuente: master_all_C_cases.json, que marca 145 casos Lite_decimal_verified dentro de 179 casos únicos. El propio maestro indica que no hay certificación de holdout ciego/prospectivo.
 

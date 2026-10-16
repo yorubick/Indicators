@@ -38,5 +38,5 @@ for i,(label,a,b,color) in enumerate(boxes):
     d.add(Rect(X(a),y,X(b)-X(a),12,fillColor=colors.HexColor(color),strokeColor=None))
     d.add(String(X(b)+8,y+2,a+'-'+b,fontSize=9))
 d.add(String(70,28,'Pivots1vela confirmada; interpretacion operativa provisional. Anclas congeladas antes de las nuevas mediciones C.',fontSize=10))
-path=ROOT/'C_estructura_eventos.svg';renderSVG.drawToFile(d,str(path));ET.parse(path)
+path=ROOT/'media/C_estructura_eventos.svg';renderSVG.drawToFile(d,str(path));ET.parse(path)
 print(path)

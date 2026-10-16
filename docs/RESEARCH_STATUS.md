@@ -42,8 +42,8 @@ Cifras recalculadas sobre los 110 casos largos Lite del maestro. $\Delta C = C -
 ## Otros resultados de contexto
 
 - `master_all_C_cases.json` registra 179 selecciones únicas: 145 con C Lite medido y 34 solo de Character, que no deben presentarse como C Lite medidos. **Ningún caso** está marcado como ciego o prospectivo (`blind_or_prospective = false` en los 145).
-- La revisión de v4 registra 96/112 casos exactos con la tolerancia estricta de su informe, pero cinco controles de 15 s fallan. Lee `GEMINI_V4_REVISION.md` para definiciones y salvedades. v4 no es una regla prospectiva validada.
-- Las pruebas de agregación y timeframe no aíslan una causa temporal; ver `PAQUETE_PARA_GEMINI.md` y los JSON de barrido asociados.
+- La revisión de v4 registra 96/112 casos exactos con la tolerancia estricta de su informe, pero cinco controles de 15 s fallan. Lee `reports/GEMINI_V4_REVISION.md` para definiciones y salvedades. v4 no es una regla prospectiva validada.
+- Las pruebas de agregación y timeframe no aíslan una causa temporal; ver `reports/PAQUETE_PARA_GEMINI.md` y los JSON de barrido asociados.
 - El adjunto [`imports/codex/2026-10-14_telemetry_paste.txt`](../imports/codex/2026-10-14_telemetry_paste.txt) es una tabla pegada de una conversación. Sirve como pista, no como sustituto de los CSV fuente. Un patrón «armónico» o «pico/meseta» no demuestra un mecanismo hasta que prediga casos nuevos.
 
 ## Cómo continuar sin repetir errores
@@ -51,7 +51,7 @@ Cifras recalculadas sobre los 110 casos largos Lite del maestro. $\Delta C = C -
 1. **Separar datos de entrenamiento y de control antes de mirar.** Toda regla nueva se construye con un subconjunto y se evalúa con casos que no participaron en su diseño, registrados en git *antes* de leer el valor oficial.
 2. **Prohibido codificar casos por su hora o identificador** en una regla que se presente como general. Las entradas permitidas son las que el indicador oficial puede ver: OHLCV de la fuente, anclas, $\Delta t$ y estado previo.
 3. **Comparar siempre con el azar y con una línea base simple**, como $\operatorname{round}(T/18.3)$ o la mediana por $n$. Una regla que no mejora a la línea base en los controles no aporta.
-4. Antes de medir, leer `MODELOS_REFUTADOS_PARA_GEMINI.md`, `GEMINI_V4_REVISION.md` y `COMO_CONTINUAR_MANUALMENTE.md`, y seguir [`CONTRIBUTING.md`](CONTRIBUTING.md).
+4. Antes de medir, leer `reports/MODELOS_REFUTADOS_PARA_GEMINI.md`, `reports/GEMINI_V4_REVISION.md` y `reports/COMO_CONTINUAR_MANUALMENTE.md`, y seguir [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Convenciones
 

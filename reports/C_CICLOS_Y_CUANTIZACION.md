@@ -53,4 +53,4 @@ No coincide en ningún END y no debe incorporarse a una réplica. No se descarta
 
 La regla que genera C desde OHLC sigue sin identificarse. Las mediciones de Lite permiten separar la precisión de C del redondeo de los períodos; no proporcionan por sí solas una fórmula. Una próxima búsqueda debe explicar los cambios abruptos por retirar una vela inicial o añadir una final. Este resultado evita continuar con un ciclo espectral global proporcional que suaviza los saltos de END en vez de reproducirlos.
 
-Reproducción: ejecutar [probar_C_espectro.py](G:/trading/guias/analisis/probar_C_espectro.py). Resultados y casos de restricción: [C_espectro.json](G:/trading/guias/analisis/C_espectro.json).
+Reproducción: ejecutar [probar_C_espectro.py](../probar_C_espectro.py). Resultados y casos de restricción: [C_espectro.json](../C_espectro.json).

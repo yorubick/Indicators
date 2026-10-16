@@ -8,9 +8,9 @@ from analizar_C_fuente_vs_grafico import ROOT
 from auditar_Gemini_v31 import metrics
 
 SOURCE=Path(r'C:\Users\PC\.gemini\antigravity\brain\0d7f3bfd-8524-49c4-8cc4-be41c8fbcb27')
-FILES={'Gemini_v4_informe_recibido.md':SOURCE/'INFORME_DESCUBRIMIENTO_ORIGEN_C.md',
+FILES={'reports/Gemini_v4_informe_recibido.md':SOURCE/'INFORME_DESCUBRIMIENTO_ORIGEN_C.md',
        'Gemini_v4_evaluador_recibido.py':SOURCE/'scratch/evaluate_unified_model_v4.py',
-       'Gemini_v4_recibido.pine':SOURCE/'scratch/PoiSzn_C_Deterministic_Lab_v4.pine',
+       'pine/Gemini_v4_recibido.pine':SOURCE/'scratch/PoiSzn_C_Deterministic_Lab_v4.pine',
        'Gemini_v4_equivalencia_recibida.py':SOURCE/'scratch/verify_py_pine_equiv.py',
        'Gemini_v4_cases112_recibidos.json':SOURCE/'scratch/cases_112.json'}
 
@@ -22,7 +22,7 @@ def extract_function(filename,name):
     return env[name]
 
 def translate_pine_engine():
-    text=(ROOT/'Gemini_v4_recibido.pine').read_text(encoding='utf-8-sig')
+    text=(ROOT/'pine/Gemini_v4_recibido.pine').read_text(encoding='utf-8-sig')
     engine=text.split('// --- 3. MOTOR DETERMINISTA DE C ---')[1].split('float C_final')[0]
     body=engine.split('if is_end_bar\n',1)[1]
     pre='''def actual_pine_C(c):

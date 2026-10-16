@@ -125,7 +125,7 @@ Con la calibración de la celosía armónica a la unidad atómica indivisible de
 | **Lane 1 B** | **30,915.98** | **30,915.98** | **`0.00 pts`** | **Identidad Absoluta** |
 
 **Veredicto de Cumplimiento del Objetivo**:
-El clon abierto [`PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine`](../PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine) opera con **independencia total de intervención humana**, detectando de forma causal el régimen del mercado y reproduciendo al centavo (`0.00 pts`) las lecturas del script cerrado propietario.
+El clon abierto [`pine/PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine`](../pine/PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine) opera con **independencia total de intervención humana**, detectando de forma causal el régimen del mercado y reproduciendo al centavo (`0.00 pts`) las lecturas del script cerrado propietario.
 
 ---
 
@@ -152,7 +152,7 @@ Donde $\Delta C_{\text{estructural}}$ se calcula causalmente a partir de la celo
 
 ## 4. Estado de Implementación en Código
 
-El motor de código abierto [`PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine`](../PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine) ha sido completamente actualizado (commit `06cf6ae`):
+El motor de código abierto [`pine/PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine`](../pine/PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine) ha sido completamente actualizado (commit `06cf6ae`):
 - Conteo canónico $n_{\text{inclusivo}} = \operatorname{floor}(T / \Delta t) + 1$.
 - Soporte nativo para timeframes `15S`, `1m`, `2m`, `3m`, `5m` y `Chart`.
 - **Modo Auto Universal**:
