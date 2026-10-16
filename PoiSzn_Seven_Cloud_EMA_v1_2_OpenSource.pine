@@ -1,5 +1,5 @@
 //@version=6
-indicator("PoiSzn Seven Cloud EMA v1.2.7 (Open Source)", "PoiSzn 7Cloud v1.2", overlay=true, max_lines_count=500, max_labels_count=500, max_boxes_count=100)
+indicator("PoiSzn Seven Cloud EMA v1.2.7 (Open Source)", "PoiSzn 7C", overlay=true, max_lines_count=500, max_labels_count=500, max_boxes_count=100)
 
 // ============================================================================
 // POISZN SEVEN CLOUD EMA v1.2.7 - OPEN SOURCE ENGINE (PINE v6)
@@ -275,6 +275,15 @@ fill(pref6_u, pref6_d, color=get_cloud_color(ref6_up, ref6_down, col_ref), title
 // ============================================================================
 // 9. MONITOR TABLE
 // ============================================================================
+render_row(table t, int r, string name, string tf, float u, float d, color col) =>
+    bool is_bull = u >= d
+    color status_col = is_bull ? color.green : color.red
+    string status_txt = is_bull ? "BULL" : "BEAR"
+    table.cell(t, 0, r, name, text_color=col, text_size=size.small)
+    table.cell(t, 1, r, tf, text_color=color.white, text_size=size.small)
+    table.cell(t, 2, r, str.tostring(u, "#.2f"), text_color=color.white, text_size=size.small)
+    table.cell(t, 3, r, status_txt, bgcolor=color.new(status_col, 70), text_color=color.white, text_size=size.small)
+
 var table mon = na
 if show_table and barstate.islast
     string t_pos = position.top_right
@@ -293,25 +302,16 @@ if show_table and barstate.islast
     table.cell(mon, 2, 0, "EMA 78", bgcolor=color.new(#161b22, 0), text_color=color.white, text_size=size.small)
     table.cell(mon, 3, 0, "ESTADO", bgcolor=color.new(#161b22, 0), text_color=color.white, text_size=size.small)
 
-    row_data(int r, string name, string tf, float u, float d, color col) =>
-        bool is_bull = u >= d
-        color status_col = is_bull ? color.green : color.red
-        string status_txt = is_bull ? "BULL" : "BEAR"
-        table.cell(mon, 0, r, name, text_color=col, text_size=size.small)
-        table.cell(mon, 1, r, tf, text_color=color.white, text_size=size.small)
-        table.cell(mon, 2, r, str.tostring(u, "#.2f"), text_color=color.white, text_size=size.small)
-        table.cell(mon, 3, r, status_txt, bgcolor=color.new(status_col, 70), text_color=color.white, text_size=size.small)
-
-    row_data(1, "Rung 1", tf_r1, r1_up, r1_down, col_r1)
-    row_data(2, "Rung 2", tf_r2, r2_up, r2_down, col_r2)
-    row_data(3, "Rung 3", tf_r3, r3_up, r3_down, col_r3)
-    row_data(4, "Rung 4", tf_r4, r4_up, r4_down, col_r4)
-    row_data(5, "Rung 5", tf_r5, r5_up, r5_down, col_r5)
-    row_data(6, "Rung 6", tf_r6, r6_up, r6_down, col_r6)
-    row_data(7, "Rung 7", tf_r7, r7_up, r7_down, col_r7)
-    row_data(8, "Rung 8", tf_r8, r8_up, r8_down, col_r8)
-    row_data(9, "Rung 9", tf_r9, r9_up, r9_down, col_r9)
-    row_data(10, "Rung 10", tf_r10, r10_up, r10_down, col_r10)
+    render_row(mon, 1, "Rung 1", tf_r1, r1_up, r1_down, col_r1)
+    render_row(mon, 2, "Rung 2", tf_r2, r2_up, r2_down, col_r2)
+    render_row(mon, 3, "Rung 3", tf_r3, r3_up, r3_down, col_r3)
+    render_row(mon, 4, "Rung 4", tf_r4, r4_up, r4_down, col_r4)
+    render_row(mon, 5, "Rung 5", tf_r5, r5_up, r5_down, col_r5)
+    render_row(mon, 6, "Rung 6", tf_r6, r6_up, r6_down, col_r6)
+    render_row(mon, 7, "Rung 7", tf_r7, r7_up, r7_down, col_r7)
+    render_row(mon, 8, "Rung 8", tf_r8, r8_up, r8_down, col_r8)
+    render_row(mon, 9, "Rung 9", tf_r9, r9_up, r9_down, col_r9)
+    render_row(mon, 10, "Rung 10", tf_r10, r10_up, r10_down, col_r10)
 
 // ============================================================================
 // 10. ETIQUETAS DE TEXTO TEMPORAL (TIMEFRAME LABELS) EN EL MARGEN DERECHO
