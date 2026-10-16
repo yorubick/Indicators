@@ -12,6 +12,8 @@
 | A3 | ¿Es C del régimen largo $\operatorname{round}(k\,\Delta t/18.3)$ con $k$ entero? | No. En 1 m encajan 26/72 casos, frente a 22 esperados por azar. | Para cada C entero, ¿existe $k$ entero en $[(C-0{,}5)\cdot 18.3/\Delta t,\ (C+0{,}5)\cdot 18.3/\Delta t]$? Azar = $18.3/60$ por caso. |
 | A4 | ¿Depende C del tiempo hasta la ruptura de la vela END? | No en forma simple: con 12 variantes, el máximo es 3/72 aciertos. En saltos como 71 → 128 (START 19:04), ambas ventanas rompen en la vela siguiente a END. | `python experimentos/EXP-20261016-dependencias/prueba_ruptura_post_END.py` |
 | A6 | ¿Es C el menor entero cuya nube (rápida, media o lenta, o media y luego lenta) no es atravesada al cierre dentro de la caja? | No en la forma simple: 24 variantes (semilla en el extremo o en el cierre, atravesar una o las dos curvas, inicio en START o en el extremo del tramo); máximo 6/121 aciertos. Inspirada en los ajustes «Reject fits closed through» y «Capping cloud» de Character Tree. | `scratchpad` del 16-oct; reproducible con la descripción de esta fila |
+| A7 | ¿Cómo actualiza Character Tree sus curvas tras un hueco de tiempo? | Como si pasaran $\Delta t_{hueco}/\Delta t$ actualizaciones: en el corte diario (3.660 s), $L = x - (x - L_{prev})(1-\alpha)^{61}$, exacto a 4 decimales en las 6 curvas. Sus periodos son **enteros** en velas de la fuente (33/41, 11/14, 4/5 para C = 82–83). | `manual/CME_MINI_NQ1!, 1_2026-10-16T160654.582_CT_1400_1422.csv`, vela 1791842400 |
+| A8 | ¿Y el Lite? | No compensa: una sola actualización por vela, también en el corte diario. Sus periodos no son enteros ($b_0 C/\Delta t$ exacto). Nuestro clon hace lo mismo que Lite, correcto. **Para invertir C con Character Tree hay que excluir los pasos que cruzan un hueco.** | `manual/Lite_0445_050500_1m_b.csv`, vela 1791842400 |
 | A5 | ¿Determina la geometría de la caja (máximo, mínimo y su posición) el valor de C? | No. START 06:00 del 12-oct: caja idéntica en n = 21…24 y C = 77, 77, 77, 73. Casos 2 m con START 14:30 del 12-oct: caja idéntica y C = 124, 153, 146, 190. | `python tools/evaluador_C.py` y la tabla del 16-oct |
 
 ## Mediciones solicitadas
@@ -56,14 +58,14 @@ Para cada control M1/M2: una exportación CSV del gráfico («Exportar datos del
 
 | Archivo | Cambio respecto a los ajustes por defecto |
 |---|---|
-| `CT_1400_1422_base.csv` | ninguno |
+| `CT_1400_1422_base.csv` | ninguno. Recibido el 16-oct como `manual/CME_MINI_NQ1!, 1_2026-10-16T160654.582_CT_1400_1422.csv` (solo Character Tree, sin nubes extra): curvas desde 14:23, C compatible con {82, 83}, referencia 83. |
 | `CT_1400_1422_reject_off.csv` | Reject fits closed through: desactivado |
 | `CT_1400_1422_legext_off.csv` | Box starts at leg extreme: desactivado |
 | `CT_1400_1422_capping_<opción>.csv` | Capping cloud: cada opción distinta de «Auto (middle, then slow)» |
 | `CT_1400_1422_sessionbreaks_off.csv` | Range spans session breaks: desactivado |
 | `CT_1400_1422_direction_<opción>.csv` | Setup direction: cada opción distinta de «Auto» |
 
-Cada exportación debe incluir varias decenas de velas posteriores a 14:22. Después de cada variante se vuelve al valor por defecto. C se recupera con `obtener_C.recover` (Character Tree) y `tools/invertir_C_csv.py` (Lite).
+Cada exportación debe incluir varias decenas de velas posteriores a 14:22, con **«Show extra EMA clouds» activado** (sus periodos, unos 3 C/Δt, reducen el intervalo de C a menos de 0,3 s) y, si es posible, con Lite cargado en la misma ventana para tener C exacto. Después de cada variante se vuelve al valor por defecto. C se recupera con `obtener_C.recover` (Character Tree) y `tools/invertir_C_csv.py` (Lite).
 
 ### Lectura rápida alternativa con Character Tree
 
