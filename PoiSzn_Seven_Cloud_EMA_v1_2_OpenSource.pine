@@ -102,7 +102,7 @@ show_ref6     = input.bool(true, "Show Reference 6", group=grp_ref)
 // 8. CÁLCULO MULTI-TEMPORAL CON REQUEST.SECURITY (OPTIMIZADO CON PROFUNDIDAD)
 // ============================================================================
 calc_ema_pair(simple string tf, simple int l_up, simple int l_down) =>
-    request.security(syminfo.tickerid, tf, [ta.ema(close, l_up), ta.ema(close, l_down)], gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_off, calc_bars_count=5000)
+    request.security(syminfo.tickerid, tf, [ta.ema(close, l_up), ta.ema(close, l_down)], gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_off)
 
 // Conexión de los 10 Rungs PO3
 [r1_up, r1_down]   = calc_ema_pair(tf_r1, len_upper, len_lower)
