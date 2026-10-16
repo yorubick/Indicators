@@ -1,0 +1,58 @@
+import json
+import pandas as pd
+import numpy as np
+
+d14 = json.load(open('data/ohlcv_2m_14oct_1400_1454.json'))
+df14 = pd.DataFrame(d14)
+
+d12 = json.load(open('data/ohlcv_2m_1430_1516.json'))
+df12 = pd.DataFrame(d12)
+
+d15 = json.load(open('data/ohlcv_2m_15oct_1400_1456.json'))
+df15 = pd.DataFrame(d15)
+
+cases = [
+    {'name': '15-Oct 14:56', 'df': df15.iloc[:29], 'C_target': 227, 'T': 3360, 'n': 29},
+    {'name': '15-Oct 14:40', 'df': df15.iloc[:21], 'C_target': 125, 'T': 2400, 'n': 21},
+    {'name': '14-Oct 14:56', 'df': df14.iloc[:28], 'C_target': 195, 'T': 3360, 'n': 29},
+    {'name': '14-Oct 14:54', 'df': df14.iloc[:28], 'C_target': 177, 'T': 3240, 'n': 28},
+    {'name': '14-Oct 14:52', 'df': df14.iloc[:27], 'C_target': 195, 'T': 3120, 'n': 27},
+    {'name': '14-Oct 14:50', 'df': df14.iloc[:26], 'C_target': 191, 'T': 3000, 'n': 26},
+    {'name': '14-Oct 14:48', 'df': df14.iloc[:25], 'C_target': 128, 'T': 2880, 'n': 25},
+    {'name': '14-Oct 14:46', 'df': df14.iloc[:24], 'C_target': 191, 'T': 2760, 'n': 24},
+    {'name': '14-Oct 14:44', 'df': df14.iloc[:23], 'C_target': 181, 'T': 2640, 'n': 23},
+    {'name': '14-Oct 14:42', 'df': df14.iloc[:22], 'C_target': 191, 'T': 2520, 'n': 22},
+    {'name': '14-Oct 14:40', 'df': df14.iloc[:21], 'C_target': 128, 'T': 2400, 'n': 21},
+    {'name': '12-Oct 15:16', 'df': df12.iloc[:24], 'C_target': 190, 'T': 2760, 'n': 24},
+    {'name': '12-Oct 15:14', 'df': df12.iloc[:23], 'C_target': 146, 'T': 2640, 'n': 23},
+    {'name': '12-Oct 15:12', 'df': df12.iloc[:22], 'C_target': 153, 'T': 2520, 'n': 22},
+    {'name': '12-Oct 15:10', 'df': df12.iloc[:21], 'C_target': 124, 'T': 2400, 'n': 21},
+]
+
+print("=== EVALUACIÓN DEL MODELO DE EFICIENCIA DIRECCIONAL ===")
+for c in cases:
+    df = c['df']
+    T = c['T']
+    n = c['n']
+    C_act = c['C_target']
+    
+    gh = df['high'].max()
+    gl = df['low'].min()
+    rng = gh - gl
+    
+    first = df.iloc[0]
+    last = df.iloc[-1]
+    
+    net = abs(last['close'] - first['open'])
+    eff = net / rng if rng > 0 else 0
+    
+    # Path efficiency
+    path = np.abs(df['close'].diff()).sum()
+    er = net / path if path > 0 else 0
+    
+    # Interpolated kappa: from 18.75 down to 14.8 based on eff
+    kappa_pred = 18.75 - eff * (18.75 - 14.80)
+    C_pred = round(T / kappa_pred)
+    error = C_act - C_pred
+    
+    print(f"{c['name']:14s}: T={T:4d}, Eff={eff:.3f}, ER={er:.3f}, C_act={C_act:3d}, C_pred={C_pred:3d}, Error={error:+3d}s")
