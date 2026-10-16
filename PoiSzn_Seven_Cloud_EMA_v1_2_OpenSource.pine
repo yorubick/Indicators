@@ -104,10 +104,8 @@ show_ref6     = input.bool(true, "Show Reference 6", group=grp_ref)
 // Para alinear los escalones de 81m, 243m y 729m a la apertura ETH (22:00 UTC),
 // se fuerza session.extended mediante ticker.modify.
 // ============================================================================
-ticker_eth = ticker.modify(syminfo.tickerid, session=session.extended)
-
 calc_ema_pair(simple string tf, simple int l_up, simple int l_down) =>
-    request.security(ticker_eth, tf, [ta.ema(close, l_up), ta.ema(close, l_down)], gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_off)
+    request.security(syminfo.tickerid, tf, [ta.ema(close, l_up), ta.ema(close, l_down)], gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_off)
 
 // Conexión de los 10 Rungs PO3
 [r1_up, r1_down]   = calc_ema_pair(tf_r1, len_upper, len_lower)
