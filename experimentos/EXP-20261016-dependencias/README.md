@@ -105,6 +105,16 @@ Conclusiones:
 5. **Los setups no eran válidos (error de diseño del protocolo):** en los tres casos alcistas el precio cae bajo el mínimo de END a las 14:26–14:27 y todas las nubes quedan atravesadas al cierre, de modo que ningún C cumple «Reject fits closed through». En el bajista se marcó un mínimo, no una mecha de retroceso hacia arriba. Estos C probablemente vienen del respaldo «shortest-window estimated box». M5 no contrasta el criterio de ajuste y debe repetirse con setups limpios.
 6. **Predicción (a) sin evaluar:** falta la exportación Manual 14:02–14:22. Además, las mechas 14:26 y 14:29 dan C muy distintos (54 frente a 29) con el mismo START aparente, así que en Auto el C no es el Manual del rango dibujado.
 
+### M5b. Auto Balanced con setups válidos (predicciones registradas)
+
+Tres setups del 16-oct elegidos con `predecir_auto_balanced.py`: END en un pivote, mecha de retroceso posterior por el lado correcto del END (por debajo de su máximo si es bajista, por encima de su máximo si es alcista) y ningún cierre que atraviese la nube media entre END y la mecha. Predicciones de C en [`M5b_predicciones.json`](M5b_predicciones.json), para tres maneras de «tocar» la nube:
+
+| Caso | Dirección | Point 1 (END) | Point 2 (mecha, precio) | C si toca la línea rápida | C si toca el centro | C si toca la línea lenta |
+|---|---|---|---|---:|---:|---:|
+| M5b-1 | alcista | 16-oct 14:28 | 14:42 · 29880 (mínimo) | 100,65 | 90,29 | 81,42 |
+| M5b-2 | bajista | 16-oct 15:47 | 16:07 · 29657,75 (máximo) | 108,47 | 97,11 | 87,75 |
+| M5b-3 | bajista | 16-oct 17:00 | 17:11 · 29530,5 (máximo) | 68,72 | 61,44 | 55,60 |
+
 ### Lectura rápida alternativa con Character Tree
 
 En los 74 casos del maestro medidos con ambos indicadores, el C de Lite cae siempre dentro del intervalo de Character Tree. Por eso, para M1 bastaría leer en Character Tree la etiqueta **«C/3 …s»** (perfil B, modo Manual, resolución de datos 1 minuto, «Show EMA timeframe labels» activado), que aparece al publicarse las curvas: $C = 3 \times$ el valor de la etiqueta, con error de ±0,015 s, suficiente para identificar un C entero. Si alguna ventana da en RTH un C distinto del de ETH, se exporta además el CSV de Lite de esa ventana como evidencia primaria. **Actualización:** la instancia CT6561USR del usuario no tiene la opción de etiquetas, así que M1 se mide también por exportación CSV.

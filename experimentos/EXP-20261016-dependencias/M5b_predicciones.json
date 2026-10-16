@@ -1,0 +1,11 @@
+{
+  "registrado_utc": "2026-10-16T23:00:00Z",
+  "nota": "Predicciones escritas antes de medir. Generadas con predecir_auto_balanced.py sobre NQ1_1m_2026-10-15_16.json (velas del conector de TradingView). C continuo para que la línea indicada de la nube media (EMA b0=8 y b0=89/9, semilla en el extremo de la vela END) valga el precio de la mecha en la vela de la mecha, sin cierres que atraviesen la nube entre END y la mecha.",
+  "configuracion": "NQ1!, 1 m, ETH, UTC, B-ADJ off. Character Tree: Box selection Auto Balanced, Data resolution 1 minute, Setup direction Auto, Capping cloud Auto (middle, then slow), resto por defecto, Show extra EMA clouds activado.",
+  "casos": [
+    {"id": "M5b-1", "direccion": "alcista", "point1_END": "2026-10-16 14:28", "END_OHLC": [29809.75, 29821.25, 29796.75, 29806.25], "point2_mecha": "2026-10-16 14:42", "point2_precio": 29880.0, "C_prediccion": {"linea_rapida": 100.65, "centro": 90.29, "linea_lenta": 81.42}},
+    {"id": "M5b-2", "direccion": "bajista", "point1_END": "2026-10-16 15:47", "END_OHLC": [29735.5, 29753.75, 29727.0, 29746.5], "point2_mecha": "2026-10-16 16:07", "point2_precio": 29657.75, "C_prediccion": {"linea_rapida": 108.47, "centro": 97.11, "linea_lenta": 87.75}},
+    {"id": "M5b-3", "direccion": "bajista", "point1_END": "2026-10-16 17:00", "END_OHLC": [29614.5, 29617.0, 29593.25, 29599.5], "point2_mecha": "2026-10-16 17:11", "point2_precio": 29530.5, "C_prediccion": {"linea_rapida": 68.72, "centro": 61.44, "linea_lenta": 55.60}}
+  ],
+  "criterio": "Una variante acierta si el C recuperado de Character Tree (intervalo con nubes extra) contiene su valor ±0,3 s. Si ninguna acierta en los tres casos, la hipótesis de 'toque en la vela de la mecha' queda refutada."
+}
