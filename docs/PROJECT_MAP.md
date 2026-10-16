@@ -26,6 +26,8 @@ En una copia local antigua basta con `git pull`: git mueve los archivos. Las rut
 
 La prueba de paridad histórica de Seven Cloud del 16-oct-2026 está documentada en [`docs/SEVEN_CLOUD_AUDIT_2026-10-16.md`](SEVEN_CLOUD_AUDIT_2026-10-16.md), con sus nueve CSV originales en la raíz y el comparador reproducible `tools/audit_seven_cloud_exports.py`.
 
+La prueba M5 de Character Tree Auto Balanced del 16-oct-2026 (CSV, capturas, auditor `auditar_CT_auto_M5.py` y telemetría) está en [`experimentos/CT_auto_balanced_M5_2026-10-16/`](../experimentos/CT_auto_balanced_M5_2026-10-16/README.md). Su interpretación está en [`experimentos/EXP-20261016-dependencias/`](../experimentos/EXP-20261016-dependencias/README.md).
+
 ## Archivos clave en la raíz
 
 - `master_all_C_cases.json`: conjunto maestro consolidado.

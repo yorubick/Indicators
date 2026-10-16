@@ -1,0 +1,89 @@
+{
+  "experiment": "CT Auto Balanced M5 — mechas 14:26–14:48 UTC",
+  "recorded_date": "2026-10-16",
+  "chart": {
+    "symbol": "NQ1!",
+    "timeframe": "1m",
+    "session": "ETH",
+    "timezone": "UTC",
+    "B_ADJ": false,
+    "test_date": "2026-10-12"
+  },
+  "character_tree": {
+    "version": "CT6561USR",
+    "profile": "B",
+    "theme": "Dark",
+    "box_selection": "Auto Balanced",
+    "setup_direction": "Auto",
+    "capping_cloud": "Middle cloud",
+    "data_resolution": "1 minute",
+    "show_range": true,
+    "show_extra_ema_clouds": true,
+    "reject_fits_closed_through": false,
+    "range_spans_session_breaks": false,
+    "box_starts_at_leg_extreme": false,
+    "auto_history_source_bars": 300000,
+    "minimum_range_minutes": 0
+  },
+  "reference_lite": {
+    "box_selection": "Manual",
+    "start": "2026-10-12 14:00 UTC",
+    "end": "2026-10-12 14:22 UTC"
+  },
+  "predictions": {
+    "a": "If the Auto-selected range is entered in Manual, the selected C should be identical.",
+    "b": "The CSV should show which cloud fit/capped the retracement wick."
+  },
+  "cases": [
+    {
+      "csv": "CT_auto_1422_w1429H.csv",
+      "snapshot": "CT_auto_1422_w1429H.png",
+      "annotated_capture": "CT_auto_1422_w1429H_cruceta.png",
+      "point1_end_utc": "14:22",
+      "point2_wick_utc": "14:29",
+      "wick_price": 30906,
+      "auto_start_utc": "14:02",
+      "range_minutes": 20,
+      "ct_values_at_wick": "blank"
+    },
+    {
+      "csv": "CT_auto_1422_w1443H.csv",
+      "snapshot": "CT_auto_1422_w1443H.png",
+      "annotated_capture": "CT_auto_1422_w1443H_cruceta.png",
+      "point1_end_utc": "14:22",
+      "point2_wick_utc": "14:43",
+      "wick_price": 30911.25,
+      "auto_start_utc": "13:56",
+      "range_minutes": 26,
+      "ct_values_at_wick": "blank"
+    },
+    {
+      "csv": "CT_auto_1422_w1448H.csv",
+      "snapshot": "CT_auto_1422_w1448H.png",
+      "annotated_capture": "CT_auto_1422_w1448H_cruceta.png",
+      "point1_end_utc": "14:22",
+      "point2_wick_utc": "14:48",
+      "wick_price": 30921.25,
+      "auto_start_utc": "13:49",
+      "range_minutes": 33,
+      "ct_values_at_wick": "blank"
+    },
+    {
+      "csv": "CT_auto_1422_w1426L.csv",
+      "snapshot": "CT_auto_1422_w1426L.png",
+      "annotated_capture": "CT_auto_1422_w1426L_cruceta.png",
+      "point1_end_utc": "14:22",
+      "point2_wick_utc": "14:26",
+      "wick_price": 30859,
+      "auto_start_utc": "14:02",
+      "range_minutes": 20,
+      "ct_values_at_wick": "blank"
+    }
+  ],
+  "status": {
+    "prediction_a": "pending: the available Manual export is 14:00–14:22, while the first Auto case starts at 14:02; exact Manual rerun was blocked when local browser use became disabled in Work Settings.",
+    "prediction_b": "not measurable from these CSVs: all ten CT cloud columns are blank on each Point 2 bar.",
+    "lite_control": "six Lite Lane columns match across all four Auto exports for 514 common Oct 12 timestamps with data; 0 mismatches.",
+    "current_chart_state_last_confirmed": "Character Tree Manual, Point1 14:00, Point2 14:22. Must be restored to Auto Balanced after browser access is re-enabled."
+  }
+}

@@ -86,6 +86,25 @@ Para cada una, además del CSV: captura con la caja dibujada y la cruceta en su 
 
 **Predicciones registradas:** (a) si C depende solo del rango, poner ese rango en Manual (START de la caja, END 14:22) da el mismo C que Auto; (b) la nube que «capa» (la media por defecto) toca la mecha: en la vela de la mecha, el precio de la mecha queda sobre el borde de la nube.
 
+**Resultado M5 (16-oct, ejecutado por Luna; datos en [`experimentos/CT_auto_balanced_M5_2026-10-16/`](../CT_auto_balanced_M5_2026-10-16/README.md)).** C recuperado de los periodos enteros de las 10 curvas de Character Tree (con nubes extra el intervalo mide menos de 0,2 s). Las curvas se reconstruyen hacia atrás desde su primer valor con la recurrencia exacta.
+
+| Mecha (Point 2) | START Auto (leído de la captura) | C Auto | Semilla en END | ¿Cierres que atraviesan las nubes entre END y la mecha? |
+|---|---|---|---|---|
+| 14:26 · 30859 (bajista) | 14:02 | 54,31–54,49 | 30899,50 = high END | 0 |
+| 14:29 · 30906 (alcista) | 14:02 | 28,75–28,88 | 30885,25 = low END | 3–4 en todas las nubes |
+| 14:43 · 30911,25 (alcista) | 13:56 | 159,44–159,58 | 30885,25 = low END | 6–8 en todas las nubes |
+| 14:48 · 30921,25 (alcista) | 13:49 | 224,38–224,58 | 30885,25 = low END | 6–9 en todas las nubes |
+| Manual 14:00–14:22 | — | 82,92–83,03 (Lite: 83,0000) | — | — |
+
+Conclusiones:
+
+1. **Semilla:** las 10 curvas valen exactamente el extremo de la vela END (mínimo en alcista, máximo en bajista). La reconstrucción hacia atrás converge sin ajuste.
+2. **El C de Auto no es entero:** es un ajuste continuo, a diferencia del C entero del Lite en Manual en el régimen largo.
+3. **Las curvas aparecen 16 minutos después de la mecha** en los cuatro casos.
+4. **Predicción (b) refutada en su forma literal:** ninguna nube pasa por el precio marcado en la vela de la mecha (diferencias de 12 a 38 puntos).
+5. **Los setups no eran válidos (error de diseño del protocolo):** en los tres casos alcistas el precio cae bajo el mínimo de END a las 14:26–14:27 y todas las nubes quedan atravesadas al cierre, de modo que ningún C cumple «Reject fits closed through». En el bajista se marcó un mínimo, no una mecha de retroceso hacia arriba. Estos C probablemente vienen del respaldo «shortest-window estimated box». M5 no contrasta el criterio de ajuste y debe repetirse con setups limpios.
+6. **Predicción (a) sin evaluar:** falta la exportación Manual 14:02–14:22. Además, las mechas 14:26 y 14:29 dan C muy distintos (54 frente a 29) con el mismo START aparente, así que en Auto el C no es el Manual del rango dibujado.
+
 ### Lectura rápida alternativa con Character Tree
 
 En los 74 casos del maestro medidos con ambos indicadores, el C de Lite cae siempre dentro del intervalo de Character Tree. Por eso, para M1 bastaría leer en Character Tree la etiqueta **«C/3 …s»** (perfil B, modo Manual, resolución de datos 1 minuto, «Show EMA timeframe labels» activado), que aparece al publicarse las curvas: $C = 3 \times$ el valor de la etiqueta, con error de ±0,015 s, suficiente para identificar un C entero. Si alguna ventana da en RTH un C distinto del de ETH, se exporta además el CSV de Lite de esa ventana como evidencia primaria. **Actualización:** la instancia CT6561USR del usuario no tiene la opción de etiquetas, así que M1 se mide también por exportación CSV.

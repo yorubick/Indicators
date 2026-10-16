@@ -24,6 +24,7 @@ Este repositorio reúne la investigación de ingeniería inversa del indicador P
 - Importaciones de Gemini y Codex: [`imports/`](imports), copiadas sin modificar. El inventario de copia y hashes SHA-256 está en [`docs/IMPORT_MANIFEST.csv`](docs/IMPORT_MANIFEST.csv).
 - Inventario de todos los archivos y su SHA-256: [`docs/FILE_CATALOG.csv`](docs/FILE_CATALOG.csv). Para regenerarlo: `python tools/build_file_catalog.py`.
 - Repositorio remoto: [`github.com/yorubick/Indicators`](https://github.com/yorubick/Indicators).
+- Pruebas en curso con Character Tree (ajustes, modo Auto Balanced M5): [`experimentos/EXP-20261016-dependencias/`](experimentos/EXP-20261016-dependencias/README.md) y [`experimentos/CT_auto_balanced_M5_2026-10-16/`](experimentos/CT_auto_balanced_M5_2026-10-16/README.md).
 
 ## Alcance
 

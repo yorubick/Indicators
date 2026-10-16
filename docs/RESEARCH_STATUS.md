@@ -22,7 +22,7 @@ Toda regla de C se mide con [`tools/evaluador_C.py`](EVALUADOR_C.md): validació
 
 ## Experimento en curso
 
-[`EXP-20261016-dependencias`](../experimentos/EXP-20261016-dependencias/README.md) busca qué datos usa el indicador para fijar C, antes de seguir probando fórmulas. Resultados sin medición nueva: C es constante tras publicarse (más de 2.200 velas); no depende de forma simple del tiempo hasta la ruptura; y la geometría de la caja no lo determina. Pendientes: sesión ETH frente a RTH (historia previa), Replay en la primera publicación (datos futuros) y captura de los ajustes del indicador.
+[`EXP-20261016-dependencias`](../experimentos/EXP-20261016-dependencias/README.md) busca qué datos usa el indicador para fijar C, antes de seguir probando fórmulas. Resultados sin medición nueva: C es constante tras publicarse (más de 2.200 velas); no depende de forma simple del tiempo hasta la ruptura; y la geometría de la caja no lo determina. Los textos de ayuda de Character Tree v6.5.61 (ver `manual/ajustes_CT6561USR_2026-10-16/`) muestran que en **Auto Balanced** el indicador ajusta el «Character» (C) a una mecha de retroceso posterior a END y elige el rango que «lleva» ese Character. La prueba M5 en Auto Balanced (16-oct) estableció tres hechos: las nubes arrancan en END con semilla igual al extremo de la vela END (mínimo en alcista, máximo en bajista); el C de Auto **no es entero** (p. ej. 54,31–54,49); y las curvas aparecen 16 minutos después de la mecha. Pero sus cuatro setups no eran válidos (después de END el precio atraviesa al cierre todas las nubes, o la mecha marcada no era de retroceso), así que no permiten contrastar el criterio de ajuste. Pendientes: M5 con setups válidos, sesión ETH frente a RTH y Replay.
 
 ## Lo que sigue abierto
 
