@@ -104,7 +104,7 @@ show_ref6     = input.bool(true, "Show Reference 6", group=grp_ref)
 // activa del gráfico (ETH/RTH) como el ajuste B-ADJ del contrato continuo.
 // ============================================================================
 calc_ema_pair(simple string tf, simple int l_up, simple int l_down) =>
-    request.security(syminfo.tickerid, tf, [ta.ema(close, l_up), ta.ema(close, l_down)], gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_off)
+    request.security(syminfo.tickerid, tf, [ta.ema(close, l_up), ta.ema(close, l_down)])
 
 // Conexión de los 10 Rungs PO3
 [r1_up, r1_down]   = calc_ema_pair(tf_r1, len_upper, len_lower)
