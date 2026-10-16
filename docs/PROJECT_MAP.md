@@ -12,6 +12,8 @@
 | `experimentos/` | Carpetas estructuradas de experimentos reproducibles | Contienen README con ficha técnica, telemetría JSON y scripts de inversión/auditoría. |
 | `tools/` | Herramientas de mantenimiento del catálogo | El catálogo no ejecuta el análisis del indicador. |
 
+La prueba de paridad histórica de Seven Cloud del 16-oct-2026 está documentada en [`docs/SEVEN_CLOUD_AUDIT_2026-10-16.md`](SEVEN_CLOUD_AUDIT_2026-10-16.md), con sus nueve CSV originales en la raíz y el comparador reproducible `tools/audit_seven_cloud_exports.py`.
+
 ## Archivos clave en la raíz
 
 - `master_all_C_cases.json`: conjunto maestro consolidado.

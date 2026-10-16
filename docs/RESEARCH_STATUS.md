@@ -1,4 +1,8 @@
-# Estado de la investigación — 14-oct-2026
+# Estado de la investigación — 16-oct-2026
+
+## Actualización Seven Cloud — 16-oct-2026
+
+La prueba con el código guardado (`lookahead_off`) confirmó igualdad exacta entre el estudio oficial y una instancia recién añadida para 392 barras cerradas de un minuto y 32 curvas por barra (12.544 valores, 0 discrepancias). La instancia de la copia que ya estaba en el gráfico mantuvo diferencias; guardar el código no la sustituyó. En 20:32–20:34 UTC se observaron diferencias dentro del intervalo HTF en formación, así que la paridad intrabar continúa abierta. Consulta el [protocolo, resultado y archivos fuente](SEVEN_CLOUD_AUDIT_2026-10-16.md); se puede reproducir con `python tools/audit_seven_cloud_exports.py`.
 
 ## Qué puede afirmarse con el material consolidado
 
