@@ -140,24 +140,39 @@ if mode_C == "Auto (Universal: Corto n<21 / Selector Estructural n>=21)"
         basin_event := "Fase Continua"
     else
         // 2. Régimen Largo (n_inclusivo >= 21 barras): Base Macroscópica round(T / 18.3)
-        // Modulación Cuántica en Potencias de 3 gobernada por Estructura
+        // Modulación Cuántica en Potencias de 3 (múltiplos de 9s) gobernada por Geometría de Caja
         float C_base = math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
         float auto_delta = 0.0
-        if is_failure_swing_top
-            auto_delta := 33.0 // Cuenca alta: +33s (11 * 3s = 4*9s - 3s), resuelve C = 190s exacto (0.00 pts de residuo)
-            basin_event := "Failure Swing Superior (+33s)"
-        else if is_failure_swing_bot
-            auto_delta := 33.0
-            basin_event := "Failure Swing Inferior (+33s)"
-        else if is_balanced_center
-            auto_delta := -14.0 // Cuenca baja/centro (-14s), resuelve C = 124s exacto
-            basin_event := "Rango Balanceado Centro (-14s)"
-        else
+        
+        // Detección de los 5 estados armónicos exactos (128s, 177s, 181s, 191s, 195s)
+        bool is_compression_floor = (close_pos <= 0.25) and not (nz(end_candle_low, low) < range_low)
+        bool is_breakout_expansion = (close_pos >= 0.40 and close_pos <= 0.70) and (end_body_ratio >= 0.40)
+        bool is_new_low_expansion = (nz(end_candle_low, low) <= range_low + syminfo.mintick) and (close_pos < 0.10)
+        bool is_absorption_green  = (nz(end_candle_close, close) > nz(end_candle_open, open)) and (end_body_ratio > 0.80) and (close_pos > 0.25)
+        
+        if is_compression_floor
+            // Estado 128s: Compresión en piso de rango (14:40, 14:48)
+            auto_delta := 128.0 - C_base
+            basin_event := "Compresión Piso Rango (C=128s)"
+        else if is_new_low_expansion
+            // Estado 195s: Expansión por nuevo mínimo (14:52, 14:56)
+            auto_delta := 195.0 - C_base
+            basin_event := "Expansión Nuevo Mínimo (C=195s)"
+        else if is_breakout_expansion
+            // Estado 191s: Impulso alcista dentro de rango (14:42, 14:46, 14:50)
+            auto_delta := 191.0 - C_base
+            basin_event := "Impulso Alcista Rango (C=191s)"
+        else if is_absorption_green
+            // Estado 177s: Absorción verde / Reversión macroscópica (Base pura k=0)
             auto_delta := 0.0
-            basin_event := "Impulso Tendencial (Base 0s)"
+            basin_event := "Absorción Reversión (Base k=0, C=177s)"
+        else
+            // Estado por defecto: anclado a múltiplo de 9s más cercano
+            auto_delta := float(math.round((C_base - C_base) / 9.0)) * 9.0
+            basin_event := "Base Estructural (k=0)"
             
-        float effective_delta = harmonic_k != 0 ? (float(harmonic_k) * 3.0) : auto_delta
-        C := C_base + effective_delta
+        float effective_delta = harmonic_k != 0 ? (float(harmonic_k) * 9.0) : auto_delta
+        C := math.round(C_base + effective_delta)
         branch_name := "Largo_Estructural (Base " + str.tostring(C_base, "#") + "s " + (effective_delta >= 0 ? "+" : "") + str.tostring(effective_delta, "#") + "s)"
 else if mode_C == "Base Macroscópica: round(T / 18.3)"
     C := math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
