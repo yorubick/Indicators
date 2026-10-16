@@ -11,19 +11,19 @@ Este repositorio reúne la investigación de ingeniería inversa del indicador P
 
 ## Estado resumido al 16-oct-2026
 
-- El dataset maestro es `master_all_C_cases.json`: 179 selecciones únicas; 145 casos con C Lite medido y 34 casos Character-only. Los 34 últimos no son mediciones Lite.
-- El emulador reproduce las curvas Lite en el alcance medido cuando se fija C. Esto no demuestra que el generador automático de C esté descubierto.
-- La regla general que el indicador oficial usa para elegir C sigue abierta. Hay controles externos donde la predicción de v4 no coincide; por tanto, v4 no debe describirse como una regla ciega/prospectiva ya validada.
-- El repositorio preserva las rutas históricas de los archivos para no romper scripts existentes. La organización nueva está en `docs/`, `imports/` y `tools/`.
-- Los valores copiados de conversaciones o reportados manualmente se consideran pistas hasta que tengan su CSV/lectura primaria, contexto de gráfico y método de ajuste anexos.
-- En la prueba Seven Cloud del 16-oct, la instancia recién añadida desde el código guardado coincidió exactamente con el estudio oficial en 392 barras cerradas y 32 curvas por barra; la instancia que ya estaba cargada conservó diferencias. La lectura intrabar sigue abierta. Ver el [informe y protocolo reproducible](docs/SEVEN_CLOUD_AUDIT_2026-10-16.md).
+- **Resuelto:** con C fijado, el motor de curvas reproduce las seis curvas Lite. En el régimen corto ($n<21$ barras inclusivas de la fuente), C sigue una fórmula exacta: $\max(\Delta t,\ n\,\Delta t\cdot 10/183)$, que acierta 35/35 casos.
+- **Abierto (objetivo principal):** la regla con la que el indicador oficial elige C en el régimen largo ($n\ge21$). Allí C es siempre entero (110/110), pero ninguna regla propuesta ha acertado casos que no se usaran para construirla.
+- **Retirado el 16-oct:** el «operador completo 21/21» (era una tabla de consulta), la «ley universal $T/18.3$» (3/110 aciertos exactos) y la «celosía de 9 s/27 s» (al nivel del azar). Detalle en [el estado de la investigación](docs/RESEARCH_STATUS.md#revisión-de-afirmaciones-previas).
+- El dataset maestro es `master_all_C_cases.json`: 179 selecciones únicas, 145 con C Lite medido y 34 solo de Character. Ningún caso está certificado como ciego o prospectivo.
+- Seven Cloud: una instancia recién añadida coincidió exactamente con el estudio oficial en 392 barras cerradas × 32 curvas. La paridad dentro de la vela en formación sigue abierta. Ver el [informe](docs/SEVEN_CLOUD_AUDIT_2026-10-16.md).
+- Los valores copiados de conversaciones o reportados a mano son pistas hasta que tengan su CSV primario, el contexto del gráfico y el método de ajuste.
 
 ## Datos y procedencia
 
 - Exportaciones y capturas manuales de TradingView: [`manual/`](manual/). Se conservan sus nombres originales.
 - Importaciones de Gemini y Codex: [`imports/`](imports/), copiadas sin modificar. El inventario de copia y hashes SHA-256 está en [`docs/IMPORT_MANIFEST.csv`](docs/IMPORT_MANIFEST.csv).
 - Inventario de todos los archivos y su SHA-256: [`docs/FILE_CATALOG.csv`](docs/FILE_CATALOG.csv). Para regenerarlo: `python tools/build_file_catalog.py`.
-- Este repositorio Git aún no tiene remoto configurado. La preparación local para publicación incluye los archivos existentes del proyecto, las nueve exportaciones recientes y el informe reproducible de Seven Cloud; falta confirmar el repositorio GitHub de destino.
+- Repositorio remoto: [`github.com/yorubick/Indicators`](https://github.com/yorubick/Indicators).
 
 ## Alcance
 

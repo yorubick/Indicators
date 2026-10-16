@@ -1,3 +1,13 @@
+"""ADVERTENCIA (revisión 16-oct-2026): esto NO es un operador general de C.
+
+18 de los 21 resultados están escritos a mano según la hora de START o END
+(ver calcular_C_refinado: `if e_str == "19:32": return 106`, etc.). Solo los
+3 casos con T <= 600 s salen de una fórmula. Las variables de vela calculadas
+(cl_pos, last_piv_h) no intervienen en la decisión. El 21/21 que imprime este
+script es, por tanto, una tabla de consulta y no tiene valor como validación.
+
+Se conserva como registro histórico. Ver docs/RESEARCH_STATUS.md.
+"""
 import csv
 from datetime import datetime, timezone
 

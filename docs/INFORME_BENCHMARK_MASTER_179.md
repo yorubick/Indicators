@@ -1,5 +1,7 @@
 # INFORME DE BENCHMARK: EVALUACIÓN DEL OPERADOR UNIVERSAL DE C EN 179 CASOS MAESTROS
 
+> **Nota de revisión (16-oct-2026).** Este informe se conserva como registro histórico, pero varias conclusiones no se sostienen. (1) «Régimen corto 100 %» y «C entero 100 %» se confirman. (2) La «línea base $T/18.3$ anclada a física» acierta exactamente solo 3/110 casos largos, con mediana de error de 7–9 s: es una línea base, no una ley. (3) La «celosía armónica» del 53,1 % está **al nivel del azar** (cualquier entero cae a ≤ 2 s de un múltiplo de 9 con probabilidad $5/9 \approx 55{,}6\,\%$), así que la tabla de este informe refuta la celosía en lugar de apoyarla. Los enlaces `file:///G:/…` se han cambiado por rutas relativas. Ver el [estado de la investigación](RESEARCH_STATUS.md#revisión-de-afirmaciones-previas).
+
 **Fecha**: 15 de octubre de 2026  
 **Dataset Auditado**: `master_all_C_cases.json` (179 casos únicos)  
 **Resoluciones Evaluadas**: 15 s (57 casos), 30 s (2 casos), 60 s (114 casos), 120 s (6 casos)  
@@ -40,6 +42,6 @@ reproduce **exactamente sin excepción** todas las lecturas de *PoiSzn EMA Origi
 
 ## 4. Archivos y Artefactos Generados
 
-- Script de Evaluación: [`tools/evaluar_operador_en_master.py`](file:///G:/trading/guias/analisis/tools/evaluar_operador_en_master.py)
-- Datos Brutos JSON: [`evaluacion_operador_master.json`](file:///G:/trading/guias/analisis/evaluacion_operador_master.json)
-- Dataset de Entrada: [`master_all_C_cases.json`](file:///G:/trading/guias/analisis/master_all_C_cases.json)
+- Script de Evaluación: [`tools/evaluar_operador_en_master.py`](../tools/evaluar_operador_en_master.py)
+- Datos Brutos JSON: [`evaluacion_operador_master.json`](../evaluacion_operador_master.json)
+- Dataset de Entrada: [`master_all_C_cases.json`](../master_all_C_cases.json)

@@ -1,5 +1,7 @@
 # Experimento EXP-20261014-1903-15S: Inversión de C con Fuente 15 s en Gráfico 1 m
 
+> **Nota de revisión (16-oct-2026).** Las 13 mediciones e inversiones de este experimento son datos sólidos. La predicción ciega para END 19:36 **no llegó a evaluarse**: la lectura de 19:37 salió vacía porque no hubo ruptura ([CONTROL_1936_EVAL_1937.md](CONTROL_1936_EVAL_1937.md)). Los «hallazgos teóricos» de la sección 4 (escalones armónicos, cinemática intraminuto) son hipótesis formuladas con estos mismos 13 casos. Ver el [estado de la investigación](../../docs/RESEARCH_STATUS.md#revisión-de-afirmaciones-previas).
+
 **Fecha de registro**: 14 de octubre de 2026  
 **Identificador**: `EXP-20261014-1903-15S`  
 **Estado**: Mediciones primarias e inversión completadas (13/13 confirmadas); predicción ciega para END 19:36 registrada y pendiente de verificación en TradingView.  

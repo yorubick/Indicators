@@ -1,5 +1,7 @@
 # Informe de Validación Experimental: Frontera Crítica n=21 y Operador de Dos Fases
 
+> **Nota de revisión (16-oct-2026).** Se sostienen las secciones A, B, D y E: régimen corto con $n$ inclusivo, piso $\max(\Delta t,\dots)$ y paso a enteros en $n=21$. No se sostienen: (a) la «universalidad independiente del activo», porque todos los casos son de `NQ1!`; (b) la sección C, que tabula el $n$ del **gráfico** cuando la ley depende del $n$ de la **fuente**: con fuente 15 s y anclas 19:14–19:33, $n = 77$ es régimen largo, así que la «convergencia a 66 s» no pone a prueba la ley corta; (c) la sección F y el punto 3, donde la corrección «+33 s / −14 s» se calibró con el mismo caso que luego «certifica» y la «celosía de 3 s» no tiene apoyo estadístico; (d) la «frontera universal $C=125$ s en $n=21$» del clon Pine, cuando en el maestro hay 22 casos con $n=21$ y C entre 16 y 137 s. Ver el [estado de la investigación](RESEARCH_STATUS.md#revisión-de-afirmaciones-previas).
+
 > **Fecha**: 15 de octubre de 2026  
 > **Instrumento**: CME_MINI:NQ1! (Futuro Continuo NQ)  
 > **Sesión**: 2026-10-12 ETH, UTC  
