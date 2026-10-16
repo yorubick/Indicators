@@ -1,4 +1,4 @@
-//@version=5
+//@version=6
 indicator("PoiSzn EMA Origin Lite v1.3 (Open Source)", "PoiSzn Lite v1.3", overlay=true, max_lines_count=500, max_labels_count=500, max_boxes_count=100)
 
 // ============================================================================
@@ -55,33 +55,36 @@ bool is_start_bar = time >= start_time and (time[1] < start_time or na(time[1]))
 bool is_end_bar   = (time <= end_time) and (time + int(dt_chart * 1000) > end_time)
 
 // Contadores de barras, extremos y volumen del rango
-var int   n_bars          = 0
-var float range_high      = na
-var float range_low       = na
-var float end_candle_high = na
-var float end_candle_low  = na
-var float end_candle_open = na
-var float end_candle_close= na
-var float end_candle_vol  = na
-var int   end_bar_index   = na
-var float range_sum_vol   = 0.0
-var int   range_vol_count = 0
+var int   n_bars            = 0
+var float start_candle_open = na
+var float range_high        = na
+var float range_low         = na
+var float end_candle_high   = na
+var float end_candle_low    = na
+var float end_candle_open   = na
+var float end_candle_close  = na
+var float end_candle_vol    = na
+var int   end_bar_index     = na
+var float range_sum_vol     = 0.0
+var int   range_vol_count   = 0
 
 if time < start_time
-    n_bars          := 0
-    range_high      := na
-    range_low       := na
-    end_bar_index   := na
-    range_sum_vol   := 0.0
-    range_vol_count := 0
-    end_candle_vol  := na
+    n_bars            := 0
+    start_candle_open := na
+    range_high        := na
+    range_low         := na
+    end_bar_index     := na
+    range_sum_vol     := 0.0
+    range_vol_count   := 0
+    end_candle_vol    := na
 else if is_in_range
     range_sum_vol   += nz(volume, 0.0)
     range_vol_count += 1
     if is_start_bar
-        n_bars     := 1
-        range_high := high
-        range_low  := low
+        n_bars            := 1
+        start_candle_open := open
+        range_high        := high
+        range_low         := low
     else
         n_bars     += 1
         range_high := math.max(nz(range_high, high), high)
@@ -145,7 +148,7 @@ if mode_C == "Auto (Universal: Corto n<21 / Selector Estructural n>=21)"
         // - En rango lateral / compresión (14-Oct, ER < 0.15): kappa ≈ 17.23 -> C ≈ 195s a n=29
         // - En super tendencia / ruptura de extremos (15-Oct, ER > 0.35): kappa ≈ 14.80 -> C ≈ 227s a n=29
         float net_disp = math.abs(nz(end_candle_close, close) - nz(range_low + (close_pos * tot_range), open))
-        float eff_ratio = math.min(1.0, math.max(0.0, math.abs(nz(end_candle_close, close) - open[math.min(n_bars - 1, 50)]) / tot_range))
+        float eff_ratio = tot_range > 0.0 ? math.min(1.0, math.abs(nz(end_candle_close, close) - nz(start_candle_open, open)) / tot_range) : 0.0
         
         // Frontera universal n=21: C = 125s exacto
         if n_source_inclusive == 21
