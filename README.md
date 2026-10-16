@@ -23,7 +23,7 @@ Este repositorio reúne la investigación de ingeniería inversa del indicador P
 - Exportaciones y capturas manuales de TradingView: [`manual/`](manual/). Se conservan sus nombres originales.
 - Importaciones de Gemini y Codex: [`imports/`](imports/), copiadas sin modificar. El inventario de copia y hashes SHA-256 está en [`docs/IMPORT_MANIFEST.csv`](docs/IMPORT_MANIFEST.csv).
 - Inventario de todos los archivos y su SHA-256: [`docs/FILE_CATALOG.csv`](docs/FILE_CATALOG.csv). Para regenerarlo: `python tools/build_file_catalog.py`.
-- Este repositorio Git aún no tiene remoto configurado. La preparación local para publicación incluye los archivos existentes del proyecto, las nueve exportaciones recientes y el informe reproducible de Seven Cloud; falta confirmar el repositorio GitHub de destino.
+- El remoto de GitHub configurado es `https://github.com/yorubick/Indicators.git`. La documentación y los artefactos de la prueba M5 de Character Tree Auto Balanced están en `CT_auto_M5_resultados.md` y `experimentos/CT_auto_balanced_M5_2026-10-16/`; la comparación Manual equivalente sigue pendiente y está marcada en el informe.
 
 ## Alcance
 

@@ -4,6 +4,12 @@
 
 La prueba con el código guardado (`lookahead_off`) confirmó igualdad exacta entre el estudio oficial y una instancia recién añadida para 392 barras cerradas de un minuto y 32 curvas por barra (12.544 valores, 0 discrepancias). La instancia de la copia que ya estaba en el gráfico mantuvo diferencias; guardar el código no la sustituyó. En 20:32–20:34 UTC se observaron diferencias dentro del intervalo HTF en formación, así que la paridad intrabar continúa abierta. Consulta el [protocolo, resultado y archivos fuente](SEVEN_CLOUD_AUDIT_2026-10-16.md); se puede reproducir con `python tools/audit_seven_cloud_exports.py`.
 
+## Prueba Character Tree Auto Balanced M5 — 16-oct-2026
+
+En NQ1!, 1m, UTC, ETH, B-ADJ off, con END 14:22 UTC y cuatro mechas de Point 2, Auto eligió STARTs distintos: 14:02 (mecha 14:29/30906), 13:56 (14:43/30911.25), 13:49 (14:48/30921.25) y 14:02 (14:26/30859). La referencia Lite Manual 14:00–14:22 coincidió en sus seis columnas Lane en 514 timestamps del 12-oct, sin diferencias.
+
+Las diez columnas de Character Tree estaban vacías en cada vela de la mecha; por tanto, este CSV no permite medir qué nube tocó/capó el retroceso. La exportación Manual disponible usó 14:00–14:22, no el START Auto 14:02; sus curvas no coinciden con Auto, pero el rango distinto impide concluir la predicción de equivalencia de C. La comparación equivalente 14:02–14:22 queda pendiente porque Work reportó desactivado el acceso al navegador local. Consulta [CT_auto_M5_resultados.md](../CT_auto_M5_resultados.md) y [`experimentos/CT_auto_balanced_M5_2026-10-16/telemetria.json`](../experimentos/CT_auto_balanced_M5_2026-10-16/telemetria.json).
+
 ## Qué puede afirmarse con el material consolidado
 
 - `master_all_C_cases.json` registra 179 selecciones únicas: 145 con C Lite medido y 34 Character-only. Los casos Character-only no deben presentarse como C Lite medidos.
