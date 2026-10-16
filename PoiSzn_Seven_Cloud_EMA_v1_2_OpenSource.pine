@@ -1,5 +1,5 @@
 //@version=6
-indicator("PoiSzn Seven Cloud EMA v1.2.7 (Open Source)", "PoiSzn 7C", overlay=true, max_lines_count=500, max_labels_count=500, max_boxes_count=100)
+indicator("PoiSzn Seven Cloud EMA v1.2.7 (Open Source)", "PoiSzn 7C", overlay=true, max_lines_count=500, max_labels_count=500, max_boxes_count=100, max_bars_back=5000)
 
 // ============================================================================
 // POISZN SEVEN CLOUD EMA v1.2.7 - OPEN SOURCE ENGINE (PINE v6)
