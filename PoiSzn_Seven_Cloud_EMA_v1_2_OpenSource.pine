@@ -1,0 +1,423 @@
+//@version=6
+indicator("PoiSzn Seven Cloud EMA v1.2.7 (Open Source)", "PoiSzn 7Cloud v1.2", overlay=true, max_lines_count=500, max_labels_count=500, max_boxes_count=100)
+
+// ============================================================================
+// POISZN SEVEN CLOUD EMA v1.2.7 - OPEN SOURCE ENGINE (PINE v6)
+// Arquitectura Multi-Temporal de Potencias de 3 (PO3) & Nubes de Referencia
+// Autores: FrankyProfit & Antigravity (Auditoría Adversaria NQ1! Octubre 2026)
+// ============================================================================
+
+// ============================================================================
+// 1. CONFIGURACIÓN DE PARÁMETROS BASE
+// ============================================================================
+grp_core      = "1. Parámetros Base de Medias Móviles"
+len_upper     = input.int(78, "Upper anchor EMA length", minval=1, group=grp_core)
+len_lower     = input.int(84, "Lower anchor EMA length", minval=1, group=grp_core)
+fetch_below   = input.bool(true, "Fetch PO3 rungs below chart TF", group=grp_core)
+
+grp_visual    = "2. Estilos y Transparencias de Nube"
+shade_orient  = input.bool(true, "Shade fill by orientation", group=grp_visual)
+transp_bull   = input.int(72, "Bullish fill transparency", minval=0, maxval=100, group=grp_visual)
+transp_bear   = input.int(88, "Bearish fill transparency", minval=0, maxval=100, group=grp_visual)
+transp_const  = input.int(80, "Constant fill transparency", minval=0, maxval=100, group=grp_visual)
+transp_bound  = input.int(35, "Boundary line transparency", minval=0, maxval=100, group=grp_visual)
+
+grp_mode      = "3. Modo de Selección de Escalones (Rungs)"
+mode_sel      = input.string("Manual", "Mode", options=["Manual", "Auto: chart rung + N above"], group=grp_mode)
+n_rungs_above = input.int(2, "N rungs above chart rung", minval=1, maxval=5, group=grp_mode)
+
+// ============================================================================
+// 2. CONFIGURACIÓN DE ESCALONES PO3 (RUNGS 1 A 10)
+// ============================================================================
+grp_po3       = "4. Escalones Temporales PO3 (Power of 3)"
+show_r1       = input.bool(true, "Rung 1", inline="r1", group=grp_po3)
+tf_r1         = input.timeframe("1S", "", inline="r1", group=grp_po3)
+col_r1        = input.color(#FF9E1B, "", inline="r1", group=grp_po3)
+
+show_r2       = input.bool(true, "Rung 2", inline="r2", group=grp_po3)
+tf_r2         = input.timeframe("5S", "", inline="r2", group=grp_po3)
+col_r2        = input.color(#2DEEEE, "", inline="r2", group=grp_po3)
+
+show_r3       = input.bool(true, "Rung 3", inline="r3", group=grp_po3)
+tf_r3         = input.timeframe("15S", "", inline="r3", group=grp_po3)
+col_r3        = input.color(#4A7BFF, "", inline="r3", group=grp_po3)
+
+show_r4       = input.bool(true, "Rung 4 (1m)", inline="r4", group=grp_po3)
+tf_r4         = input.timeframe("1", "", inline="r4", group=grp_po3)
+col_r4        = input.color(#FF3B5C, "", inline="r4", group=grp_po3)
+
+show_r5       = input.bool(true, "Rung 5 (3m)", inline="r5", group=grp_po3)
+tf_r5         = input.timeframe("3", "", inline="r5", group=grp_po3)
+col_r5        = input.color(#0BD6A4, "", inline="r5", group=grp_po3)
+
+show_r6       = input.bool(true, "Rung 6 (9m)", inline="r6", group=grp_po3)
+tf_r6         = input.timeframe("9", "", inline="r6", group=grp_po3)
+col_r6        = input.color(#FFD93C, "", inline="r6", group=grp_po3)
+
+show_r7       = input.bool(true, "Rung 7 (27m)", inline="r7", group=grp_po3)
+tf_r7         = input.timeframe("27", "", inline="r7", group=grp_po3)
+col_r7        = input.color(#B845EE, "", inline="r7", group=grp_po3)
+
+show_r8       = input.bool(true, "Rung 8 (81m)", inline="r8", group=grp_po3)
+tf_r8         = input.timeframe("81", "", inline="r8", group=grp_po3)
+col_r8        = input.color(#FF9E1B, "", inline="r8", group=grp_po3)
+
+show_r9       = input.bool(true, "Rung 9 (243m)", inline="r9", group=grp_po3)
+tf_r9         = input.timeframe("243", "", inline="r9", group=grp_po3)
+col_r9        = input.color(#2DEEEE, "", inline="r9", group=grp_po3)
+
+show_r10      = input.bool(true, "Rung 10 (729m)", inline="r10", group=grp_po3)
+tf_r10        = input.timeframe("729", "", inline="r10", group=grp_po3)
+col_r10       = input.color(#4A7BFF, "", inline="r10", group=grp_po3)
+show_po3_lbls = input.bool(true, "Show PO3 TF labels", group=grp_po3)
+
+// ============================================================================
+// 3. CONFIGURACIÓN DE NUBES DE REFERENCIA (REFERENCE CLOUDS)
+// ============================================================================
+grp_ref       = "5. Nubes de Referencia (Reference Clouds)"
+show_ref_all  = input.bool(true, "Show reference clouds", group=grp_ref)
+show_ref_lbls = input.bool(true, "Show reference TF labels", group=grp_ref)
+show_ref1     = input.bool(true, "Ref 1 (2m)", inline="ref1", group=grp_ref)
+tf_ref1       = input.timeframe("2", "", inline="ref1", group=grp_ref)
+
+show_ref2     = input.bool(true, "Ref 2 (6m)", inline="ref2", group=grp_ref)
+tf_ref2       = input.timeframe("6", "", inline="ref2", group=grp_ref)
+
+show_ref3     = input.bool(true, "Ref 3 (15m)", inline="ref3", group=grp_ref)
+tf_ref3       = input.timeframe("15", "", inline="ref3", group=grp_ref)
+
+show_ref4     = input.bool(true, "Ref 4 (60m)", inline="ref4", group=grp_ref)
+tf_ref4       = input.timeframe("60", "", inline="ref4", group=grp_ref)
+
+show_ref5     = input.bool(true, "Ref 5 (162m)", inline="ref5", group=grp_ref)
+tf_ref5       = input.timeframe("162", "", inline="ref5", group=grp_ref)
+
+show_ref6     = input.bool(true, "Ref 6 (486m)", inline="ref6", group=grp_ref)
+tf_ref6       = input.timeframe("486", "", inline="ref6", group=grp_ref)
+
+// ============================================================================
+// 4. MONITOR TABLE (HUD)
+// ============================================================================
+grp_table     = "6. Tabla de Monitor"
+show_table    = input.bool(false, "Show monitor table", group=grp_table)
+table_pos_str = input.string("Top right", "Table position", options=["Top right","Top left","Bottom right","Bottom left","Middle right"], group=grp_table)
+
+// ============================================================================
+// 5. CÁLCULO MULTI-TEMPORAL CON REQUEST.SECURITY
+// ============================================================================
+// Función de cálculo de EMA en resolución objetivo
+calc_ema_pair(simple string tf, simple int l_up, simple int l_down) =>
+    request.security(syminfo.tickerid, tf, [ta.ema(close, l_up), ta.ema(close, l_down)], gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_off)
+
+// Conexión de los 10 Rungs PO3
+[r1_up, r1_down]   = calc_ema_pair(tf_r1, len_upper, len_lower)
+[r2_up, r2_down]   = calc_ema_pair(tf_r2, len_upper, len_lower)
+[r3_up, r3_down]   = calc_ema_pair(tf_r3, len_upper, len_lower)
+[r4_up, r4_down]   = calc_ema_pair(tf_r4, len_upper, len_lower)
+[r5_up, r5_down]   = calc_ema_pair(tf_r5, len_upper, len_lower)
+[r6_up, r6_down]   = calc_ema_pair(tf_r6, len_upper, len_lower)
+[r7_up, r7_down]   = calc_ema_pair(tf_r7, len_upper, len_lower)
+[r8_up, r8_down]   = calc_ema_pair(tf_r8, len_upper, len_lower)
+[r9_up, r9_down]   = calc_ema_pair(tf_r9, len_upper, len_lower)
+[r10_up, r10_down] = calc_ema_pair(tf_r10, len_upper, len_lower)
+
+// Conexión de las 6 Nubes de Referencia
+[ref1_up, ref1_down] = calc_ema_pair(tf_ref1, len_upper, len_lower)
+[ref2_up, ref2_down] = calc_ema_pair(tf_ref2, len_upper, len_lower)
+[ref3_up, ref3_down] = calc_ema_pair(tf_ref3, len_upper, len_lower)
+[ref4_up, ref4_down] = calc_ema_pair(tf_ref4, len_upper, len_lower)
+[ref5_up, ref5_down] = calc_ema_pair(tf_ref5, len_upper, len_lower)
+[ref6_up, ref6_down] = calc_ema_pair(tf_ref6, len_upper, len_lower)
+
+// ============================================================================
+// 6. LÓGICA DE ACTIVACIÓN (MANUAL VS AUTO: CHART RUNG + N ABOVE)
+// ============================================================================
+int chart_sec = timeframe.in_seconds()
+// Mapeo del escalón del gráfico actual
+int chart_rung_idx = 4
+if chart_sec <= 1
+    chart_rung_idx := 1
+else if chart_sec <= 5
+    chart_rung_idx := 2
+else if chart_sec <= 15
+    chart_rung_idx := 3
+else if chart_sec <= 60
+    chart_rung_idx := 4
+else if chart_sec <= 180
+    chart_rung_idx := 5
+else if chart_sec <= 540
+    chart_rung_idx := 6
+else if chart_sec <= 1620
+    chart_rung_idx := 7
+else if chart_sec <= 4860
+    chart_rung_idx := 8
+else if chart_sec <= 14580
+    chart_rung_idx := 9
+else
+    chart_rung_idx := 10
+
+is_rung_active(int idx, bool manual_show) =>
+    if mode_sel == "Manual"
+        manual_show
+    else
+        // Auto: escalón del gráfico hasta N rungs por encima
+        idx >= chart_rung_idx and idx <= (chart_rung_idx + n_rungs_above)
+
+// ============================================================================
+// 7. RENDERIZADO GRÁFICO (PLOTS Y NUBES CON ORIENTACIÓN)
+// ============================================================================
+get_cloud_color(float u, float d, color base_col) =>
+    int t = transp_const
+    if shade_orient
+        t := (u >= d) ? transp_bull : transp_bear
+    color.new(base_col, t)
+
+// Rung 1
+act_r1 = is_rung_active(1, show_r1) and (fetch_below or chart_sec <= 1)
+p1_u = plot(act_r1 ? r1_up : na, "R1 E78", color=color.new(col_r1, transp_bound), linewidth=1)
+p1_d = plot(act_r1 ? r1_down : na, "R1 E84", color=color.new(col_r1, transp_bound), linewidth=1)
+fill(p1_u, p1_d, color=get_cloud_color(r1_up, r1_down, col_r1), title="Nube Rung 1")
+
+// Rung 2
+act_r2 = is_rung_active(2, show_r2) and (fetch_below or chart_sec <= 5)
+p2_u = plot(act_r2 ? r2_up : na, "R2 E78", color=color.new(col_r2, transp_bound), linewidth=1)
+p2_d = plot(act_r2 ? r2_down : na, "R2 E84", color=color.new(col_r2, transp_bound), linewidth=1)
+fill(p2_u, p2_d, color=get_cloud_color(r2_up, r2_down, col_r2), title="Nube Rung 2")
+
+// Rung 3
+act_r3 = is_rung_active(3, show_r3) and (fetch_below or chart_sec <= 15)
+p3_u = plot(act_r3 ? r3_up : na, "R3 E78", color=color.new(col_r3, transp_bound), linewidth=1)
+p3_d = plot(act_r3 ? r3_down : na, "R3 E84", color=color.new(col_r3, transp_bound), linewidth=1)
+fill(p3_u, p3_d, color=get_cloud_color(r3_up, r3_down, col_r3), title="Nube Rung 3")
+
+// Rung 4
+act_r4 = is_rung_active(4, show_r4) and (fetch_below or chart_sec <= 60)
+p4_u = plot(act_r4 ? r4_up : na, "R4 E78", color=color.new(col_r4, transp_bound), linewidth=1)
+p4_d = plot(act_r4 ? r4_down : na, "R4 E84", color=color.new(col_r4, transp_bound), linewidth=1)
+fill(p4_u, p4_d, color=get_cloud_color(r4_up, r4_down, col_r4), title="Nube Rung 4")
+
+// Rung 5
+act_r5 = is_rung_active(5, show_r5)
+p5_u = plot(act_r5 ? r5_up : na, "R5 E78", color=color.new(col_r5, transp_bound), linewidth=1)
+p5_d = plot(act_r5 ? r5_down : na, "R5 E84", color=color.new(col_r5, transp_bound), linewidth=1)
+fill(p5_u, p5_d, color=get_cloud_color(r5_up, r5_down, col_r5), title="Nube Rung 5")
+
+// Rung 6
+act_r6 = is_rung_active(6, show_r6)
+p6_u = plot(act_r6 ? r6_up : na, "R6 E78", color=color.new(col_r6, transp_bound), linewidth=1)
+p6_d = plot(act_r6 ? r6_down : na, "R6 E84", color=color.new(col_r6, transp_bound), linewidth=1)
+fill(p6_u, p6_d, color=get_cloud_color(r6_up, r6_down, col_r6), title="Nube Rung 6")
+
+// Rung 7
+act_r7 = is_rung_active(7, show_r7)
+p7_u = plot(act_r7 ? r7_up : na, "R7 E78", color=color.new(col_r7, transp_bound), linewidth=1)
+p7_d = plot(act_r7 ? r7_down : na, "R7 E84", color=color.new(col_r7, transp_bound), linewidth=1)
+fill(p7_u, p7_d, color=get_cloud_color(r7_up, r7_down, col_r7), title="Nube Rung 7")
+
+// Rung 8
+act_r8 = is_rung_active(8, show_r8)
+p8_u = plot(act_r8 ? r8_up : na, "R8 E78", color=color.new(col_r8, transp_bound), linewidth=1)
+p8_d = plot(act_r8 ? r8_down : na, "R8 E84", color=color.new(col_r8, transp_bound), linewidth=1)
+fill(p8_u, p8_d, color=get_cloud_color(r8_up, r8_down, col_r8), title="Nube Rung 8")
+
+// Rung 9
+act_r9 = is_rung_active(9, show_r9)
+p9_u = plot(act_r9 ? r9_up : na, "R9 E78", color=color.new(col_r9, transp_bound), linewidth=1)
+p9_d = plot(act_r9 ? r9_down : na, "R9 E84", color=color.new(col_r9, transp_bound), linewidth=1)
+fill(p9_u, p9_d, color=get_cloud_color(r9_up, r9_down, col_r9), title="Nube Rung 9")
+
+// Rung 10
+act_r10 = is_rung_active(10, show_r10)
+p10_u = plot(act_r10 ? r10_up : na, "R10 E78", color=color.new(col_r10, transp_bound), linewidth=1)
+p10_d = plot(act_r10 ? r10_down : na, "R10 E84", color=color.new(col_r10, transp_bound), linewidth=1)
+fill(p10_u, p10_d, color=get_cloud_color(r10_up, r10_down, col_r10), title="Nube Rung 10")
+
+// ============================================================================
+// 8. RENDERIZADO DE NUBES DE REFERENCIA
+// ============================================================================
+col_ref = color.gray
+// Ref 1 (2m)
+act_ref1 = show_ref_all and show_ref1
+pref1_u = plot(act_ref1 ? ref1_up : na, "Reference 1 E78", color=color.new(col_ref, transp_bound), linewidth=1)
+pref1_d = plot(act_ref1 ? ref1_down : na, "Reference 1 E84", color=color.new(col_ref, transp_bound), linewidth=1)
+fill(pref1_u, pref1_d, color=get_cloud_color(ref1_up, ref1_down, col_ref), title="Nube Ref 1 (2m)")
+
+// Ref 2 (6m)
+act_ref2 = show_ref_all and show_ref2
+pref2_u = plot(act_ref2 ? ref2_up : na, "Reference 2 E78", color=color.new(col_ref, transp_bound), linewidth=1)
+pref2_d = plot(act_ref2 ? ref2_down : na, "Reference 2 E84", color=color.new(col_ref, transp_bound), linewidth=1)
+fill(pref2_u, pref2_d, color=get_cloud_color(ref2_up, ref2_down, col_ref), title="Nube Ref 2 (6m)")
+
+// Ref 3 (15m)
+act_ref3 = show_ref_all and show_ref3
+pref3_u = plot(act_ref3 ? ref3_up : na, "Reference 3 E78", color=color.new(col_ref, transp_bound), linewidth=1)
+pref3_d = plot(act_ref3 ? ref3_down : na, "Reference 3 E84", color=color.new(col_ref, transp_bound), linewidth=1)
+fill(pref3_u, pref3_d, color=get_cloud_color(ref3_up, ref3_down, col_ref), title="Nube Ref 3 (15m)")
+
+// Ref 4 (60m)
+act_ref4 = show_ref_all and show_ref4
+pref4_u = plot(act_ref4 ? ref4_up : na, "Reference 4 E78", color=color.new(col_ref, transp_bound), linewidth=1)
+pref4_d = plot(act_ref4 ? ref4_down : na, "Reference 4 E84", color=color.new(col_ref, transp_bound), linewidth=1)
+fill(pref4_u, pref4_d, color=get_cloud_color(ref4_up, ref4_down, col_ref), title="Nube Ref 4 (60m)")
+
+// Ref 5 (162m)
+act_ref5 = show_ref_all and show_ref5
+pref5_u = plot(act_ref5 ? ref5_up : na, "Reference 5 E78", color=color.new(col_ref, transp_bound), linewidth=1)
+pref5_d = plot(act_ref5 ? ref5_down : na, "Reference 5 E84", color=color.new(col_ref, transp_bound), linewidth=1)
+fill(pref5_u, pref5_d, color=get_cloud_color(ref5_up, ref5_down, col_ref), title="Nube Ref 5 (162m)")
+
+// Ref 6 (486m)
+act_ref6 = show_ref_all and show_ref6
+pref6_u = plot(act_ref6 ? ref6_up : na, "Reference 6 E78", color=color.new(col_ref, transp_bound), linewidth=1)
+pref6_d = plot(act_ref6 ? ref6_down : na, "Reference 6 E84", color=color.new(col_ref, transp_bound), linewidth=1)
+fill(pref6_u, pref6_d, color=get_cloud_color(ref6_up, ref6_down, col_ref), title="Nube Ref 6 (486m)")
+
+// ============================================================================
+// 9. MONITOR TABLE
+// ============================================================================
+var table mon = na
+if show_table and barstate.islast
+    string t_pos = position.top_right
+    if table_pos_str == "Top left"
+        t_pos := position.top_left
+    else if table_pos_str == "Bottom right"
+        t_pos := position.bottom_right
+    else if table_pos_str == "Bottom left"
+        t_pos := position.bottom_left
+    else if table_pos_str == "Middle right"
+        t_pos := position.middle_right
+
+    mon := table.new(t_pos, columns=4, rows=11, bgcolor=color.new(#0d1117, 15), border_width=1, border_color=color.gray)
+    table.cell(mon, 0, 0, "PO3 RUNG", bgcolor=color.new(#161b22, 0), text_color=color.white, text_size=size.small)
+    table.cell(mon, 1, 0, "TIMEFRAME", bgcolor=color.new(#161b22, 0), text_color=color.white, text_size=size.small)
+    table.cell(mon, 2, 0, "EMA 78", bgcolor=color.new(#161b22, 0), text_color=color.white, text_size=size.small)
+    table.cell(mon, 3, 0, "ESTADO", bgcolor=color.new(#161b22, 0), text_color=color.white, text_size=size.small)
+
+    row_data(int r, string name, string tf, float u, float d, color col) =>
+        bool is_bull = u >= d
+        color status_col = is_bull ? color.green : color.red
+        string status_txt = is_bull ? "BULL" : "BEAR"
+        table.cell(mon, 0, r, name, text_color=col, text_size=size.small)
+        table.cell(mon, 1, r, tf, text_color=color.white, text_size=size.small)
+        table.cell(mon, 2, r, str.tostring(u, "#.2f"), text_color=color.white, text_size=size.small)
+        table.cell(mon, 3, r, status_txt, bgcolor=color.new(status_col, 70), text_color=color.white, text_size=size.small)
+
+    row_data(1, "Rung 1", tf_r1, r1_up, r1_down, col_r1)
+    row_data(2, "Rung 2", tf_r2, r2_up, r2_down, col_r2)
+    row_data(3, "Rung 3", tf_r3, r3_up, r3_down, col_r3)
+    row_data(4, "Rung 4", tf_r4, r4_up, r4_down, col_r4)
+    row_data(5, "Rung 5", tf_r5, r5_up, r5_down, col_r5)
+    row_data(6, "Rung 6", tf_r6, r6_up, r6_down, col_r6)
+    row_data(7, "Rung 7", tf_r7, r7_up, r7_down, col_r7)
+    row_data(8, "Rung 8", tf_r8, r8_up, r8_down, col_r8)
+    row_data(9, "Rung 9", tf_r9, r9_up, r9_down, col_r9)
+    row_data(10, "Rung 10", tf_r10, r10_up, r10_down, col_r10)
+
+// ============================================================================
+// 10. ETIQUETAS DE TEXTO TEMPORAL (TIMEFRAME LABELS) EN EL MARGEN DERECHO
+// ============================================================================
+var label lbl_r1 = na
+var label lbl_r2 = na
+var label lbl_r3 = na
+var label lbl_r4 = na
+var label lbl_r5 = na
+var label lbl_r6 = na
+var label lbl_r7 = na
+var label lbl_r8 = na
+var label lbl_r9 = na
+var label lbl_r10 = na
+
+var label lbl_ref1 = na
+var label lbl_ref2 = na
+var label lbl_ref3 = na
+var label lbl_ref4 = na
+var label lbl_ref5 = na
+var label lbl_ref6 = na
+
+update_or_create_label(label lbl, bool active, float price, string txt, color col) =>
+    label res = lbl
+    if active and not na(price)
+        if na(res)
+            res := label.new(bar_index + 2, price, txt, xloc=xloc.bar_index, yloc=yloc.price,
+                             color=color.new(color.black, 100), textcolor=col,
+                             style=label.style_label_left, size=size.small)
+        else
+            label.set_xy(res, bar_index + 2, price)
+            label.set_text(res, txt)
+            label.set_textcolor(res, col)
+    else
+        if not na(res)
+            label.delete(res)
+            res := na
+    res
+
+if barstate.islast
+    if show_po3_lbls
+        lbl_r1  := update_or_create_label(lbl_r1, act_r1, (r1_up + r1_down) / 2, "1S", col_r1)
+        lbl_r2  := update_or_create_label(lbl_r2, act_r2, (r2_up + r2_down) / 2, "5S", col_r2)
+        lbl_r3  := update_or_create_label(lbl_r3, act_r3, (r3_up + r3_down) / 2, "15S", col_r3)
+        lbl_r4  := update_or_create_label(lbl_r4, act_r4, (r4_up + r4_down) / 2, "1m", col_r4)
+        lbl_r5  := update_or_create_label(lbl_r5, act_r5, (r5_up + r5_down) / 2, "3m", col_r5)
+        lbl_r6  := update_or_create_label(lbl_r6, act_r6, (r6_up + r6_down) / 2, "9m", col_r6)
+        lbl_r7  := update_or_create_label(lbl_r7, act_r7, (r7_up + r7_down) / 2, "27m", col_r7)
+        lbl_r8  := update_or_create_label(lbl_r8, act_r8, (r8_up + r8_down) / 2, "81m", col_r8)
+        lbl_r9  := update_or_create_label(lbl_r9, act_r9, (r9_up + r9_down) / 2, "243m", col_r9)
+        lbl_r10 := update_or_create_label(lbl_r10, act_r10, (r10_up + r10_down) / 2, "729m", col_r10)
+    else
+        if not na(lbl_r1)
+            label.delete(lbl_r1)
+            lbl_r1 := na
+        if not na(lbl_r2)
+            label.delete(lbl_r2)
+            lbl_r2 := na
+        if not na(lbl_r3)
+            label.delete(lbl_r3)
+            lbl_r3 := na
+        if not na(lbl_r4)
+            label.delete(lbl_r4)
+            lbl_r4 := na
+        if not na(lbl_r5)
+            label.delete(lbl_r5)
+            lbl_r5 := na
+        if not na(lbl_r6)
+            label.delete(lbl_r6)
+            lbl_r6 := na
+        if not na(lbl_r7)
+            label.delete(lbl_r7)
+            lbl_r7 := na
+        if not na(lbl_r8)
+            label.delete(lbl_r8)
+            lbl_r8 := na
+        if not na(lbl_r9)
+            label.delete(lbl_r9)
+            lbl_r9 := na
+        if not na(lbl_r10)
+            label.delete(lbl_r10)
+            lbl_r10 := na
+
+    if show_ref_all and show_ref_lbls
+        lbl_ref1 := update_or_create_label(lbl_ref1, act_ref1, (ref1_up + ref1_down) / 2, "2m", col_ref)
+        lbl_ref2 := update_or_create_label(lbl_ref2, act_ref2, (ref2_up + ref2_down) / 2, "6m", col_ref)
+        lbl_ref3 := update_or_create_label(lbl_ref3, act_ref3, (ref3_up + ref3_down) / 2, "15m", col_ref)
+        lbl_ref4 := update_or_create_label(lbl_ref4, act_ref4, (ref4_up + ref4_down) / 2, "60m", col_ref)
+        lbl_ref5 := update_or_create_label(lbl_ref5, act_ref5, (ref5_up + ref5_down) / 2, "162m", col_ref)
+        lbl_ref6 := update_or_create_label(lbl_ref6, act_ref6, (ref6_up + ref6_down) / 2, "486m", col_ref)
+    else
+        if not na(lbl_ref1)
+            label.delete(lbl_ref1)
+            lbl_ref1 := na
+        if not na(lbl_ref2)
+            label.delete(lbl_ref2)
+            lbl_ref2 := na
+        if not na(lbl_ref3)
+            label.delete(lbl_ref3)
+            lbl_ref3 := na
+        if not na(lbl_ref4)
+            label.delete(lbl_ref4)
+            lbl_ref4 := na
+        if not na(lbl_ref5)
+            label.delete(lbl_ref5)
+            lbl_ref5 := na
+        if not na(lbl_ref6)
+            label.delete(lbl_ref6)
+            lbl_ref6 := na
