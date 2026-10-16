@@ -1,0 +1,175 @@
+//@version=6
+indicator("PoiSzn · Step Alignment Diagnostic", overlay=true, precision=4)
+
+// ============================================================================
+// PROTOCOLO DE DIAGNÓSTICO DE DESFASE Y ALINEACIÓN DE ESCALONES (v2.0)
+// ============================================================================
+// Compara en tiempo real cualquier curva del indicador oficial contra 5
+// configuraciones de request.security en Pine Script v6.
+//
+// Mide tanto en la vela actual como en TODO el historial cargado:
+// 1. Residuo actual (pts).
+// 2. Máximo residuo histórico (máxima diferencia registrada en el gráfico).
+// 3. Conteo de velas con divergencia (> 0.05 pts).
+// 4. Desfase de escalones (en qué vela exacta salta el cambio).
+// ============================================================================
+
+// 1. ENTRADAS DE CONTROL
+grp_in = "1. SELECCIÓN DE CURVA A COMPARAR"
+src_official = input.source(close, "Curva Oficial (de 7Cloud oficial)", group=grp_in, tooltip="Selecciona el plot correspondiente del indicador oficial (ej. R8 E78, R9 E78, R10 E78, Ref 6 E78, etc.).")
+
+grp_calc = "2. PARÁMETROS DEL RUN / CANDIDATO"
+tf_test  = input.timeframe("81", "Timeframe HTF a probar", options=["81", "243", "729", "486"], tooltip="R8=81, R9=243, R10=729, Reference 6=486 minutos.", group=grp_calc)
+len_test = input.int(78, "Longitud EMA", tooltip="78 para EMA superior o 84 para EMA inferior", group=grp_calc)
+active_cand = input.string("B: Nativo (syminfo.tickerid + lookahead_off)", "Modo visual a graficar", 
+     options=[
+         "A: Forzar ETH (session.extended + lookahead_off)", 
+         "B: Nativo (syminfo.tickerid + lookahead_off)", 
+         "C: Lookahead ON (syminfo.tickerid + lookahead_on)", 
+         "D: ticker.standard + lookahead_off",
+         "E: Nativo simple (defaults de Pine)"
+     ], group=grp_calc)
+
+// 2. GENERADORES CANDIDATOS
+// Variante A: Forzar session.extended con lookahead_off
+ticker_eth = ticker.modify(syminfo.tickerid, session=session.extended)
+val_cand_A = request.security(ticker_eth, tf_test, ta.ema(close, len_test), gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_off)
+
+// Variante B: syminfo.tickerid nativo con lookahead_off
+val_cand_B = request.security(syminfo.tickerid, tf_test, ta.ema(close, len_test), gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_off)
+
+// Variante C: syminfo.tickerid con lookahead_on
+val_cand_C = request.security(syminfo.tickerid, tf_test, ta.ema(close, len_test), gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_on)
+
+// Variante D: ticker.standard con lookahead_off
+ticker_std = ticker.standard(syminfo.tickerid)
+val_cand_D = request.security(ticker_std, tf_test, ta.ema(close, len_test), gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_off)
+
+// Variante E: request.security por defecto sin parámetros opcionales
+val_cand_E = request.security(syminfo.tickerid, tf_test, ta.ema(close, len_test))
+
+// Selección del candidato a graficar
+float val_active = switch active_cand
+    "A: Forzar ETH (session.extended + lookahead_off)" => val_cand_A
+    "B: Nativo (syminfo.tickerid + lookahead_off)"     => val_cand_B
+    "C: Lookahead ON (syminfo.tickerid + lookahead_on)" => val_cand_C
+    "D: ticker.standard + lookahead_off"               => val_cand_D
+    => val_cand_E
+
+// 3. DETECCIÓN DE ESCALONES Y RESIDUOS BARRA A BARRA
+bool step_off = math.abs(ta.change(src_official)) > 0.0001
+bool step_act = math.abs(ta.change(val_active)) > 0.0001
+
+int bs_off = ta.barssince(step_off)
+int bs_act = ta.barssince(step_act)
+int shift_act = bs_off - bs_act
+
+// Residuos actuales
+float res_A = val_cand_A - src_official
+float res_B = val_cand_B - src_official
+float res_C = val_cand_C - src_official
+float res_D = val_cand_D - src_official
+float res_E = val_cand_E - src_official
+
+// 4. ACUMULACIÓN HISTÓRICA EN TODO EL GRÁFICO (EVITA FALSOS POSITIVOS EN LA ÚLTIMA VELA)
+var float max_err_A = 0.0
+var float max_err_B = 0.0
+var float max_err_C = 0.0
+var float max_err_D = 0.0
+var float max_err_E = 0.0
+
+var int count_diff_A = 0
+var int count_diff_B = 0
+var int count_diff_C = 0
+var int count_diff_D = 0
+var int count_diff_E = 0
+
+max_err_A := math.max(max_err_A, math.abs(res_A))
+max_err_B := math.max(max_err_B, math.abs(res_B))
+max_err_C := math.max(max_err_C, math.abs(res_C))
+max_err_D := math.max(max_err_D, math.abs(res_D))
+max_err_E := math.max(max_err_E, math.abs(res_E))
+
+if math.abs(res_A) > 0.05
+    count_diff_A += 1
+if math.abs(res_B) > 0.05
+    count_diff_B += 1
+if math.abs(res_C) > 0.05
+    count_diff_C += 1
+if math.abs(res_D) > 0.05
+    count_diff_D += 1
+if math.abs(res_E) > 0.05
+    count_diff_E += 1
+
+// 5. PLOTS VISUALES
+plot(src_official, "Oficial (Referencia)", color=color.new(color.yellow, 20), linewidth=3)
+plot(val_active,   "Candidato Activo",     color=color.new(color.aqua, 0),    linewidth=2)
+
+// Marcas visuales de escalón
+plotshape(step_off, "Escalón Oficial", style=shape.triangleup, location=location.belowbar, 
+          color=color.yellow, size=size.tiny, text="OF", textcolor=color.yellow)
+plotshape(step_act, "Escalón Candidato", style=shape.triangledown, location=location.abovebar, 
+          color=color.aqua, size=size.tiny, text="CD", textcolor=color.aqua)
+
+// Fondo de alerta cuando hay divergencia en la vela visible
+bool has_divergence = math.abs(val_active - src_official) > 0.05
+bgcolor(has_divergence ? color.new(color.red, 88) : na, title="Alerta Desfase")
+
+// 6. TABLA DE TELEMETRÍA EN PANTALLA
+var table tb = table.new(position.top_right, 5, 7, bgcolor=color.new(#131722, 10), border_color=#363c4e, border_width=1)
+
+f_status_col(float cur_res, float max_res) =>
+    math.abs(cur_res) < 0.01 and max_res < 0.05 ? color.green : (max_res < 0.5 ? color.orange : color.red)
+
+f_status_txt(float cur_res, float max_res, int cnt) =>
+    max_res < 0.05 ? "100% EXACTO" : (cnt > 0 ? str.tostring(cnt) + " velas diff" : "DIFF VALOR")
+
+if barstate.islast
+    // Encabezados
+    table.cell(tb, 0, 0, "Variante Candidata",  bgcolor=#1e222d, text_color=color.white, text_size=size.small)
+    table.cell(tb, 1, 0, "Residuo Actual",       bgcolor=#1e222d, text_color=color.white, text_size=size.small)
+    table.cell(tb, 2, 0, "Máx Residuo Hist",     bgcolor=#1e222d, text_color=color.white, text_size=size.small)
+    table.cell(tb, 3, 0, "Velas con Diff",       bgcolor=#1e222d, text_color=color.white, text_size=size.small)
+    table.cell(tb, 4, 0, "Diagnóstico Histórico",bgcolor=#1e222d, text_color=color.white, text_size=size.small)
+
+    // Fila A
+    table.cell(tb, 0, 1, "A: ETH + lookahead_off", text_color=color.white, text_size=size.small)
+    table.cell(tb, 1, 1, str.tostring(res_A, "+#.0000") + " pts", text_color=f_status_col(res_A, max_err_A), text_size=size.small)
+    table.cell(tb, 2, 1, str.tostring(max_err_A, "#.0000") + " pts", text_color=f_status_col(res_A, max_err_A), text_size=size.small)
+    table.cell(tb, 3, 1, str.tostring(count_diff_A) + " velas", text_color=color.silver, text_size=size.small)
+    table.cell(tb, 4, 1, f_status_txt(res_A, max_err_A, count_diff_A), bgcolor=color.new(f_status_col(res_A, max_err_A), 80), text_color=f_status_col(res_A, max_err_A), text_size=size.small)
+
+    // Fila B
+    table.cell(tb, 0, 2, "B: Nativo + lookahead_off", text_color=color.white, text_size=size.small)
+    table.cell(tb, 1, 2, str.tostring(res_B, "+#.0000") + " pts", text_color=f_status_col(res_B, max_err_B), text_size=size.small)
+    table.cell(tb, 2, 2, str.tostring(max_err_B, "#.0000") + " pts", text_color=f_status_col(res_B, max_err_B), text_size=size.small)
+    table.cell(tb, 3, 2, str.tostring(count_diff_B) + " velas", text_color=color.silver, text_size=size.small)
+    table.cell(tb, 4, 2, f_status_txt(res_B, max_err_B, count_diff_B), bgcolor=color.new(f_status_col(res_B, max_err_B), 80), text_color=f_status_col(res_B, max_err_B), text_size=size.small)
+
+    // Fila C
+    table.cell(tb, 0, 3, "C: Nativo + lookahead_on", text_color=color.white, text_size=size.small)
+    table.cell(tb, 1, 3, str.tostring(res_C, "+#.0000") + " pts", text_color=f_status_col(res_C, max_err_C), text_size=size.small)
+    table.cell(tb, 2, 3, str.tostring(max_err_C, "#.0000") + " pts", text_color=f_status_col(res_C, max_err_C), text_size=size.small)
+    table.cell(tb, 3, 3, str.tostring(count_diff_C) + " velas", text_color=color.silver, text_size=size.small)
+    table.cell(tb, 4, 3, f_status_txt(res_C, max_err_C, count_diff_C), bgcolor=color.new(f_status_col(res_C, max_err_C), 80), text_color=f_status_col(res_C, max_err_C), text_size=size.small)
+
+    // Fila D
+    table.cell(tb, 0, 4, "D: standard + lookahead_off", text_color=color.white, text_size=size.small)
+    table.cell(tb, 1, 4, str.tostring(res_D, "+#.0000") + " pts", text_color=f_status_col(res_D, max_err_D), text_size=size.small)
+    table.cell(tb, 2, 4, str.tostring(max_err_D, "#.0000") + " pts", text_color=f_status_col(res_D, max_err_D), text_size=size.small)
+    table.cell(tb, 3, 4, str.tostring(count_diff_D) + " velas", text_color=color.silver, text_size=size.small)
+    table.cell(tb, 4, 4, f_status_txt(res_D, max_err_D, count_diff_D), bgcolor=color.new(f_status_col(res_D, max_err_D), 80), text_color=f_status_col(res_D, max_err_D), text_size=size.small)
+
+    // Fila E
+    table.cell(tb, 0, 5, "E: Nativo simple (defaults)", text_color=color.white, text_size=size.small)
+    table.cell(tb, 1, 5, str.tostring(res_E, "+#.0000") + " pts", text_color=f_status_col(res_E, max_err_E), text_size=size.small)
+    table.cell(tb, 2, 5, str.tostring(max_err_E, "#.0000") + " pts", text_color=f_status_col(res_E, max_err_E), text_size=size.small)
+    table.cell(tb, 3, 5, str.tostring(count_diff_E) + " velas", text_color=color.silver, text_size=size.small)
+    table.cell(tb, 4, 5, f_status_txt(res_E, max_err_E, count_diff_E), bgcolor=color.new(f_status_col(res_E, max_err_E), 80), text_color=f_status_col(res_E, max_err_E), text_size=size.small)
+
+    // Fila de referencia oficial
+    table.cell(tb, 0, 6, "★ OFICIAL (REFERENCIA)", bgcolor=#2a2e39, text_color=color.yellow, text_size=size.small)
+    table.cell(tb, 1, 6, "0.0000 pts", bgcolor=#2a2e39, text_color=color.yellow, text_size=size.small)
+    table.cell(tb, 2, 6, "0.0000 pts", bgcolor=#2a2e39, text_color=color.yellow, text_size=size.small)
+    table.cell(tb, 3, 6, "0 velas", bgcolor=#2a2e39, text_color=color.yellow, text_size=size.small)
+    table.cell(tb, 4, 6, "TARGET BASE", bgcolor=#2a2e39, text_color=color.yellow, text_size=size.small)
