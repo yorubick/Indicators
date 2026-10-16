@@ -99,10 +99,15 @@ show_ref5     = input.bool(true, "Show Reference 5", group=grp_ref)
 show_ref6     = input.bool(true, "Show Reference 6", group=grp_ref)
 
 // ============================================================================
-// 8. CÁLCULO MULTI-TEMPORAL CON REQUEST.SECURITY (OPTIMIZADO CON PROFUNDIDAD)
+// 8. CÁLCULO MULTI-TEMPORAL CON REQUEST.SECURITY (SESIÓN EXTENDIDA ETH)
+// En TradingView, syminfo.tickerid por defecto evalúa en session.regular.
+// Para alinear los escalones de 81m, 243m y 729m a la apertura ETH (22:00 UTC),
+// se fuerza session.extended mediante ticker.modify.
 // ============================================================================
+ticker_eth = ticker.modify(syminfo.tickerid, session=session.extended)
+
 calc_ema_pair(simple string tf, simple int l_up, simple int l_down) =>
-    request.security(syminfo.tickerid, tf, [ta.ema(close, l_up), ta.ema(close, l_down)], gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_off)
+    request.security(ticker_eth, tf, [ta.ema(close, l_up), ta.ema(close, l_down)], gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_off)
 
 // Conexión de los 10 Rungs PO3
 [r1_up, r1_down]   = calc_ema_pair(tf_r1, len_upper, len_lower)
@@ -326,15 +331,15 @@ var label lbl_ref4 = na
 var label lbl_ref5 = na
 var label lbl_ref6 = na
 
-update_or_create_badge(label lbl, bool active, float price, string txt, color bg_col, color txt_col) =>
+update_or_create_badge(label lbl, bool active, float price, string txt, color bg_col, color txt_col, int x_off) =>
     label res = lbl
     if active and not na(price)
         if na(res)
-            res := label.new(bar_index + 4, price, txt, xloc=xloc.bar_index, yloc=yloc.price,
+            res := label.new(bar_index + x_off, price, txt, xloc=xloc.bar_index, yloc=yloc.price,
                              color=bg_col, textcolor=txt_col,
                              style=label.style_label_left, size=size.tiny)
         else
-            label.set_xy(res, bar_index + 4, price)
+            label.set_xy(res, bar_index + x_off, price)
             label.set_text(res, txt)
             label.set_color(res, bg_col)
             label.set_textcolor(res, txt_col)
@@ -346,16 +351,16 @@ update_or_create_badge(label lbl, bool active, float price, string txt, color bg
 
 if barstate.islast
     if show_po3_lbls
-        lbl_r1  := update_or_create_badge(lbl_r1, act_r1, (r1_up + r1_down) / 2, "1s", col_r1, color.white)
-        lbl_r2  := update_or_create_badge(lbl_r2, act_r2, (r2_up + r2_down) / 2, "5s", col_r2, color.white)
-        lbl_r3  := update_or_create_badge(lbl_r3, act_r3, (r3_up + r3_down) / 2, "15s", col_r3, color.white)
-        lbl_r4  := update_or_create_badge(lbl_r4, act_r4, (r4_up + r4_down) / 2, "1m", col_r4, color.white)
-        lbl_r5  := update_or_create_badge(lbl_r5, act_r5, (r5_up + r5_down) / 2, "3m", col_r5, color.white)
-        lbl_r6  := update_or_create_badge(lbl_r6, act_r6, (r6_up + r6_down) / 2, "9m", col_r6, color.white)
-        lbl_r7  := update_or_create_badge(lbl_r7, act_r7, (r7_up + r7_down) / 2, "27m", col_r7, color.white)
-        lbl_r8  := update_or_create_badge(lbl_r8, act_r8, (r8_up + r8_down) / 2, "81m", col_r8, color.white)
-        lbl_r9  := update_or_create_badge(lbl_r9, act_r9, (r9_up + r9_down) / 2, "243m", col_r9, color.white)
-        lbl_r10 := update_or_create_badge(lbl_r10, act_r10, (r10_up + r10_down) / 2, "729m", col_r10, color.white)
+        lbl_r1  := update_or_create_badge(lbl_r1, act_r1, (r1_up + r1_down) / 2, "1s", col_r1, color.white, 3)
+        lbl_r2  := update_or_create_badge(lbl_r2, act_r2, (r2_up + r2_down) / 2, "5s", col_r2, color.white, 3)
+        lbl_r3  := update_or_create_badge(lbl_r3, act_r3, (r3_up + r3_down) / 2, "15s", col_r3, color.white, 3)
+        lbl_r4  := update_or_create_badge(lbl_r4, act_r4, (r4_up + r4_down) / 2, "1m", col_r4, color.white, 3)
+        lbl_r5  := update_or_create_badge(lbl_r5, act_r5, (r5_up + r5_down) / 2, "3m", col_r5, color.white, 3)
+        lbl_r6  := update_or_create_badge(lbl_r6, act_r6, (r6_up + r6_down) / 2, "9m", col_r6, color.white, 3)
+        lbl_r7  := update_or_create_badge(lbl_r7, act_r7, (r7_up + r7_down) / 2, "27m", col_r7, color.white, 3)
+        lbl_r8  := update_or_create_badge(lbl_r8, act_r8, (r8_up + r8_down) / 2, "81m", col_r8, color.white, 3)
+        lbl_r9  := update_or_create_badge(lbl_r9, act_r9, (r9_up + r9_down) / 2, "243m", col_r9, color.white, 3)
+        lbl_r10 := update_or_create_badge(lbl_r10, act_r10, (r10_up + r10_down) / 2, "729m", col_r10, color.white, 3)
     else
         if not na(lbl_r1)
             label.delete(lbl_r1)
@@ -391,12 +396,12 @@ if barstate.islast
     if show_ref_all and show_ref_lbls
         color bg_ref = color.white
         color tx_ref = color.black
-        lbl_ref1 := update_or_create_badge(lbl_ref1, act_ref1, (ref1_up + ref1_down) / 2, "2m", bg_ref, tx_ref)
-        lbl_ref2 := update_or_create_badge(lbl_ref2, act_ref2, (ref2_up + ref2_down) / 2, "6m", bg_ref, tx_ref)
-        lbl_ref3 := update_or_create_badge(lbl_ref3, act_ref3, (ref3_up + ref3_down) / 2, "15m", bg_ref, tx_ref)
-        lbl_ref4 := update_or_create_badge(lbl_ref4, act_ref4, (ref4_up + ref4_down) / 2, "60m", bg_ref, tx_ref)
-        lbl_ref5 := update_or_create_badge(lbl_ref5, act_ref5, (ref5_up + ref5_down) / 2, "162m", bg_ref, tx_ref)
-        lbl_ref6 := update_or_create_badge(lbl_ref6, act_ref6, (ref6_up + ref6_down) / 2, "486m", bg_ref, tx_ref)
+        lbl_ref1 := update_or_create_badge(lbl_ref1, act_ref1, (ref1_up + ref1_down) / 2, "2m", bg_ref, tx_ref, 7)
+        lbl_ref2 := update_or_create_badge(lbl_ref2, act_ref2, (ref2_up + ref2_down) / 2, "6m", bg_ref, tx_ref, 7)
+        lbl_ref3 := update_or_create_badge(lbl_ref3, act_ref3, (ref3_up + ref3_down) / 2, "15m", bg_ref, tx_ref, 7)
+        lbl_ref4 := update_or_create_badge(lbl_ref4, act_ref4, (ref4_up + ref4_down) / 2, "1h", bg_ref, tx_ref, 7)
+        lbl_ref5 := update_or_create_badge(lbl_ref5, act_ref5, (ref5_up + ref5_down) / 2, "162m", bg_ref, tx_ref, 7)
+        lbl_ref6 := update_or_create_badge(lbl_ref6, act_ref6, (ref6_up + ref6_down) / 2, "486m", bg_ref, tx_ref, 7)
     else
         if not na(lbl_ref1)
             label.delete(lbl_ref1)
