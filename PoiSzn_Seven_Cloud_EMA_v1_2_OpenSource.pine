@@ -174,62 +174,62 @@ get_cloud_color(float u, float d, color base_col) =>
 
 // Rung 1
 act_r1 = is_rung_active(1, show_r1) and (fetch_below or chart_sec <= 1)
-p1_u = plot(act_r1 ? r1_up : na, "R1 E78", color=color.new(col_r1, transp_bound), linewidth=1)
-p1_d = plot(act_r1 ? r1_down : na, "R1 E84", color=color.new(col_r1, transp_bound), linewidth=1)
+p1_u = plot(act_r1 ? r1_up : na, "R1 E78", color=col_r1, linewidth=1)
+p1_d = plot(act_r1 ? r1_down : na, "R1 E84", color=col_r1, linewidth=1)
 fill(p1_u, p1_d, color=get_cloud_color(r1_up, r1_down, col_r1), title="Nube Rung 1")
 
 // Rung 2
 act_r2 = is_rung_active(2, show_r2) and (fetch_below or chart_sec <= 5)
-p2_u = plot(act_r2 ? r2_up : na, "R2 E78", color=color.new(col_r2, transp_bound), linewidth=1)
-p2_d = plot(act_r2 ? r2_down : na, "R2 E84", color=color.new(col_r2, transp_bound), linewidth=1)
+p2_u = plot(act_r2 ? r2_up : na, "R2 E78", color=col_r2, linewidth=1)
+p2_d = plot(act_r2 ? r2_down : na, "R2 E84", color=col_r2, linewidth=1)
 fill(p2_u, p2_d, color=get_cloud_color(r2_up, r2_down, col_r2), title="Nube Rung 2")
 
 // Rung 3
 act_r3 = is_rung_active(3, show_r3) and (fetch_below or chart_sec <= 15)
-p3_u = plot(act_r3 ? r3_up : na, "R3 E78", color=color.new(col_r3, transp_bound), linewidth=1)
-p3_d = plot(act_r3 ? r3_down : na, "R3 E84", color=color.new(col_r3, transp_bound), linewidth=1)
+p3_u = plot(act_r3 ? r3_up : na, "R3 E78", color=col_r3, linewidth=1)
+p3_d = plot(act_r3 ? r3_down : na, "R3 E84", color=col_r3, linewidth=1)
 fill(p3_u, p3_d, color=get_cloud_color(r3_up, r3_down, col_r3), title="Nube Rung 3")
 
 // Rung 4
 act_r4 = is_rung_active(4, show_r4) and (fetch_below or chart_sec <= 60)
-p4_u = plot(act_r4 ? r4_up : na, "R4 E78", color=color.new(col_r4, transp_bound), linewidth=1)
-p4_d = plot(act_r4 ? r4_down : na, "R4 E84", color=color.new(col_r4, transp_bound), linewidth=1)
+p4_u = plot(act_r4 ? r4_up : na, "R4 E78", color=col_r4, linewidth=1)
+p4_d = plot(act_r4 ? r4_down : na, "R4 E84", color=col_r4, linewidth=1)
 fill(p4_u, p4_d, color=get_cloud_color(r4_up, r4_down, col_r4), title="Nube Rung 4")
 
 // Rung 5
 act_r5 = is_rung_active(5, show_r5)
-p5_u = plot(act_r5 ? r5_up : na, "R5 E78", color=color.new(col_r5, transp_bound), linewidth=1)
-p5_d = plot(act_r5 ? r5_down : na, "R5 E84", color=color.new(col_r5, transp_bound), linewidth=1)
+p5_u = plot(act_r5 ? r5_up : na, "R5 E78", color=col_r5, linewidth=1)
+p5_d = plot(act_r5 ? r5_down : na, "R5 E84", color=col_r5, linewidth=1)
 fill(p5_u, p5_d, color=get_cloud_color(r5_up, r5_down, col_r5), title="Nube Rung 5")
 
 // Rung 6
 act_r6 = is_rung_active(6, show_r6)
-p6_u = plot(act_r6 ? r6_up : na, "R6 E78", color=color.new(col_r6, transp_bound), linewidth=1)
-p6_d = plot(act_r6 ? r6_down : na, "R6 E84", color=color.new(col_r6, transp_bound), linewidth=1)
+p6_u = plot(act_r6 ? r6_up : na, "R6 E78", color=col_r6, linewidth=1)
+p6_d = plot(act_r6 ? r6_down : na, "R6 E84", color=col_r6, linewidth=1)
 fill(p6_u, p6_d, color=get_cloud_color(r6_up, r6_down, col_r6), title="Nube Rung 6")
 
 // Rung 7
 act_r7 = is_rung_active(7, show_r7)
-p7_u = plot(act_r7 ? r7_up : na, "R7 E78", color=color.new(col_r7, transp_bound), linewidth=1)
-p7_d = plot(act_r7 ? r7_down : na, "R7 E84", color=color.new(col_r7, transp_bound), linewidth=1)
+p7_u = plot(act_r7 ? r7_up : na, "R7 E78", color=col_r7, linewidth=1)
+p7_d = plot(act_r7 ? r7_down : na, "R7 E84", color=col_r7, linewidth=1)
 fill(p7_u, p7_d, color=get_cloud_color(r7_up, r7_down, col_r7), title="Nube Rung 7")
 
 // Rung 8
 act_r8 = is_rung_active(8, show_r8)
-p8_u = plot(act_r8 ? r8_up : na, "R8 E78", color=color.new(col_r8, transp_bound), linewidth=1)
-p8_d = plot(act_r8 ? r8_down : na, "R8 E84", color=color.new(col_r8, transp_bound), linewidth=1)
+p8_u = plot(act_r8 ? r8_up : na, "R8 E78", color=col_r8, linewidth=1)
+p8_d = plot(act_r8 ? r8_down : na, "R8 E84", color=col_r8, linewidth=1)
 fill(p8_u, p8_d, color=get_cloud_color(r8_up, r8_down, col_r8), title="Nube Rung 8")
 
 // Rung 9
 act_r9 = is_rung_active(9, show_r9)
-p9_u = plot(act_r9 ? r9_up : na, "R9 E78", color=color.new(col_r9, transp_bound), linewidth=1)
-p9_d = plot(act_r9 ? r9_down : na, "R9 E84", color=color.new(col_r9, transp_bound), linewidth=1)
+p9_u = plot(act_r9 ? r9_up : na, "R9 E78", color=col_r9, linewidth=1)
+p9_d = plot(act_r9 ? r9_down : na, "R9 E84", color=col_r9, linewidth=1)
 fill(p9_u, p9_d, color=get_cloud_color(r9_up, r9_down, col_r9), title="Nube Rung 9")
 
 // Rung 10
 act_r10 = is_rung_active(10, show_r10)
-p10_u = plot(act_r10 ? r10_up : na, "R10 E78", color=color.new(col_r10, transp_bound), linewidth=1)
-p10_d = plot(act_r10 ? r10_down : na, "R10 E84", color=color.new(col_r10, transp_bound), linewidth=1)
+p10_u = plot(act_r10 ? r10_up : na, "R10 E78", color=col_r10, linewidth=1)
+p10_d = plot(act_r10 ? r10_down : na, "R10 E84", color=col_r10, linewidth=1)
 fill(p10_u, p10_d, color=get_cloud_color(r10_up, r10_down, col_r10), title="Nube Rung 10")
 
 // ============================================================================
@@ -239,33 +239,33 @@ col_ref = color.gray
 
 // Ref 1 (2m)
 act_ref1 = show_ref_all and show_ref1
-pref1_u = plot(act_ref1 ? ref1_up : na, "Reference 1 E78", color=color.new(col_ref, transp_bound), linewidth=1)
-pref1_d = plot(act_ref1 ? ref1_down : na, "Reference 1 E84", color=color.new(col_ref, transp_bound), linewidth=1)
+pref1_u = plot(act_ref1 ? ref1_up : na, "Reference 1 E78", color=col_ref, linewidth=1)
+pref1_d = plot(act_ref1 ? ref1_down : na, "Reference 1 E84", color=col_ref, linewidth=1)
 
 // Ref 2 (6m)
 act_ref2 = show_ref_all and show_ref2
-pref2_u = plot(act_ref2 ? ref2_up : na, "Reference 2 E78", color=color.new(col_ref, transp_bound), linewidth=1)
-pref2_d = plot(act_ref2 ? ref2_down : na, "Reference 2 E84", color=color.new(col_ref, transp_bound), linewidth=1)
+pref2_u = plot(act_ref2 ? ref2_up : na, "Reference 2 E78", color=col_ref, linewidth=1)
+pref2_d = plot(act_ref2 ? ref2_down : na, "Reference 2 E84", color=col_ref, linewidth=1)
 
 // Ref 3 (15m)
 act_ref3 = show_ref_all and show_ref3
-pref3_u = plot(act_ref3 ? ref3_up : na, "Reference 3 E78", color=color.new(col_ref, transp_bound), linewidth=1)
-pref3_d = plot(act_ref3 ? ref3_down : na, "Reference 3 E84", color=color.new(col_ref, transp_bound), linewidth=1)
+pref3_u = plot(act_ref3 ? ref3_up : na, "Reference 3 E78", color=col_ref, linewidth=1)
+pref3_d = plot(act_ref3 ? ref3_down : na, "Reference 3 E84", color=col_ref, linewidth=1)
 
 // Ref 4 (60m)
 act_ref4 = show_ref_all and show_ref4
-pref4_u = plot(act_ref4 ? ref4_up : na, "Reference 4 E78", color=color.new(col_ref, transp_bound), linewidth=1)
-pref4_d = plot(act_ref4 ? ref4_down : na, "Reference 4 E84", color=color.new(col_ref, transp_bound), linewidth=1)
+pref4_u = plot(act_ref4 ? ref4_up : na, "Reference 4 E78", color=col_ref, linewidth=1)
+pref4_d = plot(act_ref4 ? ref4_down : na, "Reference 4 E84", color=col_ref, linewidth=1)
 
 // Ref 5 (162m)
 act_ref5 = show_ref_all and show_ref5
-pref5_u = plot(act_ref5 ? ref5_up : na, "Reference 5 E78", color=color.new(col_ref, transp_bound), linewidth=1)
-pref5_d = plot(act_ref5 ? ref5_down : na, "Reference 5 E84", color=color.new(col_ref, transp_bound), linewidth=1)
+pref5_u = plot(act_ref5 ? ref5_up : na, "Reference 5 E78", color=col_ref, linewidth=1)
+pref5_d = plot(act_ref5 ? ref5_down : na, "Reference 5 E84", color=col_ref, linewidth=1)
 
 // Ref 6 (486m)
 act_ref6 = show_ref_all and show_ref6
-pref6_u = plot(act_ref6 ? ref6_up : na, "Reference 6 E78", color=color.new(col_ref, transp_bound), linewidth=1)
-pref6_d = plot(act_ref6 ? ref6_down : na, "Reference 6 E84", color=color.new(col_ref, transp_bound), linewidth=1)
+pref6_u = plot(act_ref6 ? ref6_up : na, "Reference 6 E78", color=col_ref, linewidth=1)
+pref6_d = plot(act_ref6 ? ref6_down : na, "Reference 6 E84", color=col_ref, linewidth=1)
 
 // ============================================================================
 // 9. MONITOR TABLE
