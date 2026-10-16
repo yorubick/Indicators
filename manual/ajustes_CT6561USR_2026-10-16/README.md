@@ -45,7 +45,9 @@ Línea de estado del indicador: `CT6561USR B Dark Manual 29,480.44 29,840.75 1 A
 
 **No aparece** la opción «Show EMA timeframe labels» de la v6.5.36, así que en esta instancia no se puede leer C en la etiqueta «C/3 …s».
 
-## Por qué importan para C (hipótesis, no resultados)
+## Por qué importan para C (hipótesis iniciales, corregidas más abajo)
+
+> Estas hipótesis se escribieron antes de leer los textos de ayuda. Según esos textos, los cuatro ajustes solo actúan en Auto Balanced; ver [Lectura de los textos para el problema de C](#lectura-de-los-textos-para-el-problema-de-c).
 
 - **«Reject fits closed through»** y **«Capping cloud: Auto (middle, then slow)»** indican que el indicador **ajusta** (fit) candidatos y descarta los que el precio atraviesa al cierre, usando como techo la nube media y, si no basta, la lenta. Eso encaja con un C elegido por búsqueda entre enteros: explicaría el C entero del régimen largo, las mesetas y los saltos no monótonos al añadir una vela.
 - **«Box starts at leg extreme»** sugiere que el inicio efectivo de la caja puede ser el extremo del tramo y no la vela START marcada. Eso explicaría la gran sensibilidad de C a una sola vela al inicio (88 frente a 61 con START 19:03:15 frente a 19:03:30).
@@ -53,7 +55,7 @@ Línea de estado del indicador: `CT6561USR B Dark Manual 29,480.44 29,840.75 1 A
 
 ## Pendiente
 
-- Texto de cada icono de ayuda (ⓘ) y la lista completa de opciones de cada desplegable: Box selection, Setup direction, Capping cloud, Cloud pairs, Auto flip confirmation, Auto flip speed y Data resolution.
+- ~~Texto de cada icono de ayuda y opciones de los desplegables~~: transcritos abajo.
 - Captura equivalente de los ajustes del **Lite** oficial, para saber cuáles de estas opciones existen allí y con qué valor fijo.
 
 ## Textos de ayuda (ⓘ) y opciones de los desplegables
