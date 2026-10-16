@@ -45,6 +45,12 @@ Captura de **todas** las entradas de PoiSzn EMA Origin Lite (pestañas «Inputs�
 
 Para cada control M1/M2: una exportación CSV del gráfico («Exportar datos del gráfico», formato de hora UNIX), con el mismo nombre que la configuración, por ejemplo `manual/RTH_20261012_1400_1420_1m_a.csv`. El CSV debe incluir las columnas `Lane 1 A` … `Lane 3 B` y varias velas posteriores a la ruptura. No hace falta leer valores a mano: C se recupera con `tools/invertir_C_csv.py`.
 
+### Lectura rápida alternativa con Character Tree
+
+En los 74 casos del maestro medidos con ambos indicadores, el C de Lite cae siempre dentro del intervalo de Character Tree. Por eso, para M1 basta leer en Character Tree la etiqueta **«C/3 …s»** (perfil B, modo Manual, resolución de datos 1 minuto, «Show EMA timeframe labels» activado), que aparece al publicarse las curvas: $C = 3 \times$ el valor de la etiqueta, con error de ±0,015 s, suficiente para identificar un C entero. Si alguna ventana da en RTH un C distinto del de ETH, se exporta además el CSV de Lite de esa ventana como evidencia primaria.
+
+Seven Cloud (EMA 78/84 en temporalidades fijas, sin anclas) y Manual Anchored CCII (detector CSD/IDM, sin EMA) no calculan C y no intervienen en este experimento.
+
 ## Criterio de decisión
 
 - **M1 sin diferencias en las 7 ventanas:** la historia anterior a START no interviene (al menos más allá de unas pocas velas). Siguiente paso: barrido denso START/END a 1 m con fuente 1 m para estudiar las transiciones.
