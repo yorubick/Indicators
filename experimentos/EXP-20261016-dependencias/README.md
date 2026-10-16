@@ -9,7 +9,7 @@
 |---|---|---|---|
 | A1 | ¿Son fiables las velas 1 m del conector de TradingView? | Sí: las 2.569 velas 1 m del maestro coinciden exactamente (OHLC y volumen). | `NQ1_1m_2026-10-12_13.json` (12 y 13-oct completos, ETH) |
 | A2 | ¿Cambia C después de publicarse? | No. Invertido vela a vela, C es constante con 4 decimales en más de 2.200 velas (62,2951 y 75,0000). | `python tools/invertir_C_csv.py manual/Lite_0445_050500_1m_b.csv` |
-| A3 | ¿Es C del régimen largo $\operatorname{round}(k\,\Delta t/18.3)$ con $k$ entero? | No. En 1 m encajan 26/72 casos, frente a 22 esperados por azar. | ver el análisis del 16-oct en `docs/RESEARCH_STATUS.md` |
+| A3 | ¿Es C del régimen largo $\operatorname{round}(k\,\Delta t/18.3)$ con $k$ entero? | No. En 1 m encajan 26/72 casos, frente a 22 esperados por azar. | Para cada C entero, ¿existe $k$ entero en $[(C-0{,}5)\cdot 18.3/\Delta t,\ (C+0{,}5)\cdot 18.3/\Delta t]$? Azar = $18.3/60$ por caso. |
 | A4 | ¿Depende C del tiempo hasta la ruptura de la vela END? | No en forma simple: con 12 variantes, el máximo es 3/72 aciertos. En saltos como 71 → 128 (START 19:04), ambas ventanas rompen en la vela siguiente a END. | `python experimentos/EXP-20261016-dependencias/prueba_ruptura_post_END.py` |
 | A5 | ¿Determina la geometría de la caja (máximo, mínimo y su posición) el valor de C? | No. START 06:00 del 12-oct: caja idéntica en n = 21…24 y C = 77, 77, 77, 73. Casos 2 m con START 14:30 del 12-oct: caja idéntica y C = 124, 153, 146, 190. | `python tools/evaluador_C.py` y la tabla del 16-oct |
 
