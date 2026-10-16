@@ -115,6 +115,8 @@ Tres setups del 16-oct elegidos con `predecir_auto_balanced.py`: END en un pivot
 | M5b-2 | bajista | 16-oct 15:47 | 16:07 · 29657,75 (máximo) | 108,47 | 97,11 | 87,75 |
 | M5b-3 | bajista | 16-oct 17:00 | 17:11 · 29530,5 (máximo) | 68,72 | 61,44 | 55,60 |
 
+**Resultado M5b (16-oct, medido por Luna; CSV pendientes de subir a la rama):** C ≈ 63 (caso 1), ≈ 28 (caso 2) y ≈ 49,4 (caso 3). **Ninguna de las tres predicciones acierta.** Tampoco las 36 variantes probadas después (nube rápida, media, lenta y extra 1; línea rápida, centro y lenta; precio objetivo = extremo, cierre o apertura de la vela de la mecha): ninguna reproduce los tres valores. Queda refutado que el Character de Auto se ajuste para que una nube toque la mecha en su vela. Las cifras de Luna son aproximadas («≈»); hay que verificarlas con los CSV, intervalo de C y reconstrucción hacia atrás.
+
 ### Lectura rápida alternativa con Character Tree
 
 En los 74 casos del maestro medidos con ambos indicadores, el C de Lite cae siempre dentro del intervalo de Character Tree. Por eso, para M1 bastaría leer en Character Tree la etiqueta **«C/3 …s»** (perfil B, modo Manual, resolución de datos 1 minuto, «Show EMA timeframe labels» activado), que aparece al publicarse las curvas: $C = 3 \times$ el valor de la etiqueta, con error de ±0,015 s, suficiente para identificar un C entero. Si alguna ventana da en RTH un C distinto del de ETH, se exporta además el CSV de Lite de esa ventana como evidencia primaria. **Actualización:** la instancia CT6561USR del usuario no tiene la opción de etiquetas, así que M1 se mide también por exportación CSV.
