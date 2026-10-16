@@ -20,6 +20,10 @@ Las **curvas** están resueltas cuando se conoce C, y el **régimen corto** (men
 
 Toda regla de C se mide con [`tools/evaluador_C.py`](EVALUADOR_C.md): validación cruzada por grupo, comparación con el azar y predicciones registradas antes de medir. Marcador al 16-oct-2026: ninguna regla predice el régimen largo. El modo Auto del clon Pine acierta 1/110 en el maestro y 0/11 en los casos de 2 m, por debajo de la línea base `round(T/18.3)`, que acierta 8/110.
 
+## Experimento en curso
+
+[`EXP-20261016-dependencias`](../experimentos/EXP-20261016-dependencias/README.md) busca qué datos usa el indicador para fijar C, antes de seguir probando fórmulas. Resultados sin medición nueva: C es constante tras publicarse (más de 2.200 velas); no depende de forma simple del tiempo hasta la ruptura; y la geometría de la caja no lo determina. Pendientes: sesión ETH frente a RTH (historia previa), Replay en la primera publicación (datos futuros) y captura de los ajustes del indicador.
+
 ## Lo que sigue abierto
 
 1. **La regla del régimen largo ($n \ge 21$).** Es el objetivo principal y está sin resolver.
