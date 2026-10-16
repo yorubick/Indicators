@@ -67,6 +67,25 @@ Para cada control M1/M2: una exportación CSV del gráfico («Exportar datos del
 
 Cada exportación debe incluir varias decenas de velas posteriores a 14:22, con **«Show extra EMA clouds» activado** (sus periodos, unos 3 C/Δt, reducen el intervalo de C a menos de 0,3 s) y, si es posible, con Lite cargado en la misma ventana para tener C exacto. Después de cada variante se vuelve al valor por defecto. C se recupera con `obtener_C.recover` (Character Tree) y `tools/invertir_C_csv.py` (Lite).
 
+**Resultado M4 (16-oct):** `manual/CT_1400_1422_reject_off_middle_cloud.csv` y `manual/CT_1400_1422_reject_off_slow_cloud.csv` son idénticos, con C del Lite = 83,0000 y C de Character Tree en {82, 83}. Se mantiene la hipótesis nula, pero la prueba no informa: según los textos de ayuda, esos ajustes solo actúan en **Auto Balanced** (ver `manual/ajustes_CT6561USR_2026-10-16/README.md`). M4 queda sustituida por M5.
+
+### M5. Auto Balanced: el indicador elige el rango para un Character
+
+**Lógica.** En Auto Balanced, Character Tree ajusta el Character (C) a una mecha de retroceso posterior a END y dibuja el rango que «lleva» ese Character. Cada ejecución da un par (rango, C) generado por el propio indicador, y la curva desde END hasta la mecha muestra qué criterio de ajuste usa.
+
+**Configuración:** NQ1!, 1 m, ETH, UTC, B-ADJ desactivado. Character Tree: Box selection **Auto Balanced**, Data resolution 1 minute, **Show range** y **Show extra EMA clouds** activados, resto por defecto. Point 1 = vela END **2026-10-12 14:22**. Lite cargado en Manual con START 14:00 y END 14:22 (referencia fija, C = 83).
+
+| Archivo | Point 2 (mecha) | Dirección esperada según la ayuda |
+|---|---|---|
+| `CT_auto_1422_w1429H.csv` | 14:29, precio 30906 (high) | alcista (> high de END, 30899,5) |
+| `CT_auto_1422_w1443H.csv` | 14:43, precio 30911.25 (high) | alcista |
+| `CT_auto_1422_w1448H.csv` | 14:48, precio 30921.25 (high) | alcista |
+| `CT_auto_1422_w1426L.csv` | 14:26, precio 30859 (low) | bajista (< low de END, 30885,25) |
+
+Para cada una, además del CSV: captura con la caja dibujada y la cruceta en su vela izquierda, para leer el START que eligió el indicador.
+
+**Predicciones registradas:** (a) si C depende solo del rango, poner ese rango en Manual (START de la caja, END 14:22) da el mismo C que Auto; (b) la nube que «capa» (la media por defecto) toca la mecha: en la vela de la mecha, el precio de la mecha queda sobre el borde de la nube.
+
 ### Lectura rápida alternativa con Character Tree
 
 En los 74 casos del maestro medidos con ambos indicadores, el C de Lite cae siempre dentro del intervalo de Character Tree. Por eso, para M1 bastaría leer en Character Tree la etiqueta **«C/3 …s»** (perfil B, modo Manual, resolución de datos 1 minuto, «Show EMA timeframe labels» activado), que aparece al publicarse las curvas: $C = 3 \times$ el valor de la etiqueta, con error de ±0,015 s, suficiente para identificar un C entero. Si alguna ventana da en RTH un C distinto del de ETH, se exporta además el CSV de Lite de esa ventana como evidencia primaria. **Actualización:** la instancia CT6561USR del usuario no tiene la opción de etiquetas, así que M1 se mide también por exportación CSV.
