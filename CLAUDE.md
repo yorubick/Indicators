@@ -24,6 +24,10 @@ Proyecto: ingeniería inversa del parámetro **C** («Character») del indicador
 | Marcador de reglas (maestro, 2 m, nuevos) | `python tools/evaluador_C.py evaluar` |
 | Verificar M9 | `python experimentos/EXP-20261016-dependencias/verificar_M9.py` |
 | Regenerar catálogo (antes de cada commit) | `python tools/build_file_catalog.py` |
+| Abrir Brave con CDP (puerto 9222, perfil propio) | `tools\abrir_brave_cdp.bat` |
+| Ejecutar un .js en la pestaña de TradingView | `python tools/cdp_ejecutar.py ARCHIVO.js -o SALIDA.json` (`--listar` comprueba la conexión) |
+
+Entorno local (Windows): carpeta del proyecto `G:\trading\Indicators\` con `repo/` (este clon), `.venv/` (dependencias de `requirements.txt`) y `brave_cdp/` (perfil de Brave para CDP, fuera de git). Usa `G:\trading\Indicators\.venv\Scripts\python.exe` para todos los comandos.
 
 Las velas de la fuente se descargan con el conector de TradingView (`get_ohlcv`, formato columnas) y se guardan en la carpeta del experimento.
 
