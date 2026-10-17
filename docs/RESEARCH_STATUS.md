@@ -21,7 +21,7 @@ Las **curvas** están resueltas cuando se conoce C, y el **régimen corto** (men
 
 ## Evaluador
 
-Toda regla de C se mide con [`tools/evaluador_C.py`](EVALUADOR_C.md): validación cruzada por grupo, comparación con el azar y predicciones registradas antes de medir. Marcador al 16-oct-2026: ninguna regla predice el régimen largo. El modo Auto del clon Pine acierta 1/110 en el maestro y 0/11 en los casos de 2 m, por debajo de la línea base `round(T/18.3)`, que acierta 8/110.
+Toda regla de C se mide con [`tools/evaluador_C.py`](EVALUADOR_C.md): validación cruzada por grupo, comparación con el azar y predicciones registradas antes de medir. Marcador al 17-oct-2026, con validación cruzada por bloques de ventanas solapadas: ninguna regla predice el régimen largo. El modo Auto del clon Pine acierta 1/110 en el maestro, 0/11 en 2 m y 2/18 en los casos nuevos; la línea base `round(T/18.3)` acierta 8/110 y 0/18.
 
 ## Experimento en curso
 

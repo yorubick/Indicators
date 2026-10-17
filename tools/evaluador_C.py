@@ -80,10 +80,29 @@ class Registro:
     C: float           # C oficial medido
     id: str
     grupo: str
+    ini: int = 0        # START y END en unix: solo para agrupar ventanas solapadas
+    fin: int = 0
 
     @property
     def largo(self) -> bool:
         return self.caso.n >= N_FRONTERA
+
+
+def agrupar_solapes(registros: list[Registro]) -> list[Registro]:
+    """Asigna el mismo grupo a todas las ventanas de la misma fuente que se solapan
+    (directa o encadenadamente). Así la validación cruzada nunca predice un caso
+    con ventanas que comparten velas con él."""
+    orden = sorted(range(len(registros)), key=lambda i: (registros[i].caso.dt, registros[i].ini))
+    grupo, actual, fin_actual, dt_actual = {}, -1, None, None
+    for i in orden:
+        r = registros[i]
+        if dt_actual != r.caso.dt or fin_actual is None or r.ini > fin_actual:
+            actual += 1
+            fin_actual, dt_actual = r.fin, r.caso.dt
+        else:
+            fin_actual = max(fin_actual, r.fin)
+        grupo[i] = f"bloque{actual}|{r.caso.dt}"
+    return [Registro(r.caso, r.C, r.id, grupo[i], r.ini, r.fin) for i, r in enumerate(registros)]
 
 
 def cargar_maestro(path: Path = MASTER) -> list[Registro]:
@@ -98,7 +117,8 @@ def cargar_maestro(path: Path = MASTER) -> list[Registro]:
         n = T // dt + 1
         if n != c["bars"] or len(velas) != n:
             raise ValueError(f"caso {c['id']}: n={n}, bars={c['bars']}, velas={len(velas)}")
-        registros.append(Registro(Caso(dt, n, T, velas), float(c["C_Lite"]), c["id"], f"{c['START']}|{dt}"))
+        registros.append(Registro(Caso(dt, n, T, velas), float(c["C_Lite"]), c["id"], f"{c['START']}|{dt}",
+                                  int(c["START_unix"]), int(c["END_unix"])))
     return registros
 
 
@@ -128,7 +148,9 @@ def cargar_2m() -> list[Registro]:
         if len(filas) != n:
             raise ValueError(f"{ident}: {len(filas)} velas, se esperaban {n}")
         velas = tuple(Vela(b["open"], b["high"], b["low"], b["close"], b["volume"]) for b in filas)
-        registros.append(Registro(Caso(120, n, (n - 1) * 120, velas), float(C), ident, f"{ident[:10]}|120"))
+        t0 = int(datetime.fromisoformat(filas[0]["time"].replace("Z", "+00:00")).timestamp())
+        registros.append(Registro(Caso(120, n, (n - 1) * 120, velas), float(C), ident, f"{ident[:10]}|120",
+                                  t0, t0 + (n - 1) * 120))
     return registros
 
 
@@ -174,7 +196,7 @@ def cargar_nuevos() -> list[Registro]:
         # existen para el indicador (la inversión de C con estos datos da residuo 0).
         if len(velas) != n and not (dt < 15 and len(velas) >= 0.99 * n):
             raise ValueError(f"{ident}: {len(velas)} velas, se esperaban {n}")
-        registros.append(Registro(Caso(dt, n, te - ts, velas), float(C), ident, f"{start}|{dt}"))
+        registros.append(Registro(Caso(dt, n, te - ts, velas), float(C), ident, f"{start}|{dt}", ts, te))
     return registros
 
 
@@ -364,7 +386,7 @@ def tabla(registros: list[Registro], nombres: list[str], titulo: str) -> list[di
     resultados = [resumir(n, predecir(n, registros), registros) for n in nombres]
     n_largo = resultados[0]["largo_total"]
     print(f"== {titulo}: {len(registros)} casos ({len(registros) - n_largo} cortos, {n_largo} largos); "
-          f"{len({r.grupo for r in registros})} grupos START|dt")
+          f"{len({r.grupo for r in registros})} bloques de ventanas solapadas")
     print(f"{'regla':<22} {'corto':>7} {'largo exacto':>13} {'azar':>6} {'p':>7} {'±2 s':>6} {'med.err':>8}  por dt")
     for res in resultados:
         print(f"{res['regla']:<22} {res['corto_exactos']:>7} "
@@ -379,7 +401,7 @@ def cmd_evaluar(args: argparse.Namespace) -> None:
     nombres = args.reglas.split(",") if args.reglas else [*REGLAS_FIJAS, *REGLAS_AJUSTABLES]
     salida = {}
     for conjunto in args.conjuntos.split(","):
-        salida[conjunto] = tabla(CONJUNTOS[conjunto](), nombres, conjunto)
+        salida[conjunto] = tabla(agrupar_solapes(CONJUNTOS[conjunto]()), nombres, conjunto)
     print("'azar' = aciertos exactos esperados barajando los C medidos dentro de cada dt; "
           "p = probabilidad de igualar o superar el resultado por azar.")
     if args.json:
