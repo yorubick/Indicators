@@ -216,6 +216,19 @@ Ejecutar [`tools/devtools_volcar_metainfo.js`](../../tools/devtools_volcar_metai
 
 Configuración: NQ1!, gráfico 1 m, ETH, UTC, B-ADJ desactivado. Lite en Manual con «Source data resolution» de 1 minute. Un CSV por ventana, con el nombre del campo `archivo` (p. ej. `manual/M9_1012_0035_0105.csv`). Character Tree no es necesario.
 
+**Resultado M9 (17-oct, commit 1ab6efc):** los 30 C recuperados por Luna coinciden con `verificar_M9.py`. Predicciones registradas antes de medir: `base_T_transcurrido` 4/30, `pine_v1_3_auto` 1/30 y las demás 0/30. Los 30 casos se añadieron al conjunto `nuevos` del evaluador, que suma 48 casos largos en 36 bloques independientes: `round(T/18.3)` acierta 4/48 (azar 0,7; p = 0,005) y el clon Pine 3/48 (p = 0,03). C se relaciona con la duración, pero la duración no lo determina.
+
+**Resultado M8 (`manual/metainfo_20261017.json`):**
+
+- Lite «PoiSzn EMA Origin Lite v1.3» (`Script$PUB;e2b37425814b49fdb46d542e0360bbb0`). `pineFeatures`: indicator, plot, str, array, math, line, box, label, request.security, type, polyline, interactive_inputs. **No usa `ta`**: las EMA, los pivotes o lo que haga falta están programados a mano con arrays y math.
+- Entradas: solo las visibles (START, END, resolución, PDA, tema, colores, proyecciones) más `__fast_calc` y `__profile` de TradingView. No hay constantes ocultas. Tooltip de proyecciones: «1, 1.5, 2, 2.5, 3.5, 3.75 and 4 times box height; drawn only after the box breaks».
+- **Plots: `plot_0` es una línea sin título** declarada antes de las seis curvas (`plot_1` = Lane 3 A … `plot_13` = Lane 1 B). No aparece en los CSV exportados. Es el candidato a contener un valor interno.
+- Character Tree v6.5.61 (`Script$PUB;6734d89246f5435a98c3fe7774861852`): 61 inputs sin ocultos propios, 45 plots, todos con título. Por defecto, Box selection «Auto Balanced» y Data resolution «1S». Sí usa `ta`.
+
+### M10. Valores del `plot_0` oculto del Lite (pendiente)
+
+[`tools/devtools_volcar_plots.js`](../../tools/devtools_volcar_plots.js) copia los valores en memoria de todos los plots del Lite, incluido `plot_0`, entre dos horas UTC. Ventanas del 16-oct con C conocido: 16:30–17:00 (108), 16:40–17:00 (88) y 16:44–17:00 (60, régimen corto). Para cada una: poner START y END en el Lite, ajustar DESDE/HASTA en el script (p. ej. 16:20–17:40), ejecutar y guardar como `manual/plots_lite_1016_<START>_1700.json`.
+
 ### Lectura rápida alternativa con Character Tree
 
 En los 74 casos del maestro medidos con ambos indicadores, el C de Lite cae siempre dentro del intervalo de Character Tree. Por eso, para M1 bastaría leer en Character Tree la etiqueta **«C/3 …s»** (perfil B, modo Manual, resolución de datos 1 minuto, «Show EMA timeframe labels» activado), que aparece al publicarse las curvas: $C = 3 \times$ el valor de la etiqueta, con error de ±0,015 s, suficiente para identificar un C entero. Si alguna ventana da en RTH un C distinto del de ETH, se exporta además el CSV de Lite de esa ventana como evidencia primaria. **Actualización:** la instancia CT6561USR del usuario no tiene la opción de etiquetas, así que M1 se mide también por exportación CSV.
