@@ -202,6 +202,12 @@ Configuración: 16-oct, NQ1!, gráfico 1 m, ETH, UTC, B-ADJ desactivado, modo Ma
 
 **H_pivote refutada** (`prueba_pivote_inicial.py`, prueba de colisión sin ajuste): entre ventanas con el mismo END y las mismas velas desde el primer pivote (fuerza 1, 2 o 3; alto, bajo o cualquiera), C difiere en la mayoría de grupos, entre 12 y 17 incoherentes de 16 a 22. Las velas anteriores al primer pivote sí influyen; la meseta de M7 es particular de ese caso. Los 10 casos largos de M7 se añadieron al conjunto `nuevos` del evaluador.
 
+**Búsqueda sistemática de optimización (17-oct, `busqueda_optimizacion.py`):** C como entero de 1 a 400 que cumple u optimiza un criterio con las EMA del indicador corriendo dentro de la caja. Criterios: valor de la línea en END igual al cierre, extremo, extremo opuesto, apertura de END o centro de la caja; equilibrio de cierres por encima y por debajo; menor C sin cierres o sin mechas que atraviesen; mínimo error cuadrático; máximo de toques. Con 5 semillas y 8 líneas suman 400 variantes, solo sobre entrenamiento (maestro + 2 m, 121 casos largos). **La mejor acierta 2/121.** Criterio de éxito fijado antes de ejecutar: ≥ 50 %. Familia descartada en esas formas.
+
+### M8. Metadatos del Lite y de Character Tree por DevTools (pendiente)
+
+Ejecutar [`tools/devtools_volcar_metainfo.js`](../../tools/devtools_volcar_metainfo.js) en la consola con ambos indicadores cargados y guardar el JSON en `manual/metainfo_<fecha>.json`. Objetivo: entradas ocultas (`isHidden`), plots ocultos (un posible plot de C), tooltips y `pineFeatures`. El script omite el ILScript cifrado; no se intenta descifrarlo.
+
 ### Lectura rápida alternativa con Character Tree
 
 En los 74 casos del maestro medidos con ambos indicadores, el C de Lite cae siempre dentro del intervalo de Character Tree. Por eso, para M1 bastaría leer en Character Tree la etiqueta **«C/3 …s»** (perfil B, modo Manual, resolución de datos 1 minuto, «Show EMA timeframe labels» activado), que aparece al publicarse las curvas: $C = 3 \times$ el valor de la etiqueta, con error de ±0,015 s, suficiente para identificar un C entero. Si alguna ventana da en RTH un C distinto del de ETH, se exporta además el CSV de Lite de esa ventana como evidencia primaria. **Actualización:** la instancia CT6561USR del usuario no tiene la opción de etiquetas, así que M1 se mide también por exportación CSV.
