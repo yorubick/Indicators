@@ -158,6 +158,18 @@ Configuración: 16-oct, NQ1!, gráfico 1 m, ETH, UTC, B-ADJ desactivado, modo Ma
 | `RES_1016_1640_1700_30s.csv` | 16:40–17:00 | 30 segundos | 41 | entero (a 1 m vale 88) |
 | `RES_1016_1640_1700_15s.csv` | 16:40–17:00 | 15 segundos | 81 | entero |
 
+**Resultado M6 (17-oct; exportaciones de Luna, commit 8780bf4).** El CSV solo trae valores por vela de 1 m, pero con las velas de la fuente descargadas del conector (`NQ1_30s_…`, `NQ1_15s_…`, `NQ1_5s_…`, `NQ1_1s_…` en esta carpeta), [`tools/invertir_C_subfuente.py`](../../tools/invertir_C_subfuente.py) simula las seis EMA con las subvelas reales y recupera C. **Residuo 0,000000 pt** en las 6 curvas en todos los casos, siempre con semilla en el máximo de END:
+
+| Ventana | 1 m | 30 s | 15 s | 5 s | 1 s |
+|---|---:|---:|---:|---:|---:|
+| 16:45–17:00 | 60 | 47 | 40 | 82 | 73 |
+| 16:40–17:00 | 88 | 86 | 85 | — | — |
+
+- **Corrección:** la «predicción» 52,4590 para 1 m era errónea por descuido mío: la fórmula corta lleva el mínimo $\max(\Delta t, \dots)$ y da 60, justo lo medido. **La fórmula corta se confirma.**
+- **16:40–17:00 es casi estable** con la resolución (88, 86, 85). **16:45–17:00 salta** (47, 40, 82, 73), mientras que $T/18.3$ daría 49–51 en todas. Es lo propio de una **elección discreta** que cambia con la granularidad, no de una función suave de la duración.
+- Los 9 casos se añadieron al evaluador como conjunto `nuevos`. **Ninguna regla existente acierta ninguno de los 8 largos.**
+- **Familia refutada:** C = fórmula de duración aplicada al tramo desde el extremo de la ventana (máximo, mínimo o según dirección; primera o última aparición) hasta END, en la resolución de la fuente. Como mucho 2/129.
+
 ### Lectura rápida alternativa con Character Tree
 
 En los 74 casos del maestro medidos con ambos indicadores, el C de Lite cae siempre dentro del intervalo de Character Tree. Por eso, para M1 bastaría leer en Character Tree la etiqueta **«C/3 …s»** (perfil B, modo Manual, resolución de datos 1 minuto, «Show EMA timeframe labels» activado), que aparece al publicarse las curvas: $C = 3 \times$ el valor de la etiqueta, con error de ±0,015 s, suficiente para identificar un C entero. Si alguna ventana da en RTH un C distinto del de ETH, se exporta además el CSV de Lite de esa ventana como evidencia primaria. **Actualización:** la instancia CT6561USR del usuario no tiene la opción de etiquetas, así que M1 se mide también por exportación CSV.

@@ -52,6 +52,7 @@ Cómo leerlo:
 ## Datos
 
 - `maestro`: los 145 casos Lite de `master_all_C_cases.json`.
+- `nuevos`: 9 casos medidos el 16-17 oct que no se usaron para construir ninguna regla (1 m, 30 s, 15 s, 5 s y 1 s). Ver `experimentos/EXP-20261016-dependencias/`. Ninguna regla acierta ninguno de los 8 casos largos.
 - `2m`: 11 casos de 2 m leídos en vivo el 14/15-oct (ver `tools/tabla_maestra_12_casos_2m.py`). Son evidencia secundaria: no tienen CSV de curvas en `manual/`.
 
 La pista más clara de estos datos: **C no es monótono al añadir velas**. Con START 14:00 del 14-oct, C vale 191 con END 14:46, 128 con 14:48 y 191 con 14:50. Moviendo START de 14:00 a 14:02 con END 14:50, C cae de 191 a 128. Algo discreto dentro de la caja hace cambiar C en saltos de unos 60 s.

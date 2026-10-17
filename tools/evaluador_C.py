@@ -132,7 +132,43 @@ def cargar_2m() -> list[Registro]:
     return registros
 
 
-CONJUNTOS = {"maestro": cargar_maestro, "2m": cargar_2m}
+# Mediciones nuevas del 16-17 oct (EXP-20261016-dependencias): C exacto del Lite
+# recuperado de las exportaciones de manual/ (fuente = gráfico con
+# tools/invertir_C_csv.py; fuente más fina con tools/invertir_C_subfuente.py).
+# Velas de la fuente descargadas con el conector de TradingView. Ninguna se usó
+# para construir las reglas existentes.
+_EXP = "experimentos/EXP-20261016-dependencias/"
+CASOS_NUEVOS = [
+    ("20261016_1640_1700_60s", _EXP + "NQ1_1m_2026-10-15_16.json", "2026-10-16T16:40", "2026-10-16T17:00", 60, 88),
+    ("20261012_1331_1353_60s", _EXP + "NQ1_1m_2026-10-12_13.json", "2026-10-12T13:31", "2026-10-12T13:53", 60, 89),
+    ("20261016_1645_1700_60s", _EXP + "NQ1_1m_2026-10-15_16.json", "2026-10-16T16:45", "2026-10-16T17:00", 60, 60),
+    ("20261016_1645_1700_30s", _EXP + "NQ1_30s_2026-10-15_16.json", "2026-10-16T16:45", "2026-10-16T17:00", 30, 47),
+    ("20261016_1645_1700_15s", _EXP + "NQ1_15s_2026-10-16_0900_2059.json", "2026-10-16T16:45", "2026-10-16T17:00", 15, 40),
+    ("20261016_1645_1700_5s", _EXP + "NQ1_5s_2026-10-16_1400_1800.json", "2026-10-16T16:45", "2026-10-16T17:00", 5, 82),
+    ("20261016_1645_1700_1s", _EXP + "NQ1_1s_2026-10-16_1644_1730.json", "2026-10-16T16:45", "2026-10-16T17:00", 1, 73),
+    ("20261016_1640_1700_30s", _EXP + "NQ1_30s_2026-10-15_16.json", "2026-10-16T16:40", "2026-10-16T17:00", 30, 86),
+    ("20261016_1640_1700_15s", _EXP + "NQ1_15s_2026-10-16_0900_2059.json", "2026-10-16T16:40", "2026-10-16T17:00", 15, 85),
+]
+
+
+def cargar_nuevos() -> list[Registro]:
+    """La vela END del gráfico (1 m) incluye todas sus subvelas de la fuente."""
+    registros = []
+    for ident, archivo, start, end, dt, C in CASOS_NUEVOS:
+        b = json.loads((ROOT / archivo).read_text(encoding="utf-8"))["bars"]
+        ts = int(datetime.fromisoformat(start + ":00+00:00").timestamp())
+        te = int(datetime.fromisoformat(end + ":00+00:00").timestamp()) + 60 - dt
+        velas = tuple(Vela(o, h, l, c, v) for t, o, h, l, c, v in zip(b["t"], b["o"], b["h"], b["l"], b["c"], b["v"]) if ts <= t <= te)
+        n = (te - ts) // dt + 1
+        # En fuentes de segundos faltan las subvelas sin operaciones; tampoco
+        # existen para el indicador (la inversión de C con estos datos da residuo 0).
+        if len(velas) != n and not (dt < 15 and len(velas) >= 0.99 * n):
+            raise ValueError(f"{ident}: {len(velas)} velas, se esperaban {n}")
+        registros.append(Registro(Caso(dt, n, te - ts, velas), float(C), ident, f"{start}|{dt}"))
+    return registros
+
+
+CONJUNTOS = {"maestro": cargar_maestro, "2m": cargar_2m, "nuevos": cargar_nuevos}
 
 
 # ---------------------------------------------------------------------------
@@ -435,7 +471,7 @@ def main() -> None:
     sub = parser.add_subparsers(dest="cmd", required=True)
     p = sub.add_parser("evaluar")
     p.add_argument("--reglas")
-    p.add_argument("--conjuntos", default="maestro,2m", help="maestro, 2m o ambos separados por coma")
+    p.add_argument("--conjuntos", default="maestro,2m,nuevos", help="maestro, 2m o ambos separados por coma")
     p.add_argument("--json")
     p.set_defaults(func=cmd_evaluar)
     p = sub.add_parser("registrar")
