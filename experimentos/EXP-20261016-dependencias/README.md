@@ -170,6 +170,32 @@ Configuración: 16-oct, NQ1!, gráfico 1 m, ETH, UTC, B-ADJ desactivado, modo Ma
 - Los 9 casos se añadieron al evaluador como conjunto `nuevos`. **Ninguna regla existente acierta ninguno de los 8 largos.**
 - **Familia refutada:** C = fórmula de duración aplicada al tramo desde el extremo de la ventana (máximo, mínimo o según dirección; primera o última aparición) hasta END, en la resolución de la fuente. Como mucho 2/129.
 
+### M7. Barrido de START en la zona 16:30–17:00
+
+**Configuración:** 16-oct, NQ1!, gráfico 1 m, fuente 1 minuto, ETH, UTC, B-ADJ desactivado, modo Manual. Lite y Character Tree con el mismo START y END; END fijo a las 17:00. Se exportaron los 15 START de 16:30 a 16:44, de minuto en minuto, en `manual/SWP_1016_<START>_1700.csv`.
+
+**Resultado (16-oct):** los 15 CSV contienen 300 velas del gráfico y 239 velas con curvas publicadas en Lite y Character Tree. `tools/invertir_C_csv.py` recupera un C constante dentro de cada ventana:
+
+| START | Velas inclusivas | C Lite | Archivo |
+|---|---:|---:|---|
+| 16:30 | 31 | 108 | [`SWP_1016_1630_1700.csv`](../../manual/SWP_1016_1630_1700.csv) |
+| 16:31 | 30 | 108 | [`SWP_1016_1631_1700.csv`](../../manual/SWP_1016_1631_1700.csv) |
+| 16:32 | 29 | 108 | [`SWP_1016_1632_1700.csv`](../../manual/SWP_1016_1632_1700.csv) |
+| 16:33 | 28 | 108 | [`SWP_1016_1633_1700.csv`](../../manual/SWP_1016_1633_1700.csv) |
+| 16:34 | 27 | 108 | [`SWP_1016_1634_1700.csv`](../../manual/SWP_1016_1634_1700.csv) |
+| 16:35 | 26 | 88 | [`SWP_1016_1635_1700.csv`](../../manual/SWP_1016_1635_1700.csv) |
+| 16:36 | 25 | 93 | [`SWP_1016_1636_1700.csv`](../../manual/SWP_1016_1636_1700.csv) |
+| 16:37 | 24 | 82 | [`SWP_1016_1637_1700.csv`](../../manual/SWP_1016_1637_1700.csv) |
+| 16:38 | 23 | 88 | [`SWP_1016_1638_1700.csv`](../../manual/SWP_1016_1638_1700.csv) |
+| 16:39 | 22 | 88 | [`SWP_1016_1639_1700.csv`](../../manual/SWP_1016_1639_1700.csv) |
+| 16:40 | 21 | 88 | [`SWP_1016_1640_1700.csv`](../../manual/SWP_1016_1640_1700.csv) |
+| 16:41 | 20 | 65,5738 | [`SWP_1016_1641_1700.csv`](../../manual/SWP_1016_1641_1700.csv) |
+| 16:42 | 19 | 62,2951 | [`SWP_1016_1642_1700.csv`](../../manual/SWP_1016_1642_1700.csv) |
+| 16:43 | 18 | 60 | [`SWP_1016_1643_1700.csv`](../../manual/SWP_1016_1643_1700.csv) |
+| 16:44 | 17 | 60 | [`SWP_1016_1644_1700.csv`](../../manual/SWP_1016_1644_1700.csv) |
+
+**Conclusión:** el cambio de régimen queda entre 16:40 (21 velas inclusivas, C = 88) y 16:41 (20 velas, C = 65,5738). Desde 16:41, C coincide con la fórmula corta `max(60, n × 60 × 10 / 183)`: en 16:42 da 62,2951 y desde 16:43 queda en el mínimo de 60. En el régimen largo C también cambia con START y no es monótono (por ejemplo, 108 a 16:34, 88 a 16:35 y vuelve a 93 a 16:36); el umbral corto/largo se identifica por la coincidencia con la fórmula y el paso de 21 a 20 velas, no por cualquier salto aislado.
+
 ### Lectura rápida alternativa con Character Tree
 
 En los 74 casos del maestro medidos con ambos indicadores, el C de Lite cae siempre dentro del intervalo de Character Tree. Por eso, para M1 bastaría leer en Character Tree la etiqueta **«C/3 …s»** (perfil B, modo Manual, resolución de datos 1 minuto, «Show EMA timeframe labels» activado), que aparece al publicarse las curvas: $C = 3 \times$ el valor de la etiqueta, con error de ±0,015 s, suficiente para identificar un C entero. Si alguna ventana da en RTH un C distinto del de ETH, se exporta además el CSV de Lite de esa ventana como evidencia primaria. **Actualización:** la instancia CT6561USR del usuario no tiene la opción de etiquetas, así que M1 se mide también por exportación CSV.
