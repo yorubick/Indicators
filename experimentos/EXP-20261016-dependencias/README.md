@@ -208,6 +208,14 @@ Configuración: 16-oct, NQ1!, gráfico 1 m, ETH, UTC, B-ADJ desactivado, modo Ma
 
 Ejecutar [`tools/devtools_volcar_metainfo.js`](../../tools/devtools_volcar_metainfo.js) en la consola con ambos indicadores cargados y guardar el JSON en `manual/metainfo_<fecha>.json`. Objetivo: entradas ocultas (`isHidden`), plots ocultos (un posible plot de C), tooltips y `pineFeatures`. El script omite el ILScript cifrado; no se intenta descifrarlo.
 
+### M9. Treinta ventanas independientes (predicciones registradas el 17-oct)
+
+**Por qué.** Los 147 casos largos medidos hasta ahora forman solo unos 14 bloques independientes de ventanas solapadas: la muestra efectiva es pequeña y está concentrada en pocas zonas de precio. Los valores de C «repetidos» en ventanas distintas vienen casi siempre del mismo bloque (son mesetas), no de un conjunto fijo de valores.
+
+**Diseño.** [`generar_M9.py`](generar_M9.py) sortea, con semilla 20261017, 30 ventanas de 1 m: días 12, 13, 15 y 16 de oct, sesión ETH, n entre 21 y 45, sin cruzar el corte diario y sin solaparse (margen de 5 min) entre sí ni con nada ya medido. Las predicciones de todas las reglas del evaluador están en [`M9_ventanas.json`](M9_ventanas.json). Verificación: [`verificar_M9.py`](verificar_M9.py).
+
+Configuración: NQ1!, gráfico 1 m, ETH, UTC, B-ADJ desactivado. Lite en Manual con «Source data resolution» de 1 minute. Un CSV por ventana, con el nombre del campo `archivo` (p. ej. `manual/M9_1012_0035_0105.csv`). Character Tree no es necesario.
+
 ### Lectura rápida alternativa con Character Tree
 
 En los 74 casos del maestro medidos con ambos indicadores, el C de Lite cae siempre dentro del intervalo de Character Tree. Por eso, para M1 bastaría leer en Character Tree la etiqueta **«C/3 …s»** (perfil B, modo Manual, resolución de datos 1 minuto, «Show EMA timeframe labels» activado), que aparece al publicarse las curvas: $C = 3 \times$ el valor de la etiqueta, con error de ±0,015 s, suficiente para identificar un C entero. Si alguna ventana da en RTH un C distinto del de ETH, se exporta además el CSV de Lite de esa ventana como evidencia primaria. **Actualización:** la instancia CT6561USR del usuario no tiene la opción de etiquetas, así que M1 se mide también por exportación CSV.

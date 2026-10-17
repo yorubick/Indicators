@@ -1,0 +1,486 @@
+{
+ "registrado": "2026-10-17",
+ "semilla": 20261017,
+ "ventanas": [
+  {
+   "id": "M9-12",
+   "ini": 1791765300,
+   "fin": 1791767100,
+   "n": 31,
+   "START": "2026-10-12 00:35",
+   "END": "2026-10-12 01:05",
+   "archivo": "M9_1012_0035_0105.csv",
+   "predicciones": {
+    "base_T_transcurrido": 98.0,
+    "base_T_inclusivo": 102.0,
+    "pine_v1_3_auto": 104.0,
+    "kappa_por_dt": 107.0,
+    "mediana_por_n": 112.0
+   }
+  },
+  {
+   "id": "M9-19",
+   "ini": 1791797820,
+   "fin": 1791799260,
+   "n": 25,
+   "START": "2026-10-12 09:37",
+   "END": "2026-10-12 10:01",
+   "archivo": "M9_1012_0937_1001.csv",
+   "predicciones": {
+    "base_T_transcurrido": 79.0,
+    "base_T_inclusivo": 82.0,
+    "pine_v1_3_auto": 82.0,
+    "kappa_por_dt": 85.0,
+    "mediana_por_n": 89.0
+   }
+  },
+  {
+   "id": "M9-08",
+   "ini": 1791805620,
+   "fin": 1791807120,
+   "n": 26,
+   "START": "2026-10-12 11:47",
+   "END": "2026-10-12 12:12",
+   "archivo": "M9_1012_1147_1212.csv",
+   "predicciones": {
+    "base_T_transcurrido": 82.0,
+    "base_T_inclusivo": 85.0,
+    "pine_v1_3_auto": 92.0,
+    "kappa_por_dt": 89.0,
+    "mediana_por_n": 83.0
+   }
+  },
+  {
+   "id": "M9-29",
+   "ini": 1791809100,
+   "fin": 1791811500,
+   "n": 41,
+   "START": "2026-10-12 12:45",
+   "END": "2026-10-12 13:25",
+   "archivo": "M9_1012_1245_1325.csv",
+   "predicciones": {
+    "base_T_transcurrido": 131.0,
+    "base_T_inclusivo": 134.0,
+    "pine_v1_3_auto": 139.0,
+    "kappa_por_dt": 142.0,
+    "mediana_por_n": 113.0
+   }
+  },
+  {
+   "id": "M9-02",
+   "ini": 1791822900,
+   "fin": 1791825000,
+   "n": 36,
+   "START": "2026-10-12 16:35",
+   "END": "2026-10-12 17:10",
+   "archivo": "M9_1012_1635_1710.csv",
+   "predicciones": {
+    "base_T_transcurrido": 115.0,
+    "base_T_inclusivo": 118.0,
+    "pine_v1_3_auto": 127.0,
+    "kappa_por_dt": 124.0,
+    "mediana_por_n": 112.0
+   }
+  },
+  {
+   "id": "M9-28",
+   "ini": 1791825840,
+   "fin": 1791827160,
+   "n": 23,
+   "START": "2026-10-12 17:24",
+   "END": "2026-10-12 17:46",
+   "archivo": "M9_1012_1724_1746.csv",
+   "predicciones": {
+    "base_T_transcurrido": 72.0,
+    "base_T_inclusivo": 75.0,
+    "pine_v1_3_auto": 77.0,
+    "kappa_por_dt": 78.0,
+    "mediana_por_n": 77.0
+   }
+  },
+  {
+   "id": "M9-23",
+   "ini": 1791844680,
+   "fin": 1791846420,
+   "n": 30,
+   "START": "2026-10-12 22:38",
+   "END": "2026-10-12 23:07",
+   "archivo": "M9_1012_2238_2307.csv",
+   "predicciones": {
+    "base_T_transcurrido": 95.0,
+    "base_T_inclusivo": 98.0,
+    "pine_v1_3_auto": 113.0,
+    "kappa_por_dt": 103.0,
+    "mediana_por_n": 108.0
+   }
+  },
+  {
+   "id": "M9-16",
+   "ini": 1791847440,
+   "fin": 1791849060,
+   "n": 28,
+   "START": "2026-10-12 23:24",
+   "END": "2026-10-12 23:51",
+   "archivo": "M9_1012_2324_2351.csv",
+   "predicciones": {
+    "base_T_transcurrido": 89.0,
+    "base_T_inclusivo": 92.0,
+    "pine_v1_3_auto": 104.0,
+    "kappa_por_dt": 96.0,
+    "mediana_por_n": 108.0
+   }
+  },
+  {
+   "id": "M9-06",
+   "ini": 1791853440,
+   "fin": 1791855540,
+   "n": 36,
+   "START": "2026-10-13 01:04",
+   "END": "2026-10-13 01:39",
+   "archivo": "M9_1013_0104_0139.csv",
+   "predicciones": {
+    "base_T_transcurrido": 115.0,
+    "base_T_inclusivo": 118.0,
+    "pine_v1_3_auto": 122.0,
+    "kappa_por_dt": 124.0,
+    "mediana_por_n": 112.0
+   }
+  },
+  {
+   "id": "M9-09",
+   "ini": 1791857820,
+   "fin": 1791859320,
+   "n": 26,
+   "START": "2026-10-13 02:17",
+   "END": "2026-10-13 02:42",
+   "archivo": "M9_1013_0217_0242.csv",
+   "predicciones": {
+    "base_T_transcurrido": 82.0,
+    "base_T_inclusivo": 85.0,
+    "pine_v1_3_auto": 93.0,
+    "kappa_por_dt": 89.0,
+    "mediana_por_n": 83.0
+   }
+  },
+  {
+   "id": "M9-22",
+   "ini": 1791908640,
+   "fin": 1791911040,
+   "n": 41,
+   "START": "2026-10-13 16:24",
+   "END": "2026-10-13 17:04",
+   "archivo": "M9_1013_1624_1704.csv",
+   "predicciones": {
+    "base_T_transcurrido": 131.0,
+    "base_T_inclusivo": 134.0,
+    "pine_v1_3_auto": 138.0,
+    "kappa_por_dt": 142.0,
+    "mediana_por_n": 113.0
+   }
+  },
+  {
+   "id": "M9-18",
+   "ini": 1791915360,
+   "fin": 1791917220,
+   "n": 32,
+   "START": "2026-10-13 18:16",
+   "END": "2026-10-13 18:47",
+   "archivo": "M9_1013_1816_1847.csv",
+   "predicciones": {
+    "base_T_transcurrido": 102.0,
+    "base_T_inclusivo": 105.0,
+    "pine_v1_3_auto": 119.0,
+    "kappa_por_dt": 110.0,
+    "mediana_por_n": 112.0
+   }
+  },
+  {
+   "id": "M9-05",
+   "ini": 1791932460,
+   "fin": 1791934740,
+   "n": 39,
+   "START": "2026-10-13 23:01",
+   "END": "2026-10-13 23:39",
+   "archivo": "M9_1013_2301_2339.csv",
+   "predicciones": {
+    "base_T_transcurrido": 125.0,
+    "base_T_inclusivo": 128.0,
+    "pine_v1_3_auto": 144.0,
+    "kappa_por_dt": 135.0,
+    "mediana_por_n": 113.0
+   }
+  },
+  {
+   "id": "M9-15",
+   "ini": 1792025100,
+   "fin": 1792027200,
+   "n": 36,
+   "START": "2026-10-15 00:45",
+   "END": "2026-10-15 01:20",
+   "archivo": "M9_1015_0045_0120.csv",
+   "predicciones": {
+    "base_T_transcurrido": 115.0,
+    "base_T_inclusivo": 118.0,
+    "pine_v1_3_auto": 122.0,
+    "kappa_por_dt": 124.0,
+    "mediana_por_n": 112.0
+   }
+  },
+  {
+   "id": "M9-17",
+   "ini": 1792030200,
+   "fin": 1792032120,
+   "n": 33,
+   "START": "2026-10-15 02:10",
+   "END": "2026-10-15 02:42",
+   "archivo": "M9_1015_0210_0242.csv",
+   "predicciones": {
+    "base_T_transcurrido": 105.0,
+    "base_T_inclusivo": 108.0,
+    "pine_v1_3_auto": 115.0,
+    "kappa_por_dt": 114.0,
+    "mediana_por_n": 112.0
+   }
+  },
+  {
+   "id": "M9-13",
+   "ini": 1792033980,
+   "fin": 1792035780,
+   "n": 31,
+   "START": "2026-10-15 03:13",
+   "END": "2026-10-15 03:43",
+   "archivo": "M9_1015_0313_0343.csv",
+   "predicciones": {
+    "base_T_transcurrido": 98.0,
+    "base_T_inclusivo": 102.0,
+    "pine_v1_3_auto": 104.0,
+    "kappa_por_dt": 107.0,
+    "mediana_por_n": 112.0
+   }
+  },
+  {
+   "id": "M9-21",
+   "ini": 1792042380,
+   "fin": 1792043640,
+   "n": 22,
+   "START": "2026-10-15 05:33",
+   "END": "2026-10-15 05:54",
+   "archivo": "M9_1015_0533_0554.csv",
+   "predicciones": {
+    "base_T_transcurrido": 69.0,
+    "base_T_inclusivo": 72.0,
+    "pine_v1_3_auto": 73.0,
+    "kappa_por_dt": 75.0,
+    "mediana_por_n": 75.0
+   }
+  },
+  {
+   "id": "M9-14",
+   "ini": 1792044360,
+   "fin": 1792046520,
+   "n": 37,
+   "START": "2026-10-15 06:06",
+   "END": "2026-10-15 06:42",
+   "archivo": "M9_1015_0606_0642.csv",
+   "predicciones": {
+    "base_T_transcurrido": 118.0,
+    "base_T_inclusivo": 121.0,
+    "pine_v1_3_auto": 146.0,
+    "kappa_por_dt": 128.0,
+    "mediana_por_n": 113.0
+   }
+  },
+  {
+   "id": "M9-26",
+   "ini": 1792062360,
+   "fin": 1792063560,
+   "n": 21,
+   "START": "2026-10-15 11:06",
+   "END": "2026-10-15 11:26",
+   "archivo": "M9_1015_1106_1126.csv",
+   "predicciones": {
+    "base_T_transcurrido": 66.0,
+    "base_T_inclusivo": 69.0,
+    "pine_v1_3_auto": 125.0,
+    "kappa_por_dt": 71.0,
+    "mediana_por_n": 75.0
+   }
+  },
+  {
+   "id": "M9-24",
+   "ini": 1792066680,
+   "fin": 1792069320,
+   "n": 45,
+   "START": "2026-10-15 12:18",
+   "END": "2026-10-15 13:02",
+   "archivo": "M9_1015_1218_1302.csv",
+   "predicciones": {
+    "base_T_transcurrido": 144.0,
+    "base_T_inclusivo": 148.0,
+    "pine_v1_3_auto": 153.0,
+    "kappa_por_dt": 156.0,
+    "mediana_por_n": 110.0
+   }
+  },
+  {
+   "id": "M9-01",
+   "ini": 1792071960,
+   "fin": 1792073460,
+   "n": 26,
+   "START": "2026-10-15 13:46",
+   "END": "2026-10-15 14:11",
+   "archivo": "M9_1015_1346_1411.csv",
+   "predicciones": {
+    "base_T_transcurrido": 82.0,
+    "base_T_inclusivo": 85.0,
+    "pine_v1_3_auto": 101.0,
+    "kappa_por_dt": 89.0,
+    "mediana_por_n": 83.0
+   }
+  },
+  {
+   "id": "M9-10",
+   "ini": 1792077660,
+   "fin": 1792080300,
+   "n": 45,
+   "START": "2026-10-15 15:21",
+   "END": "2026-10-15 16:05",
+   "archivo": "M9_1015_1521_1605.csv",
+   "predicciones": {
+    "base_T_transcurrido": 144.0,
+    "base_T_inclusivo": 148.0,
+    "pine_v1_3_auto": 153.0,
+    "kappa_por_dt": 156.0,
+    "mediana_por_n": 110.0
+   }
+  },
+  {
+   "id": "M9-25",
+   "ini": 1792084320,
+   "fin": 1792085640,
+   "n": 23,
+   "START": "2026-10-15 17:12",
+   "END": "2026-10-15 17:34",
+   "archivo": "M9_1015_1712_1734.csv",
+   "predicciones": {
+    "base_T_transcurrido": 72.0,
+    "base_T_inclusivo": 75.0,
+    "pine_v1_3_auto": 80.0,
+    "kappa_por_dt": 78.0,
+    "mediana_por_n": 77.0
+   }
+  },
+  {
+   "id": "M9-30",
+   "ini": 1792096380,
+   "fin": 1792097820,
+   "n": 25,
+   "START": "2026-10-15 20:33",
+   "END": "2026-10-15 20:57",
+   "archivo": "M9_1015_2033_2057.csv",
+   "predicciones": {
+    "base_T_transcurrido": 79.0,
+    "base_T_inclusivo": 82.0,
+    "pine_v1_3_auto": 88.0,
+    "kappa_por_dt": 85.0,
+    "mediana_por_n": 89.0
+   }
+  },
+  {
+   "id": "M9-27",
+   "ini": 1792101900,
+   "fin": 1792103760,
+   "n": 32,
+   "START": "2026-10-15 22:05",
+   "END": "2026-10-15 22:36",
+   "archivo": "M9_1015_2205_2236.csv",
+   "predicciones": {
+    "base_T_transcurrido": 102.0,
+    "base_T_inclusivo": 105.0,
+    "pine_v1_3_auto": 114.0,
+    "kappa_por_dt": 110.0,
+    "mediana_por_n": 112.0
+   }
+  },
+  {
+   "id": "M9-07",
+   "ini": 1792112520,
+   "fin": 1792114440,
+   "n": 33,
+   "START": "2026-10-16 01:02",
+   "END": "2026-10-16 01:34",
+   "archivo": "M9_1016_0102_0134.csv",
+   "predicciones": {
+    "base_T_transcurrido": 105.0,
+    "base_T_inclusivo": 108.0,
+    "pine_v1_3_auto": 111.0,
+    "kappa_por_dt": 114.0,
+    "mediana_por_n": 112.0
+   }
+  },
+  {
+   "id": "M9-03",
+   "ini": 1792117680,
+   "fin": 1792119840,
+   "n": 37,
+   "START": "2026-10-16 02:28",
+   "END": "2026-10-16 03:04",
+   "archivo": "M9_1016_0228_0304.csv",
+   "predicciones": {
+    "base_T_transcurrido": 118.0,
+    "base_T_inclusivo": 121.0,
+    "pine_v1_3_auto": 123.0,
+    "kappa_por_dt": 128.0,
+    "mediana_por_n": 113.0
+   }
+  },
+  {
+   "id": "M9-04",
+   "ini": 1792133220,
+   "fin": 1792135440,
+   "n": 38,
+   "START": "2026-10-16 06:47",
+   "END": "2026-10-16 07:24",
+   "archivo": "M9_1016_0647_0724.csv",
+   "predicciones": {
+    "base_T_transcurrido": 121.0,
+    "base_T_inclusivo": 125.0,
+    "pine_v1_3_auto": 143.0,
+    "kappa_por_dt": 132.0,
+    "mediana_por_n": 113.0
+   }
+  },
+  {
+   "id": "M9-11",
+   "ini": 1792137960,
+   "fin": 1792139400,
+   "n": 25,
+   "START": "2026-10-16 08:06",
+   "END": "2026-10-16 08:30",
+   "archivo": "M9_1016_0806_0830.csv",
+   "predicciones": {
+    "base_T_transcurrido": 79.0,
+    "base_T_inclusivo": 82.0,
+    "pine_v1_3_auto": 83.0,
+    "kappa_por_dt": 85.0,
+    "mediana_por_n": 89.0
+   }
+  },
+  {
+   "id": "M9-20",
+   "ini": 1792141620,
+   "fin": 1792143120,
+   "n": 26,
+   "START": "2026-10-16 09:07",
+   "END": "2026-10-16 09:32",
+   "archivo": "M9_1016_0907_0932.csv",
+   "predicciones": {
+    "base_T_transcurrido": 82.0,
+    "base_T_inclusivo": 85.0,
+    "pine_v1_3_auto": 94.0,
+    "kappa_por_dt": 89.0,
+    "mediana_por_n": 83.0
+   }
+  }
+ ]
+}
