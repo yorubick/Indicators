@@ -121,6 +121,43 @@ Tres setups del 16-oct elegidos con `predecir_auto_balanced.py`: END en un pivot
 
 **Decisión (16-oct):** tras unas 80 variantes sin acierto, se deja de buscar el ajuste de Auto por prueba y error. Auto aportó tres hechos firmes: la semilla en el extremo de END, un Character continuo y la caja que el indicador asocia a cada ajuste. Se vuelve al objetivo, el C de Manual, con M1 y con la comprobación de la predicción (a) en modo Manual.
 
+### Resultado M1 y control de la caja Auto (17-oct)
+
+Exportaciones de Luna, commit 032bc72, en `manual/`. C del Lite verificado con `tools/invertir_C_csv.py`, exacto y constante tras la publicación:
+
+| Ventana | Sesión | C Lite | Character Tree | Predicción registrada | Resultado |
+|---|---|---:|---|---|---|
+| 12-oct 14:00–14:22 | RTH | 83 | 82,92–83,03 | igual que ETH (83) | **se cumple** |
+| 12-oct 13:31–13:53 | RTH | 89 | 88,88–89,03 | igual que ETH | **se cumple** |
+| 12-oct 13:31–13:53 | ETH | 89 | 88,88–89,03 | — | — |
+| 16-oct 16:40–17:00 | ETH | 88 | 87,98–88,19 | (a): ≈ 49,4, el C de Auto con esa caja | **refutada** |
+
+**Conclusiones.**
+
+1. **C no depende de las velas anteriores a START.** La ventana 13:31–13:53 tiene en RTH una sola vela de la sesión antes de START (el resto es la sesión regular del viernes) y en ETH toda la madrugada, y da 89 en ambas. La premisa del evaluador, C = f(velas de START a END), queda respaldada.
+2. **La caja que dibuja Auto no «lleva» el Character de Auto en sentido Manual** (88 frente a 49,4).
+3. **Dos casos largos nuevos, nunca usados para construir reglas:** 16:40–17:00 (n = 21, C = 88) y 13:31–13:53 (n = 23, C = 89). Ninguna regla del evaluador los acierta (predicciones 66–125 y 72–83).
+
+**Hipótesis H_interno refutada** (`prueba_ajuste_interno.py`, definida antes de ejecutarla): «el Character del rango es el C con el que la nube sembrada en el extremo de START toca la mecha de END». 0/123 en 18 variantes; en 68 casos no existe solución.
+
+**Exploración sin resultado:** entre los 21 casos de 1 m con n = 21, ninguna propiedad simple de la ventana (rango, recorrido, eficiencia, posición de END, posición de los extremos, volumen, dispersión) se correlaciona con C por encima de |r| = 0,40. Cuando se añade una vela al inicio, C cambia en 22 de 34 casos aunque esa vela no sea un nuevo extremo.
+
+### M6. Escalera de resoluciones (predicciones registradas el 17-oct)
+
+**Lógica.** La misma ventana con distintas «Data resolution». Con pocas velas por fuente el régimen es corto y la fórmula exacta; con más velas, el mismo tramo pasa al régimen largo. Así se ve qué añade el régimen largo sobre la fórmula corta con los mismos precios y el mismo tiempo.
+
+Configuración: 16-oct, NQ1!, gráfico 1 m, ETH, UTC, B-ADJ desactivado, modo Manual. Lite y Character Tree con la misma ventana; se cambia **solo** la resolución de la fuente en ambos.
+
+| Archivo | Ventana | Resolución | n | Predicción |
+|---|---|---|---:|---|
+| `RES_1016_1645_1700_1m.csv` | 16:45–17:00 | 1 minuto | 16 | 52,4590 (fórmula corta, exacta) |
+| `RES_1016_1645_1700_30s.csv` | 16:45–17:00 | 30 segundos | 31 | entero (régimen largo) |
+| `RES_1016_1645_1700_15s.csv` | 16:45–17:00 | 15 segundos | 61 | entero |
+| `RES_1016_1645_1700_5s.csv` | 16:45–17:00 | 5 segundos | 181 | entero |
+| `RES_1016_1645_1700_1s.csv` | 16:45–17:00 | 1 segundo | 901 | entero |
+| `RES_1016_1640_1700_30s.csv` | 16:40–17:00 | 30 segundos | 41 | entero (a 1 m vale 88) |
+| `RES_1016_1640_1700_15s.csv` | 16:40–17:00 | 15 segundos | 81 | entero |
+
 ### Lectura rápida alternativa con Character Tree
 
 En los 74 casos del maestro medidos con ambos indicadores, el C de Lite cae siempre dentro del intervalo de Character Tree. Por eso, para M1 bastaría leer en Character Tree la etiqueta **«C/3 …s»** (perfil B, modo Manual, resolución de datos 1 minuto, «Show EMA timeframe labels» activado), que aparece al publicarse las curvas: $C = 3 \times$ el valor de la etiqueta, con error de ±0,015 s, suficiente para identificar un C entero. Si alguna ventana da en RTH un C distinto del de ETH, se exporta además el CSV de Lite de esa ventana como evidencia primaria. **Actualización:** la instancia CT6561USR del usuario no tiene la opción de etiquetas, así que M1 se mide también por exportación CSV.
