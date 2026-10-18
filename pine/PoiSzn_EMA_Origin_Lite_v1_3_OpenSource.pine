@@ -141,70 +141,43 @@ if mode_C == "Auto (Universal: Corto n<21 / Selector Estructural n>=21)"
         branch_name := "Corto_Continuo (n=" + str.tostring(n_source_inclusive) + "<21, Exacto)"
         basin_event := "Fase Continua"
     else
-        // 2. Régimen Largo Discreto (n_inclusivo >= 21 barras): Motor Armónico en Base 3
-        float C_val = 77.0 // Ancla Canónica de Grado 3 por defecto
+        // 2. Régimen Largo Discreto (n_inclusivo >= 21 barras): Motor Físico Generativo de Capping
+        // Anclaje macroscópico temporal universal (18.3 s/s)
+        float C_base = math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
+        float C_val = C_base
         
-        if dt_fuente == 15.0
-            C_val := 16.0
-        else if dt_fuente == 120.0
-            C_val := 137.0
-        else if n_source_inclusive == 25 and k_H == 1 and k_L == 18
-            C_val := 128.0
-        else if n_source_inclusive == 26 and k_H == 0 and k_L == 19
-            C_val := 134.0
-        else if n_source_inclusive == 27 and k_H == 0 and k_L == 20
-            C_val := 109.0
-        else if n_source_inclusive == 22 and k_H == 1 and k_L == 21
-            C_val := 102.0
-        else if (k_H <= 2 and (k_L >= 12 and k_L <= 14) and start_candle_open >= 30858.0 and start_candle_open <= 30860.0)
-            if n_source_inclusive == 21
-                C_val := 50.0
-            else if n_source_inclusive == 22
-                C_val := 52.0
-            else if n_source_inclusive == 23
-                C_val := 55.0
-            else if n_source_inclusive == 25
-                C_val := 60.0
-        else if n_source_inclusive == 25 and k_H == 2 and k_L == 24
-            C_val := 60.0
-        else if (k_L >= 7 and k_L <= 8 and (k_H == 19 or k_H == 20))
-            C_val := 62.0
-        else if k_H == 21 and k_L == 9
-            C_val := 83.0
-        else if k_H == 22 and k_L == 10
-            C_val := 76.0
-        else if k_H == 2 and k_L == 12
-            if n_source_inclusive == 21
-                C_val := 75.0
-            else if n_source_inclusive == 22 or n_source_inclusive == 23
-                C_val := 78.0
-            else if n_source_inclusive == 24
-                C_val := 87.0
-        else if h_idx == 0 and k_L == 13 and n_source_inclusive == 24
-            C_val := 73.0
-        else if h_idx == 0 and k_L == 11 and n_source_inclusive == 21
-            C_val := 80.0
-        else if (k_H == 0 and k_L == 18 and n_source_inclusive == 23) or (k_H == 2 and k_L == 20 and n_source_inclusive == 25) or (k_H == 5 and k_L == 17 and n_source_inclusive == 21)
-            C_val := 81.0
-        else if (k_H == 0 and k_L == 16 and n_source_inclusive == 23 and tot_range > 50) or (k_H == 1 and k_L == 17 and n_source_inclusive == 23) or ((k_H == 1 or k_H == 2) and (k_L == 19 or k_L == 20) and n_source_inclusive == 26)
-            C_val := 82.0
-        else if k_H == 0 and k_L == 18 and (n_source_inclusive == 21 or n_source_inclusive == 22 or n_source_inclusive == 24)
-            C_val := 69.0
-        else if ((k_H == 1 or k_H == 2) and (k_L == 19 or k_L == 20) and (n_source_inclusive == 21 or n_source_inclusive == 22)) or (k_H == 2 and k_L == 20 and n_source_inclusive == 23)
-            C_val := 68.0
-        else if k_H == 0 and (k_L >= 15 and k_L <= 17)
-            C_val := 71.0
-        else if ((k_H == 1 or k_H == 2) and (k_L == 19 or k_L == 20) and (n_source_inclusive == 23 or n_source_inclusive == 24)) or (k_H == 9 and k_L == 0)
-            C_val := 75.0
-        else if k_H == 1 and k_L == 19 and n_source_inclusive == 25
-            C_val := 93.0
-        else
-            C_val := 77.0
-            
+        // Polaridad y origen del impulso según tooltip de TCMTrader1:
+        // "Auto reads where END sits in the box (upper half = bearish, lower half = bullish)"
+        bool is_bearish = nz(end_candle_close, close) >= ((nz(range_high, high) + nz(range_low, low)) / 2.0)
+        float seed_price = is_bearish ? nz(range_high, high) : nz(range_low, low)
+        float wick_price = is_bearish ? nz(end_candle_high, high) : nz(end_candle_low, low)
+        int leg_len = is_bearish ? k_H : k_L
+        int eff_bars = math.max(1, n_source_inclusive - leg_len)
+        
+        // Búsqueda en la celosía armónica discreta de potencias de 3 (pasos de 3s en base 3)
+        // "Auto tries the middle cloud first and uses the slow cloud when no range carries the middle-cloud Character"
+        float best_c = C_base
+        float min_err = 100000.0
+        
+        for k_step = -6 to 6
+            float cand_c = C_base + float(k_step) * 3.0
+            if cand_c >= dt_fuente
+                // Simulación analítica de decaimiento EMA de nube media (b0 = 8.0)
+                float alpha_mid = 2.0 / (8.0 * (cand_c / dt_fuente) + 1.0)
+                float decay = math.pow(1.0 - alpha_mid, eff_bars)
+                float ema_mid = seed_price + (1.0 - decay) * (nz(end_candle_close, close) - seed_price)
+                
+                float margin = is_bearish ? (ema_mid - wick_price) : (wick_price - ema_mid)
+                // Capping no violado y envolvente óptima
+                if margin >= -0.5 and math.abs(margin - 4.5) < min_err
+                    min_err := math.abs(margin - 4.5)
+                    best_c := cand_c
+                    
+        C_val := best_c
         float delta_override = harmonic_k != 0 ? (float(harmonic_k) * 3.0) : 0.0
         C := math.round(C_val + delta_override)
-        branch_name := "Largo_Armonico (C=" + str.tostring(C, "#") + "s, n=" + str.tostring(n_source_inclusive) + ")"
-        basin_event := "Celosía 27s/Base-3"
+        branch_name := "Largo_Generativo (C=" + str.tostring(C, "#") + "s, n=" + str.tostring(n_source_inclusive) + ")"
+        basin_event := "Capping Armónico Base-3"
 else if mode_C == "Base Macroscópica: round(T / 18.3)"
     C := math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
     branch_name := "Base_Macroscópica"

@@ -41,6 +41,8 @@ from pathlib import Path
 from typing import Callable
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 MASTER = ROOT / "master_all_C_cases.json"
 PREDICCIONES = ROOT / "experimentos" / "predicciones"
 MINTICK = 0.25  # NQ
@@ -320,10 +322,18 @@ def ajustar_mediana_por_n(entrenamiento: list[Registro]) -> Regla:
     return regla
 
 
+def generativo_capping(caso: Caso) -> float:
+    """Motor generativo físico universal: n < 21 ley continua exacta; n >= 21 capping armónico en base 3."""
+    from tools.calculate_character import calculate_character_generative
+    bars = [{"open": v.o, "high": v.h, "low": v.l, "close": v.c} for v in caso.velas]
+    return calculate_character_generative(bars, caso.dt)
+
+
 REGLAS_FIJAS: dict[str, Regla] = {
     "base_T_transcurrido": base_T_transcurrido,
     "base_T_inclusivo": base_T_inclusivo,
     "pine_v1_3_auto": pine_v1_3_auto,
+    "generativo_capping": generativo_capping,
 }
 REGLAS_AJUSTABLES: dict[str, ReglaAjustable] = {
     "kappa_por_dt": ajustar_kappa_por_dt,
@@ -333,6 +343,7 @@ DESCRIPCION = {
     "base_T_transcurrido": "línea base: corto exacto; largo round(T/18.3)",
     "base_T_inclusivo": "línea base: corto exacto; largo round(n·dt/18.3)",
     "pine_v1_3_auto": "modo Auto del clon Pine v1.3 (κ por eficiencia, n=21→125)",
+    "generativo_capping": "motor generativo físico: n<21 exacto; n>=21 capping armónico en base 3",
     "kappa_por_dt": "ajustada: round(T/κ) con κ por dt (validación cruzada)",
     "mediana_por_n": "ajustada: mediana de C por (dt, n) cercano (validación cruzada)",
 }
