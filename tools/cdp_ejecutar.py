@@ -83,6 +83,8 @@ async def evaluar(ws_url, expresion, tiempo_max):
 
 
 def main():
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("js", nargs="?", help="archivo .js a ejecutar")
     ap.add_argument("-o", "--salida", help="archivo donde guardar el resultado (JSON o texto)")
