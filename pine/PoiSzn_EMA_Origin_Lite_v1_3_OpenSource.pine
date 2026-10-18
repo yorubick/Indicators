@@ -142,8 +142,8 @@ if mode_C == "Auto (Universal: Corto n<21 / Selector Estructural n>=21)"
         basin_event := "Fase Continua"
     else
         // 2. Régimen Largo Discreto (n_inclusivo >= 21 barras): Motor Físico Generativo de Capping
-        // Anclaje macroscópico temporal universal (18.3 s/s)
-        float C_base = math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
+        // Anclaje macroscópico temporal universal sobre duración transcurrida T = (n - 1) * dt (18.3 s/s)
+        float C_base = math.max(dt_fuente, float(math.round((duration_T_elapsed * 10.0) / 183.0)))
         float C_val = C_base
         
         // Polaridad y origen del impulso según tooltip de TCMTrader1:
@@ -157,21 +157,35 @@ if mode_C == "Auto (Universal: Corto n<21 / Selector Estructural n>=21)"
         // Búsqueda en la celosía armónica discreta de potencias de 3 (pasos de 3s en base 3)
         // "Auto tries the middle cloud first and uses the slow cloud when no range carries the middle-cloud Character"
         float best_c = C_base
-        float min_err = 100000.0
+        float min_dist_mid = 100000.0
+        bool found_mid = false
         
-        for k_step = -6 to 6
+        // 1. Evaluación de Nube Media (b0 = 8.0)
+        for k_step = -12 to 15
             float cand_c = C_base + float(k_step) * 3.0
             if cand_c >= dt_fuente
-                // Simulación analítica de decaimiento EMA de nube media (b0 = 8.0)
                 float alpha_mid = 2.0 / (8.0 * (cand_c / dt_fuente) + 1.0)
                 float decay = math.pow(1.0 - alpha_mid, eff_bars)
                 float ema_mid = seed_price + (1.0 - decay) * (nz(end_candle_close, close) - seed_price)
-                
                 float margin = is_bearish ? (ema_mid - wick_price) : (wick_price - ema_mid)
-                // Capping no violado y envolvente óptima
-                if margin >= -0.5 and math.abs(margin - 4.5) < min_err
-                    min_err := math.abs(margin - 4.5)
+                if margin >= -0.25 and math.abs(cand_c - C_base) < min_dist_mid
+                    min_dist_mid := math.abs(cand_c - C_base)
                     best_c := cand_c
+                    found_mid := true
+                    
+        // 2. Fallback a Nube Lenta (b0 = 24.0) si ninguna intermedia contiene el Character
+        if not found_mid
+            float min_dist_slow = 100000.0
+            for k_step = -12 to 15
+                float cand_c = C_base + float(k_step) * 3.0
+                if cand_c >= dt_fuente
+                    float alpha_slow = 2.0 / (24.0 * (cand_c / dt_fuente) + 1.0)
+                    float decay = math.pow(1.0 - alpha_slow, eff_bars)
+                    float ema_slow = seed_price + (1.0 - decay) * (nz(end_candle_close, close) - seed_price)
+                    float margin = is_bearish ? (ema_slow - wick_price) : (wick_price - ema_slow)
+                    if margin >= -0.25 and math.abs(cand_c - C_base) < min_dist_slow
+                        min_dist_slow := math.abs(cand_c - C_base)
+                        best_c := cand_c
                     
         C_val := best_c
         float delta_override = harmonic_k != 0 ? (float(harmonic_k) * 3.0) : 0.0

@@ -139,8 +139,8 @@ def calculate_character_generative(bars: list, dt: int = 60) -> float:
     seed = highs[h_idx] if is_bear else lows[l_idx]
     end_wick = highs[-1] if is_bear else lows[-1]
     
-    # 3. Macro escala base (18.3 s/s)
-    c_base = round((n * dt * 10.0) / 183.0)
+    # 3. Macro escala base (18.3 s/s) calculada sobre la duración transcurrida T = (n - 1) * dt
+    c_base = round(((n - 1) * dt * 10.0) / 183.0)
     
     # 4. Celosía armónica discreta (pasos de 3s en potencias de 3)
     candidates = [c_base + k * 3 for k in range(-12, 16) if (c_base + k * 3) >= dt]
@@ -152,7 +152,7 @@ def calculate_character_generative(bars: list, dt: int = 60) -> float:
         cm = simulate_ema_single(sub_closes, C, B0_MID_CENTER, seed, dt)
         bm = simulate_ema_single(sub_closes, C, B0_MID_BOUND, seed, dt)
         penetrated = False
-        for c, c_val, b_val in zip(sub_closes, cm, bm):
+        for c, c_val, b_val in zip(sub_closes[1:], cm[1:], bm[1:]):
             if is_bear and c > min(c_val, b_val):
                 penetrated = True; break
             elif not is_bear and c < max(c_val, b_val):
@@ -172,7 +172,7 @@ def calculate_character_generative(bars: list, dt: int = 60) -> float:
         cs = simulate_ema_single(sub_closes, C, B0_SLOW_CENTER, seed, dt)
         bs = simulate_ema_single(sub_closes, C, B0_SLOW_BOUND, seed, dt)
         penetrated = False
-        for c, c_val, b_val in zip(sub_closes, cs, bs):
+        for c, c_val, b_val in zip(sub_closes[1:], cs[1:], bs[1:]):
             if is_bear and c > min(c_val, b_val):
                 penetrated = True; break
             elif not is_bear and c < max(c_val, b_val):
