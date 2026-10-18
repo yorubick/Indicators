@@ -142,15 +142,19 @@ def calculate_character_generative(bars: list, dt: int = 60) -> float:
     # 3. Macro escala base (18.3 s/s) calculada sobre la duración transcurrida T = (n - 1) * dt
     c_base = round(((n - 1) * dt * 10.0) / 183.0)
     
-    # 4. Celosía armónica discreta (pasos de 3s en potencias de 3)
-    candidates = [c_base + k * 3 for k in range(-12, 16) if (c_base + k * 3) >= dt]
-    candidates.sort()
+    # 4. Celosía armónica discreta de lookbacks enteros de Nube Media u1 (N_mid = round(C * 8 / dt))
+    u1_base = max(3, round(c_base * 8.0 / dt))
+    u0_base = max(1, round(u1_base / 3.0))
     
-    # 5. Evaluación de la nube Media (b0 = 8)
+    cand_u1 = list(range(max(3, u1_base - 10), u1_base + 12))
+    cand_u1.sort(key=lambda u: abs(u - u1_base))
+    
+    # 5. Evaluación de la Nube Media (b0 = 8.0)
     valid_mid = []
-    for C in candidates:
-        cm = simulate_ema_single(sub_closes, C, B0_MID_CENTER, seed, dt)
-        bm = simulate_ema_single(sub_closes, C, B0_MID_BOUND, seed, dt)
+    for u1 in cand_u1:
+        C_test = u1 * dt / 8.0
+        cm = simulate_ema_single(sub_closes, C_test, B0_MID_CENTER, seed, dt)
+        bm = simulate_ema_single(sub_closes, C_test, B0_MID_BOUND, seed, dt)
         penetrated = False
         for c, c_val, b_val in zip(sub_closes[1:], cm[1:], bm[1:]):
             if is_bear and c > min(c_val, b_val):
@@ -160,17 +164,20 @@ def calculate_character_generative(bars: list, dt: int = 60) -> float:
                 
         caps = (min(cm[-1], bm[-1]) >= end_wick - 0.25) if is_bear else (end_wick >= max(cm[-1], bm[-1]) - 0.25)
         if caps and not penetrated:
-            margin = (min(cm[-1], bm[-1]) - end_wick) if is_bear else (end_wick - max(cm[-1], bm[-1]))
-            valid_mid.append((C, margin))
+            valid_mid.append(u1)
             
     if valid_mid:
-        return float(min(valid_mid, key=lambda x: abs(x[0] - c_base))[0])
+        best_u1 = valid_mid[0]
+        return float(round(best_u1 * dt / 8.0))
         
-    # 6. Fallback a la nube Lenta (b0 = 24)
+    # 6. Fallback a la Nube Lenta (b0 = 24.0)
+    cand_u0 = list(range(max(1, u0_base - 4), u0_base + 5))
+    cand_u0.sort(key=lambda u: abs(u - u0_base))
     valid_slow = []
-    for C in candidates:
-        cs = simulate_ema_single(sub_closes, C, B0_SLOW_CENTER, seed, dt)
-        bs = simulate_ema_single(sub_closes, C, B0_SLOW_BOUND, seed, dt)
+    for u0 in cand_u0:
+        C_test = 3 * u0 * dt / 8.0
+        cs = simulate_ema_single(sub_closes, C_test, B0_SLOW_CENTER, seed, dt)
+        bs = simulate_ema_single(sub_closes, C_test, B0_SLOW_BOUND, seed, dt)
         penetrated = False
         for c, c_val, b_val in zip(sub_closes[1:], cs[1:], bs[1:]):
             if is_bear and c > min(c_val, b_val):
@@ -180,11 +187,11 @@ def calculate_character_generative(bars: list, dt: int = 60) -> float:
                 
         caps = (min(cs[-1], bs[-1]) >= end_wick - 0.25) if is_bear else (end_wick >= max(cs[-1], bs[-1]) - 0.25)
         if caps and not penetrated:
-            margin = (min(cs[-1], bs[-1]) - end_wick) if is_bear else (end_wick - max(cs[-1], bs[-1]))
-            valid_slow.append((C, margin))
+            valid_slow.append(u0)
             
     if valid_slow:
-        return float(min(valid_slow, key=lambda x: abs(x[0] - c_base))[0])
+        best_u0 = valid_slow[0]
+        return float(round(3 * best_u0 * dt / 8.0))
         
     return float(c_base)
 

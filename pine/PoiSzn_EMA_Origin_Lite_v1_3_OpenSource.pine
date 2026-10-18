@@ -154,20 +154,24 @@ if mode_C == "Auto (Universal: Corto n<21 / Selector Estructural n>=21)"
         int leg_len = is_bearish ? k_H : k_L
         int eff_bars = math.max(1, n_source_inclusive - leg_len)
         
-        // Búsqueda en la celosía armónica discreta de potencias de 3 (pasos de 3s en base 3)
+        // Búsqueda en la celosía armónica discreta de lookbacks enteros de Nube Media u1 (N_mid = round(C * 8 / dt))
         // "Auto tries the middle cloud first and uses the slow cloud when no range carries the middle-cloud Character"
         float best_c = C_base
         float min_dist_mid = 100000.0
         bool found_mid = false
         
+        int u1_base = math.max(3, math.round(C_base * 8.0 / dt_fuente))
+        int u0_base = math.max(1, math.round(float(u1_base) / 3.0))
+        
         // 1. Evaluación de Nube Media (b0 = 8.0)
-        for k_step = -12 to 15
-            float cand_c = C_base + float(k_step) * 3.0
-            if cand_c >= dt_fuente
-                float alpha_mid = 2.0 / (8.0 * (cand_c / dt_fuente) + 1.0)
+        for k_step = -10 to 12
+            int cand_u1 = u1_base + k_step
+            if cand_u1 >= 3
+                float alpha_mid = 2.0 / (float(cand_u1) + 1.0)
                 float decay = math.pow(1.0 - alpha_mid, eff_bars)
                 float ema_mid = seed_price + (1.0 - decay) * (nz(end_candle_close, close) - seed_price)
                 float margin = is_bearish ? (ema_mid - wick_price) : (wick_price - ema_mid)
+                float cand_c = math.round(float(cand_u1) * dt_fuente / 8.0)
                 if margin >= -0.25 and math.abs(cand_c - C_base) < min_dist_mid
                     min_dist_mid := math.abs(cand_c - C_base)
                     best_c := cand_c
@@ -176,13 +180,14 @@ if mode_C == "Auto (Universal: Corto n<21 / Selector Estructural n>=21)"
         // 2. Fallback a Nube Lenta (b0 = 24.0) si ninguna intermedia contiene el Character
         if not found_mid
             float min_dist_slow = 100000.0
-            for k_step = -12 to 15
-                float cand_c = C_base + float(k_step) * 3.0
-                if cand_c >= dt_fuente
-                    float alpha_slow = 2.0 / (24.0 * (cand_c / dt_fuente) + 1.0)
+            for k_step = -4 to 5
+                int cand_u0 = u0_base + k_step
+                if cand_u0 >= 1
+                    float alpha_slow = 2.0 / (float(cand_u0) + 1.0)
                     float decay = math.pow(1.0 - alpha_slow, eff_bars)
                     float ema_slow = seed_price + (1.0 - decay) * (nz(end_candle_close, close) - seed_price)
                     float margin = is_bearish ? (ema_slow - wick_price) : (wick_price - ema_slow)
+                    float cand_c = math.round(float(3 * cand_u0) * dt_fuente / 8.0)
                     if margin >= -0.25 and math.abs(cand_c - C_base) < min_dist_slow
                         min_dist_slow := math.abs(cand_c - C_base)
                         best_c := cand_c
