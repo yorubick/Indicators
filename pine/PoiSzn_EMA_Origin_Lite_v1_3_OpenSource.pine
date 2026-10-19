@@ -24,10 +24,13 @@ mode_C      = input.string("Auto (Universal: Corto n<21 / Selector Estructural n
                        "Manual C (Calibración Directa)"], group=grp_model)
 harmonic_k  = input.int(0, "Paso Armónico k en unidades de 3s (Manual Override, 0 = Automático)", minval=-25, maxval=25, group=grp_model)
 manual_C    = input.float(87.0, "C Manual (segundos)", minval=1.0, step=1.0, group=grp_model)
+draw_mode   = input.string("Inmediato desde END (Character Tree)", "Modo de Dibujo de Nubes", options=["Inmediato desde END (Character Tree)", "Esperar Ruptura de Caja (PoiSzn Lite)"], group=grp_model)
+setup_dir   = input.string("Auto", "Dirección del Setup (Modo Inmediato)", options=["Auto", "Bullish", "Bearish"], group=grp_model)
 
 grp_visual  = "3. Visualización y Gráfico"
 show_box    = input.bool(true, "Dibujar Caja de Rango y Semilla", group=grp_visual)
 show_clouds = input.bool(true, "Rellenar Nubes de Tendencia (Lanes)", group=grp_visual)
+show_extra_clouds = input.bool(false, "Mostrar Nubes Extra 1 y 2 (Character Tree Completo)", group=grp_visual)
 show_hud    = input.bool(true, "Mostrar Panel HUD de Telemetría", group=grp_visual)
 hud_pos_str = input.string("Abajo Derecha", "Posición HUD", options=["Arriba Derecha", "Abajo Derecha", "Arriba Izquierda", "Abajo Izquierda"], group=grp_visual)
 
@@ -216,37 +219,60 @@ else if mode_C == "Manual C (Calibración Directa)"
     basin_event := "Manual Fijo"
 
 // ============================================================================
-// 4. FACTORES BASE Y ALPHAS DE LAS 6 CURVAS OFICIALES
+// 4. FACTORES BASE Y ALPHAS DE LAS 10 CURVAS (CHARACTER TREE & POISZN LITE)
 // ============================================================================
-// Factores de escala temporal exacta b0:
-// Lane 3 A (Fast): 24.0          Lane 3 B (Slow): 89 / 3 ≈ 29.6667
-// Lane 2 A (Fast): 8.0           Lane 2 B (Slow): 89 / 9 ≈ 9.8889
-// Lane 1 A (Fast): 8 / 3 ≈ 2.6667 Lane 1 B (Slow): 89 / 27 ≈ 3.2963
+// Lookback central base (Middle Center):
+// N_mid = round(C * 8 / dt)
+int N_mid_c = math.max(3, math.round(C * (8.0 / dt_fuente)))
+int N_mid_b = math.max(3, math.round(float(N_mid_c) * 1.25))
 
-b_3a = 24.0
-b_3b = 89.0 / 3.0
-b_2a = 8.0
-b_2b = 89.0 / 9.0
-b_1a = 8.0 / 3.0
-b_1b = 89.0 / 27.0
+// Recurrencia armónica oficial en base 3 demostrada de TCMTrader1:
+// Lane 1 (Slow): u0 = round(u1 / 3), v0 = round(v1 / 3)
+int u0 = math.max(1, math.round(float(N_mid_c) / 3.0))
+int v0 = math.max(1, math.round(float(N_mid_b) / 3.0))
 
-alpha_3a = 2.0 / ((b_3a * C / dt_fuente) + 1.0)
-alpha_3b = 2.0 / ((b_3b * C / dt_fuente) + 1.0)
-alpha_2a = 2.0 / ((b_2a * C / dt_fuente) + 1.0)
-alpha_2b = 2.0 / ((b_2b * C / dt_fuente) + 1.0)
-alpha_1a = 2.0 / ((b_1a * C / dt_fuente) + 1.0)
-alpha_1b = 2.0 / ((b_1b * C / dt_fuente) + 1.0)
+// Lane 2 (Middle): u1 = 3 * u0, v1 = 3 * v0
+int u1 = 3 * u0
+int v1 = 3 * v0
+
+// Lane 3 (Fast): u2 = 3 * u1 - 1, v2 = 3 * v1 - 1
+int u2 = 3 * u1 - 1
+int v2 = 3 * v1 - 1
+
+// Lane 4 (Extra 1 - Character Tree): u3 = 3 * u2 + 1, v3 = 3 * v2 - 1
+int u3 = 3 * u2 + 1
+int v3 = 3 * v2 - 1
+
+// Lane 5 (Extra 2 - Character Tree): u4 = 3 * u3 - 1, v4 = 3 * v3 - 1
+int u4 = 3 * u3 - 1
+int v4 = 3 * v3 - 1
+
+// Factores alpha correspondientes a cada período entero N
+alpha_1a = 2.0 / (float(u0) + 1.0)
+alpha_1b = 2.0 / (float(v0) + 1.0)
+alpha_2a = 2.0 / (float(u1) + 1.0)
+alpha_2b = 2.0 / (float(v1) + 1.0)
+alpha_3a = 2.0 / (float(u2) + 1.0)
+alpha_3b = 2.0 / (float(v2) + 1.0)
+alpha_4a = 2.0 / (float(u3) + 1.0)
+alpha_4b = 2.0 / (float(v3) + 1.0)
+alpha_5a = 2.0 / (float(u4) + 1.0)
+alpha_5b = 2.0 / (float(v4) + 1.0)
 
 // Períodos nominales equivalentes (N)
-N_3a = math.round(b_3a * C / dt_fuente)
-N_3b = math.round(b_3b * C / dt_fuente)
-N_2a = math.round(b_2a * C / dt_fuente)
-N_2b = math.round(b_2b * C / dt_fuente)
-N_1a = math.round(b_1a * C / dt_fuente)
-N_1b = math.round(b_1b * C / dt_fuente)
+N_1a = u0
+N_1b = v0
+N_2a = u1
+N_2b = v1
+N_3a = u2
+N_3b = v2
+N_4a = u3
+N_4b = v3
+N_5a = u4
+N_5b = v4
 
 // ============================================================================
-// 5. COMPUERTA DE RUPTURA, SEMILLA Y RECURRENCIA EMA
+// 5. COMPUERTA DE RUPTURA, SEMILLA Y RECURRENCIA EMA (10 CURVAS)
 // ============================================================================
 var bool  has_broken_out = false
 var int   breakout_dir   = 0     // +1: Alcista, -1: Bajista
@@ -259,6 +285,10 @@ var float s_bull_2a = na
 var float s_bull_2b = na
 var float s_bull_1a = na
 var float s_bull_1b = na
+var float s_bull_4a = na
+var float s_bull_4b = na
+var float s_bull_5a = na
+var float s_bull_5b = na
 
 var float s_bear_3a = na
 var float s_bear_3b = na
@@ -266,12 +296,30 @@ var float s_bear_2a = na
 var float s_bear_2b = na
 var float s_bear_1a = na
 var float s_bear_1b = na
+var float s_bear_4a = na
+var float s_bear_4b = na
+var float s_bear_5a = na
+var float s_bear_5b = na
 
 // Inicialización de Semilla en la barra de END
 if is_end_bar
-    has_broken_out := false
-    breakout_dir   := 0
-    chosen_seed    := na
+    // Determinar dirección del setup
+    bool is_bearish_setup = false
+    if setup_dir == "Bearish"
+        is_bearish_setup := true
+    else if setup_dir == "Bullish"
+        is_bearish_setup := false
+    else // "Auto" (TCMTrader1 Character Tree: upper half = bearish, lower half = bullish)
+        is_bearish_setup := nz(end_candle_close, close) >= ((nz(range_high, high) + nz(range_low, low)) / 2.0)
+
+    if draw_mode == "Inmediato desde END (Character Tree)"
+        has_broken_out := true
+        breakout_dir   := is_bearish_setup ? -1 : 1
+        chosen_seed    := is_bearish_setup ? end_candle_high : end_candle_low
+    else
+        has_broken_out := false
+        breakout_dir   := 0
+        chosen_seed    := na
     
     // Alcista: Semilla = Low de END
     s_bull_3a := end_candle_low
@@ -280,6 +328,10 @@ if is_end_bar
     s_bull_2b := end_candle_low
     s_bull_1a := end_candle_low
     s_bull_1b := end_candle_low
+    s_bull_4a := end_candle_low
+    s_bull_4b := end_candle_low
+    s_bull_5a := end_candle_low
+    s_bull_5b := end_candle_low
 
     // Bajista: Semilla = High de END
     s_bear_3a := end_candle_high
@@ -288,6 +340,10 @@ if is_end_bar
     s_bear_2b := end_candle_high
     s_bear_1a := end_candle_high
     s_bear_1b := end_candle_high
+    s_bear_4a := end_candle_high
+    s_bear_4b := end_candle_high
+    s_bear_5a := end_candle_high
+    s_bear_5b := end_candle_high
 
 // Actualización recurrente barra a barra tras END
 if is_post_end
@@ -302,6 +358,10 @@ if is_post_end
             s_bull_2b := s_bull_2b + alpha_2b * (sc - s_bull_2b)
             s_bull_1a := s_bull_1a + alpha_1a * (sc - s_bull_1a)
             s_bull_1b := s_bull_1b + alpha_1b * (sc - s_bull_1b)
+            s_bull_4a := s_bull_4a + alpha_4a * (sc - s_bull_4a)
+            s_bull_4b := s_bull_4b + alpha_4b * (sc - s_bull_4b)
+            s_bull_5a := s_bull_5a + alpha_5a * (sc - s_bull_5a)
+            s_bull_5b := s_bull_5b + alpha_5b * (sc - s_bull_5b)
 
             s_bear_3a := s_bear_3a + alpha_3a * (sc - s_bear_3a)
             s_bear_3b := s_bear_3b + alpha_3b * (sc - s_bear_3b)
@@ -309,6 +369,10 @@ if is_post_end
             s_bear_2b := s_bear_2b + alpha_2b * (sc - s_bear_2b)
             s_bear_1a := s_bear_1a + alpha_1a * (sc - s_bear_1a)
             s_bear_1b := s_bear_1b + alpha_1b * (sc - s_bear_1b)
+            s_bear_4a := s_bear_4a + alpha_4a * (sc - s_bear_4a)
+            s_bear_4b := s_bear_4b + alpha_4b * (sc - s_bear_4b)
+            s_bear_5a := s_bear_5a + alpha_5a * (sc - s_bear_5a)
+            s_bear_5b := s_bear_5b + alpha_5b * (sc - s_bear_5b)
     else
         // Actualización estándar contra el cierre de la barra actual
         s_bull_3a := s_bull_3a + alpha_3a * (close - s_bull_3a)
@@ -317,6 +381,10 @@ if is_post_end
         s_bull_2b := s_bull_2b + alpha_2b * (close - s_bull_2b)
         s_bull_1a := s_bull_1a + alpha_1a * (close - s_bull_1a)
         s_bull_1b := s_bull_1b + alpha_1b * (close - s_bull_1b)
+        s_bull_4a := s_bull_4a + alpha_4a * (close - s_bull_4a)
+        s_bull_4b := s_bull_4b + alpha_4b * (close - s_bull_4b)
+        s_bull_5a := s_bull_5a + alpha_5a * (close - s_bull_5a)
+        s_bull_5b := s_bull_5b + alpha_5b * (close - s_bull_5b)
 
         s_bear_3a := s_bear_3a + alpha_3a * (close - s_bear_3a)
         s_bear_3b := s_bear_3b + alpha_3b * (close - s_bear_3b)
@@ -324,9 +392,13 @@ if is_post_end
         s_bear_2b := s_bear_2b + alpha_2b * (close - s_bear_2b)
         s_bear_1a := s_bear_1a + alpha_1a * (close - s_bear_1a)
         s_bear_1b := s_bear_1b + alpha_1b * (close - s_bear_1b)
+        s_bear_4a := s_bear_4a + alpha_4a * (close - s_bear_4a)
+        s_bear_4b := s_bear_4b + alpha_4b * (close - s_bear_4b)
+        s_bear_5a := s_bear_5a + alpha_5a * (close - s_bear_5a)
+        s_bear_5b := s_bear_5b + alpha_5b * (close - s_bear_5b)
 
-    // Detección de Ruptura de Rango (Compuerta Booleana)
-    if not has_broken_out
+    // Detección de Ruptura de Rango (Compuerta Booleana para modo PoiSzn Lite)
+    if not has_broken_out and (draw_mode == "Esperar Ruptura de Caja (PoiSzn Lite)")
         if close > range_high
             has_broken_out := true
             breakout_dir   := 1
@@ -337,7 +409,7 @@ if is_post_end
             chosen_seed    := end_candle_high
 
 // ============================================================================
-// 6. ASIGNACIÓN Y RENDERIZADO DE CURVAS ACTIVAS
+// 6. ASIGNACIÓN Y RENDERIZADO DE CURVAS ACTIVAS (10 CURVAS)
 // ============================================================================
 float lane_3a = na
 float lane_3b = na
@@ -345,6 +417,10 @@ float lane_2a = na
 float lane_2b = na
 float lane_1a = na
 float lane_1b = na
+float lane_4a = na
+float lane_4b = na
+float lane_5a = na
+float lane_5b = na
 
 if is_post_end and has_broken_out
     if breakout_dir == 1
@@ -354,6 +430,10 @@ if is_post_end and has_broken_out
         lane_2b := s_bull_2b
         lane_1a := s_bull_1a
         lane_1b := s_bull_1b
+        lane_4a := s_bull_4a
+        lane_4b := s_bull_4b
+        lane_5a := s_bull_5a
+        lane_5b := s_bull_5b
     else if breakout_dir == -1
         lane_3a := s_bear_3a
         lane_3b := s_bear_3b
@@ -361,28 +441,44 @@ if is_post_end and has_broken_out
         lane_2b := s_bear_2b
         lane_1a := s_bear_1a
         lane_1b := s_bear_1b
+        lane_4a := s_bear_4a
+        lane_4b := s_bear_4b
+        lane_5a := s_bear_5a
+        lane_5b := s_bear_5b
 
-// Paleta Oficial de PoiSzn EMA Origin Lite
-c_lane3 = color.new(#00e5ff, 15)  // Cyan oficial (Lane 3)
-c_lane2 = color.new(#2979ff, 15)  // Azul oficial (Lane 2)
-c_lane1 = color.new(#d500f9, 15)  // Magenta / Púrpura oficial (Lane 1)
+// Paleta Oficial de PoiSzn EMA Origin Lite & Character Tree
+c_lane3 = color.new(#00e5ff, 15)  // Cyan oficial (Lane 3 Fast)
+c_lane2 = color.new(#2979ff, 15)  // Azul oficial (Lane 2 Mid)
+c_lane1 = color.new(#d500f9, 15)  // Magenta / Púrpura oficial (Lane 1 Slow)
+c_lane4 = color.new(#4caf50, 15)  // Verde oficial (Lane 4 Extra 1 - Character Tree)
+c_lane5 = color.new(#ff9800, 15)  // Naranja oficial (Lane 5 Extra 2 - Character Tree)
 
-// Trazado de las 6 líneas
-p_3a = plot(lane_3a, "Lane 3 A (Fast)", color=c_lane3, linewidth=2)
-p_3b = plot(lane_3b, "Lane 3 B (Slow)", color=c_lane3, linewidth=1)
-p_2a = plot(lane_2a, "Lane 2 A (Fast)", color=c_lane2, linewidth=2)
-p_2b = plot(lane_2b, "Lane 2 B (Slow)", color=c_lane2, linewidth=1)
-p_1a = plot(lane_1a, "Lane 1 A (Fast)", color=c_lane1, linewidth=2)
-p_1b = plot(lane_1b, "Lane 1 B (Slow)", color=c_lane1, linewidth=1)
+// Trazado de las 6 líneas base
+p_3a = plot(lane_3a, "Lane 3 A (Fast Center)", color=c_lane3, linewidth=2)
+p_3b = plot(lane_3b, "Lane 3 B (Fast Boundary)", color=c_lane3, linewidth=1)
+p_2a = plot(lane_2a, "Lane 2 A (Mid Center)", color=c_lane2, linewidth=2)
+p_2b = plot(lane_2b, "Lane 2 B (Mid Boundary)", color=c_lane2, linewidth=1)
+p_1a = plot(lane_1a, "Lane 1 A (Slow Center)", color=c_lane1, linewidth=2)
+p_1b = plot(lane_1b, "Lane 1 B (Slow Boundary)", color=c_lane1, linewidth=1)
+
+// Trazado de las 4 líneas extra de Character Tree (Lanes 4 y 5)
+p_4a = plot(show_extra_clouds ? lane_4a : na, "Lane 4 A (Extra 1 Center)", color=c_lane4, linewidth=2)
+p_4b = plot(show_extra_clouds ? lane_4b : na, "Lane 4 B (Extra 1 Boundary)", color=c_lane4, linewidth=1)
+p_5a = plot(show_extra_clouds ? lane_5a : na, "Lane 5 A (Extra 2 Center)", color=c_lane5, linewidth=2)
+p_5b = plot(show_extra_clouds ? lane_5b : na, "Lane 5 B (Extra 2 Boundary)", color=c_lane5, linewidth=1)
 
 // Relleno de nubes (colores condicionales en ámbito global)
 color c_fill_3 = show_clouds ? color.new(#00e5ff, 82) : na
 color c_fill_2 = show_clouds ? color.new(#2979ff, 82) : na
 color c_fill_1 = show_clouds ? color.new(#d500f9, 82) : na
+color c_fill_4 = (show_clouds and show_extra_clouds) ? color.new(#4caf50, 82) : na
+color c_fill_5 = (show_clouds and show_extra_clouds) ? color.new(#ff9800, 82) : na
 
-fill(p_3a, p_3b, color=c_fill_3, title="Nube Lane 3")
-fill(p_2a, p_2b, color=c_fill_2, title="Nube Lane 2")
-fill(p_1a, p_1b, color=c_fill_1, title="Nube Lane 1")
+fill(p_3a, p_3b, color=c_fill_3, title="Nube Lane 3 (Fast)")
+fill(p_2a, p_2b, color=c_fill_2, title="Nube Lane 2 (Mid)")
+fill(p_1a, p_1b, color=c_fill_1, title="Nube Lane 1 (Slow)")
+fill(p_4a, p_4b, color=c_fill_4, title="Nube Lane 4 (Extra 1)")
+fill(p_5a, p_5b, color=c_fill_5, title="Nube Lane 5 (Extra 2)")
 
 // ============================================================================
 // 7. CAJA DE RANGO Y ANCLAS VISUALES
@@ -409,9 +505,10 @@ if show_hud and barstate.islast
     else if hud_pos_str == "Abajo Izquierda"
         table_pos := position.bottom_left
 
-    hud := table.new(table_pos, 2, 10, bgcolor=color.new(#131722, 10), border_color=color.gray, border_width=1)
+    hud := table.new(table_pos, 2, 11, bgcolor=color.new(#131722, 10), border_color=color.gray, border_width=1)
     
-    table.cell(hud, 0, 0, "POISZN LITE v1.3", bgcolor=color.new(#2979ff, 20), text_color=color.white, text_size=size.small)
+    string header_title = (draw_mode == "Inmediato desde END (Character Tree)") ? "CHARACTER TREE v6.5" : "POISZN LITE v1.3"
+    table.cell(hud, 0, 0, header_title, bgcolor=color.new(#2979ff, 20), text_color=color.white, text_size=size.small)
     table.cell(hud, 1, 0, "TELEMETRÍA", bgcolor=color.new(#2979ff, 20), text_color=color.white, text_size=size.small)
 
     table.cell(hud, 0, 1, "C (segundos)", text_color=color.white, text_size=size.small)
@@ -430,17 +527,23 @@ if show_hud and barstate.islast
     table.cell(hud, 0, 5, "Semilla END", text_color=color.white, text_size=size.small)
     table.cell(hud, 1, 5, na(chosen_seed) ? "Esperando Ruptura" : str.tostring(chosen_seed, "#.2f"), text_color=color.white, text_size=size.small)
 
-    table.cell(hud, 0, 6, "Estado Compuerta", text_color=color.white, text_size=size.small)
-    string st_break = has_broken_out ? (breakout_dir == 1 ? "ACTIVA (Alcista)" : "ACTIVA (Bajista)") : "INACTIVA (Sin Ruptura)"
+    table.cell(hud, 0, 6, "Modo / Compuerta", text_color=color.white, text_size=size.small)
+    string st_break = (draw_mode == "Inmediato desde END (Character Tree)") ? 
+         ("INMEDIATO (" + (breakout_dir == 1 ? "Alcista" : "Bajista") + ")") : 
+         (has_broken_out ? (breakout_dir == 1 ? "ACTIVA (Alcista)" : "ACTIVA (Bajista)") : "INACTIVA (Sin Ruptura)")
     color col_break = has_broken_out ? color.green : color.orange
     table.cell(hud, 1, 6, st_break, text_color=col_break, text_size=size.small)
 
-    table.cell(hud, 0, 7, "Períodos N (3A/2A/1A)", text_color=color.white, text_size=size.small)
-    table.cell(hud, 1, 7, str.tostring(N_3a) + " / " + str.tostring(N_2a) + " / " + str.tostring(N_1a), text_color=color.white, text_size=size.small)
+    table.cell(hud, 0, 7, "Períodos N Base", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 7, "Slow: " + str.tostring(N_1a) + "/" + str.tostring(N_1b) + " | Mid: " + str.tostring(N_2a) + "/" + str.tostring(N_2b) + " | Fast: " + str.tostring(N_3a) + "/" + str.tostring(N_3b), text_color=color.white, text_size=size.small)
 
-    table.cell(hud, 0, 8, "Lectura Lane 1A / 3A", text_color=color.white, text_size=size.small)
+    table.cell(hud, 0, 8, "Períodos N Extra (CT)", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 8, "Ex1: " + str.tostring(N_4a) + "/" + str.tostring(N_4b) + " | Ex2: " + str.tostring(N_5a) + "/" + str.tostring(N_5b), text_color=color.white, text_size=size.small)
+
+    table.cell(hud, 0, 9, "Lectura Slow / Fast", text_color=color.white, text_size=size.small)
     string txt_lanes = na(lane_1a) ? "∅" : (str.tostring(lane_1a, "#.2f") + " | " + str.tostring(lane_3a, "#.2f"))
-    table.cell(hud, 1, 8, txt_lanes, text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 9, txt_lanes, text_color=color.white, text_size=size.small)
 
-    table.cell(hud, 0, 9, "Cuenca Estructural", text_color=color.white, text_size=size.small)
-    table.cell(hud, 1, 9, basin_event, text_color=color.orange, text_size=size.small)
+    table.cell(hud, 0, 10, "Cuenca Estructural", text_color=color.white, text_size=size.small)
+    table.cell(hud, 1, 10, basin_event, text_color=color.orange, text_size=size.small)
+
