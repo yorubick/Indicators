@@ -16,13 +16,12 @@ end_time    = input.time(timestamp("2026-10-12 19:33:00"), "Fecha/Hora END (UTC)
 source_res  = input.string("15S", "Resolución de Fuente Interna", options=["15S", "1m", "2m", "3m", "5m", "Chart"], group=grp_anchors)
 
 grp_model   = "2. Operador Matemático de C"
-mode_C      = input.string("Auto (Universal: Corto n<21 / Selector Estructural n>=21)", "Modo de Selección de C",
-              options=["Auto (Universal: Corto n<21 / Selector Estructural n>=21)",
+mode_C      = input.string("Auto (Universal: Corto n<21 / Celosía R23 n>=21)", "Modo de Selección de C",
+              options=["Auto (Universal: Corto n<21 / Celosía R23 n>=21)",
+                       "Suelo Inviolable R13: floor(T / 25)",
                        "Base Macroscópica: round(T / 18.3)",
-                       "Régimen Corto Puro: max(dt, n*dt*10/183)",
-                       "Celosía Armónica: Base + k*3s",
                        "Manual C (Calibración Directa)"], group=grp_model)
-harmonic_k  = input.int(0, "Paso Armónico k en unidades de 3s (Manual Override, 0 = Automático)", minval=-25, maxval=25, group=grp_model)
+harmonic_k  = input.int(0, "Paso Armónico k en unidades cuánticas s=floor(T/703) (0 = Auto)", minval=-25, maxval=50, group=grp_model)
 manual_C    = input.float(87.0, "C Manual (segundos)", minval=1.0, step=1.0, group=grp_model)
 draw_mode   = input.string("Inmediato desde END (Character Tree)", "Modo de Dibujo de Nubes", options=["Inmediato desde END (Character Tree)", "Esperar Ruptura de Caja (PoiSzn Lite)"], group=grp_model)
 setup_dir   = input.string("Auto", "Dirección del Setup (Modo Inmediato)", options=["Auto", "Bullish", "Bearish"], group=grp_model)
@@ -137,82 +136,34 @@ int k_L = not na(end_bar_index) and not na(range_low_idx) ? (end_bar_index - ran
 int h_idx = not na(range_high_idx) and not na(end_bar_index) ? ((n_bars - 1) - k_H) : 0
 
 // Cálculo del Operador según el Régimen
-if mode_C == "Auto (Universal: Corto n<21 / Selector Estructural n>=21)"
-    // 1. Régimen Corto Continuo (n_inclusivo < 21 barras): Ley Analítica Exacta Universal
+float T_calc = duration_T_inclusive
+int   F_suelo = int(math.floor(T_calc / 25.0))
+int   s_cuanto = math.max(1, int(math.floor(T_calc / 703.0)))
+
+if mode_C == "Auto (Universal: Corto n<21 / Celosía R23 n>=21)"
+    // 1. Régimen Corto Continuo (n_inclusivo < 21 barras): Ley Analítica Exacta Universal (R2)
     if n_source_inclusive < 21
-        C := math.max(dt_fuente, (duration_T_inclusive * 10.0) / 183.0)
-        branch_name := "Corto_Continuo (n=" + str.tostring(n_source_inclusive) + "<21, Exacto)"
+        C := math.max(dt_fuente, (T_calc * 10.0) / 183.0)
+        branch_name := "Corto_Continuo (n=" + str.tostring(n_source_inclusive) + "<21, Exacto R2)"
         basin_event := "Fase Continua"
     else
-        // 2. Régimen Largo Discreto (n_inclusivo >= 21 barras): Motor Físico Generativo de Capping
-        // Anclaje macroscópico temporal universal sobre duración transcurrida T = (n - 1) * dt (18.3 s/s)
-        float C_base = math.max(dt_fuente, float(math.round((duration_T_elapsed * 10.0) / 183.0)))
-        float C_val = C_base
+        // 2. Régimen Largo Cuántico Discreto (n_inclusivo >= 21 barras): Red Cand(T) R13/R18/R23
+        // Base macroscópica de anclaje (18.3 s/s) proyectada a la celosía cuántica de paso s
+        float C_macro = math.max(float(F_suelo), float(math.round((T_calc * 10.0) / 183.0)))
+        int k_base = math.max(0, int(math.round((C_macro - float(F_suelo)) / float(s_cuanto))))
+        int k_final = math.max(0, k_base + harmonic_k)
         
-        // Polaridad y origen del impulso según tooltip de TCMTrader1:
-        // "Auto reads where END sits in the box (upper half = bearish, lower half = bullish)"
-        bool is_bearish = nz(end_candle_close, close) >= ((nz(range_high, high) + nz(range_low, low)) / 2.0)
-        float seed_price = is_bearish ? nz(range_high, high) : nz(range_low, low)
-        float wick_price = is_bearish ? nz(end_candle_high, high) : nz(end_candle_low, low)
-        int leg_len = is_bearish ? k_H : k_L
-        int eff_bars = math.max(1, n_source_inclusive - leg_len)
-        
-        // Búsqueda en la celosía armónica discreta de lookbacks enteros de Nube Media u1 (N_mid = round(C * 8 / dt))
-        // "Auto tries the middle cloud first and uses the slow cloud when no range carries the middle-cloud Character"
-        float best_c = C_base
-        float min_dist_mid = 100000.0
-        bool found_mid = false
-        
-        int u1_base = math.max(3, math.round(C_base * 8.0 / dt_fuente))
-        int u0_base = math.max(1, math.round(float(u1_base) / 3.0))
-        
-        // 1. Evaluación de Nube Media (b0 = 8.0)
-        for k_step = -10 to 12
-            int cand_u1 = u1_base + k_step
-            if cand_u1 >= 3
-                float alpha_mid = 2.0 / (float(cand_u1) + 1.0)
-                float decay = math.pow(1.0 - alpha_mid, eff_bars)
-                float ema_mid = seed_price + (1.0 - decay) * (nz(end_candle_close, close) - seed_price)
-                float margin = is_bearish ? (ema_mid - wick_price) : (wick_price - ema_mid)
-                float cand_c = math.round(float(cand_u1) * dt_fuente / 8.0)
-                if margin >= -0.25 and math.abs(cand_c - C_base) < min_dist_mid
-                    min_dist_mid := math.abs(cand_c - C_base)
-                    best_c := cand_c
-                    found_mid := true
-                    
-        // 2. Fallback a Nube Lenta (b0 = 24.0) si ninguna intermedia contiene el Character
-        if not found_mid
-            float min_dist_slow = 100000.0
-            for k_step = -4 to 5
-                int cand_u0 = u0_base + k_step
-                if cand_u0 >= 1
-                    float alpha_slow = 2.0 / (float(cand_u0) + 1.0)
-                    float decay = math.pow(1.0 - alpha_slow, eff_bars)
-                    float ema_slow = seed_price + (1.0 - decay) * (nz(end_candle_close, close) - seed_price)
-                    float margin = is_bearish ? (ema_slow - wick_price) : (wick_price - ema_slow)
-                    float cand_c = math.round(float(3 * cand_u0) * dt_fuente / 8.0)
-                    if margin >= -0.25 and math.abs(cand_c - C_base) < min_dist_slow
-                        min_dist_slow := math.abs(cand_c - C_base)
-                        best_c := cand_c
-                    
-        C_val := best_c
-        float delta_override = harmonic_k != 0 ? (float(harmonic_k) * 3.0) : 0.0
-        C := math.round(C_val + delta_override)
-        branch_name := "Largo_Generativo (C=" + str.tostring(C, "#") + "s, n=" + str.tostring(n_source_inclusive) + ")"
-        basin_event := "Capping Armónico Base-3"
+        C := float(F_suelo + k_final * s_cuanto)
+        branch_name := "Largo_Celosía (C=" + str.tostring(C, "#") + "s, F=" + str.tostring(F_suelo) + ", s=" + str.tostring(s_cuanto) + ", k=" + str.tostring(k_final) + ")"
+        basin_event := "Celosía Cuántica R18/R23"
+else if mode_C == "Suelo Inviolable R13: floor(T / 25)"
+    C := float(F_suelo)
+    branch_name := "Suelo_Inviolable_R13 (" + str.tostring(F_suelo) + "s)"
+    basin_event := "Piso F = floor(T/25)"
 else if mode_C == "Base Macroscópica: round(T / 18.3)"
-    C := math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
-    branch_name := "Base_Macroscópica"
-    basin_event := "Base Pura"
-else if mode_C == "Régimen Corto Puro: max(dt, n*dt*10/183)"
-    C := math.max(dt_fuente, (duration_T_inclusive * 10.0) / 183.0)
-    branch_name := "Corto_Continuo_Puro"
-    basin_event := "Corto Puro"
-else if mode_C == "Celosía Armónica: Base + k*3s"
-    float C_base = math.max(dt_fuente, float(math.round((duration_T_inclusive * 10.0) / 183.0)))
-    C := C_base + (float(harmonic_k) * 3.0)
-    branch_name := "Celosía_Armónica_k3"
-    basin_event := "Manual k=" + str.tostring(harmonic_k)
+    C := math.max(float(F_suelo), float(math.round((T_calc * 10.0) / 183.0)))
+    branch_name := "Base_Macroscópica (T/18.3)"
+    basin_event := "Base Continua"
 else if mode_C == "Manual C (Calibración Directa)"
     C := manual_C
     branch_name := "Manual_Fijo (" + str.tostring(manual_C, "#") + "s)"
