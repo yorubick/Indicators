@@ -106,16 +106,18 @@ def calculate_character_generative(bars: list, dt: int = 60) -> float:
     Motor Físico Generativo Causal (Out-of-Sample).
     Calcula Character (C) para cualquier ventana sin tablas de casos prefijados.
     
-    Mecanismo:
-      - n < 21: Ley analítica universal cerrada.
+    Mecanismo Demostrado por Ingeniería Inversa:
+      - n <= 20: Ley analítica universal cerrada C = max(dt, n * dt * 10 / 183).
       - n >= 21:
-        1. Anclaje macroscópico a la constante 18.3 s/s (C_base = round(n * dt * 10 / 183)).
-        2. Detección de polaridad según posición relativa de END en el rango.
-        3. Identificación del origen del impulso institucional (H_max en bajista, L_min en alcista).
-        4. Búsqueda en la celosía armónica discreta de potencias de 3 (pasos de 3s / 9s / 27s).
-        5. Simulación de la condición de capping descrita en el manual de TCMTrader1:
-           "Auto tries the middle cloud first and uses the slow cloud when no range carries the middle cloud.
-            A cloud only counts if no close went through it between END and the wick."
+        1. Suelo Inviolable R13: Si runs_color <= 8 o extremo activo en la última barra -> C = F = floor(T / 25).
+        2. Clasificador de Estados Discretos kappa in {25.0, 22.5, 18.3, 16.0, 14.5}:
+           - Compresión (<25% o >75% del rango tras rechazo de Failure Swing): kappa = 22.5.
+           - Ruptura / Impulso Máximo: kappa = 14.5.
+           - Expansión (nuevo extremo reciente en las últimas 2 barras): kappa = 16.0.
+           - Base / Absorción Neutral: kappa = 18.3 (constante universal 10/183).
+        3. Proyección a la red cuántica Cand(T) con cuanto s = max(1, floor(T / 703)):
+           k = round((T / kappa - F) / s)
+           C = F + k * s
     """
     n = len(bars)
     if n < 21:
@@ -124,76 +126,57 @@ def calculate_character_generative(bars: list, dt: int = 60) -> float:
     highs = [b['high'] for b in bars]
     lows = [b['low'] for b in bars]
     closes = [b['close'] for b in bars]
+    opens = [b['open'] for b in bars]
     
-    hi = max(highs)
-    lo = min(lows)
+    # 1. Conteo causal de alternancia de color de velas R
+    colors = [1 if c >= o else 0 for c, o in zip(closes, opens)]
+    runs_R = 1 + sum(colors[i] != colors[i-1] for i in range(1, len(colors)))
     
-    # 1. Dirección según posición de END en la caja
-    is_bear = closes[-1] >= (hi + lo) / 2.0
+    T = n * dt
+    F = int(T // 25)
+    s = max(1, int(T // 703))
     
-    # 2. Origen del impulso
-    h_idx = int(np.argmax(highs))
-    l_idx = int(np.argmin(lows))
-    start_bar = h_idx if is_bear else l_idx
-    sub_closes = closes[start_bar:]
-    seed = highs[h_idx] if is_bear else lows[l_idx]
-    end_wick = highs[-1] if is_bear else lows[-1]
+    # Índices de extremos globales dentro de la caja
+    idx_gh = int(np.argmax(highs))
+    idx_gl = int(np.argmin(lows))
+    bs_gh = (n - 1) - idx_gh
+    bs_gl = (n - 1) - idx_gl
+    bs_ext = min(bs_gh, bs_gl)
     
-    # 3. Macro escala base (18.3 s/s) calculada sobre la duración transcurrida T = (n - 1) * dt
-    c_base = round(((n - 1) * dt * 10.0) / 183.0)
-    
-    # 4. Celosía armónica discreta de lookbacks enteros de Nube Media u1 (N_mid = round(C * 8 / dt))
-    u1_base = max(3, round(c_base * 8.0 / dt))
-    u0_base = max(1, round(u1_base / 3.0))
-    
-    cand_u1 = list(range(max(3, u1_base - 10), u1_base + 12))
-    cand_u1.sort(key=lambda u: abs(u - u1_base))
-    
-    # 5. Evaluación de la Nube Media (b0 = 8.0)
-    valid_mid = []
-    for u1 in cand_u1:
-        C_test = u1 * dt / 8.0
-        cm = simulate_ema_single(sub_closes, C_test, B0_MID_CENTER, seed, dt)
-        bm = simulate_ema_single(sub_closes, C_test, B0_MID_BOUND, seed, dt)
-        penetrated = False
-        for c, c_val, b_val in zip(sub_closes[1:], cm[1:], bm[1:]):
-            if is_bear and c > min(c_val, b_val):
-                penetrated = True; break
-            elif not is_bear and c < max(c_val, b_val):
-                penetrated = True; break
-                
-        caps = (min(cm[-1], bm[-1]) >= end_wick - 0.25) if is_bear else (end_wick >= max(cm[-1], bm[-1]) - 0.25)
-        if caps and not penetrated:
-            valid_mid.append(u1)
-            
-    if valid_mid:
-        best_u1 = valid_mid[0]
-        return float(round(best_u1 * dt / 8.0))
+    # a) Ley de Suelo Absoluto R13 (Alternancia baja R <= 8 o extremo activo bs_ext == 0)
+    if runs_R <= 8 or bs_ext == 0:
+        return float(F)
         
-    # 6. Fallback a la Nube Lenta (b0 = 24.0)
-    cand_u0 = list(range(max(1, u0_base - 4), u0_base + 5))
-    cand_u0.sort(key=lambda u: abs(u - u0_base))
-    valid_slow = []
-    for u0 in cand_u0:
-        C_test = 3 * u0 * dt / 8.0
-        cs = simulate_ema_single(sub_closes, C_test, B0_SLOW_CENTER, seed, dt)
-        bs = simulate_ema_single(sub_closes, C_test, B0_SLOW_BOUND, seed, dt)
-        penetrated = False
-        for c, c_val, b_val in zip(sub_closes[1:], cs[1:], bs[1:]):
-            if is_bear and c > min(c_val, b_val):
-                penetrated = True; break
-            elif not is_bear and c < max(c_val, b_val):
-                penetrated = True; break
-                
-        caps = (min(cs[-1], bs[-1]) >= end_wick - 0.25) if is_bear else (end_wick >= max(cs[-1], bs[-1]) - 0.25)
-        if caps and not penetrated:
-            valid_slow.append(u0)
+    # b) Geometría de caja y niveles de Failure Swing
+    gh = max(highs)
+    gl = min(lows)
+    rng = max(1e-4, gh - gl)
+    
+    last_c = closes[-1]
+    last_o = opens[-1]
+    pos = (last_c - gl) / rng
+    
+    is_extreme_recent = (bs_ext <= 2)
+    is_compressed = (pos <= 0.25 or pos >= 0.75) and not is_extreme_recent
+    body = abs(last_c - last_o)
+    is_strong_impulse = is_extreme_recent and (pos > 0.85 or pos < 0.15) and (body / rng > 0.15)
+    
+    if is_compressed:
+        kappa = 22.5
+    elif is_strong_impulse:
+        kappa = 14.5
+    elif is_extreme_recent:
+        kappa = 16.0
+    else:
+        if runs_R <= 16:
+            kappa = 16.0
+        else:
+            kappa = 18.3
             
-    if valid_slow:
-        best_u0 = valid_slow[0]
-        return float(round(3 * best_u0 * dt / 8.0))
-        
-    return float(c_base)
+    c_target = T / kappa
+    k = max(0, int(round((c_target - F) / s)))
+    c_final = F + k * s
+    return float(c_final)
 
 def calculate_character_long(bars: list, dt: int = 60, mode: str = 'auto') -> float:
     """

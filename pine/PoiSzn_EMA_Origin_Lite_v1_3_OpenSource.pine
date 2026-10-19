@@ -158,22 +158,48 @@ if mode_C == "Auto (Universal: Corto n<21 / Celosía R23 n>=21)"
         basin_event := "Fase Continua"
     else
         // 2. Régimen Largo Cuántico Discreto (n_inclusivo >= 21 barras): Red Cand(T) R13/R18/R23
-        if runs_color <= 8
-            // Ley de Suelo Absoluto para alternancia baja: R <= 8 -> C = F (100% exacto verificado)
+        // a) Ley de Suelo Absoluto: R <= 8 o extremo activo en la última barra sin Failure Swing formado (bs_ext == 0)
+        int bs_ext = math.min(k_H, k_L)
+        if runs_color <= 8 or bs_ext == 0
             C := float(F_suelo)
-            branch_name := "Largo_Suelo_R (R=" + str.tostring(runs_color) + "<=8, F=" + str.tostring(F_suelo) + "s)"
-            basin_event := "Suelo R13 por Alternancia Baja"
+            branch_name := "Largo_Suelo_R (F=" + str.tostring(F_suelo) + "s, R=" + str.tostring(runs_color) + ", bs=" + str.tostring(bs_ext) + ")"
+            basin_event := runs_color <= 8 ? "Suelo R13 por Alternancia Baja" : "Suelo por Extremo Activo (Sin Failure Swing)"
         else
-            // Base macroscópica (18.3 s/s) modulada por alternancia R y proyectada a la celosía cuántica Cand(T)
-            float C_macro = math.max(float(F_suelo), float(math.round((T_calc * 10.0) / 183.0)))
-            float factor_R = runs_color < 15 ? (0.4 + float(runs_color - 9) * 0.1) : (1.0 + float(runs_color - 15) * 0.04)
-            float target_mod = float(F_suelo) + (C_macro - float(F_suelo)) * factor_R
-            int k_base = math.max(0, int(math.round((target_mod - float(F_suelo)) / float(s_cuanto))))
+            // b) Clasificador Estructural de Regímenes Kappa {22.5, 18.3, 16.0, 14.5}
+            // Umbral del 25% de Failure Swing explícito en audio de formación de TCMTrader1
+            bool is_extreme_recent = bs_ext <= 2
+            bool is_compressed     = (close_pos <= 0.25 or close_pos >= 0.75) and not is_extreme_recent
+            bool is_max_impulse    = is_extreme_recent and (close_pos > 0.85 or close_pos < 0.15) and (end_body_ratio > 0.60)
+            
+            float kappa_regimen = 18.3 // Estado 3: Base Universal (10/183)
+            string regimen_str  = "Base_18.3"
+            
+            if is_compressed
+                kappa_regimen := 22.5 // Estado 4: Compresión / Rechazo Failure Swing
+                regimen_str   := "Compresión_22.5 (<25% Rango)"
+            else if is_max_impulse
+                kappa_regimen := 14.5 // Estado 1: Impulso Máximo
+                regimen_str   := "Impulso_14.5 (Ruptura Fuerte)"
+            else if is_extreme_recent
+                kappa_regimen := 16.0 // Estado 2: Expansión
+                regimen_str   := "Expansión_16.0 (Nuevo Extremo)"
+            else
+                // Modulación bi-estable por alternancia de color R
+                if runs_color <= 16
+                    kappa_regimen := 16.0 // Estado tendencial limpio
+                    regimen_str   := "Tendencial_16.0 (R<=16)"
+                else
+                    kappa_regimen := 18.3 // Estado absorción neutral
+                    regimen_str   := "Base_18.3 (R>16)"
+            
+            // c) Proyección a la celosía cuántica Cand(T) con cuanto s = floor(T / 703)
+            float c_target = T_calc / kappa_regimen
+            int k_base = math.max(0, int(math.round((c_target - float(F_suelo)) / float(s_cuanto))))
             int k_final = math.max(0, k_base + harmonic_k)
             
             C := float(F_suelo + k_final * s_cuanto)
-            branch_name := "Largo_Celosía (C=" + str.tostring(C, "#") + "s, F=" + str.tostring(F_suelo) + ", s=" + str.tostring(s_cuanto) + ", R=" + str.tostring(runs_color) + ", k=" + str.tostring(k_final) + ")"
-            basin_event := "Celosía Cuántica R18/R23"
+            branch_name := "Largo_Celosía (" + regimen_str + ", C=" + str.tostring(C, "#") + "s, k=" + str.tostring(k_final) + ")"
+            basin_event := "Celosía Cuántica R18/R23 (" + regimen_str + ")"
 else if mode_C == "Suelo Inviolable R13: floor(T / 25)"
     C := float(F_suelo)
     branch_name := "Suelo_Inviolable_R13 (" + str.tostring(F_suelo) + "s)"

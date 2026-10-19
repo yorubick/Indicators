@@ -41,8 +41,17 @@ curvas(simple int t0, simple int t1, simple string dsel, simple float cman) =>
             array.set(ema, k, e + array.get(alfa, k) * (close - e))
     if time == t1
         bool bajista = dsel == "Bearish" or (dsel == "Auto" and close >= (hi + lo) / 2)
-        float semilla = bajista ? high : low
-        float c = cman > 0 ? cman : math.max(dt, n * dt * 10 / 183)
+        float T = n * dt
+        float F_suelo = math.floor(T / 25.0)
+        float s_cuanto = math.max(1.0, math.floor(T / 703.0))
+        float c_auto = math.max(dt, T * 10.0 / 183.0)
+        if n >= 21
+            float pos = (close - lo) / math.max(syminfo.mintick, hi - lo)
+            bool is_compressed = (pos <= 0.25 or pos >= 0.75)
+            float kappa = is_compressed ? 22.5 : 18.3
+            int k_cuanto = math.max(0, int(math.round((T / kappa - F_suelo) / s_cuanto)))
+            c_auto := F_suelo + float(k_cuanto) * s_cuanto
+        float c = cman > 0 ? cman : c_auto
         for k = 0 to 9
             int p = math.round(array.get(b0, k) * c / dt)
             array.set(alfa, k, 2.0 / (p + 1))
