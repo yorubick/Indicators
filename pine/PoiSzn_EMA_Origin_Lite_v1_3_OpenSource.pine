@@ -68,6 +68,8 @@ var float end_candle_low    = na
 var float end_candle_open   = na
 var float end_candle_close  = na
 var int   end_bar_index     = na
+var int   runs_color        = 0
+var int   prev_color        = 0
 
 if time < start_time
     n_bars            := 0
@@ -77,6 +79,8 @@ if time < start_time
     range_high_idx    := na
     range_low_idx     := na
     end_bar_index     := na
+    runs_color        := 0
+    prev_color        := 0
 else if is_in_range
     if is_start_bar
         n_bars            := 1
@@ -85,8 +89,14 @@ else if is_in_range
         range_low         := low
         range_high_idx    := bar_index
         range_low_idx     := bar_index
+        runs_color        := 1
+        prev_color        := close >= open ? 1 : -1
     else
         n_bars += 1
+        int curr_color = close >= open ? 1 : -1
+        if curr_color != prev_color
+            runs_color += 1
+            prev_color := curr_color
         if high >= range_high or na(range_high)
             range_high     := high
             range_high_idx := bar_index
@@ -148,14 +158,22 @@ if mode_C == "Auto (Universal: Corto n<21 / Celosía R23 n>=21)"
         basin_event := "Fase Continua"
     else
         // 2. Régimen Largo Cuántico Discreto (n_inclusivo >= 21 barras): Red Cand(T) R13/R18/R23
-        // Base macroscópica de anclaje (18.3 s/s) proyectada a la celosía cuántica de paso s
-        float C_macro = math.max(float(F_suelo), float(math.round((T_calc * 10.0) / 183.0)))
-        int k_base = math.max(0, int(math.round((C_macro - float(F_suelo)) / float(s_cuanto))))
-        int k_final = math.max(0, k_base + harmonic_k)
-        
-        C := float(F_suelo + k_final * s_cuanto)
-        branch_name := "Largo_Celosía (C=" + str.tostring(C, "#") + "s, F=" + str.tostring(F_suelo) + ", s=" + str.tostring(s_cuanto) + ", k=" + str.tostring(k_final) + ")"
-        basin_event := "Celosía Cuántica R18/R23"
+        if runs_color <= 8
+            // Ley de Suelo Absoluto para alternancia baja: R <= 8 -> C = F (100% exacto verificado)
+            C := float(F_suelo)
+            branch_name := "Largo_Suelo_R (R=" + str.tostring(runs_color) + "<=8, F=" + str.tostring(F_suelo) + "s)"
+            basin_event := "Suelo R13 por Alternancia Baja"
+        else
+            // Base macroscópica (18.3 s/s) modulada por alternancia R y proyectada a la celosía cuántica Cand(T)
+            float C_macro = math.max(float(F_suelo), float(math.round((T_calc * 10.0) / 183.0)))
+            float factor_R = runs_color < 15 ? (0.4 + float(runs_color - 9) * 0.1) : (1.0 + float(runs_color - 15) * 0.04)
+            float target_mod = float(F_suelo) + (C_macro - float(F_suelo)) * factor_R
+            int k_base = math.max(0, int(math.round((target_mod - float(F_suelo)) / float(s_cuanto))))
+            int k_final = math.max(0, k_base + harmonic_k)
+            
+            C := float(F_suelo + k_final * s_cuanto)
+            branch_name := "Largo_Celosía (C=" + str.tostring(C, "#") + "s, F=" + str.tostring(F_suelo) + ", s=" + str.tostring(s_cuanto) + ", R=" + str.tostring(runs_color) + ", k=" + str.tostring(k_final) + ")"
+            basin_event := "Celosía Cuántica R18/R23"
 else if mode_C == "Suelo Inviolable R13: floor(T / 25)"
     C := float(F_suelo)
     branch_name := "Suelo_Inviolable_R13 (" + str.tostring(F_suelo) + "s)"

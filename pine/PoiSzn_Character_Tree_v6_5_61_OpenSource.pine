@@ -1,0 +1,69 @@
+//@version=6
+indicator("Character Tree v6.5.61 (Open Source)", "CT OS", overlay=true, max_bars_back=5000)
+
+// ============================================================================
+// CHARACTER TREE v6.5.61 - CLON DE CÓDIGO ABIERTO (etapa 1: nubes en modo Manual)
+// Reconstruido a partir de los valores que el estudio oficial calcula en el gráfico
+// (experimentos/EXP-20261018-character-tree). No contiene código del autor.
+//
+// Curvas: EMA del cierre con periodo entero round(b0 · C / Δt), b0 por nube:
+//   lenta 24 / 89/3, media 8 / 89/9, rápida 8/3 / 89/27, extra 1 72 / 89, extra 2 216 / 267.
+// Semilla: extremo de la vela END según la dirección (END en la mitad superior de la caja = bajista,
+// semilla en el máximo; si no, alcista, semilla en el mínimo). Primera actualización en END+1.
+// C: la regla del régimen largo (n ≥ 21) no se conoce; se introduce a mano («Character»).
+// Con «Character» = 0 se usa el régimen corto exacto: C = max(Δt, n·Δt·10/183).
+// ============================================================================
+
+grp_setup = "Setup"
+t_start   = input.time(timestamp("2026-10-16T16:43:00+0000"), "Point 1 time (START)", group=grp_setup)
+t_end     = input.time(timestamp("2026-10-16T17:00:00+0000"), "Point 2 time (END)", group=grp_setup)
+data_res  = input.timeframe("1", "Data resolution", group=grp_setup)
+dir_sel   = input.string("Auto", "Setup direction", options=["Auto", "Bullish", "Bearish"], group=grp_setup)
+c_manual  = input.float(0.0, "Character (s); 0 = régimen corto automático", minval=0.0, step=0.01, group=grp_setup)
+show_extra = input.bool(true, "Show extra EMA clouds", group="3. Character EMAs")
+
+// Curvas en la temporalidad de los datos: caja de START a END, semilla en END y EMAs desde END+1.
+curvas(simple int t0, simple int t1, simple string dsel, simple float cman) =>
+    var float hi = na
+    var float lo = na
+    var int n = 0
+    var array<float> ema = array.new_float(10, na)
+    var array<float> alfa = array.new_float(10, na)
+    float[] b0 = array.from(24.0, 89.0 / 3, 8.0, 89.0 / 9, 8.0 / 3, 89.0 / 27, 72.0, 89.0, 216.0, 267.0)
+    float dt = timeframe.in_seconds()
+    if time >= t0 and time <= t1
+        hi := na(hi) ? high : math.max(hi, high)
+        lo := na(lo) ? low : math.min(lo, low)
+        n += 1
+    if time > t1 and not na(array.get(alfa, 0))
+        for k = 0 to 9
+            float e = array.get(ema, k)
+            array.set(ema, k, e + array.get(alfa, k) * (close - e))
+    if time == t1
+        bool bajista = dsel == "Bearish" or (dsel == "Auto" and close >= (hi + lo) / 2)
+        float semilla = bajista ? high : low
+        float c = cman > 0 ? cman : math.max(dt, n * dt * 10 / 183)
+        for k = 0 to 9
+            int p = math.round(array.get(b0, k) * c / dt)
+            array.set(alfa, k, 2.0 / (p + 1))
+            array.set(ema, k, semilla)
+    bool activo = time > t1 and not na(array.get(alfa, 0))
+    [activo ? array.get(ema, 0) : na, activo ? array.get(ema, 1) : na, activo ? array.get(ema, 2) : na, activo ? array.get(ema, 3) : na, activo ? array.get(ema, 4) : na, activo ? array.get(ema, 5) : na, activo ? array.get(ema, 6) : na, activo ? array.get(ema, 7) : na, activo ? array.get(ema, 8) : na, activo ? array.get(ema, 9) : na]
+
+[s0, s1, m0, m1, f0, f1, x0, x1, y0, y1] = request.security(syminfo.tickerid, data_res, curvas(t_start, t_end, dir_sel, c_manual), gaps=barmerge.gaps_off, lookahead=barmerge.lookahead_off)
+
+ps0 = plot(s0, "Slow cloud", color=color.new(#F23645, 0), linewidth=2)
+ps1 = plot(s1, "Slow cloud boundary", color=color.new(#F23645, 40), linewidth=1)
+pm0 = plot(m0, "Middle cloud", color=color.new(#FF9800, 0), linewidth=2)
+pm1 = plot(m1, "Middle cloud boundary", color=color.new(#FF9800, 40), linewidth=1)
+pf0 = plot(f0, "Fast cloud", color=color.new(#2962FF, 0), linewidth=2)
+pf1 = plot(f1, "Fast cloud boundary", color=color.new(#2962FF, 40), linewidth=1)
+px0 = plot(show_extra ? x0 : na, "Extra cloud 1", color=color.new(#91AFCD, 0), linewidth=1)
+px1 = plot(show_extra ? x1 : na, "Extra cloud 1 boundary", color=color.new(#91AFCD, 40), linewidth=1)
+py0 = plot(show_extra ? y0 : na, "Extra cloud 2", color=color.new(#B996D7, 0), linewidth=1)
+py1 = plot(show_extra ? y1 : na, "Extra cloud 2 boundary", color=color.new(#B996D7, 40), linewidth=1)
+fill(ps0, ps1, color=color.new(#F23645, 85), title="Slow cloud range")
+fill(pm0, pm1, color=color.new(#FF9800, 85), title="Middle cloud range")
+fill(pf0, pf1, color=color.new(#2962FF, 85), title="Fast cloud range")
+fill(px0, px1, color=color.new(#91AFCD, 85), title="Extra cloud 1 range")
+fill(py0, py1, color=color.new(#B996D7, 85), title="Extra cloud 2 range")
