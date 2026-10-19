@@ -148,11 +148,46 @@ Para cerrar la brecha entre el 71% de paridad en vivo y el 100%:
 1. **Mapeo de Umbrales de Conmutación de Estados**:
    - En el barrido en vivo de 41 velas, cuando el precio rompe a un nuevo mínimo ($k_L = 0$) con rango de vela expansivo ($> 20$ pts), el Character salta $\Delta C = -27\text{ s}$ o colapsa a la base inferior.
    - Cuando el precio realiza un retroceso contratendencia ($k_L \ge 1$ con cierre retrocediendo $> 20\%$ del rango del swing), el Character se expande $\Delta C = +27\text{ s}$ o $+9\text{ s}$ para envolver el retroceso.
-   - En consolidaciones o continuaciones fluidas, el Character permanece en la meseta (*Latch*) del pivote activo.
+   - En consolidaciones o continuaciones fluidas, el Character permanece en la meseta (*Latch*) del pivote activo (como la meseta de 13 ventanas en $C = 108\text{ s}$).
 
 2. **Automatización de Barrido en Vivo vía CDP**:
    - Disponemos del entorno CDP en el puerto 9222 en vivo con la llamada `_tryChangeInputs()`, que ejecuta cambios y resuelve $C$ en 100 milisegundos.
-   - Podemos barrer sistemáticamente pares de velas (tamaño de mecha, relación cuerpo/rango, distancia a pivote) para calibrar las condiciones de cambio de estado.
+   - Permite barrer sistemáticamente pares de velas (tamaño de mecha, relación cuerpo/rango, distancia a pivote) para calibrar las condiciones de cambio de estado.
 
 3. **Certificación Dual (Pine & Python)**:
    - Todo avance analítico debe compilarse en `PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine` y verificarse con `test_character_engine.py` y `evaluador_C.py`.
+
+---
+
+## 8. Motor Unificado Open-Source (Pine Script v5 & Python)
+
+A partir del commit `8b5e2d6`, [`pine/PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine`](file:///G:/trading/guias/analisis/pine/PoiSzn_EMA_Origin_Lite_v1_3_OpenSource.pine) unifica en un solo script la totalidad del comportamiento visual y matemático de **Character Tree v6.5.61** y **PoiSzn EMA Origin Lite v1.3**:
+
+### 8.1. Controles de Configuración Agregados
+- **Modo de Dibujo de Nubes (`draw_mode`)**:
+  - `"Inmediato desde END (Character Tree)"`: Las 10 nubes se despliegan de inmediato desde la barra de END siguiendo la dirección del setup (idéntico a `CT6561USR`).
+  - `"Esperar Ruptura de Caja (PoiSzn Lite)"`: Mantiene las curvas latentes hasta que el precio cierra fuera del rango de la caja (comportamiento original de `1hcSyK`).
+- **Dirección del Setup (`setup_dir`)**:
+  - `"Auto"`: Lee la posición de END en la caja (mitad superior = Bajista, mitad inferior = Alcista).
+  - `"Bullish"` / `"Bearish"`: Fuerza la polaridad del setup.
+- **Mostrar Nubes Extra 1 y 2 (`show_extra_clouds`)**:
+  - Permite alternar entre la vista clásica de 3 carriles (6 curvas) y la visualización completa de 5 carriles (10 curvas) de Character Tree.
+
+### 8.2. Paleta Oficial de Colores y Carriles
+| Carril | Curvas | Lookback ($C=88$) | Color Hex | Nombre Oficial |
+|:---|:---:|:---:|:---:|:---|
+| **Lane 1** | Slow Center / Boundary ($u_0, v_0$) | **4 / 5** | `#d500f9` | Magenta / Púrpura |
+| **Lane 2** | Middle Center / Boundary ($u_1, v_1$) | **12 / 15** | `#2979ff` | Azul Oficial |
+| **Lane 3** | Fast Center / Boundary ($u_2, v_2$) | **35 / 44** | `#00e5ff` | Cyan Oficial |
+| **Lane 4** | Extra 1 Center / Boundary ($u_3, v_3$) | **106 / 131** | `#4caf50` | Verde Oficial (CT) |
+| **Lane 5** | Extra 2 Center / Boundary ($u_4, v_4$) | **317 / 392** | `#ff9800` | Naranja Oficial (CT) |
+
+### 8.3. Telemetría HUD Mejorada
+El panel HUD ahora presenta 11 filas de telemetría en tiempo real:
+- Título dinámico según el modo seleccionado (`CHARACTER TREE v6.5` vs `POISZN LITE v1.3`).
+- $C$ en segundos y rama activa del operador.
+- Duración transcurrida e inclusiva ($T$).
+- Semilla activa en END y estado de la compuerta / modo inmediato.
+- Desglose de los 10 períodos $N$ calculados en base 3.
+- Lecturas de precio instantáneas de las curvas activas y cuenca estructural.
+
